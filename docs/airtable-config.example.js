@@ -1,5 +1,5 @@
-// Rule: never commit live Airtable tokens to this repository.
-// Copy this file to `docs/airtable-config.js` locally and fill in your real values.
+// Example Airtable config shape.
+// This repo is currently publishing the real config file to GitHub Pages.
 window.SKILLSCOUT_AIRTABLE_CONFIG = {
   token: "replace-me",
   baseId: "apps1YFRPo0GtLFZZ",
