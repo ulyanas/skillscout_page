@@ -13,6 +13,7 @@
       name="description"
       content="Skillscout is a Chrome extension that detects the site you are on and surfaces relevant AI agent skills in seconds."
     />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="canonical" href="https://skillscout.sh/" />
 
     <meta property="og:title" content="Skillscout — Find the right AI agent skills without leaving the page" />
@@ -41,17 +42,33 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Skillscout",
-  "applicationCategory": "BrowserApplication",
-  "operatingSystem": "Chrome",
-  "url": "https://skillscout.sh/",
-  "description": "A Chrome extension that detects the current site and surfaces relevant AI agent skills.",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/#organization",
+      "name": "Skillscout",
+      "url": "https://skillscout.sh/",
+      "sameAs": [
+        "https://github.com/ulyanas"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Skillscout",
+      "applicationCategory": "BrowserApplication",
+      "operatingSystem": "Chrome",
+      "url": "https://skillscout.sh/",
+      "description": "A Chrome extension that detects the current site and surfaces relevant AI agent skills.",
+      "publisher": {
+        "@id": "https://skillscout.sh/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  ]
 }
     </script>
     <style>
@@ -849,6 +866,18 @@
       .foot-row {
         display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; align-items: center;
       }
+      .foot-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        align-items: center;
+      }
+      .foot-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 120ms ease;
+      }
+      .foot-links a:hover { color: var(--text); }
 
       /* Waitlist modal */
       .waitlist-modal {
@@ -1341,6 +1370,13 @@
           <span class="brand-mark" style="width:22px; height:22px;"><img src="assets/skillscout-48.png" alt="" style="width:12px;height:12px;"/></span>
           <span>© 2026 Skillscout</span>
         </div>
+        <nav class="foot-links" aria-label="Footer">
+          <a href="#top">Home</a>
+          <a href="#how">How it works</a>
+          <a href="#use-cases">Use cases</a>
+          <a href="#install">Waitlist</a>
+          <a href="https://github.com/ulyanas" rel="me">GitHub publisher</a>
+        </nav>
       </div>
     </footer>
 
