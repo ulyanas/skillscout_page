@@ -722,6 +722,73 @@
         background: #fff; color: #111; border: 1px solid var(--border-strong);
       }
 
+      /* Catalogs strip */
+      .catalogs-section {
+        padding: 0 0 72px;
+      }
+      .catalogs-kicker {
+        text-align: center;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--text-faint);
+        margin: 0 0 16px;
+      }
+      .catalogs-track-wrap {
+        display: flex;
+        justify-content: center;
+      }
+      .catalogs-track {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0;
+        row-gap: 8px;
+      }
+      .catalog-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text-muted);
+        letter-spacing: -0.005em;
+        padding: 8px 22px;
+        white-space: nowrap;
+        transition: color 140ms ease;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .catalog-item:hover { color: var(--text); }
+      .catalog-logo {
+        width: 22px; height: 22px;
+        border-radius: 4px;
+        flex-shrink: 0;
+        filter: grayscale(100%) opacity(1);
+        transition: filter 140ms ease;
+        object-fit: contain;
+      }
+      .catalog-item:hover .catalog-logo { filter: grayscale(0%) opacity(1); }
+      .catalog-item svg {
+        width: 22px; height: 22px;
+        flex-shrink: 0;
+        opacity: 1;
+        transition: opacity 140ms ease;
+      }
+      .catalog-item:hover svg { opacity: 1; }
+      .catalog-divider {
+        width: 1px;
+        height: 16px;
+        background: var(--border);
+        flex-shrink: 0;
+      }
+      @media (max-width: 640px) {
+        .catalog-item { padding: 6px 14px; font-size: 13px; }
+        .catalog-divider { display: none; }
+      }
+
       /* Final CTA */
       .final {
         text-align: center;
@@ -861,13 +928,13 @@
       .waitlist-status[data-state="success"] { color: #17663a; }
       .waitlist-status[data-state="error"] { color: #8f1f1f; }
 
-      /* Fade-in on scroll */
-      [data-reveal] {
+      /* Fade-in on scroll — only active after JS loads */
+      .js-ready [data-reveal] {
         opacity: 0;
-        transform: translateY(12px);
-        transition: opacity 500ms ease, transform 500ms ease;
+        transform: translateY(16px);
+        transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1), transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
       }
-      [data-reveal].is-visible {
+      .js-ready [data-reveal].is-visible {
         opacity: 1;
         transform: none;
       }
@@ -924,7 +991,7 @@
       <div class="container hero-inner">
         <div class="hero-copy">
           <h1 class="h-display" data-reveal>
-            Find the right skills for your AI agents right on the web page
+            Find the right skills for your AI agents, directly on the page
           </h1>
           <p class="lead" data-reveal style="font-weight: 600">
             Skillscout is a Chrome extension that looks at the website you are on,
@@ -1035,10 +1102,28 @@
       </div>
     </section>
 
+    <!-- CATALOGS -->
+    <section class="catalogs-section" id="catalogsSection" style="opacity:0; transition: opacity 600ms cubic-bezier(0.16,1,0.3,1);">
+      <div class="container">
+        <p class="catalogs-kicker">Search across</p>
+        <div class="catalogs-track-wrap">
+          <div class="catalogs-track">
+            <a class="catalog-item" href="https://skills.sh?utm_source=skillscout&utm_medium=landing&utm_campaign=catalogs" target="_blank" rel="noreferrer"><img src="assets/logo-skills-sh.png" alt="" class="catalog-logo" />SKILLS.sh</a>
+            <span class="catalog-divider"></span>
+            <a class="catalog-item" href="https://clawhub.ai/skills?utm_source=skillscout&utm_medium=landing&utm_campaign=catalogs" target="_blank" rel="noreferrer"><img src="assets/logo-clawhub.png" alt="" class="catalog-logo" />ClawdHub</a>
+            <span class="catalog-divider"></span>
+            <a class="catalog-item" href="https://skill.fish?utm_source=skillscout&utm_medium=landing&utm_campaign=catalogs" target="_blank" rel="noreferrer"><img src="assets/logo-skilldotfish.png" alt="" class="catalog-logo" />Skill.fish</a>
+            <span class="catalog-divider"></span>
+            <a class="catalog-item" href="https://mcpmarket.com/tools/skills?utm_source=skillscout&utm_medium=landing&utm_campaign=catalogs" target="_blank" rel="noreferrer"><img src="assets/logo-mcpmarket.png" alt="" class="catalog-logo" />MCPMarket</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SNAPSHOT -->
     <section class="section" id="snapshot" style="padding: 0px 0px 88px">
       <div class="container">
-        <div data-reveal>
+        <div data-reveal style="opacity:1; transform:none;">
           <div style="max-width: 58ch; margin-bottom: 36px;">
             <span class="section-kicker">Do I need it</span>
             <p class="body" style="font-size: 20px; color: var(--text); line-height: 1.5; margin-top: 18px;">
@@ -1242,7 +1327,29 @@
         });
       });
 
-      // Scroll-triggered reveal
+      // Fade in catalogs section after images load
+      const catalogsSection = document.getElementById('catalogsSection');
+      const catalogImgs = catalogsSection ? Array.from(catalogsSection.querySelectorAll('img')) : [];
+      function showCatalogs() {
+        if (catalogsSection) catalogsSection.style.opacity = '1';
+      }
+      if (catalogImgs.length === 0) {
+        setTimeout(showCatalogs, 200);
+      } else {
+        let loaded = 0;
+        catalogImgs.forEach(img => {
+          if (img.complete) { loaded++; if (loaded === catalogImgs.length) setTimeout(showCatalogs, 100); }
+          else img.addEventListener('load', () => { loaded++; if (loaded === catalogImgs.length) setTimeout(showCatalogs, 100); });
+          img.addEventListener('error', () => { loaded++; if (loaded === catalogImgs.length) setTimeout(showCatalogs, 100); });
+        });
+        // Fallback: show after 1s regardless
+        setTimeout(showCatalogs, 1000);
+      }
+
+      // Mark document ready for reveal animations — prevents flash of hidden content
+      document.documentElement.classList.add('js-ready');
+
+      // Scroll-triggered reveal — skip elements already in view on load
       const io = new IntersectionObserver((entries) => {
         for (const e of entries) {
           if (e.isIntersecting) {
@@ -1250,10 +1357,18 @@
             io.unobserve(e.target);
           }
         }
-      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      }, { threshold: 0.10, rootMargin: '0px 0px -30px 0px' });
+
       document.querySelectorAll('[data-reveal]').forEach((el, i) => {
-        el.style.transitionDelay = Math.min(i, 6) * 40 + 'ms';
-        io.observe(el);
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          // Already in viewport on load — show immediately, no delay
+          el.style.transitionDelay = '0ms';
+          el.classList.add('is-visible');
+        } else {
+          el.style.transitionDelay = Math.min(i % 4, 3) * 60 + 'ms';
+          io.observe(el);
+        }
       });
 
       // Nav border on scroll
