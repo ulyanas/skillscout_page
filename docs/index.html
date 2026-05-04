@@ -140,6 +140,15 @@
         margin: 0;
         text-wrap: balance;
       }
+      .hero-gradient {
+        display: inline-block;
+        color: transparent;
+        background: linear-gradient(105deg, #111111 0%, #0f766e 34%, #2563eb 66%, #f97316 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 10px 26px rgba(37, 99, 235, 0.14));
+      }
       .h-section {
         font-size: clamp(30px, 3.4vw, 44px);
         font-weight: 800;
@@ -1058,7 +1067,7 @@
       <div class="container hero-inner">
         <div class="hero-copy">
           <h1 class="h-display" data-reveal>
-            Find the right skills for your AI agents, directly on the page
+            Find the <span class="hero-gradient">right skills for your AI agents</span>, directly on the page
           </h1>
           <p class="lead" data-reveal style="font-weight: 600">
             Skillscout is a Chrome extension that looks at the website you are on,
