@@ -1406,9 +1406,6 @@
       </div>
     </footer>
 
-    <!-- Tweaks island -->
-    <div id="tweaks-root"></div>
-
     <script src="airtable-config.js"></script>
     <script>
       // Burger menu
@@ -1602,7 +1599,7 @@
         }
       });
 
-      // --- Site pill swap (hero + popup + use cases driven by Tweaks) ---
+      // --- Site pill swap (hero + popup + use cases) ---
       window.SKILLSCOUT = {
         setSite(site) {
           const SITES = {
@@ -1623,110 +1620,7 @@
           document.getElementById('resName2').textContent = s.results[1];
         }
       };
-    </script>
-
-    <!-- React + Tweaks -->
-    <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-    <script type="text/babel" src="components/tweaks-panel.jsx"></script>
-    <script type="text/babel">
-      const { useEffect } = React;
-
-      const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-        "heroSite": "github.com",
-        "bgTone": "paper",
-        "showFloatingPopup": true,
-        "heroDensity": "comfortable"
-      }/*EDITMODE-END*/;
-
-      function LandingTweaks() {
-        const [tweaks, setTweaks] = useTweaks(TWEAK_DEFAULTS);
-
-        useEffect(() => {
-          window.SKILLSCOUT.setSite(tweaks.heroSite);
-        }, [tweaks.heroSite]);
-
-        useEffect(() => {
-          const bgMap = {
-            paper: "#f6f6f3",
-            snow:  "#fbfbfa",
-            stone: "#eeeeea",
-            ink:   "#111111",
-          };
-          document.documentElement.style.setProperty("--bg", bgMap[tweaks.bgTone] || bgMap.paper);
-          // high-contrast dark preview (still monochrome)
-          if (tweaks.bgTone === "ink") {
-            document.documentElement.style.setProperty("--text", "#ffffff");
-            document.documentElement.style.setProperty("--text-muted", "#a8a8a2");
-          } else {
-            document.documentElement.style.setProperty("--text", "#111111");
-            document.documentElement.style.setProperty("--text-muted", "#5f5f5f");
-          }
-        }, [tweaks.bgTone]);
-
-        useEffect(() => {
-          const popup = document.querySelector(".popup");
-          if (popup) popup.style.display = tweaks.showFloatingPopup ? "" : "none";
-        }, [tweaks.showFloatingPopup]);
-
-        useEffect(() => {
-          const hero = document.querySelector(".hero");
-          if (!hero) return;
-          hero.style.paddingTop = tweaks.heroDensity === "compact" ? "32px" : "56px";
-          hero.style.paddingBottom = tweaks.heroDensity === "compact" ? "24px" : "40px";
-        }, [tweaks.heroDensity]);
-
-        return (
-          <TweaksPanel title="Tweaks">
-            <TweakSection title="Hero" subtitle="Swap the example site to see the popup update">
-              <TweakSelect
-                label="Example site"
-                value={tweaks.heroSite}
-                onChange={(v) => setTweaks({ heroSite: v })}
-                options={[
-                  { value: "github.com",   label: "github.com" },
-                  { value: "vercel.com",   label: "vercel.com" },
-                  { value: "firebase.google.com", label: "firebase.google.com" },
-                  { value: "cloudflare.com", label: "cloudflare.com" },
-                  { value: "apify.com",    label: "apify.com" },
-                ]}
-              />
-              <TweakToggle
-                label="Show floating popup"
-                value={tweaks.showFloatingPopup}
-                onChange={(v) => setTweaks({ showFloatingPopup: v })}
-              />
-              <TweakRadio
-                label="Hero density"
-                value={tweaks.heroDensity}
-                onChange={(v) => setTweaks({ heroDensity: v })}
-                options={[
-                  { value: "comfortable", label: "Comfortable" },
-                  { value: "compact",     label: "Compact" },
-                ]}
-              />
-            </TweakSection>
-
-            <TweakSection title="Page tone" subtitle="Background treatments">
-              <TweakRadio
-                label="Background"
-                value={tweaks.bgTone}
-                onChange={(v) => setTweaks({ bgTone: v })}
-                options={[
-                  { value: "paper", label: "Paper" },
-                  { value: "snow",  label: "Snow" },
-                  { value: "stone", label: "Stone" },
-                  { value: "ink",   label: "Ink (dark)" },
-                ]}
-              />
-            </TweakSection>
-          </TweaksPanel>
-        );
-      }
-
-      const root = ReactDOM.createRoot(document.getElementById("tweaks-root"));
-      root.render(<LandingTweaks />);
+      window.SKILLSCOUT.setSite('github.com');
     </script>
   </body>
 </html>
