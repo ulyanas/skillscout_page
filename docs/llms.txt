@@ -1,0 +1,24 @@
+# Skillscout
+
+> Skillscout is a Chrome extension that reads the current website and surfaces relevant AI agent skills from supported catalogs.
+
+## Docs
+
+- [Homepage](https://skillscout.sh/): Product overview, core value proposition, and the main call to join the waitlist for the Chrome extension.
+- [Catalog Coverage](https://skillscout.sh/#catalogsSection): Lists supported skill catalogs, including SKILLS.sh, ClawdHub, Skill.fish, and MCPMarket.
+- [How It Works](https://skillscout.sh/#snapshot): Explains site detection, keyword extraction, skill ranking, and in-popup results for active browsing sessions.
+- [Use Cases](https://skillscout.sh/#use-cases): Shows example workflows for development, project management, marketing, content creation, knowledge work, and customer support.
+- [Waitlist](https://skillscout.sh/#install): Shares launch status, waitlist intent, and the email signup flow for early access.
+
+## Key Facts
+
+- Product type: Chrome extension for AI skill discovery
+- Primary function: Detects the current site and surfaces relevant agent skills
+- Launch status: Coming soon with a public waitlist
+- Price: Free
+- Website: https://skillscout.sh/
+
+## Contact
+
+- Website: https://skillscout.sh/
+- GitHub: https://github.com/ulyanas
