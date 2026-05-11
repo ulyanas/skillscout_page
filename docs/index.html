@@ -292,15 +292,6 @@
         border-bottom: 1px solid var(--border-soft);
       }
       .mobile-menu a:last-child { border-bottom: none; }
-      .mobile-menu .btn {
-        align-self: flex-start;
-        margin-top: 10px;
-        width: auto;
-        padding: 12px 18px;
-        border-bottom: 0;
-        color: #fff;
-        justify-content: center;
-      }
 
       @media (max-width: 720px) {
         .burger { display: flex; }
@@ -960,12 +951,6 @@
       <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
         <a href="#snapshot" class="mobile-link">Do I need it</a>
         <a href="#use-cases" class="mobile-link">Use cases</a>
-        <a class="btn" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=site" target="_blank" rel="noopener noreferrer">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          Add to Chrome
-        </a>
       </nav>
     </div>
 
@@ -1263,7 +1248,7 @@
         burgerBtn.classList.toggle('open', open);
         burgerBtn.setAttribute('aria-expanded', open);
       });
-      document.querySelectorAll('.mobile-link, .mobile-menu .btn').forEach(el => {
+      document.querySelectorAll('.mobile-link').forEach(el => {
         el.addEventListener('click', () => {
           mobileMenu.classList.remove('open');
           burgerBtn.classList.remove('open');
