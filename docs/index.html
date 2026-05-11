@@ -947,7 +947,7 @@
           <a href="#use-cases">Use cases</a>
         </nav>
         <div class="nav-cta" style="display:flex; gap:8px; align-items:center;">
-          <a class="btn" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=site" target="_blank" rel="noopener noreferrer">
+          <a class="btn" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=site" target="_blank" rel="noopener noreferrer" data-ga-event="get_extension_click" data-ga-label="nav">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -977,7 +977,7 @@
             skills in seconds
           </p>
           <div class="cta-row" data-reveal>
-            <a class="btn btn-lg hero-primary-cta" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=site" target="_blank" rel="noopener noreferrer">
+            <a class="btn btn-lg hero-primary-cta" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=site" target="_blank" rel="noopener noreferrer" data-ga-event="get_extension_click" data-ga-label="hero">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -1221,7 +1221,7 @@
           most relevant.
         </p>
         <div class="cta-row" data-reveal>
-          <a class="btn btn-lg" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=site" target="_blank" rel="noopener noreferrer">
+          <a class="btn btn-lg" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=site" target="_blank" rel="noopener noreferrer" data-ga-event="get_extension_click" data-ga-label="final-cta">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -1244,7 +1244,7 @@
         <nav class="foot-links" aria-label="Footer">
           <a href="#top">Home</a>
           <a href="#use-cases">Use cases</a>
-          <a href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=site" target="_blank" rel="noopener noreferrer">Chrome Web Store</a>
+          <a href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=site" target="_blank" rel="noopener noreferrer" data-ga-event="get_extension_click" data-ga-label="footer">Chrome Web Store</a>
           <a href="https://github.com/ulyanas" rel="me">GitHub</a>
         </nav>
       </div>
@@ -1322,6 +1322,18 @@
           const id = a.getAttribute('href').slice(1);
           const el = document.getElementById(id);
           if (el) { e.preventDefault(); window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 72, behavior: 'smooth' }); }
+        });
+      });
+
+      // GA event tracking for extension install links
+      document.querySelectorAll('[data-ga-event="get_extension_click"]').forEach(link => {
+        link.addEventListener('click', () => {
+          if (typeof gtag !== 'function') return;
+          gtag('event', 'get_extension_click', {
+            event_category: 'engagement',
+            event_label: link.dataset.gaLabel || 'unknown',
+            link_url: link.href,
+          });
         });
       });
 
