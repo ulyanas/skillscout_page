@@ -8,7 +8,7 @@
         <rect width="1200" height="800" fill="#f6f6f3"/>
       </svg>
     </template>
-    <title>Skillscout — Find the right AI agent skills without leaving the page</title>
+    <title>Skillscout | Find AI agent skills on the page</title>
     <meta
       name="description"
       content="Skillscout is a Chrome extension that detects the site you are on and surfaces relevant AI agent skills in seconds."
@@ -26,23 +26,27 @@
       gtag('config', 'G-3BBGC9XQS2');
     </script>
 
-    <meta property="og:title" content="Skillscout — Find the right AI agent skills without leaving the page" />
+    <meta property="og:title" content="Skillscout | Find AI agent skills on the page" />
     <meta
       property="og:description"
       content="Detect the current site, search relevant skill catalogs, and surface the best-matching AI agent skills in seconds."
     />
+    <meta property="og:site_name" content="Skillscout" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://skillscout.sh/" />
     <meta property="og:image" content="https://skillscout.sh/og/skillscout.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Skillscout — Find the right AI agent skills without leaving the page" />
+    <meta name="twitter:title" content="Skillscout | Find AI agent skills on the page" />
     <meta
       name="twitter:description"
       content="Detect the current site, search relevant skill catalogs, and surface the best-matching AI agent skills in seconds."
     />
     <meta name="twitter:image" content="https://skillscout.sh/og/skillscout.png" />
-    <link rel="icon" href="assets/skillscout-48.png" />
+    <meta name="twitter:image:alt" content="Skillscout social preview showing AI agent skill discovery on the page" />
+    <link rel="icon" href="assets/skillscout-mark-48.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -77,6 +81,59 @@
         "price": "0",
         "priceCurrency": "USD"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are AI agent skills?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI agent skills are reusable instructions, workflows, or tool-specific playbooks that help an AI agent complete a task. A skill can tell an agent how to review GitHub issues, work with Notion docs, manage support tickets, generate content, or use another product workflow with less setup."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which AI ecosystems can use skills?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Skillscout is designed for AI ecosystems that support reusable skills or skill-like workflows, including Claude and Claude Code Skills, OpenAI Codex Skills, OpenCode Agent Skills, GitHub Copilot custom agents and skills, ChatGPT custom GPTs, Gemini Gems, Cursor rules and MCP tools, Windsurf Cascade MCP tools, and Replit Agent project context. It helps users discover reusable agent workflows across supported catalogs while browsing the tools they already use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why install the Skillscout Chrome extension now?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Install Skillscout now to start building a faster discovery habit while AI agent skill catalogs are still growing. The extension gives you context-aware discovery, less tab switching, and faster agent setup directly from the page you are viewing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What exact outcome does Skillscout give users?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Skillscout helps you instantly discover reusable agent workflows while browsing a tool. The strongest use case today is simple: while browsing a tool, instantly discover reusable agent workflows that match the page, product, or workflow in front of you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who needs a tool like Skillscout?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Skillscout is useful for developers, solo founders, operators, AI power users, support teams, marketers, and knowledge workers who use AI agents across many web tools. It is especially helpful for people who want reusable workflows without manually searching skill directories."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Skillscout make agent setup faster?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Skillscout speeds up agent setup by detecting the site you are on, matching that context to relevant skill catalogs, and surfacing reusable workflows in seconds. That means context-aware discovery, less tab switching, and a faster path from tool to agent workflow."
+          }
+        }
+      ]
     }
   ]
 }
@@ -510,17 +567,17 @@
       .mock-btn { height: 28px; border-radius: 8px; background: #111; width: 112px; }
       .mock-btn.secondary { background: #fff; border: 1px solid var(--border-soft); width: 96px; }
 
-      /* Floating popup — clone of the real extension UI */
+      /* Floating popup — clone of the latest extension UI */
       .popup {
         position: absolute;
         right: -8px;
         bottom: -40px;
-        width: 360px;
+        width: 380px;
         background: #fff;
         border: 1px solid var(--border);
         border-radius: var(--radius-xl);
         box-shadow: var(--shadow-lg);
-        padding: 16px;
+        padding: 16px 16px 18px;
         transform: rotate(1.4deg);
         z-index: 2;
       }
@@ -536,37 +593,63 @@
       .popup-brand { display: inline-flex; align-items: center; gap: 8px; }
       .popup-brand img { width: 18px; height: 18px; }
       .popup-title {
-        font-weight: 700; font-size: 18px; letter-spacing: -0.015em;
+        font-weight: 800; font-size: 22px; letter-spacing: -0.02em;
         margin: 0;
       }
-      .popup-refresh {
+      .popup-icon-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
         border: 1px solid var(--border-strong);
         background: #111; color: #fff;
-        border-radius: 10px;
-        padding: 8px 12px;
-        font-size: 11px; font-weight: 700;
+        border-radius: 999px;
+        padding: 0;
+      }
+      .popup-refresh-icon {
+        width: 18px;
+        height: 18px;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2;
       }
       .popup-panel {
         border: 1px solid var(--border);
         border-radius: var(--radius-lg);
-        padding: 12px 14px;
-        margin-bottom: 10px;
+        padding: 14px;
+        margin-bottom: 14px;
         background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
+        box-shadow: 0 8px 24px rgba(17, 17, 17, 0.08);
       }
-      .popup-panel.muted {
-        background: #f7f7f7;
+      .popup-site-panel-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
       }
       .popup-stack { display: flex; flex-direction: column; gap: 3px; }
       .popup-eyebrow {
-        font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+        font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
         text-transform: uppercase; color: var(--text-muted); margin: 0;
       }
-      .popup-site { font-size: 15px; font-weight: 700; margin: 0; }
-      .popup-meta { font-size: 12px; color: var(--text-muted); margin: 0; }
+      .popup-site { font-size: 16px; font-weight: 700; margin: 0; }
+      .popup-meta { font-size: 13px; line-height: 1.5; color: var(--text-muted); margin: 0; }
+      .popup-status-strip {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+        margin-top: 12px;
+        padding-top: 10px;
+        border-top: 1px solid var(--border);
+      }
       .popup-status { font-size: 12px; color: var(--text-muted); margin: 0; }
       .popup-progress {
-        width: 100%; height: 6px; border-radius: 999px; background: #e9e9e9;
-        margin-top: 10px; overflow: hidden;
+        width: 100%; height: 4px; border-radius: 999px; background: #e9e9e9;
+        overflow: hidden;
       }
       @keyframes loadBar {
         0%   { width: 12%; opacity: 1; }
@@ -584,43 +667,122 @@
       }
       .popup-results-header {
         display: flex; align-items: center; justify-content: space-between;
-        margin: 12px 0 8px;
+        margin: 0 0 10px;
       }
       .popup-count {
         font-size: 12px; color: var(--text-muted); margin: 0;
       }
-      .popup-card {
+      .popup-results-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .popup-result-card {
         border: 1px solid var(--border);
         border-radius: var(--radius-md);
-        padding: 12px;
+        padding: 14px;
         background: #fff;
-        margin-bottom: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
       }
-      .popup-card:last-child { margin-bottom: 0; }
-      .popup-card-top {
+      .popup-result-topline {
         display: flex; justify-content: space-between; align-items: flex-start;
-        gap: 10px; margin-bottom: 6px;
+        gap: 12px;
       }
-      .popup-name { font-size: 14px; font-weight: 700; margin: 0; }
+      .popup-result-heading {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        min-width: 0;
+        flex: 1;
+      }
+      .popup-result-name-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-width: 0;
+      }
+      .popup-catalog-icon {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        overflow: hidden;
+        background: #f3f3f3;
+      }
+      .popup-catalog-icon::after {
+        content: "";
+        position: absolute;
+        inset: 2px;
+        border-radius: 999px;
+        background-image: var(--catalog-icon-image);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .popup-name {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.35;
+        margin: 0;
+        min-width: 0;
+        overflow-wrap: anywhere;
+      }
+      .popup-result-actions {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-shrink: 0;
+      }
+      .popup-copy-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--text-muted);
+        font-size: 13px;
+        line-height: 1;
+        padding: 0;
+      }
+      .popup-official-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        border: 1px solid #bfe8cf;
+        border-radius: 999px;
+        background: #e8f7ee;
+        color: #137a3a;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1;
+      }
       .popup-rank {
         border: 1px solid var(--border-strong);
         border-radius: 999px;
-        padding: 3px 9px;
-        font-size: 11px; font-weight: 700;
+        padding: 4px 10px;
+        font-size: 12px; font-weight: 700;
         white-space: nowrap;
       }
-      .popup-badges { display: flex; gap: 6px; margin-bottom: 8px; }
-      .pill {
-        font-size: 10px; font-weight: 700;
-        padding: 2px 8px;
-        border: 1px solid var(--border);
-        background: var(--panel-muted);
-        border-radius: 999px;
-      }
-      .popup-desc { font-size: 12px; color: var(--text-muted); margin: 0 0 8px; line-height: 1.45; }
+      .popup-desc { font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.5; overflow-wrap: anywhere; }
       .popup-source {
         font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
-        font-size: 11px; color: var(--text-muted); margin: 0;
+        font-size: 12px; color: var(--text-muted); margin: 0;
+        overflow-wrap: anywhere;
       }
 
       /* Floating sticker — site pill */
@@ -775,6 +937,67 @@
       }
       .usecase p { color: var(--text-muted); font-size: 13.5px; line-height: 1.55; margin: 0; }
       .usecase .tags { display: none; }
+
+      /* FAQ */
+      .faq-section {
+        padding: 56px 0 40px;
+      }
+      .faq-list {
+        display: grid;
+        gap: 12px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .faq-item {
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        background: #fff;
+        box-shadow: var(--shadow-sm);
+        overflow: hidden;
+      }
+      .faq-item summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 20px 22px;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: -0.012em;
+        cursor: pointer;
+        list-style: none;
+      }
+      .faq-item summary::-webkit-details-marker { display: none; }
+      .faq-item summary::after {
+        content: "+";
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        color: var(--text-muted);
+        font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .faq-item[open] summary::after { content: "-"; }
+      .faq-answer {
+        padding: 0 22px 22px;
+        color: var(--text-muted);
+        font-size: 15px;
+        line-height: 1.65;
+      }
+      .faq-answer p {
+        margin: 0;
+      }
+      @media (max-width: 640px) {
+        .faq-section { padding: 48px 0 32px; }
+        .faq-item summary { padding: 18px; font-size: 16px; }
+        .faq-answer { padding: 0 18px 18px; font-size: 14px; }
+      }
 
       /* Privacy */
       .privacy {
@@ -939,12 +1162,13 @@
     <div class="nav-wrap" id="navWrap">
       <div class="container nav">
         <a class="brand" href="#top">
-          <span class="brand-mark"><img src="assets/skillscout-48.png" alt="" /></span>
+          <span class="brand-mark"><img src="assets/skillscout-mark-48.png" alt="Skillscout logo" /></span>
           <span class="brand-name">Skillscout</span>
         </a>
         <nav class="nav-links" aria-label="Primary">
           <a href="#snapshot">Do I need it</a>
           <a href="#use-cases">Use cases</a>
+          <a href="#faq">FAQ</a>
         </nav>
         <div class="nav-cta" style="display:flex; gap:8px; align-items:center;">
           <a class="btn" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=site" target="_blank" rel="noopener noreferrer" data-ga-event="get_extension_click" data-ga-label="nav">
@@ -961,6 +1185,7 @@
       <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
         <a href="#snapshot" class="mobile-link">Do I need it</a>
         <a href="#use-cases" class="mobile-link">Use cases</a>
+        <a href="#faq" class="mobile-link">FAQ</a>
       </nav>
     </div>
 
@@ -1028,23 +1253,29 @@
           <aside class="popup" aria-hidden="true">
             <header class="popup-header">
               <div class="popup-brand">
-                <img src="assets/skillscout-48.png" alt="" />
+                <img src="assets/skillscout-mark-48.png" alt="Skillscout logo" />
                 <h3 class="popup-title">Skillscout</h3>
               </div>
-              <button class="popup-refresh" type="button">Refresh</button>
             </header>
 
             <section class="popup-panel">
-              <div class="popup-stack">
-                <p class="popup-eyebrow">Current Site</p>
-                <p class="popup-site" id="popupSite">github.com</p>
-                <p class="popup-meta">Keyword: <span id="popupKeyword">github</span></p>
+              <div class="popup-site-panel-header">
+                <div class="popup-stack">
+                  <p class="popup-eyebrow">Current Site</p>
+                  <p class="popup-site" id="popupSite">github.com</p>
+                  <p class="popup-meta">Keyword: <span id="popupKeyword">github</span></p>
+                </div>
+                <button class="popup-icon-button" type="button" aria-label="Refresh results">
+                  <svg class="popup-refresh-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M20 12a8 8 0 1 1-2.34-5.66" />
+                    <path d="M20 4v6h-6" />
+                  </svg>
+                </button>
               </div>
-            </section>
-
-            <section class="popup-panel muted">
-              <p class="popup-status">Found <strong id="popupCount">100</strong> matching skills for <span id="popupKeyword2">github</span>.</p>
-              <div class="popup-progress"><div></div></div>
+              <div class="popup-status-strip">
+                <p class="popup-status">Found <strong id="popupCount">100</strong> matching skills for <span id="popupKeyword2">github</span>.</p>
+                <div class="popup-progress"><div></div></div>
+              </div>
             </section>
 
             <div class="popup-results-header">
@@ -1052,29 +1283,43 @@
               <p class="popup-count">5 of <span id="popupCount2">100</span></p>
             </div>
 
-            <article class="popup-card">
-              <div class="popup-card-top">
-                <h4 class="popup-name" id="resName1">github-issues</h4>
-                <span class="popup-rank">Rank 4795</span>
-              </div>
-              <div class="popup-badges">
-                <span class="pill">Official</span>
+            <div class="popup-results-list">
+            <article class="popup-result-card">
+              <div class="popup-result-topline">
+                <div class="popup-result-heading">
+                  <div class="popup-result-name-row">
+                    <span class="popup-catalog-icon" style="--catalog-icon-image:url('assets/logo-skills-sh.ico')" title="skills.sh" aria-label="skills.sh"></span>
+                    <h4 class="popup-name" id="resName1">github-issues</h4>
+                  </div>
+                </div>
+                <div class="popup-result-actions">
+                  <button class="popup-copy-button" type="button" aria-label="Copy install command" title="Copy install command"><span aria-hidden="true">⧉</span></button>
+                  <span class="popup-official-icon" title="Official skill" aria-label="Official skill" role="img">✓</span>
+                  <span class="popup-rank">Rank 4795</span>
+                </div>
               </div>
               <p class="popup-desc">Create, update, and manage issues with full workflow support including types, labels, assignees, and dependencies.</p>
               <p class="popup-source mono">awesome-copilot</p>
             </article>
 
-            <article class="popup-card">
-              <div class="popup-card-top">
-                <h4 class="popup-name" id="resName2">github-copilot-starter</h4>
-                <span class="popup-rank">Rank 4793</span>
-              </div>
-              <div class="popup-badges">
-                <span class="pill">Official</span>
+            <article class="popup-result-card">
+              <div class="popup-result-topline">
+                <div class="popup-result-heading">
+                  <div class="popup-result-name-row">
+                    <span class="popup-catalog-icon" style="--catalog-icon-image:url('assets/logo-clawhub.png')" title="ClawHub" aria-label="ClawHub"></span>
+                    <h4 class="popup-name" id="resName2">github-copilot-starter</h4>
+                  </div>
+                </div>
+                <div class="popup-result-actions">
+                  <button class="popup-copy-button" type="button" aria-label="Copy install command" title="Copy install command"><span aria-hidden="true">⧉</span></button>
+                  <span class="popup-official-icon" title="Official skill" aria-label="Official skill" role="img">✓</span>
+                  <span class="popup-rank">Rank 4793</span>
+                </div>
               </div>
               <p class="popup-desc">Generates production-ready Copilot configuration scaffolding for any repository.</p>
               <p class="popup-source mono">starter-kits/copilot</p>
             </article>
+            </div>
           </aside>
         </div>
       </div>
@@ -1086,13 +1331,13 @@
         <p class="catalogs-kicker">Search across</p>
         <div class="catalogs-track-wrap">
           <div class="catalogs-track">
-            <a class="catalog-item" href="https://skills.sh?utm_source=skillscout&utm_medium=landing&utm_campaign=catalogs" target="_blank" rel="noreferrer"><img src="assets/logo-skills-sh.png" alt="" class="catalog-logo" />SKILLS.sh</a>
+            <a class="catalog-item" href="https://skills.sh?utm_source=skillscout&utm_medium=landing&utm_campaign=catalogs" target="_blank" rel="noreferrer"><img src="assets/logo-skills-sh.png" alt="SKILLS.sh logo" class="catalog-logo" />SKILLS.sh</a>
             <span class="catalog-divider"></span>
-            <a class="catalog-item" href="https://clawhub.ai/skills?utm_source=skillscout&utm_medium=landing&utm_campaign=catalogs" target="_blank" rel="noreferrer"><img src="assets/logo-clawhub.png" alt="" class="catalog-logo" />ClawdHub</a>
+            <a class="catalog-item" href="https://clawhub.ai/skills?utm_source=skillscout&utm_medium=landing&utm_campaign=catalogs" target="_blank" rel="noreferrer"><img src="assets/logo-clawhub.png" alt="ClawdHub logo" class="catalog-logo" />ClawdHub</a>
             <span class="catalog-divider"></span>
-            <a class="catalog-item" href="https://skill.fish?utm_source=skillscout&utm_medium=landing&utm_campaign=catalogs" target="_blank" rel="noreferrer"><img src="assets/logo-skilldotfish.png" alt="" class="catalog-logo" />Skill.fish</a>
+            <a class="catalog-item" href="https://skill.fish?utm_source=skillscout&utm_medium=landing&utm_campaign=catalogs" target="_blank" rel="noreferrer"><img src="assets/logo-skilldotfish.png" alt="Skill.fish logo" class="catalog-logo" />Skill.fish</a>
             <span class="catalog-divider"></span>
-            <a class="catalog-item" href="https://mcpmarket.com/tools/skills?utm_source=skillscout&utm_medium=landing&utm_campaign=catalogs" target="_blank" rel="noreferrer"><img src="assets/logo-mcpmarket.png" alt="" class="catalog-logo" />MCPMarket</a>
+            <a class="catalog-item" href="https://mcpmarket.com/tools/skills?utm_source=skillscout&utm_medium=landing&utm_campaign=catalogs" target="_blank" rel="noreferrer"><img src="assets/logo-mcpmarket.png" alt="MCPMarket logo" class="catalog-logo" />MCPMarket</a>
           </div>
         </div>
       </div>
@@ -1209,6 +1454,63 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div>
+            <span class="section-kicker">FAQ</span>
+            <h2 class="h-section" style="margin-top:14px;">Frequently asked questions</h2>
+          </div>
+        </div>
+
+        <div class="faq-list" data-reveal>
+          <details class="faq-item">
+            <summary>What are AI agent skills?</summary>
+            <div class="faq-answer">
+              <p>AI agent skills are reusable instructions, workflows, or tool-specific playbooks that help an AI agent complete a task. A skill can tell an agent how to review GitHub issues, work with Notion docs, manage support tickets, generate content, or use another product workflow with less setup.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Which AI ecosystems can use skills?</summary>
+            <div class="faq-answer">
+              <p>Skillscout is designed for AI ecosystems that support reusable skills or skill-like workflows, including Claude and Claude Code Skills, OpenAI Codex Skills, OpenCode Agent Skills, GitHub Copilot custom agents and skills, ChatGPT custom GPTs, Gemini Gems, Cursor rules and MCP tools, Windsurf Cascade MCP tools, and Replit Agent project context.</p>
+              <p>The shared pattern is reusable agent setup: instructions, prompts, playbooks, rules, custom agents, project context, MCP tools, and workflow files that help an AI agent complete a task again with less manual setup.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Why install the Skillscout Chrome extension now?</summary>
+            <div class="faq-answer">
+              <p>Install Skillscout now to start building a faster discovery habit while AI agent skill catalogs are still growing. The extension gives you context-aware discovery, less tab switching, and faster agent setup directly from the page you are viewing.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" open>
+            <summary>What exact outcome does Skillscout give users?</summary>
+            <div class="faq-answer">
+              <p>Skillscout helps you instantly discover reusable agent workflows while browsing a tool. The strongest use case today is simple: while browsing a tool, instantly discover reusable agent workflows that match the page, product, or workflow in front of you.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Who needs a tool like Skillscout?</summary>
+            <div class="faq-answer">
+              <p>Skillscout is useful for developers, solo founders, operators, AI power users, support teams, marketers, and knowledge workers who use AI agents across many web tools. It is especially helpful for people who want reusable workflows without manually searching skill directories.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How does Skillscout make agent setup faster?</summary>
+            <div class="faq-answer">
+              <p>Skillscout speeds up agent setup by detecting the site you are on, matching that context to relevant skill catalogs, and surfacing reusable workflows in seconds. That means context-aware discovery, less tab switching, and a faster path from tool to agent workflow.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- FINAL CTA -->
     <section class="final" id="install" style="padding: 40px 0px 96px">
       <div class="container">
@@ -1238,7 +1540,7 @@
     <footer class="foot">
       <div class="container foot-row">
         <div style="display:flex; gap:10px; align-items:center;">
-          <span class="brand-mark" style="width:22px; height:22px;"><img src="assets/skillscout-48.png" alt="" style="width:12px;height:12px;"/></span>
+          <span class="brand-mark" style="width:22px; height:22px;"><img src="assets/skillscout-mark-48.png" alt="Skillscout logo" style="width:12px;height:12px;"/></span>
           <span>© 2026 Skillscout</span>
         </div>
         <nav class="foot-links" aria-label="Footer">

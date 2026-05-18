@@ -1,0 +1,118 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="100" y1="64" x2="1110" y2="586" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F7F4"/>
+      <stop offset="1" stop-color="#F1F6FF"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="312" y1="206" x2="777" y2="332" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F9D8A"/>
+      <stop offset="0.46" stop-color="#1598E5"/>
+      <stop offset="1" stop-color="#3A63F3"/>
+    </linearGradient>
+    <linearGradient id="buttonGradient" x1="0" y1="0" x2="264" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#15B8A6"/>
+      <stop offset="0.52" stop-color="#1495E4"/>
+      <stop offset="1" stop-color="#2F67ED"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1030 118) rotate(141.725) scale(282.922 230.146)">
+      <stop stop-color="#2F67ED" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#2F67ED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(910 470) rotate(135.074) scale(290.979 212.54)">
+      <stop stop-color="#18B8A4" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#18B8A4" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="cardShadow" x="612" y="72" width="456" height="486" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="24"/>
+      <feGaussianBlur stdDeviation="24"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0666667 0 0 0 0 0.0666667 0 0 0 0 0.0666667 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+    <filter id="panelShadow" x="686" y="156" width="332" height="258" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="14"/>
+      <feGaussianBlur stdDeviation="16"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0666667 0 0 0 0 0.0666667 0 0 0 0 0.0666667 0 0 0 0.1 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" rx="0" fill="url(#bgGradient)"/>
+  <circle cx="1030" cy="118" r="218" fill="url(#glowA)"/>
+  <circle cx="912" cy="468" r="204" fill="url(#glowB)"/>
+
+  <rect x="84" y="84" width="1032" height="462" rx="34" fill="#FFFFFF" fill-opacity="0.78" stroke="#E4E4DF"/>
+
+  <g opacity="0.9">
+    <rect x="146" y="142" width="46" height="46" rx="15" fill="#FFFFFF" stroke="#E6E6E0"/>
+    <circle cx="167" cy="163" r="7.5" stroke="#111111" stroke-width="3.6"/>
+    <path d="M172.5 168.5L181.5 177.5" stroke="#111111" stroke-width="3.6" stroke-linecap="round"/>
+    <text x="214" y="174" fill="#111111" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Skillscout</text>
+  </g>
+
+  <text x="146" y="244" fill="#111111" font-family="Inter, Arial, sans-serif" font-size="60" font-weight="800" letter-spacing="-2">
+    Find the
+  </text>
+  <text x="146" y="314" fill="url(#accentGradient)" font-family="Inter, Arial, sans-serif" font-size="60" font-weight="800" letter-spacing="-2">
+    right skills for
+  </text>
+  <text x="146" y="380" fill="url(#accentGradient)" font-family="Inter, Arial, sans-serif" font-size="60" font-weight="800" letter-spacing="-2">
+    your AI agents
+  </text>
+  <text x="146" y="446" fill="#111111" font-family="Inter, Arial, sans-serif" font-size="60" font-weight="800" letter-spacing="-2">
+    directly on the page
+  </text>
+
+  <text x="146" y="498" fill="#5F5F5F" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600">
+    Context-aware discovery for reusable workflows
+  </text>
+  <text x="146" y="534" fill="#5F5F5F" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600">
+    with less tab switching and faster agent setup
+  </text>
+
+  <g transform="translate(146 0)">
+    <rect x="0" y="554" width="266" height="64" rx="32" fill="url(#buttonGradient)"/>
+    <path d="M42 573V595M42 595L34 587M42 595L50 587M28 606H56" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="78" y="596" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Add to Chrome</text>
+  </g>
+
+  <g filter="url(#cardShadow)">
+    <rect x="660" y="116" width="360" height="390" rx="28" fill="#FFFFFF"/>
+    <rect x="660.5" y="116.5" width="359" height="389" rx="27.5" stroke="#E4E4DF"/>
+
+    <rect x="686" y="144" width="308" height="54" rx="20" fill="#FAFAF8" stroke="#ECECE7"/>
+    <text x="710" y="177" fill="#7A7A71" font-family="JetBrains Mono, monospace" font-size="16" font-weight="500">github.com/features/actions</text>
+
+    <g filter="url(#panelShadow)">
+      <rect x="718" y="178" width="268" height="194" rx="22" fill="#FFFFFF"/>
+      <rect x="718.5" y="178.5" width="267" height="193" rx="21.5" stroke="#E7E7E2"/>
+
+      <text x="742" y="214" fill="#7A7A71" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.6">CURRENT SITE</text>
+      <text x="742" y="246" fill="#111111" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">github.com</text>
+      <text x="742" y="271" fill="#5F5F5F" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="500">Keyword: github</text>
+
+      <rect x="930" y="206" width="32" height="32" rx="16" fill="#111111"/>
+      <path d="M946 213C949.314 213 952 215.686 952 219C952 222.314 949.314 225 946 225C942.686 225 940 222.314 940 219" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M949.5 214.5H952V217" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <text x="742" y="307" fill="#5F5F5F" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500">Found 100 matching skills for github</text>
+      <rect x="742" y="322" width="196" height="4" rx="2" fill="#E8E8E3"/>
+      <rect x="742" y="322" width="118" height="4" rx="2" fill="url(#buttonGradient)"/>
+    </g>
+
+    <text x="686" y="405" fill="#7A7A71" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.6">TOP RESULTS</text>
+
+    <rect x="686" y="426" width="308" height="52" rx="18" fill="#F9F9F6" stroke="#ECECE7"/>
+    <circle cx="714" cy="452" r="12" fill="#FFFFFF" stroke="#E4E4DF"/>
+    <text x="707" y="456" fill="#0F9D8A" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">S</text>
+    <text x="736" y="447" fill="#111111" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">github-issues</text>
+    <text x="736" y="466" fill="#6A6A63" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500">Issue management workflow</text>
+    <rect x="928" y="440" width="42" height="24" rx="12" fill="#EEF7FF"/>
+    <text x="939" y="456" fill="#2563EB" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700">4795</text>
+  </g>
+</svg>
