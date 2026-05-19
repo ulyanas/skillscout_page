@@ -938,9 +938,126 @@
       .usecase p { color: var(--text-muted); font-size: 13.5px; line-height: 1.55; margin: 0; }
       .usecase .tags { display: none; }
 
+      /* Testimonials */
+      section.testimonials-section.section {
+        padding: 0 0 16px;
+      }
+      section.testimonials-section.section .section-header {
+        margin-bottom: 24px;
+      }
+      .testimonials-carousel {
+        position: relative;
+        margin-top: 0;
+      }
+      .testimonials-toolbar {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+      .testimonial-nav {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--text);
+        cursor: pointer;
+        transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+      }
+      .testimonial-nav:hover {
+        transform: translateY(-1px);
+        border-color: #cfcfc9;
+        box-shadow: var(--shadow-sm);
+      }
+      .testimonial-nav:disabled {
+        cursor: default;
+        opacity: 0.38;
+        transform: none;
+        box-shadow: none;
+      }
+      .testimonial-nav svg {
+        width: 16px;
+        height: 16px;
+      }
+      .testimonials-track {
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        padding-bottom: 6px;
+        scrollbar-width: none;
+      }
+      .testimonials-track::-webkit-scrollbar {
+        display: none;
+      }
+      .testimonial-card {
+        flex: 0 0 calc(50% - 8px);
+        scroll-snap-align: start;
+        background:
+          radial-gradient(circle at top right, rgba(20, 184, 166, 0.08), transparent 34%),
+          #fff;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-xl);
+        padding: 24px;
+        box-shadow: var(--shadow-sm);
+        min-height: 214px;
+      }
+      .testimonial-quote {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.6;
+        letter-spacing: -0.012em;
+        color: var(--text);
+      }
+      .testimonial-quote::before {
+        content: "\201C";
+      }
+      .testimonial-quote::after {
+        content: "\201D";
+      }
+      .testimonial-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 12px;
+      }
+      .testimonial-dot {
+        width: 8px;
+        height: 8px;
+        border: 0;
+        padding: 0;
+        border-radius: 999px;
+        background: #d6d6d1;
+        cursor: pointer;
+      }
+      .testimonial-dot.is-active {
+        background: #111;
+      }
+      @media (max-width: 760px) {
+        .testimonials-toolbar {
+          justify-content: center;
+        }
+        .testimonial-card {
+          flex-basis: 100%;
+          padding: 20px;
+          min-height: 0;
+        }
+        .testimonial-quote {
+          font-size: 16px;
+        }
+      }
+
       /* FAQ */
-      .faq-section {
-        padding: 56px 0 40px;
+      section.faq-section.section {
+        padding: 12px 0 24px;
+      }
+      section.faq-section.section .section-header {
+        margin-bottom: 56px;
       }
       .faq-list {
         display: grid;
@@ -1168,6 +1285,7 @@
         <nav class="nav-links" aria-label="Primary">
           <a href="#snapshot">Do I need it</a>
           <a href="#use-cases">Use cases</a>
+          <a href="#testimonials">Reviews</a>
           <a href="#faq">FAQ</a>
         </nav>
         <div class="nav-cta" style="display:flex; gap:8px; align-items:center;">
@@ -1185,6 +1303,7 @@
       <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
         <a href="#snapshot" class="mobile-link">Do I need it</a>
         <a href="#use-cases" class="mobile-link">Use cases</a>
+        <a href="#testimonials" class="mobile-link">Reviews</a>
         <a href="#faq" class="mobile-link">FAQ</a>
       </nav>
     </div>
@@ -1387,7 +1506,7 @@
     </section>
 
     <!-- USE CASES -->
-    <section class="section" id="use-cases" style="padding: 40px 0px 88px">
+    <section class="section" id="use-cases" style="padding: 40px 0px 40px">
       <div class="container">
         <div class="section-header" data-reveal>
           <div>
@@ -1450,6 +1569,53 @@
               <span class="tag">Tickets</span><span class="tag">Responses</span><span class="tag">CRM</span>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div>
+            <span class="section-kicker">Reviews</span>
+            <h2 class="h-section" style="margin-top:14px;">What users say</h2>
+          </div>
+        </div>
+
+        <div class="testimonials-carousel" data-reveal>
+          <div class="testimonials-toolbar" aria-label="Testimonials navigation">
+            <button class="testimonial-nav" type="button" data-testimonial-prev aria-label="Previous testimonial">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M15 6 9 12l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="testimonial-nav" type="button" data-testimonial-next aria-label="Next testimonial">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="testimonials-track" data-testimonials-track>
+            <article class="testimonial-card">
+              <p class="testimonial-quote">I recommend this extension. It helps me discover AI agent skills quickly, and with one click it gives me a useful summary.</p>
+            </article>
+
+            <article class="testimonial-card">
+              <p class="testimonial-quote">Skillscout is a great extension. It scans websites efficiently and surfaces the best-matching agent skills right away. It saves me a lot of time when searching through skill catalogs.</p>
+            </article>
+
+            <article class="testimonial-card">
+              <p class="testimonial-quote">Very convenient. It has become an essential part of my workflow whenever I land on a new service.</p>
+            </article>
+
+            <article class="testimonial-card">
+              <p class="testimonial-quote">It just saved me 10 minutes when I needed to find a skill for Figma.</p>
+            </article>
+          </div>
+
+          <div class="testimonial-dots" aria-label="Testimonials pagination" data-testimonial-dots></div>
         </div>
       </div>
     </section>
@@ -1546,6 +1712,8 @@
         <nav class="foot-links" aria-label="Footer">
           <a href="#top">Home</a>
           <a href="#use-cases">Use cases</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#faq">FAQ</a>
           <a href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=site" target="_blank" rel="noopener noreferrer" data-ga-event="get_extension_click" data-ga-label="footer">Chrome Web Store</a>
           <a href="https://github.com/ulyanas" rel="me">GitHub</a>
         </nav>
@@ -1638,6 +1806,88 @@
           });
         });
       });
+
+      // Testimonials carousel
+      const testimonialTrack = document.querySelector('[data-testimonials-track]');
+      const testimonialCards = testimonialTrack ? Array.from(testimonialTrack.querySelectorAll('.testimonial-card')) : [];
+      const testimonialPrev = document.querySelector('[data-testimonial-prev]');
+      const testimonialNext = document.querySelector('[data-testimonial-next]');
+      const testimonialDotsWrap = document.querySelector('[data-testimonial-dots]');
+
+      if (testimonialTrack && testimonialCards.length > 0) {
+        let testimonialPositions = [];
+        let testimonialDots = [];
+
+        const buildTestimonialPositions = () => {
+          const maxScroll = Math.max(testimonialTrack.scrollWidth - testimonialTrack.clientWidth, 0);
+          const rawPositions = testimonialCards.map((card) => Math.min(card.offsetLeft, maxScroll));
+          testimonialPositions = rawPositions.filter((position, index) => {
+            if (index === 0) return true;
+            return Math.abs(position - rawPositions[index - 1]) > 4;
+          });
+        };
+
+        const renderTestimonialDots = () => {
+          if (!testimonialDotsWrap) return;
+          testimonialDotsWrap.innerHTML = '';
+          testimonialDots = testimonialPositions.map((_, index) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'testimonial-dot';
+            dot.setAttribute('aria-label', `Go to testimonial slide ${index + 1}`);
+            dot.addEventListener('click', () => {
+              testimonialTrack.scrollTo({ left: testimonialPositions[index], behavior: 'smooth' });
+            });
+            testimonialDotsWrap.appendChild(dot);
+            return dot;
+          });
+        };
+
+        const getPageIndex = () => {
+          let closestIndex = 0;
+          let closestDistance = Infinity;
+          testimonialPositions.forEach((position, index) => {
+            const distance = Math.abs(testimonialTrack.scrollLeft - position);
+            if (distance < closestDistance) {
+              closestDistance = distance;
+              closestIndex = index;
+            }
+          });
+          return closestIndex;
+        };
+
+        const syncTestimonialDots = () => {
+          const active = Math.min(getPageIndex(), testimonialDots.length - 1);
+          testimonialDots.forEach((dot, index) => {
+            dot.classList.toggle('is-active', index === active);
+          });
+          if (testimonialPrev) testimonialPrev.disabled = active === 0;
+          if (testimonialNext) testimonialNext.disabled = active === testimonialDots.length - 1;
+        };
+
+        const scrollTestimonials = (direction) => {
+          const currentIndex = getPageIndex();
+          const nextIndex = Math.max(0, Math.min(currentIndex + direction, testimonialPositions.length - 1));
+          testimonialTrack.scrollTo({ left: testimonialPositions[nextIndex], behavior: 'smooth' });
+        };
+
+        testimonialPrev?.addEventListener('click', () => scrollTestimonials(-1));
+        testimonialNext?.addEventListener('click', () => scrollTestimonials(1));
+
+        testimonialTrack.addEventListener('scroll', () => {
+          window.requestAnimationFrame(syncTestimonialDots);
+        }, { passive: true });
+
+        const refreshTestimonials = () => {
+          buildTestimonialPositions();
+          renderTestimonialDots();
+          syncTestimonialDots();
+        };
+
+        window.addEventListener('resize', refreshTestimonials);
+        refreshTestimonials();
+        syncTestimonialDots();
+      }
 
       // --- Site pill swap (hero + popup + use cases) ---
       window.SKILLSCOUT = {
