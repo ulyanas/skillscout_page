@@ -1,0 +1,9 @@
+{
+  "name": "skillscout-page",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "scrape:official-skills": "node scripts/scrape_official_skills.mjs",
+    "enrich:github-skills": "node scripts/enrich_github_skills.mjs"
+  }
+}

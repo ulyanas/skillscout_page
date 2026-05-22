@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skillscout Official Skills Directory</title>
+    <link rel="icon" href="/icons/skillscout-search-32.png" />
+    <link rel="stylesheet" href="/popup.css" />
+    <link rel="stylesheet" href="/preview/official-directory.css" />
+  </head>
+  <body class="directory-body">
+    <main class="app-shell directory-shell">
+      <header class="header directory-header">
+        <div class="brand">
+          <img
+            class="brand-icon"
+            src="/icons/skillscout-search-32.png"
+            alt=""
+            width="22"
+            height="22"
+          />
+          <p class="title">Skillscout</p>
+        </div>
+      </header>
+      <h1 class="directory-title">Official Skills</h1>
+
+      <section class="directory-stats" aria-label="Directory stats">
+        <article class="panel stat-card">
+          <span id="ownersCount" class="stat-value">-</span>
+          <span class="stat-label">Owners</span>
+        </article>
+        <article class="panel stat-card">
+          <span id="reposCount" class="stat-value">-</span>
+          <span class="stat-label">Repos</span>
+        </article>
+        <article class="panel stat-card">
+          <span id="skillsCount" class="stat-value">-</span>
+          <span class="stat-label">Skills</span>
+        </article>
+      </section>
+
+      <section class="results-section directory-results">
+        <div class="results-header">
+          <div>
+            <p class="eyebrow">Official Owners</p>
+            <p id="resultSummary" class="result-summary">Loading official skills...</p>
+          </div>
+        </div>
+
+        <section class="panel toolbar-panel" aria-label="Directory controls">
+          <label class="search-field" for="searchInput">
+            <span class="eyebrow">Search</span>
+            <span class="search-control">
+              <input
+                id="searchInput"
+                class="search-input"
+                type="search"
+                placeholder="Search owners, skills, repos..."
+                autocomplete="off"
+                spellcheck="false"
+              />
+              <button id="clearButton" class="clear-button" type="button" aria-label="Clear search">×</button>
+            </span>
+          </label>
+
+          <div class="toolbar-actions">
+            <div class="sort-control">
+              <label class="eyebrow" for="sortSelect">Sort</label>
+              <select id="sortSelect" class="sort-select">
+                <option value="rank">Popularity</option>
+                <option value="installs">Installs</option>
+                <option value="skills">Skills</option>
+                <option value="stars">Stars</option>
+                <option value="repos">Repos</option>
+                <option value="name">Name</option>
+              </select>
+            </div>
+            <div class="view-switch" aria-label="View mode">
+              <button id="tileViewButton" class="view-button active" type="button" aria-pressed="true">Tile</button>
+              <button id="listViewButton" class="view-button" type="button" aria-pressed="false">List</button>
+            </div>
+          </div>
+        </section>
+
+        <div id="resultsGrid" class="results-grid tile-view" aria-live="polite"></div>
+
+        <div id="emptyState" class="empty-state hidden">
+          <p class="empty-title">Try another search</p>
+          <p class="empty-copy">Try a shorter term or search by owner, repo, catalog, or description.</p>
+        </div>
+
+        <button id="showMoreButton" class="show-more-button hidden" type="button">Show more</button>
+      </section>
+    </main>
+
+    <template id="ownerCardTemplate">
+      <article class="result-card owner-card" tabindex="0">
+        <div class="result-topline owner-card-header">
+          <div class="owner-identity">
+            <span class="owner-logo-wrap" aria-hidden="true">
+              <img class="owner-logo" alt="" loading="lazy" />
+              <span class="owner-initial"></span>
+            </span>
+            <div>
+              <h2 class="owner-name"></h2>
+              <a class="owner-website" href="#" target="_blank" rel="noreferrer"></a>
+            </div>
+          </div>
+          <div class="card-header-end">
+            <span class="rank-badge"></span>
+            <a class="open-link" href="#" target="_blank" rel="noreferrer" aria-label="Open GitHub repository">
+              <svg class="github-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.71 0 0 .84-.28 2.75 1.05A9.28 9.28 0 0 1 12 7.02c.85 0 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.4.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.36-.01 2.46-.01 2.79 0 .27.18.59.69.49A10.15 10.15 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="owner-metrics" aria-label="Owner metrics">
+          <span><strong class="skills-count"></strong> skills</span>
+          <span><strong class="repos-count"></strong> repos</span>
+          <span><strong class="installs-count"></strong> installs</span>
+          <span><strong class="stars-count">–</strong> stars</span>
+        </div>
+
+        <div class="owner-card-body">
+          <div class="owner-card-meta">
+            <p class="match-count"></p>
+          </div>
+          <ul class="skill-preview"></ul>
+        </div>
+      </article>
+    </template>
+    <script type="module" src="/preview/official-directory.js"></script>
+  </body>
+</html>

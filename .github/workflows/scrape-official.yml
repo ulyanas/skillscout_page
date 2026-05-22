@@ -12,52 +12,28 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4   # checks out skillscout_page
-
-      - uses: actions/checkout@v4   # checks out Skillscout (public, no token needed)
-        with:
-          repository: ulyanas/Skillscout
-          path: skillscout
+      - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: skillscout/package-lock.json
-
-      - name: Install dependencies
-        working-directory: skillscout
-        run: npm ci
 
       - name: Scrape catalog + stars
-        working-directory: skillscout
-        run: npm run scrape:official-skills
+        run: node scripts/scrape_official_skills.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
 
       - name: Enrich with GitHub skill trees
-        working-directory: skillscout
-        run: npm run enrich:github-skills
+        run: node scripts/enrich_github_skills.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build static assets
-        working-directory: skillscout
-        run: npm run build:official
-
-      - name: Copy built files
-        run: |
-          cp -r skillscout/dist/official  ./
-          cp -r skillscout/dist/preview   ./
-          cp -r skillscout/dist/lib       ./
-          cp -r skillscout/dist/data      ./
-          cp -r skillscout/dist/icons     ./
-          cp    skillscout/dist/popup.css ./
+          OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
 
       - name: Commit and push
         run: |
           git config user.email "github-actions@github.com"
           git config user.name  "GitHub Actions"
-          git add -A
+          git add docs/data/official-skills-universal.json
           git diff --staged --quiet || git commit -m "chore: refresh official skills data"
           git push
