@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-23T08:11:17.796Z",
+  "generatedAt": "2026-05-23T11:08:03.000Z",
   "sources": {
     "skills.sh": {
       "sourceId": "skills.sh",
@@ -2600,6 +2600,538 @@
       "confidence": "medium",
       "firstSeenAt": "2026-05-23T08:11:17.796Z",
       "lastSeenAt": "2026-05-23T08:11:17.796Z"
+    },
+    {
+      "ownerKey": "snapchat",
+      "displayName": "Snap Inc.",
+      "normalizedNames": [
+        "snapchat"
+      ],
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "websiteHosts": [],
+      "website": "https://snap.com",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/Snapchat"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "twitter": "@snap"
+    },
+    {
+      "ownerKey": "putdotio",
+      "displayName": "put.io",
+      "normalizedNames": [
+        "putdotio"
+      ],
+      "sourceOwnerKeys": [
+        "putdotio"
+      ],
+      "websiteHosts": [],
+      "website": "https://put.io",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/putdotio"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "twitter": "@putdotio"
+    },
+    {
+      "ownerKey": "coldbox",
+      "displayName": "ColdBox Platform",
+      "normalizedNames": [
+        "coldbox"
+      ],
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "websiteHosts": [],
+      "website": "https://www.coldbox.org",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/ColdBox"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "twitter": "@coldbox"
+    },
+    {
+      "ownerKey": "checkly",
+      "displayName": "Checkly",
+      "normalizedNames": [
+        "checkly"
+      ],
+      "sourceOwnerKeys": [
+        "checkly"
+      ],
+      "websiteHosts": [],
+      "website": "https://checklyhq.com",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/checkly"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "twitter": "@checklyHQ"
+    },
+    {
+      "ownerKey": "ideamans",
+      "displayName": "ideaman's Inc.",
+      "normalizedNames": [
+        "ideamans"
+      ],
+      "sourceOwnerKeys": [
+        "ideamans"
+      ],
+      "websiteHosts": [],
+      "website": "https://www.ideamans.com",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/ideamans"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0
+    },
+    {
+      "ownerKey": "tech-leads-club",
+      "displayName": "TechLeads.club",
+      "normalizedNames": [
+        "tech-leads-club"
+      ],
+      "sourceOwnerKeys": [
+        "tech-leads-club"
+      ],
+      "websiteHosts": [],
+      "website": "https://techleads.club",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/tech-leads-club"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "medium",
+      "dbConfirmed": false,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0
+    },
+    {
+      "ownerKey": "nexu-io",
+      "displayName": "nexu",
+      "normalizedNames": [
+        "nexu-io"
+      ],
+      "sourceOwnerKeys": [
+        "nexu-io"
+      ],
+      "websiteHosts": [],
+      "website": "https://nexu.io",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/nexu-io"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "medium",
+      "dbConfirmed": false,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0
+    },
+    {
+      "ownerKey": "tencentcloudbase",
+      "displayName": "Tencent CloudBase",
+      "normalizedNames": [
+        "tencentcloudbase"
+      ],
+      "sourceOwnerKeys": [
+        "TencentCloudBase"
+      ],
+      "websiteHosts": [],
+      "website": "https://docs.cloudbase.net",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/TencentCloudBase"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "medium",
+      "dbConfirmed": false,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "twitter": "@TencentCloudTCB"
+    },
+    {
+      "ownerKey": "math-inc",
+      "displayName": "Math, Inc.",
+      "normalizedNames": [
+        "math-inc"
+      ],
+      "sourceOwnerKeys": [
+        "math-inc"
+      ],
+      "websiteHosts": [],
+      "website": "https://math.inc",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/math-inc"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "medium",
+      "dbConfirmed": false,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "twitter": "@mathematics_inc"
+    },
+    {
+      "ownerKey": "cherryhq",
+      "displayName": "Cherry Studio",
+      "normalizedNames": [
+        "cherryhq"
+      ],
+      "sourceOwnerKeys": [
+        "CherryHQ"
+      ],
+      "websiteHosts": [],
+      "website": "https://cherry-ai.com",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/CherryHQ"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "medium",
+      "dbConfirmed": false,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "twitter": "@CherryStudioAPP"
+    },
+    {
+      "ownerKey": "obot-platform",
+      "displayName": "Obot AI",
+      "normalizedNames": [
+        "obot-platform"
+      ],
+      "sourceOwnerKeys": [
+        "obot-platform"
+      ],
+      "websiteHosts": [],
+      "website": "https://obot.ai",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/obot-platform"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "medium",
+      "dbConfirmed": false,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "twitter": "@acornlabs"
+    },
+    {
+      "ownerKey": "a5c-ai",
+      "displayName": "a5c.ai",
+      "normalizedNames": [
+        "a5c-ai"
+      ],
+      "sourceOwnerKeys": [
+        "a5c-ai"
+      ],
+      "websiteHosts": [],
+      "website": "https://a5c.ai",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/a5c-ai"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "medium",
+      "dbConfirmed": false,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "twitter": "@a5c_ai"
+    },
+    {
+      "ownerKey": "copilotkit",
+      "displayName": "CopilotKit",
+      "normalizedNames": [
+        "copilotkit"
+      ],
+      "sourceOwnerKeys": [
+        "CopilotKit"
+      ],
+      "websiteHosts": [],
+      "website": "https://copilotkit.ai",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/CopilotKit"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "medium",
+      "dbConfirmed": false,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0
+    },
+    {
+      "ownerKey": "harmonicabot",
+      "displayName": "Harmonica",
+      "normalizedNames": [
+        "harmonicabot"
+      ],
+      "sourceOwnerKeys": [
+        "harmonicabot"
+      ],
+      "websiteHosts": [],
+      "website": "https://www.harmonica.chat",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/harmonicabot"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "medium",
+      "dbConfirmed": false,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "twitter": "@harmonica_chat"
+    },
+    {
+      "ownerKey": "ranbot-ai",
+      "displayName": "RanBOT Labs",
+      "normalizedNames": [
+        "ranbot-ai"
+      ],
+      "sourceOwnerKeys": [
+        "ranbot-ai"
+      ],
+      "websiteHosts": [],
+      "website": "https://ranbot.online",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/ranbot-ai"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "medium",
+      "dbConfirmed": false,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "twitter": "@ranbotai"
+    },
+    {
+      "ownerKey": "tophant-ai",
+      "displayName": "Tophant",
+      "normalizedNames": [
+        "tophant-ai"
+      ],
+      "sourceOwnerKeys": [
+        "tophant-ai"
+      ],
+      "websiteHosts": [],
+      "website": "https://www.tophant.com",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/tophant-ai"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "medium",
+      "dbConfirmed": false,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0
+    },
+    {
+      "ownerKey": "ievo-ai",
+      "displayName": "iEVO",
+      "normalizedNames": [
+        "ievo-ai"
+      ],
+      "sourceOwnerKeys": [
+        "ievo-ai"
+      ],
+      "websiteHosts": [],
+      "website": "https://ievo.ai",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/ievo-ai"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "medium",
+      "dbConfirmed": false,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "twitter": "@ievoai"
+    },
+    {
+      "ownerKey": "swarmclawai",
+      "displayName": "SwarmClaw AI",
+      "normalizedNames": [
+        "swarmclawai"
+      ],
+      "sourceOwnerKeys": [
+        "swarmclawai"
+      ],
+      "websiteHosts": [],
+      "website": "https://www.swarmclaw.ai",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/swarmclawai"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "medium",
+      "dbConfirmed": false,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0
+    },
+    {
+      "ownerKey": "cmu-llab",
+      "displayName": "LLab at CMU",
+      "normalizedNames": [
+        "cmu-llab"
+      ],
+      "sourceOwnerKeys": [
+        "cmu-llab"
+      ],
+      "websiteHosts": [],
+      "website": "https://llab-cmu.github.io",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/cmu-llab"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "medium",
+      "dbConfirmed": false,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0
+    },
+    {
+      "ownerKey": "bitroot-org",
+      "displayName": "Bitroot",
+      "normalizedNames": [
+        "bitroot-org"
+      ],
+      "sourceOwnerKeys": [
+        "bitroot-org"
+      ],
+      "websiteHosts": [],
+      "website": "https://bitroot.org",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/bitroot-org"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "medium",
+      "dbConfirmed": false,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0
     }
   ],
   "officialRepos": [
@@ -20403,6 +20935,506 @@
       "canonicalRepoKey": "wordpress/php-mcp-schema",
       "githubSkillPaths": [
         "skill"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "snapchat/valdi",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoName": "Valdi",
+      "displayName": "Snapchat/Valdi",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/Snapchat/Valdi"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "ai-skills/skills/valdi-overview/skill.md"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "putdotio/skills",
+      "ownerKey": "putdotio",
+      "sourceOwnerKeys": [
+        "putdotio"
+      ],
+      "repoName": "skills",
+      "displayName": "putdotio/skills",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/putdotio/skills"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "SKILL.md"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "coldbox/skills",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoName": "skills",
+      "displayName": "ColdBox/skills",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/ColdBox/skills"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "SKILL.md"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "checkly/checkly-cli",
+      "ownerKey": "checkly",
+      "sourceOwnerKeys": [
+        "checkly"
+      ],
+      "repoName": "checkly-cli",
+      "displayName": "checkly/checkly-cli",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/checkly/checkly-cli"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "skills/checkly/SKILL.md"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "ideamans/gridgram",
+      "ownerKey": "ideamans",
+      "sourceOwnerKeys": [
+        "ideamans"
+      ],
+      "repoName": "gridgram",
+      "displayName": "ideamans/gridgram",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/ideamans/gridgram"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "docs/en/ai/gh-skill.md"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "tech-leads-club/agent-skills",
+      "ownerKey": "tech-leads-club",
+      "sourceOwnerKeys": [
+        "tech-leads-club"
+      ],
+      "repoName": "agent-skills",
+      "displayName": "tech-leads-club/agent-skills",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/tech-leads-club/agent-skills"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "packages/skills-catalog/skills/(monitoring)/sentry/SKILL.md"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "nexu-io/open-design",
+      "ownerKey": "nexu-io",
+      "sourceOwnerKeys": [
+        "nexu-io"
+      ],
+      "repoName": "open-design",
+      "displayName": "nexu-io/open-design",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/nexu-io/open-design"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "SKILL.md"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "tencentcloudbase/cloudbase-mcp",
+      "ownerKey": "tencentcloudbase",
+      "sourceOwnerKeys": [
+        "TencentCloudBase"
+      ],
+      "repoName": "CloudBase-MCP",
+      "displayName": "TencentCloudBase/CloudBase-MCP",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/TencentCloudBase/CloudBase-MCP"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "config/source/guideline/cloudbase/SKILL.md"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "math-inc/opengauss",
+      "ownerKey": "math-inc",
+      "sourceOwnerKeys": [
+        "math-inc"
+      ],
+      "repoName": "OpenGauss",
+      "displayName": "math-inc/OpenGauss",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/math-inc/OpenGauss"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "optional-skills/productivity/telephony/SKILL.md"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "cherryhq/cherry-studio",
+      "ownerKey": "cherryhq",
+      "sourceOwnerKeys": [
+        "CherryHQ"
+      ],
+      "repoName": "cherry-studio",
+      "displayName": "CherryHQ/cherry-studio",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/CherryHQ/cherry-studio"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "SKILL.md"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "obot-platform/obot",
+      "ownerKey": "obot-platform",
+      "sourceOwnerKeys": [
+        "obot-platform"
+      ],
+      "repoName": "obot",
+      "displayName": "obot-platform/obot",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/obot-platform/obot"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "pkg/localagents/assets/claude/skills/obot-install-skill/SKILL.md.tmpl"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "a5c-ai/babysitter",
+      "ownerKey": "a5c-ai",
+      "sourceOwnerKeys": [
+        "a5c-ai"
+      ],
+      "repoName": "babysitter",
+      "displayName": "a5c-ai/babysitter",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/a5c-ai/babysitter"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "SKILL.md"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "copilotkit/copilotkit",
+      "ownerKey": "copilotkit",
+      "sourceOwnerKeys": [
+        "CopilotKit"
+      ],
+      "repoName": "CopilotKit",
+      "displayName": "CopilotKit/CopilotKit",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/CopilotKit/CopilotKit"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "examples/showcases/open-mcp-client/apps/mcp-use-server/.agent/skills/mcp-builder/SKILL.md"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "harmonicabot/harmonica-chat",
+      "ownerKey": "harmonicabot",
+      "sourceOwnerKeys": [
+        "harmonicabot"
+      ],
+      "repoName": "harmonica-chat",
+      "displayName": "harmonicabot/harmonica-chat",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/harmonicabot/harmonica-chat"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "SKILL.md"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "ranbot-ai/awesome-skills",
+      "ownerKey": "ranbot-ai",
+      "sourceOwnerKeys": [
+        "ranbot-ai"
+      ],
+      "repoName": "awesome-skills",
+      "displayName": "ranbot-ai/awesome-skills",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/ranbot-ai/awesome-skills"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "SKILL.md"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "tophant-ai/clawvault",
+      "ownerKey": "tophant-ai",
+      "sourceOwnerKeys": [
+        "tophant-ai"
+      ],
+      "repoName": "ClawVault",
+      "displayName": "tophant-ai/ClawVault",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/tophant-ai/ClawVault"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "doc/zh/OPENCLAW_SKILL.md"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "ievo-ai/skills",
+      "ownerKey": "ievo-ai",
+      "sourceOwnerKeys": [
+        "ievo-ai"
+      ],
+      "repoName": "skills",
+      "displayName": "ievo-ai/skills",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/ievo-ai/skills"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "SKILL.md"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "swarmclawai/swarmclaw",
+      "ownerKey": "swarmclawai",
+      "sourceOwnerKeys": [
+        "swarmclawai"
+      ],
+      "repoName": "swarmclaw",
+      "displayName": "swarmclawai/swarmclaw",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/swarmclawai/swarmclaw"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "swarmclaw-skill.md"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "cmu-llab/reacomp",
+      "ownerKey": "cmu-llab",
+      "sourceOwnerKeys": [
+        "cmu-llab"
+      ],
+      "repoName": "ReaComp",
+      "displayName": "cmu-llab/ReaComp",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/cmu-llab/ReaComp"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "openhands_docs/sdk/guides/skill.mdx"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "bitroot-org/bitroot-org-website",
+      "ownerKey": "bitroot-org",
+      "sourceOwnerKeys": [
+        "bitroot-org"
+      ],
+      "repoName": "bitroot-org-website",
+      "displayName": "bitroot-org/bitroot-org-website",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/bitroot-org/bitroot-org-website"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "blog/posts/2026-05-05-hermes-agent-gains-hyperframes-video-editing-skill.md"
       ],
       "truncated": false
     }
@@ -156448,8 +157480,8 @@
     }
   ],
   "stats": {
-    "owners": 99,
-    "repos": 467,
+    "owners": 119,
+    "repos": 487,
     "skills": 6478,
     "sourceOwners": {
       "skills.sh": 94,
