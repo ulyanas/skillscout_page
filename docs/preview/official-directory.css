@@ -112,6 +112,12 @@ body.directory-body {
   letter-spacing: -0.01em;
 }
 
+/* Hide the browser's native clear button on type="search" inputs —
+   we use our own #clearButton instead */
+.search-input::-webkit-search-cancel-button {
+  display: none;
+}
+
 .search-input:focus-visible,
 .clear-button:focus-visible,
 .view-button:focus-visible,
