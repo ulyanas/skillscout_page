@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-23T11:31:05.683Z",
+  "generatedAt": "2026-05-23T11:54:00.009Z",
   "sources": {
     "skills.sh": {
       "sourceId": "skills.sh",
@@ -2813,88 +2813,6 @@
       "confidence": "high",
       "dbConfirmed": true,
       "companyIndustry": "",
-      "firstSeenAt": "2026-05-23T11:31:05.683Z",
-      "lastSeenAt": "2026-05-23T11:31:05.683Z"
-    },
-    {
-      "ownerKey": "fcakyon",
-      "displayName": "Linktree",
-      "normalizedNames": [
-        "fcakyon"
-      ],
-      "sourceOwnerKeys": [
-        "fcakyon"
-      ],
-      "websiteHosts": [],
-      "website": "http://linktr.ee/fcakyon",
-      "sources": [
-        "github-discovery"
-      ],
-      "sourceUrls": [
-        "https://github.com/fcakyon"
-      ],
-      "skillsCount": 0,
-      "reposCount": 1,
-      "installsCount": 0,
-      "starsCount": 702,
-      "confidence": "high",
-      "dbConfirmed": true,
-      "companyIndustry": "consumer-goods, social-media-analytics-software, software",
-      "firstSeenAt": "2026-05-23T11:31:05.683Z",
-      "lastSeenAt": "2026-05-23T11:31:05.683Z",
-      "twitter": "@fcakyon"
-    },
-    {
-      "ownerKey": "anand-92",
-      "displayName": "LinkedIn",
-      "normalizedNames": [
-        "anand-92"
-      ],
-      "sourceOwnerKeys": [
-        "anand-92"
-      ],
-      "websiteHosts": [],
-      "website": "https://www.linkedin.com/in/nik-anand-4a2937162/",
-      "sources": [
-        "github-discovery"
-      ],
-      "sourceUrls": [
-        "https://github.com/anand-92"
-      ],
-      "skillsCount": 0,
-      "reposCount": 1,
-      "installsCount": 0,
-      "starsCount": 2,
-      "confidence": "high",
-      "dbConfirmed": true,
-      "companyIndustry": "address-book, advertising, company-search",
-      "firstSeenAt": "2026-05-23T11:31:05.683Z",
-      "lastSeenAt": "2026-05-23T11:31:05.683Z"
-    },
-    {
-      "ownerKey": "jasonhnd",
-      "displayName": "GitHub",
-      "normalizedNames": [
-        "jasonhnd"
-      ],
-      "sourceOwnerKeys": [
-        "jasonhnd"
-      ],
-      "websiteHosts": [],
-      "website": "https://github.com/jasonhnd",
-      "sources": [
-        "github-discovery"
-      ],
-      "sourceUrls": [
-        "https://github.com/jasonhnd"
-      ],
-      "skillsCount": 0,
-      "reposCount": 1,
-      "installsCount": 0,
-      "starsCount": 4,
-      "confidence": "high",
-      "dbConfirmed": true,
-      "companyIndustry": "cloud-computing, computer-programming, computer-software",
       "firstSeenAt": "2026-05-23T11:31:05.683Z",
       "lastSeenAt": "2026-05-23T11:31:05.683Z"
     },
@@ -21098,75 +21016,6 @@
       "skillsCount": 0,
       "installsCount": 0,
       "starsCount": 1736,
-      "confidence": "medium",
-      "firstSeenAt": "2026-05-23T11:31:05.683Z",
-      "lastSeenAt": "2026-05-23T11:31:05.683Z",
-      "githubSkillPaths": [],
-      "truncated": false
-    },
-    {
-      "repoKey": "fcakyon/claude-codex-settings",
-      "ownerKey": "fcakyon",
-      "sourceOwnerKeys": [
-        "fcakyon"
-      ],
-      "repoName": "claude-codex-settings",
-      "displayName": "fcakyon/claude-codex-settings",
-      "sources": [
-        "github-discovery"
-      ],
-      "sourceUrls": [
-        "https://github.com/fcakyon/claude-codex-settings"
-      ],
-      "skillsCount": 0,
-      "installsCount": 0,
-      "starsCount": 702,
-      "confidence": "medium",
-      "firstSeenAt": "2026-05-23T11:31:05.683Z",
-      "lastSeenAt": "2026-05-23T11:31:05.683Z",
-      "githubSkillPaths": [],
-      "truncated": false
-    },
-    {
-      "repoKey": "anand-92/skills-registry",
-      "ownerKey": "anand-92",
-      "sourceOwnerKeys": [
-        "anand-92"
-      ],
-      "repoName": "skills-registry",
-      "displayName": "anand-92/skills-registry",
-      "sources": [
-        "github-discovery"
-      ],
-      "sourceUrls": [
-        "https://github.com/anand-92/skills-registry"
-      ],
-      "skillsCount": 0,
-      "installsCount": 0,
-      "starsCount": 2,
-      "confidence": "medium",
-      "firstSeenAt": "2026-05-23T11:31:05.683Z",
-      "lastSeenAt": "2026-05-23T11:31:05.683Z",
-      "githubSkillPaths": [],
-      "truncated": false
-    },
-    {
-      "repoKey": "jasonhnd/life_os",
-      "ownerKey": "jasonhnd",
-      "sourceOwnerKeys": [
-        "jasonhnd"
-      ],
-      "repoName": "life_OS",
-      "displayName": "jasonhnd/life_OS",
-      "sources": [
-        "github-discovery"
-      ],
-      "sourceUrls": [
-        "https://github.com/jasonhnd/life_OS"
-      ],
-      "skillsCount": 0,
-      "installsCount": 0,
-      "starsCount": 4,
       "confidence": "medium",
       "firstSeenAt": "2026-05-23T11:31:05.683Z",
       "lastSeenAt": "2026-05-23T11:31:05.683Z",
@@ -427928,8 +427777,8 @@
     }
   ],
   "stats": {
-    "owners": 111,
-    "repos": 479,
+    "owners": 108,
+    "repos": 476,
     "skills": 19368,
     "sourceOwners": {
       "skills.sh": 94,
