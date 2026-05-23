@@ -134,9 +134,11 @@ function reconcileSkillsWithGitHub(directory) {
       catalogInstalls.set(slug, Math.max(catalogInstalls.get(slug) || 0, skill.installsCount || 0));
     }
 
-    // Replace catalog skills for this repo with GitHub ground truth
+    // Replace ALL existing skills for this repo with GitHub ground truth.
+    // Must drop previous github-sourced entries too, otherwise repeated
+    // enrichment runs layer duplicate skillKeys into the array.
     directory.officialSkills = directory.officialSkills.filter(
-      (s) => s.repoKey !== repoKey || s.sources.includes("github")
+      (s) => s.repoKey !== repoKey
     );
 
     for (const skillPath of githubPaths) {
