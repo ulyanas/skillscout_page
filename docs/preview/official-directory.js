@@ -111,7 +111,28 @@ const OWNER_METADATA = {
   whopio: ["Whop", "https://whop.com"],
   wix: ["Wix", "https://www.wix.com"],
   wordpress: ["WordPress", "https://wordpress.org"],
-  zapier: ["Zapier", "https://zapier.com", "https://github.com/zapier"]
+  zapier: ["Zapier", "https://zapier.com", "https://github.com/zapier"],
+  // GitHub-discovered vendors
+  "a5c-ai": ["a5c.ai", "https://a5c.ai"],
+  "bitroot-org": ["Bitroot", "https://bitroot.org"],
+  cherryhq: ["Cherry Studio", "https://cherry-ai.com"],
+  checkly: ["Checkly", "https://checklyhq.com"],
+  coldbox: ["ColdBox Platform", "https://www.coldbox.org"],
+  "cmu-llab": ["LLab at CMU", "https://llab-cmu.github.io"],
+  copilotkit: ["CopilotKit", "https://copilotkit.ai"],
+  harmonicabot: ["Harmonica", "https://www.harmonica.chat"],
+  ideamans: ["ideaman's Inc.", "https://www.ideamans.com"],
+  "ievo-ai": ["iEVO", "https://ievo.ai"],
+  "math-inc": ["Math, Inc.", "https://math.inc"],
+  "nexu-io": ["nexu", "https://nexu.io"],
+  "obot-platform": ["Obot AI", "https://obot.ai"],
+  putdotio: ["put.io", "https://put.io"],
+  "ranbot-ai": ["RanBOT Labs", "https://ranbot.online"],
+  snapchat: ["Snap Inc.", "https://snap.com"],
+  swarmclawai: ["SwarmClaw AI", "https://www.swarmclaw.ai"],
+  "tech-leads-club": ["TechLeads.club", "https://techleads.club"],
+  tencentcloudbase: ["Tencent CloudBase", "https://docs.cloudbase.net"],
+  "tophant-ai": ["Tophant", "https://www.tophant.com"]
 };
 
 const state = {
