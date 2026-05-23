@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-23T11:54:00.009Z",
+  "generatedAt": "2026-05-23T11:56:13.472Z",
   "sources": {
     "skills.sh": {
       "sourceId": "skills.sh",
@@ -149,29 +149,6 @@
       "starsCount": 368
     },
     {
-      "ownerKey": "atlassian",
-      "displayName": "Atlassian",
-      "normalizedNames": [
-        "atlassian"
-      ],
-      "sourceOwnerKeys": [
-        "atlassian"
-      ],
-      "websiteHosts": [],
-      "sources": [
-        "mcpservers.org"
-      ],
-      "sourceUrls": [
-        "https://mcpservers.org/agent-skills/author/atlassian"
-      ],
-      "skillsCount": 5,
-      "reposCount": 0,
-      "installsCount": 0,
-      "confidence": "medium",
-      "firstSeenAt": "2026-05-23T08:11:17.796Z",
-      "lastSeenAt": "2026-05-23T08:11:17.796Z"
-    },
-    {
       "ownerKey": "auth0",
       "displayName": "auth0",
       "normalizedNames": [
@@ -249,29 +226,6 @@
       "firstSeenAt": "2026-05-23T08:11:17.796Z",
       "lastSeenAt": "2026-05-23T08:11:17.796Z",
       "starsCount": 274
-    },
-    {
-      "ownerKey": "azure",
-      "displayName": "Azure",
-      "normalizedNames": [
-        "azure"
-      ],
-      "sourceOwnerKeys": [
-        "azure"
-      ],
-      "websiteHosts": [],
-      "sources": [
-        "mcpservers.org"
-      ],
-      "sourceUrls": [
-        "https://mcpservers.org/agent-skills/author/azure"
-      ],
-      "skillsCount": 20,
-      "reposCount": 0,
-      "installsCount": 0,
-      "confidence": "medium",
-      "firstSeenAt": "2026-05-23T08:11:17.796Z",
-      "lastSeenAt": "2026-05-23T08:11:17.796Z"
     },
     {
       "ownerKey": "base",
@@ -480,29 +434,6 @@
       "firstSeenAt": "2026-05-23T08:11:17.796Z",
       "lastSeenAt": "2026-05-23T08:11:17.796Z",
       "starsCount": 8046
-    },
-    {
-      "ownerKey": "canva",
-      "displayName": "Canva",
-      "normalizedNames": [
-        "canva"
-      ],
-      "sourceOwnerKeys": [
-        "canva"
-      ],
-      "websiteHosts": [],
-      "sources": [
-        "mcpservers.org"
-      ],
-      "sourceUrls": [
-        "https://mcpservers.org/agent-skills/author/canva"
-      ],
-      "skillsCount": 3,
-      "reposCount": 0,
-      "installsCount": 0,
-      "confidence": "medium",
-      "firstSeenAt": "2026-05-23T08:11:17.796Z",
-      "lastSeenAt": "2026-05-23T08:11:17.796Z"
     },
     {
       "ownerKey": "clerk",
@@ -1178,29 +1109,6 @@
       "firstSeenAt": "2026-05-23T08:11:17.796Z",
       "lastSeenAt": "2026-05-23T08:11:17.796Z",
       "starsCount": 146639
-    },
-    {
-      "ownerKey": "google",
-      "displayName": "Google Workspace",
-      "normalizedNames": [
-        "google-workspace"
-      ],
-      "sourceOwnerKeys": [
-        "google"
-      ],
-      "websiteHosts": [],
-      "sources": [
-        "mcpservers.org"
-      ],
-      "sourceUrls": [
-        "https://mcpservers.org/agent-skills/author/google"
-      ],
-      "skillsCount": 92,
-      "reposCount": 0,
-      "installsCount": 0,
-      "confidence": "medium",
-      "firstSeenAt": "2026-05-23T08:11:17.796Z",
-      "lastSeenAt": "2026-05-23T08:11:17.796Z"
     },
     {
       "ownerKey": "google-gemini",
@@ -2579,29 +2487,6 @@
       "starsCount": 1543
     },
     {
-      "ownerKey": "zapier",
-      "displayName": "Zapier",
-      "normalizedNames": [
-        "zapier"
-      ],
-      "sourceOwnerKeys": [
-        "zapier"
-      ],
-      "websiteHosts": [],
-      "sources": [
-        "mcpservers.org"
-      ],
-      "sourceUrls": [
-        "https://mcpservers.org/agent-skills/author/zapier"
-      ],
-      "skillsCount": 3,
-      "reposCount": 0,
-      "installsCount": 0,
-      "confidence": "medium",
-      "firstSeenAt": "2026-05-23T08:11:17.796Z",
-      "lastSeenAt": "2026-05-23T08:11:17.796Z"
-    },
-    {
       "ownerKey": "snapchat",
       "displayName": "Snap Inc.",
       "normalizedNames": [
@@ -2734,115 +2619,6 @@
       "firstSeenAt": "2026-05-23T11:08:03.000Z",
       "lastSeenAt": "2026-05-23T11:08:03.000Z",
       "starsCount": 1
-    },
-    {
-      "ownerKey": "cristoslc",
-      "displayName": "Cristos L-C",
-      "normalizedNames": [
-        "cristoslc"
-      ],
-      "sourceOwnerKeys": [
-        "cristoslc"
-      ],
-      "websiteHosts": [],
-      "website": "http://www.cristoslc.com",
-      "sources": [
-        "github-discovery"
-      ],
-      "sourceUrls": [
-        "https://github.com/cristoslc"
-      ],
-      "skillsCount": 0,
-      "reposCount": 1,
-      "installsCount": 0,
-      "starsCount": 0,
-      "confidence": "high",
-      "dbConfirmed": true,
-      "companyIndustry": "",
-      "firstSeenAt": "2026-05-23T11:31:05.683Z",
-      "lastSeenAt": "2026-05-23T11:31:05.683Z"
-    },
-    {
-      "ownerKey": "iamsteveholmes",
-      "displayName": "Blogspot",
-      "normalizedNames": [
-        "iamsteveholmes"
-      ],
-      "sourceOwnerKeys": [
-        "iamsteveholmes"
-      ],
-      "websiteHosts": [],
-      "website": "http://capitalcodemonkey.blogspot.com",
-      "sources": [
-        "github-discovery"
-      ],
-      "sourceUrls": [
-        "https://github.com/iamsteveholmes"
-      ],
-      "skillsCount": 0,
-      "reposCount": 1,
-      "installsCount": 0,
-      "starsCount": 0,
-      "confidence": "high",
-      "dbConfirmed": true,
-      "companyIndustry": "",
-      "firstSeenAt": "2026-05-23T11:31:05.683Z",
-      "lastSeenAt": "2026-05-23T11:31:05.683Z"
-    },
-    {
-      "ownerKey": "renatoasse",
-      "displayName": "Sem Codar",
-      "normalizedNames": [
-        "renatoasse"
-      ],
-      "sourceOwnerKeys": [
-        "renatoasse"
-      ],
-      "websiteHosts": [],
-      "website": "https://www.semcodar.com.br",
-      "sources": [
-        "github-discovery"
-      ],
-      "sourceUrls": [
-        "https://github.com/renatoasse"
-      ],
-      "skillsCount": 0,
-      "reposCount": 1,
-      "installsCount": 0,
-      "starsCount": 1736,
-      "confidence": "high",
-      "dbConfirmed": true,
-      "companyIndustry": "",
-      "firstSeenAt": "2026-05-23T11:31:05.683Z",
-      "lastSeenAt": "2026-05-23T11:31:05.683Z"
-    },
-    {
-      "ownerKey": "ortus-solutions",
-      "displayName": "Ortus Solutions",
-      "normalizedNames": [
-        "ortus-solutions"
-      ],
-      "sourceOwnerKeys": [
-        "Ortus-Solutions"
-      ],
-      "websiteHosts": [],
-      "website": "https://www.ortussolutions.com",
-      "sources": [
-        "github-discovery"
-      ],
-      "sourceUrls": [
-        "https://github.com/Ortus-Solutions"
-      ],
-      "skillsCount": 0,
-      "reposCount": 1,
-      "installsCount": 0,
-      "starsCount": 0,
-      "confidence": "high",
-      "dbConfirmed": true,
-      "companyIndustry": "api-development, coldbox, coldfusion",
-      "firstSeenAt": "2026-05-23T11:31:05.683Z",
-      "lastSeenAt": "2026-05-23T11:31:05.683Z",
-      "twitter": "@ortussolutions"
     }
   ],
   "officialRepos": [
@@ -20951,98 +20727,6 @@
         "plugins/gridgram/skills/gg-install",
         "plugins/gridgram/skills/gg-render"
       ],
-      "truncated": false
-    },
-    {
-      "repoKey": "cristoslc/llm-personal-agent-patterns",
-      "ownerKey": "cristoslc",
-      "sourceOwnerKeys": [
-        "cristoslc"
-      ],
-      "repoName": "LLM-personal-agent-patterns",
-      "displayName": "cristoslc/LLM-personal-agent-patterns",
-      "sources": [
-        "github-discovery"
-      ],
-      "sourceUrls": [
-        "https://github.com/cristoslc/LLM-personal-agent-patterns"
-      ],
-      "skillsCount": 0,
-      "installsCount": 0,
-      "starsCount": 0,
-      "confidence": "medium",
-      "firstSeenAt": "2026-05-23T11:31:05.683Z",
-      "lastSeenAt": "2026-05-23T11:31:05.683Z",
-      "githubSkillPaths": [],
-      "truncated": false
-    },
-    {
-      "repoKey": "iamsteveholmes/momentum",
-      "ownerKey": "iamsteveholmes",
-      "sourceOwnerKeys": [
-        "iamsteveholmes"
-      ],
-      "repoName": "momentum",
-      "displayName": "iamsteveholmes/momentum",
-      "sources": [
-        "github-discovery"
-      ],
-      "sourceUrls": [
-        "https://github.com/iamsteveholmes/momentum"
-      ],
-      "skillsCount": 0,
-      "installsCount": 0,
-      "starsCount": 0,
-      "confidence": "medium",
-      "firstSeenAt": "2026-05-23T11:31:05.683Z",
-      "lastSeenAt": "2026-05-23T11:31:05.683Z",
-      "githubSkillPaths": [],
-      "truncated": false
-    },
-    {
-      "repoKey": "renatoasse/opensquad",
-      "ownerKey": "renatoasse",
-      "sourceOwnerKeys": [
-        "renatoasse"
-      ],
-      "repoName": "opensquad",
-      "displayName": "renatoasse/opensquad",
-      "sources": [
-        "github-discovery"
-      ],
-      "sourceUrls": [
-        "https://github.com/renatoasse/opensquad"
-      ],
-      "skillsCount": 0,
-      "installsCount": 0,
-      "starsCount": 1736,
-      "confidence": "medium",
-      "firstSeenAt": "2026-05-23T11:31:05.683Z",
-      "lastSeenAt": "2026-05-23T11:31:05.683Z",
-      "githubSkillPaths": [],
-      "truncated": false
-    },
-    {
-      "repoKey": "ortus-solutions/skills",
-      "ownerKey": "ortus-solutions",
-      "sourceOwnerKeys": [
-        "Ortus-Solutions"
-      ],
-      "repoName": "skills",
-      "displayName": "Ortus-Solutions/skills",
-      "sources": [
-        "github-discovery"
-      ],
-      "sourceUrls": [
-        "https://github.com/Ortus-Solutions/skills"
-      ],
-      "skillsCount": 0,
-      "installsCount": 0,
-      "starsCount": 0,
-      "confidence": "medium",
-      "firstSeenAt": "2026-05-23T11:31:05.683Z",
-      "lastSeenAt": "2026-05-23T11:31:05.683Z",
-      "githubSkillPaths": [],
       "truncated": false
     }
   ],
@@ -427777,8 +427461,8 @@
     }
   ],
   "stats": {
-    "owners": 108,
-    "repos": 476,
+    "owners": 99,
+    "repos": 472,
     "skills": 19368,
     "sourceOwners": {
       "skills.sh": 94,
