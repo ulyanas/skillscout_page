@@ -505,6 +505,33 @@
       "lastSeenAt": "2026-05-23T21:23:04.875Z"
     },
     {
+      "ownerKey": "checkly",
+      "displayName": "Checkly",
+      "normalizedNames": [
+        "checkly"
+      ],
+      "sourceOwnerKeys": [
+        "checkly"
+      ],
+      "websiteHosts": [],
+      "website": "https://checklyhq.com",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/checkly"
+      ],
+      "skillsCount": 2,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 93,
+      "twitter": "@checklyHQ"
+    },
+    {
       "ownerKey": "clerk",
       "displayName": "clerk",
       "normalizedNames": [
@@ -633,6 +660,33 @@
       "firstSeenAt": "2026-05-23T21:23:04.875Z",
       "lastSeenAt": "2026-05-23T21:23:04.875Z",
       "starsCount": 580
+    },
+    {
+      "ownerKey": "coldbox",
+      "displayName": "ColdBox Platform",
+      "normalizedNames": [
+        "coldbox"
+      ],
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "websiteHosts": [],
+      "website": "https://www.coldbox.org",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/ColdBox"
+      ],
+      "skillsCount": 118,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "twitter": "@coldbox"
     },
     {
       "ownerKey": "contentful",
@@ -1308,6 +1362,32 @@
       "starsCount": 257997
     },
     {
+      "ownerKey": "ideamans",
+      "displayName": "ideaman's Inc.",
+      "normalizedNames": [
+        "ideamans"
+      ],
+      "sourceOwnerKeys": [
+        "ideamans"
+      ],
+      "websiteHosts": [],
+      "website": "https://www.ideamans.com",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/ideamans"
+      ],
+      "skillsCount": 5,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 1
+    },
+    {
       "ownerKey": "kotlin",
       "displayName": "kotlin",
       "normalizedNames": [
@@ -1906,6 +1986,33 @@
       "starsCount": 50
     },
     {
+      "ownerKey": "putdotio",
+      "displayName": "put.io",
+      "normalizedNames": [
+        "putdotio"
+      ],
+      "sourceOwnerKeys": [
+        "putdotio"
+      ],
+      "websiteHosts": [],
+      "website": "https://put.io",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/putdotio"
+      ],
+      "skillsCount": 5,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "twitter": "@putdotio"
+    },
+    {
       "ownerKey": "pytorch",
       "displayName": "pytorch",
       "normalizedNames": [
@@ -2164,6 +2271,33 @@
       "firstSeenAt": "2026-05-23T21:23:04.875Z",
       "lastSeenAt": "2026-05-23T21:23:04.875Z",
       "starsCount": 5
+    },
+    {
+      "ownerKey": "snapchat",
+      "displayName": "Snap Inc.",
+      "normalizedNames": [
+        "snapchat"
+      ],
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "websiteHosts": [],
+      "website": "https://snap.com",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/Snapchat"
+      ],
+      "skillsCount": 27,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 16388,
+      "twitter": "@snap"
     },
     {
       "ownerKey": "streamlit",
@@ -5295,6 +5429,32 @@
       "truncated": false
     },
     {
+      "repoKey": "checkly/checkly-cli",
+      "ownerKey": "checkly",
+      "sourceOwnerKeys": [
+        "checkly"
+      ],
+      "repoName": "checkly-cli",
+      "displayName": "checkly/checkly-cli",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/checkly/checkly-cli"
+      ],
+      "skillsCount": 2,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 93,
+      "githubSkillPaths": [
+        "packages/cli/src/ai-context",
+        "skills/checkly"
+      ],
+      "truncated": false
+    },
+    {
       "repoKey": "clerk/cli",
       "ownerKey": "clerk",
       "sourceOwnerKeys": [
@@ -6419,6 +6579,148 @@
         "skills/cds-code",
         "skills/cds-design-to-code",
         "skills/cds-docs"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "coldbox/skills",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoName": "skills",
+      "displayName": "ColdBox/skills",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/ColdBox/skills"
+      ],
+      "skillsCount": 118,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "cachebox",
+        "coldbox/ai-integration",
+        "coldbox/app-layouts",
+        "coldbox/async-programming",
+        "coldbox/cache-integration",
+        "coldbox/coldbox-cli",
+        "coldbox/coldbox-documenter",
+        "coldbox/coldbox-proxy",
+        "coldbox/coldbox-reviewer",
+        "coldbox/configuration",
+        "coldbox/database-migrations",
+        "coldbox/decorators",
+        "coldbox/event-model",
+        "coldbox/flash-messaging",
+        "coldbox/handler-development",
+        "coldbox/interceptor-development",
+        "coldbox/layout-development",
+        "coldbox/logging",
+        "coldbox/module-development",
+        "coldbox/request-context",
+        "coldbox/rest-api-development",
+        "coldbox/routing-development",
+        "coldbox/scheduled-tasks",
+        "coldbox/testing-base-classes",
+        "coldbox/testing-handler",
+        "coldbox/testing-http-methods",
+        "coldbox/testing-integration",
+        "coldbox/testing-interceptor",
+        "coldbox/testing-model",
+        "coldbox/view-rendering",
+        "coldbox/wirebox-aop",
+        "coldbox/wirebox-di",
+        "contentbox-boxlang/admin-extension",
+        "contentbox-boxlang/api-headless",
+        "contentbox-boxlang/content-types",
+        "contentbox-boxlang/media-management",
+        "contentbox-boxlang/module-development",
+        "contentbox-boxlang/multi-site",
+        "contentbox-boxlang/overview",
+        "contentbox-boxlang/security-permissions",
+        "contentbox-boxlang/theme-development",
+        "contentbox-boxlang/two-factor-authentication",
+        "contentbox-boxlang/widget-development",
+        "contentbox-cfml/admin-extension",
+        "contentbox-cfml/api-headless",
+        "contentbox-cfml/content-types",
+        "contentbox-cfml/media-management",
+        "contentbox-cfml/module-development",
+        "contentbox-cfml/multi-site",
+        "contentbox-cfml/overview",
+        "contentbox-cfml/security-permissions",
+        "contentbox-cfml/theme-development",
+        "contentbox-cfml/two-factor-authentication",
+        "contentbox-cfml/widget-development",
+        "docbox/docbox-annotations",
+        "docbox/docbox-generation",
+        "logbox",
+        "modules/bcrypt",
+        "modules/cbantisamy",
+        "modules/cbauth",
+        "modules/cbcsrf",
+        "modules/cbdebugger",
+        "modules/cbelasticsearch",
+        "modules/cbfeeds",
+        "modules/cbfs",
+        "modules/cbi18n",
+        "modules/cbjavaloader",
+        "modules/cbmailservices",
+        "modules/cbmarkdown",
+        "modules/cbmessagebox",
+        "modules/cbmockdata",
+        "modules/cborm",
+        "modules/cbpaginator",
+        "modules/cbplaywright",
+        "modules/cbproxies",
+        "modules/cbq",
+        "modules/cbsecurity-passkeys",
+        "modules/cbsecurity",
+        "modules/cbsso",
+        "modules/cbstorages",
+        "modules/cbswagger",
+        "modules/cbvalidation",
+        "modules/cbwire",
+        "modules/cfmigrations",
+        "modules/commandbox-boxlang",
+        "modules/commandbox-migrations",
+        "modules/cors",
+        "modules/hyper",
+        "modules/mementifier",
+        "modules/qb",
+        "modules/quick",
+        "modules/relax",
+        "modules/route-visualizer",
+        "modules/rulebox",
+        "modules/s3sdk",
+        "modules/socketbox",
+        "modules/unleashsdk",
+        "security/api-authentication",
+        "security/authentication",
+        "security/authorization",
+        "security/csrf-protection",
+        "security/jwt-development",
+        "security/passkeys-integration",
+        "security/rbac-patterns",
+        "security/security-implementation",
+        "security/sso-integration",
+        "testbox/assertions",
+        "testbox/bdd",
+        "testbox/cbmockdata",
+        "testbox/expectations",
+        "testbox/listeners",
+        "testbox/mockbox",
+        "testbox/reporters",
+        "testbox/runners",
+        "testbox/testing-coverage",
+        "testbox/testing-fixtures",
+        "testbox/unit",
+        "wirebox"
       ],
       "truncated": false
     },
@@ -10810,6 +11112,35 @@
       "canonicalRepoKey": "huggingface/upskill",
       "githubSkillPaths": [
         "tests/fixtures/ci_action_repo/skills/example-skill"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "ideamans/gridgram",
+      "ownerKey": "ideamans",
+      "sourceOwnerKeys": [
+        "ideamans"
+      ],
+      "repoName": "gridgram",
+      "displayName": "ideamans/gridgram",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/ideamans/gridgram"
+      ],
+      "skillsCount": 5,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 1,
+      "githubSkillPaths": [
+        ".claude/skills/regen-ai",
+        "plugins/gridgram/skills/gg-author",
+        "plugins/gridgram/skills/gg-icons",
+        "plugins/gridgram/skills/gg-install",
+        "plugins/gridgram/skills/gg-render"
       ],
       "truncated": false
     },
@@ -16329,6 +16660,35 @@
       "lastSeenAt": "2026-05-23T21:23:04.875Z"
     },
     {
+      "repoKey": "putdotio/skills",
+      "ownerKey": "putdotio",
+      "sourceOwnerKeys": [
+        "putdotio"
+      ],
+      "repoName": "skills",
+      "displayName": "putdotio/skills",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/putdotio/skills"
+      ],
+      "skillsCount": 5,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 0,
+      "githubSkillPaths": [
+        "skills/frontend/docs",
+        "skills/frontend/frontend-test-harness",
+        "skills/frontend/patterns",
+        "skills/frontend/repos",
+        "skills/frontend/sdk-dev"
+      ],
+      "truncated": false
+    },
+    {
       "repoKey": "pytorch/pytorch",
       "ownerKey": "pytorch",
       "sourceOwnerKeys": [
@@ -17336,6 +17696,57 @@
         "plugins/signoz/skills/signoz-modifying-dashboards",
         "plugins/signoz/skills/signoz-searching-docs",
         "plugins/signoz/skills/signoz-writing-clickhouse-queries"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "snapchat/valdi",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoName": "Valdi",
+      "displayName": "Snapchat/Valdi",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/Snapchat/Valdi"
+      ],
+      "skillsCount": 27,
+      "installsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:08:03.000Z",
+      "lastSeenAt": "2026-05-23T11:08:03.000Z",
+      "starsCount": 16388,
+      "githubSkillPaths": [
+        "ai-skills/skills/valdi-android",
+        "ai-skills/skills/valdi-animations",
+        "ai-skills/skills/valdi-async",
+        "ai-skills/skills/valdi-bazel",
+        "ai-skills/skills/valdi-compiler",
+        "ai-skills/skills/valdi-component-dedup",
+        "ai-skills/skills/valdi-component-tests",
+        "ai-skills/skills/valdi-cpp-runtime",
+        "ai-skills/skills/valdi-custom-view",
+        "ai-skills/skills/valdi-error-handling",
+        "ai-skills/skills/valdi-gestures",
+        "ai-skills/skills/valdi-inspect",
+        "ai-skills/skills/valdi-ios",
+        "ai-skills/skills/valdi-localization",
+        "ai-skills/skills/valdi-migrate",
+        "ai-skills/skills/valdi-mock-breakdown",
+        "ai-skills/skills/valdi-mock-iterate",
+        "ai-skills/skills/valdi-mock-to-module",
+        "ai-skills/skills/valdi-navigation",
+        "ai-skills/skills/valdi-overview",
+        "ai-skills/skills/valdi-perf",
+        "ai-skills/skills/valdi-polyglot-module",
+        "ai-skills/skills/valdi-preview",
+        "ai-skills/skills/valdi-profile",
+        "ai-skills/skills/valdi-setup",
+        "ai-skills/skills/valdi-testing",
+        "ai-skills/skills/valdi-tsx"
       ],
       "truncated": false
     },
@@ -42417,6 +42828,48 @@
       "lastSeenAt": "2026-05-23T21:23:12.882Z"
     },
     {
+      "skillKey": "checkly/checkly-cli/packages/cli/src/ai-context",
+      "ownerKey": "checkly",
+      "sourceOwnerKeys": [
+        "checkly"
+      ],
+      "repoKey": "checkly/checkly-cli",
+      "skillName": "ai-context",
+      "displayName": "ai-context",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/checkly/checkly-cli/tree/HEAD/packages/cli/src/ai-context"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "checkly/checkly-cli/skills/checkly",
+      "ownerKey": "checkly",
+      "sourceOwnerKeys": [
+        "checkly"
+      ],
+      "repoKey": "checkly/checkly-cli",
+      "skillName": "checkly",
+      "displayName": "checkly",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/checkly/checkly-cli/tree/HEAD/skills/checkly"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
       "skillKey": "clerk/cli/.claude/skills/audit-clerk-skill",
       "ownerKey": "clerk",
       "sourceOwnerKeys": [
@@ -52873,6 +53326,2484 @@
       "confidence": "high",
       "firstSeenAt": "2026-05-23T21:23:12.882Z",
       "lastSeenAt": "2026-05-23T21:23:12.882Z"
+    },
+    {
+      "skillKey": "coldbox/skills/cachebox",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cachebox",
+      "displayName": "cachebox",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/cachebox"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/ai-integration",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "ai-integration",
+      "displayName": "ai-integration",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/ai-integration"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/app-layouts",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "app-layouts",
+      "displayName": "app-layouts",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/app-layouts"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/async-programming",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "async-programming",
+      "displayName": "async-programming",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/async-programming"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/cache-integration",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cache-integration",
+      "displayName": "cache-integration",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/cache-integration"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/coldbox-cli",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "coldbox-cli",
+      "displayName": "coldbox-cli",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/coldbox-cli"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/coldbox-documenter",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "coldbox-documenter",
+      "displayName": "coldbox-documenter",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/coldbox-documenter"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/coldbox-proxy",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "coldbox-proxy",
+      "displayName": "coldbox-proxy",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/coldbox-proxy"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/coldbox-reviewer",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "coldbox-reviewer",
+      "displayName": "coldbox-reviewer",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/coldbox-reviewer"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/configuration",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "configuration",
+      "displayName": "configuration",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/configuration"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/database-migrations",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "database-migrations",
+      "displayName": "database-migrations",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/database-migrations"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/decorators",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "decorators",
+      "displayName": "decorators",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/decorators"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/event-model",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "event-model",
+      "displayName": "event-model",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/event-model"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/flash-messaging",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "flash-messaging",
+      "displayName": "flash-messaging",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/flash-messaging"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/handler-development",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "handler-development",
+      "displayName": "handler-development",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/handler-development"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/interceptor-development",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "interceptor-development",
+      "displayName": "interceptor-development",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/interceptor-development"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/layout-development",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "layout-development",
+      "displayName": "layout-development",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/layout-development"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/logging",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "logging",
+      "displayName": "logging",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/logging"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/module-development",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "module-development",
+      "displayName": "module-development",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/module-development"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/request-context",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "request-context",
+      "displayName": "request-context",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/request-context"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/rest-api-development",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "rest-api-development",
+      "displayName": "rest-api-development",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/rest-api-development"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/routing-development",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "routing-development",
+      "displayName": "routing-development",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/routing-development"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/scheduled-tasks",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "scheduled-tasks",
+      "displayName": "scheduled-tasks",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/scheduled-tasks"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/testing-base-classes",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "testing-base-classes",
+      "displayName": "testing-base-classes",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/testing-base-classes"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/testing-handler",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "testing-handler",
+      "displayName": "testing-handler",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/testing-handler"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/testing-http-methods",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "testing-http-methods",
+      "displayName": "testing-http-methods",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/testing-http-methods"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/testing-integration",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "testing-integration",
+      "displayName": "testing-integration",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/testing-integration"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/testing-interceptor",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "testing-interceptor",
+      "displayName": "testing-interceptor",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/testing-interceptor"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/testing-model",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "testing-model",
+      "displayName": "testing-model",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/testing-model"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/view-rendering",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "view-rendering",
+      "displayName": "view-rendering",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/view-rendering"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/wirebox-aop",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "wirebox-aop",
+      "displayName": "wirebox-aop",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/wirebox-aop"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/coldbox/wirebox-di",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "wirebox-di",
+      "displayName": "wirebox-di",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/coldbox/wirebox-di"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-boxlang/admin-extension",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "admin-extension",
+      "displayName": "admin-extension",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-boxlang/admin-extension"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-boxlang/api-headless",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "api-headless",
+      "displayName": "api-headless",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-boxlang/api-headless"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-boxlang/content-types",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "content-types",
+      "displayName": "content-types",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-boxlang/content-types"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-boxlang/media-management",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "media-management",
+      "displayName": "media-management",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-boxlang/media-management"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-boxlang/module-development",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "module-development",
+      "displayName": "module-development",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-boxlang/module-development"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-boxlang/multi-site",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "multi-site",
+      "displayName": "multi-site",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-boxlang/multi-site"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-boxlang/overview",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "overview",
+      "displayName": "overview",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-boxlang/overview"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-boxlang/security-permissions",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "security-permissions",
+      "displayName": "security-permissions",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-boxlang/security-permissions"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-boxlang/theme-development",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "theme-development",
+      "displayName": "theme-development",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-boxlang/theme-development"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-boxlang/two-factor-authentication",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "two-factor-authentication",
+      "displayName": "two-factor-authentication",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-boxlang/two-factor-authentication"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-boxlang/widget-development",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "widget-development",
+      "displayName": "widget-development",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-boxlang/widget-development"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-cfml/admin-extension",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "admin-extension",
+      "displayName": "admin-extension",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-cfml/admin-extension"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-cfml/api-headless",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "api-headless",
+      "displayName": "api-headless",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-cfml/api-headless"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-cfml/content-types",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "content-types",
+      "displayName": "content-types",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-cfml/content-types"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-cfml/media-management",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "media-management",
+      "displayName": "media-management",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-cfml/media-management"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-cfml/module-development",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "module-development",
+      "displayName": "module-development",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-cfml/module-development"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-cfml/multi-site",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "multi-site",
+      "displayName": "multi-site",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-cfml/multi-site"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-cfml/overview",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "overview",
+      "displayName": "overview",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-cfml/overview"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-cfml/security-permissions",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "security-permissions",
+      "displayName": "security-permissions",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-cfml/security-permissions"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-cfml/theme-development",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "theme-development",
+      "displayName": "theme-development",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-cfml/theme-development"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-cfml/two-factor-authentication",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "two-factor-authentication",
+      "displayName": "two-factor-authentication",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-cfml/two-factor-authentication"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/contentbox-cfml/widget-development",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "widget-development",
+      "displayName": "widget-development",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/contentbox-cfml/widget-development"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/docbox/docbox-annotations",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "docbox-annotations",
+      "displayName": "docbox-annotations",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/docbox/docbox-annotations"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/docbox/docbox-generation",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "docbox-generation",
+      "displayName": "docbox-generation",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/docbox/docbox-generation"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/logbox",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "logbox",
+      "displayName": "logbox",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/logbox"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/bcrypt",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "bcrypt",
+      "displayName": "bcrypt",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/bcrypt"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbantisamy",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbantisamy",
+      "displayName": "cbantisamy",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbantisamy"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbauth",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbauth",
+      "displayName": "cbauth",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbauth"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbcsrf",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbcsrf",
+      "displayName": "cbcsrf",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbcsrf"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbdebugger",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbdebugger",
+      "displayName": "cbdebugger",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbdebugger"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbelasticsearch",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbelasticsearch",
+      "displayName": "cbelasticsearch",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbelasticsearch"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbfeeds",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbfeeds",
+      "displayName": "cbfeeds",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbfeeds"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbfs",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbfs",
+      "displayName": "cbfs",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbfs"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbi18n",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbi18n",
+      "displayName": "cbi18n",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbi18n"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbjavaloader",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbjavaloader",
+      "displayName": "cbjavaloader",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbjavaloader"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbmailservices",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbmailservices",
+      "displayName": "cbmailservices",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbmailservices"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbmarkdown",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbmarkdown",
+      "displayName": "cbmarkdown",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbmarkdown"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbmessagebox",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbmessagebox",
+      "displayName": "cbmessagebox",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbmessagebox"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbmockdata",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbmockdata",
+      "displayName": "cbmockdata",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbmockdata"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cborm",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cborm",
+      "displayName": "cborm",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cborm"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbpaginator",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbpaginator",
+      "displayName": "cbpaginator",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbpaginator"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbplaywright",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbplaywright",
+      "displayName": "cbplaywright",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbplaywright"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbproxies",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbproxies",
+      "displayName": "cbproxies",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbproxies"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbq",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbq",
+      "displayName": "cbq",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbq"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbsecurity",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbsecurity",
+      "displayName": "cbsecurity",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbsecurity"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbsecurity-passkeys",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbsecurity-passkeys",
+      "displayName": "cbsecurity-passkeys",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbsecurity-passkeys"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbsso",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbsso",
+      "displayName": "cbsso",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbsso"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbstorages",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbstorages",
+      "displayName": "cbstorages",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbstorages"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbswagger",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbswagger",
+      "displayName": "cbswagger",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbswagger"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbvalidation",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbvalidation",
+      "displayName": "cbvalidation",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbvalidation"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cbwire",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbwire",
+      "displayName": "cbwire",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cbwire"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cfmigrations",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cfmigrations",
+      "displayName": "cfmigrations",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cfmigrations"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/commandbox-boxlang",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "commandbox-boxlang",
+      "displayName": "commandbox-boxlang",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/commandbox-boxlang"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/commandbox-migrations",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "commandbox-migrations",
+      "displayName": "commandbox-migrations",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/commandbox-migrations"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/cors",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cors",
+      "displayName": "cors",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/cors"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/hyper",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "hyper",
+      "displayName": "hyper",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/hyper"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/mementifier",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "mementifier",
+      "displayName": "mementifier",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/mementifier"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/qb",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "qb",
+      "displayName": "qb",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/qb"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/quick",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "quick",
+      "displayName": "quick",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/quick"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/relax",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "relax",
+      "displayName": "relax",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/relax"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/route-visualizer",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "route-visualizer",
+      "displayName": "route-visualizer",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/route-visualizer"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/rulebox",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "rulebox",
+      "displayName": "rulebox",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/rulebox"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/s3sdk",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "s3sdk",
+      "displayName": "s3sdk",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/s3sdk"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/socketbox",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "socketbox",
+      "displayName": "socketbox",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/socketbox"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/modules/unleashsdk",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "unleashsdk",
+      "displayName": "unleashsdk",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/modules/unleashsdk"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/security/api-authentication",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "api-authentication",
+      "displayName": "api-authentication",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/security/api-authentication"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/security/authentication",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "authentication",
+      "displayName": "authentication",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/security/authentication"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/security/authorization",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "authorization",
+      "displayName": "authorization",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/security/authorization"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/security/csrf-protection",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "csrf-protection",
+      "displayName": "csrf-protection",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/security/csrf-protection"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/security/jwt-development",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "jwt-development",
+      "displayName": "jwt-development",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/security/jwt-development"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/security/passkeys-integration",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "passkeys-integration",
+      "displayName": "passkeys-integration",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/security/passkeys-integration"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/security/rbac-patterns",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "rbac-patterns",
+      "displayName": "rbac-patterns",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/security/rbac-patterns"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/security/security-implementation",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "security-implementation",
+      "displayName": "security-implementation",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/security/security-implementation"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/security/sso-integration",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "sso-integration",
+      "displayName": "sso-integration",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/security/sso-integration"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/testbox/assertions",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "assertions",
+      "displayName": "assertions",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/testbox/assertions"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/testbox/bdd",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "bdd",
+      "displayName": "bdd",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/testbox/bdd"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/testbox/cbmockdata",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "cbmockdata",
+      "displayName": "cbmockdata",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/testbox/cbmockdata"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/testbox/expectations",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "expectations",
+      "displayName": "expectations",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/testbox/expectations"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/testbox/listeners",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "listeners",
+      "displayName": "listeners",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/testbox/listeners"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/testbox/mockbox",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "mockbox",
+      "displayName": "mockbox",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/testbox/mockbox"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/testbox/reporters",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "reporters",
+      "displayName": "reporters",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/testbox/reporters"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/testbox/runners",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "runners",
+      "displayName": "runners",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/testbox/runners"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/testbox/testing-coverage",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "testing-coverage",
+      "displayName": "testing-coverage",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/testbox/testing-coverage"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/testbox/testing-fixtures",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "testing-fixtures",
+      "displayName": "testing-fixtures",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/testbox/testing-fixtures"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/testbox/unit",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "unit",
+      "displayName": "unit",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/testbox/unit"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "coldbox/skills/wirebox",
+      "ownerKey": "coldbox",
+      "sourceOwnerKeys": [
+        "ColdBox"
+      ],
+      "repoKey": "coldbox/skills",
+      "skillName": "wirebox",
+      "displayName": "wirebox",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/coldbox/skills/tree/HEAD/wirebox"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
     },
     {
       "skillKey": "contentful/adn-tooling.git/investigate-lambda-edge-errors",
@@ -88426,6 +91357,111 @@
       "confidence": "high",
       "firstSeenAt": "2026-05-23T21:23:12.882Z",
       "lastSeenAt": "2026-05-23T21:23:12.882Z"
+    },
+    {
+      "skillKey": "ideamans/gridgram/.claude/skills/regen-ai",
+      "ownerKey": "ideamans",
+      "sourceOwnerKeys": [
+        "ideamans"
+      ],
+      "repoKey": "ideamans/gridgram",
+      "skillName": "regen-ai",
+      "displayName": "regen-ai",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/ideamans/gridgram/tree/HEAD/.claude/skills/regen-ai"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "ideamans/gridgram/plugins/gridgram/skills/gg-author",
+      "ownerKey": "ideamans",
+      "sourceOwnerKeys": [
+        "ideamans"
+      ],
+      "repoKey": "ideamans/gridgram",
+      "skillName": "gg-author",
+      "displayName": "gg-author",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/ideamans/gridgram/tree/HEAD/plugins/gridgram/skills/gg-author"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "ideamans/gridgram/plugins/gridgram/skills/gg-icons",
+      "ownerKey": "ideamans",
+      "sourceOwnerKeys": [
+        "ideamans"
+      ],
+      "repoKey": "ideamans/gridgram",
+      "skillName": "gg-icons",
+      "displayName": "gg-icons",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/ideamans/gridgram/tree/HEAD/plugins/gridgram/skills/gg-icons"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "ideamans/gridgram/plugins/gridgram/skills/gg-install",
+      "ownerKey": "ideamans",
+      "sourceOwnerKeys": [
+        "ideamans"
+      ],
+      "repoKey": "ideamans/gridgram",
+      "skillName": "gg-install",
+      "displayName": "gg-install",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/ideamans/gridgram/tree/HEAD/plugins/gridgram/skills/gg-install"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "ideamans/gridgram/plugins/gridgram/skills/gg-render",
+      "ownerKey": "ideamans",
+      "sourceOwnerKeys": [
+        "ideamans"
+      ],
+      "repoKey": "ideamans/gridgram",
+      "skillName": "gg-render",
+      "displayName": "gg-render",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/ideamans/gridgram/tree/HEAD/plugins/gridgram/skills/gg-render"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
     },
     {
       "skillKey": "kotlin/kotlin-agent-skills/skills/kotlin-backend-jpa-entity-mapping",
@@ -141201,6 +144237,111 @@
       "lastSeenAt": "2026-05-23T21:23:12.882Z"
     },
     {
+      "skillKey": "putdotio/skills/skills/frontend/docs",
+      "ownerKey": "putdotio",
+      "sourceOwnerKeys": [
+        "putdotio"
+      ],
+      "repoKey": "putdotio/skills",
+      "skillName": "docs",
+      "displayName": "docs",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/putdotio/skills/tree/HEAD/skills/frontend/docs"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "putdotio/skills/skills/frontend/frontend-test-harness",
+      "ownerKey": "putdotio",
+      "sourceOwnerKeys": [
+        "putdotio"
+      ],
+      "repoKey": "putdotio/skills",
+      "skillName": "frontend-test-harness",
+      "displayName": "frontend-test-harness",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/putdotio/skills/tree/HEAD/skills/frontend/frontend-test-harness"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "putdotio/skills/skills/frontend/patterns",
+      "ownerKey": "putdotio",
+      "sourceOwnerKeys": [
+        "putdotio"
+      ],
+      "repoKey": "putdotio/skills",
+      "skillName": "patterns",
+      "displayName": "patterns",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/putdotio/skills/tree/HEAD/skills/frontend/patterns"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "putdotio/skills/skills/frontend/repos",
+      "ownerKey": "putdotio",
+      "sourceOwnerKeys": [
+        "putdotio"
+      ],
+      "repoKey": "putdotio/skills",
+      "skillName": "repos",
+      "displayName": "repos",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/putdotio/skills/tree/HEAD/skills/frontend/repos"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
+      "skillKey": "putdotio/skills/skills/frontend/sdk-dev",
+      "ownerKey": "putdotio",
+      "sourceOwnerKeys": [
+        "putdotio"
+      ],
+      "repoKey": "putdotio/skills",
+      "skillName": "sdk-dev",
+      "displayName": "sdk-dev",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/putdotio/skills/tree/HEAD/skills/frontend/sdk-dev"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:12:59.988Z",
+      "lastSeenAt": "2026-05-23T11:12:59.988Z"
+    },
+    {
       "skillKey": "pytorch/pytorch/.claude/skills/add-uint-support",
       "ownerKey": "pytorch",
       "sourceOwnerKeys": [
@@ -145630,6 +148771,573 @@
       "confidence": "high",
       "firstSeenAt": "2026-05-23T21:23:12.882Z",
       "lastSeenAt": "2026-05-23T21:23:12.882Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-android",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-android",
+      "displayName": "valdi-android",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-android"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-animations",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-animations",
+      "displayName": "valdi-animations",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-animations"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-async",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-async",
+      "displayName": "valdi-async",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-async"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-bazel",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-bazel",
+      "displayName": "valdi-bazel",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-bazel"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-compiler",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-compiler",
+      "displayName": "valdi-compiler",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-compiler"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-component-dedup",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-component-dedup",
+      "displayName": "valdi-component-dedup",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-component-dedup"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-component-tests",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-component-tests",
+      "displayName": "valdi-component-tests",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-component-tests"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-cpp-runtime",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-cpp-runtime",
+      "displayName": "valdi-cpp-runtime",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-cpp-runtime"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-custom-view",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-custom-view",
+      "displayName": "valdi-custom-view",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-custom-view"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-error-handling",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-error-handling",
+      "displayName": "valdi-error-handling",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-error-handling"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-gestures",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-gestures",
+      "displayName": "valdi-gestures",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-gestures"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-inspect",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-inspect",
+      "displayName": "valdi-inspect",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-inspect"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-ios",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-ios",
+      "displayName": "valdi-ios",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-ios"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-localization",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-localization",
+      "displayName": "valdi-localization",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-localization"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-migrate",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-migrate",
+      "displayName": "valdi-migrate",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-migrate"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-mock-breakdown",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-mock-breakdown",
+      "displayName": "valdi-mock-breakdown",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-mock-breakdown"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-mock-iterate",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-mock-iterate",
+      "displayName": "valdi-mock-iterate",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-mock-iterate"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-mock-to-module",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-mock-to-module",
+      "displayName": "valdi-mock-to-module",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-mock-to-module"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-navigation",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-navigation",
+      "displayName": "valdi-navigation",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-navigation"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-overview",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-overview",
+      "displayName": "valdi-overview",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-overview"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-perf",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-perf",
+      "displayName": "valdi-perf",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-perf"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-polyglot-module",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-polyglot-module",
+      "displayName": "valdi-polyglot-module",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-polyglot-module"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-preview",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-preview",
+      "displayName": "valdi-preview",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-preview"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-profile",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-profile",
+      "displayName": "valdi-profile",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-profile"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-setup",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-setup",
+      "displayName": "valdi-setup",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-setup"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-testing",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-testing",
+      "displayName": "valdi-testing",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-testing"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
+    },
+    {
+      "skillKey": "snapchat/valdi/ai-skills/skills/valdi-tsx",
+      "ownerKey": "snapchat",
+      "sourceOwnerKeys": [
+        "Snapchat"
+      ],
+      "repoKey": "snapchat/valdi",
+      "skillName": "valdi-tsx",
+      "displayName": "valdi-tsx",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snapchat/valdi/tree/HEAD/ai-skills/skills/valdi-tsx"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-23T11:15:26.804Z",
+      "lastSeenAt": "2026-05-23T11:15:26.804Z"
     },
     {
       "skillKey": "streamlit/agent-skills/developing-with-streamlit",
@@ -156448,9 +160156,9 @@
     }
   ],
   "stats": {
-    "owners": 99,
-    "repos": 467,
-    "skills": 6478,
+    "owners": 104,
+    "repos": 472,
+    "skills": 6635,
     "sourceOwners": {
       "skills.sh": 94,
       "mcpservers.org": 92

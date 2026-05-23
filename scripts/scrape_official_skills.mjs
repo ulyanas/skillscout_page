@@ -40,6 +40,10 @@ const directory = buildUniversalDirectory(sourceRecords);
 await enrichWithGitHubStars(directory);
 aggregateOwnerStars(directory);
 
+// Preserve github-discovery entries from the existing file so the scrape
+// doesn't wipe vendors that were added by auto_add_vendors.mjs.
+await mergeDiscoveredVendors(directory);
+
 await fs.mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
 await fs.writeFile(OUTPUT_PATH, `${JSON.stringify(directory, null, 2)}\n`);
 
@@ -764,4 +768,61 @@ function decodeHtml(value) {
 
 function hashText(text) {
   return `sha256:${crypto.createHash("sha256").update(text).digest("hex")}`;
+}
+
+// ── Preserve github-discovery vendors ────────────────────────────────────────
+// Reads the existing JSON (if present) and merges back any owners/repos/skills
+// that originate from "github-discovery" so repeated scrapes don't wipe them.
+
+async function mergeDiscoveredVendors(directory) {
+  let existing;
+  try {
+    existing = JSON.parse(await fs.readFile(OUTPUT_PATH, "utf8"));
+  } catch {
+    return; // no existing file yet — nothing to preserve
+  }
+
+  const scraped = {
+    owners: new Set(directory.officialOwners.map((o) => o.ownerKey)),
+    repos:  new Set(directory.officialRepos.map((r) => r.repoKey)),
+    skills: new Set(directory.officialSkills.map((s) => s.skillKey)),
+  };
+
+  let addedOwners = 0, addedRepos = 0, addedSkills = 0;
+
+  for (const owner of existing.officialOwners || []) {
+    if (!owner.sources?.includes("github-discovery")) continue;
+    if (scraped.owners.has(owner.ownerKey)) continue;
+    directory.officialOwners.push(owner);
+    scraped.owners.add(owner.ownerKey);
+    addedOwners++;
+  }
+
+  for (const repo of existing.officialRepos || []) {
+    if (!repo.sources?.includes("github-discovery")) continue;
+    if (scraped.repos.has(repo.repoKey)) continue;
+    directory.officialRepos.push(repo);
+    scraped.repos.add(repo.repoKey);
+    addedRepos++;
+  }
+
+  for (const skill of existing.officialSkills || []) {
+    // Preserve skills belonging to github-discovery owners
+    const owner = directory.officialOwners.find((o) => o.ownerKey === skill.ownerKey);
+    if (!owner?.sources?.includes("github-discovery")) continue;
+    if (scraped.skills.has(skill.skillKey)) continue;
+    directory.officialSkills.push(skill);
+    scraped.skills.add(skill.skillKey);
+    addedSkills++;
+  }
+
+  if (addedOwners || addedRepos || addedSkills) {
+    directory.officialOwners.sort((a, b) => a.ownerKey.localeCompare(b.ownerKey));
+    directory.officialRepos.sort((a, b) => a.repoKey.localeCompare(b.repoKey));
+    directory.officialSkills.sort((a, b) => a.skillKey.localeCompare(b.skillKey));
+    directory.stats.owners = directory.officialOwners.length;
+    directory.stats.repos  = directory.officialRepos.length;
+    directory.stats.skills = directory.officialSkills.length;
+    console.log(`Preserved from github-discovery: ${addedOwners} owners, ${addedRepos} repos, ${addedSkills} skills`);
+  }
 }
