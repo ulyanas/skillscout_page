@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-23T11:08:03.000Z",
+  "generatedAt": "2026-05-23T11:31:05.683Z",
   "sources": {
     "skills.sh": {
       "sourceId": "skills.sh",
@@ -2734,6 +2734,197 @@
       "firstSeenAt": "2026-05-23T11:08:03.000Z",
       "lastSeenAt": "2026-05-23T11:08:03.000Z",
       "starsCount": 1
+    },
+    {
+      "ownerKey": "cristoslc",
+      "displayName": "Cristos L-C",
+      "normalizedNames": [
+        "cristoslc"
+      ],
+      "sourceOwnerKeys": [
+        "cristoslc"
+      ],
+      "websiteHosts": [],
+      "website": "http://www.cristoslc.com",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/cristoslc"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "starsCount": 0,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "companyIndustry": "",
+      "firstSeenAt": "2026-05-23T11:31:05.683Z",
+      "lastSeenAt": "2026-05-23T11:31:05.683Z"
+    },
+    {
+      "ownerKey": "iamsteveholmes",
+      "displayName": "Blogspot",
+      "normalizedNames": [
+        "iamsteveholmes"
+      ],
+      "sourceOwnerKeys": [
+        "iamsteveholmes"
+      ],
+      "websiteHosts": [],
+      "website": "http://capitalcodemonkey.blogspot.com",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/iamsteveholmes"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "starsCount": 0,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "companyIndustry": "",
+      "firstSeenAt": "2026-05-23T11:31:05.683Z",
+      "lastSeenAt": "2026-05-23T11:31:05.683Z"
+    },
+    {
+      "ownerKey": "renatoasse",
+      "displayName": "Sem Codar",
+      "normalizedNames": [
+        "renatoasse"
+      ],
+      "sourceOwnerKeys": [
+        "renatoasse"
+      ],
+      "websiteHosts": [],
+      "website": "https://www.semcodar.com.br",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/renatoasse"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "starsCount": 1736,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "companyIndustry": "",
+      "firstSeenAt": "2026-05-23T11:31:05.683Z",
+      "lastSeenAt": "2026-05-23T11:31:05.683Z"
+    },
+    {
+      "ownerKey": "fcakyon",
+      "displayName": "Linktree",
+      "normalizedNames": [
+        "fcakyon"
+      ],
+      "sourceOwnerKeys": [
+        "fcakyon"
+      ],
+      "websiteHosts": [],
+      "website": "http://linktr.ee/fcakyon",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/fcakyon"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "starsCount": 702,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "companyIndustry": "consumer-goods, social-media-analytics-software, software",
+      "firstSeenAt": "2026-05-23T11:31:05.683Z",
+      "lastSeenAt": "2026-05-23T11:31:05.683Z",
+      "twitter": "@fcakyon"
+    },
+    {
+      "ownerKey": "anand-92",
+      "displayName": "LinkedIn",
+      "normalizedNames": [
+        "anand-92"
+      ],
+      "sourceOwnerKeys": [
+        "anand-92"
+      ],
+      "websiteHosts": [],
+      "website": "https://www.linkedin.com/in/nik-anand-4a2937162/",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/anand-92"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "starsCount": 2,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "companyIndustry": "address-book, advertising, company-search",
+      "firstSeenAt": "2026-05-23T11:31:05.683Z",
+      "lastSeenAt": "2026-05-23T11:31:05.683Z"
+    },
+    {
+      "ownerKey": "jasonhnd",
+      "displayName": "GitHub",
+      "normalizedNames": [
+        "jasonhnd"
+      ],
+      "sourceOwnerKeys": [
+        "jasonhnd"
+      ],
+      "websiteHosts": [],
+      "website": "https://github.com/jasonhnd",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/jasonhnd"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "starsCount": 4,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "companyIndustry": "cloud-computing, computer-programming, computer-software",
+      "firstSeenAt": "2026-05-23T11:31:05.683Z",
+      "lastSeenAt": "2026-05-23T11:31:05.683Z"
+    },
+    {
+      "ownerKey": "ortus-solutions",
+      "displayName": "Ortus Solutions",
+      "normalizedNames": [
+        "ortus-solutions"
+      ],
+      "sourceOwnerKeys": [
+        "Ortus-Solutions"
+      ],
+      "websiteHosts": [],
+      "website": "https://www.ortussolutions.com",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/Ortus-Solutions"
+      ],
+      "skillsCount": 0,
+      "reposCount": 1,
+      "installsCount": 0,
+      "starsCount": 0,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "companyIndustry": "api-development, coldbox, coldfusion",
+      "firstSeenAt": "2026-05-23T11:31:05.683Z",
+      "lastSeenAt": "2026-05-23T11:31:05.683Z",
+      "twitter": "@ortussolutions"
     }
   ],
   "officialRepos": [
@@ -20842,6 +21033,167 @@
         "plugins/gridgram/skills/gg-install",
         "plugins/gridgram/skills/gg-render"
       ],
+      "truncated": false
+    },
+    {
+      "repoKey": "cristoslc/llm-personal-agent-patterns",
+      "ownerKey": "cristoslc",
+      "sourceOwnerKeys": [
+        "cristoslc"
+      ],
+      "repoName": "LLM-personal-agent-patterns",
+      "displayName": "cristoslc/LLM-personal-agent-patterns",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/cristoslc/LLM-personal-agent-patterns"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "starsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:31:05.683Z",
+      "lastSeenAt": "2026-05-23T11:31:05.683Z",
+      "githubSkillPaths": [],
+      "truncated": false
+    },
+    {
+      "repoKey": "iamsteveholmes/momentum",
+      "ownerKey": "iamsteveholmes",
+      "sourceOwnerKeys": [
+        "iamsteveholmes"
+      ],
+      "repoName": "momentum",
+      "displayName": "iamsteveholmes/momentum",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/iamsteveholmes/momentum"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "starsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:31:05.683Z",
+      "lastSeenAt": "2026-05-23T11:31:05.683Z",
+      "githubSkillPaths": [],
+      "truncated": false
+    },
+    {
+      "repoKey": "renatoasse/opensquad",
+      "ownerKey": "renatoasse",
+      "sourceOwnerKeys": [
+        "renatoasse"
+      ],
+      "repoName": "opensquad",
+      "displayName": "renatoasse/opensquad",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/renatoasse/opensquad"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "starsCount": 1736,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:31:05.683Z",
+      "lastSeenAt": "2026-05-23T11:31:05.683Z",
+      "githubSkillPaths": [],
+      "truncated": false
+    },
+    {
+      "repoKey": "fcakyon/claude-codex-settings",
+      "ownerKey": "fcakyon",
+      "sourceOwnerKeys": [
+        "fcakyon"
+      ],
+      "repoName": "claude-codex-settings",
+      "displayName": "fcakyon/claude-codex-settings",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/fcakyon/claude-codex-settings"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "starsCount": 702,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:31:05.683Z",
+      "lastSeenAt": "2026-05-23T11:31:05.683Z",
+      "githubSkillPaths": [],
+      "truncated": false
+    },
+    {
+      "repoKey": "anand-92/skills-registry",
+      "ownerKey": "anand-92",
+      "sourceOwnerKeys": [
+        "anand-92"
+      ],
+      "repoName": "skills-registry",
+      "displayName": "anand-92/skills-registry",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/anand-92/skills-registry"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "starsCount": 2,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:31:05.683Z",
+      "lastSeenAt": "2026-05-23T11:31:05.683Z",
+      "githubSkillPaths": [],
+      "truncated": false
+    },
+    {
+      "repoKey": "jasonhnd/life_os",
+      "ownerKey": "jasonhnd",
+      "sourceOwnerKeys": [
+        "jasonhnd"
+      ],
+      "repoName": "life_OS",
+      "displayName": "jasonhnd/life_OS",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/jasonhnd/life_OS"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "starsCount": 4,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:31:05.683Z",
+      "lastSeenAt": "2026-05-23T11:31:05.683Z",
+      "githubSkillPaths": [],
+      "truncated": false
+    },
+    {
+      "repoKey": "ortus-solutions/skills",
+      "ownerKey": "ortus-solutions",
+      "sourceOwnerKeys": [
+        "Ortus-Solutions"
+      ],
+      "repoName": "skills",
+      "displayName": "Ortus-Solutions/skills",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/Ortus-Solutions/skills"
+      ],
+      "skillsCount": 0,
+      "installsCount": 0,
+      "starsCount": 0,
+      "confidence": "medium",
+      "firstSeenAt": "2026-05-23T11:31:05.683Z",
+      "lastSeenAt": "2026-05-23T11:31:05.683Z",
+      "githubSkillPaths": [],
       "truncated": false
     }
   ],
@@ -427576,8 +427928,8 @@
     }
   ],
   "stats": {
-    "owners": 104,
-    "repos": 472,
+    "owners": 111,
+    "repos": 479,
     "skills": 19368,
     "sourceOwners": {
       "skills.sh": 94,

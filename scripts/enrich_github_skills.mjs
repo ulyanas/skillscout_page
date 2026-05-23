@@ -32,6 +32,7 @@ console.log(
 );
 
 await enrichWithGitHubSkillTrees(directory);
+await enrichStarCounts(directory);
 
 directory.enrichedAt = generatedAt;
 await fs.writeFile(DATA_PATH, `${JSON.stringify(directory, null, 2)}\n`);
@@ -202,6 +203,55 @@ function reconcileSkillsWithGitHub(directory) {
   console.log(
     `Reconciled: ${githubByRepo.size} repos verified, ${verified} skills from GitHub`
   );
+}
+
+// ── Star count enrichment ─────────────────────────────────────────────────────
+// Fetches real stargazers_count from GitHub for repos with starsCount === 0
+// (typically newly discovered vendors). Aggregates totals up to the owner level.
+
+async function enrichStarCounts(directory) {
+  const headers = {
+    Accept: "application/vnd.github.v3+json",
+    "User-Agent": "Skillscout official skills enricher",
+    Authorization: `Bearer ${GITHUB_TOKEN}`,
+  };
+
+  const reposNeedingStars = directory.officialRepos.filter((r) => !r.starsCount);
+  if (!reposNeedingStars.length) {
+    console.log("Star counts: all repos already have star data, skipping fetch");
+    return;
+  }
+
+  console.log(`Fetching star counts for ${reposNeedingStars.length} repos...`);
+  let updated = 0;
+
+  await mapWithConcurrency(reposNeedingStars, CONCURRENCY, async (repo) => {
+    try {
+      const res = await fetch(`https://api.github.com/repos/${repo.repoKey}`, { headers });
+      if (!res.ok) return;
+      const data = await res.json();
+      const stars = data.stargazers_count ?? 0;
+      if (stars > 0) {
+        repo.starsCount = stars;
+        updated++;
+      }
+    } catch {
+      // ignore individual failures
+    }
+  });
+
+  console.log(`Star counts: updated ${updated} repos`);
+
+  // Aggregate starsCount per owner (sum across all their repos)
+  const starsByOwner = new Map();
+  for (const repo of directory.officialRepos) {
+    const s = starsByOwner.get(repo.ownerKey) || 0;
+    starsByOwner.set(repo.ownerKey, s + (repo.starsCount || 0));
+  }
+  for (const owner of directory.officialOwners) {
+    const total = starsByOwner.get(owner.ownerKey);
+    if (total != null) owner.starsCount = total;
+  }
 }
 
 // ── Utilities ──────────────────────────────────────────────────────────────

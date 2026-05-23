@@ -711,9 +711,13 @@ function countMatchingSkills(owners) {
 // ── Metadata helpers ──────────────────────────────────────────────────────────
 
 function getOwnerMetadata(owner) {
+  // OWNER_METADATA is the authoritative source for known vendors.
+  // For github-discovery vendors not yet in the map, fall back to
+  // owner.website from the data file, then to github.com.
+  const fallbackWebsite = owner.website || `https://github.com/${owner.sourceOwnerKeys?.[0] || owner.ownerKey}`;
   const [displayName, websiteUrl, githubUrl] = OWNER_METADATA[owner.ownerKey] || [
     prettifyOwnerName(owner.displayName || owner.ownerKey),
-    `https://github.com/${owner.sourceOwnerKeys?.[0] || owner.ownerKey}`
+    fallbackWebsite,
   ];
   const normalizedWebsiteUrl = normalizeUrl(websiteUrl);
   return {
