@@ -43,33 +43,6 @@
   },
   "officialOwners": [
     {
-      "ownerKey": "alibaba",
-      "displayName": "Alibaba.com",
-      "normalizedNames": [
-        "alibaba"
-      ],
-      "sourceOwnerKeys": [
-        "alibaba"
-      ],
-      "websiteHosts": [],
-      "website": "https://opensource.alibaba.com/",
-      "sources": [
-        "github-discovery"
-      ],
-      "sourceUrls": [
-        "https://github.com/alibaba"
-      ],
-      "skillsCount": 0,
-      "reposCount": 1,
-      "installsCount": 0,
-      "starsCount": 9683,
-      "confidence": "high",
-      "dbConfirmed": true,
-      "companyIndustry": "b2b, consumer-internet, consumers",
-      "firstSeenAt": "2026-05-24T06:53:26.018Z",
-      "lastSeenAt": "2026-05-24T06:53:26.018Z"
-    },
-    {
       "ownerKey": "anthropics",
       "displayName": "Anthropic",
       "normalizedNames": [
@@ -2764,29 +2737,6 @@
     }
   ],
   "officialRepos": [
-    {
-      "repoKey": "alibaba/zvec",
-      "ownerKey": "alibaba",
-      "sourceOwnerKeys": [
-        "alibaba"
-      ],
-      "repoName": "zvec",
-      "displayName": "alibaba/zvec",
-      "sources": [
-        "github-discovery"
-      ],
-      "sourceUrls": [
-        "https://github.com/alibaba/zvec"
-      ],
-      "skillsCount": 0,
-      "installsCount": 0,
-      "starsCount": 9683,
-      "confidence": "medium",
-      "firstSeenAt": "2026-05-24T06:53:26.018Z",
-      "lastSeenAt": "2026-05-24T06:53:26.018Z",
-      "githubSkillPaths": [],
-      "truncated": false
-    },
     {
       "repoKey": "anthropics/anthropic-cookbook",
       "ownerKey": "anthropics",
@@ -159545,8 +159495,8 @@
     }
   ],
   "stats": {
-    "owners": 105,
-    "repos": 473,
+    "owners": 104,
+    "repos": 472,
     "skills": 6605,
     "sourceOwners": {
       "skills.sh": 94,

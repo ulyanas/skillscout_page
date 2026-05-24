@@ -214,6 +214,27 @@ async function fetchRepoStars(repoFullName) {
   }
 }
 
+// ── Verify repo has at least one SKILL.md ─────────────────────────────────────
+// Scans the repo's git tree for SKILL.md or skill.md files.
+// Returns the count so we can skip orgs that have none.
+
+async function countSkillFiles(repoFullName) {
+  try {
+    const res = await fetch(
+      `https://api.github.com/repos/${repoFullName}/git/trees/HEAD?recursive=1`,
+      { headers: ghHeaders }
+    );
+    if (!res.ok) return 0;
+    const data = await res.json();
+    const SKILL_RE = /(?:^|\/)(SKILL\.md|skill\.md)$/;
+    return (data.tree || []).filter(
+      (item) => item.type === "blob" && SKILL_RE.test(item.path)
+    ).length;
+  } catch {
+    return 0;
+  }
+}
+
 // ── Process candidates ────────────────────────────────────────────────────────
 
 console.log(`\nEnriching ${candidates.size} candidates (GitHub profile + Companies API)...`);
@@ -240,7 +261,14 @@ for (const [ownerKey, info] of candidates) {
   const company = await lookupCompany(website);
   if (!company) continue; // not in company DB → skip
 
-  // Confirmed as a real company — fetch repo stars
+  // Confirm the repo actually contains SKILL.md files — skip orgs with none
+  const skillCount = await countSkillFiles(info.repoFullName);
+  if (skillCount === 0) {
+    console.log(`  ⏭  ${ownerKey} — no SKILL.md found in ${info.repoFullName}`);
+    continue;
+  }
+
+  // Confirmed as a real company with skills — fetch repo stars
   const stars = await fetchRepoStars(info.repoFullName);
 
   const displayName = company.name || profile.name || info.login;
