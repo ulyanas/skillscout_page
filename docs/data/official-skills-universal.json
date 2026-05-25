@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-25T15:30:08.333Z",
+  "generatedAt": "2026-05-25T15:31:37.287Z",
   "sources": {
     "skills.sh": {
       "sourceId": "skills.sh",
@@ -350,6 +350,33 @@
       "firstSeenAt": "2026-05-25T09:56:27.934Z",
       "lastSeenAt": "2026-05-25T09:56:27.934Z",
       "starsCount": 21893
+    },
+    {
+      "ownerKey": "blockscout",
+      "displayName": "Blockscout",
+      "normalizedNames": [
+        "blockscout"
+      ],
+      "sourceOwnerKeys": [
+        "blockscout"
+      ],
+      "websiteHosts": [],
+      "website": "https://www.blockscout.com/",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/blockscout"
+      ],
+      "skillsCount": 4,
+      "reposCount": 1,
+      "installsCount": 0,
+      "starsCount": 11,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "companyIndustry": "blockchain, web3",
+      "firstSeenAt": "2026-05-25T15:31:37.287Z",
+      "lastSeenAt": "2026-05-25T15:31:37.287Z"
     },
     {
       "ownerKey": "box",
@@ -4921,6 +4948,34 @@
         ".claude/skills/figma-to-angular",
         ".claude/skills/fix-angular-fixmes",
         ".claude/skills/writing-client-code"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "blockscout/agent-skills",
+      "ownerKey": "blockscout",
+      "sourceOwnerKeys": [
+        "blockscout"
+      ],
+      "repoName": "agent-skills",
+      "displayName": "blockscout/agent-skills",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/blockscout/agent-skills"
+      ],
+      "skillsCount": 4,
+      "installsCount": 0,
+      "starsCount": 11,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-25T15:31:37.287Z",
+      "lastSeenAt": "2026-05-25T15:31:37.287Z",
+      "githubSkillPaths": [
+        ".claude/skills/bump-skill-version",
+        ".claude/skills/upgrade-blockscout-api",
+        "blockscout-analysis",
+        "web3-dev"
       ],
       "truncated": false
     },
@@ -41160,6 +41215,90 @@
       "confidence": "high",
       "firstSeenAt": "2026-05-25T09:56:37.166Z",
       "lastSeenAt": "2026-05-25T09:56:37.166Z"
+    },
+    {
+      "skillKey": "blockscout/agent-skills/.claude/skills/bump-skill-version",
+      "ownerKey": "blockscout",
+      "sourceOwnerKeys": [
+        "blockscout"
+      ],
+      "repoKey": "blockscout/agent-skills",
+      "skillName": "bump-skill-version",
+      "displayName": "bump-skill-version",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/blockscout/agent-skills/tree/HEAD/.claude/skills/bump-skill-version"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-25T15:31:37.287Z",
+      "lastSeenAt": "2026-05-25T15:31:37.287Z"
+    },
+    {
+      "skillKey": "blockscout/agent-skills/.claude/skills/upgrade-blockscout-api",
+      "ownerKey": "blockscout",
+      "sourceOwnerKeys": [
+        "blockscout"
+      ],
+      "repoKey": "blockscout/agent-skills",
+      "skillName": "upgrade-blockscout-api",
+      "displayName": "upgrade-blockscout-api",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/blockscout/agent-skills/tree/HEAD/.claude/skills/upgrade-blockscout-api"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-25T15:31:37.287Z",
+      "lastSeenAt": "2026-05-25T15:31:37.287Z"
+    },
+    {
+      "skillKey": "blockscout/agent-skills/blockscout-analysis",
+      "ownerKey": "blockscout",
+      "sourceOwnerKeys": [
+        "blockscout"
+      ],
+      "repoKey": "blockscout/agent-skills",
+      "skillName": "blockscout-analysis",
+      "displayName": "blockscout-analysis",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/blockscout/agent-skills/tree/HEAD/blockscout-analysis"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-25T15:31:37.287Z",
+      "lastSeenAt": "2026-05-25T15:31:37.287Z"
+    },
+    {
+      "skillKey": "blockscout/agent-skills/web3-dev",
+      "ownerKey": "blockscout",
+      "sourceOwnerKeys": [
+        "blockscout"
+      ],
+      "repoKey": "blockscout/agent-skills",
+      "skillName": "web3-dev",
+      "displayName": "web3-dev",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/blockscout/agent-skills/tree/HEAD/web3-dev"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-25T15:31:37.287Z",
+      "lastSeenAt": "2026-05-25T15:31:37.287Z"
     },
     {
       "skillKey": "box/box-for-ai/skills/box",
@@ -160170,9 +160309,9 @@
     }
   ],
   "stats": {
-    "owners": 106,
-    "repos": 474,
-    "skills": 6631,
+    "owners": 107,
+    "repos": 475,
+    "skills": 6635,
     "sourceOwners": {
       "skills.sh": 94,
       "mcpservers.org": 92
