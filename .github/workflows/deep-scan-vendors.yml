@@ -1,0 +1,44 @@
+name: Deep scan — find all historical skill vendors
+
+# Manual trigger only — run once to backfill all historical GitHub data.
+# This searches with no date window and checks all ~2000+ candidate orgs.
+# Expect it to take 30–90 minutes depending on API rate limits.
+on:
+  workflow_dispatch:
+
+jobs:
+  deep-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Deep scan & verify all historical vendors
+        run: node scripts/deep_scan_vendors.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COMPANIES_API_KEY: ${{ secrets.COMPANIES_API_KEY }}
+          OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
+
+      - name: Enrich skill trees + star counts
+        run: node scripts/enrich_github_skills.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
+
+      - name: Commit and push new vendors
+        run: |
+          git config user.email "github-actions@github.com"
+          git config user.name  "GitHub Actions"
+          git add docs/data/official-skills-universal.json
+          git diff --staged --quiet && echo "No new vendors found" && exit 0
+          git commit -m "feat: deep scan — add all historical verified vendors $(date -u +%Y-%m-%d)"
+          git pull --rebase
+          git push
