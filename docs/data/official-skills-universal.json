@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-25T09:56:27.934Z",
+  "generatedAt": "2026-05-25T15:30:08.333Z",
   "sources": {
     "skills.sh": {
       "sourceId": "skills.sh",
@@ -1673,6 +1673,33 @@
       "firstSeenAt": "2026-05-25T09:56:27.934Z",
       "lastSeenAt": "2026-05-25T09:56:27.934Z",
       "starsCount": 664249
+    },
+    {
+      "ownerKey": "mixpanel",
+      "displayName": "Mixpanel, Inc",
+      "normalizedNames": [
+        "mixpanel"
+      ],
+      "sourceOwnerKeys": [
+        "mixpanel"
+      ],
+      "websiteHosts": [],
+      "website": "https://mixpanel.com/",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/mixpanel"
+      ],
+      "skillsCount": 9,
+      "reposCount": 1,
+      "installsCount": 0,
+      "starsCount": 2,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "companyIndustry": "analytics, saas",
+      "firstSeenAt": "2026-05-25T15:30:08.333Z",
+      "lastSeenAt": "2026-05-25T15:30:08.333Z"
     },
     {
       "ownerKey": "n8n-io",
@@ -14386,6 +14413,39 @@
         "plugins/workiq-productivity/skills/org-chart",
         "plugins/workiq-productivity/skills/site-explorer",
         "plugins/workiq/skills/workiq"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "mixpanel/ai-plugins",
+      "ownerKey": "mixpanel",
+      "sourceOwnerKeys": [
+        "mixpanel"
+      ],
+      "repoName": "ai-plugins",
+      "displayName": "mixpanel/ai-plugins",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/mixpanel/ai-plugins"
+      ],
+      "skillsCount": 9,
+      "installsCount": 0,
+      "starsCount": 2,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-25T15:30:08.333Z",
+      "lastSeenAt": "2026-05-25T15:30:08.333Z",
+      "githubSkillPaths": [
+        "plugins/mixpanel-mcp-eu/skills/create-dashboard",
+        "plugins/mixpanel-mcp-eu/skills/deep-research",
+        "plugins/mixpanel-mcp-eu/skills/tracking-implementation",
+        "plugins/mixpanel-mcp-in/skills/create-dashboard",
+        "plugins/mixpanel-mcp-in/skills/deep-research",
+        "plugins/mixpanel-mcp-in/skills/tracking-implementation",
+        "plugins/mixpanel-mcp/skills/create-dashboard",
+        "plugins/mixpanel-mcp/skills/deep-research",
+        "plugins/mixpanel-mcp/skills/tracking-implementation"
       ],
       "truncated": false
     },
@@ -120251,6 +120311,195 @@
       "lastSeenAt": "2026-05-25T09:56:37.166Z"
     },
     {
+      "skillKey": "mixpanel/ai-plugins/plugins/mixpanel-mcp-eu/skills/create-dashboard",
+      "ownerKey": "mixpanel",
+      "sourceOwnerKeys": [
+        "mixpanel"
+      ],
+      "repoKey": "mixpanel/ai-plugins",
+      "skillName": "create-dashboard",
+      "displayName": "create-dashboard",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/mixpanel/ai-plugins/tree/HEAD/plugins/mixpanel-mcp-eu/skills/create-dashboard"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-25T15:30:08.333Z",
+      "lastSeenAt": "2026-05-25T15:30:08.333Z"
+    },
+    {
+      "skillKey": "mixpanel/ai-plugins/plugins/mixpanel-mcp-eu/skills/deep-research",
+      "ownerKey": "mixpanel",
+      "sourceOwnerKeys": [
+        "mixpanel"
+      ],
+      "repoKey": "mixpanel/ai-plugins",
+      "skillName": "deep-research",
+      "displayName": "deep-research",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/mixpanel/ai-plugins/tree/HEAD/plugins/mixpanel-mcp-eu/skills/deep-research"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-25T15:30:08.333Z",
+      "lastSeenAt": "2026-05-25T15:30:08.333Z"
+    },
+    {
+      "skillKey": "mixpanel/ai-plugins/plugins/mixpanel-mcp-eu/skills/tracking-implementation",
+      "ownerKey": "mixpanel",
+      "sourceOwnerKeys": [
+        "mixpanel"
+      ],
+      "repoKey": "mixpanel/ai-plugins",
+      "skillName": "tracking-implementation",
+      "displayName": "tracking-implementation",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/mixpanel/ai-plugins/tree/HEAD/plugins/mixpanel-mcp-eu/skills/tracking-implementation"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-25T15:30:08.333Z",
+      "lastSeenAt": "2026-05-25T15:30:08.333Z"
+    },
+    {
+      "skillKey": "mixpanel/ai-plugins/plugins/mixpanel-mcp-in/skills/create-dashboard",
+      "ownerKey": "mixpanel",
+      "sourceOwnerKeys": [
+        "mixpanel"
+      ],
+      "repoKey": "mixpanel/ai-plugins",
+      "skillName": "create-dashboard",
+      "displayName": "create-dashboard",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/mixpanel/ai-plugins/tree/HEAD/plugins/mixpanel-mcp-in/skills/create-dashboard"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-25T15:30:08.333Z",
+      "lastSeenAt": "2026-05-25T15:30:08.333Z"
+    },
+    {
+      "skillKey": "mixpanel/ai-plugins/plugins/mixpanel-mcp-in/skills/deep-research",
+      "ownerKey": "mixpanel",
+      "sourceOwnerKeys": [
+        "mixpanel"
+      ],
+      "repoKey": "mixpanel/ai-plugins",
+      "skillName": "deep-research",
+      "displayName": "deep-research",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/mixpanel/ai-plugins/tree/HEAD/plugins/mixpanel-mcp-in/skills/deep-research"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-25T15:30:08.333Z",
+      "lastSeenAt": "2026-05-25T15:30:08.333Z"
+    },
+    {
+      "skillKey": "mixpanel/ai-plugins/plugins/mixpanel-mcp-in/skills/tracking-implementation",
+      "ownerKey": "mixpanel",
+      "sourceOwnerKeys": [
+        "mixpanel"
+      ],
+      "repoKey": "mixpanel/ai-plugins",
+      "skillName": "tracking-implementation",
+      "displayName": "tracking-implementation",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/mixpanel/ai-plugins/tree/HEAD/plugins/mixpanel-mcp-in/skills/tracking-implementation"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-25T15:30:08.333Z",
+      "lastSeenAt": "2026-05-25T15:30:08.333Z"
+    },
+    {
+      "skillKey": "mixpanel/ai-plugins/plugins/mixpanel-mcp/skills/create-dashboard",
+      "ownerKey": "mixpanel",
+      "sourceOwnerKeys": [
+        "mixpanel"
+      ],
+      "repoKey": "mixpanel/ai-plugins",
+      "skillName": "create-dashboard",
+      "displayName": "create-dashboard",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/mixpanel/ai-plugins/tree/HEAD/plugins/mixpanel-mcp/skills/create-dashboard"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-25T15:30:08.333Z",
+      "lastSeenAt": "2026-05-25T15:30:08.333Z"
+    },
+    {
+      "skillKey": "mixpanel/ai-plugins/plugins/mixpanel-mcp/skills/deep-research",
+      "ownerKey": "mixpanel",
+      "sourceOwnerKeys": [
+        "mixpanel"
+      ],
+      "repoKey": "mixpanel/ai-plugins",
+      "skillName": "deep-research",
+      "displayName": "deep-research",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/mixpanel/ai-plugins/tree/HEAD/plugins/mixpanel-mcp/skills/deep-research"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-25T15:30:08.333Z",
+      "lastSeenAt": "2026-05-25T15:30:08.333Z"
+    },
+    {
+      "skillKey": "mixpanel/ai-plugins/plugins/mixpanel-mcp/skills/tracking-implementation",
+      "ownerKey": "mixpanel",
+      "sourceOwnerKeys": [
+        "mixpanel"
+      ],
+      "repoKey": "mixpanel/ai-plugins",
+      "skillName": "tracking-implementation",
+      "displayName": "tracking-implementation",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/mixpanel/ai-plugins/tree/HEAD/plugins/mixpanel-mcp/skills/tracking-implementation"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-25T15:30:08.333Z",
+      "lastSeenAt": "2026-05-25T15:30:08.333Z"
+    },
+    {
       "skillKey": "n8n-io/n8n/.claude/plugins/n8n/skills/community-pr-review",
       "ownerKey": "n8n-io",
       "sourceOwnerKeys": [
@@ -159921,9 +160170,9 @@
     }
   ],
   "stats": {
-    "owners": 105,
-    "repos": 473,
-    "skills": 6622,
+    "owners": 106,
+    "repos": 474,
+    "skills": 6631,
     "sourceOwners": {
       "skills.sh": 94,
       "mcpservers.org": 92
