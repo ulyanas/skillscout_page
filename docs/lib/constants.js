@@ -51,6 +51,7 @@ export const SELF_HOSTED_SERVICE_SUBDOMAIN_LABELS = new Set([
 export const KNOWN_HOSTNAME_KEYWORD_MAP = {
   "ai.google.dev": "google labs",
   "analytics.google.com": "google analytics",
+  "agentmail.to": "agentmail",
   "anthropic.com": "anthropic",
   "api.github.com": "github",
   "app.datadoghq.com": "datadog",
@@ -83,6 +84,7 @@ export const KNOWN_HOSTNAME_KEYWORD_MAP = {
 };
 
 export const OFFICIAL_SKILLS_OWNER_HANDLES = [
+  "agentmail-to",
   "anthropics",
   "apify",
   "apollographql",
@@ -111,6 +113,7 @@ export const OFFICIAL_SKILLS_OWNER_HANDLES = [
   "dbt-labs",
   "deepgram",
   "denoland",
+  "elastic",
   "elevenlabs",
   "encoredev",
   "exploreomni",
@@ -147,6 +150,7 @@ export const OFFICIAL_SKILLS_OWNER_HANDLES = [
   "pinecone-io",
   "planetscale",
   "posthog",
+  "pydantic",
   "prisma",
   "projectopensea",
   "pulumi",
@@ -273,12 +277,14 @@ export const OFFICIAL_SITE_KEYWORD_TEST_CASES = [
   ["https://wordpress.org", "WordPress", "wordpress"],
   ["https://aws.amazon.com", "Amazon Web Services", "aws"],
   ["https://analytics.google.com", "Google Analytics", "google analytics"],
+  ["https://agentmail.to", "AgentMail", "agentmail"],
   ["https://metabase.k8s.blockscout.com", "Metabase", "metabase"],
   ["https://eth.blockscout.com", "Blockscout", "blockscout"],
   ["https://eu.mixpanel.com/project/2824165/view/3358305/app/boards", "Boards - Mixpanel", "mixpanel"]
 ];
 
 export const KEYWORD_OWNER_ALIAS_MAP = {
+  agentmail: ["agentmail-to"],
   "apollo graphql": ["apollographql"],
   aws: ["aws", "amazon", "amazonwebservices"],
   anthropic: ["anthropics"],
@@ -295,6 +301,7 @@ export const KEYWORD_OWNER_ALIAS_MAP = {
   datadog: ["datadog-labs"],
   dbt: ["dbt-labs"],
   deno: ["denoland"],
+  elastic: ["elastic"],
   encore: ["encoredev"],
   factory: ["factory-ai"],
   figma: ["figma"],
@@ -325,6 +332,7 @@ export const KEYWORD_OWNER_ALIAS_MAP = {
   opensea: ["projectopensea"],
   parallel: ["parallel-web"],
   pinecone: ["pinecone-io"],
+  pydantic: ["pydantic"],
   reactnative: ["facebook"],
   remotion: ["remotion-dev"],
   rivet: ["rivet-dev"],

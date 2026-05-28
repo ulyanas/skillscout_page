@@ -13,6 +13,7 @@ const STARS_CACHE_PREFIX = "skillscout_stars_v1_";
 const MAX_CONCURRENT_STARS_FETCHES = 3;
 
 const OWNER_METADATA = {
+  "agentmail-to": ["AgentMail", "https://agentmail.to", "https://github.com/agentmail-to/agentmail-skills"],
   anthropics: ["Anthropic", "https://www.anthropic.com"],
   apify: ["Apify", "https://apify.com"],
   apollographql: ["Apollo GraphQL", "https://www.apollographql.com"],
@@ -45,6 +46,7 @@ const OWNER_METADATA = {
   "dbt-labs": ["dbt Labs", "https://www.getdbt.com"],
   deepgram: ["Deepgram", "https://deepgram.com"],
   denoland: ["Deno", "https://deno.com"],
+  elastic: ["Elastic", "https://www.elastic.co", "https://github.com/elastic/agent-skills"],
   elevenlabs: ["ElevenLabs", "https://elevenlabs.io"],
   encoredev: ["Encore", "https://encore.dev"],
   exploreomni: ["Omni", "https://exploreomni.com"],
@@ -82,6 +84,7 @@ const OWNER_METADATA = {
   "pinecone-io": ["Pinecone", "https://www.pinecone.io"],
   planetscale: ["PlanetScale", "https://planetscale.com"],
   posthog: ["PostHog", "https://posthog.com"],
+  pydantic: ["Pydantic", "https://pydantic.dev", "https://github.com/pydantic/skills"],
   prisma: ["Prisma", "https://www.prisma.io"],
   projectopensea: ["OpenSea", "https://opensea.io"],
   pulumi: ["Pulumi", "https://www.pulumi.com"],
@@ -396,7 +399,8 @@ function buildOwnerGroups(data) {
       searchText,
       topSkillNames: skills.slice(0, OWNER_SKILL_PREVIEW_LIMIT).map((skill) => skill.displayName || skill.skillName),
       bestRepoKey: bestRepo?.repoKey || null,
-      starsCount: typeof owner.starsCount === "number" ? owner.starsCount : null
+      starsCount: typeof owner.starsCount === "number" ? owner.starsCount : null,
+      dateAddedMs: parseDateMs(owner.firstSeenAt || owner.lastSeenAt)
     };
 
     ownerObj.rankScore = computeOwnerRankScore(ownerObj);
@@ -425,7 +429,7 @@ function runSearch() {
         .sort(compareSearchOwners)
     : state.owners.map((owner) => ({ ...owner, matchingSkills: owner.skills }));
 
-  state.filteredOwners = terms.length ? matched : applySort(matched);
+  state.filteredOwners = terms.length && state.sortBy === "rank" ? matched : applySort(matched);
   renderResults();
 }
 
@@ -436,6 +440,12 @@ function applySort(owners) {
     switch (state.sortBy) {
       case "rank":
         return (b.rankScore || 0) - (a.rankScore || 0) || compareByName(a, b);
+      case "recent":
+        return (
+          (b.dateAddedMs || 0) - (a.dateAddedMs || 0) ||
+          (b.rankScore || 0) - (a.rankScore || 0) ||
+          compareByName(a, b)
+        );
       case "skills":
         return (b.skills.length || 0) - (a.skills.length || 0) || compareByName(a, b);
       case "stars":
@@ -454,6 +464,11 @@ function applySort(owners) {
 
 function compareByName(a, b) {
   return String(a.displayName || a.ownerKey).localeCompare(String(b.displayName || b.ownerKey));
+}
+
+function parseDateMs(value) {
+  const timestamp = Date.parse(value || "");
+  return Number.isFinite(timestamp) ? timestamp : 0;
 }
 
 // ── Stats ─────────────────────────────────────────────────────────────────────

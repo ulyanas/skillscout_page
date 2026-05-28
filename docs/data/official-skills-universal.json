@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-28T20:12:29.146Z",
+  "generatedAt": "2026-05-28T20:47:21.506Z",
   "sources": {
     "skills.sh": {
       "sourceId": "skills.sh",
@@ -43,6 +43,32 @@
   },
   "officialOwners": [
     {
+      "ownerKey": "agentmail-to",
+      "displayName": "AgentMail",
+      "normalizedNames": [
+        "agentmail",
+        "agentmail-to"
+      ],
+      "sourceOwnerKeys": [
+        "agentmail-to"
+      ],
+      "websiteHosts": [],
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/agentmail-to"
+      ],
+      "skillsCount": 7,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z",
+      "website": "https://agentmail.to",
+      "starsCount": 14
+    },
+    {
       "ownerKey": "alibaba",
       "displayName": "Alibaba.com",
       "normalizedNames": [
@@ -83,19 +109,22 @@
       "websiteHosts": [],
       "sources": [
         "skills.sh",
-        "mcpservers.org"
+        "mcpservers.org",
+        "github-discovery"
       ],
       "sourceUrls": [
         "https://www.skills.sh/official#anthropics",
-        "https://mcpservers.org/agent-skills/author/anthropic"
+        "https://mcpservers.org/agent-skills/author/anthropic",
+        "https://github.com/anthropics"
       ],
       "skillsCount": 719,
       "reposCount": 18,
       "installsCount": 1942411,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:29.146Z",
-      "lastSeenAt": "2026-05-28T20:12:29.146Z",
-      "starsCount": 580188
+      "firstSeenAt": "2026-05-28T09:53:15.533Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z",
+      "starsCount": 579395,
+      "website": "https://anthropic.com"
     },
     {
       "ownerKey": "apache",
@@ -246,12 +275,12 @@
       "sourceUrls": [
         "https://mcpservers.org/agent-skills/author/atlassian"
       ],
-      "skillsCount": 5,
+      "skillsCount": 0,
       "reposCount": 0,
       "installsCount": 0,
       "confidence": "medium",
-      "firstSeenAt": "2026-05-28T20:12:29.146Z",
-      "lastSeenAt": "2026-05-28T20:12:29.146Z"
+      "firstSeenAt": "2026-05-28T09:53:15.533Z",
+      "lastSeenAt": "2026-05-28T09:53:15.533Z"
     },
     {
       "ownerKey": "auth0",
@@ -348,12 +377,12 @@
       "sourceUrls": [
         "https://mcpservers.org/agent-skills/author/azure"
       ],
-      "skillsCount": 20,
+      "skillsCount": 0,
       "reposCount": 0,
       "installsCount": 0,
       "confidence": "medium",
-      "firstSeenAt": "2026-05-28T20:12:29.146Z",
-      "lastSeenAt": "2026-05-28T20:12:29.146Z"
+      "firstSeenAt": "2026-05-28T09:53:15.533Z",
+      "lastSeenAt": "2026-05-28T09:53:15.533Z"
     },
     {
       "ownerKey": "base",
@@ -661,12 +690,12 @@
       "sourceUrls": [
         "https://mcpservers.org/agent-skills/author/canva"
       ],
-      "skillsCount": 3,
+      "skillsCount": 0,
       "reposCount": 0,
       "installsCount": 0,
       "confidence": "medium",
-      "firstSeenAt": "2026-05-28T20:12:29.146Z",
-      "lastSeenAt": "2026-05-28T20:12:29.146Z"
+      "firstSeenAt": "2026-05-28T09:53:15.533Z",
+      "lastSeenAt": "2026-05-28T09:53:15.533Z"
     },
     {
       "ownerKey": "checkly",
@@ -1140,6 +1169,31 @@
       "twitter": "@Doist"
     },
     {
+      "ownerKey": "elastic",
+      "displayName": "Elastic",
+      "normalizedNames": [
+        "elastic"
+      ],
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "websiteHosts": [],
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic"
+      ],
+      "skillsCount": 70,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z",
+      "website": "https://www.elastic.co",
+      "starsCount": 492
+    },
+    {
       "ownerKey": "elevenlabs",
       "displayName": "elevenlabs",
       "normalizedNames": [
@@ -1496,12 +1550,12 @@
       "sourceUrls": [
         "https://mcpservers.org/agent-skills/author/google"
       ],
-      "skillsCount": 92,
+      "skillsCount": 0,
       "reposCount": 0,
       "installsCount": 0,
       "confidence": "medium",
-      "firstSeenAt": "2026-05-28T20:12:29.146Z",
-      "lastSeenAt": "2026-05-28T20:12:29.146Z"
+      "firstSeenAt": "2026-05-28T09:53:15.533Z",
+      "lastSeenAt": "2026-05-28T09:53:15.533Z"
     },
     {
       "ownerKey": "google-gemini",
@@ -2251,7 +2305,7 @@
     },
     {
       "ownerKey": "openai",
-      "displayName": "openai",
+      "displayName": "OpenAI",
       "normalizedNames": [
         "openai"
       ],
@@ -2261,19 +2315,22 @@
       "websiteHosts": [],
       "sources": [
         "skills.sh",
-        "mcpservers.org"
+        "mcpservers.org",
+        "github-discovery"
       ],
       "sourceUrls": [
         "https://www.skills.sh/official#openai",
-        "https://mcpservers.org/agent-skills/author/openai"
+        "https://mcpservers.org/agent-skills/author/openai",
+        "https://github.com/openai"
       ],
-      "skillsCount": 553,
+      "skillsCount": 547,
       "reposCount": 8,
       "installsCount": 73064,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:29.146Z",
-      "lastSeenAt": "2026-05-28T20:12:29.146Z",
-      "starsCount": 256931
+      "firstSeenAt": "2026-05-28T09:53:15.533Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z",
+      "starsCount": 256760,
+      "website": "https://openai.com"
     },
     {
       "ownerKey": "openshift",
@@ -2536,6 +2593,31 @@
       "twitter": "@putdotio"
     },
     {
+      "ownerKey": "pydantic",
+      "displayName": "Pydantic",
+      "normalizedNames": [
+        "pydantic"
+      ],
+      "sourceOwnerKeys": [
+        "pydantic"
+      ],
+      "websiteHosts": [],
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/pydantic"
+      ],
+      "skillsCount": 8,
+      "reposCount": 1,
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z",
+      "website": "https://pydantic.dev",
+      "starsCount": 61
+    },
+    {
       "ownerKey": "pytorch",
       "displayName": "pytorch",
       "normalizedNames": [
@@ -2667,9 +2749,10 @@
     },
     {
       "ownerKey": "runwayml",
-      "displayName": "runwayml",
+      "displayName": "Runway",
       "normalizedNames": [
-        "runwayml"
+        "runwayml",
+        "runway"
       ],
       "sourceOwnerKeys": [
         "runwayml"
@@ -2677,19 +2760,22 @@
       "websiteHosts": [],
       "sources": [
         "skills.sh",
-        "mcpservers.org"
+        "mcpservers.org",
+        "github-discovery"
       ],
       "sourceUrls": [
         "https://www.skills.sh/official#runwayml",
-        "https://mcpservers.org/agent-skills/author/runwayml"
+        "https://mcpservers.org/agent-skills/author/runwayml",
+        "https://github.com/runwayml"
       ],
       "skillsCount": 18,
       "reposCount": 2,
       "installsCount": 2188,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:29.146Z",
-      "lastSeenAt": "2026-05-28T20:12:29.146Z",
-      "starsCount": 51
+      "firstSeenAt": "2026-05-28T09:53:15.533Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z",
+      "starsCount": 51,
+      "website": "https://runwayml.com"
     },
     {
       "ownerKey": "sanity-io",
@@ -2839,7 +2925,7 @@
       "sourceUrls": [
         "https://github.com/Snapchat"
       ],
-      "skillsCount": 27,
+      "skillsCount": 0,
       "reposCount": 1,
       "installsCount": 0,
       "confidence": "high",
@@ -3333,15 +3419,46 @@
       "sourceUrls": [
         "https://mcpservers.org/agent-skills/author/zapier"
       ],
-      "skillsCount": 3,
+      "skillsCount": 0,
       "reposCount": 0,
       "installsCount": 0,
       "confidence": "medium",
-      "firstSeenAt": "2026-05-28T20:12:29.146Z",
-      "lastSeenAt": "2026-05-28T20:12:29.146Z"
+      "firstSeenAt": "2026-05-28T09:53:15.533Z",
+      "lastSeenAt": "2026-05-28T09:53:15.533Z"
     }
   ],
   "officialRepos": [
+    {
+      "repoKey": "agentmail-to/agentmail-skills",
+      "ownerKey": "agentmail-to",
+      "sourceOwnerKeys": [
+        "agentmail-to"
+      ],
+      "repoName": "agentmail-skills",
+      "displayName": "agentmail-to/agentmail-skills",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/agentmail-to/agentmail-skills"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z",
+      "skillsCount": 7,
+      "starsCount": 14,
+      "githubSkillPaths": [
+        "agent-email-patterns",
+        "agentmail",
+        "agentmail-cli",
+        "agentmail-mcp",
+        "agentmail-sdk",
+        "agentmail-toolkit",
+        "email-for-ai-agents"
+      ],
+      "truncated": false
+    },
     {
       "repoKey": "alibaba/skill-up",
       "ownerKey": "alibaba",
@@ -4513,17 +4630,19 @@
       "repoName": "skills",
       "displayName": "anthropics/skills",
       "sources": [
-        "skills.sh"
+        "skills.sh",
+        "github-discovery"
       ],
       "sourceUrls": [
-        "https://www.skills.sh/official#anthropics/skills"
+        "https://www.skills.sh/official#anthropics/skills",
+        "https://github.com/anthropics/skills"
       ],
       "skillsCount": 18,
       "installsCount": 1526645,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:29.146Z",
-      "lastSeenAt": "2026-05-28T20:12:29.146Z",
-      "starsCount": 142703,
+      "firstSeenAt": "2026-05-28T09:53:15.533Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z",
+      "starsCount": 142716,
       "canonicalRepoKey": "anthropics/skills",
       "githubSkillPaths": [
         "skills/algorithmic-art",
@@ -8261,6 +8380,100 @@
         ".agents/skills/add-command",
         ".claude/skills/add-command",
         "skills/todoist-cli"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "elastic/agent-skills",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoName": "agent-skills",
+      "displayName": "elastic/agent-skills",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z",
+      "skillsCount": 70,
+      "starsCount": 492,
+      "githubSkillPaths": [
+        "plugins/cloud/skills/access-management",
+        "plugins/cloud/skills/create-project",
+        "plugins/cloud/skills/manage-project",
+        "plugins/cloud/skills/network-security",
+        "plugins/cloud/skills/setup",
+        "plugins/elasticsearch/skills/elasticsearch-audit",
+        "plugins/elasticsearch/skills/elasticsearch-authn",
+        "plugins/elasticsearch/skills/elasticsearch-authz",
+        "plugins/elasticsearch/skills/elasticsearch-esql",
+        "plugins/elasticsearch/skills/elasticsearch-file-ingest",
+        "plugins/elasticsearch/skills/elasticsearch-onboarding",
+        "plugins/elasticsearch/skills/elasticsearch-security-troubleshooting",
+        "plugins/kibana/skills/agent-builder",
+        "plugins/kibana/skills/kibana-alerting-rules",
+        "plugins/kibana/skills/kibana-anomaly-detection",
+        "plugins/kibana/skills/kibana-audit",
+        "plugins/kibana/skills/kibana-connectors",
+        "plugins/kibana/skills/kibana-dashboards",
+        "plugins/kibana/skills/kibana-vega",
+        "plugins/kibana/skills/streams",
+        "plugins/observability/skills/edot-dotnet-instrument",
+        "plugins/observability/skills/edot-dotnet-migrate",
+        "plugins/observability/skills/edot-java-instrument",
+        "plugins/observability/skills/edot-java-migrate",
+        "plugins/observability/skills/edot-python-instrument",
+        "plugins/observability/skills/edot-python-migrate",
+        "plugins/observability/skills/k8s-investigation",
+        "plugins/observability/skills/llm-obs",
+        "plugins/observability/skills/logs-search",
+        "plugins/observability/skills/manage-slos",
+        "plugins/observability/skills/service-health",
+        "plugins/security/skills/alert-triage",
+        "plugins/security/skills/case-management",
+        "plugins/security/skills/detection-rule-management",
+        "plugins/security/skills/generate-security-sample-data",
+        "skills/cloud/access-management",
+        "skills/cloud/create-project",
+        "skills/cloud/manage-project",
+        "skills/cloud/network-security",
+        "skills/cloud/setup",
+        "skills/elasticsearch/elasticsearch-audit",
+        "skills/elasticsearch/elasticsearch-authn",
+        "skills/elasticsearch/elasticsearch-authz",
+        "skills/elasticsearch/elasticsearch-esql",
+        "skills/elasticsearch/elasticsearch-file-ingest",
+        "skills/elasticsearch/elasticsearch-onboarding",
+        "skills/elasticsearch/elasticsearch-security-troubleshooting",
+        "skills/kibana/agent-builder",
+        "skills/kibana/kibana-alerting-rules",
+        "skills/kibana/kibana-anomaly-detection",
+        "skills/kibana/kibana-audit",
+        "skills/kibana/kibana-connectors",
+        "skills/kibana/kibana-dashboards",
+        "skills/kibana/kibana-vega",
+        "skills/kibana/streams",
+        "skills/observability/edot-dotnet-instrument",
+        "skills/observability/edot-dotnet-migrate",
+        "skills/observability/edot-java-instrument",
+        "skills/observability/edot-java-migrate",
+        "skills/observability/edot-python-instrument",
+        "skills/observability/edot-python-migrate",
+        "skills/observability/k8s-investigation",
+        "skills/observability/llm-obs",
+        "skills/observability/logs-search",
+        "skills/observability/manage-slos",
+        "skills/observability/service-health",
+        "skills/security/alert-triage",
+        "skills/security/case-management",
+        "skills/security/detection-rule-management",
+        "skills/security/generate-security-sample-data"
       ],
       "truncated": false
     },
@@ -16982,16 +17195,18 @@
       "repoName": "skills",
       "displayName": "openai/skills",
       "sources": [
-        "skills.sh"
+        "skills.sh",
+        "github-discovery"
       ],
       "sourceUrls": [
-        "https://www.skills.sh/official#openai/skills"
+        "https://www.skills.sh/official#openai/skills",
+        "https://github.com/openai/skills"
       ],
       "skillsCount": 44,
       "installsCount": 66234,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:29.146Z",
-      "lastSeenAt": "2026-05-28T20:12:29.146Z",
+      "firstSeenAt": "2026-05-28T09:53:15.533Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z",
       "starsCount": 20720,
       "canonicalRepoKey": "openai/skills",
       "githubSkillPaths": [
@@ -17000,6 +17215,7 @@
         "skills/.curated/cli-creator",
         "skills/.curated/cloudflare-deploy",
         "skills/.curated/define-goal",
+        "skills/.curated/figma",
         "skills/.curated/figma-code-connect-components",
         "skills/.curated/figma-create-design-system-rules",
         "skills/.curated/figma-create-new-file",
@@ -17007,7 +17223,6 @@
         "skills/.curated/figma-generate-library",
         "skills/.curated/figma-implement-design",
         "skills/.curated/figma-use",
-        "skills/.curated/figma",
         "skills/.curated/gh-address-comments",
         "skills/.curated/gh-fix-ci",
         "skills/.curated/hatch-pet",
@@ -17021,8 +17236,8 @@
         "skills/.curated/notion-spec-to-implementation",
         "skills/.curated/openai-docs",
         "skills/.curated/pdf",
-        "skills/.curated/playwright-interactive",
         "skills/.curated/playwright",
+        "skills/.curated/playwright-interactive",
         "skills/.curated/render-deploy",
         "skills/.curated/screenshot",
         "skills/.curated/security-best-practices",
@@ -18355,6 +18570,38 @@
       "truncated": false
     },
     {
+      "repoKey": "pydantic/skills",
+      "ownerKey": "pydantic",
+      "sourceOwnerKeys": [
+        "pydantic"
+      ],
+      "repoName": "skills",
+      "displayName": "pydantic/skills",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/pydantic/skills"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z",
+      "skillsCount": 8,
+      "starsCount": 61,
+      "githubSkillPaths": [
+        "plugins/ai/skills/building-pydantic-ai-agents",
+        "plugins/logfire/skills/logfire-instrumentation",
+        "plugins/logfire/skills/logfire-query",
+        "plugins/logfire/skills/logfire-ui",
+        "skills/building-pydantic-ai-agents",
+        "skills/logfire-instrumentation",
+        "skills/logfire-query",
+        "skills/logfire-ui"
+      ],
+      "truncated": false
+    },
+    {
       "repoKey": "pytorch/pytorch",
       "ownerKey": "pytorch",
       "sourceOwnerKeys": [
@@ -18886,16 +19133,18 @@
       "repoName": "skills",
       "displayName": "runwayml/skills",
       "sources": [
-        "skills.sh"
+        "skills.sh",
+        "github-discovery"
       ],
       "sourceUrls": [
-        "https://www.skills.sh/official#runwayml/skills"
+        "https://www.skills.sh/official#runwayml/skills",
+        "https://github.com/runwayml/skills"
       ],
       "skillsCount": 17,
       "installsCount": 2183,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:29.146Z",
-      "lastSeenAt": "2026-05-28T20:12:29.146Z",
+      "firstSeenAt": "2026-05-28T09:53:15.533Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z",
       "starsCount": 51,
       "canonicalRepoKey": "runwayml/skills",
       "githubSkillPaths": [
@@ -22600,6 +22849,153 @@
     }
   ],
   "officialSkills": [
+    {
+      "skillKey": "agentmail-to/agentmail-skills/agent-email-patterns",
+      "ownerKey": "agentmail-to",
+      "sourceOwnerKeys": [
+        "agentmail-to"
+      ],
+      "repoKey": "agentmail-to/agentmail-skills",
+      "skillName": "agent-email-patterns",
+      "displayName": "agent-email-patterns",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/agentmail-to/agentmail-skills/tree/HEAD/agent-email-patterns"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "agentmail-to/agentmail-skills/agentmail",
+      "ownerKey": "agentmail-to",
+      "sourceOwnerKeys": [
+        "agentmail-to"
+      ],
+      "repoKey": "agentmail-to/agentmail-skills",
+      "skillName": "agentmail",
+      "displayName": "agentmail",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/agentmail-to/agentmail-skills/tree/HEAD/agentmail"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "agentmail-to/agentmail-skills/agentmail-cli",
+      "ownerKey": "agentmail-to",
+      "sourceOwnerKeys": [
+        "agentmail-to"
+      ],
+      "repoKey": "agentmail-to/agentmail-skills",
+      "skillName": "agentmail-cli",
+      "displayName": "agentmail-cli",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/agentmail-to/agentmail-skills/tree/HEAD/agentmail-cli"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "agentmail-to/agentmail-skills/agentmail-mcp",
+      "ownerKey": "agentmail-to",
+      "sourceOwnerKeys": [
+        "agentmail-to"
+      ],
+      "repoKey": "agentmail-to/agentmail-skills",
+      "skillName": "agentmail-mcp",
+      "displayName": "agentmail-mcp",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/agentmail-to/agentmail-skills/tree/HEAD/agentmail-mcp"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "agentmail-to/agentmail-skills/agentmail-sdk",
+      "ownerKey": "agentmail-to",
+      "sourceOwnerKeys": [
+        "agentmail-to"
+      ],
+      "repoKey": "agentmail-to/agentmail-skills",
+      "skillName": "agentmail-sdk",
+      "displayName": "agentmail-sdk",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/agentmail-to/agentmail-skills/tree/HEAD/agentmail-sdk"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "agentmail-to/agentmail-skills/agentmail-toolkit",
+      "ownerKey": "agentmail-to",
+      "sourceOwnerKeys": [
+        "agentmail-to"
+      ],
+      "repoKey": "agentmail-to/agentmail-skills",
+      "skillName": "agentmail-toolkit",
+      "displayName": "agentmail-toolkit",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/agentmail-to/agentmail-skills/tree/HEAD/agentmail-toolkit"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "agentmail-to/agentmail-skills/email-for-ai-agents",
+      "ownerKey": "agentmail-to",
+      "sourceOwnerKeys": [
+        "agentmail-to"
+      ],
+      "repoKey": "agentmail-to/agentmail-skills",
+      "skillName": "email-for-ai-agents",
+      "displayName": "email-for-ai-agents",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/agentmail-to/agentmail-skills/tree/HEAD/email-for-ai-agents"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
     {
       "skillKey": "alibaba/skill-up/e2e/testdata/agent-judge-criteria",
       "ownerKey": "alibaba",
@@ -37717,8 +38113,8 @@
       ],
       "installsCount": 42634,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "anthropics/skills/skills/brand-guidelines",
@@ -37738,8 +38134,8 @@
       ],
       "installsCount": 41972,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "anthropics/skills/skills/canvas-design",
@@ -37759,8 +38155,8 @@
       ],
       "installsCount": 55846,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "anthropics/skills/skills/claude-api",
@@ -37780,8 +38176,8 @@
       ],
       "installsCount": 25961,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "anthropics/skills/skills/doc-coauthoring",
@@ -37801,8 +38197,8 @@
       ],
       "installsCount": 42237,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "anthropics/skills/skills/docx",
@@ -37822,8 +38218,8 @@
       ],
       "installsCount": 91162,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "anthropics/skills/skills/frontend-design",
@@ -37843,8 +38239,8 @@
       ],
       "installsCount": 421750,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "anthropics/skills/skills/internal-comms",
@@ -37864,8 +38260,8 @@
       ],
       "installsCount": 37181,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "anthropics/skills/skills/mcp-builder",
@@ -37885,8 +38281,8 @@
       ],
       "installsCount": 56014,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "anthropics/skills/skills/pdf",
@@ -37906,8 +38302,8 @@
       ],
       "installsCount": 109704,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "anthropics/skills/skills/pptx",
@@ -37927,8 +38323,8 @@
       ],
       "installsCount": 108735,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "anthropics/skills/skills/skill-creator",
@@ -37948,8 +38344,8 @@
       ],
       "installsCount": 198111,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "anthropics/skills/skills/slack-gif-creator",
@@ -37969,8 +38365,8 @@
       ],
       "installsCount": 32362,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "anthropics/skills/skills/theme-factory",
@@ -37990,8 +38386,8 @@
       ],
       "installsCount": 40289,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "anthropics/skills/skills/web-artifacts-builder",
@@ -38011,8 +38407,8 @@
       ],
       "installsCount": 44995,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "anthropics/skills/skills/webapp-testing",
@@ -38032,8 +38428,8 @@
       ],
       "installsCount": 68343,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "anthropics/skills/skills/xlsx",
@@ -38053,8 +38449,8 @@
       ],
       "installsCount": 78029,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "anthropics/skills/template",
@@ -38074,8 +38470,8 @@
       ],
       "installsCount": 0,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "apache/airflow-steward/.claude/skills/contributor-nomination",
@@ -62835,6 +63231,1476 @@
       "confidence": "high",
       "firstSeenAt": "2026-05-28T20:12:42.236Z",
       "lastSeenAt": "2026-05-28T20:12:42.236Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/cloud/skills/access-management",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "access-management",
+      "displayName": "access-management",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/cloud/skills/access-management"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/cloud/skills/create-project",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "create-project",
+      "displayName": "create-project",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/cloud/skills/create-project"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/cloud/skills/manage-project",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "manage-project",
+      "displayName": "manage-project",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/cloud/skills/manage-project"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/cloud/skills/network-security",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "network-security",
+      "displayName": "network-security",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/cloud/skills/network-security"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/cloud/skills/setup",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "setup",
+      "displayName": "setup",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/cloud/skills/setup"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/elasticsearch/skills/elasticsearch-audit",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "elasticsearch-audit",
+      "displayName": "elasticsearch-audit",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/elasticsearch/skills/elasticsearch-audit"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/elasticsearch/skills/elasticsearch-authn",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "elasticsearch-authn",
+      "displayName": "elasticsearch-authn",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/elasticsearch/skills/elasticsearch-authn"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/elasticsearch/skills/elasticsearch-authz",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "elasticsearch-authz",
+      "displayName": "elasticsearch-authz",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/elasticsearch/skills/elasticsearch-authz"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/elasticsearch/skills/elasticsearch-esql",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "elasticsearch-esql",
+      "displayName": "elasticsearch-esql",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/elasticsearch/skills/elasticsearch-esql"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/elasticsearch/skills/elasticsearch-file-ingest",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "elasticsearch-file-ingest",
+      "displayName": "elasticsearch-file-ingest",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/elasticsearch/skills/elasticsearch-file-ingest"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/elasticsearch/skills/elasticsearch-onboarding",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "elasticsearch-onboarding",
+      "displayName": "elasticsearch-onboarding",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/elasticsearch/skills/elasticsearch-onboarding"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/elasticsearch/skills/elasticsearch-security-troubleshooting",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "elasticsearch-security-troubleshooting",
+      "displayName": "elasticsearch-security-troubleshooting",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/elasticsearch/skills/elasticsearch-security-troubleshooting"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/kibana/skills/agent-builder",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "agent-builder",
+      "displayName": "agent-builder",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/kibana/skills/agent-builder"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/kibana/skills/kibana-alerting-rules",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "kibana-alerting-rules",
+      "displayName": "kibana-alerting-rules",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/kibana/skills/kibana-alerting-rules"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/kibana/skills/kibana-anomaly-detection",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "kibana-anomaly-detection",
+      "displayName": "kibana-anomaly-detection",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/kibana/skills/kibana-anomaly-detection"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/kibana/skills/kibana-audit",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "kibana-audit",
+      "displayName": "kibana-audit",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/kibana/skills/kibana-audit"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/kibana/skills/kibana-connectors",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "kibana-connectors",
+      "displayName": "kibana-connectors",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/kibana/skills/kibana-connectors"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/kibana/skills/kibana-dashboards",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "kibana-dashboards",
+      "displayName": "kibana-dashboards",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/kibana/skills/kibana-dashboards"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/kibana/skills/kibana-vega",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "kibana-vega",
+      "displayName": "kibana-vega",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/kibana/skills/kibana-vega"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/kibana/skills/streams",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "streams",
+      "displayName": "streams",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/kibana/skills/streams"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/observability/skills/edot-dotnet-instrument",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "edot-dotnet-instrument",
+      "displayName": "edot-dotnet-instrument",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/observability/skills/edot-dotnet-instrument"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/observability/skills/edot-dotnet-migrate",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "edot-dotnet-migrate",
+      "displayName": "edot-dotnet-migrate",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/observability/skills/edot-dotnet-migrate"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/observability/skills/edot-java-instrument",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "edot-java-instrument",
+      "displayName": "edot-java-instrument",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/observability/skills/edot-java-instrument"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/observability/skills/edot-java-migrate",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "edot-java-migrate",
+      "displayName": "edot-java-migrate",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/observability/skills/edot-java-migrate"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/observability/skills/edot-python-instrument",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "edot-python-instrument",
+      "displayName": "edot-python-instrument",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/observability/skills/edot-python-instrument"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/observability/skills/edot-python-migrate",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "edot-python-migrate",
+      "displayName": "edot-python-migrate",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/observability/skills/edot-python-migrate"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/observability/skills/k8s-investigation",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "k8s-investigation",
+      "displayName": "k8s-investigation",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/observability/skills/k8s-investigation"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/observability/skills/llm-obs",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "llm-obs",
+      "displayName": "llm-obs",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/observability/skills/llm-obs"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/observability/skills/logs-search",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "logs-search",
+      "displayName": "logs-search",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/observability/skills/logs-search"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/observability/skills/manage-slos",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "manage-slos",
+      "displayName": "manage-slos",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/observability/skills/manage-slos"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/observability/skills/service-health",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "service-health",
+      "displayName": "service-health",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/observability/skills/service-health"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/security/skills/alert-triage",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "alert-triage",
+      "displayName": "alert-triage",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/security/skills/alert-triage"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/security/skills/case-management",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "case-management",
+      "displayName": "case-management",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/security/skills/case-management"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/security/skills/detection-rule-management",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "detection-rule-management",
+      "displayName": "detection-rule-management",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/security/skills/detection-rule-management"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/plugins/security/skills/generate-security-sample-data",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "generate-security-sample-data",
+      "displayName": "generate-security-sample-data",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/plugins/security/skills/generate-security-sample-data"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/cloud/access-management",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "access-management",
+      "displayName": "access-management",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/cloud/access-management"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/cloud/create-project",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "create-project",
+      "displayName": "create-project",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/cloud/create-project"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/cloud/manage-project",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "manage-project",
+      "displayName": "manage-project",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/cloud/manage-project"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/cloud/network-security",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "network-security",
+      "displayName": "network-security",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/cloud/network-security"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/cloud/setup",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "setup",
+      "displayName": "setup",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/cloud/setup"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/elasticsearch/elasticsearch-audit",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "elasticsearch-audit",
+      "displayName": "elasticsearch-audit",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/elasticsearch/elasticsearch-audit"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/elasticsearch/elasticsearch-authn",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "elasticsearch-authn",
+      "displayName": "elasticsearch-authn",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/elasticsearch/elasticsearch-authn"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/elasticsearch/elasticsearch-authz",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "elasticsearch-authz",
+      "displayName": "elasticsearch-authz",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/elasticsearch/elasticsearch-authz"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/elasticsearch/elasticsearch-esql",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "elasticsearch-esql",
+      "displayName": "elasticsearch-esql",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/elasticsearch/elasticsearch-esql"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/elasticsearch/elasticsearch-file-ingest",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "elasticsearch-file-ingest",
+      "displayName": "elasticsearch-file-ingest",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/elasticsearch/elasticsearch-file-ingest"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/elasticsearch/elasticsearch-onboarding",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "elasticsearch-onboarding",
+      "displayName": "elasticsearch-onboarding",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/elasticsearch/elasticsearch-onboarding"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/elasticsearch/elasticsearch-security-troubleshooting",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "elasticsearch-security-troubleshooting",
+      "displayName": "elasticsearch-security-troubleshooting",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/elasticsearch/elasticsearch-security-troubleshooting"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/kibana/agent-builder",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "agent-builder",
+      "displayName": "agent-builder",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/kibana/agent-builder"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/kibana/kibana-alerting-rules",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "kibana-alerting-rules",
+      "displayName": "kibana-alerting-rules",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/kibana/kibana-alerting-rules"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/kibana/kibana-anomaly-detection",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "kibana-anomaly-detection",
+      "displayName": "kibana-anomaly-detection",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/kibana/kibana-anomaly-detection"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/kibana/kibana-audit",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "kibana-audit",
+      "displayName": "kibana-audit",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/kibana/kibana-audit"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/kibana/kibana-connectors",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "kibana-connectors",
+      "displayName": "kibana-connectors",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/kibana/kibana-connectors"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/kibana/kibana-dashboards",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "kibana-dashboards",
+      "displayName": "kibana-dashboards",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/kibana/kibana-dashboards"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/kibana/kibana-vega",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "kibana-vega",
+      "displayName": "kibana-vega",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/kibana/kibana-vega"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/kibana/streams",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "streams",
+      "displayName": "streams",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/kibana/streams"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/observability/edot-dotnet-instrument",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "edot-dotnet-instrument",
+      "displayName": "edot-dotnet-instrument",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/observability/edot-dotnet-instrument"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/observability/edot-dotnet-migrate",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "edot-dotnet-migrate",
+      "displayName": "edot-dotnet-migrate",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/observability/edot-dotnet-migrate"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/observability/edot-java-instrument",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "edot-java-instrument",
+      "displayName": "edot-java-instrument",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/observability/edot-java-instrument"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/observability/edot-java-migrate",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "edot-java-migrate",
+      "displayName": "edot-java-migrate",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/observability/edot-java-migrate"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/observability/edot-python-instrument",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "edot-python-instrument",
+      "displayName": "edot-python-instrument",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/observability/edot-python-instrument"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/observability/edot-python-migrate",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "edot-python-migrate",
+      "displayName": "edot-python-migrate",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/observability/edot-python-migrate"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/observability/k8s-investigation",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "k8s-investigation",
+      "displayName": "k8s-investigation",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/observability/k8s-investigation"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/observability/llm-obs",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "llm-obs",
+      "displayName": "llm-obs",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/observability/llm-obs"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/observability/logs-search",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "logs-search",
+      "displayName": "logs-search",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/observability/logs-search"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/observability/manage-slos",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "manage-slos",
+      "displayName": "manage-slos",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/observability/manage-slos"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/observability/service-health",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "service-health",
+      "displayName": "service-health",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/observability/service-health"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/security/alert-triage",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "alert-triage",
+      "displayName": "alert-triage",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/security/alert-triage"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/security/case-management",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "case-management",
+      "displayName": "case-management",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/security/case-management"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/security/detection-rule-management",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "detection-rule-management",
+      "displayName": "detection-rule-management",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/security/detection-rule-management"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "elastic/agent-skills/skills/security/generate-security-sample-data",
+      "ownerKey": "elastic",
+      "sourceOwnerKeys": [
+        "elastic"
+      ],
+      "repoKey": "elastic/agent-skills",
+      "skillName": "generate-security-sample-data",
+      "displayName": "generate-security-sample-data",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/elastic/agent-skills/tree/HEAD/skills/security/generate-security-sample-data"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "elevenlabs/packages/.agents/skills/elevenlabs-sdk-migration",
@@ -143032,8 +144898,8 @@
       ],
       "installsCount": 1109,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/chatgpt-apps",
@@ -143053,8 +144919,8 @@
       ],
       "installsCount": 1005,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/cli-creator",
@@ -143074,8 +144940,8 @@
       ],
       "installsCount": 622,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/cloudflare-deploy",
@@ -143095,8 +144961,8 @@
       ],
       "installsCount": 1511,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/define-goal",
@@ -143116,8 +144982,8 @@
       ],
       "installsCount": 8,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/figma",
@@ -143137,8 +145003,8 @@
       ],
       "installsCount": 2598,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/figma-code-connect-components",
@@ -143158,8 +145024,8 @@
       ],
       "installsCount": 644,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/figma-create-design-system-rules",
@@ -143179,8 +145045,8 @@
       ],
       "installsCount": 653,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/figma-create-new-file",
@@ -143200,8 +145066,8 @@
       ],
       "installsCount": 613,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/figma-generate-design",
@@ -143221,8 +145087,8 @@
       ],
       "installsCount": 662,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/figma-generate-library",
@@ -143242,8 +145108,8 @@
       ],
       "installsCount": 626,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/figma-implement-design",
@@ -143263,8 +145129,8 @@
       ],
       "installsCount": 2356,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/figma-use",
@@ -143284,8 +145150,8 @@
       ],
       "installsCount": 666,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/gh-address-comments",
@@ -143305,8 +145171,8 @@
       ],
       "installsCount": 1595,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/gh-fix-ci",
@@ -143326,8 +145192,8 @@
       ],
       "installsCount": 1850,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/hatch-pet",
@@ -143347,8 +145213,8 @@
       ],
       "installsCount": 535,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/jupyter-notebook",
@@ -143368,8 +145234,8 @@
       ],
       "installsCount": 1995,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/linear",
@@ -143389,8 +145255,8 @@
       ],
       "installsCount": 2281,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/migrate-to-codex",
@@ -143410,8 +145276,8 @@
       ],
       "installsCount": 278,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/netlify-deploy",
@@ -143431,8 +145297,8 @@
       ],
       "installsCount": 1270,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/notion-knowledge-capture",
@@ -143452,8 +145318,8 @@
       ],
       "installsCount": 1316,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/notion-meeting-intelligence",
@@ -143473,8 +145339,8 @@
       ],
       "installsCount": 1104,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/notion-research-documentation",
@@ -143494,8 +145360,8 @@
       ],
       "installsCount": 1375,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/notion-spec-to-implementation",
@@ -143515,8 +145381,8 @@
       ],
       "installsCount": 1137,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/openai-docs",
@@ -143536,8 +145402,8 @@
       ],
       "installsCount": 1946,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/pdf",
@@ -143557,8 +145423,8 @@
       ],
       "installsCount": 3095,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/playwright",
@@ -143578,8 +145444,8 @@
       ],
       "installsCount": 2620,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/playwright-interactive",
@@ -143599,8 +145465,8 @@
       ],
       "installsCount": 2355,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/render-deploy",
@@ -143620,8 +145486,8 @@
       ],
       "installsCount": 1081,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/screenshot",
@@ -143641,8 +145507,8 @@
       ],
       "installsCount": 2885,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/security-best-practices",
@@ -143662,8 +145528,8 @@
       ],
       "installsCount": 2746,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/security-ownership-map",
@@ -143683,8 +145549,8 @@
       ],
       "installsCount": 1158,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/security-threat-model",
@@ -143704,8 +145570,8 @@
       ],
       "installsCount": 1727,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/sentry",
@@ -143725,8 +145591,8 @@
       ],
       "installsCount": 1147,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/speech",
@@ -143746,8 +145612,8 @@
       ],
       "installsCount": 1254,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/transcribe",
@@ -143767,8 +145633,8 @@
       ],
       "installsCount": 1307,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/vercel-deploy",
@@ -143788,8 +145654,8 @@
       ],
       "installsCount": 1071,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/winui-app",
@@ -143809,8 +145675,8 @@
       ],
       "installsCount": 916,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.curated/yeet",
@@ -143830,8 +145696,8 @@
       ],
       "installsCount": 1103,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.system/imagegen",
@@ -143851,8 +145717,8 @@
       ],
       "installsCount": 1742,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.system/openai-docs",
@@ -143872,8 +145738,8 @@
       ],
       "installsCount": 1946,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.system/plugin-creator",
@@ -143893,8 +145759,8 @@
       ],
       "installsCount": 427,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.system/skill-creator",
@@ -143914,8 +145780,8 @@
       ],
       "installsCount": 1498,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/skills/skills/.system/skill-installer",
@@ -143935,8 +145801,8 @@
       ],
       "installsCount": 1236,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "openai/symphony/.codex/skills/commit",
@@ -156728,6 +158594,174 @@
       "lastSeenAt": "2026-05-28T20:12:42.236Z"
     },
     {
+      "skillKey": "pydantic/skills/plugins/ai/skills/building-pydantic-ai-agents",
+      "ownerKey": "pydantic",
+      "sourceOwnerKeys": [
+        "pydantic"
+      ],
+      "repoKey": "pydantic/skills",
+      "skillName": "building-pydantic-ai-agents",
+      "displayName": "building-pydantic-ai-agents",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/pydantic/skills/tree/HEAD/plugins/ai/skills/building-pydantic-ai-agents"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "pydantic/skills/plugins/logfire/skills/logfire-instrumentation",
+      "ownerKey": "pydantic",
+      "sourceOwnerKeys": [
+        "pydantic"
+      ],
+      "repoKey": "pydantic/skills",
+      "skillName": "logfire-instrumentation",
+      "displayName": "logfire-instrumentation",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/pydantic/skills/tree/HEAD/plugins/logfire/skills/logfire-instrumentation"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "pydantic/skills/plugins/logfire/skills/logfire-query",
+      "ownerKey": "pydantic",
+      "sourceOwnerKeys": [
+        "pydantic"
+      ],
+      "repoKey": "pydantic/skills",
+      "skillName": "logfire-query",
+      "displayName": "logfire-query",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/pydantic/skills/tree/HEAD/plugins/logfire/skills/logfire-query"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "pydantic/skills/plugins/logfire/skills/logfire-ui",
+      "ownerKey": "pydantic",
+      "sourceOwnerKeys": [
+        "pydantic"
+      ],
+      "repoKey": "pydantic/skills",
+      "skillName": "logfire-ui",
+      "displayName": "logfire-ui",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/pydantic/skills/tree/HEAD/plugins/logfire/skills/logfire-ui"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "pydantic/skills/skills/building-pydantic-ai-agents",
+      "ownerKey": "pydantic",
+      "sourceOwnerKeys": [
+        "pydantic"
+      ],
+      "repoKey": "pydantic/skills",
+      "skillName": "building-pydantic-ai-agents",
+      "displayName": "building-pydantic-ai-agents",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/pydantic/skills/tree/HEAD/skills/building-pydantic-ai-agents"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "pydantic/skills/skills/logfire-instrumentation",
+      "ownerKey": "pydantic",
+      "sourceOwnerKeys": [
+        "pydantic"
+      ],
+      "repoKey": "pydantic/skills",
+      "skillName": "logfire-instrumentation",
+      "displayName": "logfire-instrumentation",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/pydantic/skills/tree/HEAD/skills/logfire-instrumentation"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "pydantic/skills/skills/logfire-query",
+      "ownerKey": "pydantic",
+      "sourceOwnerKeys": [
+        "pydantic"
+      ],
+      "repoKey": "pydantic/skills",
+      "skillName": "logfire-query",
+      "displayName": "logfire-query",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/pydantic/skills/tree/HEAD/skills/logfire-query"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
+      "skillKey": "pydantic/skills/skills/logfire-ui",
+      "ownerKey": "pydantic",
+      "sourceOwnerKeys": [
+        "pydantic"
+      ],
+      "repoKey": "pydantic/skills",
+      "skillName": "logfire-ui",
+      "displayName": "logfire-ui",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/pydantic/skills/tree/HEAD/skills/logfire-ui"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
+    },
+    {
       "skillKey": "pytorch/pytorch/.claude/skills/add-uint-support",
       "ownerKey": "pytorch",
       "sourceOwnerKeys": [
@@ -158803,8 +160837,8 @@
       ],
       "installsCount": 97,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "runwayml/skills/skills/rw-check-compatibility",
@@ -158824,8 +160858,8 @@
       ],
       "installsCount": 84,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "runwayml/skills/skills/rw-check-org-details",
@@ -158845,8 +160879,8 @@
       ],
       "installsCount": 87,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "runwayml/skills/skills/rw-fetch-api-reference",
@@ -158866,8 +160900,8 @@
       ],
       "installsCount": 85,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "runwayml/skills/skills/rw-generate-audio",
@@ -158887,8 +160921,8 @@
       ],
       "installsCount": 77,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "runwayml/skills/skills/rw-generate-image",
@@ -158908,8 +160942,8 @@
       ],
       "installsCount": 79,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "runwayml/skills/skills/rw-generate-video",
@@ -158929,8 +160963,8 @@
       ],
       "installsCount": 136,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "runwayml/skills/skills/rw-integrate-audio",
@@ -158950,8 +160984,8 @@
       ],
       "installsCount": 84,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "runwayml/skills/skills/rw-integrate-character-embed",
@@ -158971,8 +161005,8 @@
       ],
       "installsCount": 83,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "runwayml/skills/skills/rw-integrate-characters",
@@ -158992,8 +161026,8 @@
       ],
       "installsCount": 83,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "runwayml/skills/skills/rw-integrate-documents",
@@ -159013,8 +161047,8 @@
       ],
       "installsCount": 85,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "runwayml/skills/skills/rw-integrate-image",
@@ -159034,8 +161068,8 @@
       ],
       "installsCount": 90,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "runwayml/skills/skills/rw-integrate-uploads",
@@ -159055,8 +161089,8 @@
       ],
       "installsCount": 91,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "runwayml/skills/skills/rw-integrate-video",
@@ -159076,8 +161110,8 @@
       ],
       "installsCount": 98,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "runwayml/skills/skills/rw-recipe-full-setup",
@@ -159097,8 +161131,8 @@
       ],
       "installsCount": 89,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "runwayml/skills/skills/rw-setup-api-key",
@@ -159118,8 +161152,8 @@
       ],
       "installsCount": 92,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "runwayml/skills/skills/use-runway-api",
@@ -159139,8 +161173,8 @@
       ],
       "installsCount": 88,
       "confidence": "high",
-      "firstSeenAt": "2026-05-28T20:12:42.236Z",
-      "lastSeenAt": "2026-05-28T20:12:42.236Z"
+      "firstSeenAt": "2026-05-28T20:47:21.506Z",
+      "lastSeenAt": "2026-05-28T20:47:21.506Z"
     },
     {
       "skillKey": "sanity-io/agent-context/skills/create-agent-with-sanity-context",
@@ -173466,9 +175500,9 @@
     }
   ],
   "stats": {
-    "owners": 126,
-    "repos": 498,
-    "skills": 7184,
+    "owners": 129,
+    "repos": 501,
+    "skills": 7269,
     "sourceOwners": {
       "skills.sh": 94,
       "mcpservers.org": 92
