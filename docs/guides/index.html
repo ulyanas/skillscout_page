@@ -60,9 +60,14 @@
         "name": "Skillscout",
         "url": "https://skillscout.sh/"
       },
-      "hasPart": {
-        "@id": "https://skillscout.sh/guides/what-are-ai-agent-skills/#article"
-      }
+      "hasPart": [
+        {
+          "@id": "https://skillscout.sh/guides/how-to-organize-agent-skills/#article"
+        },
+        {
+          "@id": "https://skillscout.sh/guides/what-are-ai-agent-skills/#article"
+        }
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -87,16 +92,30 @@
       "@id": "https://skillscout.sh/guides/#itemlist",
       "name": "Skillscout guide articles",
       "url": "https://skillscout.sh/guides/",
-      "numberOfItems": 1,
+      "numberOfItems": 2,
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
+          "url": "https://skillscout.sh/guides/how-to-organize-agent-skills/",
+          "name": "How to Organize AI Agent Skills"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
           "url": "https://skillscout.sh/guides/what-are-ai-agent-skills/",
           "name": "What Are AI Agent Skills?"
         }
       ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://skillscout.sh/guides/how-to-organize-agent-skills/#article",
+      "headline": "How to Organize AI Agent Skills",
+      "url": "https://skillscout.sh/guides/how-to-organize-agent-skills/",
+      "image": "https://skillscout.sh/assets/guides/organize-agent-skills-hero.jpg",
+      "description": "Organize AI agent skills across Claude, Codex, Cursor, Windsurf, and GitHub Copilot with one shared library, clear scope, and reliable sync."
     },
     {
       "@type": "Article",
@@ -292,6 +311,22 @@
       </section>
 
       <section class="list" aria-label="Guide articles">
+        <a class="article-card" href="/guides/how-to-organize-agent-skills/">
+          <div class="article-card-image">
+            <img
+              src="../assets/guides/organize-agent-skills-hero.jpg"
+              alt="Illustration of a multitasking AI agent managing several reusable skill workflows."
+            />
+          </div>
+          <div class="article-card-copy">
+            <h2>How to organize AI agent skills</h2>
+            <p>
+              Learn how to keep one shared skill library across Claude, Codex, Cursor, Windsurf,
+              and GitHub Copilot with clear scope and reliable sync.
+            </p>
+            <div class="meta">7 min read</div>
+          </div>
+        </a>
         <a class="article-card" href="/guides/what-are-ai-agent-skills/">
           <div class="article-card-image">
             <img
