@@ -5,6 +5,8 @@
 ## Docs
 
 - [Homepage](https://skillscout.sh/): Product overview, core value proposition, and the main call to install the Chrome extension.
+- [Guides](https://skillscout.sh/guides/): Collection of articles about AI and agentic skills.
+- [What Are AI Agent Skills?](https://skillscout.sh/guides/what-are-ai-agent-skills/): Explains what AI agent skills are, how they work, and why reusable workflows matter.
 - [Catalog Coverage](https://skillscout.sh/#catalogsSection): Lists supported skill catalogs, including SKILLS.sh, ClawdHub, Skill.fish, and MCPMarket.
 - [How It Works](https://skillscout.sh/#snapshot): Explains site detection, keyword extraction, skill ranking, and in-popup results for active browsing sessions.
 - [Use Cases](https://skillscout.sh/#use-cases): Shows example workflows for development, project management, marketing, content creation, knowledge work, and customer support.
