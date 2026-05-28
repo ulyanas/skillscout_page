@@ -205,6 +205,29 @@
         aspect-ratio: 2 / 1;
         object-fit: cover;
       }
+      .chat-callout {
+        margin: 28px 0;
+        padding: 22px 24px;
+        border: 1px solid var(--border);
+        border-left: 5px solid var(--text);
+        border-radius: 20px;
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+      }
+      .chat-callout p {
+        margin: 0;
+        color: var(--text);
+        font-size: 17px;
+        line-height: 1.62;
+      }
+      .chat-callout footer {
+        margin-top: 12px;
+        color: var(--text-muted);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
       h2 {
         margin: 40px 0 14px;
         font-size: 24px;
@@ -301,9 +324,17 @@
           The organization problem starts when skills are added independently. One teammate asks an
           agent to create a workflow skill. Another adds a similar skill in a different repo or
           local agent folder. Someone updates one copy and the others stay unchanged. Because most
-          of this happens through agent interaction, the library can grow without anyone seeing the
-          whole shape of it.
+          of this happens through agent interaction, the library can grow outside the team's view.
         </p>
+        <blockquote class="chat-callout">
+          <p>
+            “Lately I’ve been working across several AI tools at once: Cursor, Codex, and Claude
+            Code. A new pain appears fast: the same skill gets copied into different folders, and
+            then I have to track which version lives where. At first it feels minor. Later the whole
+            workflow is out of sync.”
+          </p>
+          <footer>From a builder chat</footer>
+        </blockquote>
         <p>
           A workable setup keeps the library readable and keeps three things clear: who owns a
           skill, where the canonical version lives, and which projects or agents should use it.
@@ -340,6 +371,14 @@
         <p>
           Skill organization works best when scope is explicit.
         </p>
+        <blockquote class="chat-callout">
+          <p>
+            “Does anyone have experience organizing skills for a team across different repos? Some
+            people need <code>.claude/</code>, others need <code>.cursor/</code>, and others need
+            <code>.codex/</code>. How do you keep order in that tool zoo?”
+          </p>
+          <footer>From a team setup discussion</footer>
+        </blockquote>
         <ul>
           <li>Personal skills: research helpers, writing workflows, and utility skills you use in every project.</li>
           <li>Team skills: workflows your whole team shares, such as release notes, PR triage, or incident review.</li>
