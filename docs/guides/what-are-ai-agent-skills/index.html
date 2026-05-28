@@ -509,8 +509,9 @@
         </p>
         <p>
           People often discover them through GitHub skills searches, agent skills GitHub lists,
-          official vendor directories, and collections such as skills.sh. That discovery layer is a
-          big part of how AI agent skills spread in practice.
+          official vendor directories, and collections such as
+          <a href="https://skills.sh/?utm_source=skillscout&utm_medium=guide&utm_campaign=what-are-ai-agent-skills">skills.sh</a>.
+          That discovery layer is a big part of how AI agent skills spread in practice.
         </p>
 
         <h2>Skills vs prompts</h2>
@@ -521,6 +522,21 @@
         <p>
           You can still trigger a skill with a prompt, of course. The difference is that the prompt
           starts the task, while the skill shapes how the task gets done.
+        </p>
+
+        <h2>Security matters</h2>
+        <p>
+          Skills often include instructions, scripts, references, and file access. That makes them
+          useful, and it also makes review important before installation.
+        </p>
+        <p>
+          A random skill from GitHub or a registry can ask for network access, read sensitive
+          files, or run commands that deserve closer review. Teams should treat skills as working
+          code and check the source before using them.
+        </p>
+        <p>
+          A skill such as <code>skill-vetter</code> helps with that review. It checks the source,
+          scans for red flags, and looks at the permissions a skill would need before installation.
         </p>
 
         <h2>How Skillscout helps</h2>
