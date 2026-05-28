@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>What Are AI Agent Skills? | Skillscout</title>
+    <meta
+      name="description"
+      content="What AI agent skills are, how AI skills work, what goes inside SKILL.md, and how Claude agent skills, GitHub skills, and Codex skills fit modern AI workflows."
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://skillscout.sh/guides/what-are-ai-agent-skills/" />
+    <meta property="og:title" content="What Are AI Agent Skills? | Skillscout" />
+    <meta
+      property="og:description"
+      content="What AI agent skills are, how AI skills work, what goes inside SKILL.md, and how Claude agent skills, GitHub skills, and Codex skills fit modern AI workflows."
+    />
+    <meta property="og:site_name" content="Skillscout" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://skillscout.sh/guides/what-are-ai-agent-skills/" />
+    <meta property="og:image" content="https://skillscout.sh/og/skillscout.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="What Are AI Agent Skills? | Skillscout" />
+    <meta
+      name="twitter:description"
+      content="What AI agent skills are, how AI skills work, what goes inside SKILL.md, and how Claude agent skills, GitHub skills, and Codex skills fit modern AI workflows."
+    />
+    <meta name="twitter:image" content="https://skillscout.sh/og/skillscout.png" />
+    <link rel="icon" href="../../assets/skillscout-mark-48.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What Are AI Agent Skills?",
+  "description": "What AI agent skills are, how AI skills work, what goes inside SKILL.md, and how Claude agent skills, GitHub skills, and Codex skills fit modern AI workflows.",
+  "author": {
+    "@type": "Organization",
+    "name": "Skillscout"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Skillscout",
+    "url": "https://skillscout.sh/"
+  },
+  "datePublished": "2026-05-28",
+  "dateModified": "2026-05-28",
+  "mainEntityOfPage": "https://skillscout.sh/guides/what-are-ai-agent-skills/"
+}
+    </script>
+    <style>
+      :root {
+        --bg: #f6f6f3;
+        --panel: #ffffff;
+        --border: #e4e4df;
+        --text: #111111;
+        --text-muted: #5f5f5f;
+        --shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.04);
+        --max: 760px;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      a { color: #0f5bd8; }
+      .container {
+        width: min(calc(100% - 40px), var(--max));
+        margin: 0 auto;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 76px;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 800;
+        font-size: 18px;
+      }
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        display: grid;
+        place-items: center;
+        box-shadow: var(--shadow-sm);
+      }
+      .brand-mark img {
+        width: 18px;
+        height: 18px;
+      }
+      .nav-links {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .nav-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .nav-links a:hover { color: var(--text); }
+      article {
+        padding: 28px 0 72px;
+      }
+      .eyebrow {
+        margin: 0 0 14px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(34px, 6vw, 56px);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+      }
+      .lead {
+        margin: 0 0 28px;
+        font-size: 19px;
+        line-height: 1.58;
+        color: var(--text-muted);
+      }
+      .meta {
+        margin: 0 0 32px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+      h2 {
+        margin: 40px 0 14px;
+        font-size: 24px;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+      }
+      p, li {
+        font-size: 16px;
+        line-height: 1.68;
+      }
+      p {
+        margin: 0 0 16px;
+      }
+      ul, ol {
+        margin: 0 0 20px;
+        padding-left: 22px;
+      }
+      code {
+        padding: 0.12em 0.38em;
+        border-radius: 8px;
+        background: #eeefec;
+        font-size: 0.9em;
+      }
+      pre {
+        overflow: auto;
+        padding: 16px 18px;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+        margin: 18px 0 24px;
+      }
+      pre code {
+        padding: 0;
+        background: transparent;
+      }
+      @media (max-width: 720px) {
+        .nav {
+          min-height: auto;
+          padding: 16px 0;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container nav">
+      <a class="brand" href="https://skillscout.sh/">
+        <span class="brand-mark"><img src="../../assets/skillscout-mark-48.png" alt="Skillscout logo" /></span>
+        <span>Skillscout</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="https://skillscout.sh/guides/">Guides</a>
+        <a href="https://skillscout.sh/official/">Official skills</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <article>
+        <p class="eyebrow">Guides</p>
+        <h1>What are AI agent skills?</h1>
+        <p class="lead">
+          AI agent skills are reusable instruction packages that give an agent a defined workflow,
+          domain knowledge, and supporting resources for a task. Many people also describe them
+          more broadly as AI skills.
+        </p>
+        <p class="meta">Updated May 28, 2026</p>
+
+        <p>
+          An AI agent skill is a reusable unit of operating knowledge. It tells the agent what the
+          task is, when the workflow applies, which steps matter, and which resources support the
+          result. Instead of restating the same process in every conversation, the workflow lives in
+          a skill and can be loaded when relevant.
+        </p>
+        <p>
+          Skills are usually organized as a folder built around a file named <code>SKILL.md</code>.
+          That file explains what the skill is for, when to use it, and how the workflow should run.
+          The folder can also include scripts, templates, reference notes, and other resources that
+          support the task.
+        </p>
+
+        <pre><code>my-skill/
+├── SKILL.md
+├── scripts/
+├── references/
+└── assets/</code></pre>
+
+        <h2>A short history of the skills standard</h2>
+        <p>
+          The current Agent Skills standard was introduced by Anthropic in October 2025 as a way to
+          package instructions, scripts, and resources for agents. In December 2025, that work was
+          published as an open cross-platform standard, which helped skills spread more easily
+          across different AI products and agent environments.
+        </p>
+
+        <h2>Why skills matter</h2>
+        <p>
+          Skills help generative models and LLM-based agents produce more reliable outcomes. Teams
+          still need repeatable workflows, shared standards, and a way to preserve knowledge that
+          should not live inside one prompt or one person’s memory. Skills solve that by turning
+          good procedures into reusable building blocks.
+        </p>
+        <p>
+          A well-written skill can teach an agent how to review pull requests, prepare a report,
+          analyze a spreadsheet, onboard a customer, write in a house style, or follow an internal
+          operating process. The agent still reasons on its own, but the skill gives that reasoning
+          a stronger structure.
+        </p>
+
+        <h2>AI products that can use skills</h2>
+        <p>
+          Popular AI products that can use skills or skill-like reusable agent setup include:
+        </p>
+        <ul>
+          <li><a href="https://claude.com/skills">Claude</a>, including Claude agent skills and Claude Code skills</li>
+          <li><a href="https://help.openai.com/en/articles/8554407-gpts-in-chatgpt">ChatGPT</a></li>
+          <li><a href="https://support.google.com/gemini/answer/15236321?hl=en">Gemini</a></li>
+          <li><a href="https://github.com/openai/skills">Codex</a>, including Codex skills</li>
+          <li><a href="https://docs.github.com/en/copilot/concepts/agents/about-agent-skills">GitHub Copilot</a>, including GitHub Copilot agent skills and Copilot agent skills</li>
+          <li><a href="https://docs.cursor.com/en/context">Cursor</a>, including Cursor agent skills</li>
+          <li><a href="https://docs.windsurf.com/windsurf/getting-started">Windsurf</a></li>
+          <li><a href="https://docs.replit.com/references/agent/overview">Replit Agent</a></li>
+        </ul>
+        <p>
+          Each product uses its own interface and naming, but all of them can work with reusable
+          instructions, reusable context, and reusable workflow logic.
+        </p>
+
+        <h2>How skills work</h2>
+        <p>
+          Skills usually work through progressive loading. The agent does not need to read every
+          workflow in full at startup. It can keep a short description for discovery, then load the
+          full instructions only when the task actually needs them.
+        </p>
+        <ol>
+          <li>Discovery: the agent sees the skill name and description.</li>
+          <li>Activation: when the task matches, it reads the full <code>SKILL.md</code>.</li>
+          <li>Execution: it opens referenced files or runs bundled scripts if the workflow needs them.</li>
+        </ol>
+        <p>
+          This keeps context usage efficient. An agent can have many skills available without paying
+          the full context cost of every workflow upfront.
+        </p>
+        <p>
+          Some skills also include executable scripts. That is useful when part of the workflow is
+          better handled by code than by language generation alone. Data extraction, file
+          transformation, deterministic validation, and structured export are common examples.
+        </p>
+
+        <h2>What goes inside SKILL.md</h2>
+        <p>
+          A good <code>SKILL.md</code> explains when to use the skill and how to execute the
+          workflow. It usually includes a short description, the task steps, tool instructions,
+          quality checks, and references to other files in the skill folder.
+        </p>
+        <p>
+          Many skills also include lightweight metadata at the top of the file. That helps the agent
+          understand the purpose of the skill before it loads the rest. The body of the file then
+          carries the real workflow: what to do, in what order, with which tools, and what a good
+          result looks like.
+        </p>
+        <p>
+          The best skills are specific. They do not try to teach everything. They focus on one job
+          or one family of jobs and make that workflow clear.
+        </p>
+
+        <h2>Two broad categories of skills</h2>
+        <p>
+          In practice, skills tend to fall into two broad groups.
+        </p>
+        <h2>1. Domain knowledge skills</h2>
+        <p>
+          These skills teach an agent how to work well in a subject area. An SEO skill is a good
+          example. It can define how to review metadata, structure content, evaluate internal links,
+          or draft search-focused copy. The same idea applies to legal review, security analysis,
+          product management, customer support, or content editing.
+        </p>
+        <p>
+          Domain knowledge skills are useful because they encode methodology. They help the agent
+          follow a discipline instead of improvising from general knowledge alone.
+        </p>
+        <p>
+          Some domain skills focus on work style rather than business software. A communication
+          skill such as <code>caveman</code> teaches the agent to answer in a compressed, highly
+          efficient style while keeping technical meaning intact. Research-oriented skills can go in
+          the other direction. An <code>autoresearch</code> skill teaches the agent to run a more
+          structured research loop, and Karpathy-inspired research workflows push that idea further
+          toward iterative investigation, experimentation, and synthesis.
+        </p>
+
+        <h2>2. Official vendor and software skills</h2>
+        <p>
+          These skills teach an agent how to work with a specific product or platform. A Mixpanel
+          skill can show the agent how to work with analytics questions, dashboards, tracking
+          implementation, or reporting workflows. A Stripe skill can guide integration work. A
+          Figma skill can help with design workflows. A Supabase skill can encode product-specific
+          best practices.
+        </p>
+        <p>
+          Official vendor skills are especially valuable because they capture software-specific
+          workflows that general models do not always handle with enough precision. They bring the
+          agent closer to the real operational logic of the product.
+        </p>
+        <p>
+          A Canva skill set is a clear example. It can teach an AI to turn a brief into a branded
+          presentation, resize one design into the standard formats for social platforms, and
+          translate an existing design into another language while preserving the original layout as
+          much as possible. That is product-specific operating knowledge, not general design advice.
+        </p>
+        <p>
+          You can browse many of these vendor skill sets in the
+          <a href="https://skillscout.sh/official/">Skillscout official skills directory</a>.
+        </p>
+
+        <h2>Where skills are used today</h2>
+        <p>
+          Skills are now used across coding tools, chat products, APIs, internal copilots, and
+          agent frameworks. Common use cases include document creation, spreadsheet work, coding
+          tasks, support workflows, analytics operations, research methods, internal reporting, and
+          company-specific procedures.
+        </p>
+        <p>
+          People often discover them through GitHub skills searches, agent skills GitHub lists,
+          official vendor directories, and collections such as skills.sh. That discovery layer is a
+          big part of how AI agent skills spread in practice.
+        </p>
+
+        <h2>Skills vs prompts</h2>
+        <p>
+          A prompt asks for work in the current conversation. A skill packages a reusable way of
+          doing that work. Prompts are one-off instructions. Skills are reusable operating logic.
+        </p>
+        <p>
+          You can still trigger a skill with a prompt, of course. The difference is that the prompt
+          starts the task, while the skill shapes how the task gets done.
+        </p>
+
+        <h2>How Skillscout helps</h2>
+        <p>
+          As skills become more common, discovery becomes the harder problem. A useful workflow may
+          already exist, but it still needs to be found at the right moment. That is especially true
+          for vendor skills, because the right skill often depends on the exact product page a person
+          is visiting.
+        </p>
+        <p>
+          Skillscout helps by reading the current site, matching that context to relevant skill
+          catalogs, and surfacing the skills that fit the page. On a product site, it can point you
+          toward official product skills. On a broader workflow page, it can surface domain
+          knowledge skills such as SEO, writing, security, or research guidance.
+        </p>
+        <p>
+          That shortens the path from browsing to action. Instead of searching multiple directories
+          manually, the relevant skill appears closer to the work itself.
+        </p>
+
+      </article>
+    </main>
+  </body>
+</html>

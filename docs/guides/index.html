@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guides | Skillscout</title>
+    <meta
+      name="description"
+      content="Guides about AI and agentic skills, including practical explainers for builders working with reusable agent workflows."
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://skillscout.sh/guides/" />
+    <meta property="og:title" content="Guides | Skillscout" />
+    <meta
+      property="og:description"
+      content="Guides about AI and agentic skills, including practical explainers for builders working with reusable agent workflows."
+    />
+    <meta property="og:site_name" content="Skillscout" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://skillscout.sh/guides/" />
+    <meta property="og:image" content="https://skillscout.sh/og/skillscout.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Guides | Skillscout" />
+    <meta
+      name="twitter:description"
+      content="Guides about AI and agentic skills, including practical explainers for builders working with reusable agent workflows."
+    />
+    <meta name="twitter:image" content="https://skillscout.sh/og/skillscout.png" />
+    <link rel="icon" href="../assets/skillscout-mark-48.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f6f6f3;
+        --panel: #ffffff;
+        --border: #e4e4df;
+        --text: #111111;
+        --text-muted: #5f5f5f;
+        --shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.04);
+        --shadow-md: 0 8px 24px rgba(17, 17, 17, 0.06);
+        --radius-lg: 18px;
+        --radius-xl: 24px;
+        --max: 980px;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      a { color: inherit; }
+      .container {
+        width: min(calc(100% - 40px), var(--max));
+        margin: 0 auto;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 76px;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 18px;
+      }
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        display: grid;
+        place-items: center;
+        box-shadow: var(--shadow-sm);
+      }
+      .brand-mark img {
+        width: 18px;
+        height: 18px;
+      }
+      .nav-links {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .nav-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .nav-links a:hover { color: var(--text); }
+      .hero {
+        padding: 48px 0 28px;
+      }
+      .eyebrow {
+        margin: 0 0 14px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      h1 {
+        margin: 0 0 16px;
+        font-size: clamp(42px, 7vw, 72px);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+      }
+      .lead {
+        max-width: 44rem;
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.6;
+        color: var(--text-muted);
+      }
+      .list {
+        display: grid;
+        gap: 16px;
+        padding: 20px 0 64px;
+      }
+      .article-card {
+        display: block;
+        padding: 24px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-xl);
+        background: var(--panel);
+        box-shadow: var(--shadow-md);
+        text-decoration: none;
+      }
+      .article-card h2 {
+        margin: 0 0 10px;
+        font-size: clamp(28px, 4vw, 40px);
+        line-height: 1.04;
+        letter-spacing: -0.03em;
+      }
+      .article-card p {
+        margin: 0 0 14px;
+        font-size: 18px;
+        line-height: 1.6;
+        color: var(--text-muted);
+      }
+      .meta {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+      @media (max-width: 720px) {
+        .nav {
+          min-height: auto;
+          padding: 16px 0;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container nav">
+      <a class="brand" href="https://skillscout.sh/">
+        <span class="brand-mark"><img src="../assets/skillscout-mark-48.png" alt="Skillscout logo" /></span>
+        <span>Skillscout</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="https://skillscout.sh/">Home</a>
+        <a href="https://skillscout.sh/official/">Official skills</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <p class="eyebrow">Guides</p>
+        <h1>Articles about AI and agentic skills</h1>
+        <p class="lead">
+          Practical guides for builders working with reusable AI agent workflows, skills,
+          and skills-compatible tools.
+        </p>
+      </section>
+
+      <section class="list" aria-label="Guide articles">
+        <a class="article-card" href="/guides/what-are-ai-agent-skills/">
+          <h2>What are AI agent skills?</h2>
+          <p>
+            Learn what AI agent skills are, how they work, what goes inside a
+            <code>SKILL.md</code> folder, and why reusable workflows matter.
+          </p>
+          <div class="meta">Guide 01 · 6 min read</div>
+        </a>
+      </section>
+    </main>
+  </body>
+</html>
