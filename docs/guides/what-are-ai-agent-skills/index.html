@@ -191,6 +191,16 @@
         font-size: 16px;
         line-height: 1.68;
       }
+      article a:not(.github-embed) {
+        color: var(--text);
+        font-weight: 500;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.14em;
+      }
+      article a:not(.github-embed):hover {
+        color: var(--text);
+      }
       p {
         margin: 0 0 16px;
       }
@@ -246,6 +256,17 @@
         font-size: 14px;
         font-weight: 700;
         color: var(--text);
+      }
+      .github-embed-repo-row {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .github-embed-icon {
+        width: 16px;
+        height: 16px;
+        color: var(--text);
+        flex: 0 0 auto;
       }
       .github-embed-badge {
         font-size: 11px;
@@ -454,7 +475,12 @@
         <div class="github-embed-grid">
           <a class="github-embed" href="https://github.com/juliusbrussee/caveman?utm_source=skillscout&utm_medium=guide&utm_campaign=what-are-ai-agent-skills" target="_blank" rel="noopener noreferrer">
             <div class="github-embed-top">
-              <span class="github-embed-repo">juliusbrussee / caveman</span>
+              <span class="github-embed-repo-row">
+                <svg class="github-embed-icon" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor">
+                  <path d="M8 0C3.58 0 0 3.67 0 8.2c0 3.63 2.29 6.7 5.47 7.78.4.08.55-.18.55-.39 0-.19-.01-.83-.01-1.5-2.01.38-2.53-.5-2.69-.95-.09-.24-.48-.95-.82-1.14-.28-.16-.68-.55-.01-.56.63-.01 1.08.59 1.23.84.72 1.24 1.87.89 2.33.68.07-.53.28-.89.5-1.09-1.78-.21-3.64-.92-3.64-4.08 0-.9.31-1.64.82-2.22-.08-.21-.36-1.05.08-2.19 0 0 .67-.22 2.2.85.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.07 2.2-.85 2.2-.85.44 1.14.16 1.98.08 2.19.51.58.82 1.31.82 2.22 0 3.17-1.87 3.87-3.65 4.08.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.47.55.39A8.22 8.22 0 0 0 16 8.2C16 3.67 12.42 0 8 0Z"/>
+                </svg>
+                <span class="github-embed-repo">juliusbrussee / caveman</span>
+              </span>
               <span class="github-embed-badge">GitHub skill</span>
             </div>
             <p>
@@ -466,7 +492,12 @@
 
           <a class="github-embed" href="https://github.com/wjgoarxiv/autoresearch-skill?utm_source=skillscout&utm_medium=guide&utm_campaign=what-are-ai-agent-skills" target="_blank" rel="noopener noreferrer">
             <div class="github-embed-top">
-              <span class="github-embed-repo">wjgoarxiv / autoresearch-skill</span>
+              <span class="github-embed-repo-row">
+                <svg class="github-embed-icon" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor">
+                  <path d="M8 0C3.58 0 0 3.67 0 8.2c0 3.63 2.29 6.7 5.47 7.78.4.08.55-.18.55-.39 0-.19-.01-.83-.01-1.5-2.01.38-2.53-.5-2.69-.95-.09-.24-.48-.95-.82-1.14-.28-.16-.68-.55-.01-.56.63-.01 1.08.59 1.23.84.72 1.24 1.87.89 2.33.68.07-.53.28-.89.5-1.09-1.78-.21-3.64-.92-3.64-4.08 0-.9.31-1.64.82-2.22-.08-.21-.36-1.05.08-2.19 0 0 .67-.22 2.2.85.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.07 2.2-.85 2.2-.85.44 1.14.16 1.98.08 2.19.51.58.82 1.31.82 2.22 0 3.17-1.87 3.87-3.65 4.08.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.47.55.39A8.22 8.22 0 0 0 16 8.2C16 3.67 12.42 0 8 0Z"/>
+                </svg>
+                <span class="github-embed-repo">wjgoarxiv / autoresearch-skill</span>
+              </span>
               <span class="github-embed-badge">GitHub skill</span>
             </div>
             <p>
@@ -538,6 +569,24 @@
           A skill such as <code>skill-vetter</code> helps with that review. It checks the source,
           scans for red flags, and looks at the permissions a skill would need before installation.
         </p>
+        <div class="github-embed-grid">
+          <a class="github-embed" href="https://github.com/firecrawl/openclaw/tree/HEAD/skills/skill-vetter?utm_source=skillscout&utm_medium=guide&utm_campaign=what-are-ai-agent-skills" target="_blank" rel="noopener noreferrer">
+            <div class="github-embed-top">
+              <span class="github-embed-repo-row">
+                <svg class="github-embed-icon" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor">
+                  <path d="M8 0C3.58 0 0 3.67 0 8.2c0 3.63 2.29 6.7 5.47 7.78.4.08.55-.18.55-.39 0-.19-.01-.83-.01-1.5-2.01.38-2.53-.5-2.69-.95-.09-.24-.48-.95-.82-1.14-.28-.16-.68-.55-.01-.56.63-.01 1.08.59 1.23.84.72 1.24 1.87.89 2.33.68.07-.53.28-.89.5-1.09-1.78-.21-3.64-.92-3.64-4.08 0-.9.31-1.64.82-2.22-.08-.21-.36-1.05.08-2.19 0 0 .67-.22 2.2.85.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.07 2.2-.85 2.2-.85.44 1.14.16 1.98.08 2.19.51.58.82 1.31.82 2.22 0 3.17-1.87 3.87-3.65 4.08.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.47.55.39A8.22 8.22 0 0 0 16 8.2C16 3.67 12.42 0 8 0Z"/>
+                </svg>
+                <span class="github-embed-repo">firecrawl / openclaw / skill-vetter</span>
+              </span>
+              <span class="github-embed-badge">GitHub skill</span>
+            </div>
+            <p>
+              A security review skill for checking source, red flags, and permission scope before
+              installing another skill.
+            </p>
+            <div class="github-embed-meta">Example of a security-focused skill for safe skill installation.</div>
+          </a>
+        </div>
 
         <h2>How Skillscout helps</h2>
         <p>
@@ -547,10 +596,12 @@
           is visiting.
         </p>
         <p>
-          Skillscout helps by reading the current site, matching that context to relevant skill
-          catalogs, and surfacing the skills that fit the page. On a product site, it can point you
-          toward official product skills. On a broader workflow page, it can surface domain
-          knowledge skills such as SEO, writing, security, or research guidance.
+          The
+          <a href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=skillscout&utm_medium=guide&utm_campaign=what-are-ai-agent-skills">Skillscout Chrome extension</a>
+          helps by reading the current site, matching that context to relevant skill catalogs, and
+          surfacing the skills that fit the page. On a product site, it can point you toward
+          official product skills. On a broader workflow page, it can surface domain knowledge
+          skills such as SEO, writing, security, or research guidance.
         </p>
         <p>
           It is handy for quick search. The relevant skill appears closer to the work itself.
