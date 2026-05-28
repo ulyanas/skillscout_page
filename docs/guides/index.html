@@ -18,14 +18,20 @@
     <meta property="og:site_name" content="Skillscout" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://skillscout.sh/guides/" />
-    <meta property="og:image" content="https://skillscout.sh/og/skillscout.png" />
+    <meta
+      property="og:image"
+      content="https://skillscout.sh/assets/guides/agent-skills-hero.jpg"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Guides | Skillscout" />
     <meta
       name="twitter:description"
       content="Guides about AI and agentic skills, including practical explainers for builders working with reusable agent workflows."
     />
-    <meta name="twitter:image" content="https://skillscout.sh/og/skillscout.png" />
+    <meta
+      name="twitter:image"
+      content="https://skillscout.sh/assets/guides/agent-skills-hero.jpg"
+    />
     <link rel="icon" href="../assets/skillscout-mark-48.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -131,13 +137,33 @@
         padding: 20px 0 64px;
       }
       .article-card {
-        display: block;
+        display: grid;
+        grid-template-columns: 220px minmax(0, 1fr);
+        gap: 22px;
+        align-items: start;
         padding: 24px;
         border: 1px solid var(--border);
         border-radius: var(--radius-xl);
         background: var(--panel);
         box-shadow: var(--shadow-md);
         text-decoration: none;
+      }
+      .article-card-image {
+        margin: 0;
+        overflow: hidden;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: #ecece7;
+      }
+      .article-card-image img {
+        display: block;
+        width: 100%;
+        height: 148px;
+        object-fit: cover;
+        object-position: center;
+      }
+      .article-card-copy {
+        min-width: 0;
       }
       .article-card h2 {
         margin: 0 0 10px;
@@ -162,6 +188,13 @@
           padding: 16px 0;
           flex-direction: column;
           align-items: flex-start;
+        }
+        .article-card {
+          grid-template-columns: 1fr;
+          gap: 18px;
+        }
+        .article-card-image img {
+          height: 180px;
         }
       }
     </style>
@@ -190,12 +223,20 @@
 
       <section class="list" aria-label="Guide articles">
         <a class="article-card" href="/guides/what-are-ai-agent-skills/">
-          <h2>What are AI agent skills?</h2>
-          <p>
-            Learn what AI agent skills are, how they work, what goes inside a
-            <code>SKILL.md</code> folder, and why reusable workflows matter.
-          </p>
-          <div class="meta">6 min read</div>
+          <div class="article-card-image">
+            <img
+              src="../assets/guides/agent-skills-hero.jpg"
+              alt="Black-and-white illustration of AI agents in suits with radiating light beams."
+            />
+          </div>
+          <div class="article-card-copy">
+            <h2>What are AI agent skills?</h2>
+            <p>
+              Learn what AI agent skills are, how they work, what goes inside a
+              <code>SKILL.md</code> folder, and why reusable workflows matter.
+            </p>
+            <div class="meta">6 min read</div>
+          </div>
         </a>
       </section>
     </main>
