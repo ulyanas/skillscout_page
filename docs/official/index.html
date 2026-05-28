@@ -41,22 +41,467 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "@id": "https://skillscout.sh/official/",
-  "name": "Official AI Agent Skills Directory",
-  "description": "A directory of verified AI agent skills from official vendors including Anthropic, GitHub, Figma, Stripe, and 80+ more.",
-  "url": "https://skillscout.sh/official/",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "Skillscout",
-    "url": "https://skillscout.sh/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "@id": "https://skillscout.sh/#organization",
-    "name": "Skillscout",
-    "url": "https://skillscout.sh/"
-  }
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://skillscout.sh/official/",
+      "name": "Official AI Agent Skills Directory",
+      "description": "A directory of verified AI agent skills from official vendors including Anthropic, GitHub, Figma, Stripe, and 80+ more.",
+      "url": "https://skillscout.sh/official/",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Skillscout",
+        "url": "https://skillscout.sh/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://skillscout.sh/#organization",
+        "name": "Skillscout",
+        "url": "https://skillscout.sh/"
+      },
+      "mainEntity": {
+        "@id": "https://skillscout.sh/official/#itemlist"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://skillscout.sh/official/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://skillscout.sh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Official Skills",
+          "item": "https://skillscout.sh/official/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://skillscout.sh/official/#itemlist",
+      "name": "Top official AI agent skills owners in Skillscout",
+      "url": "https://skillscout.sh/official/",
+      "numberOfItems": 24,
+      "itemListOrder": "https://schema.org/ItemListOrderDescending",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://skillscout.sh/official/#owner-microsoft",
+          "name": "microsoft"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://skillscout.sh/official/#owner-vercel-labs",
+          "name": "vercel-labs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://skillscout.sh/official/#owner-github",
+          "name": "github"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://skillscout.sh/official/#owner-anthropics",
+          "name": "Anthropic"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://skillscout.sh/official/#owner-firebase",
+          "name": "firebase"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://skillscout.sh/official/#owner-firecrawl",
+          "name": "firecrawl"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://skillscout.sh/official/#owner-remotion-dev",
+          "name": "remotion-dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://skillscout.sh/official/#owner-flutter",
+          "name": "flutter"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "url": "https://skillscout.sh/official/#owner-expo",
+          "name": "expo"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "url": "https://skillscout.sh/official/#owner-google-labs-code",
+          "name": "google-labs-code"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "url": "https://skillscout.sh/official/#owner-supabase",
+          "name": "supabase"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "url": "https://skillscout.sh/official/#owner-better-auth",
+          "name": "better-auth"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "url": "https://skillscout.sh/official/#owner-vercel",
+          "name": "vercel"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "url": "https://skillscout.sh/official/#owner-langchain-ai",
+          "name": "langchain-ai"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "url": "https://skillscout.sh/official/#owner-cloudflare",
+          "name": "cloudflare"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "url": "https://skillscout.sh/official/#owner-tavily-ai",
+          "name": "tavily-ai"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "url": "https://skillscout.sh/official/#owner-getsentry",
+          "name": "Sentry"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "url": "https://skillscout.sh/official/#owner-clerk",
+          "name": "clerk"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "url": "https://skillscout.sh/official/#owner-browser-use",
+          "name": "browser-use"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "url": "https://skillscout.sh/official/#owner-openai",
+          "name": "OpenAI"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "url": "https://skillscout.sh/official/#owner-shopify",
+          "name": "shopify"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "url": "https://skillscout.sh/official/#owner-parallel-web",
+          "name": "parallel-web"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "url": "https://skillscout.sh/official/#owner-apify",
+          "name": "apify"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "url": "https://skillscout.sh/official/#owner-prisma",
+          "name": "prisma"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-microsoft",
+      "name": "microsoft",
+      "url": "https://www.skills.sh/official#microsoft",
+      "description": "Official skills owner in the Skillscout directory with 1115 skills across 51 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#microsoft",
+        "https://mcpservers.org/agent-skills/author/microsoft"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-vercel-labs",
+      "name": "vercel-labs",
+      "url": "https://www.skills.sh/official#vercel-labs",
+      "description": "Official skills owner in the Skillscout directory with 203 skills across 43 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#vercel-labs"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-github",
+      "name": "github",
+      "url": "https://www.skills.sh/official#github",
+      "description": "Official skills owner in the Skillscout directory with 565 skills across 8 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#github",
+        "https://mcpservers.org/agent-skills/author/github"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-anthropics",
+      "name": "Anthropic",
+      "url": "https://www.skills.sh/official#anthropics",
+      "description": "Official skills owner in the Skillscout directory with 719 skills across 18 repos.",
+      "sameAs": [
+        "https://anthropic.com",
+        "https://www.skills.sh/official#anthropics",
+        "https://mcpservers.org/agent-skills/author/anthropic",
+        "https://github.com/anthropics"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-firebase",
+      "name": "firebase",
+      "url": "https://www.skills.sh/official#firebase",
+      "description": "Official skills owner in the Skillscout directory with 30 skills across 4 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#firebase",
+        "https://mcpservers.org/agent-skills/author/firebase"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-firecrawl",
+      "name": "firecrawl",
+      "url": "https://www.skills.sh/official#firecrawl",
+      "description": "Official skills owner in the Skillscout directory with 287 skills across 14 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#firecrawl",
+        "https://mcpservers.org/agent-skills/author/firecrawl"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-remotion-dev",
+      "name": "remotion-dev",
+      "url": "https://www.skills.sh/official#remotion-dev",
+      "description": "Official skills owner in the Skillscout directory with 19 skills across 4 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#remotion-dev",
+        "https://mcpservers.org/agent-skills/author/remotion-dev"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-flutter",
+      "name": "flutter",
+      "url": "https://www.skills.sh/official#flutter",
+      "description": "Official skills owner in the Skillscout directory with 43 skills across 4 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#flutter",
+        "https://mcpservers.org/agent-skills/author/flutter"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-expo",
+      "name": "expo",
+      "url": "https://www.skills.sh/official#expo",
+      "description": "Official skills owner in the Skillscout directory with 18 skills across 2 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#expo",
+        "https://mcpservers.org/agent-skills/author/expo"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-google-labs-code",
+      "name": "google-labs-code",
+      "url": "https://www.skills.sh/official#google-labs-code",
+      "description": "Official skills owner in the Skillscout directory with 27 skills across 4 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#google-labs-code",
+        "https://mcpservers.org/agent-skills/author/google-labs-code"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-supabase",
+      "name": "supabase",
+      "url": "https://www.skills.sh/official#supabase",
+      "description": "Official skills owner in the Skillscout directory with 15 skills across 3 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#supabase",
+        "https://mcpservers.org/agent-skills/author/supabase"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-better-auth",
+      "name": "better-auth",
+      "url": "https://www.skills.sh/official#better-auth",
+      "description": "Official skills owner in the Skillscout directory with 8 skills across 3 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#better-auth",
+        "https://mcpservers.org/agent-skills/author/better-auth"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-vercel",
+      "name": "vercel",
+      "url": "https://www.skills.sh/official#vercel",
+      "description": "Official skills owner in the Skillscout directory with 109 skills across 23 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#vercel",
+        "https://mcpservers.org/agent-skills/author/vercel"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-langchain-ai",
+      "name": "langchain-ai",
+      "url": "https://www.skills.sh/official#langchain-ai",
+      "description": "Official skills owner in the Skillscout directory with 74 skills across 6 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#langchain-ai",
+        "https://mcpservers.org/agent-skills/author/langchain-ai"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-cloudflare",
+      "name": "cloudflare",
+      "url": "https://www.skills.sh/official#cloudflare",
+      "description": "Official skills owner in the Skillscout directory with 125 skills across 17 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#cloudflare",
+        "https://mcpservers.org/agent-skills/author/cloudflare"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-tavily-ai",
+      "name": "tavily-ai",
+      "url": "https://www.skills.sh/official#tavily-ai",
+      "description": "Official skills owner in the Skillscout directory with 16 skills across 2 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#tavily-ai",
+        "https://mcpservers.org/agent-skills/author/tavily-ai"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-getsentry",
+      "name": "Sentry",
+      "url": "https://www.skills.sh/official#getsentry",
+      "description": "Official skills owner in the Skillscout directory with 287 skills across 21 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#getsentry",
+        "https://mcpservers.org/agent-skills/author/sentry"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-clerk",
+      "name": "clerk",
+      "url": "https://www.skills.sh/official#clerk",
+      "description": "Official skills owner in the Skillscout directory with 23 skills across 2 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#clerk",
+        "https://mcpservers.org/agent-skills/author/clerk"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-browser-use",
+      "name": "browser-use",
+      "url": "https://www.skills.sh/official#browser-use",
+      "description": "Official skills owner in the Skillscout directory with 13 skills across 5 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#browser-use",
+        "https://mcpservers.org/agent-skills/author/browser-use"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-openai",
+      "name": "OpenAI",
+      "url": "https://www.skills.sh/official#openai",
+      "description": "Official skills owner in the Skillscout directory with 547 skills across 8 repos.",
+      "sameAs": [
+        "https://openai.com",
+        "https://www.skills.sh/official#openai",
+        "https://mcpservers.org/agent-skills/author/openai",
+        "https://github.com/openai"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-shopify",
+      "name": "shopify",
+      "url": "https://www.skills.sh/official#shopify",
+      "description": "Official skills owner in the Skillscout directory with 34 skills across 4 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#shopify",
+        "https://mcpservers.org/agent-skills/author/shopify"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-parallel-web",
+      "name": "parallel-web",
+      "url": "https://www.skills.sh/official#parallel-web",
+      "description": "Official skills owner in the Skillscout directory with 15 skills across 2 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#parallel-web"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-apify",
+      "name": "apify",
+      "url": "https://www.skills.sh/official#apify",
+      "description": "Official skills owner in the Skillscout directory with 21 skills across 5 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#apify",
+        "https://mcpservers.org/agent-skills/author/apify"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skillscout.sh/official/#owner-prisma",
+      "name": "prisma",
+      "url": "https://www.skills.sh/official#prisma",
+      "description": "Official skills owner in the Skillscout directory with 111 skills across 4 repos.",
+      "sameAs": [
+        "https://www.skills.sh/official#prisma",
+        "https://mcpservers.org/agent-skills/author/prisma"
+      ]
+    }
+  ]
 }
     </script>
 
