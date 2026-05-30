@@ -33,6 +33,7 @@ console.log(
 
 await enrichWithGitHubSkillTrees(directory);
 await enrichStarCounts(directory);
+refreshStats(directory);
 
 directory.enrichedAt = generatedAt;
 await fs.writeFile(DATA_PATH, `${JSON.stringify(directory, null, 2)}\n`);
@@ -278,4 +279,25 @@ function normalizeKey(value) {
     .replace(/&amp;/g, "and")
     .replace(/[^a-z0-9._/-]+/g, "-")
     .replace(/^-+|-+$/g, "");
+}
+
+function refreshStats(directory) {
+  directory.stats = {
+    owners: directory.officialOwners.length,
+    repos: directory.officialRepos.length,
+    skills: directory.officialSkills.length,
+    sourceOwners: countBySource(directory.officialOwners),
+    sourceRepos: countBySource(directory.officialRepos),
+    sourceSkills: countBySource(directory.officialSkills),
+  };
+}
+
+function countBySource(items) {
+  const counts = {};
+  for (const item of items) {
+    for (const source of item.sources || []) {
+      counts[source] = (counts[source] || 0) + 1;
+    }
+  }
+  return counts;
 }

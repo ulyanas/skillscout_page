@@ -771,58 +771,172 @@ function hashText(text) {
 }
 
 // ── Preserve github-discovery vendors ────────────────────────────────────────
-// Reads the existing JSON (if present) and merges back any owners/repos/skills
-// that originate from "github-discovery" so repeated scrapes don't wipe them.
+// Reads the existing JSON (if present) and carries forward discovered
+// owners/repos/skills across scheduled scrapes.
 
 async function mergeDiscoveredVendors(directory) {
   let existing;
   try {
     existing = JSON.parse(await fs.readFile(OUTPUT_PATH, "utf8"));
   } catch {
-    return; // no existing file yet — nothing to preserve
+    return;
   }
 
-  const scraped = {
-    owners: new Set(directory.officialOwners.map((o) => o.ownerKey)),
-    repos:  new Set(directory.officialRepos.map((r) => r.repoKey)),
-    skills: new Set(directory.officialSkills.map((s) => s.skillKey)),
-  };
+  const ownersByKey = new Map(directory.officialOwners.map((owner) => [owner.ownerKey, owner]));
+  const reposByKey = new Map(directory.officialRepos.map((repo) => [repo.repoKey, repo]));
+  const skillsByKey = new Map(directory.officialSkills.map((skill) => [skill.skillKey, skill]));
+  const existingOwnersByKey = new Map((existing.officialOwners || []).map((owner) => [owner.ownerKey, owner]));
 
-  let addedOwners = 0, addedRepos = 0, addedSkills = 0;
+  const touchedOwnerKeys = new Set();
+  const preservedRepoKeys = new Set();
+  let addedOwners = 0;
+  let mergedOwners = 0;
+  let addedRepos = 0;
+  let mergedRepos = 0;
+  let addedSkills = 0;
+  let mergedSkills = 0;
 
   for (const owner of existing.officialOwners || []) {
     if (!owner.sources?.includes("github-discovery")) continue;
-    if (scraped.owners.has(owner.ownerKey)) continue;
-    directory.officialOwners.push(owner);
-    scraped.owners.add(owner.ownerKey);
-    addedOwners++;
+    const current = ownersByKey.get(owner.ownerKey);
+    if (current) {
+      mergePreservedOwner(current, owner);
+      mergedOwners++;
+    } else {
+      directory.officialOwners.push(owner);
+      ownersByKey.set(owner.ownerKey, owner);
+      addedOwners++;
+    }
+    touchedOwnerKeys.add(owner.ownerKey);
   }
 
   for (const repo of existing.officialRepos || []) {
     if (!repo.sources?.includes("github-discovery")) continue;
-    if (scraped.repos.has(repo.repoKey)) continue;
-    directory.officialRepos.push(repo);
-    scraped.repos.add(repo.repoKey);
-    addedRepos++;
+    const current = reposByKey.get(repo.repoKey);
+    if (current) {
+      mergePreservedRepo(current, repo);
+      mergedRepos++;
+    } else {
+      directory.officialRepos.push(repo);
+      reposByKey.set(repo.repoKey, repo);
+      addedRepos++;
+    }
+    touchedOwnerKeys.add(repo.ownerKey);
+    preservedRepoKeys.add(repo.repoKey);
   }
 
   for (const skill of existing.officialSkills || []) {
-    // Preserve skills belonging to github-discovery owners
-    const owner = directory.officialOwners.find((o) => o.ownerKey === skill.ownerKey);
-    if (!owner?.sources?.includes("github-discovery")) continue;
-    if (scraped.skills.has(skill.skillKey)) continue;
-    directory.officialSkills.push(skill);
-    scraped.skills.add(skill.skillKey);
-    addedSkills++;
+    const existingOwner = existingOwnersByKey.get(skill.ownerKey);
+    const fromDiscoveredOwner = existingOwner?.sources?.includes("github-discovery");
+    const fromDiscoveredRepo = skill.repoKey && preservedRepoKeys.has(skill.repoKey);
+    if (!fromDiscoveredOwner && !fromDiscoveredRepo) continue;
+
+    const current = skillsByKey.get(skill.skillKey);
+    if (current) {
+      mergePreservedSkill(current, skill);
+      mergedSkills++;
+    } else {
+      directory.officialSkills.push(skill);
+      skillsByKey.set(skill.skillKey, skill);
+      addedSkills++;
+    }
+    touchedOwnerKeys.add(skill.ownerKey);
   }
 
-  if (addedOwners || addedRepos || addedSkills) {
+  if (addedOwners || mergedOwners || addedRepos || mergedRepos || addedSkills || mergedSkills) {
+    refreshTouchedOwnerCounts(directory, touchedOwnerKeys);
     directory.officialOwners.sort((a, b) => a.ownerKey.localeCompare(b.ownerKey));
     directory.officialRepos.sort((a, b) => a.repoKey.localeCompare(b.repoKey));
     directory.officialSkills.sort((a, b) => a.skillKey.localeCompare(b.skillKey));
-    directory.stats.owners = directory.officialOwners.length;
-    directory.stats.repos  = directory.officialRepos.length;
-    directory.stats.skills = directory.officialSkills.length;
-    console.log(`Preserved from github-discovery: ${addedOwners} owners, ${addedRepos} repos, ${addedSkills} skills`);
+    directory.stats = {
+      owners: directory.officialOwners.length,
+      repos: directory.officialRepos.length,
+      skills: directory.officialSkills.length,
+      sourceOwners: countBySource(directory.officialOwners),
+      sourceRepos: countBySource(directory.officialRepos),
+      sourceSkills: countBySource(directory.officialSkills)
+    };
+    console.log(
+      `Preserved from github-discovery: ${addedOwners} owners added, ${mergedOwners} merged; ` +
+        `${addedRepos} repos added, ${mergedRepos} merged; ${addedSkills} skills added, ${mergedSkills} merged`
+    );
   }
+}
+
+function mergePreservedOwner(current, preserved) {
+  for (const source of preserved.sources || []) addUnique(current.sources, source);
+  for (const url of preserved.sourceUrls || []) addUnique(current.sourceUrls, url);
+  for (const name of preserved.normalizedNames || []) addUnique(current.normalizedNames, name);
+  for (const key of preserved.sourceOwnerKeys || []) addUnique(current.sourceOwnerKeys, key);
+  for (const host of preserved.websiteHosts || []) addUnique(current.websiteHosts, host);
+  if (!current.website && preserved.website) current.website = preserved.website;
+  current.displayName = chooseDisplayName(current.displayName, preserved.displayName || current.displayName);
+  current.reposCount = Math.max(current.reposCount || 0, preserved.reposCount || 0);
+  current.skillsCount = Math.max(current.skillsCount || 0, preserved.skillsCount || 0);
+  current.installsCount = Math.max(current.installsCount || 0, preserved.installsCount || 0);
+  if (typeof preserved.starsCount === "number") {
+    current.starsCount = Math.max(current.starsCount || 0, preserved.starsCount);
+  }
+  current.confidence = current.sources?.length > 1 ? "high" : current.confidence || preserved.confidence || "medium";
+  current.firstSeenAt = earliestDate(current.firstSeenAt, preserved.firstSeenAt);
+  current.lastSeenAt = generatedAt;
+}
+
+function mergePreservedRepo(current, preserved) {
+  for (const source of preserved.sources || []) addUnique(current.sources, source);
+  for (const url of preserved.sourceUrls || []) addUnique(current.sourceUrls, url);
+  for (const key of preserved.sourceOwnerKeys || []) addUnique(current.sourceOwnerKeys, key);
+  current.displayName = chooseDisplayName(current.displayName, preserved.displayName || current.displayName);
+  current.skillsCount = Math.max(current.skillsCount || 0, preserved.skillsCount || 0);
+  current.installsCount = Math.max(current.installsCount || 0, preserved.installsCount || 0);
+  if (typeof preserved.starsCount === "number") {
+    current.starsCount = Math.max(current.starsCount || 0, preserved.starsCount);
+  }
+  if (preserved.canonicalRepoKey && !current.canonicalRepoKey) current.canonicalRepoKey = preserved.canonicalRepoKey;
+  current.confidence = current.sources?.includes("skills.sh") || current.sources?.includes("github-discovery")
+    ? "high"
+    : current.confidence || preserved.confidence || "medium";
+  current.firstSeenAt = earliestDate(current.firstSeenAt, preserved.firstSeenAt);
+  current.lastSeenAt = generatedAt;
+}
+
+function mergePreservedSkill(current, preserved) {
+  for (const source of preserved.sources || []) addUnique(current.sources, source);
+  for (const url of preserved.sourceUrls || []) addUnique(current.sourceUrls, url);
+  for (const key of preserved.sourceOwnerKeys || []) addUnique(current.sourceOwnerKeys, key);
+  if (!current.description && preserved.description) current.description = preserved.description;
+  if (!current.repoKey && preserved.repoKey) current.repoKey = preserved.repoKey;
+  current.displayName = chooseDisplayName(current.displayName, preserved.displayName || current.displayName);
+  current.installsCount = Math.max(current.installsCount || 0, preserved.installsCount || 0);
+  current.confidence = current.sources?.length > 1 || current.sources?.includes("skills.sh")
+    ? "high"
+    : current.confidence || preserved.confidence || "medium";
+  current.firstSeenAt = earliestDate(current.firstSeenAt, preserved.firstSeenAt);
+  current.lastSeenAt = generatedAt;
+}
+
+function refreshTouchedOwnerCounts(directory, ownerKeys) {
+  const repoCountByOwner = new Map();
+  for (const repo of directory.officialRepos) {
+    if (!ownerKeys.has(repo.ownerKey)) continue;
+    repoCountByOwner.set(repo.ownerKey, (repoCountByOwner.get(repo.ownerKey) || 0) + 1);
+  }
+
+  const skillCountByOwner = new Map();
+  for (const skill of directory.officialSkills) {
+    if (!ownerKeys.has(skill.ownerKey)) continue;
+    skillCountByOwner.set(skill.ownerKey, (skillCountByOwner.get(skill.ownerKey) || 0) + 1);
+  }
+
+  for (const owner of directory.officialOwners) {
+    if (!ownerKeys.has(owner.ownerKey)) continue;
+    owner.reposCount = repoCountByOwner.get(owner.ownerKey) || owner.reposCount || 0;
+    owner.skillsCount = skillCountByOwner.get(owner.ownerKey) || owner.skillsCount || 0;
+  }
+}
+
+function earliestDate(a, b) {
+  if (!a) return b || generatedAt;
+  if (!b) return a;
+  return Date.parse(a) <= Date.parse(b) ? a : b;
 }
