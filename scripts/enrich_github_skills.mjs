@@ -54,7 +54,7 @@ async function enrichWithGitHubSkillTrees(directory) {
 
   await mapWithConcurrency(repos, CONCURRENCY, async (repo) => {
     if (rateLimited) return;
-    const result = await fetchGitHubRepoSkillPaths(repo.repoKey);
+    const result = await fetchGitHubRepoSkillPaths(repo);
     if (result === "rate_limited") {
       rateLimited = true;
       console.warn("GitHub API rate limited — stopping early");
@@ -75,7 +75,9 @@ async function enrichWithGitHubSkillTrees(directory) {
   reconcileSkillsWithGitHub(directory);
 }
 
-async function fetchGitHubRepoSkillPaths(repoKey) {
+async function fetchGitHubRepoSkillPaths(repo) {
+  const repoKey = repo.repoKey;
+  const skillPathPrefixes = repo.skillPathPrefixes || repo.githubSkillPathPrefixes || [];
   const headers = {
     Accept: "application/vnd.github.v3+json",
     "User-Agent": "Skillscout official skills enricher",
@@ -97,6 +99,9 @@ async function fetchGitHubRepoSkillPaths(repoKey) {
     for (const item of data.tree || []) {
       if (item.type !== "blob") continue;
       if (!item.path.endsWith("/SKILL.md") && item.path !== "SKILL.md") continue;
+      if (skillPathPrefixes.length && !skillPathPrefixes.some((prefix) => item.path.startsWith(prefix))) {
+        continue;
+      }
 
       if (item.path === "SKILL.md") {
         skillPaths.push(normalizeKey(repoKey.split("/")[1]));
