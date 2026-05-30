@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Agent Skills Security Guide | Skillscout</title>
+    <meta name="description" content="Learn the main AI agent skills security risks, how builders can reduce them, and how to find official skills before installing." />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://skillscout.sh/guides/ai-agent-skills-security/" />
+    <meta property="og:title" content="AI Agent Skills Security Guide | Skillscout" />
+    <meta property="og:description" content="Learn the main AI agent skills security risks, how builders can reduce them, and how to find official skills before installing." />
+    <meta property="og:site_name" content="Skillscout" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://skillscout.sh/guides/ai-agent-skills-security/" />
+    <meta property="og:image" content="https://skillscout.sh/assets/guides/skills-security-hero.jpg" />
+    <meta property="og:image:alt" content="Illustration of a hooded AI agent holding a money bag, representing agent skills security risks." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI Agent Skills Security Guide | Skillscout" />
+    <meta name="twitter:description" content="Learn the main AI agent skills security risks, how builders can reduce them, and how to find official skills before installing." />
+    <meta name="twitter:image" content="https://skillscout.sh/assets/guides/skills-security-hero.jpg" />
+    <meta name="twitter:image:alt" content="Illustration of a hooded AI agent holding a money bag, representing agent skills security risks." />
+    <link rel="icon" href="../../assets/skillscout-mark-48.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://skillscout.sh/guides/ai-agent-skills-security/#article",
+      "headline": "What are the security risks of AI agent skills?",
+      "description": "Learn the main AI agent skills security risks, how builders can reduce them, and how to find official skills before installing.",
+      "author": {
+        "@type": "Organization",
+        "name": "Skillscout"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Skillscout",
+        "url": "https://skillscout.sh/"
+      },
+      "image": "https://skillscout.sh/assets/guides/skills-security-hero.jpg",
+      "datePublished": "2026-05-30",
+      "dateModified": "2026-05-30",
+      "mainEntityOfPage": "https://skillscout.sh/guides/ai-agent-skills-security/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://skillscout.sh/guides/ai-agent-skills-security/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://skillscout.sh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://skillscout.sh/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "What are the security risks of AI agent skills?",
+          "item": "https://skillscout.sh/guides/ai-agent-skills-security/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+    <style>
+      :root {
+        --bg: #f6f6f3;
+        --panel: #ffffff;
+        --border: #e4e4df;
+        --text: #111111;
+        --text-muted: #5f5f5f;
+        --shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.04);
+        --max: 760px;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      .container {
+        width: min(calc(100% - 40px), var(--max));
+        margin: 0 auto;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 76px;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 800;
+        font-size: 18px;
+      }
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        display: grid;
+        place-items: center;
+        box-shadow: var(--shadow-sm);
+      }
+      .brand-mark img {
+        width: 18px;
+        height: 18px;
+      }
+      .nav-links {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .nav-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .nav-links a:hover { color: var(--text); }
+      article { padding: 28px 0 72px; }
+      .eyebrow {
+        margin: 0 0 14px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(34px, 6vw, 56px);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+      }
+      .lead {
+        margin: 0 0 28px;
+        font-size: 19px;
+        line-height: 1.58;
+        color: var(--text-muted);
+      }
+      .meta {
+        margin: 0 0 32px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+      .hero-figure { margin: 0 0 32px; }
+      .hero-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-sm);
+        background: var(--panel);
+      }
+      h2 {
+        margin: 40px 0 14px;
+        font-size: 24px;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+      }
+      h3 {
+        margin: 28px 0 12px;
+        font-size: 18px;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+      }
+      p, li {
+        font-size: 16px;
+        line-height: 1.68;
+      }
+      article a {
+        color: var(--text);
+        font-weight: 500;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.14em;
+      }
+      p { margin: 0 0 16px; }
+      ul, ol {
+        margin: 0 0 20px;
+        padding-left: 22px;
+      }
+      code {
+        padding: 0.12em 0.38em;
+        border-radius: 8px;
+        background: #eeefec;
+        font-size: 0.9em;
+      }
+      .table-wrap {
+        overflow-x: auto;
+        margin: 18px 0 26px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 680px;
+      }
+      th, td {
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--border);
+        text-align: left;
+        vertical-align: top;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      th {
+        background: #f0f0eb;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      tr:last-child td { border-bottom: 0; }
+      @media (max-width: 720px) {
+        .nav {
+          min-height: auto;
+          padding: 16px 0;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <header class="container nav">
+      <a class="brand" href="https://skillscout.sh/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">
+        <span class="brand-mark"><img src="../../assets/skillscout-mark-48.png" alt="Skillscout logo" /></span>
+        <span>Skillscout</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="https://skillscout.sh/guides/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">Guides</a>
+        <a href="https://skillscout.sh/official/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">Official skills</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <article>
+        <p class="eyebrow">Guides</p>
+        <h1>What are the security risks of AI agent skills?</h1>
+        <p class="lead">AI agent skills make agent workflows reusable. They can also become a supply-chain risk.</p>
+        <p class="meta">Updated May 30, 2026</p>
+        <figure class="hero-figure">
+          <img src="../../assets/guides/skills-security-hero.jpg" alt="Illustration of a hooded AI agent holding a money bag, representing agent skills security risks." />
+        </figure>
+
+<p>A skill is usually more than a prompt. In the current ecosystem, skills can include a <code>SKILL.md</code> file, metadata, instructions, scripts, dependencies, references, and assets. <a href="https://docs.claude.com/en/docs/claude-code/skills?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">Claude skills</a> are organized folders with instructions, scripts, and resources. Codex skills follow the same general pattern: a required <code>SKILL.md</code> file plus optional bundled resources, loaded when the agent needs that capability.</p>
+<p>That format gives an agent repeatable context and workflow logic. It also means a skill can influence what the agent reads, writes, executes, downloads, and trusts. Review third-party skills with the same care you apply to software packages.</p>
+<h2>Why skills create a new security surface</h2>
+<p>AI agent skills sit between natural-language instructions and executable automation. That makes their risk profile different from a normal documentation snippet.</p>
+<p>A package manager usually installs code. A browser extension usually gets browser permissions. A CI action usually runs inside a workflow. A skill can combine all three patterns: instructions for the agent, files for context, scripts for execution, and tool access through the agent runtime.</p>
+<p>Snyk&#x27;s ToxicSkills research gives a public baseline. Snyk analyzed 3,984 skills from ClawHub and skills.sh and reported 76 confirmed malicious payloads, 534 skills with at least one critical issue, and 1,467 skills with at least one security flaw. See <a href="https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">Snyk&#x27;s ToxicSkills research</a> and <a href="https://labs.snyk.io/resources/agent-scan-skill-inspector/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">Snyk Skill Inspector</a>.</p>
+<p>A skill can solve the task and still be unsafe to install. Security review belongs in the workflow before the skill reaches an agent with access to files, credentials, tools, or production systems.</p>
+<h2>The main risks with AI agent skills</h2>
+<p>The most common risks fall into a few practical categories.</p>
+<div class="table-wrap">
+<table>
+<thead><tr>
+<th>Risk</th>
+<th>What it looks like</th>
+<th>Impact</th>
+</tr></thead><tbody>
+<tr>
+<td>Malicious payloads</td>
+<td>A skill ships a stealer, backdoor, reverse shell, miner, destructive command, or staged downloader</td>
+<td>The agent may run or recommend commands that compromise the machine or workspace</td>
+</tr>
+<tr>
+<td>Prompt injection inside the skill</td>
+<td><code>SKILL.md</code> tells the agent to ignore rules, hide behavior, change identity, or extract secrets</td>
+<td>The skill can manipulate the agent through the same instruction channel that gives skills their effect</td>
+</tr>
+<tr>
+<td>Indirect prompt injection</td>
+<td>The skill fetches web pages, docs, tickets, repos, or API responses that contain hostile instructions</td>
+<td>The agent may treat untrusted content as operational guidance</td>
+</tr>
+<tr>
+<td>Data exfiltration</td>
+<td>The skill reads <code>.env</code> files, SSH keys, browser profiles, cookies, wallet files, API tokens, or memory files</td>
+<td>Agent environments often have valuable local context and credentials</td>
+</tr>
+<tr>
+<td>Remote code execution</td>
+<td>The skill uses `curl</td>
+<td>bash<code>, </code>eval`, dynamic imports, install hooks, or mutable scripts from the web</td>
+<td>A harmless-looking skill can turn into arbitrary execution</td>
+</tr>
+<tr>
+<td>Brand impersonation</td>
+<td>A fake skill claims to come from OpenAI, Anthropic, GitHub, Vercel, Stripe, or another vendor</td>
+<td>Builders may trust the name before verifying the publisher</td>
+</tr>
+<tr>
+<td>Over-permissioned behavior</td>
+<td>The skill asks for broad filesystem, shell, browser, MCP, cloud, repo, or wallet access</td>
+<td>Broad access raises the impact of every mistake or malicious instruction</td>
+</tr>
+<tr>
+<td>Update drift</td>
+<td>The skill is installed from a branch, mutable URL, or marketplace package that changes later</td>
+<td>A safe first install can become a risky update</td>
+</tr>
+<tr>
+<td>Memory and policy poisoning</td>
+<td>The skill edits <code>AGENTS.md</code>, <code>CLAUDE.md</code>, shell profiles, Git hooks, or agent memory files</td>
+<td>The skill can change future agent behavior after the original task ends</td>
+</tr>
+<tr>
+<td>Tool abuse</td>
+<td>The skill routes the agent toward MCP tools, browser automation, messaging, PR creation, deployment, payments, or signing flows</td>
+<td>The agent can move from local work into external systems</td>
+</tr>
+</tbody></table></div>
+<p>Skills that combine private data access, network access, and command execution need deeper review. That combination gives the skill enough reach to read sensitive data, transmit it, and change the local environment.</p>
+<h2>Official skills reduce publisher-identity risk</h2>
+<p>Official skills reduce publisher-identity risk. A skill from a vendor-owned repository gives you a clearer source to verify than a marketplace listing with an unknown publisher.</p>
+<p>That trust still needs evidence. Check the source, version, permissions, dependencies, scripts, and update path. Official ownership tells you who published the skill. Runtime access still needs its own review.</p>
+<p>Good official-skill signals include:</p>
+<div class="table-wrap">
+<table>
+<thead><tr>
+<th>Check</th>
+<th>What to verify</th>
+</tr></thead><tbody>
+<tr>
+<td>Source ownership</td>
+<td>The repo belongs to the vendor&#x27;s official GitHub organization</td>
+</tr>
+<tr>
+<td>Cross-linking</td>
+<td>Vendor docs link to the repo, and the repo links back to vendor docs</td>
+</tr>
+<tr>
+<td>Marketplace listing</td>
+<td>The marketplace points to the same repo and publisher</td>
+</tr>
+<tr>
+<td>Versioning</td>
+<td>The install command pins a tag, release, commit, content hash, or signed artifact</td>
+</tr>
+<tr>
+<td>Security metadata</td>
+<td>The listing includes a scan result, Skill Card, permission manifest, or signature</td>
+</tr>
+<tr>
+<td>Runtime scope</td>
+<td>The requested permissions match the declared task</td>
+</tr>
+<tr>
+<td>Update flow</td>
+<td>Updates pass through CI, scanner gates, and release review</td>
+</tr>
+</tbody></table></div>
+<p>For discovery, start with vendor docs and official directories:</p>
+<ul>
+<li><a href="https://developers.openai.com/codex/skills?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">OpenAI Codex skills documentation</a></li>
+<li><a href="https://github.com/anthropics/skills?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">Anthropic skills repository</a></li>
+<li><a href="https://github.com/NVIDIA/skills?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">NVIDIA skills repository</a></li>
+<li><a href="https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">GitHub Copilot agent skills documentation</a></li>
+<li><a href="https://skillscout.sh/official/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">Skillscout Official skills directory</a></li>
+<li><a href="https://skills.sh/official?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">skills.sh Official directory</a></li>
+</ul>
+<p>Skillscout belongs in the same discovery step as vendor docs and official directories. While you browse a product, docs site, or SaaS tool, the extension can surface relevant skills and prioritize official sources. The <a href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">Skillscout Chrome extension</a> and <a href="https://skillscout.sh/official/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">Skillscout Official directory</a> help when the official source is spread across vendor repos, marketplaces, and ecosystem catalogs.</p>
+<h2>How to prevent skill security risks</h2>
+<p>Use several small checks before installation: source verification, scanner results, runtime containment, and update review. A scanner badge is one signal in that chain.</p>
+<h3>1. Verify the source before reading the install command</h3>
+<p>Start with the publisher. Treat the install command as untrusted until the source is verified.</p>
+<p>Check the GitHub organization, vendor docs, marketplace publisher, release history, and issue activity. For official skills, verify that the vendor&#x27;s documentation and repository point to the same artifact. For community skills, look for clear ownership, review history, and transparent source code.</p>
+<h3>2. Pin the version</h3>
+<p>Install from a tag, release, commit, content hash, or signed artifact. Branch names and mutable URLs make review harder because the installed content can change after approval.</p>
+<p>NVIDIA&#x27;s trust pipeline shows the components of a reviewed release: scan the skill, publish a Skill Card, sign the artifact, and verify the signature before install. See <a href="https://docs.nvidia.com/skills/agent-skill-trust-pipeline?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">NVIDIA&#x27;s Agent Skill Trust Pipeline</a>, <a href="https://docs.nvidia.com/skills/scanning-agent-skills?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">SkillSpector</a>, and <a href="https://docs.nvidia.com/skills/signing-agent-skills?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">NVIDIA skill signing</a>.</p>
+<h3>3. Read the skill like code</h3>
+<p>Open <code>SKILL.md</code>. Then inspect scripts, dependency manifests, referenced files, install hooks, remote downloads, and generated configuration.</p>
+<p>Look for instructions that ask the agent to hide behavior, override policies, reveal secrets, access sensitive paths, install packages, download scripts, modify memory files, or run broad shell commands. Also compare the description with the behavior. A skill called &quot;blog helper&quot; should stay limited to drafts, outlines, and content files.</p>
+<h3>4. Scan with more than one layer</h3>
+<p>Use at least one skill-aware scanner, one supply-chain scanner, and one secrets scanner.</p>
+<p>Current ecosystem options include:</p>
+<ul>
+<li><a href="https://github.com/snyk/agent-scan?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">Snyk Agent Scan</a> and Snyk Skill Inspector for skills, MCP servers, prompt injection, secrets, malware payloads, and insecure configs</li>
+<li><a href="https://docs.nvidia.com/skills/scanning-agent-skills?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">NVIDIA SkillSpector</a> for skill-specific static and semantic review</li>
+<li><a href="https://socket.dev/alerts?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">Socket</a> for supply-chain behavior and package risk signals</li>
+<li><a href="https://github.com/openclaw/skill-vetter?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">Skill Vetter</a> for local multi-scanner review before installing a skill into an agent environment</li>
+<li><a href="https://github.com/gitleaks/gitleaks?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">Gitleaks</a> or <a href="https://github.com/trufflesecurity/trufflehog?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">TruffleHog</a> for secrets</li>
+<li><a href="https://semgrep.dev/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">Semgrep</a> or <a href="https://bandit.readthedocs.io/en/latest/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">Bandit</a> for scripts</li>
+<li><a href="https://snyk.io/product/open-source-security-management/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">Snyk SCA</a> or <a href="https://osv.dev/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">OSV</a> for dependencies</li>
+</ul>
+<p>A practical stack for a small AI builder is: Snyk Agent Scan or NVIDIA SkillSpector, Skill Vetter for a local review pass, Gitleaks or TruffleHog for secrets, Semgrep or Bandit for scripts, and Snyk SCA or OSV for dependencies.</p>
+<h3>5. Install into a constrained environment first</h3>
+<p>Use a canary workspace before the real workspace. Give the skill fake secrets, fake credentials, and disposable files. Turn on logs. Watch file writes, shell commands, network calls, MCP tool calls, browser automation, and generated outputs.</p>
+<p>For local development, prefer workspace-only access, denied sensitive paths, temporary credentials, and an egress allowlist. For production workflows, use an isolated runner and explicit human approvals.</p>
+<h3>6. Require approval for external or irreversible actions</h3>
+<p>Skills that send messages, open PRs, deploy, delete files, trade, purchase, bridge assets, use wallets, touch customer data, or change production systems need approval gates.</p>
+<p>Treat wallet files, seed phrases, private keys, deployer keys, exchange API keys, CI/CD credentials, and production signing flows as high-risk by default.</p>
+<p>Payments add another security layer because an agent can move funds. Agent-payment infrastructure is already taking shape: <a href="https://docs.cdp.coinbase.com/x402/welcome?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">x402</a> uses HTTP 402 to let clients and agents pay for access with stablecoins; <a href="https://eips.ethereum.org/EIPS/eip-8004?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">ERC-8004</a> defines a trustless framework for agent discovery, identity, and reputation; and <a href="https://www.mastercard.com/us/en/news-and-trends/press/2025/april/mastercard-unveils-agent-pay-pioneering-agentic-payments-technology-to-power-commerce-in-the-age-of-ai.html?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=ai-agent-skills-security">Mastercard Agent Pay</a> is a payment program for agentic commerce.</p>
+<p>Skills that touch these flows need explicit limits: maximum spend, approved merchants or contracts, allowed assets, allowed chains or payment rails, human confirmation for transfers, separate signing keys, and logs for every payment attempt. A skill can prepare a payment request. Moving funds needs a separate approval boundary.</p>
+<h3>7. Re-scan updates</h3>
+<p>Review every update like a new install. Re-scan on version change, permission change, dependency change, new script, new external download, new MCP tool, or new runtime permission.</p>
+<p>Teams should keep an inventory with owner, source, version, install location, approval date, and next review date.</p>
+<h2>A practical workflow for AI builders</h2>
+<p>Use this workflow before installing a third-party skill:</p>
+<ol>
+<li>Discover the skill through vendor docs, Skillscout, skills.sh Official, or a vetted marketplace.</li>
+<li>Verify the publisher through the official GitHub org, vendor docs, and marketplace listing.</li>
+<li>Pin the artifact to a tag, release, commit, hash, or signature.</li>
+<li>Read <code>SKILL.md</code>, scripts, references, assets, dependencies, install hooks, and generated config.</li>
+<li>Document permissions across filesystem, shell, network, browser, MCP, cloud, wallet, messaging, and production access.</li>
+<li>Run multiple scanners: skill scanner, supply-chain scanner, secrets scanner, dependency scanner, and SAST where scripts exist.</li>
+<li>Install in a canary workspace with fake secrets and logs enabled.</li>
+<li>Move the skill into the main workspace after it behaves as expected.</li>
+<li>Monitor activation, commands, file diffs, network calls, MCP calls, approvals, and outputs.</li>
+<li>Revalidate the skill on every update.</li>
+</ol>
+<p>For teams, add two more steps: assign an owner and document a revocation path. Someone should know who approved the skill, why it exists, where it is installed, and how to remove it quickly.</p>
+<h2>How to build safer skills yourself</h2>
+<p>The same rules apply when you publish your own skills.</p>
+<p>Use a narrow scope. Declare inputs, outputs, allowed paths, allowed domains, required tools, and required permissions. Use scripts for deterministic execution, and keep the rest in reviewed instructions. Pin dependencies. Bundle reviewed references. Add test cases for normal use, malformed input, prompt injection, poisoned remote content, and empty inputs.</p>
+<p>For shared or official skills, publish a Skill Card. It should include owner, purpose, supported agents, tools, permissions, limitations, test results, scan results, and version. Sign releases where possible and publish from the canonical organization.</p>
+<p>This makes skills easier to trust, easier to review, and easier to revoke.</p>
+<p>Security starts before installation. A good first question is: &quot;Is there an official skill for this tool?&quot; After discovery, verification, scanning, sandboxing, and monitoring decide how the skill enters the workflow.</p>
+      </article>
+    </main>
+  </body>
+</html>
