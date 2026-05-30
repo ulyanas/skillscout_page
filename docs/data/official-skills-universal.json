@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-30T17:38:19.977Z",
+  "generatedAt": "2026-05-30T17:56:35.470Z",
   "sources": {
     "skills.sh": {
       "sourceId": "skills.sh",
@@ -2480,6 +2480,33 @@
       "firstSeenAt": "2026-05-30T08:22:13.816Z",
       "lastSeenAt": "2026-05-30T08:22:13.816Z",
       "starsCount": 10120
+    },
+    {
+      "ownerKey": "nvidia",
+      "displayName": "NVIDIA",
+      "normalizedNames": [
+        "nvidia"
+      ],
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "websiteHosts": [],
+      "sources": [
+        "github-discovery",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA",
+        "https://www.skills.sh/nvidia"
+      ],
+      "skillsCount": 121,
+      "reposCount": 1,
+      "installsCount": 9500,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z",
+      "website": "https://www.nvidia.com",
+      "starsCount": 658
     },
     {
       "ownerKey": "openai",
@@ -17297,6 +17324,154 @@
       "canonicalRepoKey": "nuxt/ui",
       "githubSkillPaths": [
         "skills/nuxt-ui"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "nvidia/skills",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoName": "skills",
+      "displayName": "NVIDIA/skills",
+      "sources": [
+        "github-discovery",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills",
+        "https://www.skills.sh/nvidia/skills"
+      ],
+      "skillsCount": 121,
+      "installsCount": 9500,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z",
+      "starsCount": 658,
+      "canonicalRepoKey": "NVIDIA/skills",
+      "githubSkillPaths": [
+        "plugins/nvidia-skills/skills/aiq-deploy",
+        "plugins/nvidia-skills/skills/aiq-research",
+        "plugins/nvidia-skills/skills/cuopt-user-rules",
+        "plugins/nvidia-skills/skills/dynamo-interconnect-check",
+        "plugins/nvidia-skills/skills/dynamo-router-starter",
+        "plugins/nvidia-skills/skills/nemoclaw-user-get-started",
+        "plugins/nvidia-skills/skills/omniverse-cad-to-simready",
+        "plugins/nvidia-skills/skills/omniverse-realtime-viewer",
+        "plugins/nvidia-skills/skills/omniverse-usd-performance-tuning",
+        "plugins/nvidia-skills/skills/physical-ai-infrastructure-setup-and-resilient-scaling",
+        "plugins/nvidia-skills/skills/physical-ai-neural-reconstruction",
+        "skills/accelerated-computing-cudf",
+        "skills/aiq-deploy",
+        "skills/aiq-research",
+        "skills/cudaq-guide",
+        "skills/cuopt-developer",
+        "skills/cuopt-install",
+        "skills/cuopt-numerical-optimization-api-c",
+        "skills/cuopt-numerical-optimization-api-cli",
+        "skills/cuopt-numerical-optimization-api-python",
+        "skills/cuopt-numerical-optimization-formulation",
+        "skills/cuopt-routing-api-python",
+        "skills/cuopt-routing-formulation",
+        "skills/cuopt-server-api-python",
+        "skills/cuopt-server-common",
+        "skills/cuopt-skill-evolution",
+        "skills/cuopt-user-rules",
+        "skills/cupynumeric-hdf5",
+        "skills/cupynumeric-install",
+        "skills/cupynumeric-migration-readiness",
+        "skills/cupynumeric-parallel-data-load",
+        "skills/dali-dynamic-mode",
+        "skills/deepstream-dev",
+        "skills/deepstream-import-vision-model",
+        "skills/digital-health-clinical-asr-build",
+        "skills/digital-health-clinical-asr-eval",
+        "skills/digital-health-clinical-asr-finetune",
+        "skills/digital-health-clinical-asr-setup",
+        "skills/dynamo-interconnect-check",
+        "skills/dynamo-recipe-runner",
+        "skills/dynamo-router-starter",
+        "skills/dynamo-troubleshoot",
+        "skills/earth2studio-data-fetch",
+        "skills/earth2studio-deterministic-forecast",
+        "skills/earth2studio-discover",
+        "skills/earth2studio-install",
+        "skills/mcore-create-issue",
+        "skills/mcore-linting-and-formatting",
+        "skills/mcore-run-on-slurm",
+        "skills/mcore-split-pr",
+        "skills/mcore-testing",
+        "skills/nemo-automodel-distributed-training",
+        "skills/nemo-automodel-launcher-config",
+        "skills/nemo-automodel-model-onboarding",
+        "skills/nemo-automodel-recipe-development",
+        "skills/nemo-data-designer-plugin",
+        "skills/nemo-evaluator-plugin",
+        "skills/nemo-mbridge-mlm-bridge-training",
+        "skills/nemo-mbridge-multi-node-slurm",
+        "skills/nemo-mbridge-perf-activation-recompute",
+        "skills/nemo-mbridge-perf-cpu-offloading",
+        "skills/nemo-mbridge-perf-cuda-graphs",
+        "skills/nemo-mbridge-perf-expert-parallel-overlap",
+        "skills/nemo-mbridge-perf-hierarchical-context-parallel",
+        "skills/nemo-mbridge-perf-megatron-fsdp",
+        "skills/nemo-mbridge-perf-memory-tuning",
+        "skills/nemo-mbridge-perf-moe-comm-overlap",
+        "skills/nemo-mbridge-perf-moe-dispatcher-selection",
+        "skills/nemo-mbridge-perf-moe-hardware-configs",
+        "skills/nemo-mbridge-perf-moe-long-context",
+        "skills/nemo-mbridge-perf-moe-optimization-workflow",
+        "skills/nemo-mbridge-perf-moe-vlm-training",
+        "skills/nemo-mbridge-perf-parallelism-strategies",
+        "skills/nemo-mbridge-perf-sequence-packing",
+        "skills/nemo-mbridge-perf-tp-dp-comm-overlap",
+        "skills/nemo-mbridge-recipe-recommender",
+        "skills/nemo-mbridge-resiliency",
+        "skills/nemo-retriever",
+        "skills/nemo-rl/auto-research",
+        "skills/nemo-rl/brev-etiquette",
+        "skills/nemo-rl/docs",
+        "skills/nemo-rl/launch-nemo-rl",
+        "skills/nemo-rl/session-memory",
+        "skills/nemoclaw-user-agent-skills",
+        "skills/nemoclaw-user-configure-inference",
+        "skills/nemoclaw-user-configure-security",
+        "skills/nemoclaw-user-deploy-remote",
+        "skills/nemoclaw-user-get-started",
+        "skills/nemoclaw-user-manage-policy",
+        "skills/nemoclaw-user-manage-sandboxes",
+        "skills/nemoclaw-user-monitor-sandbox",
+        "skills/nemoclaw-user-overview",
+        "skills/nemoclaw-user-reference",
+        "skills/nemotron-customize",
+        "skills/nemotron-retrieval-recipes",
+        "skills/omniverse-cad-to-simready",
+        "skills/omniverse-realtime-viewer",
+        "skills/omniverse-usd-performance-tuning",
+        "skills/physical-ai-infrastructure-setup-and-resilient-scaling",
+        "skills/physical-ai-neural-reconstruction",
+        "skills/physicsnemo-discover",
+        "skills/rag-blueprint",
+        "skills/rag-eval",
+        "skills/rag-perf",
+        "skills/skill-card-generator",
+        "skills/tilegym-adding-cutile-kernel",
+        "skills/video-search-and-summarization/vss-ask-video",
+        "skills/video-search-and-summarization/vss-deploy-dense-captioning",
+        "skills/video-search-and-summarization/vss-deploy-detection-tracking-2d",
+        "skills/video-search-and-summarization/vss-deploy-detection-tracking-3d",
+        "skills/video-search-and-summarization/vss-deploy-profile",
+        "skills/video-search-and-summarization/vss-deploy-video-embedding",
+        "skills/video-search-and-summarization/vss-generate-video-calibration",
+        "skills/video-search-and-summarization/vss-generate-video-report",
+        "skills/video-search-and-summarization/vss-manage-alerts",
+        "skills/video-search-and-summarization/vss-manage-video-io-storage",
+        "skills/video-search-and-summarization/vss-query-analytics",
+        "skills/video-search-and-summarization/vss-search-archive",
+        "skills/video-search-and-summarization/vss-setup-behavior-analytics",
+        "skills/video-search-and-summarization/vss-setup-video-analytics-api",
+        "skills/video-search-and-summarization/vss-summarize-video"
       ],
       "truncated": false
     },
@@ -140183,6 +140358,2668 @@
       "lastSeenAt": "2026-05-30T08:22:22.991Z"
     },
     {
+      "skillKey": "nvidia/skills/plugins/nvidia-skills/skills/aiq-deploy",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "aiq-deploy",
+      "displayName": "aiq-deploy",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/plugins/nvidia-skills/skills/aiq-deploy",
+        "https://www.skills.sh/nvidia/skills/aiq-deploy"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/plugins/nvidia-skills/skills/aiq-research",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "aiq-research",
+      "displayName": "aiq-research",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/plugins/nvidia-skills/skills/aiq-research",
+        "https://www.skills.sh/nvidia/skills/aiq-research"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/plugins/nvidia-skills/skills/cuopt-user-rules",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cuopt-user-rules",
+      "displayName": "cuopt-user-rules",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/plugins/nvidia-skills/skills/cuopt-user-rules",
+        "https://www.skills.sh/nvidia/skills/cuopt-user-rules"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/plugins/nvidia-skills/skills/dynamo-interconnect-check",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "dynamo-interconnect-check",
+      "displayName": "dynamo-interconnect-check",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/plugins/nvidia-skills/skills/dynamo-interconnect-check",
+        "https://www.skills.sh/nvidia/skills/dynamo-interconnect-check"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/plugins/nvidia-skills/skills/dynamo-router-starter",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "dynamo-router-starter",
+      "displayName": "dynamo-router-starter",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/plugins/nvidia-skills/skills/dynamo-router-starter",
+        "https://www.skills.sh/nvidia/skills/dynamo-router-starter"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/plugins/nvidia-skills/skills/nemoclaw-user-get-started",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemoclaw-user-get-started",
+      "displayName": "nemoclaw-user-get-started",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/plugins/nvidia-skills/skills/nemoclaw-user-get-started",
+        "https://www.skills.sh/nvidia/skills/nemoclaw-user-get-started"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/plugins/nvidia-skills/skills/omniverse-cad-to-simready",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "omniverse-cad-to-simready",
+      "displayName": "omniverse-cad-to-simready",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/plugins/nvidia-skills/skills/omniverse-cad-to-simready",
+        "https://www.skills.sh/nvidia/skills/omniverse-cad-to-simready"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/plugins/nvidia-skills/skills/omniverse-realtime-viewer",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "omniverse-realtime-viewer",
+      "displayName": "omniverse-realtime-viewer",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/plugins/nvidia-skills/skills/omniverse-realtime-viewer",
+        "https://www.skills.sh/nvidia/skills/omniverse-realtime-viewer"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/plugins/nvidia-skills/skills/omniverse-usd-performance-tuning",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "omniverse-usd-performance-tuning",
+      "displayName": "omniverse-usd-performance-tuning",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/plugins/nvidia-skills/skills/omniverse-usd-performance-tuning",
+        "https://www.skills.sh/nvidia/skills/omniverse-usd-performance-tuning"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/plugins/nvidia-skills/skills/physical-ai-infrastructure-setup-and-resilient-scaling",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "physical-ai-infrastructure-setup-and-resilient-scaling",
+      "displayName": "physical-ai-infrastructure-setup-and-resilient-scaling",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/plugins/nvidia-skills/skills/physical-ai-infrastructure-setup-and-resilient-scaling",
+        "https://www.skills.sh/nvidia/skills/physical-ai-infrastructure-setup-and-resilient-scaling"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/plugins/nvidia-skills/skills/physical-ai-neural-reconstruction",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "physical-ai-neural-reconstruction",
+      "displayName": "physical-ai-neural-reconstruction",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/plugins/nvidia-skills/skills/physical-ai-neural-reconstruction",
+        "https://www.skills.sh/nvidia/skills/physical-ai-neural-reconstruction"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/accelerated-computing-cudf",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "accelerated-computing-cudf",
+      "displayName": "accelerated-computing-cudf",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/accelerated-computing-cudf",
+        "https://www.skills.sh/nvidia/skills/accelerated-computing-cudf"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/aiq-deploy",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "aiq-deploy",
+      "displayName": "aiq-deploy",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/aiq-deploy",
+        "https://www.skills.sh/nvidia/skills/aiq-deploy"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/aiq-research",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "aiq-research",
+      "displayName": "aiq-research",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/aiq-research",
+        "https://www.skills.sh/nvidia/skills/aiq-research"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/cudaq-guide",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cudaq-guide",
+      "displayName": "cudaq-guide",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/cudaq-guide",
+        "https://www.skills.sh/nvidia/skills/cudaq-guide"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/cuopt-developer",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cuopt-developer",
+      "displayName": "cuopt-developer",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/cuopt-developer",
+        "https://www.skills.sh/nvidia/skills/cuopt-developer"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/cuopt-install",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cuopt-install",
+      "displayName": "cuopt-install",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/cuopt-install",
+        "https://www.skills.sh/nvidia/skills/cuopt-install"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/cuopt-numerical-optimization-api-c",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cuopt-numerical-optimization-api-c",
+      "displayName": "cuopt-numerical-optimization-api-c",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/cuopt-numerical-optimization-api-c",
+        "https://www.skills.sh/nvidia/skills/cuopt-numerical-optimization-api-c"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/cuopt-numerical-optimization-api-cli",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cuopt-numerical-optimization-api-cli",
+      "displayName": "cuopt-numerical-optimization-api-cli",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/cuopt-numerical-optimization-api-cli",
+        "https://www.skills.sh/nvidia/skills/cuopt-numerical-optimization-api-cli"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/cuopt-numerical-optimization-api-python",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cuopt-numerical-optimization-api-python",
+      "displayName": "cuopt-numerical-optimization-api-python",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/cuopt-numerical-optimization-api-python",
+        "https://www.skills.sh/nvidia/skills/cuopt-numerical-optimization-api-python"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/cuopt-numerical-optimization-formulation",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cuopt-numerical-optimization-formulation",
+      "displayName": "cuopt-numerical-optimization-formulation",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/cuopt-numerical-optimization-formulation",
+        "https://www.skills.sh/nvidia/skills/cuopt-numerical-optimization-formulation"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/cuopt-routing-api-python",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cuopt-routing-api-python",
+      "displayName": "cuopt-routing-api-python",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/cuopt-routing-api-python",
+        "https://www.skills.sh/nvidia/skills/cuopt-routing-api-python"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/cuopt-routing-formulation",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cuopt-routing-formulation",
+      "displayName": "cuopt-routing-formulation",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/cuopt-routing-formulation",
+        "https://www.skills.sh/nvidia/skills/cuopt-routing-formulation"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/cuopt-server-api-python",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cuopt-server-api-python",
+      "displayName": "cuopt-server-api-python",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/cuopt-server-api-python",
+        "https://www.skills.sh/nvidia/skills/cuopt-server-api-python"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/cuopt-server-common",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cuopt-server-common",
+      "displayName": "cuopt-server-common",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/cuopt-server-common",
+        "https://www.skills.sh/nvidia/skills/cuopt-server-common"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/cuopt-skill-evolution",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cuopt-skill-evolution",
+      "displayName": "cuopt-skill-evolution",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/cuopt-skill-evolution",
+        "https://www.skills.sh/nvidia/skills/cuopt-skill-evolution"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/cuopt-user-rules",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cuopt-user-rules",
+      "displayName": "cuopt-user-rules",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/cuopt-user-rules",
+        "https://www.skills.sh/nvidia/skills/cuopt-user-rules"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/cupynumeric-hdf5",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cupynumeric-hdf5",
+      "displayName": "cupynumeric-hdf5",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/cupynumeric-hdf5",
+        "https://www.skills.sh/nvidia/skills/cupynumeric-hdf5"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/cupynumeric-install",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cupynumeric-install",
+      "displayName": "cupynumeric-install",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/cupynumeric-install",
+        "https://www.skills.sh/nvidia/skills/cupynumeric-install"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/cupynumeric-migration-readiness",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cupynumeric-migration-readiness",
+      "displayName": "cupynumeric-migration-readiness",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/cupynumeric-migration-readiness",
+        "https://www.skills.sh/nvidia/skills/cupynumeric-migration-readiness"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/cupynumeric-parallel-data-load",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "cupynumeric-parallel-data-load",
+      "displayName": "cupynumeric-parallel-data-load",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/cupynumeric-parallel-data-load",
+        "https://www.skills.sh/nvidia/skills/cupynumeric-parallel-data-load"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/dali-dynamic-mode",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "dali-dynamic-mode",
+      "displayName": "dali-dynamic-mode",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/dali-dynamic-mode",
+        "https://www.skills.sh/nvidia/skills/dali-dynamic-mode"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/deepstream-dev",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "deepstream-dev",
+      "displayName": "deepstream-dev",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/deepstream-dev",
+        "https://www.skills.sh/nvidia/skills/deepstream-dev"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/deepstream-import-vision-model",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "deepstream-import-vision-model",
+      "displayName": "deepstream-import-vision-model",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/deepstream-import-vision-model",
+        "https://www.skills.sh/nvidia/skills/deepstream-import-vision-model"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/digital-health-clinical-asr-build",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "digital-health-clinical-asr-build",
+      "displayName": "digital-health-clinical-asr-build",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/digital-health-clinical-asr-build",
+        "https://www.skills.sh/nvidia/skills/digital-health-clinical-asr-build"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/digital-health-clinical-asr-eval",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "digital-health-clinical-asr-eval",
+      "displayName": "digital-health-clinical-asr-eval",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/digital-health-clinical-asr-eval",
+        "https://www.skills.sh/nvidia/skills/digital-health-clinical-asr-eval"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/digital-health-clinical-asr-finetune",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "digital-health-clinical-asr-finetune",
+      "displayName": "digital-health-clinical-asr-finetune",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/digital-health-clinical-asr-finetune",
+        "https://www.skills.sh/nvidia/skills/digital-health-clinical-asr-finetune"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/digital-health-clinical-asr-setup",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "digital-health-clinical-asr-setup",
+      "displayName": "digital-health-clinical-asr-setup",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/digital-health-clinical-asr-setup",
+        "https://www.skills.sh/nvidia/skills/digital-health-clinical-asr-setup"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/dynamo-interconnect-check",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "dynamo-interconnect-check",
+      "displayName": "dynamo-interconnect-check",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/dynamo-interconnect-check",
+        "https://www.skills.sh/nvidia/skills/dynamo-interconnect-check"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/dynamo-recipe-runner",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "dynamo-recipe-runner",
+      "displayName": "dynamo-recipe-runner",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/dynamo-recipe-runner",
+        "https://www.skills.sh/nvidia/skills/dynamo-recipe-runner"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/dynamo-router-starter",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "dynamo-router-starter",
+      "displayName": "dynamo-router-starter",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/dynamo-router-starter",
+        "https://www.skills.sh/nvidia/skills/dynamo-router-starter"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/dynamo-troubleshoot",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "dynamo-troubleshoot",
+      "displayName": "dynamo-troubleshoot",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/dynamo-troubleshoot",
+        "https://www.skills.sh/nvidia/skills/dynamo-troubleshoot"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/earth2studio-data-fetch",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "earth2studio-data-fetch",
+      "displayName": "earth2studio-data-fetch",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/earth2studio-data-fetch",
+        "https://www.skills.sh/nvidia/skills/earth2studio-data-fetch"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/earth2studio-deterministic-forecast",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "earth2studio-deterministic-forecast",
+      "displayName": "earth2studio-deterministic-forecast",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/earth2studio-deterministic-forecast",
+        "https://www.skills.sh/nvidia/skills/earth2studio-deterministic-forecast"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/earth2studio-discover",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "earth2studio-discover",
+      "displayName": "earth2studio-discover",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/earth2studio-discover",
+        "https://www.skills.sh/nvidia/skills/earth2studio-discover"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/earth2studio-install",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "earth2studio-install",
+      "displayName": "earth2studio-install",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/earth2studio-install",
+        "https://www.skills.sh/nvidia/skills/earth2studio-install"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/mcore-create-issue",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "mcore-create-issue",
+      "displayName": "mcore-create-issue",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/mcore-create-issue",
+        "https://www.skills.sh/nvidia/skills/mcore-create-issue"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/mcore-linting-and-formatting",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "mcore-linting-and-formatting",
+      "displayName": "mcore-linting-and-formatting",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/mcore-linting-and-formatting",
+        "https://www.skills.sh/nvidia/skills/mcore-linting-and-formatting"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/mcore-run-on-slurm",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "mcore-run-on-slurm",
+      "displayName": "mcore-run-on-slurm",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/mcore-run-on-slurm",
+        "https://www.skills.sh/nvidia/skills/mcore-run-on-slurm"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/mcore-split-pr",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "mcore-split-pr",
+      "displayName": "mcore-split-pr",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/mcore-split-pr",
+        "https://www.skills.sh/nvidia/skills/mcore-split-pr"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/mcore-testing",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "mcore-testing",
+      "displayName": "mcore-testing",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/mcore-testing",
+        "https://www.skills.sh/nvidia/skills/mcore-testing"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-automodel-distributed-training",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-automodel-distributed-training",
+      "displayName": "nemo-automodel-distributed-training",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-automodel-distributed-training",
+        "https://www.skills.sh/nvidia/skills/nemo-automodel-distributed-training"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-automodel-launcher-config",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-automodel-launcher-config",
+      "displayName": "nemo-automodel-launcher-config",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-automodel-launcher-config",
+        "https://www.skills.sh/nvidia/skills/nemo-automodel-launcher-config"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-automodel-model-onboarding",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-automodel-model-onboarding",
+      "displayName": "nemo-automodel-model-onboarding",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-automodel-model-onboarding",
+        "https://www.skills.sh/nvidia/skills/nemo-automodel-model-onboarding"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-automodel-recipe-development",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-automodel-recipe-development",
+      "displayName": "nemo-automodel-recipe-development",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-automodel-recipe-development",
+        "https://www.skills.sh/nvidia/skills/nemo-automodel-recipe-development"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-data-designer-plugin",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-data-designer-plugin",
+      "displayName": "nemo-data-designer-plugin",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-data-designer-plugin",
+        "https://www.skills.sh/nvidia/skills/nemo-data-designer-plugin"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-evaluator-plugin",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-evaluator-plugin",
+      "displayName": "nemo-evaluator-plugin",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-evaluator-plugin",
+        "https://www.skills.sh/nvidia/skills/nemo-evaluator-plugin"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-mlm-bridge-training",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-mlm-bridge-training",
+      "displayName": "nemo-mbridge-mlm-bridge-training",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-mlm-bridge-training",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-mlm-bridge-training"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-multi-node-slurm",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-multi-node-slurm",
+      "displayName": "nemo-mbridge-multi-node-slurm",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-multi-node-slurm",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-multi-node-slurm"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-perf-activation-recompute",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-perf-activation-recompute",
+      "displayName": "nemo-mbridge-perf-activation-recompute",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-perf-activation-recompute",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-perf-activation-recompute"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-perf-cpu-offloading",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-perf-cpu-offloading",
+      "displayName": "nemo-mbridge-perf-cpu-offloading",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-perf-cpu-offloading",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-perf-cpu-offloading"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-perf-cuda-graphs",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-perf-cuda-graphs",
+      "displayName": "nemo-mbridge-perf-cuda-graphs",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-perf-cuda-graphs",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-perf-cuda-graphs"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-perf-expert-parallel-overlap",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-perf-expert-parallel-overlap",
+      "displayName": "nemo-mbridge-perf-expert-parallel-overlap",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-perf-expert-parallel-overlap",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-perf-expert-parallel-overlap"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-perf-hierarchical-context-parallel",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-perf-hierarchical-context-parallel",
+      "displayName": "nemo-mbridge-perf-hierarchical-context-parallel",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-perf-hierarchical-context-parallel",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-perf-hierarchical-context-parallel"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-perf-megatron-fsdp",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-perf-megatron-fsdp",
+      "displayName": "nemo-mbridge-perf-megatron-fsdp",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-perf-megatron-fsdp",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-perf-megatron-fsdp"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-perf-memory-tuning",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-perf-memory-tuning",
+      "displayName": "nemo-mbridge-perf-memory-tuning",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-perf-memory-tuning",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-perf-memory-tuning"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-perf-moe-comm-overlap",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-perf-moe-comm-overlap",
+      "displayName": "nemo-mbridge-perf-moe-comm-overlap",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-perf-moe-comm-overlap",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-perf-moe-comm-overlap"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-perf-moe-dispatcher-selection",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-perf-moe-dispatcher-selection",
+      "displayName": "nemo-mbridge-perf-moe-dispatcher-selection",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-perf-moe-dispatcher-selection",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-perf-moe-dispatcher-selection"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-perf-moe-hardware-configs",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-perf-moe-hardware-configs",
+      "displayName": "nemo-mbridge-perf-moe-hardware-configs",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-perf-moe-hardware-configs",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-perf-moe-hardware-configs"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-perf-moe-long-context",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-perf-moe-long-context",
+      "displayName": "nemo-mbridge-perf-moe-long-context",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-perf-moe-long-context",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-perf-moe-long-context"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-perf-moe-optimization-workflow",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-perf-moe-optimization-workflow",
+      "displayName": "nemo-mbridge-perf-moe-optimization-workflow",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-perf-moe-optimization-workflow",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-perf-moe-optimization-workflow"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-perf-moe-vlm-training",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-perf-moe-vlm-training",
+      "displayName": "nemo-mbridge-perf-moe-vlm-training",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-perf-moe-vlm-training",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-perf-moe-vlm-training"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-perf-parallelism-strategies",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-perf-parallelism-strategies",
+      "displayName": "nemo-mbridge-perf-parallelism-strategies",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-perf-parallelism-strategies",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-perf-parallelism-strategies"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-perf-sequence-packing",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-perf-sequence-packing",
+      "displayName": "nemo-mbridge-perf-sequence-packing",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-perf-sequence-packing",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-perf-sequence-packing"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-perf-tp-dp-comm-overlap",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-perf-tp-dp-comm-overlap",
+      "displayName": "nemo-mbridge-perf-tp-dp-comm-overlap",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-perf-tp-dp-comm-overlap",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-perf-tp-dp-comm-overlap"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-recipe-recommender",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-recipe-recommender",
+      "displayName": "nemo-mbridge-recipe-recommender",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-recipe-recommender",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-recipe-recommender"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-mbridge-resiliency",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-mbridge-resiliency",
+      "displayName": "nemo-mbridge-resiliency",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-mbridge-resiliency",
+        "https://www.skills.sh/nvidia/skills/nemo-mbridge-resiliency"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-retriever",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemo-retriever",
+      "displayName": "nemo-retriever",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemo-retriever",
+        "https://www.skills.sh/nvidia/skills/nemo-retriever"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-rl/auto-research",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "auto-research",
+      "displayName": "auto-research",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/NeMo-RL/auto-research",
+        "https://www.skills.sh/nvidia/skills/auto-research"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-rl/brev-etiquette",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "brev-etiquette",
+      "displayName": "brev-etiquette",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/NeMo-RL/brev-etiquette",
+        "https://www.skills.sh/nvidia/skills/brev-etiquette"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-rl/docs",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "docs",
+      "displayName": "docs",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/NeMo-RL/docs",
+        "https://www.skills.sh/nvidia/skills/docs"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-rl/launch-nemo-rl",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "launch-nemo-rl",
+      "displayName": "launch-nemo-rl",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/NeMo-RL/launch-nemo-rl",
+        "https://www.skills.sh/nvidia/skills/launch-nemo-rl"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemo-rl/session-memory",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "session-memory",
+      "displayName": "session-memory",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/NeMo-RL/session-memory",
+        "https://www.skills.sh/nvidia/skills/session-memory"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemoclaw-user-agent-skills",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemoclaw-user-agent-skills",
+      "displayName": "nemoclaw-user-agent-skills",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemoclaw-user-agent-skills",
+        "https://www.skills.sh/nvidia/skills/nemoclaw-user-agent-skills"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemoclaw-user-configure-inference",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemoclaw-user-configure-inference",
+      "displayName": "nemoclaw-user-configure-inference",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemoclaw-user-configure-inference",
+        "https://www.skills.sh/nvidia/skills/nemoclaw-user-configure-inference"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemoclaw-user-configure-security",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemoclaw-user-configure-security",
+      "displayName": "nemoclaw-user-configure-security",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemoclaw-user-configure-security",
+        "https://www.skills.sh/nvidia/skills/nemoclaw-user-configure-security"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemoclaw-user-deploy-remote",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemoclaw-user-deploy-remote",
+      "displayName": "nemoclaw-user-deploy-remote",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemoclaw-user-deploy-remote",
+        "https://www.skills.sh/nvidia/skills/nemoclaw-user-deploy-remote"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemoclaw-user-get-started",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemoclaw-user-get-started",
+      "displayName": "nemoclaw-user-get-started",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemoclaw-user-get-started",
+        "https://www.skills.sh/nvidia/skills/nemoclaw-user-get-started"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemoclaw-user-manage-policy",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemoclaw-user-manage-policy",
+      "displayName": "nemoclaw-user-manage-policy",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemoclaw-user-manage-policy",
+        "https://www.skills.sh/nvidia/skills/nemoclaw-user-manage-policy"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemoclaw-user-manage-sandboxes",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemoclaw-user-manage-sandboxes",
+      "displayName": "nemoclaw-user-manage-sandboxes",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemoclaw-user-manage-sandboxes",
+        "https://www.skills.sh/nvidia/skills/nemoclaw-user-manage-sandboxes"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemoclaw-user-monitor-sandbox",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemoclaw-user-monitor-sandbox",
+      "displayName": "nemoclaw-user-monitor-sandbox",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemoclaw-user-monitor-sandbox",
+        "https://www.skills.sh/nvidia/skills/nemoclaw-user-monitor-sandbox"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemoclaw-user-overview",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemoclaw-user-overview",
+      "displayName": "nemoclaw-user-overview",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemoclaw-user-overview",
+        "https://www.skills.sh/nvidia/skills/nemoclaw-user-overview"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemoclaw-user-reference",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemoclaw-user-reference",
+      "displayName": "nemoclaw-user-reference",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemoclaw-user-reference",
+        "https://www.skills.sh/nvidia/skills/nemoclaw-user-reference"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemotron-customize",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemotron-customize",
+      "displayName": "nemotron-customize",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemotron-customize",
+        "https://www.skills.sh/nvidia/skills/nemotron-customize"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/nemotron-retrieval-recipes",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "nemotron-retrieval-recipes",
+      "displayName": "nemotron-retrieval-recipes",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/nemotron-retrieval-recipes",
+        "https://www.skills.sh/nvidia/skills/nemotron-retrieval-recipes"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/omniverse-cad-to-simready",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "omniverse-cad-to-simready",
+      "displayName": "omniverse-cad-to-simready",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/omniverse-cad-to-simready",
+        "https://www.skills.sh/nvidia/skills/omniverse-cad-to-simready"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/omniverse-realtime-viewer",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "omniverse-realtime-viewer",
+      "displayName": "omniverse-realtime-viewer",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/omniverse-realtime-viewer",
+        "https://www.skills.sh/nvidia/skills/omniverse-realtime-viewer"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/omniverse-usd-performance-tuning",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "omniverse-usd-performance-tuning",
+      "displayName": "omniverse-usd-performance-tuning",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/omniverse-usd-performance-tuning",
+        "https://www.skills.sh/nvidia/skills/omniverse-usd-performance-tuning"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/physical-ai-infrastructure-setup-and-resilient-scaling",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "physical-ai-infrastructure-setup-and-resilient-scaling",
+      "displayName": "physical-ai-infrastructure-setup-and-resilient-scaling",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/physical-ai-infrastructure-setup-and-resilient-scaling",
+        "https://www.skills.sh/nvidia/skills/physical-ai-infrastructure-setup-and-resilient-scaling"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/physical-ai-neural-reconstruction",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "physical-ai-neural-reconstruction",
+      "displayName": "physical-ai-neural-reconstruction",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/physical-ai-neural-reconstruction",
+        "https://www.skills.sh/nvidia/skills/physical-ai-neural-reconstruction"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/physicsnemo-discover",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "physicsnemo-discover",
+      "displayName": "physicsnemo-discover",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/physicsnemo-discover",
+        "https://www.skills.sh/nvidia/skills/physicsnemo-discover"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/rag-blueprint",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "rag-blueprint",
+      "displayName": "rag-blueprint",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/rag-blueprint",
+        "https://www.skills.sh/nvidia/skills/rag-blueprint"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/rag-eval",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "rag-eval",
+      "displayName": "rag-eval",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/rag-eval",
+        "https://www.skills.sh/nvidia/skills/rag-eval"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/rag-perf",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "rag-perf",
+      "displayName": "rag-perf",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/rag-perf",
+        "https://www.skills.sh/nvidia/skills/rag-perf"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/skill-card-generator",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "skill-card-generator",
+      "displayName": "skill-card-generator",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/skill-card-generator",
+        "https://www.skills.sh/nvidia/skills/skill-card-generator"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/tilegym-adding-cutile-kernel",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "tilegym-adding-cutile-kernel",
+      "displayName": "tilegym-adding-cutile-kernel",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/tilegym-adding-cutile-kernel",
+        "https://www.skills.sh/nvidia/skills/tilegym-adding-cutile-kernel"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/video-search-and-summarization/vss-ask-video",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "vss-ask-video",
+      "displayName": "vss-ask-video",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/video-search-and-summarization/vss-ask-video",
+        "https://www.skills.sh/nvidia/skills/vss-ask-video"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/video-search-and-summarization/vss-deploy-dense-captioning",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "vss-deploy-dense-captioning",
+      "displayName": "vss-deploy-dense-captioning",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/video-search-and-summarization/vss-deploy-dense-captioning",
+        "https://www.skills.sh/nvidia/skills/vss-deploy-dense-captioning"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/video-search-and-summarization/vss-deploy-detection-tracking-2d",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "vss-deploy-detection-tracking-2d",
+      "displayName": "vss-deploy-detection-tracking-2d",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/video-search-and-summarization/vss-deploy-detection-tracking-2d",
+        "https://www.skills.sh/nvidia/skills/vss-deploy-detection-tracking-2d"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/video-search-and-summarization/vss-deploy-detection-tracking-3d",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "vss-deploy-detection-tracking-3d",
+      "displayName": "vss-deploy-detection-tracking-3d",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/video-search-and-summarization/vss-deploy-detection-tracking-3d",
+        "https://www.skills.sh/nvidia/skills/vss-deploy-detection-tracking-3d"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/video-search-and-summarization/vss-deploy-profile",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "vss-deploy-profile",
+      "displayName": "vss-deploy-profile",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/video-search-and-summarization/vss-deploy-profile",
+        "https://www.skills.sh/nvidia/skills/vss-deploy-profile"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/video-search-and-summarization/vss-deploy-video-embedding",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "vss-deploy-video-embedding",
+      "displayName": "vss-deploy-video-embedding",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/video-search-and-summarization/vss-deploy-video-embedding",
+        "https://www.skills.sh/nvidia/skills/vss-deploy-video-embedding"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/video-search-and-summarization/vss-generate-video-calibration",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "vss-generate-video-calibration",
+      "displayName": "vss-generate-video-calibration",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/video-search-and-summarization/vss-generate-video-calibration",
+        "https://www.skills.sh/nvidia/skills/vss-generate-video-calibration"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/video-search-and-summarization/vss-generate-video-report",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "vss-generate-video-report",
+      "displayName": "vss-generate-video-report",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/video-search-and-summarization/vss-generate-video-report",
+        "https://www.skills.sh/nvidia/skills/vss-generate-video-report"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/video-search-and-summarization/vss-manage-alerts",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "vss-manage-alerts",
+      "displayName": "vss-manage-alerts",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/video-search-and-summarization/vss-manage-alerts",
+        "https://www.skills.sh/nvidia/skills/vss-manage-alerts"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/video-search-and-summarization/vss-manage-video-io-storage",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "vss-manage-video-io-storage",
+      "displayName": "vss-manage-video-io-storage",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/video-search-and-summarization/vss-manage-video-io-storage",
+        "https://www.skills.sh/nvidia/skills/vss-manage-video-io-storage"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/video-search-and-summarization/vss-query-analytics",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "vss-query-analytics",
+      "displayName": "vss-query-analytics",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/video-search-and-summarization/vss-query-analytics",
+        "https://www.skills.sh/nvidia/skills/vss-query-analytics"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/video-search-and-summarization/vss-search-archive",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "vss-search-archive",
+      "displayName": "vss-search-archive",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/video-search-and-summarization/vss-search-archive",
+        "https://www.skills.sh/nvidia/skills/vss-search-archive"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/video-search-and-summarization/vss-setup-behavior-analytics",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "vss-setup-behavior-analytics",
+      "displayName": "vss-setup-behavior-analytics",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/video-search-and-summarization/vss-setup-behavior-analytics",
+        "https://www.skills.sh/nvidia/skills/vss-setup-behavior-analytics"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/video-search-and-summarization/vss-setup-video-analytics-api",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "vss-setup-video-analytics-api",
+      "displayName": "vss-setup-video-analytics-api",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/video-search-and-summarization/vss-setup-video-analytics-api",
+        "https://www.skills.sh/nvidia/skills/vss-setup-video-analytics-api"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
+      "skillKey": "nvidia/skills/skills/video-search-and-summarization/vss-summarize-video",
+      "ownerKey": "nvidia",
+      "sourceOwnerKeys": [
+        "nvidia"
+      ],
+      "repoKey": "nvidia/skills",
+      "skillName": "vss-summarize-video",
+      "displayName": "vss-summarize-video",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/NVIDIA/skills/tree/HEAD/skills/video-search-and-summarization/vss-summarize-video",
+        "https://www.skills.sh/nvidia/skills/vss-summarize-video"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:56:35.470Z",
+      "lastSeenAt": "2026-05-30T17:56:35.470Z"
+    },
+    {
       "skillKey": "openai/codex-plugin-cc/plugins/codex/skills/codex-cli-runtime",
       "ownerKey": "openai",
       "sourceOwnerKeys": [
@@ -184634,9 +187471,9 @@
     }
   ],
   "stats": {
-    "owners": 140,
-    "repos": 517,
-    "skills": 7640,
+    "owners": 141,
+    "repos": 518,
+    "skills": 7761,
     "sourceOwners": {
       "skills.sh": 94,
       "mcpservers.org": 92
@@ -184648,5 +187485,5 @@
       "skills.sh": 5345
     }
   },
-  "enrichedAt": "2026-05-30T17:38:19.977Z"
+  "enrichedAt": "2026-05-30T17:56:35.470Z"
 }

@@ -83,6 +83,7 @@ const OWNER_METADATA = {
   microsoft: ["Microsoft", "https://www.microsoft.com"],
   "n8n-io": ["n8n", "https://n8n.io"],
   neondatabase: ["Neon", "https://neon.tech"],
+  nvidia: ["NVIDIA", "https://www.nvidia.com", "https://github.com/NVIDIA/skills"],
   nuxt: ["Nuxt", "https://nuxt.com"],
   openai: ["OpenAI", "https://openai.com"],
   openshift: ["OpenShift", "https://www.redhat.com/en/technologies/cloud-computing/openshift"],
