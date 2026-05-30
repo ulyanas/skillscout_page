@@ -98,6 +98,7 @@ const OWNER_METADATA = {
   semgrep: ["Semgrep", "https://semgrep.dev"],
   shopify: ["Shopify", "https://www.shopify.com"],
   signoz: ["SigNoz", "https://signoz.io"],
+  snyk: ["Snyk", "https://snyk.io", "https://github.com/snyk/studio-recipes"],
   streamlit: ["Streamlit", "https://streamlit.io"],
   stripe: ["Stripe", "https://stripe.com"],
   supabase: ["Supabase", "https://supabase.com"],

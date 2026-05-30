@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-30T08:22:13.816Z",
+  "generatedAt": "2026-05-30T17:26:02.927Z",
   "sources": {
     "skills.sh": {
       "sourceId": "skills.sh",
@@ -2951,6 +2951,33 @@
       "lastSeenAt": "2026-05-23T11:08:03.000Z",
       "starsCount": 16388,
       "twitter": "@snap"
+    },
+    {
+      "ownerKey": "snyk",
+      "displayName": "Snyk",
+      "normalizedNames": [
+        "snyk"
+      ],
+      "sourceOwnerKeys": [
+        "snyk"
+      ],
+      "websiteHosts": [],
+      "sources": [
+        "github-discovery",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/snyk",
+        "https://www.skills.sh/snyk"
+      ],
+      "skillsCount": 8,
+      "reposCount": 1,
+      "installsCount": 506,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:26:02.927Z",
+      "lastSeenAt": "2026-05-30T17:26:02.927Z",
+      "website": "https://snyk.io",
+      "starsCount": 40
     },
     {
       "ownerKey": "streamlit",
@@ -19795,6 +19822,41 @@
       "lastSeenAt": "2026-05-23T11:08:03.000Z",
       "starsCount": 16388,
       "githubSkillPaths": [],
+      "truncated": false
+    },
+    {
+      "repoKey": "snyk/studio-recipes",
+      "ownerKey": "snyk",
+      "sourceOwnerKeys": [
+        "snyk"
+      ],
+      "repoName": "studio-recipes",
+      "displayName": "snyk/studio-recipes",
+      "sources": [
+        "github-discovery",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/snyk/studio-recipes",
+        "https://www.skills.sh/snyk/studio-recipes"
+      ],
+      "skillsCount": 8,
+      "installsCount": 506,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:26:02.927Z",
+      "lastSeenAt": "2026-05-30T17:26:02.927Z",
+      "starsCount": 40,
+      "canonicalRepoKey": "snyk/studio-recipes",
+      "githubSkillPaths": [
+        "command_directives/synchronous_remediation/skills/ai-inventory",
+        "command_directives/synchronous_remediation/skills/container-security",
+        "command_directives/synchronous_remediation/skills/drift-detector",
+        "command_directives/synchronous_remediation/skills/iac-security",
+        "command_directives/synchronous_remediation/skills/sbom-analyzer",
+        "command_directives/synchronous_remediation/skills/secure-at-inception",
+        "command_directives/synchronous_remediation/skills/secure-dependency-health-check",
+        "command_directives/synchronous_remediation/skills/snyk-fix"
+      ],
       "truncated": false
     },
     {
@@ -165416,6 +165478,182 @@
       "lastSeenAt": "2026-05-30T08:22:22.991Z"
     },
     {
+      "skillKey": "snyk/studio-recipes/command_directives/synchronous_remediation/skills/ai-inventory",
+      "ownerKey": "snyk",
+      "sourceOwnerKeys": [
+        "snyk"
+      ],
+      "repoKey": "snyk/studio-recipes",
+      "skillName": "ai-inventory",
+      "displayName": "ai-inventory",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snyk/studio-recipes/tree/HEAD/command_directives/synchronous_remediation/skills/ai-inventory",
+        "https://www.skills.sh/snyk/studio-recipes/ai-inventory"
+      ],
+      "installsCount": 48,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:26:02.927Z",
+      "lastSeenAt": "2026-05-30T17:26:02.927Z"
+    },
+    {
+      "skillKey": "snyk/studio-recipes/command_directives/synchronous_remediation/skills/container-security",
+      "ownerKey": "snyk",
+      "sourceOwnerKeys": [
+        "snyk"
+      ],
+      "repoKey": "snyk/studio-recipes",
+      "skillName": "container-security",
+      "displayName": "container-security",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snyk/studio-recipes/tree/HEAD/command_directives/synchronous_remediation/skills/container-security",
+        "https://www.skills.sh/snyk/studio-recipes/container-security"
+      ],
+      "installsCount": 52,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:26:02.927Z",
+      "lastSeenAt": "2026-05-30T17:26:02.927Z"
+    },
+    {
+      "skillKey": "snyk/studio-recipes/command_directives/synchronous_remediation/skills/drift-detector",
+      "ownerKey": "snyk",
+      "sourceOwnerKeys": [
+        "snyk"
+      ],
+      "repoKey": "snyk/studio-recipes",
+      "skillName": "drift-detector",
+      "displayName": "drift-detector",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snyk/studio-recipes/tree/HEAD/command_directives/synchronous_remediation/skills/drift-detector",
+        "https://www.skills.sh/snyk/studio-recipes/drift-detector"
+      ],
+      "installsCount": 49,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:26:02.927Z",
+      "lastSeenAt": "2026-05-30T17:26:02.927Z"
+    },
+    {
+      "skillKey": "snyk/studio-recipes/command_directives/synchronous_remediation/skills/iac-security",
+      "ownerKey": "snyk",
+      "sourceOwnerKeys": [
+        "snyk"
+      ],
+      "repoKey": "snyk/studio-recipes",
+      "skillName": "iac-security",
+      "displayName": "iac-security",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snyk/studio-recipes/tree/HEAD/command_directives/synchronous_remediation/skills/iac-security",
+        "https://www.skills.sh/snyk/studio-recipes/iac-security"
+      ],
+      "installsCount": 51,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:26:02.927Z",
+      "lastSeenAt": "2026-05-30T17:26:02.927Z"
+    },
+    {
+      "skillKey": "snyk/studio-recipes/command_directives/synchronous_remediation/skills/sbom-analyzer",
+      "ownerKey": "snyk",
+      "sourceOwnerKeys": [
+        "snyk"
+      ],
+      "repoKey": "snyk/studio-recipes",
+      "skillName": "sbom-analyzer",
+      "displayName": "sbom-analyzer",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snyk/studio-recipes/tree/HEAD/command_directives/synchronous_remediation/skills/sbom-analyzer",
+        "https://www.skills.sh/snyk/studio-recipes/sbom-analyzer"
+      ],
+      "installsCount": 49,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:26:02.927Z",
+      "lastSeenAt": "2026-05-30T17:26:02.927Z"
+    },
+    {
+      "skillKey": "snyk/studio-recipes/command_directives/synchronous_remediation/skills/secure-at-inception",
+      "ownerKey": "snyk",
+      "sourceOwnerKeys": [
+        "snyk"
+      ],
+      "repoKey": "snyk/studio-recipes",
+      "skillName": "secure-at-inception",
+      "displayName": "secure-at-inception",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snyk/studio-recipes/tree/HEAD/command_directives/synchronous_remediation/skills/secure-at-inception",
+        "https://www.skills.sh/snyk/studio-recipes/secure-at-inception"
+      ],
+      "installsCount": 58,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:26:02.927Z",
+      "lastSeenAt": "2026-05-30T17:26:02.927Z"
+    },
+    {
+      "skillKey": "snyk/studio-recipes/command_directives/synchronous_remediation/skills/secure-dependency-health-check",
+      "ownerKey": "snyk",
+      "sourceOwnerKeys": [
+        "snyk"
+      ],
+      "repoKey": "snyk/studio-recipes",
+      "skillName": "secure-dependency-health-check",
+      "displayName": "secure-dependency-health-check",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snyk/studio-recipes/tree/HEAD/command_directives/synchronous_remediation/skills/secure-dependency-health-check",
+        "https://www.skills.sh/snyk/studio-recipes/secure-dependency-health-check"
+      ],
+      "installsCount": 61,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:26:02.927Z",
+      "lastSeenAt": "2026-05-30T17:26:02.927Z"
+    },
+    {
+      "skillKey": "snyk/studio-recipes/command_directives/synchronous_remediation/skills/snyk-fix",
+      "ownerKey": "snyk",
+      "sourceOwnerKeys": [
+        "snyk"
+      ],
+      "repoKey": "snyk/studio-recipes",
+      "skillName": "snyk-fix",
+      "displayName": "snyk-fix",
+      "description": "",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/snyk/studio-recipes/tree/HEAD/command_directives/synchronous_remediation/skills/snyk-fix",
+        "https://www.skills.sh/snyk/studio-recipes/snyk-fix"
+      ],
+      "installsCount": 138,
+      "confidence": "high",
+      "firstSeenAt": "2026-05-30T17:26:02.927Z",
+      "lastSeenAt": "2026-05-30T17:26:02.927Z"
+    },
+    {
       "skillKey": "streamlit/agent-skills/developing-with-streamlit",
       "ownerKey": "streamlit",
       "sourceOwnerKeys": [
@@ -177009,9 +177247,9 @@
     }
   ],
   "stats": {
-    "owners": 130,
-    "repos": 502,
-    "skills": 7336,
+    "owners": 131,
+    "repos": 503,
+    "skills": 7344,
     "sourceOwners": {
       "skills.sh": 94,
       "mcpservers.org": 92
@@ -177023,5 +177261,5 @@
       "skills.sh": 5345
     }
   },
-  "enrichedAt": "2026-05-30T08:22:22.991Z"
+  "enrichedAt": "2026-05-30T17:26:02.927Z"
 }

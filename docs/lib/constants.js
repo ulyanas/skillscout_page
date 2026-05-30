@@ -80,6 +80,7 @@ export const KNOWN_HOSTNAME_KEYWORD_MAP = {
   "sentry.io": "sentry",
   "sheets.google.com": "google sheets",
   "slides.google.com": "google slides",
+  "snyk.io": "snyk",
   "trigger.dev": "trigger"
 };
 
@@ -164,6 +165,7 @@ export const OFFICIAL_SKILLS_OWNER_HANDLES = [
   "semgrep",
   "shopify",
   "signoz",
+  "snyk",
   "streamlit",
   "stripe",
   "supabase",
@@ -260,6 +262,7 @@ export const OFFICIAL_SITE_KEYWORD_TEST_CASES = [
   ["https://semgrep.dev", "Semgrep", "semgrep"],
   ["https://shopify.com", "Shopify", "shopify"],
   ["https://signoz.io", "SigNoz", "signoz"],
+  ["https://snyk.io", "Snyk", "snyk"],
   ["https://streamlit.io", "Streamlit", "streamlit"],
   ["https://stripe.com", "Stripe", "stripe"],
   ["https://supabase.com", "Supabase", "supabase"],
@@ -340,6 +343,7 @@ export const KEYWORD_OWNER_ALIAS_MAP = {
   sentry: ["getsentry"],
   shopify: ["shopify"],
   slack: ["slackapi", "slackhq", "slack"],
+  snyk: ["snyk"],
   stripe: ["stripe"],
   supabase: ["supabase"],
   svelte: ["sveltejs"],
