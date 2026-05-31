@@ -41,8 +41,9 @@ await enrichWithGitHubStars(directory);
 aggregateOwnerStars(directory);
 
 // Preserve github-discovery entries from the existing file so the scrape
-// doesn't wipe vendors that were added by auto_add_vendors.mjs.
+// carries forward vendors that were added by auto_add_vendors.mjs.
 await mergeDiscoveredVendors(directory);
+await preserveExistingFirstSeenDates(directory);
 
 await fs.mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
 await fs.writeFile(OUTPUT_PATH, `${JSON.stringify(directory, null, 2)}\n`);
@@ -768,6 +769,56 @@ function decodeHtml(value) {
 
 function hashText(text) {
   return `sha256:${crypto.createHash("sha256").update(text).digest("hex")}`;
+}
+
+// ── Preserve original first-seen dates ────────────────────────────────────────
+// Scheduled scrapes rebuild source records from scratch. Carrying forward
+// firstSeenAt keeps "Recently added" tied to the first catalog appearance.
+
+async function preserveExistingFirstSeenDates(directory) {
+  let existing;
+  try {
+    existing = JSON.parse(await fs.readFile(OUTPUT_PATH, "utf8"));
+  } catch {
+    return;
+  }
+
+  const previousOwners = new Map((existing.officialOwners || []).map((owner) => [owner.ownerKey, owner]));
+  const previousRepos = new Map((existing.officialRepos || []).map((repo) => [repo.repoKey, repo]));
+  const previousSkills = new Map((existing.officialSkills || []).map((skill) => [skill.skillKey, skill]));
+  let touchedOwners = 0;
+  let touchedRepos = 0;
+  let touchedSkills = 0;
+
+  for (const owner of directory.officialOwners) {
+    const previous = previousOwners.get(owner.ownerKey);
+    if (!previous?.firstSeenAt) continue;
+    const firstSeenAt = earliestDate(owner.firstSeenAt, previous.firstSeenAt);
+    if (firstSeenAt !== owner.firstSeenAt) touchedOwners++;
+    owner.firstSeenAt = firstSeenAt;
+  }
+
+  for (const repo of directory.officialRepos) {
+    const previous = previousRepos.get(repo.repoKey);
+    if (!previous?.firstSeenAt) continue;
+    const firstSeenAt = earliestDate(repo.firstSeenAt, previous.firstSeenAt);
+    if (firstSeenAt !== repo.firstSeenAt) touchedRepos++;
+    repo.firstSeenAt = firstSeenAt;
+  }
+
+  for (const skill of directory.officialSkills) {
+    const previous = previousSkills.get(skill.skillKey);
+    if (!previous?.firstSeenAt) continue;
+    const firstSeenAt = earliestDate(skill.firstSeenAt, previous.firstSeenAt);
+    if (firstSeenAt !== skill.firstSeenAt) touchedSkills++;
+    skill.firstSeenAt = firstSeenAt;
+  }
+
+  if (touchedOwners || touchedRepos || touchedSkills) {
+    console.log(
+      `Preserved firstSeenAt: ${touchedOwners} owners, ${touchedRepos} repos, ${touchedSkills} skills`
+    );
+  }
 }
 
 // ── Preserve github-discovery vendors ────────────────────────────────────────

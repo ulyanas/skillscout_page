@@ -411,7 +411,7 @@ function buildOwnerGroups(data) {
       topSkillNames: skills.slice(0, OWNER_SKILL_PREVIEW_LIMIT).map((skill) => skill.displayName || skill.skillName),
       bestRepoKey: bestRepo?.repoKey || null,
       starsCount: typeof owner.starsCount === "number" ? owner.starsCount : null,
-      dateAddedMs: parseDateMs(owner.firstSeenAt || owner.lastSeenAt)
+      dateAddedMs: parseDateMs(owner.firstSeenAt) || parseDateMs(owner.lastSeenAt)
     };
 
     ownerObj.rankScore = computeOwnerRankScore(ownerObj);
@@ -454,8 +454,8 @@ function applySort(owners) {
       case "recent":
         return (
           (b.dateAddedMs || 0) - (a.dateAddedMs || 0) ||
-          (b.rankScore || 0) - (a.rankScore || 0) ||
-          compareByName(a, b)
+          compareByName(a, b) ||
+          (b.rankScore || 0) - (a.rankScore || 0)
         );
       case "skills":
         return (b.skills.length || 0) - (a.skills.length || 0) || compareByName(a, b);
