@@ -395,6 +395,7 @@ function buildOwnerGroups(data) {
       ...(owner.sourceOwnerKeys || [])
     ]);
     const searchText = buildSearchText([directSearchText, ...skills.map((skill) => skill.searchText)]);
+    const installsKnown = hasKnownInstalls(owner, skills);
 
     const ownerObj = {
       ...owner,
@@ -410,6 +411,7 @@ function buildOwnerGroups(data) {
       searchText,
       topSkillNames: skills.slice(0, OWNER_SKILL_PREVIEW_LIMIT).map((skill) => skill.displayName || skill.skillName),
       bestRepoKey: bestRepo?.repoKey || null,
+      installsKnown,
       starsCount: typeof owner.starsCount === "number" ? owner.starsCount : null,
       dateAddedMs: parseDateMs(owner.firstSeenAt) || parseDateMs(owner.lastSeenAt)
     };
@@ -462,7 +464,11 @@ function applySort(owners) {
       case "stars":
         return (b.starsCount ?? -1) - (a.starsCount ?? -1) || (b.rankScore || 0) - (a.rankScore || 0);
       case "installs":
-        return (b.installsCount || 0) - (a.installsCount || 0) || compareByName(a, b);
+        return (
+          Number(b.installsKnown) - Number(a.installsKnown) ||
+          (b.installsCount || 0) - (a.installsCount || 0) ||
+          compareByName(a, b)
+        );
       case "repos":
         return (b.reposCount || 0) - (a.reposCount || 0) || compareByName(a, b);
       case "name":
@@ -579,7 +585,7 @@ function createOwnerCard(owner) {
   website.textContent = owner.websiteHost;
   card.querySelector(".skills-count").textContent = formatNumber(owner.skills.length || owner.skillsCount || 0);
   card.querySelector(".repos-count").textContent = formatNumber(owner.reposCount || 0);
-  card.querySelector(".installs-count").textContent = formatCompactNumber(owner.installsCount || 0);
+  card.querySelector(".installs-count").textContent = formatInstallCount(owner);
   card.querySelector(".stars-count").textContent = owner.starsCount != null ? formatCompactNumber(owner.starsCount) : "–";
   const rankBadge = card.querySelector(".rank-badge");
   const grade = getPopularityGrade(owner.rankScore || 0);
@@ -785,6 +791,13 @@ function buildSearchText(values) {
   return values.filter(Boolean).join(" ").toLowerCase();
 }
 
+function hasKnownInstalls(owner, skills) {
+  if (Number(owner.installsCount || 0) > 0) {
+    return true;
+  }
+  return skills.some((skill) => (skill.sources || []).includes("skills.sh"));
+}
+
 function normalizeUrl(value) {
   const url = String(value || "").trim();
   return url.startsWith("http") ? url : `https://${url}`;
@@ -805,6 +818,10 @@ function formatCompactNumber(value) {
     maximumFractionDigits: Number(value) >= 1_000_000 ? 1 : 0,
     notation: Number(value) >= 10_000 ? "compact" : "standard"
   }).format(Number(value || 0));
+}
+
+function formatInstallCount(owner) {
+  return owner.installsKnown ? formatCompactNumber(owner.installsCount || 0) : "N/A";
 }
 
 function addUtm(url) {
