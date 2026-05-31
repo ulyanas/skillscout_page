@@ -18,6 +18,10 @@ const DATA_PATH =
   path.join(root, "data", "official-skills-universal.json");
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const CONCURRENCY = Number(process.env.GITHUB_SKILLS_CONCURRENCY || (GITHUB_TOKEN ? 10 : 2));
+const SKILLS_SH_INSTALLS_CONCURRENCY = Number(process.env.SKILLS_SH_INSTALLS_CONCURRENCY || 6);
+const SKILLS_SH_INSTALLS_ENABLED = process.env.SKILLS_SH_INSTALLS !== "0";
+const SKILLS_SH_FETCH_TIMEOUT_MS = Number(process.env.SKILLS_SH_FETCH_TIMEOUT_MS || 10000);
+const SKILLS_SH_ORIGIN = "https://www.skills.sh";
 
 if (!GITHUB_TOKEN) {
   console.error("GITHUB_TOKEN is required. Run: GITHUB_TOKEN=$(gh auth token) npm run enrich:github-skills");
@@ -32,6 +36,9 @@ console.log(
 );
 
 await enrichWithGitHubSkillTrees(directory);
+if (SKILLS_SH_INSTALLS_ENABLED) {
+  await enrichWithSkillsShInstalls(directory);
+}
 await enrichStarCounts(directory);
 refreshStats(directory);
 
@@ -213,6 +220,282 @@ function reconcileSkillsWithGitHub(directory) {
   );
 }
 
+// ── skills.sh install count enrichment ─────────────────────────────────────
+
+async function enrichWithSkillsShInstalls(directory) {
+  const repoSkillUrls = findSkillsShRepoUrls(directory);
+  const repos = directory.officialRepos.filter((repo) => {
+    if (!repoSkillUrls.has(repo.repoKey)) return false;
+    return Number(repo.installsCount || 0) === 0 || repoNeedsSkillsShMapping(directory, repo.repoKey);
+  });
+
+  if (!repos.length) {
+    console.log("skills.sh installs: mapped repos already have install metadata");
+    return;
+  }
+
+  console.log(
+    `Fetching skills.sh installs for ${repos.length} mapped repos (concurrency ${SKILLS_SH_INSTALLS_CONCURRENCY})...`
+  );
+
+  const skillsByRepo = new Map();
+  for (const skill of directory.officialSkills || []) {
+    if (!skill.repoKey) continue;
+    const list = skillsByRepo.get(skill.repoKey) || [];
+    list.push(skill);
+    skillsByRepo.set(skill.repoKey, list);
+  }
+
+  let fetched = 0;
+  let updatedSkills = 0;
+  let failed = 0;
+
+  await mapWithConcurrency(repos, SKILLS_SH_INSTALLS_CONCURRENCY, async (repo) => {
+    const repoUrl = repoSkillUrls.get(repo.repoKey);
+    const skillInstalls = await fetchSkillsShRepoInstalls(repoUrl, repo.repoKey);
+    if (!skillInstalls) {
+      failed++;
+      return;
+    }
+
+    fetched++;
+    const skills = skillsByRepo.get(repo.repoKey) || [];
+    const matchedSkillKeys = new Set();
+
+    for (const skill of skills) {
+      const installRecord = matchSkillsShInstallRecord(skillInstalls, skill);
+      if (!installRecord) continue;
+
+      addUnique(skill.sources, "skills.sh");
+      addUnique(skill.sourceUrls, installRecord.url);
+      skill.installsCount = Math.max(Number(skill.installsCount || 0), installRecord.installs);
+      skill.confidence = "high";
+      matchedSkillKeys.add(skill.skillKey);
+      updatedSkills++;
+    }
+
+    const repoTotal = sumMappedInstalls(skills, matchedSkillKeys);
+    if (repoTotal > 0 || matchedSkillKeys.size > 0) {
+      addUnique(repo.sources, "skills.sh");
+      addUnique(repo.sourceUrls, repoUrl);
+      repo.installsCount = Math.max(Number(repo.installsCount || 0), repoTotal);
+      repo.confidence = "high";
+    }
+  });
+
+  recomputeInstallTotals(directory);
+  console.log(
+    `skills.sh installs: ${fetched} repos fetched, ${updatedSkills} skills updated, ${failed} failed/not-found`
+  );
+}
+
+function findSkillsShRepoUrls(directory) {
+  const repoUrls = new Map();
+  for (const repo of directory.officialRepos || []) {
+    const repoUrl = findSkillsShRepoUrl(repo);
+    if (repoUrl) repoUrls.set(repo.repoKey, repoUrl);
+  }
+  return repoUrls;
+}
+
+function findSkillsShRepoUrl(repo) {
+  const expectedPath = `/${repo.repoKey}`;
+  for (const url of repo.sourceUrls || []) {
+    try {
+      const parsed = new URL(url);
+      if (parsed.hostname !== "www.skills.sh") continue;
+      if (parsed.pathname.replace(/\/$/, "") === expectedPath) {
+        return `${SKILLS_SH_ORIGIN}${expectedPath}`;
+      }
+    } catch {
+      // Continue scanning source URLs.
+    }
+  }
+
+  if (repo.sources?.includes("skills.sh")) {
+    return `${SKILLS_SH_ORIGIN}/${repo.repoKey}`;
+  }
+
+  return "";
+}
+
+function repoNeedsSkillsShMapping(directory, repoKey) {
+  return (directory.officialSkills || []).some(
+    (skill) =>
+      skill.repoKey === repoKey &&
+      Number(skill.installsCount || 0) === 0 &&
+      !skill.sources?.includes("skills.sh")
+  );
+}
+
+async function fetchSkillsShRepoInstalls(repoUrl, repoKey) {
+  try {
+    const repoHtml = await fetchSkillsShHtml(repoUrl);
+    const repoRecords = parseSkillsShRepoInstallRecords(repoHtml, repoKey);
+    if (repoRecords.length) return repoRecords;
+
+    const skillUrls = extractSkillsShSkillUrls(repoHtml, repoKey);
+    if (!skillUrls.length) return null;
+
+    const records = [];
+    await mapWithConcurrency(skillUrls, SKILLS_SH_INSTALLS_CONCURRENCY, async (url) => {
+      const record = await fetchSkillsShSkillInstall(url);
+      if (record) records.push(record);
+    });
+
+    return records.length ? records : null;
+  } catch {
+    return null;
+  }
+}
+
+function parseSkillsShRepoInstallRecords(html, repoKey) {
+  const records = [];
+  const escapedRepoKey = escapeRegExp(repoKey);
+  const linkPattern = new RegExp(`<a\\b[^>]*href="/${escapedRepoKey}/([^"#?]+)"[\\s\\S]*?<\\/a>`, "g");
+  for (const match of html.matchAll(linkPattern)) {
+    const block = match[0];
+    const skillSlug = decodeURIComponent(match[1]).replace(/\/$/, "");
+    if (!skillSlug) continue;
+
+    const countMatch = block.match(/<span[^>]*>\s*([0-9][0-9,]*)\s*<\/span>/);
+    if (!countMatch) continue;
+
+    const headingMatch = block.match(/<h3[^>]*>([\s\S]*?)<\/h3>/);
+    records.push({
+      name: headingMatch ? stripHtml(headingMatch[1]) : skillSlug,
+      url: `${SKILLS_SH_ORIGIN}/${repoKey}/${encodeURIComponent(skillSlug)}`,
+      installs: parseInteger(countMatch[1]),
+    });
+  }
+  return records;
+}
+
+async function fetchSkillsShSkillInstall(url) {
+  try {
+    const html = await fetchSkillsShHtml(url);
+    for (const json of extractJsonLd(html)) {
+      const nodes = Array.isArray(json) ? json : [json];
+      for (const node of nodes) {
+        if (node?.["@type"] !== "SoftwareApplication") continue;
+        const installs = Number(node.interactionStatistic?.userInteractionCount);
+        if (!Number.isFinite(installs)) continue;
+        return {
+          name: String(node.name || "").trim(),
+          url: String(node.url || url),
+          installs,
+        };
+      }
+    }
+  } catch {
+    return null;
+  }
+
+  return null;
+}
+
+async function fetchSkillsShHtml(url) {
+  const response = await fetch(url, {
+    headers: {
+      Accept: "text/html,application/xhtml+xml",
+      "User-Agent": "Skillscout official skills enricher",
+    },
+    signal: AbortSignal.timeout(SKILLS_SH_FETCH_TIMEOUT_MS),
+  });
+  if (!response.ok) {
+    throw new Error(`Could not fetch ${url}: ${response.status}`);
+  }
+  return response.text();
+}
+
+function extractSkillsShSkillUrls(html, repoKey) {
+  const urls = new Set();
+  const escapedRepoKey = escapeRegExp(repoKey);
+  const linkPattern = new RegExp(`href="/${escapedRepoKey}/([^"#?]+)"`, "g");
+  for (const match of html.matchAll(linkPattern)) {
+    const skillSlug = decodeURIComponent(match[1]).replace(/\/$/, "");
+    if (!skillSlug) continue;
+    urls.add(`${SKILLS_SH_ORIGIN}/${repoKey}/${encodeURIComponent(skillSlug)}`);
+  }
+  return [...urls];
+}
+
+function extractJsonLd(html) {
+  const records = [];
+  const scriptPattern = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g;
+  for (const match of html.matchAll(scriptPattern)) {
+    try {
+      records.push(JSON.parse(decodeHtmlEntities(match[1])));
+    } catch {
+      // Skip unparsable JSON-LD blocks.
+    }
+  }
+  return records;
+}
+
+function matchSkillsShInstallRecord(records, skill) {
+  const candidates = new Set([
+    normalizeKey(skill.skillName),
+    normalizeKey(skill.displayName),
+    normalizeKey(skill.skillKey?.split("/").pop()),
+  ]);
+
+  for (const record of records) {
+    const name = normalizeKey(record.name);
+    const urlSlug = normalizeKey(record.url?.split("/").pop());
+    if (candidates.has(name) || candidates.has(urlSlug)) {
+      return record;
+    }
+  }
+
+  return null;
+}
+
+function sumMappedInstalls(skills, matchedSkillKeys) {
+  let total = 0;
+  for (const skill of skills) {
+    if (!matchedSkillKeys.has(skill.skillKey)) continue;
+    total += Number(skill.installsCount || 0);
+  }
+  return total;
+}
+
+function recomputeInstallTotals(directory) {
+  const installsByRepo = new Map();
+  const knownRepoKeys = new Set();
+  for (const skill of directory.officialSkills || []) {
+    if (!skill.repoKey) continue;
+    if (skill.sources?.includes("skills.sh")) {
+      knownRepoKeys.add(skill.repoKey);
+      installsByRepo.set(
+        skill.repoKey,
+        (installsByRepo.get(skill.repoKey) || 0) + Number(skill.installsCount || 0)
+      );
+    }
+  }
+
+  for (const repo of directory.officialRepos || []) {
+    if (!knownRepoKeys.has(repo.repoKey)) continue;
+    repo.installsCount = Math.max(Number(repo.installsCount || 0), installsByRepo.get(repo.repoKey) || 0);
+  }
+
+  const installsByOwner = new Map();
+  for (const repo of directory.officialRepos || []) {
+    if (!repo.sources?.includes("skills.sh")) continue;
+    installsByOwner.set(
+      repo.ownerKey,
+      (installsByOwner.get(repo.ownerKey) || 0) + Number(repo.installsCount || 0)
+    );
+  }
+
+  for (const owner of directory.officialOwners || []) {
+    if (!installsByOwner.has(owner.ownerKey)) continue;
+    owner.installsCount = Math.max(Number(owner.installsCount || 0), installsByOwner.get(owner.ownerKey) || 0);
+    addUnique(owner.sources, "skills.sh");
+    addUnique(owner.sourceUrls, `${SKILLS_SH_ORIGIN}/${owner.ownerKey}`);
+  }
+}
+
 // ── Star count enrichment ─────────────────────────────────────────────────────
 // Fetches real stargazers_count from GitHub for repos with starsCount === 0
 // (typically newly discovered vendors). Aggregates totals up to the owner level.
@@ -284,6 +567,37 @@ function normalizeKey(value) {
     .replace(/&amp;/g, "and")
     .replace(/[^a-z0-9._/-]+/g, "-")
     .replace(/^-+|-+$/g, "");
+}
+
+function addUnique(list, value) {
+  if (!Array.isArray(list) || !value) return;
+  if (!list.includes(value)) list.push(value);
+}
+
+function decodeHtmlEntities(value) {
+  return String(value || "")
+    .replace(/&quot;/g, '"')
+    .replace(/&#x27;/g, "'")
+    .replace(/&#39;/g, "'")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">");
+}
+
+function stripHtml(value) {
+  return decodeHtmlEntities(value)
+    .replace(/<[^>]*>/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function parseInteger(value) {
+  const parsed = Number.parseInt(String(value || "").replace(/,/g, ""), 10);
+  return Number.isFinite(parsed) ? parsed : 0;
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function refreshStats(directory) {
