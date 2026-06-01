@@ -269,6 +269,9 @@ async function enrichWithSkillsShInstalls(directory) {
       addUnique(skill.sources, "skills.sh");
       addUnique(skill.sourceUrls, installRecord.url);
       skill.installsCount = Math.max(Number(skill.installsCount || 0), installRecord.installs);
+      if (isGenericSkillName(skill.skillName) && installRecord.name) {
+        skill.displayName = installRecord.name;
+      }
       skill.confidence = "high";
       matchedSkillKeys.add(skill.skillKey);
       updatedSkills++;
@@ -358,14 +361,14 @@ function parseSkillsShRepoInstallRecords(html, repoKey) {
     const skillSlug = decodeURIComponent(match[1]).replace(/\/$/, "");
     if (!skillSlug) continue;
 
-    const countMatch = block.match(/<span[^>]*>\s*([0-9][0-9,]*)\s*<\/span>/);
+    const countMatch = block.match(/<span[^>]*>\s*([0-9][0-9,.]*\s*[KMB]?)\s*<\/span>/i);
     if (!countMatch) continue;
 
     const headingMatch = block.match(/<h3[^>]*>([\s\S]*?)<\/h3>/);
     records.push({
       name: headingMatch ? stripHtml(headingMatch[1]) : skillSlug,
       url: `${SKILLS_SH_ORIGIN}/${repoKey}/${encodeURIComponent(skillSlug)}`,
-      installs: parseInteger(countMatch[1]),
+      installs: parseInstallCount(countMatch[1]),
     });
   }
   return records;
@@ -434,6 +437,10 @@ function extractJsonLd(html) {
 }
 
 function matchSkillsShInstallRecord(records, skill) {
+  if (records.length === 1 && isGenericSkillName(skill.skillName)) {
+    return records[0];
+  }
+
   const candidates = new Set([
     normalizeKey(skill.skillName),
     normalizeKey(skill.displayName),
@@ -449,6 +456,10 @@ function matchSkillsShInstallRecord(records, skill) {
   }
 
   return null;
+}
+
+function isGenericSkillName(value) {
+  return ["skill", "skills"].includes(normalizeKey(value));
 }
 
 function sumMappedInstalls(skills, matchedSkillKeys) {
@@ -594,6 +605,17 @@ function stripHtml(value) {
 function parseInteger(value) {
   const parsed = Number.parseInt(String(value || "").replace(/,/g, ""), 10);
   return Number.isFinite(parsed) ? parsed : 0;
+}
+
+function parseInstallCount(value) {
+  const label = String(value || "").trim().replace(/,/g, "");
+  const match = label.match(/^([0-9]+(?:\.[0-9]+)?)\s*([KMB])?$/i);
+  if (!match) return parseInteger(label);
+
+  const number = Number.parseFloat(match[1]);
+  const suffix = (match[2] || "").toUpperCase();
+  const multiplier = suffix === "B" ? 1_000_000_000 : suffix === "M" ? 1_000_000 : suffix === "K" ? 1_000 : 1;
+  return Number.isFinite(number) ? Math.round(number * multiplier) : 0;
 }
 
 function escapeRegExp(value) {
