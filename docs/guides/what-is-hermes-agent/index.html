@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>What Is Hermes Agent? Skills and Models | Skillscout</title>
+    <meta
+      name="description"
+      content="A practical overview of Hermes Agent by Nous Research: what it does, why builders use it, which models it supports, and how official skills work."
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://skillscout.sh/guides/what-is-hermes-agent/" />
+    <meta property="og:title" content="What Is Hermes Agent? Skills and Models | Skillscout" />
+    <meta
+      property="og:description"
+      content="A practical overview of Hermes Agent by Nous Research: what it does, why builders use it, which models it supports, and how official skills work."
+    />
+    <meta property="og:site_name" content="Skillscout" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://skillscout.sh/guides/what-is-hermes-agent/" />
+    <meta property="og:image" content="https://skillscout.sh/assets/guides/hermes-agent-hero.jpg" />
+    <meta
+      property="og:image:alt"
+      content="Illustration of a winged AI agent standing in front of a bright blue and pink background."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="What Is Hermes Agent? Skills and Models | Skillscout" />
+    <meta
+      name="twitter:description"
+      content="A practical overview of Hermes Agent by Nous Research: what it does, why builders use it, which models it supports, and how official skills work."
+    />
+    <meta name="twitter:image" content="https://skillscout.sh/assets/guides/hermes-agent-hero.jpg" />
+    <meta
+      name="twitter:image:alt"
+      content="Illustration of a winged AI agent standing in front of a bright blue and pink background."
+    />
+    <link rel="icon" href="../../assets/skillscout-mark-48.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://skillscout.sh/guides/what-is-hermes-agent/#article",
+      "headline": "What Is Hermes Agent? Skills, Models, and Official Skills",
+      "description": "A practical overview of Hermes Agent by Nous Research: what it does, why builders use it, which models it supports, and how official skills work.",
+      "author": {
+        "@type": "Organization",
+        "name": "Skillscout"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Skillscout",
+        "url": "https://skillscout.sh/"
+      },
+      "image": "https://skillscout.sh/assets/guides/hermes-agent-hero.jpg",
+      "datePublished": "2026-06-01",
+      "dateModified": "2026-06-01",
+      "mainEntityOfPage": "https://skillscout.sh/guides/what-is-hermes-agent/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://skillscout.sh/guides/what-is-hermes-agent/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://skillscout.sh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://skillscout.sh/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "What Is Hermes Agent?",
+          "item": "https://skillscout.sh/guides/what-is-hermes-agent/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+    <style>
+      :root {
+        --bg: #f6f6f3;
+        --panel: #ffffff;
+        --border: #e4e4df;
+        --text: #111111;
+        --text-muted: #5f5f5f;
+        --shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.04);
+        --max: 760px;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      .container {
+        width: min(calc(100% - 40px), var(--max));
+        margin: 0 auto;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 76px;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 800;
+        font-size: 18px;
+      }
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        display: grid;
+        place-items: center;
+        box-shadow: var(--shadow-sm);
+      }
+      .brand-mark img {
+        width: 18px;
+        height: 18px;
+      }
+      .nav-links {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .nav-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .nav-links a:hover { color: var(--text); }
+      article {
+        padding: 28px 0 72px;
+      }
+      .eyebrow {
+        margin: 0 0 14px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(34px, 6vw, 56px);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+      }
+      .lead {
+        margin: 0 0 28px;
+        font-size: 19px;
+        line-height: 1.58;
+        color: var(--text-muted);
+      }
+      .meta {
+        margin: 0 0 32px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+      .hero-figure { margin: 0 0 32px; }
+      .hero-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-sm);
+        background: var(--panel);
+      }
+      h2 {
+        margin: 40px 0 14px;
+        font-size: 24px;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+      }
+      p, li {
+        font-size: 16px;
+        line-height: 1.68;
+      }
+      article a {
+        color: var(--text);
+        font-weight: 500;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.14em;
+      }
+      p { margin: 0 0 16px; }
+      ul, ol {
+        margin: 0 0 20px;
+        padding-left: 22px;
+      }
+      code {
+        padding: 0.12em 0.38em;
+        border-radius: 8px;
+        background: #eeefec;
+        font-size: 0.9em;
+      }
+      pre {
+        overflow: auto;
+        padding: 16px 18px;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+        margin: 18px 0 24px;
+      }
+      pre code {
+        padding: 0;
+        background: transparent;
+      }
+      .table-wrap {
+        overflow-x: auto;
+        margin: 18px 0 26px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 680px;
+      }
+      th, td {
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--border);
+        text-align: left;
+        vertical-align: top;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      th {
+        background: #f0f0eb;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      tr:last-child td { border-bottom: 0; }
+      @media (max-width: 720px) {
+        .nav {
+          min-height: auto;
+          padding: 16px 0;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container nav">
+      <a class="brand" href="https://skillscout.sh/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=hermes-agent-skills">
+        <span class="brand-mark"><img src="../../assets/skillscout-mark-48.png" alt="Skillscout logo" /></span>
+        <span>Skillscout</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="https://skillscout.sh/guides/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=hermes-agent-skills">Guides</a>
+        <a href="https://skillscout.sh/official/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=hermes-agent-skills">Official skills</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <article>
+        <p class="eyebrow">Guides</p>
+        <h1>What is Hermes Agent?</h1>
+        <p class="lead">
+          A practical overview of Hermes Agent by Nous Research: what it does, why builders use it,
+          which models it supports, and how official skills work.
+        </p>
+        <p class="meta">Updated June 1, 2026</p>
+        <figure class="hero-figure">
+          <img
+            src="../../assets/guides/hermes-agent-hero.jpg"
+            alt="Illustration of a winged AI agent standing in front of a bright blue and pink background."
+            loading="eager"
+          />
+        </figure>
+
+        <p>
+          Hermes Agent is an open-source AI agent from
+          <a href="https://nousresearch.com/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=hermes-agent-skills">Nous Research</a>.
+          It runs as a long-lived assistant that can use tools, remember prior work, create skills
+          from experience, and operate from the terminal, dashboard, or messaging apps such as
+          Telegram, Discord, Slack, WhatsApp, Signal, and Teams.
+        </p>
+        <p>
+          Hermes Agent is getting attention because it is built for agent workflows that keep
+          running beyond one chat tab. It supports persistent memory, tool use, model routing,
+          subagents, messaging gateways, scheduled automations, MCP servers, and a first-class
+          skills system. For builders experimenting with Claude Code, Codex, Cursor, OpenCode, local
+          models, and open agent infrastructure, Hermes combines several agent patterns in one
+          open-source project.
+        </p>
+
+        <h2>Why Hermes Agent is getting popular</h2>
+        <p>
+          Hermes Agent fits a specific moment in AI tooling. Builders are moving from single-turn
+          chat to persistent agents that can keep context, use tools, and repeat workflows. Hermes
+          gives that workflow a local home.
+        </p>
+        <ul>
+          <li>It is open source, with the core project in the <a href="https://github.com/NousResearch/hermes-agent?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=hermes-agent-skills">NousResearch/hermes-agent</a> GitHub repository.</li>
+          <li>It is model agnostic and can use Nous Portal, OpenRouter, Anthropic, OpenAI, Gemini, and custom endpoints.</li>
+          <li>It works with local OpenAI-compatible runtimes such as Ollama.</li>
+          <li>It has persistent memory, so sessions and memories can survive across interactions.</li>
+          <li>It supports skills natively, including discovery, loading, updating, and reuse.</li>
+          <li>It reaches the user outside the terminal through messaging surfaces.</li>
+          <li>It supports subagents for parallel tasks with isolated contexts.</li>
+        </ul>
+        <p>
+          This combination makes Hermes attractive for builders who want a personal agent, a
+          research assistant, a coding agent, or an automation runner that can live on a laptop, VPS,
+          or serverless backend.
+        </p>
+
+        <h2>Which models does Hermes Agent support?</h2>
+        <p>
+          Hermes Agent supports hosted and local models through several provider paths: Nous Portal,
+          OpenRouter, Anthropic, OpenAI, Gemini, custom OpenAI-compatible endpoints, and local
+          runtimes such as Ollama. Hermes uses a main model for user messages and tool-call loops,
+          plus auxiliary models for context compression, vision, web extraction, approval scoring,
+          MCP routing, session titles, and skill search.
+        </p>
+
+        <h2>What is Hermes Agent used for?</h2>
+        <p>
+          Hermes Agent is useful when the task benefits from continuity. A normal chatbot answers a
+          message. A Hermes-style workflow can keep memory, use tools, hand work to subagents, load
+          skills, and return through a messaging gateway.
+        </p>
+        <ul>
+          <li>Coding workflows: planning, debugging, PR review, GitHub issue handling, tests, and codebase inspection.</li>
+          <li>Research: web search, paper discovery, local knowledge base search, OSINT-style public record workflows, and recurring monitoring.</li>
+          <li>Personal productivity: notes, reminders, documents, email, and messaging.</li>
+          <li>MLOps and model work: fine-tuning, serving, evaluation, vector databases, structured generation, and GPU workflows.</li>
+          <li>Creative work: diagrams, video pipelines, Blender control, memes, SVG diagrams, and HTML-based video compositions.</li>
+          <li>Operations: Docker management, tunnels, webhooks, watchers, and deployment workflows.</li>
+          <li>Security: 1Password CLI usage, OSS forensics, username research, and authorized web pentest workflows.</li>
+        </ul>
+        <p>
+          Hermes becomes more useful when a workflow has steps, tools, files, credentials, memory,
+          or repeatable procedures.
+        </p>
+
+        <h2>How Hermes Agent works with skills</h2>
+        <p>
+          Hermes skills are reusable instruction packages the agent can load when needed. Hermes
+          stores skills in <code>~/.hermes/skills/</code> and supports external skill directories
+          such as a shared <code>~/.agents/skills/</code> folder. Because Hermes skills use the open
+          <code>SKILL.md</code> format, many of them can also be used with other skill-aware agents.
+          Give your AI agent the install source and a clear prompt such as: “Install this skill,
+          read its <code>SKILL.md</code>, and adapt it to your skill folder and command format.”
+        </p>
+        <p>
+          Each skill usually contains a <code>SKILL.md</code> file with frontmatter and
+          instructions. A skill can also include references, scripts, templates, and assets. Hermes
+          follows a progressive disclosure pattern: it can list available skills cheaply, then load
+          the full skill only when the task calls for it.
+        </p>
+        <p>Hermes makes installed skills available as slash commands:</p>
+        <pre><code>/github-pr-workflow create a PR for the auth refactor
+/plan design a rollout for migrating our auth provider
+/excalidraw</code></pre>
+        <p>It also supports natural-language skill discovery:</p>
+        <pre><code>hermes chat --toolsets skills -q "What skills do you have?"
+hermes chat --toolsets skills -q "Show me the axolotl skill"</code></pre>
+        <p>
+          Hermes stores skills as files on disk, so useful workflows can survive beyond a single
+          chat. Through its <code>skill_manage</code> tool, Hermes can create, patch, edit, and
+          delete skills, then reuse the saved workflow later.
+        </p>
+
+        <h2>How Hermes Skills Hub works</h2>
+        <p>
+          Hermes Skills Hub is the skill-management layer inside Hermes, exposed through the
+          <code>hermes skills</code> CLI commands and documented in the
+          <a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/skills?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=hermes-agent-skills">Hermes skills docs</a>.
+          It handles browsing, searching, installing, auditing, updating, and uninstalling skills.
+          It can install official optional skills, skills from skills.sh, well-known skill
+          endpoints, and direct <code>SKILL.md</code> URLs.
+        </p>
+        <pre><code>hermes skills browse --source official
+hermes skills search kubernetes
+hermes skills inspect openai/skills/k8s
+hermes skills install official/security/1password
+hermes skills audit
+hermes skills update</code></pre>
+        <p>
+          Skills are executable context. A skill can shape tool use, load scripts, use credentials,
+          and change how the agent behaves. Browsing, inspecting, auditing, and updating skills are
+          part of the workflow.
+        </p>
+
+        <h2>Official Nous Research skills</h2>
+        <p>
+          <a href="https://nousresearch.com/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=hermes-agent-skills">Nous Research</a>
+          ships two kinds of skills for Hermes Agent: bundled skills included with Hermes and
+          copied into <code>~/.hermes/skills/</code> during install, plus optional official skills
+          shipped under <code>optional-skills/</code> and installed explicitly with
+          <code>hermes skills install official/&lt;category&gt;/&lt;skill&gt;</code>.
+        </p>
+
+        <h2>Notable Hermes skills worth knowing</h2>
+        <p>
+          Hermes has a large official skill catalog, so the useful starting point is the subset
+          that gives the agent practical behavior it can repeat.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Skill</th>
+                <th>Why it is worth using</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>dogfood</code></td>
+                <td>Use it to make Hermes test a web app like a QA pass: open pages, inspect console errors, collect screenshots, classify issues, and return a structured report.</td>
+              </tr>
+              <tr>
+                <td><code>adversarial-ux-test</code></td>
+                <td>Use it when a product needs stress testing from the perspective of a frustrated or confused user. It helps surface unclear copy, fragile flows, and UX assumptions.</td>
+              </tr>
+              <tr>
+                <td><code>github-pr-workflow</code></td>
+                <td>Use it to keep pull request work consistent: branch, commit, open the PR, monitor CI, and prepare the merge path.</td>
+              </tr>
+              <tr>
+                <td><code>subagent-driven-development</code></td>
+                <td>Use it for larger engineering tasks where separate agents can investigate, implement, or review isolated parts of the work.</td>
+              </tr>
+              <tr>
+                <td><code>axolotl</code></td>
+                <td>Use it for LLM fine-tuning workflows that need structured YAML configuration and repeatable training steps. It reflects Nous Research’s focus on open model work.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          The <code>dogfood</code> skill is useful because it gives Hermes a testing procedure,
+          browser-tool checklist, evidence format, and report template. It turns web application QA
+          into a reusable agent workflow.
+        </p>
+
+        <h2>Official optional Nous Research skills by category</h2>
+        <p>The optional catalog is broad. A category view makes the catalog easier to scan.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Why the category is useful</th>
+                <th>Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Autonomous AI agents</td>
+                <td>Useful when Hermes needs to coordinate with other agent CLIs, memory systems, or autonomous coding environments.</td>
+                <td><code>openhands</code>, <code>blackbox</code>, <code>grok</code>, <code>honcho</code>, <code>antigravity-cli</code></td>
+              </tr>
+              <tr>
+                <td>Communication</td>
+                <td>Useful for decision-heavy work where the agent needs a repeatable framework for trade-offs and recommendations.</td>
+                <td><code>one-three-one-rule</code></td>
+              </tr>
+              <tr>
+                <td>Creative</td>
+                <td>Useful when the agent needs to generate visual or media assets with defined tools and output formats.</td>
+                <td><code>blender-mcp</code>, <code>concept-diagrams</code>, <code>hyperframes</code>, <code>meme-generation</code></td>
+              </tr>
+              <tr>
+                <td>DevOps</td>
+                <td>Useful when Hermes needs to operate local infrastructure, containers, tunnels, watchers, or AI app command-line tools.</td>
+                <td><code>docker-management</code>, <code>pinggy-tunnel</code>, <code>watchers</code>, <code>inference-sh-cli</code></td>
+              </tr>
+              <tr>
+                <td>Dogfood</td>
+                <td>Useful for testing products with repeatable QA and UX review workflows.</td>
+                <td><code>adversarial-ux-test</code></td>
+              </tr>
+              <tr>
+                <td>Finance</td>
+                <td>Useful when the agent needs structured spreadsheet models, valuation workflows, decks, or market context.</td>
+                <td><code>excel-author</code>, <code>dcf-model</code>, <code>lbo-model</code>, <code>stocks</code></td>
+              </tr>
+              <tr>
+                <td>MCP</td>
+                <td>Useful when Hermes needs to build, connect, or operate MCP servers and tools.</td>
+                <td><code>fastmcp</code>, <code>mcporter</code></td>
+              </tr>
+              <tr>
+                <td>MLOps</td>
+                <td>Useful for model builders working on fine-tuning, inference, vector search, structured generation, GPU cloud, data curation, or evaluation.</td>
+                <td><code>axolotl</code>, <code>trl-fine-tuning</code>, <code>unsloth</code>, <code>vllm</code>, <code>qdrant</code></td>
+              </tr>
+              <tr>
+                <td>Research</td>
+                <td>Useful when the agent needs repeatable search, OSINT, code graph, scientific, or local knowledge retrieval workflows.</td>
+                <td><code>duckduckgo-search</code>, <code>osint-investigation</code>, <code>qmd</code>, <code>gitnexus-explorer</code></td>
+              </tr>
+              <tr>
+                <td>Security</td>
+                <td>Useful when Hermes needs guided workflows for secrets tooling, supply-chain investigation, username research, or authorized web testing.</td>
+                <td><code>1password</code>, <code>oss-forensics</code>, <code>sherlock</code>, <code>web-pentest</code></td>
+              </tr>
+              <tr>
+                <td>Software development</td>
+                <td>Useful when the agent needs to document a codebase or debug REST and GraphQL APIs with a repeatable process.</td>
+                <td><code>code-wiki</code>, <code>rest-graphql-debug</code></td>
+              </tr>
+              <tr>
+                <td>Web development</td>
+                <td>Useful when the agent needs to control web app UI through natural-language instructions.</td>
+                <td><code>page-agent</code></td>
+              </tr>
+              <tr>
+                <td>Blockchain</td>
+                <td>Useful for read-only chain analysis, wallet inspection, market data, and transaction context.</td>
+                <td><code>evm</code>, <code>solana</code>, <code>hyperliquid</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Bundled Hermes skills worth knowing</h2>
+        <p>
+          Bundled skills are active after installation. They cover everyday workflows such as
+          planning, GitHub PRs, code review, TDD, systematic debugging, subagent execution,
+          Obsidian, Google Workspace, Notion, MCP, arXiv, and LLM wiki workflows. The bundled
+          catalog gives Hermes a practical baseline. The optional catalog expands it into heavier
+          workflows that users can install when they need them.
+        </p>
+
+        <h2>How to find official Hermes and Nous Research skills</h2>
+        <ol>
+          <li>Use the Hermes docs: the bundled skills catalog and optional skills catalog.</li>
+          <li>Check the <a href="https://github.com/NousResearch/hermes-agent?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=hermes-agent-skills">NousResearch/hermes-agent</a> GitHub repository.</li>
+          <li>Use <code>hermes skills browse --source official</code> inside Hermes.</li>
+          <li>Inspect before installing with <code>hermes skills inspect</code>.</li>
+          <li>Run <code>hermes skills audit</code> after installing third-party or hub skills.</li>
+          <li>Browse the <a href="https://skillscout.sh/official/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=hermes-agent-skills">Skillscout official skills directory</a> when comparing official AI agent skills across vendors, docs, and GitHub sources.</li>
+        </ol>
+        <p>
+          Official skills are useful because they come from the project owner and match the way
+          Hermes is designed to work. The same security rule still applies: inspect a skill before
+          installing it, especially when it can run scripts, access credentials, or call external
+          services.
+        </p>
+      </article>
+    </main>
+  </body>
+</html>

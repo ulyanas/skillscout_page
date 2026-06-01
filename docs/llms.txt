@@ -6,6 +6,7 @@
 
 - [Homepage](https://skillscout.sh/): Product overview, core value proposition, and the main call to install the Chrome extension.
 - [Guides](https://skillscout.sh/guides/): Collection of articles about AI and agentic skills.
+- [What Is Hermes Agent?](https://skillscout.sh/guides/what-is-hermes-agent/): Explains Hermes Agent by Nous Research, supported models, official skills, and how Hermes skills work with other skill-aware agents.
 - [AI Agent Skills Security](https://skillscout.sh/guides/ai-agent-skills-security/): Explains security risks with third-party skills, safer installation workflows, payment-related controls, and official-skill discovery.
 - [How to Organize AI Agent Skills](https://skillscout.sh/guides/how-to-organize-agent-skills/): Explains how to keep one shared skill library across Claude, Codex, Cursor, Windsurf, and GitHub Copilot.
 - [What Are AI Agent Skills?](https://skillscout.sh/guides/what-are-ai-agent-skills/): Explains what AI agent skills are, how they work, and why reusable workflows matter.
