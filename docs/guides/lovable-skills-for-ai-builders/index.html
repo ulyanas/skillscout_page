@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lovable Skills for AI Builders | Skillscout</title>
+    <meta
+      name="description"
+      content="A practical guide to using Lovable skills with official AI agent skills for SEO, auth, backend, analytics, payments, and observability."
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://skillscout.sh/guides/lovable-skills-for-ai-builders/" />
+    <meta property="og:title" content="Lovable Skills for AI Builders | Skillscout" />
+    <meta
+      property="og:description"
+      content="A practical guide to using Lovable skills with official AI agent skills for SEO, auth, backend, analytics, payments, and observability."
+    />
+    <meta property="og:site_name" content="Skillscout" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://skillscout.sh/guides/lovable-skills-for-ai-builders/" />
+    <meta property="og:image" content="https://skillscout.sh/assets/guides/agent-skills-hero.jpg" />
+    <meta property="og:image:alt" content="Black-and-white illustration of AI agents in suits with radiating light beams." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lovable Skills for AI Builders | Skillscout" />
+    <meta
+      name="twitter:description"
+      content="A practical guide to using Lovable skills with official AI agent skills for SEO, auth, backend, analytics, payments, and observability."
+    />
+    <meta name="twitter:image" content="https://skillscout.sh/assets/guides/agent-skills-hero.jpg" />
+    <meta name="twitter:image:alt" content="Black-and-white illustration of AI agents in suits with radiating light beams." />
+    <link rel="icon" href="../../assets/skillscout-mark-48.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://skillscout.sh/guides/lovable-skills-for-ai-builders/#article",
+      "headline": "Lovable Skills for AI Builders: 6 Official Skills Worth Installing",
+      "description": "A practical guide to using Lovable skills with official AI agent skills for SEO, auth, backend, analytics, payments, and observability.",
+      "author": {
+        "@type": "Organization",
+        "name": "Skillscout"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Skillscout",
+        "url": "https://skillscout.sh/"
+      },
+      "image": "https://skillscout.sh/assets/guides/agent-skills-hero.jpg",
+      "datePublished": "2026-06-30",
+      "dateModified": "2026-06-30",
+      "mainEntityOfPage": "https://skillscout.sh/guides/lovable-skills-for-ai-builders/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://skillscout.sh/guides/lovable-skills-for-ai-builders/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://skillscout.sh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://skillscout.sh/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Lovable Skills for AI Builders",
+          "item": "https://skillscout.sh/guides/lovable-skills-for-ai-builders/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+    <style>
+      :root {
+        --bg: #f6f6f3;
+        --panel: #ffffff;
+        --border: #e4e4df;
+        --text: #111111;
+        --text-muted: #5f5f5f;
+        --shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.04);
+        --max: 760px;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      .container {
+        width: min(calc(100% - 40px), var(--max));
+        margin: 0 auto;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 76px;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 800;
+        font-size: 18px;
+      }
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        display: grid;
+        place-items: center;
+        box-shadow: var(--shadow-sm);
+      }
+      .brand-mark img {
+        width: 18px;
+        height: 18px;
+      }
+      .nav-links {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .nav-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .nav-links a:hover { color: var(--text); }
+      article {
+        padding: 28px 0 72px;
+      }
+      .eyebrow {
+        margin: 0 0 14px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(34px, 6vw, 56px);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+      }
+      .lead {
+        margin: 0 0 28px;
+        font-size: 19px;
+        line-height: 1.58;
+        color: var(--text-muted);
+      }
+      .meta {
+        margin: 0 0 32px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+      .hero-figure { margin: 0 0 32px; }
+      .hero-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-sm);
+        background: var(--panel);
+      }
+      h2 {
+        margin: 40px 0 14px;
+        font-size: 24px;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+      }
+      h3 {
+        margin: 28px 0 12px;
+        font-size: 18px;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+      }
+      p, li {
+        font-size: 16px;
+        line-height: 1.68;
+      }
+      article a {
+        color: var(--text);
+        font-weight: 500;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.14em;
+      }
+      p { margin: 0 0 16px; }
+      ul, ol {
+        margin: 0 0 20px;
+        padding-left: 22px;
+      }
+      code {
+        padding: 0.12em 0.38em;
+        border-radius: 8px;
+        background: #eeefec;
+        font-size: 0.9em;
+      }
+      pre {
+        overflow: auto;
+        padding: 16px 18px;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+        margin: 18px 0 24px;
+      }
+      pre code {
+        padding: 0;
+        background: transparent;
+      }
+      @media (max-width: 720px) {
+        .nav {
+          min-height: auto;
+          padding: 16px 0;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container nav">
+      <a class="brand" href="https://skillscout.sh/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=lovable-skills-ai-builders">
+        <span class="brand-mark"><img src="../../assets/skillscout-mark-48.png" alt="Skillscout logo" /></span>
+        <span>Skillscout</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="https://skillscout.sh/guides/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=lovable-skills-ai-builders">Guides</a>
+        <a href="https://skillscout.sh/official/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=lovable-skills-ai-builders">Official skills</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <article>
+        <p class="eyebrow">Guides</p>
+        <h1>Lovable skills for AI builders</h1>
+        <p class="lead">
+          Six official skills worth installing for SEO, auth, backend, analytics, payments,
+          and observability in Lovable-built apps.
+        </p>
+        <p class="meta">Updated June 30, 2026</p>
+        <figure class="hero-figure">
+          <img
+            src="../../assets/guides/agent-skills-hero.jpg"
+            alt="Black-and-white illustration of AI agents in suits with radiating light beams."
+            loading="eager"
+          />
+        </figure>
+
+        <p>
+          <a href="https://docs.lovable.dev/features/skills?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=lovable-skills-ai-builders">Lovable skills</a>
+          make repeated app-building instructions reusable. A skill is a named markdown playbook
+          with a description and instructions. Lovable can load it automatically when the task
+          matches, or you can invoke it directly from chat with a slash command.
+        </p>
+        <p>
+          That matters for AI builders because app work repeats. You set up auth, connect a
+          database, add payments, wire analytics, improve SEO, and check production telemetry
+          across many projects. Skills let you turn those recurring workflows into reusable
+          instructions that carry across projects.
+        </p>
+        <p>
+          Lovable already ships built-in skills for common work. The launch coverage highlighted
+          <code>/redesign</code>, <code>/accessibility</code>, <code>/seo-review</code>,
+          <code>/video-creator</code>, and <code>/skill-creator</code>. Lovable's own docs
+          describe built-in skills for accessibility checks, redesigns, SEO reviews, skill
+          creation, and video creation, plus custom workspace skills that can be created in chat,
+          written manually, imported from GitHub, or uploaded as ZIP files.
+        </p>
+        <p>
+          The practical next step is to add official skills from the tools you use around the app.
+          Skillscout's official directory is useful here because it lets you browse vendor-owned
+          skills while you are deciding what to install. For a typical Lovable-built SaaS or
+          internal tool, this is a coherent starter set.
+        </p>
+
+        <h2>The six-skill stack</h2>
+
+        <h3>1. Ahrefs for SEO and discoverability</h3>
+        <p>
+          Use the official
+          <a href="https://github.com/ahrefs/ahrefs-api-skills/tree/HEAD/skills/ahrefs-python?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=lovable-skills-ai-builders">Ahrefs <code>ahrefs-python</code> skill</a>
+          when the app needs SEO data behind the recommendations. It covers Ahrefs API usage
+          through the official Python SDK, including backlinks, organic keywords, domain rating,
+          rank tracking, site audits, Brand Radar, SERP overview, batch analysis, and web analytics.
+        </p>
+        <p>
+          This pairs naturally with Lovable's built-in SEO review skill. Lovable can review
+          metadata, structure, and indexing. Ahrefs gives your AI builder a way to pull real keyword
+          and domain data when the task moves from "make this page SEO-friendly" to "use search data
+          to decide what to build or fix."
+        </p>
+        <p>Good Lovable prompt:</p>
+        <pre><code>Install the official Ahrefs skill from this GitHub URL as a workspace skill:
+https://github.com/ahrefs/ahrefs-api-skills/tree/HEAD/skills/ahrefs-python
+
+Name it ahrefs-python. Use it when I ask for SEO data, keyword research, backlink analysis, domain metrics, rank tracking, site audit data, Brand Radar, or Ahrefs API work. Keep API keys in environment variables and keep secrets out of app code.</code></pre>
+
+        <h3>2. Better Auth for login and account setup</h3>
+        <p>
+          Use the official
+          <a href="https://github.com/better-auth/skills/tree/HEAD/better-auth/create-auth?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=lovable-skills-ai-builders">Better Auth <code>create-auth</code> skill</a>
+          when the app needs authentication. The skill is designed for TypeScript and JavaScript
+          apps. It detects frameworks, database adapters, existing auth libraries, and package
+          managers, then guides the setup for login, sign-up, OAuth providers, auth pages, and
+          related features.
+        </p>
+        <p>
+          This is a good fit for Lovable projects because auth usually touches routing, database
+          schema, UI, environment variables, and product rules. A reusable auth skill gives Lovable
+          a checklist and a decision flow before it starts writing code.
+        </p>
+        <p>Good Lovable prompt:</p>
+        <pre><code>Install the official Better Auth create-auth skill from this GitHub URL as a workspace skill:
+https://github.com/better-auth/skills/tree/HEAD/better-auth/create-auth
+
+Name it better-auth-create-auth. Use it when I ask to add login, sign-up, OAuth, organizations, admin auth, password reset, 2FA, or Better Auth setup to a TypeScript or JavaScript app. Before implementation, scan the project and ask only the missing planning questions.</code></pre>
+
+        <h3>3. Supabase for backend, database, RLS, storage, and auth-adjacent work</h3>
+        <p>
+          Use the official
+          <a href="https://github.com/supabase/agent-skills/tree/HEAD/skills/supabase?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=lovable-skills-ai-builders">Supabase skill</a>
+          when the app uses Supabase for database, auth, storage, realtime, edge functions,
+          vectors, cron, queues, or Postgres work. The skill is especially useful for Row Level
+          Security, migrations, auth sessions, JWT handling, storage policies, and schema changes.
+        </p>
+        <p>
+          Lovable can build a working app quickly. Supabase-specific mistakes can be subtle:
+          public schemas, RLS gaps, service-role keys in frontend code, stale JWT claims,
+          security-definer functions, and storage policy edge cases. The Supabase skill gives the
+          agent a vendor-authored safety checklist for those details.
+        </p>
+        <p>Good Lovable prompt:</p>
+        <pre><code>Install the official Supabase skill from this GitHub URL as a workspace skill:
+https://github.com/supabase/agent-skills/tree/HEAD/skills/supabase
+
+Name it supabase. Use it for any task involving Supabase database, auth, RLS, storage, realtime, edge functions, migrations, Postgres extensions, or Supabase client setup. Always check current Supabase docs or changelog before implementing and verify changes after applying them.</code></pre>
+
+        <h3>4. Metabase for embedded analytics</h3>
+        <p>
+          Use the official
+          <a href="https://github.com/metabase/agent-skills/tree/HEAD/skills/metabase-react-sdk-setup?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=lovable-skills-ai-builders">Metabase React SDK setup skill</a>
+          when the app needs embedded analytics or dashboards. The skill covers first-time setup for
+          the Metabase React SDK, including instance detection, API key handling, dashboard
+          discovery, JWT auth, SDK installation, and initial embedding code.
+        </p>
+        <p>
+          This fits Lovable well when you are building an internal tool, admin panel, client portal,
+          or SaaS dashboard. The skill tells the AI builder to get a Metabase URL and admin API key
+          before making API calls, keep <code>.env.metabase</code> out of application runtime
+          config, detect the Metabase version, and set up embedding correctly.
+        </p>
+        <p>Good Lovable prompt:</p>
+        <pre><code>Install the official Metabase React SDK setup skill from this GitHub URL as a workspace skill:
+https://github.com/metabase/agent-skills/tree/HEAD/skills/metabase-react-sdk-setup
+
+Name it metabase-react-sdk-setup. Use it when I ask to embed Metabase dashboards, configure @metabase/embedding-sdk-react, set up Metabase JWT embedding, or add analytics dashboards to an app. Ask for the Metabase URL and admin API key before making Metabase API calls.</code></pre>
+
+        <h3>5. Stripe for payments and subscriptions</h3>
+        <p>
+          Use the official
+          <a href="https://github.com/stripe/ai/tree/HEAD/skills/stripe-best-practices?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=lovable-skills-ai-builders">Stripe <code>stripe-best-practices</code> skill</a>
+          when the app accepts payments, sells subscriptions, uses Checkout, builds a marketplace,
+          manages connected accounts, or needs secure Stripe key handling. The skill routes payment
+          decisions across Checkout Sessions, PaymentIntents, Setup Intents, Billing, Connect, Tax,
+          Treasury, and security workflows.
+        </p>
+        <p>
+          This is the kind of skill you want loaded before payment code is written. It tells the
+          agent which Stripe API surface to use, recommends restricted API keys, points to go-live
+          checks, and covers webhooks and security practices.
+        </p>
+        <p>Good Lovable prompt:</p>
+        <pre><code>Install the official Stripe best practices skill from this GitHub URL as a workspace skill:
+https://github.com/stripe/ai/tree/HEAD/skills/stripe-best-practices
+
+Name it stripe-best-practices. Use it when I ask to add payments, subscriptions, billing, Stripe Checkout, Payment Element, Stripe Tax, webhooks, marketplace accounts, or secure Stripe key handling. Prefer current Stripe APIs and restricted API keys unless I specify another approach.</code></pre>
+
+        <h3>6. Dash0 for OpenTelemetry and production visibility</h3>
+        <p>
+          Use the official
+          <a href="https://github.com/dash0hq/agent-skills/tree/HEAD/skills/otel-instrumentation?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=lovable-skills-ai-builders">Dash0 <code>otel-instrumentation</code> skill</a>
+          when the app needs observability. The skill covers OpenTelemetry traces, metrics, logs,
+          resource attributes, sensitive-data handling, validation, and SDK setup for Node.js, Go,
+          Python, Java, .NET, Ruby, PHP, browser instrumentation, and Next.js App Router.
+        </p>
+        <p>
+          This is useful after the app has real users or background jobs. Lovable can add features
+          quickly; Dash0's OpenTelemetry skills help the agent add signals that make production
+          behavior visible. The same Dash0 repo also includes skills for OpenTelemetry Collector
+          setup, OTTL transformations, and semantic conventions.
+        </p>
+        <p>Good Lovable prompt:</p>
+        <pre><code>Install the official Dash0 OpenTelemetry instrumentation skill from this GitHub URL as a workspace skill:
+https://github.com/dash0hq/agent-skills/tree/HEAD/skills/otel-instrumentation
+
+Name it otel-instrumentation. Use it when I ask to add observability, OpenTelemetry, tracing, metrics, logs, Dash0 export, telemetry validation, or Next.js instrumentation. Include resource attributes, sensitive-data checks, and a post-deployment validation checklist.</code></pre>
+
+        <h2>How to install official skills correctly in Lovable</h2>
+        <p>
+          Lovable supports custom workspace skills from <strong>Settings → Skills → Add</strong>.
+          For official skills hosted on GitHub, use <strong>Import from GitHub</strong> and paste
+          the skill folder URL. Lovable supports a whole repository URL when <code>SKILL.md</code>
+          is at the repository root, or a subdirectory URL when a repo contains multiple skills.
+          The linked directory needs to contain <code>SKILL.md</code> directly.
+        </p>
+        <p>The reliable install flow is simple:</p>
+        <ol>
+          <li>Open the current app or workspace in Lovable.</li>
+          <li>Go to <strong>Settings → Skills → Add → Import from GitHub</strong>.</li>
+          <li>Paste the GitHub skill URL from the list above.</li>
+          <li>Review the name, description, and instructions before publishing it to the workspace.</li>
+          <li>Invoke it once with <code>/skill-name</code> on a small task before relying on automatic use.</li>
+          <li>Keep secrets in environment variables or local config files, outside the skill text.</li>
+        </ol>
+        <p>
+          You can also use Lovable's <code>/skill-creator</code> or the "Build with Lovable" flow
+          for a guided import. A useful prompt is:
+        </p>
+        <pre><code>Help me create a Lovable workspace skill from this official GitHub skill URL:
+[PASTE_URL]
+
+Read the SKILL.md, preserve the original intent, make the description start with "Use when...", and adapt the instructions for this Lovable workspace. Keep any API keys, tokens, and secrets out of the skill body.</code></pre>
+        <p>
+          For ZIP-based import, download the skill folder as a ZIP and upload it through
+          <strong>Settings → Skills → Add → Upload ZIP</strong>. Lovable's docs say ZIP skills must
+          include a <code>SKILL.md</code> file at the root or inside one wrapping folder, with
+          bundled files next to it.
+        </p>
+
+        <h2>Find official skills while you build</h2>
+        <p>
+          When you are building in Lovable and reach a tool choice, open
+          <a href="https://skillscout.sh/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=lovable-skills-ai-builders">Skillscout</a>
+          or the
+          <a href="https://skillscout.sh/official/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=lovable-skills-ai-builders">official skills directory</a>,
+          search by vendor or skill name, open the official source, and copy the GitHub URL into
+          Lovable's import flow.
+        </p>
+        <p>
+          This keeps the workflow practical: Lovable builds the app, Lovable skills store
+          repeatable build instructions, and the official directory gives you vendor-authored skill
+          sources for the parts of the product that need domain-specific guidance.
+        </p>
+
+        <h2>A good default setup for a new Lovable app</h2>
+        <p>
+          For a new AI-built SaaS or internal tool, start with a small set of skills and add more
+          only when the workflow repeats.
+        </p>
+        <ul>
+          <li>Add Better Auth when you start account flows.</li>
+          <li>Add Supabase when the app uses database, storage, auth, or RLS.</li>
+          <li>Add Stripe when money enters the product.</li>
+          <li>Add Metabase when users or internal teams need dashboards.</li>
+          <li>Add Ahrefs when SEO and discoverability become part of the product plan.</li>
+          <li>Add Dash0 when the app needs production telemetry and debugging visibility.</li>
+        </ul>
+        <p>
+          This gives Lovable a more reliable set of playbooks for the parts of app building that
+          usually require specialized implementation knowledge. The goal is straightforward: fewer
+          repeated instructions, fewer guessed integrations, and a workspace skill library that
+          improves as your app stack becomes clearer.
+        </p>
+      </article>
+    </main>
+  </body>
+</html>
