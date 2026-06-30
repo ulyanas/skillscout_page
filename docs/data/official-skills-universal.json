@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-30T09:23:58.682Z",
+  "generatedAt": "2026-06-30T12:33:35.017Z",
   "sources": {
     "skills.sh": {
       "sourceId": "skills.sh",
@@ -2389,6 +2389,36 @@
       "companyIndustry": "advertising, artificial-intelligence, blockchain",
       "firstSeenAt": "2026-05-25T17:00:43.026Z",
       "lastSeenAt": "2026-05-25T17:00:43.026Z"
+    },
+    {
+      "ownerKey": "framer",
+      "displayName": "Framer",
+      "normalizedNames": [
+        "framer"
+      ],
+      "sourceOwnerKeys": [
+        "framer"
+      ],
+      "websiteHosts": [],
+      "website": "https://www.framer.com",
+      "sources": [
+        "github-discovery",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/framer",
+        "https://www.skills.sh/framer"
+      ],
+      "skillsCount": 1,
+      "reposCount": 1,
+      "installsCount": 3,
+      "starsCount": 130,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "companyIndustry": "design, software, websites",
+      "firstSeenAt": "2026-06-30T12:33:35.017Z",
+      "lastSeenAt": "2026-06-30T12:33:35.017Z",
+      "twitter": "@framer"
     },
     {
       "ownerKey": "gatling",
@@ -14594,6 +14624,33 @@
         "skills/sitemap-audit",
         "skills/storefront-setup",
         "skills/structured-data"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "framer/plugins",
+      "ownerKey": "framer",
+      "sourceOwnerKeys": [
+        "framer"
+      ],
+      "repoName": "plugins",
+      "displayName": "framer/plugins",
+      "sources": [
+        "github-discovery",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/framer/plugins",
+        "https://www.skills.sh/framer/plugins"
+      ],
+      "skillsCount": 1,
+      "installsCount": 3,
+      "starsCount": 130,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:33:35.017Z",
+      "lastSeenAt": "2026-06-30T12:33:35.017Z",
+      "githubSkillPaths": [
+        "packages/code-link-cli/skills"
       ],
       "truncated": false
     },
@@ -106495,6 +106552,29 @@
       "confidence": "high",
       "firstSeenAt": "2026-06-30T09:24:16.431Z",
       "lastSeenAt": "2026-06-30T09:24:16.431Z"
+    },
+    {
+      "skillKey": "framer/plugins/packages/code-link-cli/skills",
+      "ownerKey": "framer",
+      "sourceOwnerKeys": [
+        "framer"
+      ],
+      "repoKey": "framer/plugins",
+      "skillName": "skills",
+      "displayName": "framer-component-best-practices",
+      "description": "Best practices for building and improving React code components in Framer, including property controls, animations, accessibility, and platform constraints.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/framer/plugins/tree/HEAD/packages/code-link-cli/skills",
+        "https://www.skills.sh/framer/plugins/framer-component-best-practices"
+      ],
+      "installsCount": 3,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:33:35.017Z",
+      "lastSeenAt": "2026-06-30T12:33:35.017Z"
     },
     {
       "skillKey": "gatling/gatling-ai-extensions/plugins/gatling/skills/gatling-bootstrap-project",
@@ -248057,22 +248137,22 @@
     }
   ],
   "stats": {
-    "owners": 212,
-    "repos": 616,
-    "skills": 9847,
+    "owners": 213,
+    "repos": 617,
+    "skills": 9848,
     "sourceOwners": {
-      "github-discovery": 114,
-      "skills.sh": 164,
+      "github-discovery": 115,
+      "skills.sh": 165,
       "mcpservers.org": 92
     },
     "sourceRepos": {
-      "github-discovery": 145,
-      "skills.sh": 572
+      "github-discovery": 146,
+      "skills.sh": 573
     },
     "sourceSkills": {
-      "github": 9658,
-      "skills.sh": 5223
+      "github": 9659,
+      "skills.sh": 5224
     }
   },
-  "enrichedAt": "2026-06-30T09:24:16.431Z"
+  "enrichedAt": "2026-06-30T12:33:35.017Z"
 }
