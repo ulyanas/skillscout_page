@@ -224,8 +224,9 @@
         font-size: 0.9em;
       }
       pre {
-        overflow: auto;
-        padding: 16px 18px;
+        position: relative;
+        overflow: visible;
+        padding: 52px 18px 16px;
         border-radius: 16px;
         border: 1px solid var(--border);
         background: var(--panel);
@@ -233,8 +234,42 @@
         margin: 18px 0 24px;
       }
       pre code {
+        display: block;
         padding: 0;
         background: transparent;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+      .copy-prompt-button {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: #111111;
+        color: #ffffff;
+        cursor: pointer;
+        font: inherit;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        line-height: 1;
+        padding: 9px 12px;
+        transition:
+          background 140ms ease,
+          border-color 140ms ease,
+          color 140ms ease,
+          transform 140ms ease;
+      }
+      .copy-prompt-button:hover,
+      .copy-prompt-button:focus-visible {
+        background: #ffffff;
+        border-color: #111111;
+        color: #111111;
+      }
+      .copy-prompt-button:active {
+        transform: translateY(1px);
       }
       @media (max-width: 720px) {
         .nav {
@@ -492,5 +527,53 @@ Read the SKILL.md, preserve the original intent, make the description start with
         </p>
       </article>
     </main>
+    <script>
+      (() => {
+        const copyText = async (text) => {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+            return;
+          }
+
+          const textarea = document.createElement("textarea");
+          textarea.value = text;
+          textarea.setAttribute("readonly", "");
+          textarea.style.position = "fixed";
+          textarea.style.top = "-9999px";
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand("copy");
+          textarea.remove();
+        };
+
+        document.querySelectorAll("pre code").forEach((code, index) => {
+          const pre = code.parentElement;
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "copy-prompt-button";
+          button.textContent = "Copy prompt";
+          button.setAttribute("aria-label", `Copy prompt ${index + 1}`);
+
+          button.addEventListener("click", async () => {
+            const originalLabel = "Copy prompt";
+            try {
+              await copyText(code.innerText.trim());
+              button.textContent = "Copied";
+              button.setAttribute("aria-label", `Copied prompt ${index + 1}`);
+            } catch {
+              button.textContent = "Copy failed";
+              button.setAttribute("aria-label", `Copy failed for prompt ${index + 1}`);
+            }
+
+            window.setTimeout(() => {
+              button.textContent = originalLabel;
+              button.setAttribute("aria-label", `Copy prompt ${index + 1}`);
+            }, 1800);
+          });
+
+          pre.appendChild(button);
+        });
+      })();
+    </script>
   </body>
 </html>
