@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-30T19:47:02.141Z",
+  "generatedAt": "2026-06-30T21:31:31.146Z",
   "sources": {
     "skills.sh": {
       "sourceId": "skills.sh",
@@ -2505,26 +2505,38 @@
     },
     {
       "ownerKey": "google",
-      "displayName": "Google Workspace",
+      "displayName": "Google",
       "normalizedNames": [
+        "google",
         "google-workspace"
       ],
       "sourceOwnerKeys": [
         "google"
       ],
-      "websiteHosts": [],
+      "websiteHosts": [
+        "opensource.google"
+      ],
+      "website": "https://opensource.google/",
       "sources": [
-        "mcpservers.org"
+        "github-discovery",
+        "mcpservers.org",
+        "skills.sh"
       ],
       "sourceUrls": [
-        "https://mcpservers.org/agent-skills/author/google"
+        "https://github.com/google",
+        "https://mcpservers.org/agent-skills/author/google",
+        "https://www.skills.sh/google"
       ],
-      "skillsCount": 99,
-      "reposCount": 0,
-      "installsCount": 0,
-      "confidence": "medium",
+      "skillsCount": 67,
+      "reposCount": 1,
+      "installsCount": 127348,
+      "starsCount": 14302,
+      "confidence": "high",
+      "dbConfirmed": true,
+      "companyIndustry": "cloud, analytics, advertising, artificial-intelligence",
       "firstSeenAt": "2026-05-30T19:05:14.904Z",
-      "lastSeenAt": "2026-06-30T19:47:02.141Z"
+      "lastSeenAt": "2026-06-30T21:31:31.146Z",
+      "twitter": "@GoogleOSS"
     },
     {
       "ownerKey": "google-gemini",
@@ -16439,6 +16451,99 @@
         "plugins/stitch-utilities/skills/enhance-prompt",
         "plugins/stitch-utilities/skills/stitch-loop",
         "plugins/stitch-utilities/skills/taste-design"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "google/skills",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoName": "skills",
+      "displayName": "google/skills",
+      "sources": [
+        "github-discovery",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills",
+        "https://www.skills.sh/google/skills"
+      ],
+      "skillsCount": 67,
+      "installsCount": 127348,
+      "starsCount": 14302,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z",
+      "githubSkillPaths": [
+        "skills/ads/data-manager-api/data-manager-api-audience-ingestion",
+        "skills/ads/data-manager-api/data-manager-api-event-ingestion",
+        "skills/ads/google-ads-api/google-ads-api-mcp-setup",
+        "skills/ads/google-ads-api/google-ads-api-quickstart",
+        "skills/ads/google-mobile-ads/google-mobile-ads-android-migrate-to-next-gen",
+        "skills/ads/google-mobile-ads/google-mobile-ads-banner",
+        "skills/ads/google-mobile-ads/google-mobile-ads-get-started",
+        "skills/ads/google-mobile-ads/google-mobile-ads-interstitial",
+        "skills/ads/google-mobile-ads/google-mobile-ads-rewarded",
+        "skills/ads/interactive-media-ads/ima-sdk-basics",
+        "skills/analytics/google-analytics-admin-api-basics",
+        "skills/analytics/google-analytics-data-api-basics",
+        "skills/cloud/agent-platform-alert-configuration",
+        "skills/cloud/agent-platform-deploy",
+        "skills/cloud/agent-platform-endpoint-management",
+        "skills/cloud/agent-platform-eval-flywheel",
+        "skills/cloud/agent-platform-inference",
+        "skills/cloud/agent-platform-migrate-from-ai-studio",
+        "skills/cloud/agent-platform-model-registry",
+        "skills/cloud/agent-platform-prompt-management",
+        "skills/cloud/agent-platform-rag-engine-management",
+        "skills/cloud/agent-platform-skill-registry",
+        "skills/cloud/agent-platform-tuning-management",
+        "skills/cloud/agent-platform-tuning",
+        "skills/cloud/alloydb-basics",
+        "skills/cloud/bigquery-ai-ml",
+        "skills/cloud/bigquery-basics",
+        "skills/cloud/bigquery-bigframes",
+        "skills/cloud/bigtable-basics",
+        "skills/cloud/cloud-run-basics",
+        "skills/cloud/cloud-sql-basics",
+        "skills/cloud/detection_engineering_coverage_evaluation",
+        "skills/cloud/firebase-basics",
+        "skills/cloud/gcloud",
+        "skills/cloud/gemini-agents-api",
+        "skills/cloud/gemini-api",
+        "skills/cloud/gemini-interactions-api",
+        "skills/cloud/gke-app-onboarding",
+        "skills/cloud/gke-backup-dr",
+        "skills/cloud/gke-basics",
+        "skills/cloud/gke-batch-hpc",
+        "skills/cloud/gke-cluster-creation",
+        "skills/cloud/gke-compute-classes",
+        "skills/cloud/gke-cost",
+        "skills/cloud/gke-golden-path",
+        "skills/cloud/gke-inference",
+        "skills/cloud/gke-multitenancy",
+        "skills/cloud/gke-networking",
+        "skills/cloud/gke-observability",
+        "skills/cloud/gke-reliability",
+        "skills/cloud/gke-scaling",
+        "skills/cloud/gke-security",
+        "skills/cloud/gke-storage",
+        "skills/cloud/gke-upgrades",
+        "skills/cloud/google-agents-cli-onboarding",
+        "skills/cloud/google-cloud-networking-observability",
+        "skills/cloud/google-cloud-recipe-auth",
+        "skills/cloud/google-cloud-recipe-foundation-builder",
+        "skills/cloud/google-cloud-recipe-onboarding",
+        "skills/cloud/google-cloud-waf-cost-optimization",
+        "skills/cloud/google-cloud-waf-operational-excellence",
+        "skills/cloud/google-cloud-waf-performance-optimization",
+        "skills/cloud/google-cloud-waf-reliability",
+        "skills/cloud/google-cloud-waf-security",
+        "skills/cloud/google-cloud-waf-sustainability",
+        "skills/cloud/iam-recommendations-fetcher",
+        "skills/cloud/workload-manager-basics"
       ],
       "truncated": false
     },
@@ -125245,6 +125350,1547 @@
       "confidence": "high",
       "firstSeenAt": "2026-06-30T19:47:17.417Z",
       "lastSeenAt": "2026-06-30T19:47:17.417Z"
+    },
+    {
+      "skillKey": "google/skills/skills/ads/data-manager-api/data-manager-api-audience-ingestion",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "data-manager-api-audience-ingestion",
+      "displayName": "data-manager-api-audience-ingestion",
+      "description": "Guides developers through uploading audience members to Google products using the Data Manager API /v1/audienceMembers/ingest endpoint and its associated client libraries. Use this skill when the user wants to upload audience members for Customer Match, mobile device ID audiences, or any other audience use case supported by the Data Manager API. For uploading events or conversions, use the data-manager-api-event-ingestion skill.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/ads/data-manager-api/data-manager-api-audience-ingestion",
+        "https://www.skills.sh/google/skills/data-manager-api-audience-ingestion"
+      ],
+      "installsCount": 19,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/ads/data-manager-api/data-manager-api-event-ingestion",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "data-manager-api-event-ingestion",
+      "displayName": "data-manager-api-event-ingestion",
+      "description": "Guides developers through implementing event and conversion ingestion to Google products using the Data Manager API /v1/events/ingest endpoint and its associated client libraries. Use this skill when the user wants to upload offline conversions, enhanced conversions for leads, click conversions, Google Analytics web or app events, or any other event ingestion use case supported by the Data Manager API. For uploading audience members, use the data-manager-api-audience-ingestion skill.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/ads/data-manager-api/data-manager-api-event-ingestion",
+        "https://www.skills.sh/google/skills/data-manager-api-event-ingestion"
+      ],
+      "installsCount": 19,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/ads/google-ads-api/google-ads-api-mcp-setup",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-ads-api-mcp-setup",
+      "displayName": "google-ads-api-mcp-setup",
+      "description": "Guides developers through downloading, configuring, and installing the official open-source Google Ads MCP Server. Use this skill when a user wants to connect their AI assistant (such as Gemini, Claude Code, or Cursor) to their Google Ads account to query campaigns or retrieve reporting metrics using natural language.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/ads/google-ads-api/google-ads-api-mcp-setup",
+        "https://www.skills.sh/google/skills/google-ads-api-mcp-setup"
+      ],
+      "installsCount": 15,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/ads/google-ads-api/google-ads-api-quickstart",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-ads-api-quickstart",
+      "displayName": "google-ads-api-quickstart",
+      "description": "Guides developers through Google Ads API quickstart: credential setup, choosing from 6 client libraries/REST, configuring environments, and running a \"retrieve campaigns\" script. Troubleshoots common setup errors: USER_PERMISSION_DENIED, login_customer_id issues, and DEVELOPER_TOKEN_NOT_APPROVED. Use this skill when: - The user asks how to get started with the Google Ads API. - The user needs to set up Google Ads credentials or developer tokens. - The user wants to write a quickstart/example script for Google Ads. - The user encounters errors like USER_PERMISSION_DENIED or DEVELOPER_TOKEN_NOT_APPROVED.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/ads/google-ads-api/google-ads-api-quickstart",
+        "https://www.skills.sh/google/skills/google-ads-api-quickstart"
+      ],
+      "installsCount": 14,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/ads/google-mobile-ads/google-mobile-ads-android-migrate-to-next-gen",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-mobile-ads-android-migrate-to-next-gen",
+      "displayName": "google-mobile-ads-android-migrate-to-next-gen",
+      "description": "Migrates Android applications from the old, legacy Google Mobile",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/ads/google-mobile-ads/google-mobile-ads-android-migrate-to-next-gen",
+        "https://www.skills.sh/google/skills/google-mobile-ads-android-migrate-to-next-gen"
+      ],
+      "installsCount": 13,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/ads/google-mobile-ads/google-mobile-ads-banner",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-mobile-ads-banner",
+      "displayName": "google-mobile-ads-banner",
+      "description": "Provides instructions to implement, integrate, or configure",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/ads/google-mobile-ads/google-mobile-ads-banner",
+        "https://www.skills.sh/google/skills/google-mobile-ads-banner"
+      ],
+      "installsCount": 15,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/ads/google-mobile-ads/google-mobile-ads-get-started",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-mobile-ads-get-started",
+      "displayName": "google-mobile-ads-get-started",
+      "description": "Provides instructions for integrating the Google Mobile Ads (GMA)",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/ads/google-mobile-ads/google-mobile-ads-get-started",
+        "https://www.skills.sh/google/skills/google-mobile-ads-get-started"
+      ],
+      "installsCount": 17,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/ads/google-mobile-ads/google-mobile-ads-interstitial",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-mobile-ads-interstitial",
+      "displayName": "google-mobile-ads-interstitial",
+      "description": "Provides instructions for implementing, integrating, or configuring",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/ads/google-mobile-ads/google-mobile-ads-interstitial",
+        "https://www.skills.sh/google/skills/google-mobile-ads-interstitial"
+      ],
+      "installsCount": 13,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/ads/google-mobile-ads/google-mobile-ads-rewarded",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-mobile-ads-rewarded",
+      "displayName": "google-mobile-ads-rewarded",
+      "description": "Provides instructions for implementing, integrating, or configuring",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/ads/google-mobile-ads/google-mobile-ads-rewarded",
+        "https://www.skills.sh/google/skills/google-mobile-ads-rewarded"
+      ],
+      "installsCount": 12,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/ads/interactive-media-ads/ima-sdk-basics",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "ima-sdk-basics",
+      "displayName": "ima-sdk-basics",
+      "description": "Use this skill for Interactive Media Ads (IMA) SDK client-side ad insertion when you are requesting video ads client-side into websites, apps, TVs or other platforms with VAST or VMAP. For Dynamic Ad Insertion (DAI), SSAI, or SGAI, use the `ima-sdk-dai-basics` skill.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/ads/interactive-media-ads/ima-sdk-basics",
+        "https://www.skills.sh/google/skills/ima-sdk-basics"
+      ],
+      "installsCount": 10,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/analytics/google-analytics-admin-api-basics",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-analytics-admin-api-basics",
+      "displayName": "google-analytics-admin-api-basics",
+      "description": "Manages Google Analytics account and property settings, enables the Analytics Admin API via the Cloud CLI, lists accounts and properties, and manages data streams, custom dimensions, conversion events, and integrations. Use when you need to programmatically configure Google Analytics accounts, provision properties, manage data retention, configure Measurement Protocol secrets, or manage Firebase and Google Ads links.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/analytics/google-analytics-admin-api-basics",
+        "https://www.skills.sh/google/skills/google-analytics-admin-api-basics"
+      ],
+      "installsCount": 128,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/analytics/google-analytics-data-api-basics",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-analytics-data-api-basics",
+      "displayName": "google-analytics-data-api-basics",
+      "description": "Manages Google Analytics reporting data, enables the Analytics Data API via the Cloud CLI, and creates reports using the Google Analytics Data API (v1beta). Use when you need to interact with Google Analytics properties, run customized analytics reports, query metrics (like activeUsers, screenPageViews) and dimensions (like city, date), check metrics and dimensions compatibility, or verify API enablement.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/analytics/google-analytics-data-api-basics",
+        "https://www.skills.sh/google/skills/google-analytics-data-api-basics"
+      ],
+      "installsCount": 129,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/agent-platform-alert-configuration",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "agent-platform-alert-configuration",
+      "displayName": "agent-platform-alert-configuration",
+      "description": "Configures best-practice alerting policies for Google Cloud Vertex AI / Agent Platform agents on Agent Runtime. Use when analyzing, writing, or deploying alerting policies to monitor agent latency, error rates, and quality metrics (response quality, tool use, hallucination). Also use when provisioning online monitors for quality evaluation, or analyzing live metrics traffic footprints. This skill currently works for Agent Runtime alerting policies. For general GCP alert policies, use the relevant Google Cloud monitoring workflow.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/agent-platform-alert-configuration",
+        "https://www.skills.sh/google/skills/agent-platform-alert-configuration"
+      ],
+      "installsCount": 286,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/agent-platform-deploy",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "agent-platform-deploy",
+      "displayName": "agent-platform-deploy",
+      "description": "Deploy open models or custom weights from Model Garden to Agent Platform endpoints, check deployment status, verify serving endpoints, or clean up resources by undeploying models and deleting endpoints. Use when asked to deploy models on Agent Platform, list available Model Garden models, check if a model is deployable, query deployment cost, troubleshoot deployment errors (like quota limits), or undeploy/clean up endpoints. Also use when copying and deploying a 1P Tuned Model. For public Vertex AI deployments, use the `vertex-deploy` skill. For model evaluations, use the `agent-platform-eval` skill.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/agent-platform-deploy",
+        "https://www.skills.sh/google/skills/agent-platform-deploy"
+      ],
+      "installsCount": 2021,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/agent-platform-endpoint-management",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "agent-platform-endpoint-management",
+      "displayName": "agent-platform-endpoint-management",
+      "description": "Manages Agent Platform serving endpoints. Use when you need to create, list, describe, update, or delete serving endpoints for model deployment on Agent Platform. Also use when troubleshooting endpoint permission, quota, or resource busy errors. For deploying models to endpoints or running model evaluations, use the dedicated Agent Platform deployment or evaluation skills.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/agent-platform-endpoint-management",
+        "https://www.skills.sh/google/skills/agent-platform-endpoint-management"
+      ],
+      "installsCount": 1479,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/agent-platform-eval-flywheel",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "agent-platform-eval-flywheel",
+      "displayName": "agent-platform-eval-flywheel",
+      "description": "Measures and improves the quality of AI models and agents on Google Cloud using the Eval Quality Flywheel methodology. Use when evaluating an agent or model, building an eval dataset, picking or writing evaluation metrics, analyzing failures, comparing results before and after a fix, or when guidance is needed on Agent Platform eval methodology — including dataset schema, LLM-as-judge scoring, and common failure causes. For fine-tuning, use agent-platform-tuning. For general production deployment, use agent-platform-deploy.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/agent-platform-eval-flywheel",
+        "https://www.skills.sh/google/skills/agent-platform-eval-flywheel"
+      ],
+      "installsCount": 1576,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/agent-platform-inference",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "agent-platform-inference",
+      "displayName": "agent-platform-inference",
+      "description": "Connects to and performs inference with Google Cloud Agent Platform GenAI models, including First-Party Gemini models and Third-Party OpenMaaS models (Llama, DeepSeek, Qwen, etc.). Use when you need to generate code for calling Gemini or OpenMaaS models, authenticate with GenAI SDK, OpenAI SDK, or legacy Agent Platform SDK, configure base URLs and global/regional endpoints, or troubleshoot 429 Resource Exhausted, 400 User Validation, or 404 Not Found errors. For deploying models to endpoints or running model evaluations, use the dedicated Agent Platform deployment or evaluation skills.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/agent-platform-inference",
+        "https://www.skills.sh/google/skills/agent-platform-inference"
+      ],
+      "installsCount": 1467,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/agent-platform-migrate-from-ai-studio",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "agent-platform-migrate-from-ai-studio",
+      "displayName": "agent-platform-migrate-from-ai-studio",
+      "description": "Guides agents and users through migrating from Gemini API in Google AI Studio to Gemini Enterprise Agent Platform (formerly Vertex AI). Use this skill when moving applications to Google Cloud, to leverage Cloud credits, or to unify inferencing with other Cloud infrastructure (IAM, billing, telemetry).",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/agent-platform-migrate-from-ai-studio",
+        "https://www.skills.sh/google/skills/agent-platform-migrate-from-ai-studio"
+      ],
+      "installsCount": 1455,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/agent-platform-model-registry",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "agent-platform-model-registry",
+      "displayName": "agent-platform-model-registry",
+      "description": "Agent Platform Model Registry Management. Use when you need to upload, list, describe, update, or delete machine learning models and their versions in the Agent Platform Model Registry. For model training, model deployment to endpoints, or managing non-Agent Platform models, use the dedicated training, deployment, or model-management workflow.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/agent-platform-model-registry",
+        "https://www.skills.sh/google/skills/agent-platform-model-registry"
+      ],
+      "installsCount": 1736,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/agent-platform-prompt-management",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "agent-platform-prompt-management",
+      "displayName": "agent-platform-prompt-management",
+      "description": "Manages and orchestrates prompts in Agent Platform. Use when you need to create, list, retrieve, version, or delete managed prompts in Agent Platform. For model training, model deployment to endpoints, or managing non-Agent Platform prompts, use the dedicated training, deployment, or prompt-management workflow.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/agent-platform-prompt-management",
+        "https://www.skills.sh/google/skills/agent-platform-prompt-management"
+      ],
+      "installsCount": 1912,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/agent-platform-rag-engine-management",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "agent-platform-rag-engine-management",
+      "displayName": "agent-platform-rag-engine-management",
+      "description": "Manage and query Agent Platform RAG Engine Corpora and retrieve grounded contexts using the Google GenAI SDK. Use when listing RAG corpora or files, inspecting a corpus, retrieving contexts, or generating content grounded in a RAG corpus. For standard database queries, use SQL or Spanner skills. For Google Workspace RAG or other RAG products like gRAG, use the matching product skill.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/agent-platform-rag-engine-management",
+        "https://www.skills.sh/google/skills/agent-platform-rag-engine-management"
+      ],
+      "installsCount": 1984,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/agent-platform-skill-registry",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "agent-platform-skill-registry",
+      "displayName": "agent-platform-skill-registry",
+      "description": "Interact with the Gemini Enterprise Agent Platform Skill Registry to create and search for available skills. Use this skill to enable agents to register functionality or discover new capabilities.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/agent-platform-skill-registry",
+        "https://www.skills.sh/google/skills/agent-platform-skill-registry"
+      ],
+      "installsCount": 2724,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/agent-platform-tuning",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "agent-platform-tuning",
+      "displayName": "agent-platform-tuning",
+      "description": "Agent Platform Model Tuning. Use when you need to fine-tune open models or Gemini models using Agent Platform infrastructure. For model training outside Agent Platform, model deployment to endpoints, or managing serving endpoints, use `agent-platform-deploy` or `agent-platform-endpoint-management` as appropriate.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/agent-platform-tuning",
+        "https://www.skills.sh/google/skills/agent-platform-tuning"
+      ],
+      "installsCount": 1954,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/agent-platform-tuning-management",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "agent-platform-tuning-management",
+      "displayName": "agent-platform-tuning-management",
+      "description": "Manages GenAI tuning jobs in Agent Platform. Use this to list, get, or cancel ongoing model tuning jobs. For fine-tuning models, use `agent-platform-tuning`. For deploying models to endpoints, use `agent-platform-deploy`. For managing serving endpoints, use `agent-platform-endpoint-management`.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/agent-platform-tuning-management",
+        "https://www.skills.sh/google/skills/agent-platform-tuning-management"
+      ],
+      "installsCount": 1936,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/alloydb-basics",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "alloydb-basics",
+      "displayName": "alloydb-basics",
+      "description": "Manages clusters, instances, and backups for AlloyDB for PostgreSQL, and integrates with AlloyDB model context protocol (MCP) tools for automated database operations.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/alloydb-basics",
+        "https://www.skills.sh/google/skills/alloydb-basics"
+      ],
+      "installsCount": 5686,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/bigquery-ai-ml",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "bigquery-ai-ml",
+      "displayName": "bigquery-ai-ml",
+      "description": "Leverages BigQuery's built-in machine learning and GenAI capabilities for advanced data analytics. Use when you need to write SQL queries that perform time-series forecasting, detect outliers, find key drivers, or leverage generative AI capabilities in BigQuery.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/bigquery-ai-ml",
+        "https://www.skills.sh/google/skills/bigquery-ai-ml"
+      ],
+      "installsCount": 380,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/bigquery-basics",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "bigquery-basics",
+      "displayName": "bigquery-basics",
+      "description": "Manages datasets, tables, and jobs in BigQuery. Use when you need to interact with BigQuery, run SQL queries, manage BigQuery resources (datasets, tables, views), or perform basic data ingestion and analysis.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/bigquery-basics",
+        "https://www.skills.sh/google/skills/bigquery-basics"
+      ],
+      "installsCount": 7325,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/bigquery-bigframes",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "bigquery-bigframes",
+      "displayName": "bigquery-bigframes",
+      "description": "Generates Python code using BigQuery DataFrames (BigFrames), the pandas/scikit-learn-style API over BigQuery. Use when writing BigFrames code or doing pandas-style dataframe/ML work against BigQuery, such as in a notebook. For SQL-first workflows or the google-cloud-bigquery client library, use bigquery-basics.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/bigquery-bigframes",
+        "https://www.skills.sh/google/skills/bigquery-bigframes"
+      ],
+      "installsCount": 26,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/bigtable-basics",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "bigtable-basics",
+      "displayName": "bigtable-basics",
+      "description": "Assists in provisioning instances/tables, designing performant schemas, and querying data in Bigtable. Use when designing Bigtable row keys, configuring column families, writing SQL queries or client library code (Java, Go, Python) for Bigtable, or diagnosing performance/hotspotting issues. Also use when provisioning Bigtable clusters using gcloud or cbt CLIs. For generic Cloud SQL administration, use the Cloud SQL skill.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/bigtable-basics",
+        "https://www.skills.sh/google/skills/bigtable-basics"
+      ],
+      "installsCount": 421,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/cloud-run-basics",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "cloud-run-basics",
+      "displayName": "cloud-run-basics",
+      "description": "Manages Cloud Run services, jobs, and worker pools. Use when you need to deploy applications responding to HTTP requests (services), run event-triggered or scheduled tasks (jobs), or handle always-on pull-based background processing (worker pools).",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/cloud-run-basics",
+        "https://www.skills.sh/google/skills/cloud-run-basics"
+      ],
+      "installsCount": 7841,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/cloud-sql-basics",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "cloud-sql-basics",
+      "displayName": "cloud-sql-basics",
+      "description": "This file generates or explains Cloud SQL resources. Use this file when the user asks to create a Cloud SQL instance or database for MySQL, PostgreSQL, or SQL Server. Cloud SQL manages third-party MySQL, PostgreSQL, and SQL Server instances as resources in Cloud SQL. For example, when Cloud SQL creates an open-source MySQL instance, the resulting resource is a Cloud SQL for MySQL instance that Google Cloud manages. Cloud SQL handles backups, high availability, and secure connectivity for relational database workloads.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/cloud-sql-basics",
+        "https://www.skills.sh/google/skills/cloud-sql-basics"
+      ],
+      "installsCount": 6568,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/detection_engineering_coverage_evaluation",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "detection_engineering_coverage_evaluation",
+      "displayName": "detection-engineering-coverage-evaluation",
+      "description": "Automates the end-to-end detection engineering workflow in Google SecOps using MCP tools. Use when fetching threat intelligence from blogs, generating Threat Detection Opportunities (TDOs), simulating attacker behavior with synthetic UDM events, evaluating rule coverage, and generating new YARA-L 2.0 rules to close coverage gaps. For threat hunting actions and SOC investigative actions, use the relevant investigation workflow.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/detection_engineering_coverage_evaluation",
+        "https://www.skills.sh/google/skills/detection-engineering-coverage-evaluation"
+      ],
+      "installsCount": 111,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/firebase-basics",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "firebase-basics",
+      "displayName": "firebase-basics",
+      "description": "Use this skill whenever you are working on a project that uses Firebase products or services, especially for mobile or web apps.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/firebase-basics",
+        "https://www.skills.sh/google/skills/firebase-basics"
+      ],
+      "installsCount": 6377,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gcloud",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gcloud",
+      "displayName": "gcloud",
+      "description": "Interacts with Google Cloud services using the gcloud CLI safely and efficiently. Covers command validation, data reduction, safety guardrails with a denylist, and workflows for discovery and investigation. You MUST read this skill before invoking any gcloud command. Use when managing cloud resources, querying configurations, or troubleshooting issues via gcloud. For writing or debugging Google Cloud client library code or raw REST/gRPC API interactions, use the relevant API or client-library skill.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gcloud",
+        "https://www.skills.sh/google/skills/gcloud"
+      ],
+      "installsCount": 2171,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gemini-agents-api",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gemini-agents-api",
+      "displayName": "gemini-agents-api",
+      "description": "Manages custom Agent resources on Gemini Enterprise Agent Platform. Use when the user wants to programmatically create, configure, list, update, or delete stateful, server-managed Agent resources (including mounting files, skills, and tools) before executing conversations.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gemini-agents-api",
+        "https://www.skills.sh/google/skills/gemini-agents-api"
+      ],
+      "installsCount": 2145,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gemini-api",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gemini-api",
+      "displayName": "gemini-api",
+      "description": "Use when the user asks about using Gemini in an enterprise environment or explicitly mentions Vertex AI, Google Cloud, or Agent Platform. Guides the usage of the Gemini API on Agent Platform with the Google Gen AI SDK. Covers SDK usage (Python, JS/TS, Go, Java, C#), capabilities like multimodal inputs, tools, media generation, caching, batch prediction, and Live API.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gemini-api",
+        "https://www.skills.sh/google/skills/gemini-api"
+      ],
+      "installsCount": 7544,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gemini-interactions-api",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gemini-interactions-api",
+      "displayName": "gemini-interactions-api",
+      "description": "Guides the usage of Gemini Interactions API on Gemini Enterprise Agent Platform. Use when the user wants to use the stateful, server-managed Interactions API for multi-turn conversations, background execution, streaming, structured output, and function calling on the Agent Platform.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gemini-interactions-api",
+        "https://www.skills.sh/google/skills/gemini-interactions-api"
+      ],
+      "installsCount": 2943,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gke-app-onboarding",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gke-app-onboarding",
+      "displayName": "gke-app-onboarding",
+      "description": "Manages GKE application onboarding, covering containerization, deployment manifests, and migration. Use when onboarding or deploying an application to GKE for the first time, or containerizing an app for GKE. For general GKE cluster administration or upgrades, use gke-basics or gke-upgrades.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gke-app-onboarding",
+        "https://www.skills.sh/google/skills/gke-app-onboarding"
+      ],
+      "installsCount": 237,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gke-backup-dr",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gke-backup-dr",
+      "displayName": "gke-backup-dr",
+      "description": "Configures GKE Backup Plans and restore workflows. Use for backup policies, disaster recovery, or GKE cluster restores. For database backups, use the relevant database backup workflow.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gke-backup-dr",
+        "https://www.skills.sh/google/skills/gke-backup-dr"
+      ],
+      "installsCount": 230,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gke-basics",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gke-basics",
+      "displayName": "gke-basics",
+      "description": "Core GKE cluster discovery and hub. Use to route to specialized GKE skills. For specialized tasks such as networking or security, route to the matching GKE skill.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gke-basics",
+        "https://www.skills.sh/google/skills/gke-basics"
+      ],
+      "installsCount": 6402,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gke-batch-hpc",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gke-batch-hpc",
+      "displayName": "gke-batch-hpc",
+      "description": "Runs batch and HPC workloads on GKE, utilizing job queues and parallel processing. Use when running GKE batch jobs, configuring GKE HPC, or setting up GKE job queues. For standard web application deployments, use gke-app-onboarding.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gke-batch-hpc",
+        "https://www.skills.sh/google/skills/gke-batch-hpc"
+      ],
+      "installsCount": 231,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gke-cluster-creation",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gke-cluster-creation",
+      "displayName": "gke-cluster-creation",
+      "description": "Plans and executes GKE cluster creation, provisioning, and production readiness audits. Use when creating GKE clusters, provisioning GKE environments, or auditing GKE clusters. For application onboarding or deployment configuration, use gke-app-onboarding.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gke-cluster-creation",
+        "https://www.skills.sh/google/skills/gke-cluster-creation"
+      ],
+      "installsCount": 237,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gke-compute-classes",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gke-compute-classes",
+      "displayName": "gke-compute-classes",
+      "description": "Configures, optimizes, and troubleshoots GKE ComputeClasses. Use when configuring Spot VMs with on-demand fallback, targeting specific accelerators (GPUs/TPUs) or machine families, restricting ComputeClass access, or debugging pending pods related to node pool auto-creation. For cluster-level Node Auto Provisioning configuration or general GKE cluster creation, use the matching cluster-management skill.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gke-compute-classes",
+        "https://www.skills.sh/google/skills/gke-compute-classes"
+      ],
+      "installsCount": 233,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gke-cost",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gke-cost",
+      "displayName": "gke-cost",
+      "description": "Optimizes GKE costs, rightsizes workloads, and configures Spot VMs and CUDs. Use when optimizing GKE costs, rightsizing GKE workloads, or configuring GKE Spot VMs. For general compute class provisioning or GPU selection, use gke-compute-classes.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gke-cost",
+        "https://www.skills.sh/google/skills/gke-cost"
+      ],
+      "installsCount": 241,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gke-golden-path",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gke-golden-path",
+      "displayName": "gke-golden-path",
+      "description": "Provides GKE golden path configuration defaults, production readiness checklists, and cluster default patterns. Use when designing GKE clusters, verifying GKE production readiness, or checking configurations against GKE defaults. For node autoscaling setup, use gke-scaling.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gke-golden-path",
+        "https://www.skills.sh/google/skills/gke-golden-path"
+      ],
+      "installsCount": 240,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gke-inference",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gke-inference",
+      "displayName": "gke-inference",
+      "description": "Deploys and optimizes AI/ML inference workloads on GKE, using GPUs, TPUs, and model servers. Use when deploying GKE inference servers, configuring GKE GPU resources for inference, or deploying LLMs on GKE. For generic batch jobs or HPC task queues, use gke-batch-hpc.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gke-inference",
+        "https://www.skills.sh/google/skills/gke-inference"
+      ],
+      "installsCount": 230,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gke-multitenancy",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gke-multitenancy",
+      "displayName": "gke-multitenancy",
+      "description": "Plans and configures multi-tenancy on GKE. Covers namespace isolation, RBAC planning for teams, resource quotas, LimitRanges, network isolation, and cost allocation. Use when designing GKE multi-tenancy, configuring GKE namespaces, setting up resource quotas, or isolating GKE teams. For single-tenant cluster configuration or general deployment instructions, use gke-basics or gke-app-onboarding.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gke-multitenancy",
+        "https://www.skills.sh/google/skills/gke-multitenancy"
+      ],
+      "installsCount": 242,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gke-networking",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gke-networking",
+      "displayName": "gke-networking",
+      "description": "Plans, configures, and manages GKE networking. Covers private clusters, VPC-native configurations, Gateway API, DNS, ingress/egress, Dataplane V2, and IP planning. Use when designing GKE networking layouts, configuring private clusters, setting up Gateway API, planning GKE IP ranges, or configuring GKE ingress/egress. For basic application routing with standard app configuration, use the application onboarding flow.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gke-networking",
+        "https://www.skills.sh/google/skills/gke-networking"
+      ],
+      "installsCount": 242,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gke-observability",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gke-observability",
+      "displayName": "gke-observability",
+      "description": "Configures GKE observability, including Cloud Logging, Cloud Monitoring, and managed Prometheus. Use when configuring GKE monitoring, setting up GKE logging, or configuring Prometheus metrics collection. For local application logging frameworks or external APMs outside GKE, use the relevant external tooling.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gke-observability",
+        "https://www.skills.sh/google/skills/gke-observability"
+      ],
+      "installsCount": 246,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gke-reliability",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gke-reliability",
+      "displayName": "gke-reliability",
+      "description": "Improves GKE workload reliability, using PDBs, health probes, and topology spread constraints. Use when configuring GKE workload reliability, setting up PDBs, or configuring GKE health probes (liveness, readiness, startup). For disaster recovery setup or full cluster backups, use gke-backup-dr.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gke-reliability",
+        "https://www.skills.sh/google/skills/gke-reliability"
+      ],
+      "installsCount": 241,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gke-scaling",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gke-scaling",
+      "displayName": "gke-scaling",
+      "description": "Configures GKE autoscaling, including HPA, VPA, and Node Auto-Provisioning (NAP). Use when configuring GKE autoscaling, setting up GKE HPA, setting up GKE VPA, or configuring GKE NAP. For static cluster sizes or node-level machine styles, use gke-compute-classes.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gke-scaling",
+        "https://www.skills.sh/google/skills/gke-scaling"
+      ],
+      "installsCount": 238,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gke-security",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gke-security",
+      "displayName": "gke-security",
+      "description": "Plans, configures, and hardens Google Kubernetes Engine (GKE) security. Covers Workload Identity Federation, Secret Manager integration, RBAC hardening, Binary Authorization, Network Policies (Dataplane V2), Pod Security Standards, and IAM roles. Use when securing GKE clusters, setting up Workload Identity, hardening RBAC configurations, or configuring GKE secrets. For general network routing configuration, use gke-networking.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gke-security",
+        "https://www.skills.sh/google/skills/gke-security"
+      ],
+      "installsCount": 242,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gke-storage",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gke-storage",
+      "displayName": "gke-storage",
+      "description": "Manages GKE storage, including PVCs, PersistentVolumes, Filestore, and GCS FUSE. Use when configuring GKE storage, creating PVCs, or setting up GCS FUSE on GKE. For database administration or replication strategies, use the relevant database skill.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gke-storage",
+        "https://www.skills.sh/google/skills/gke-storage"
+      ],
+      "installsCount": 240,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/gke-upgrades",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "gke-upgrades",
+      "displayName": "gke-upgrades",
+      "description": "Plans, executes, and validates Google Kubernetes Engine (GKE) cluster upgrades and maintenance operations for both Standard and Autopilot clusters. Produces upgrade plans, pre/post-upgrade checklists, maintenance runbooks with gcloud commands, release channel strategy, and troubleshooting guides. Handles node pool upgrade strategies (surge, blue-green), version compatibility, PDB management, and workload-specific concerns (stateful, GPU, operators). Use this skill whenever the user mentions GKE upgrades, Kubernetes version bumps, node pool maintenance, GKE patching, cluster version management, release channel selection, maintenance windows, surge upgrades, stuck upgrades, or any GKE lifecycle management task, including casual mentions like \"we need to upgrade our clusters\" or \"plan our next GKE maintenance\" or \"our upgrade is stuck.\" For GKE cluster creation, application onboarding, general networking/routing setup, or security policy configurations, use gke-basics or the relevant GKE skill.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/gke-upgrades",
+        "https://www.skills.sh/google/skills/gke-upgrades"
+      ],
+      "installsCount": 433,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/google-agents-cli-onboarding",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-agents-cli-onboarding",
+      "displayName": "google-agents-cli-onboarding",
+      "description": "Onboarding entrypoint for agents-cli in Agent Platform. It should be used when the user wants to \"create a new agent\", \"develop an agent\", \"build an agent using ADK\", \"run the agent locally\", \"debug agent code\", \"test an agent\", \"evaluate an agent\", \"deploy an agent\", \"publish an agent\", \"monitor an agent\", or needs the ADK (Agent Development Kit) development lifecycle.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/google-agents-cli-onboarding",
+        "https://www.skills.sh/google/skills/google-agents-cli-onboarding"
+      ],
+      "installsCount": 97,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/google-cloud-networking-observability",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-cloud-networking-observability",
+      "displayName": "google-cloud-networking-observability",
+      "description": "Investigates Google Cloud networking issues by analyzing logs, metrics, and diagnostics. Use when investigating VPC Flow Logs (including cost estimation), NAT, firewall, or threat logs, querying latency and throughput metrics, or running Connectivity Tests for path diagnostics. For generic VM management or other infrastructure tasks, use the matching Google Cloud workflow.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/google-cloud-networking-observability",
+        "https://www.skills.sh/google/skills/google-cloud-networking-observability"
+      ],
+      "installsCount": 4162,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/google-cloud-recipe-auth",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-cloud-recipe-auth",
+      "displayName": "google-cloud-recipe-auth",
+      "description": "Provides expert guidance on authenticating and authorizing to Google Cloud services and APIs, covering human users, service identities, Application Default Credentials (ADC), and best practices for secure access.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/google-cloud-recipe-auth",
+        "https://www.skills.sh/google/skills/google-cloud-recipe-auth"
+      ],
+      "installsCount": 7320,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/google-cloud-recipe-foundation-builder",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-cloud-recipe-foundation-builder",
+      "displayName": "google-cloud-recipe-foundation-builder",
+      "description": "Deploys a baseline landing zone foundation for a Google Cloud Organization, establishing security guardrails using Organization Policies, resource hierarchy folders and projects, billing association, and centralized logging and monitoring. Deploys Google Cloud's recommended security controls and architecture. Use when setting up a new Google Cloud Organization or establishing a secure, enterprise-grade landing zone foundation. For individual project onboarding, use google-cloud-recipe-onboarding or product-specific skills.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/google-cloud-recipe-foundation-builder",
+        "https://www.skills.sh/google/skills/google-cloud-recipe-foundation-builder"
+      ],
+      "installsCount": 10,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/google-cloud-recipe-onboarding",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-cloud-recipe-onboarding",
+      "displayName": "google-cloud-recipe-onboarding",
+      "description": "Guides a developer's first steps on Google Cloud, covering account creation, billing setup, project management, and deploying a first resource. Use when a new developer wants to initialize their first Google Cloud project, configure billing, and verify deployment. For enterprise organization setup, use the Google Cloud Setup guided flow. For complex multi-project architectures, use the relevant architecture workflow.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/google-cloud-recipe-onboarding",
+        "https://www.skills.sh/google/skills/google-cloud-recipe-onboarding"
+      ],
+      "installsCount": 6995,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/google-cloud-waf-cost-optimization",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-cloud-waf-cost-optimization",
+      "displayName": "google-cloud-waf-cost-optimization",
+      "description": "Generates cost optimization guidance for Google Cloud workloads based on the Google Cloud Well-Architected Framework (WAF). Use this skill to evaluate a workload, identify cost requirements and constraints, and provide actionable recommendations for build, deploy, and manage the workload cost-efficiently in Google Cloud.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/google-cloud-waf-cost-optimization",
+        "https://www.skills.sh/google/skills/google-cloud-waf-cost-optimization"
+      ],
+      "installsCount": 6338,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/google-cloud-waf-operational-excellence",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-cloud-waf-operational-excellence",
+      "displayName": "google-cloud-waf-operational-excellence",
+      "description": "Generates operations-focused guidance for Google Cloud workloads based on the design principles and recommendations in the Operational Excellence pillar of the Google Cloud Well-Architected Framework (WAF). Use this skill to evaluate a workload, identify operational requirements, and provide actionable recommendations for deployment, monitoring, and incident management.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/google-cloud-waf-operational-excellence",
+        "https://www.skills.sh/google/skills/google-cloud-waf-operational-excellence"
+      ],
+      "installsCount": 2594,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/google-cloud-waf-performance-optimization",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-cloud-waf-performance-optimization",
+      "displayName": "google-cloud-waf-performance-optimization",
+      "description": "Generates performance-focused guidance for Google Cloud workloads based on the design principles and recommendations in the Performance Optimization pillar of the Google Cloud Well-Architected Framework (WAF). Use this skill to evaluate a workload, identify performance requirements, and provide actionable recommendations for resource allocation, modular design, and elasticity.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/google-cloud-waf-performance-optimization",
+        "https://www.skills.sh/google/skills/google-cloud-waf-performance-optimization"
+      ],
+      "installsCount": 2520,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/google-cloud-waf-reliability",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-cloud-waf-reliability",
+      "displayName": "google-cloud-waf-reliability",
+      "description": "Generates reliability-focused guidance for Google Cloud workloads based on the design principles and recommendations in the Google Cloud Well-Architected Framework. Use this skill to evaluate a workload, identify reliability requirements, and provide actionable recommendations for build, deploy, and manage the workload reliably in Google Cloud.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/google-cloud-waf-reliability",
+        "https://www.skills.sh/google/skills/google-cloud-waf-reliability"
+      ],
+      "installsCount": 6250,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/google-cloud-waf-security",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-cloud-waf-security",
+      "displayName": "google-cloud-waf-security",
+      "description": "Generates security-focused guidance for Google Cloud workloads based on the design principles and recommendations in the Google Cloud Well-Architected Framework (WAF). Use this skill to evaluate a workload, identify security requirements, and provide actionable recommendations for IAM, network security, data protection, and operational security.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/google-cloud-waf-security",
+        "https://www.skills.sh/google/skills/google-cloud-waf-security"
+      ],
+      "installsCount": 6580,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/google-cloud-waf-sustainability",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "google-cloud-waf-sustainability",
+      "displayName": "google-cloud-waf-sustainability",
+      "description": "Generates sustainability-focused guidance for Google Cloud workloads based on the design principles and recommendations in the Google Cloud Well-Architected Framework (WAF). Use this skill to evaluate a workload, identify environmental impact requirements, and provide actionable recommendations to build, deploy, and manage the workload sustainably in Google Cloud.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/google-cloud-waf-sustainability",
+        "https://www.skills.sh/google/skills/google-cloud-waf-sustainability"
+      ],
+      "installsCount": 2453,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/iam-recommendations-fetcher",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "iam-recommendations-fetcher",
+      "displayName": "iam-recommendations-fetcher",
+      "description": "Fetches raw IAM recommendations and associated security insights from Google Cloud for a specified target scope (Organization, Folder, or Project). Use when you need to retrieve security recommendations before analyzing or applying them. For applying recommendations, use the recommendation applier skill. For general allow policy querying, use the allow policy viewer skill.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/iam-recommendations-fetcher",
+        "https://www.skills.sh/google/skills/iam-recommendations-fetcher"
+      ],
+      "installsCount": 419,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
+    },
+    {
+      "skillKey": "google/skills/skills/cloud/workload-manager-basics",
+      "ownerKey": "google",
+      "sourceOwnerKeys": [
+        "google"
+      ],
+      "repoKey": "google/skills",
+      "skillName": "workload-manager-basics",
+      "displayName": "workload-manager-basics",
+      "description": "Use this skill to manage Google Cloud Workload Manager evaluations, rules, scanned resources, and validation results by using public client libraries and the REST API. Use when you need to inspect workload best-practice rules, create and run evaluations for Google Cloud general best practices, SAP, SQL Server, or custom organizational rules, review violations, export results to BigQuery, or automate Workload Manager through client libraries when a service-specific public CLI or MCP server is unavailable. For general Google Compute Engine instance management, VPC configuration, or standard IAM auditing, use the relevant Google Cloud skill.",
+      "sources": [
+        "github",
+        "skills.sh"
+      ],
+      "sourceUrls": [
+        "https://github.com/google/skills/tree/HEAD/skills/cloud/workload-manager-basics",
+        "https://www.skills.sh/google/skills/workload-manager-basics"
+      ],
+      "installsCount": 733,
+      "confidence": "high",
+      "firstSeenAt": "2026-06-30T12:50:50.840Z",
+      "lastSeenAt": "2026-06-30T21:31:31.146Z"
     },
     {
       "skillKey": "gotolstoy/agent-skills/skills/remix-from-library",
@@ -249070,21 +250716,12 @@
   ],
   "stats": {
     "owners": 213,
-    "repos": 617,
-    "skills": 9887,
-    "sourceOwners": {
-      "github-discovery": 115,
-      "skills.sh": 165,
-      "mcpservers.org": 92
-    },
-    "sourceRepos": {
-      "github-discovery": 146,
-      "skills.sh": 573
-    },
-    "sourceSkills": {
-      "github": 9698,
-      "skills.sh": 5260
-    }
+    "repos": 618,
+    "skills": 9954,
+    "sourceOwners": 213,
+    "sourceRepos": 618,
+    "sourceSkills": 9954,
+    "repositories": 618
   },
-  "enrichedAt": "2026-06-30T19:47:17.417Z"
+  "enrichedAt": "2026-06-30T21:31:31.146Z"
 }
