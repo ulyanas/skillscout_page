@@ -743,21 +743,24 @@ function countMatchingSkills(owners) {
 // ── Metadata helpers ──────────────────────────────────────────────────────────
 
 function getOwnerMetadata(owner) {
-  // OWNER_METADATA is the authoritative source for known vendors.
-  // For github-discovery vendors not yet in the map, fall back to
-  // owner.website from the data file, then to github.com.
-  const fallbackWebsite = owner.website || `https://github.com/${owner.sourceOwnerKeys?.[0] || owner.ownerKey}`;
-  const [displayName, websiteUrl, githubUrl] = OWNER_METADATA[owner.ownerKey] || [
-    prettifyOwnerName(owner.displayName || owner.ownerKey),
-    fallbackWebsite,
-  ];
+  // OWNER_METADATA overrides preserve hand-curated labels and vendor URLs.
+  // Owner data fills the rest from GitHub and company enrichment.
+  const metadata = OWNER_METADATA[owner.ownerKey];
+  const fallbackWebsite = owner.website || owner.githubUrl || `https://github.com/${owner.sourceOwnerKeys?.[0] || owner.ownerKey}`;
+  const displayName = metadata?.[0] || owner.companyName || prettifyOwnerName(owner.displayName || owner.ownerKey);
+  const websiteUrl = metadata?.[1] || fallbackWebsite;
+  const githubUrl = owner.githubUrl || metadata?.[2];
   const normalizedWebsiteUrl = normalizeUrl(websiteUrl);
+  const faviconLogoUrl = getFaviconUrl(normalizedWebsiteUrl);
+  const fallbackLogoUrl = owner.logoUrl && owner.avatarUrl && owner.logoUrl !== owner.avatarUrl
+    ? owner.avatarUrl
+    : getFaviconFallbackUrl(normalizedWebsiteUrl);
   return {
     displayName,
     websiteUrl: normalizedWebsiteUrl,
     websiteHost: new URL(normalizedWebsiteUrl).hostname.replace(/^www\./, ""),
-    logoUrl: getFaviconUrl(normalizedWebsiteUrl),
-    fallbackLogoUrl: getFaviconFallbackUrl(normalizedWebsiteUrl),
+    logoUrl: owner.logoUrl || owner.avatarUrl || faviconLogoUrl,
+    fallbackLogoUrl,
     githubUrl
   };
 }

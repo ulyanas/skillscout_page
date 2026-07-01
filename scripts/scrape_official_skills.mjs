@@ -8,6 +8,8 @@ const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, "..");
 const OUTPUT_PATH = process.env.OFFICIAL_SKILLS_OUTPUT || path.join(root, "data", "official-skills-universal.json");
 const SKILLS_SH_OFFICIAL_URL = "https://www.skills.sh/official";
+const OFFICIALSKILLS_URL = "https://officialskills.sh/#find-skills";
+const OFFICIALSKILLS_ORIGIN = "https://officialskills.sh";
 const MCPSERVERS_OFFICIAL_URL = "https://mcpservers.org/agent-skills/official";
 const MCPSERVERS_ORIGIN = "https://mcpservers.org";
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
@@ -26,6 +28,9 @@ const sourceRecords = [];
 
 const skillsSh = await fetchTextSource("skills.sh", SKILLS_SH_OFFICIAL_URL);
 sourceRecords.push(...parseSkillsShOfficial(skillsSh.text));
+
+const officialSkills = await fetchTextSource("officialskills.sh", OFFICIALSKILLS_URL);
+sourceRecords.push(...parseOfficialSkillsDirectory(officialSkills.text));
 
 // mcpservers.org: fetch the main official page only for owner discovery.
 // Per-author pages are skipped — they only produce standalone skills that get
@@ -153,6 +158,91 @@ function parseSkillsShOfficial(html) {
         });
       }
     }
+  }
+
+  return records;
+}
+
+function parseOfficialSkillsDirectory(html) {
+  const records = [];
+  const ownerRepoCounts = new Map();
+  const ownerSkillCounts = new Map();
+  const repoSkillCounts = new Map();
+  const rows = [];
+  const regex =
+    /<a href="\/([^"#]+)"[^>]*class="group\/row[\s\S]*?<span[^>]*>[0-9,]+<\/span>[\s\S]*?<span[^>]*>([^<]+)<\/span><span[^>]*>([^<]+)<!-- -->\/([^<]+)<\/span>[\s\S]*?<p[^>]*>([\s\S]*?)<\/p>/g;
+
+  for (const match of html.matchAll(regex)) {
+    const [sourceOwnerKey = "", repoSlug = "skills"] = match[1].split("/").map((part) => decodeURIComponent(part));
+    const ownerKey = normalizeOwnerKey(sourceOwnerKey);
+    const repoName = normalizeKey(repoSlug || "skills");
+    const repoKey = `${ownerKey}/${repoName}`;
+    const skillName = decodeHtml(match[2]);
+    const displayName = decodeHtml(match[3]);
+    const description = decodeHtml(match[5]);
+    const skillKey = buildSkillKey({ ownerKey, repoKey, skillName });
+    if (!ownerKey || !repoKey || !skillName || !skillKey) {
+      continue;
+    }
+
+    rows.push({
+      ownerKey,
+      sourceOwnerKey: normalizeKey(sourceOwnerKey),
+      repoKey,
+      repoName,
+      skillName,
+      skillKey,
+      displayName,
+      description,
+      ownerUrl: `${OFFICIALSKILLS_ORIGIN}/${sourceOwnerKey}/skills`,
+      repoUrl: `${OFFICIALSKILLS_ORIGIN}/${sourceOwnerKey}/${repoSlug}`,
+      skillUrl: `${OFFICIALSKILLS_ORIGIN}/${match[1]}`
+    });
+    ownerSkillCounts.set(ownerKey, (ownerSkillCounts.get(ownerKey) || 0) + 1);
+    repoSkillCounts.set(repoKey, (repoSkillCounts.get(repoKey) || 0) + 1);
+    const ownerRepos = ownerRepoCounts.get(ownerKey) || new Set();
+    ownerRepos.add(repoKey);
+    ownerRepoCounts.set(ownerKey, ownerRepos);
+  }
+
+  for (const row of rows) {
+    records.push({
+      type: "owner",
+      sourceId: "officialskills.sh",
+      ownerKey: row.ownerKey,
+      sourceOwnerKey: row.sourceOwnerKey,
+      displayName: row.displayName,
+      reposCount: ownerRepoCounts.get(row.ownerKey)?.size || 1,
+      skillsCount: ownerSkillCounts.get(row.ownerKey) || 0,
+      sourceUrl: row.ownerUrl
+    });
+    records.push({
+      type: "repo",
+      sourceId: "officialskills.sh",
+      ownerKey: row.ownerKey,
+      sourceOwnerKey: row.sourceOwnerKey,
+      repoKey: row.repoKey,
+      repoName: row.repoName,
+      displayName: `${row.displayName}/${row.repoName}`,
+      skillsCount: repoSkillCounts.get(row.repoKey) || 0,
+      sourceUrl: row.repoUrl
+    });
+    records.push({
+      type: "skill",
+      sourceId: "officialskills.sh",
+      ownerKey: row.ownerKey,
+      sourceOwnerKey: row.sourceOwnerKey,
+      repoKey: row.repoKey,
+      skillName: row.skillName,
+      skillKey: row.skillKey,
+      displayName: row.skillName,
+      description: row.description,
+      sourceUrl: row.skillUrl
+    });
+  }
+
+  if (rows.length < 600) {
+    throw new Error(`Could not find enough officialskills.sh rows: ${rows.length}`);
   }
 
   return records;
@@ -301,20 +391,22 @@ async function fetchGitHubRepoSkillPaths(repoKey) {
 
     const data = await response.json();
 
-    // Extract the path-relative skill name from each SKILL.md entry.
+    // Extract the path-relative skill name from each SKILL.md or skill.md entry.
     // Handles:  skill-name/SKILL.md       → "skill-name"
-    //           cat/skill-name/SKILL.md   → "cat/skill-name"
+    //           cat/skill-name/skill.md   → "cat/skill-name"
     //           SKILL.md (root)           → repo name itself
     const skillPaths = [];
+    const SKILL_RE = /(?:^|\/)(SKILL\.md|skill\.md)$/;
     for (const item of data.tree || []) {
       if (item.type !== "blob") continue;
-      if (!item.path.endsWith("/SKILL.md") && item.path !== "SKILL.md") continue;
+      const match = item.path.match(SKILL_RE);
+      if (!match) continue;
 
-      if (item.path === "SKILL.md") {
+      if (item.path === match[1]) {
         skillPaths.push(normalizeKey(repoKey.split("/")[1]));
       } else {
-        // Everything except the trailing /SKILL.md is the skill path
-        const skillPath = item.path.slice(0, -"/SKILL.md".length);
+        // Everything except the trailing skill file name is the skill path.
+        const skillPath = item.path.slice(0, -`/${match[1]}`.length);
         skillPaths.push(normalizeKey(skillPath));
       }
     }

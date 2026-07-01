@@ -30,6 +30,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
 
+      - name: Enrich owner metadata
+        run: node scripts/enrich_owner_metadata.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COMPANIES_API_KEY: ${{ secrets.COMPANIES_API_KEY }}
+          OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
+
       - name: Commit and push
         run: |
           git config user.email "github-actions@github.com"
