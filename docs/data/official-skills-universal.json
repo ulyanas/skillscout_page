@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-11T07:45:58.676Z",
+  "generatedAt": "2026-07-11T14:07:10.357Z",
   "sources": {
     "skills.sh": {
       "sourceId": "skills.sh",
@@ -4047,6 +4047,43 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/68870671?v=4",
       "companyName": "Tolstoy",
       "logoUrl": "https://avatars.githubusercontent.com/u/68870671?v=4"
+    },
+    {
+      "ownerKey": "grafana",
+      "displayName": "Grafana Labs",
+      "normalizedNames": [
+        "grafana",
+        "grafana-labs"
+      ],
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "websiteHosts": [
+        "grafana.com"
+      ],
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana"
+      ],
+      "skillsCount": 45,
+      "reposCount": 1,
+      "installsCount": 0,
+      "starsCount": 189,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z",
+      "website": "https://grafana.com",
+      "githubLogin": "grafana",
+      "githubUrl": "https://github.com/grafana",
+      "orgType": "Organization",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/7195757?v=4",
+      "logoUrl": "https://avatars.githubusercontent.com/u/7195757?v=4",
+      "companyName": "Grafana Labs",
+      "description": "Grafana Labs is behind leading open source projects Grafana and Loki, and the creator of the first open & composable observability platform.",
+      "location": "Sweden",
+      "twitter": "@grafana"
     },
     {
       "ownerKey": "greensock",
@@ -20145,6 +20182,79 @@
         "skills/remix-from-library",
         "skills/shoppable-widgets",
         "skills/tolstoy-studio"
+      ],
+      "truncated": false
+    },
+    {
+      "repoKey": "grafana/skills",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoName": "skills",
+      "displayName": "grafana/skills",
+      "sources": [
+        "github-discovery"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills"
+      ],
+      "skillsCount": 45,
+      "installsCount": 0,
+      "starsCount": 189,
+      "canonicalRepoKey": "grafana/skills",
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z",
+      "githubSkillPaths": [
+        "skills/grafana-app-sdk/admission-control",
+        "skills/grafana-app-sdk/app-sdk-concepts",
+        "skills/grafana-app-sdk/cue-kind-definition",
+        "skills/grafana-app-sdk/reconciler-logic",
+        "skills/grafana-cloud/adaptive-metrics",
+        "skills/grafana-cloud/admin",
+        "skills/grafana-cloud/app-observability",
+        "skills/grafana-cloud/assistant-mcp",
+        "skills/grafana-cloud/cloud-integrations",
+        "skills/grafana-cloud/cost-management",
+        "skills/grafana-cloud/database-observability",
+        "skills/grafana-cloud/dpm-finder",
+        "skills/grafana-cloud/fleet-management",
+        "skills/grafana-cloud/infrastructure",
+        "skills/grafana-cloud/loki-label-analyzer",
+        "skills/grafana-cloud/ml-ai",
+        "skills/grafana-cloud/oncall-irm",
+        "skills/grafana-cloud/private-connectivity",
+        "skills/grafana-cloud/prometheus-cardinality-troubleshooter",
+        "skills/grafana-cloud/prometheus-label-strategy",
+        "skills/grafana-cloud/send-data",
+        "skills/grafana-cloud/testing",
+        "skills/grafana-core/alerting-irm",
+        "skills/grafana-core/alloy",
+        "skills/grafana-core/beyla",
+        "skills/grafana-core/dashboarding",
+        "skills/grafana-core/grafana-oss",
+        "skills/grafana-core/opentelemetry",
+        "skills/grafana-core/promql",
+        "skills/grafana-core/skill-authoring",
+        "skills/grafana-datasources/datasources-provisioning",
+        "skills/grafana-k6/k6",
+        "skills/grafana-k6/k6-docs",
+        "skills/grafana-k6/k6-manage",
+        "skills/grafana-k6/k6-perf-test-website",
+        "skills/grafana-lgtm/loki",
+        "skills/grafana-lgtm/mimir",
+        "skills/grafana-lgtm/prometheus",
+        "skills/grafana-lgtm/pyroscope",
+        "skills/grafana-lgtm/tempo",
+        "skills/grafana-plugins/audit-and-reduce-dependencies",
+        "skills/grafana-plugins/check-npm",
+        "skills/grafana-plugins/grafana-scenes",
+        "skills/grafana-plugins/plugin-bundle-size",
+        "skills/grafana-plugins/react-19-plugin-migration"
+      ],
+      "skillPathPrefixes": [
+        "skills/"
       ],
       "truncated": false
     },
@@ -135901,6 +136011,951 @@
       "confidence": "high",
       "firstSeenAt": "2026-07-11T07:46:13.307Z",
       "lastSeenAt": "2026-07-11T07:46:13.307Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-app-sdk/admission-control",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "admission-control",
+      "displayName": "admission-control",
+      "description": "Use when the user asks to \"write a validator\", \"add validation\", \"implement admission control\", \"write a mutating webhook\", \"add a mutation handler\", \"validate incoming resources\", \"implement admission logic\", \"add admission webhooks\", \"write ingress validation\", or asks how to validate or mutate resources before they are persisted in a grafana-app-sdk app. Provides guidance on implementing validation and mutation admission handlers for grafana-app-sdk apps.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-app-sdk/admission-control"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-app-sdk/app-sdk-concepts",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "app-sdk-concepts",
+      "displayName": "app-sdk-concepts",
+      "description": "Use when starting any grafana-app-sdk work — scaffolding a Grafana app, initializing a Grafana App Platform app, picking a deployment mode (standalone operator / grafana/apps / frontend-only), wiring app-specific config, or onboarding to the SDK. Covers `grafana-app-sdk` CLI install, `project init` per deployment mode, project layout, the schema-centric workflow (CUE kinds → generated code → reconciler/admission logic), and `SpecificConfig` for env-driven app configuration. Use even if the user just says \"make a new app\", \"Grafana app platform\", \"kinds and watchers\", \"operator scaffold\", or asks about `apps/` inside the Grafana repo, without naming the SDK explicitly.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-app-sdk/app-sdk-concepts"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-app-sdk/cue-kind-definition",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "cue-kind-definition",
+      "displayName": "cue-kind-definition",
+      "description": "Author CUE kind definitions for grafana-app-sdk apps - schemas, versioning, field constraints, named type definitions, custom routes, and codegen configuration. Scaffolds kinds via `grafana-app-sdk project kind add`, writes spec/status schemas with type constraints (regex, enum, range), defines `#`-prefixed named types for reusable structs, registers versions in the app manifest, and runs `grafana-app-sdk generate` with explicit error recovery. Use when working with CUE kinds, adding a new resource type, adding a version to an existing kind, writing schema field constraints, defining `#Definition` types, adding custom routes, editing files under `kinds/`, or when the user asks to \"model a resource\", \"add a CUE schema\", or \"write a kind\" — even without saying \"CUE\" explicitly.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-app-sdk/cue-kind-definition"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-app-sdk/reconciler-logic",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "reconciler-logic",
+      "displayName": "reconciler-logic",
+      "description": "Implement reconcilers and watchers for grafana-app-sdk apps — write `TypedReconciler[*MyKind]` reconcile functions, apply generation-based skip patterns, do conflict-safe status updates via `resource.UpdateObject`, configure `BasicReconcileOptions` (namespace, label/field filters, finalizer management), use `Watcher` for event-style handling, reconcile `UnmanagedKinds` (resources your app doesn't own), and register the whole thing in `app.go`. Use when writing a reconciler, implementing the reconcile loop, adding async business logic, handling create/update/delete events, processing resource state changes, scheduling periodic resyncs with `RequeueAfter`, picking between Watcher and Reconciler, or wiring a controller into `app.go` — even when the user says \"process this resource\", \"handle X events\", or \"write a controller\" without saying \"reconciler\".",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-app-sdk/reconciler-logic"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/adaptive-metrics",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "adaptive-metrics",
+      "displayName": "adaptive-metrics",
+      "description": "Cut Grafana Cloud Metrics cost by shrinking active-series count with Adaptive Metrics aggregation rules — auto-recommendations from query history, custom exact/regex rules, label-drop config, unused-metric detection, and Alloy remote_write fallback. Use when investigating a high Mimir/Grafana Cloud bill, hunting high-cardinality labels (`pod_uid`, `service_instance_id`, `version`), pre-aggregating counters/gauges, dropping unused metrics, or measuring `grafanacloud_instance_active_series` before/after — even when the user says \"reduce cardinality\", \"too many series\", \"metrics spend\", \"active series count is exploding\", or \"drop the version label\" without naming Adaptive Metrics.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/adaptive-metrics"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/admin",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "admin",
+      "displayName": "admin",
+      "description": "Manage Grafana Cloud accounts — organizations, stacks, RBAC roles and assignments, SSO/SAML/OAuth/GitHub auth, service accounts for CI/CD, user invites, team membership, and API-driven provisioning. Creates stacks via the Cloud API, mints service-account tokens, applies role assignments, configures SSO providers, and provisions teams/folders/dashboards via Terraform. Use when managing Grafana Cloud access, configuring SSO/SAML/OAuth, setting up service accounts for Terraform/CI/CD, assigning RBAC roles, inviting users, managing multiple stacks or organizations, provisioning cloud resources via API or Terraform, or auditing admin actions — even when the user says \"set up SSO\", \"create a stack\", \"make a service account\", or \"onboard a team\" without explicitly saying \"admin\".",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/admin"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/app-observability",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "app-observability",
+      "displayName": "app-observability",
+      "description": "Get RED metrics + service maps + frontend RUM + AI/LLM monitoring out of Grafana Cloud — Application Observability (`traces_spanmetrics_*` from OTel traces, p50/p95/p99 latency, exemplar-to-trace, traces-to-logs / profiles), Frontend Observability with the Faro Web SDK (Core Web Vitals, session replay, `pushError`, React + router integration, `TracingInstrumentation` for browser → backend trace correlation), and AI Observability via OpenLIT (token / cost / latency, GPU, hallucination + toxicity evals). Use when standing up APM for a service, wiring an Alloy OTLP receiver + forwarding to Cloud, instrumenting a React frontend for RUM, debugging why service-map edges are missing, monitoring LLM cost drift, or correlating a frontend error to its backend trace — even when the user says \"set up APM\", \"show service map\", \"monitor browser perf\", \"session replay\", \"RUM SDK\", or \"watch our OpenAI bill\" without naming App / Frontend / AI Observability.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/app-observability"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/assistant-mcp",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "assistant-mcp",
+      "displayName": "assistant-mcp",
+      "description": "Connect AI coding agents (Claude Code, Cursor, VS Code, OpenAI Codex) to Grafana Cloud via the `mcp-grafana` Model Context Protocol server. Installs the server with `go install`, generates a Grafana service-account token, wires `~/.claude/settings.json` or `~/.cursor/mcp.json` with the `command` + `env` block, runs `--disable-write` for safer read-only sessions, switches to SSE transport for team-shared / VS Code setups, and verifies with `/mcp` + a `list_datasources` round-trip. Use when connecting Claude Code to Grafana, setting up MCP for Grafana, configuring the Grafana MCP server, using Grafana tools in Cursor/VS Code, querying Grafana from an AI agent, sharing the MCP server across a team — even when the user says \"give my agent Grafana access\", \"let Claude see my metrics\", or \"Cursor + Grafana\" without saying \"MCP\".",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/assistant-mcp"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/cloud-integrations",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "cloud-integrations",
+      "displayName": "cloud-integrations",
+      "description": "Set up, configure, and troubleshoot Grafana Cloud integrations for AWS, Azure, and other cloud",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/cloud-integrations"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/cost-management",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "cost-management",
+      "displayName": "cost-management",
+      "description": "Cut your Grafana Cloud bill by attributing spend to teams and reducing telemetry volume. Covers FOCUS-compliant billing dashboards, cost-attribution labels in Alloy, Adaptive Metrics (cardinality reduction), Adaptive Logs (drop/sample), Adaptive Traces (tail sampling), usage alerts, and an optimization checklist. Use when investigating a high Grafana Cloud bill, attributing observability cost to a team or service, reducing active series / log bytes / trace spans, or setting up usage / quota alerts — even when the user says \"our Grafana bill is too high\", \"who's burning the most metrics\", \"drop debug logs\", \"sample our traces\", or \"alert me before we hit quota\" without naming Cost Management.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/cost-management"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/database-observability",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "database-observability",
+      "displayName": "database-observability",
+      "description": "Set up Grafana Cloud Database Observability for MySQL and PostgreSQL — enables `pg_stat_statements` / Performance Schema, creates a least-privilege monitoring user, configures the `database_observability.postgres` / `database_observability.mysql` Alloy components, ships query samples + visual explain plans + RED metrics + schema details to Grafana Cloud, and correlates slow queries with application traces via `db.statement` / `db.system` OTel attributes. Use when monitoring database performance, diagnosing slow queries, setting up DB observability for RDS / Aurora / Cloud SQL / Azure Database / self-managed instances, correlating DB metrics with APM, or alerting on query latency — even when the user says \"my database is slow\", \"find the slow queries\", or \"monitor RDS\" without saying \"observability\".",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/database-observability"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/dpm-finder",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "dpm-finder",
+      "displayName": "dpm-finder",
+      "description": "Find the Prometheus metrics that drive your Grafana Cloud bill. `dpm-finder` is a Grafana Professional Services CLI that ranks metrics by Data Points per Minute (DPM) with per-label-set breakdown, optional `--cost-per-1000-series` pricing, and a Prometheus-exporter mode. Use when investigating high Grafana Cloud spend, hunting noisy / high-cardinality metrics, comparing pre/post recording-rule cardinality, or feeding cost data into dashboards — even when the user says \"why is my Mimir bill so high?\", \"find the biggest metrics\", \"cardinality offenders\", or \"optimize Prometheus cost\" without naming dpm-finder.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/dpm-finder"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/fleet-management",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "fleet-management",
+      "displayName": "fleet-management",
+      "description": "Manage a fleet of Grafana Alloy collectors with Fleet Management — author Alloy pipelines once, target them via attribute matchers (`env=\"production\"`, regex `region=~\"us-.*\"`), push remotely via OpAMP without restarting collectors. Covers pipeline create / update / matcher RPCs, collector attribute API, `remotecfg` bootstrap block (standalone + Helm), pre-deploy `alloy fmt` validation, the local Alloy UI at port 12345 for component health, and post-deploy `REMOTE_CONFIG_STATUS_APPLIED` verification. Use when standing up a Cloud Alloy fleet, pushing a config change to 200 collectors, hunting why one collector shows `REMOTE_CONFIG_STATUS_FAILED`, validating River syntax before saving, or wiring `discovery.kubernetes` → `prometheus.remote_write` — even when the user says \"configure Alloy\", \"remote config the collectors\", \"push pipeline\", \"OpAMP\", \"collector is unhealthy\", or \"manage agent config centrally\" without naming Fleet Management.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/fleet-management"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/infrastructure",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "infrastructure",
+      "displayName": "infrastructure",
+      "description": "Ship Kubernetes, host, container, and cloud-provider telemetry into Grafana Cloud — `k8s-monitoring` Helm chart for K8s clusters (metrics + logs + traces + events + cost), Alloy `prometheus.exporter.unix` for Linux hosts, cAdvisor + Docker discovery for containers, and CloudWatch / Azure Monitor / Google Cloud Monitoring datasource setup. Use when onboarding a new cluster or VM fleet to Grafana Cloud, picking the right Helm values for K8s scraping, wiring kube-state-metrics + node-exporter + cAdvisor, alerting on `PodCrashLooping` / node memory / PVC capacity, or pulling AWS / Azure / GCP cloud metrics — even when the user says \"monitor my cluster\", \"send K8s metrics to Grafana\", \"scrape EC2 metrics\", \"cluster pod logs\", or \"install the monitoring helm chart\" without naming `k8s-monitoring` or Alloy.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/infrastructure"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/loki-label-analyzer",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "loki-label-analyzer",
+      "displayName": "loki-label-analyzer",
+      "description": ">",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/loki-label-analyzer"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/ml-ai",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "ml-ai",
+      "displayName": "ml-ai",
+      "description": "Turn on AI + ML features in Grafana Cloud — Grafana Assistant (NL → PromQL/LogQL/TraceQL, dashboard build, incident investigation, MCP integration), Dynamic Alerting (Prophet forecasting + DBSCAN outlier detection), Sift (8-analysis automated root-cause), Knowledge Graph + RCA Workbench, and the LLM Plugin (OpenAI / Anthropic / Azure / Ollama / vLLM / LiteLLM). Use when you want anomaly alerts without static thresholds, natural-language querying, automated incident investigation, dashboards generated from a sentence, or a managed LLM proxy for plugins — even when the user says \"alert when something looks weird\", \"explain this PromQL\", \"find the root cause\", \"make this a dashboard\", or \"wire Claude into Grafana\" without naming any of these products.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/ml-ai"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/oncall-irm",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "oncall-irm",
+      "displayName": "oncall-irm",
+      "description": "Route alerts, run on-call rotations, and drive incidents in Grafana IRM / OnCall — integrations (Alertmanager / Grafana Alerting / generic webhook / PagerDuty), Jinja2 routing + grouping templates, escalation chains (wait → notify schedule → notify team → webhook → auto-resolve), schedules (web + iCal + Terraform `grafana_oncall_schedule`), Slack chatops with Acknowledge/Resolve/Silence, and the P1-P4 incident lifecycle. Use when wiring Alertmanager to OnCall, deciding which team gets paged, building rotations from a Google Calendar / iCal, hooking up Slack notifications, or declaring an incident from an alert — even when the user says \"page the platform team on critical alerts\", \"send Prometheus alerts to Slack\", \"set up our on-call rota\", \"escalation policy\", or \"auto-resolve when the alert clears\" without naming OnCall / IRM. Heads up — OnCall OSS is in maintenance mode (archived March 2026); Grafana Cloud users should use IRM.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/oncall-irm"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/private-connectivity",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "private-connectivity",
+      "displayName": "private-connectivity",
+      "description": "Set up private network connectivity to Grafana Cloud — AWS PrivateLink, Azure Private Link, GCP Private Service Connect, and Private Data Source Connect (PDC). Provisions VPC endpoints, private endpoints, or PSC forwarding rules per signal type (metrics / logs / traces / profiles); wires Alloy to push to the private DNS endpoint instead of the public one; verifies private DNS resolution + endpoint approval state. Use when sending telemetry to Grafana Cloud without traversing the public internet, eliminating cloud egress costs, meeting PCI-DSS / HIPAA / data-residency compliance, configuring PDC for private data-source queries, or connecting AWS / Azure / GCP workloads to Grafana — even when the user says \"stop paying egress\", \"keep our telemetry off the public internet\", or \"PCI compliance for Grafana\" without naming PrivateLink.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/private-connectivity"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/prometheus-cardinality-troubleshooter",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "prometheus-cardinality-troubleshooter",
+      "displayName": "prometheus-cardinality-troubleshooter",
+      "description": ">",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/prometheus-cardinality-troubleshooter"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/prometheus-label-strategy",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "prometheus-label-strategy",
+      "displayName": "prometheus-label-strategy",
+      "description": ">",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/prometheus-label-strategy"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/send-data",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "send-data",
+      "displayName": "send-data",
+      "description": ">",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/send-data"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-cloud/testing",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "testing",
+      "displayName": "testing",
+      "description": "Probe, load-test, and instrument frontends from Grafana Cloud. Covers Synthetic Monitoring (HTTP / DNS / TCP / Ping / Traceroute / Multihttp / k6-browser scripted checks from 20+ global probes, alert on `probe_success` + TLS-cert expiry), Grafana Cloud k6 (distributed load tests across AWS load-zones, scenarios, `http_req_duration` thresholds, CI integration via `grafana/k6-action`), and Frontend Observability with Faro Web SDK (RUM, Core Web Vitals, custom events, `pushError`, distributed-trace correlation). Use when checking website / API uptime from multiple regions, gating a release on a load test, watching for TLS-cert renewal, instrumenting a React/Vue app, tracking Core Web Vitals, or correlating frontend errors to backend traces — even when the user says \"is my login flow up?\", \"monitor my API\", \"ping our endpoint every minute\", \"release-gate load test\", \"browser performance monitoring\", \"session replay\", or \"RUM\" without naming Synthetic Monitoring / k6 / Faro.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-cloud/testing"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-core/alerting-irm",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "alerting-irm",
+      "displayName": "alerting-irm",
+      "description": "Configure Grafana Alerting, Incident Response Management (IRM), and SLOs end-to-end — provisions Grafana-managed and data-source-managed alert rules, contact points (Slack/PagerDuty/email/webhook), notification policies with hierarchical matchers, silences, mute timings, on-call schedules and escalation chains, incident-management integrations, and SLOs with multi-window burn-rate alerts. Use when configuring alerts, debugging notification routing, setting up on-call rotations, declaring or managing incidents, defining SLOs, provisioning alerting via YAML or API, picking matchers for a notification policy, building a PagerDuty/Slack webhook receiver, or troubleshooting why an alert isn't firing — even when the user says \"page me on errors\", \"alert me when X happens\", \"route this to the platform team\", or \"set up an SLO\" without naming Alerting or IRM.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-core/alerting-irm"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-core/alloy",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "alloy",
+      "displayName": "alloy",
+      "description": "Build a unified telemetry pipeline with Grafana Alloy — one OpenTelemetry-compatible binary that collects metrics, logs, traces, and profiles and ships to Grafana Cloud / Prometheus / Loki / Tempo / Pyroscope. Covers the Alloy config language (blocks, `sys.env`, component refs), `prometheus.scrape` → `remote_write`, `loki.source.file` + `loki.process` → `loki.write`, `otelcol.receiver.otlp` → `otelcol.exporter.otlp`, `pyroscope.scrape`, K8s / Docker / EC2 discovery, relabeling, modules (`import.file/git/http`), clustering, Fleet Management `remotecfg`, the Alloy UI at `:12345`, and `alloy fmt` / `alloy validate`. Use when writing a `config.alloy`, replacing Grafana Agent / OTel Collector, scraping K8s pods, parsing logs, ingesting OTLP, or debugging \"Alloy isn't sending anything\" — even when the user says \"set up the agent\", \"write me a scrape config\", \"drop these logs before sending\", or \"OTel collector config\" without naming Alloy.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-core/alloy"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-core/beyla",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "beyla",
+      "displayName": "beyla",
+      "description": "Auto-instrument an application's HTTP / gRPC / DB traffic with Grafana Beyla eBPF — no code changes, no SDK, no restart. Covers requirements (Linux 5.8+ with BTF, CAP_SYS_ADMIN, host PID), language matrix (Go / Java / Python / Ruby / Node / .NET / Rust / C++ / PHP), Docker + Helm + DaemonSet install, port- / process- / Kubernetes-metadata discovery, OTLP traces + Prometheus metrics export, routes decorator (cardinality control), trace sampling, and Grafana Cloud via Alloy. Use when adding observability to a service you can't recompile, instrumenting a closed-source binary, getting RED metrics + spans onto Tempo/Mimir without touching the app, or rolling Beyla as a cluster-wide DaemonSet — even when the user says \"zero-code APM\", \"instrument legacy app\", \"trace this binary\", \"eBPF observability\", or \"no SDK\" without naming Beyla.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-core/beyla"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-core/dashboarding",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "dashboarding",
+      "displayName": "dashboarding",
+      "description": "Build, modify, and ship Grafana dashboards as JSON via the HTTP API — panel types (timeseries / stat / gauge / table / heatmap / logs / traces / node-graph), `gridPos` 24-column layout, units, thresholds, template + datasource + chained variables, transformations (`organize` / `calculateField` / `filterByValue`), panel + dashboard links with `${__field.labels.x}` / `${__from}`, and Loki/Prometheus annotations. Use when scripting dashboard creation, writing the dashboard JSON for a new service, adding a `$job` dropdown variable, computing an \"Error %\" column with a transformation, overlaying deploys as annotations, or pushing a dashboard via `POST /api/dashboards/db` — even when the user says \"create a dashboard for this metric\", \"add a service dropdown\", \"show errors as percentage\", \"overlay our deploys\", or \"export the dashboard JSON\" without naming the API or schema. After every API push, verify with the returned `version` plus a GET on the dashboard UID.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-core/dashboarding"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-core/grafana-oss",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "grafana-oss",
+      "displayName": "grafana-oss",
+      "description": "Configure Grafana OSS — provisions dashboards from YAML, sets up data sources (Prometheus / Loki / Tempo / Pyroscope), writes dashboard JSON with template variables, builds panel queries, assigns built-in roles (Viewer / Editor / Admin / GrafanaAdmin), mints service-account tokens, edits grafana.ini server config, creates annotations, installs plugins via provisioning, and validates each step with a health-check curl. Use when building dashboards, configuring data sources, setting up provisioning YAML, picking a panel type, writing template variables, managing users and roles, configuring SMTP/OAuth in grafana.ini, creating annotations via API, troubleshooting why a provisioned dashboard isn't showing up, or running Grafana OSS locally — even when the user says \"set up a Prometheus data source\", \"provision dashboards from git\", \"make a service account\", or \"configure SSO in OSS\" without saying \"Grafana OSS\".",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-core/grafana-oss"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-core/opentelemetry",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "opentelemetry",
+      "displayName": "opentelemetry",
+      "description": "Instrument any app with OpenTelemetry and ship metrics / logs / traces to Grafana Cloud or self-hosted Mimir / Loki / Tempo / Pyroscope. Covers SDK auto-instrumentation for Go, Java (Grafana JVM agent), Python (`opentelemetry-instrument`), Node.js, .NET (`Grafana.OpenTelemetry`), Beyla eBPF for zero-code; Grafana Cloud OTLP gateway + Basic-auth (instanceID + API key, base64); env-var config (`OTEL_EXPORTER_OTLP_*`, `OTEL_RESOURCE_ATTRIBUTES`); Alloy / OTel-Collector pipelines; Kubernetes Operator inject-annotations; and head + tail sampling. Use when instrumenting a service, pointing OTLP at Grafana Cloud, switching from Jaeger / Datadog / New Relic, choosing head- vs tail-sampling, or debugging \"spans aren't showing in Explore\" — even when the user says \"auto-instrument my Java app\", \"send traces to Grafana\", \"what env vars do I set\", \"OTLP endpoint\", or \"Operator inject\" without naming OpenTelemetry.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-core/opentelemetry"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-core/promql",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "promql",
+      "displayName": "promql",
+      "description": "Write, validate, and optimize PromQL for Prometheus / Grafana Mimir / Grafana Cloud Metrics. Covers `rate` vs `irate` vs `increase`, label matchers and regex, `sum / avg / topk / by / without` aggregation, classic + native `histogram_quantile`, ratios with divide-by-zero guards, `absent` / `changes` for staleness, time offsets and `predict_linear`, recording-rule naming, SLO + burn-rate math, and a cardinality-hunting playbook. Use when writing a metric query, fixing wrong p95s, building an error-budget alert, debugging \"query is slow\", finding the noisy label that blew up cardinality, or migrating a dashboard query to a recording rule — even when the user says \"calculate the error rate\", \"p99 latency\", \"sum by service\", \"why is this query slow\", or \"what's filling Mimir\" without naming PromQL.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-core/promql"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-core/skill-authoring",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "skill-authoring",
+      "displayName": "skill-authoring",
+      "description": "Author, audit, and improve Grafana SKILL.md files against Anthropic's published Agent Skills guidance and the four-dimension rubric the grafana/skills CI gate uses (conciseness, actionability, workflow clarity, progressive disclosure). Applies the canonical SKILL.md structure (YAML frontmatter + body + references/ + scripts/ + assets/), the \"pushy description\" trigger pattern, the three-level progressive-disclosure model, and the validate-fix-rerun feedback loop. Use when creating a new skill in this repo, when reviewing a skill PR, when a skill's Tessl review score is below 75 (the merge gate), when a skill's description isn't getting picked up by agents, when restructuring a long SKILL.md into a bundle, or when the user asks how to write, improve, optimize, audit, or fix a skill - even if they don't say \"skill\" explicitly (e.g. \"this isn't triggering\", \"Tessl scored this 72\", \"split this doc\").",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-core/skill-authoring"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-datasources/datasources-provisioning",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "datasources-provisioning",
+      "displayName": "datasources-provisioning",
+      "description": "Generate a copy-paste Grafana data source provisioning file (YAML or Terraform) for any plugin from its standardized settings schema on the plugins CDN. Use when the user wants to provision or configure a data source as code — e.g. \"provision infinity\", \"datasource yaml for clickhouse\", \"terraform for the github datasource\" — even when they only name the plugin and not the word \"provisioning\".",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-datasources/datasources-provisioning"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-k6/k6",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "k6",
+      "displayName": "k6",
+      "description": ">",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-k6/k6"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-k6/k6-docs",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "k6-docs",
+      "displayName": "k6-docs",
+      "description": "Write or review k6 documentation across the three k6 repositories - k6-DefinitelyTyped (TypeScript types), k6-docs (user documentation), and k6 (release notes / changelog). Applies k6 doc style conventions, generates TypeScript type definitions, drafts release notes, and validates examples by running them against k6@master. Use when working on k6 documentation, the k6 changelog, the k6 release notes, k6 API reference, k6 TypeScript types, load testing docs, or when the user asks to write, edit, or review anything in the k6, k6-docs, or k6-DefinitelyTyped repos - even if they don't explicitly say \"documentation\".",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-k6/k6-docs"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-k6/k6-manage",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "k6-manage",
+      "displayName": "k6-manage",
+      "description": "Interact with Grafana Cloud k6 (GCk6) — manage load tests, test runs, scripts, projects, schedules, env vars, fetch metrics or logs, and run scripts locally — using the `gcx` CLI (or direct curl when gcx is unavailable). Use this skill whenever the user mentions a k6 cloud test or run, asks to list/edit/create/start/abort k6 load tests, wants to fetch logs or metrics for a test run, manage k6 project limits or schedules, run a k6 script locally or via `k6 cloud run`, or needs to call any `/cloud/v6/`, `/cloud/v5/`, or k6-app Loki endpoint against a Grafana Cloud stack. Trigger even when the user doesn't explicitly say \"gcx\" or \"API\" — phrases like \"why did my k6 test fail\", \"show me logs for run X\", \"bump VUh limit on project Y\", or \"update my k6 script\" all qualify.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-k6/k6-manage"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-k6/k6-perf-test-website",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "k6-perf-test-website",
+      "displayName": "k6-perf-test-website",
+      "description": ">",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-k6/k6-perf-test-website"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-lgtm/loki",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "loki",
+      "displayName": "loki",
+      "description": ">",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-lgtm/loki"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-lgtm/mimir",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "mimir",
+      "displayName": "mimir",
+      "description": "Stand up Grafana Mimir for horizontally scalable, multi-tenant, long-term Prometheus + OTLP metrics storage. Covers monolithic / read-write / microservices deployment, S3 / GCS / Azure / filesystem block storage, Prometheus `remote_write` and OTLP ingestion, multi-tenancy with `X-Scope-OrgID`, ingester replication factor, compactor retention, and per-tenant limits. Use when running Mimir locally or on Kubernetes (Helm `mimir-distributed`), scaling Prometheus past a single node, picking ingest / query / backend split, configuring tenants and ingestion rate, debugging `/ready` 503s or `429 Too Many Requests`, or pointing Grafana at a Mimir datasource — even when the user says \"I need long-term Prometheus storage\", \"scale Prometheus\", \"multi-tenant metrics backend\", \"Cortex replacement\", \"remote_write target\", or \"store 10M active series\" without naming Mimir.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-lgtm/mimir"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-lgtm/prometheus",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "prometheus",
+      "displayName": "prometheus",
+      "description": ">",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-lgtm/prometheus"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-lgtm/pyroscope",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "pyroscope",
+      "displayName": "pyroscope",
+      "description": "Continuously profile applications with Grafana Pyroscope and read the result as flame graphs. Covers three instrumentation paths — language SDK push (Go / Java / Python / Ruby / Node / .NET / Rust), Alloy eBPF auto-instrumentation (no code change, requires kernel 5.8+ with BTF), and SDK → Alloy receiver — plus ProfileQL queries, profile types (CPU / memory / allocations / goroutines / mutex), Grafana Cloud Profiles endpoint, and Span Profiles trace-to-profile linking. Use when adding profiling to a service, deploying Alloy as a cluster-wide eBPF profiler, hunting CPU / memory hotspots from a flame graph, comparing two profiles to find a regression, or correlating a slow Tempo trace to its profile — even when the user says \"find what's burning CPU\", \"flame graph this app\", \"continuous profiling\", \"heap hotspots\", or \"why is allocation so high\" without naming Pyroscope.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-lgtm/pyroscope"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-lgtm/tempo",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "tempo",
+      "displayName": "tempo",
+      "description": "Stand up Grafana Tempo as a cost-efficient distributed-tracing backend that only needs object storage, and write TraceQL queries against it. Covers OTLP + Jaeger + Zipkin ingestion, the distributor → live-store → block-builder → object-storage write path, metrics-generator for RED spanmetrics + service graphs, Helm `tempo-distributed` deployment, multi-tenant `X-Scope-OrgID`, TraceQL span / resource / event scopes, structural operators (`>>`, `<<`), `rate()` + `quantile_over_time` metrics, and the traces-to-logs / metrics / profiles datasource links. Use when deploying Tempo, writing a TraceQL query for slow / errored requests, debugging \"no traces showing in Explore\", sizing queriers / compactors, configuring S3 / GCS / Azure block storage, or wiring trace ↔ log ↔ profile correlation — even when the user says \"tracing backend\", \"find slow requests\", \"show me the service graph\", \"store traces in S3\", \"Jaeger compatible store\", or \"what called this span\" without naming Tempo.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-lgtm/tempo"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-plugins/audit-and-reduce-dependencies",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "audit-and-reduce-dependencies",
+      "displayName": "audit-and-reduce-dependencies",
+      "description": ">-",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-plugins/audit-and-reduce-dependencies"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-plugins/check-npm",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "check-npm",
+      "displayName": "check-npm",
+      "description": ">-",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-plugins/check-npm"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-plugins/grafana-scenes",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "grafana-scenes",
+      "displayName": "grafana-scenes",
+      "description": "Build Grafana plugin pages using the @grafana/scenes framework. Use when creating new scene pages, adding panels/visualizations, setting up drilldown navigation, defining variables, configuring query runners, building table/timeseries/stat panels, or extending SceneObjectBase for custom scene objects. Triggers on any work involving SceneApp, SceneAppPage, EmbeddedScene, SceneQueryRunner, SceneDataTransformer, PanelBuilders, SceneFlexLayout, QueryVariable, or drilldown/tab configuration in Grafana plugins.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-plugins/grafana-scenes"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-plugins/plugin-bundle-size",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "plugin-bundle-size",
+      "displayName": "plugin-bundle-size",
+      "description": "Optimise Grafana app plugin bundle size using React.lazy, Suspense, and webpack code splitting.",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-plugins/plugin-bundle-size"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
+    },
+    {
+      "skillKey": "grafana/skills/skills/grafana-plugins/react-19-plugin-migration",
+      "ownerKey": "grafana",
+      "sourceOwnerKeys": [
+        "grafana"
+      ],
+      "repoKey": "grafana/skills",
+      "skillName": "react-19-plugin-migration",
+      "displayName": "react-19-plugin-migration",
+      "description": "Migrate a Grafana plugin to React 19 compatibility. Use when the user asks to update a plugin",
+      "sources": [
+        "github"
+      ],
+      "sourceUrls": [
+        "https://github.com/grafana/skills/tree/HEAD/skills/grafana-plugins/react-19-plugin-migration"
+      ],
+      "installsCount": 0,
+      "confidence": "high",
+      "firstSeenAt": "2026-07-11T14:07:10.357Z",
+      "lastSeenAt": "2026-07-11T14:07:10.357Z"
     },
     {
       "skillKey": "greensock/skills/gsap-core",
@@ -269696,25 +270751,25 @@
     }
   ],
   "stats": {
-    "owners": 230,
-    "repos": 654,
-    "skills": 10617,
+    "owners": 231,
+    "repos": 655,
+    "skills": 10662,
     "sourceOwners": {
-      "github-discovery": 116,
-      "skills.sh": 166,
+      "github-discovery": 117,
+      "mcpservers.org": 92,
       "officialskills.sh": 55,
-      "mcpservers.org": 92
+      "skills.sh": 166
     },
     "sourceRepos": {
-      "github-discovery": 147,
-      "skills.sh": 574,
-      "officialskills.sh": 55
+      "github-discovery": 148,
+      "officialskills.sh": 55,
+      "skills.sh": 574
     },
     "sourceSkills": {
-      "github": 10164,
-      "skills.sh": 5696,
-      "officialskills.sh": 236
+      "github": 10209,
+      "officialskills.sh": 236,
+      "skills.sh": 5696
     }
   },
-  "enrichedAt": "2026-07-11T07:46:56.535Z"
+  "enrichedAt": "2026-07-11T14:07:10.357Z"
 }

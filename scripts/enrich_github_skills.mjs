@@ -141,10 +141,14 @@ function reconcileSkillsWithGitHub(directory) {
 
     // Preserve install counts from catalog skills for matched names
     const catalogInstalls = new Map();
+    const catalogDescriptions = new Map();
     for (const skill of directory.officialSkills) {
       if (skill.repoKey !== repoKey) continue;
       const slug = normalizeKey(skill.skillName || skill.displayName);
       catalogInstalls.set(slug, Math.max(catalogInstalls.get(slug) || 0, skill.installsCount || 0));
+      if (skill.description) {
+        catalogDescriptions.set(slug, skill.description);
+      }
     }
 
     // Replace ALL existing skills for this repo with GitHub ground truth.
@@ -158,6 +162,7 @@ function reconcileSkillsWithGitHub(directory) {
       const skillName = skillPath.split("/").pop();
       const skillKey = `${repoKey}/${skillPath}`;
       const installs = catalogInstalls.get(skillPath) || catalogInstalls.get(skillName) || 0;
+      const description = catalogDescriptions.get(skillPath) || catalogDescriptions.get(skillName) || "";
 
       directory.officialSkills.push({
         skillKey,
@@ -166,7 +171,7 @@ function reconcileSkillsWithGitHub(directory) {
         repoKey,
         skillName,
         displayName: skillName,
-        description: "",
+        description,
         sources: ["github"],
         sourceUrls: [`https://github.com/${repoKey}/tree/HEAD/${skillPath}`],
         installsCount: installs,
