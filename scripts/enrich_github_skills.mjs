@@ -103,17 +103,19 @@ async function fetchGitHubRepoSkillPaths(repo) {
     const data = await response.json();
 
     const skillPaths = [];
+    const SKILL_RE = /(?:^|\/)(SKILL\.md|skill\.md)$/;
     for (const item of data.tree || []) {
       if (item.type !== "blob") continue;
-      if (!item.path.endsWith("/SKILL.md") && item.path !== "SKILL.md") continue;
+      const match = item.path.match(SKILL_RE);
+      if (!match) continue;
       if (skillPathPrefixes.length && !skillPathPrefixes.some((prefix) => item.path.startsWith(prefix))) {
         continue;
       }
 
-      if (item.path === "SKILL.md") {
+      if (item.path === match[1]) {
         skillPaths.push(normalizeKey(repoKey.split("/")[1]));
       } else {
-        const skillPath = item.path.slice(0, -"/SKILL.md".length);
+        const skillPath = item.path.slice(0, -`/${match[1]}`.length);
         skillPaths.push(normalizeKey(skillPath));
       }
     }

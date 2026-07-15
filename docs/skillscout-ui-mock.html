@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Skillscout UI Mock</title>
+    <style>
+      :root {
+        --bg: #f6f6f3;
+        --panel: #ffffff;
+        --border: #e4e4df;
+        --border-soft: #ecece7;
+        --border-strong: #111111;
+        --text: #111111;
+        --text-muted: #5f5f5f;
+        --shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.04);
+        --shadow-lg: 0 24px 60px -20px rgba(17, 17, 17, 0.22), 0 8px 24px rgba(17, 17, 17, 0.08);
+        --radius-xl: 24px;
+        --radius-lg: 16px;
+        --radius-md: 12px;
+      }
+
+      * { box-sizing: border-box; }
+
+      html, body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 32px 16px;
+      }
+
+      .popup {
+        position: relative;
+        width: 380px;
+        padding: 16px 16px 18px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-xl);
+        background: #fff;
+        box-shadow: var(--shadow-lg);
+      }
+
+      .popup-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .popup-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .popup-brand img {
+        width: 18px;
+        height: 18px;
+      }
+
+      .popup-title {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      .popup-icon-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        border: 1px solid var(--border-strong);
+        border-radius: 999px;
+        background: #111;
+        color: #fff;
+      }
+
+      .popup-refresh-icon {
+        width: 18px;
+        height: 18px;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2;
+      }
+
+      .popup-panel {
+        margin-bottom: 14px;
+        padding: 14px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        background: #fff;
+        box-shadow: 0 8px 24px rgba(17, 17, 17, 0.08);
+      }
+
+      .popup-site-panel-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .popup-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      .popup-eyebrow {
+        margin: 0;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+
+      .popup-site {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .popup-meta {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.5;
+        color: var(--text-muted);
+      }
+
+      .popup-status-strip {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 12px;
+        padding-top: 10px;
+        border-top: 1px solid var(--border);
+      }
+
+      .popup-status {
+        margin: 0;
+        font-size: 12px;
+        color: var(--text-muted);
+      }
+
+      .popup-progress {
+        width: 100%;
+        height: 4px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: #e9e9e9;
+      }
+
+      @keyframes loadBar {
+        0%   { width: 12%; opacity: 1; }
+        6%   { width: 100%; opacity: 1; }
+        10%  { width: 100%; opacity: 0; }
+        88%  { width: 12%; opacity: 0; }
+        94%  { width: 12%; opacity: 1; }
+        100% { width: 12%; opacity: 1; }
+      }
+
+      .popup-progress > div {
+        width: 12%;
+        height: 100%;
+        border-radius: 999px;
+        background: #111;
+        animation: loadBar 30s linear infinite;
+      }
+
+      .popup-results-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 0 10px;
+      }
+
+      .popup-count {
+        margin: 0;
+        font-size: 12px;
+        color: var(--text-muted);
+      }
+
+      .popup-results-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .popup-result-card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 14px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        background: #fff;
+      }
+
+      .popup-result-topline {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .popup-result-heading {
+        display: flex;
+        flex: 1;
+        min-width: 0;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .popup-result-name-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-width: 0;
+      }
+
+      .popup-catalog-icon {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: #f3f3f3;
+      }
+
+      .popup-catalog-icon::after {
+        content: "";
+        position: absolute;
+        inset: 2px;
+        border-radius: 999px;
+        background-image: var(--catalog-icon-image);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .popup-name {
+        margin: 0;
+        min-width: 0;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+      }
+
+      .popup-result-actions {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-shrink: 0;
+      }
+
+      .popup-copy-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--text-muted);
+        font-size: 13px;
+        line-height: 1;
+      }
+
+      .popup-official-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        border: 1px solid #bfe8cf;
+        border-radius: 999px;
+        background: #e8f7ee;
+        color: #137a3a;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .popup-rank {
+        padding: 4px 10px;
+        border: 1px solid var(--border-strong);
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .popup-desc {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.5;
+        color: var(--text-muted);
+        overflow-wrap: anywhere;
+      }
+
+      .popup-source {
+        margin: 0;
+        color: var(--text-muted);
+        font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+        font-size: 12px;
+        overflow-wrap: anywhere;
+      }
+
+      @media (max-width: 640px) {
+        body {
+          padding: 20px 12px;
+        }
+        .popup {
+          width: 100%;
+          padding: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="popup" aria-label="Skillscout interface mock">
+      <header class="popup-header">
+        <div class="popup-brand">
+          <img src="assets/skillscout-mark-48.png" alt="Skillscout logo" />
+          <h1 class="popup-title">Skillscout</h1>
+        </div>
+      </header>
+
+      <section class="popup-panel">
+        <div class="popup-site-panel-header">
+          <div class="popup-stack">
+            <p class="popup-eyebrow">Current Site</p>
+            <p class="popup-site">github.com</p>
+            <p class="popup-meta">Keyword: github</p>
+          </div>
+          <button class="popup-icon-button" type="button" aria-label="Refresh results">
+            <svg class="popup-refresh-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M20 12a8 8 0 1 1-2.34-5.66" />
+              <path d="M20 4v6h-6" />
+            </svg>
+          </button>
+        </div>
+        <div class="popup-status-strip">
+          <p class="popup-status">Found <strong>100</strong> matching skills for github.</p>
+          <div class="popup-progress"><div></div></div>
+        </div>
+      </section>
+
+      <div class="popup-results-header">
+        <p class="popup-eyebrow">Top Results</p>
+        <p class="popup-count">5 of 100</p>
+      </div>
+
+      <div class="popup-results-list">
+        <article class="popup-result-card">
+          <div class="popup-result-topline">
+            <div class="popup-result-heading">
+              <div class="popup-result-name-row">
+                <span class="popup-catalog-icon" style="--catalog-icon-image:url('assets/logo-skills-sh.ico')" title="skills.sh" aria-label="skills.sh"></span>
+                <h2 class="popup-name">github-issues</h2>
+              </div>
+            </div>
+            <div class="popup-result-actions">
+              <button class="popup-copy-button" type="button" aria-label="Copy install command" title="Copy install command"><span aria-hidden="true">⧉</span></button>
+              <span class="popup-official-icon" title="Official skill" aria-label="Official skill" role="img">✓</span>
+              <span class="popup-rank">Rank 4795</span>
+            </div>
+          </div>
+          <p class="popup-desc">Create, update, and manage issues with full workflow support including types, labels, assignees, and dependencies.</p>
+          <p class="popup-source">awesome-copilot</p>
+        </article>
+
+        <article class="popup-result-card">
+          <div class="popup-result-topline">
+            <div class="popup-result-heading">
+              <div class="popup-result-name-row">
+                <span class="popup-catalog-icon" style="--catalog-icon-image:url('assets/logo-clawhub.png')" title="ClawHub" aria-label="ClawHub"></span>
+                <h2 class="popup-name">github-copilot-starter</h2>
+              </div>
+            </div>
+            <div class="popup-result-actions">
+              <button class="popup-copy-button" type="button" aria-label="Copy install command" title="Copy install command"><span aria-hidden="true">⧉</span></button>
+              <span class="popup-official-icon" title="Official skill" aria-label="Official skill" role="img">✓</span>
+              <span class="popup-rank">Rank 4793</span>
+            </div>
+          </div>
+          <p class="popup-desc">Generates production-ready Copilot configuration scaffolding for any repository.</p>
+          <p class="popup-source">starter-kits/copilot</p>
+        </article>
+      </div>
+    </aside>
+  </body>
+</html>

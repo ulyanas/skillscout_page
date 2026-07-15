@@ -58,7 +58,13 @@ function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 async function ghFetch(url) {
   for (let attempt = 0; attempt < 3; attempt++) {
-    const res = await fetch(url, { headers: ghHeaders });
+    let res;
+    try {
+      res = await fetch(url, { headers: ghHeaders });
+    } catch {
+      await sleep(2000);
+      continue;
+    }
     if (res.status === 429 || res.status === 403) {
       const retry = Number(res.headers.get("retry-after") || 60);
       console.warn(`  Rate limited — waiting ${retry}s`);
@@ -153,24 +159,26 @@ async function fetchStars(repoFullName) {
 // ── Search GitHub ─────────────────────────────────────────────────────────────
 
 console.log("Searching GitHub (no date window — full historical scan)...");
-const [c1, c2, r1, r2] = await Promise.all([
-  runSearch(
-    'SKILL.md + "skills install"',
-    `https://api.github.com/search/code?q=${encodeURIComponent('filename:SKILL.md "skills install"')}&sort=indexed`
-  ),
-  runSearch(
-    'SKILL.md + "skills add"',
-    `https://api.github.com/search/code?q=${encodeURIComponent('filename:SKILL.md "skills add"')}&sort=indexed`
-  ),
-  runSearch(
-    "topic:agent-skills",
-    `https://api.github.com/search/repositories?q=${encodeURIComponent("topic:agent-skills")}&sort=updated`
-  ),
-  runSearch(
-    "topic:claude-skills",
-    `https://api.github.com/search/repositories?q=${encodeURIComponent("topic:claude-skills")}&sort=updated`
-  ),
-]);
+const c1 = await runSearch(
+  'SKILL.md + "skills install"',
+  `https://api.github.com/search/code?q=${encodeURIComponent('filename:SKILL.md "skills install"')}&sort=indexed`
+);
+const c2 = await runSearch(
+  'SKILL.md + "skills add"',
+  `https://api.github.com/search/code?q=${encodeURIComponent('filename:SKILL.md "skills add"')}&sort=indexed`
+);
+const c3 = await runSearch(
+  "lowercase skill.md",
+  `https://api.github.com/search/code?q=${encodeURIComponent("filename:skill.md")}&sort=indexed`
+);
+const r1 = await runSearch(
+  "topic:agent-skills",
+  `https://api.github.com/search/repositories?q=${encodeURIComponent("topic:agent-skills")}&sort=updated`
+);
+const r2 = await runSearch(
+  "topic:claude-skills",
+  `https://api.github.com/search/repositories?q=${encodeURIComponent("topic:claude-skills")}&sort=updated`
+);
 
 // ── Dedupe candidates ─────────────────────────────────────────────────────────
 
@@ -180,7 +188,7 @@ const knownKeys = new Set(directory.officialOwners.map(o => o.ownerKey));
 const seen = new Set();
 const candidates = [];
 for (const item of [
-  ...c1, ...c2,
+  ...c1, ...c2, ...c3,
   ...r1.map(r => ({ repository: r })),
   ...r2.map(r => ({ repository: r })),
 ]) {

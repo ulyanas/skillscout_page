@@ -18,6 +18,11 @@
  *   COMPANIES_API_KEY     required — The Companies API (thecompaniesapi.com)
  *   OFFICIAL_SKILLS_OUTPUT  optional — path to JSON (default: docs/data/official-skills-universal.json)
  *   DISCOVERY_WINDOW_DAYS   optional — days back to search (default: 14)
+ *   DISCOVERY_SEARCH_PAGES  optional — GitHub pages per search query (default: 5)
+ *   DISCOVERY_SKIP_SEARCH   optional — set to 1 to process manual seeds only
+ *   DISCOVERY_SEED_REPOS    optional — comma/space/newline separated repo URLs or owner/repo keys
+ *   DISCOVERY_SEED_FILE     optional — file containing repo URLs or owner/repo keys
+ *   DRY_RUN                 optional — set to 1 to print proposed changes without writing JSON
  */
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -32,6 +37,11 @@ const DATA_PATH =
 const GITHUB_TOKEN    = process.env.GITHUB_TOKEN;
 const COMPANIES_KEY   = process.env.COMPANIES_API_KEY;
 const WINDOW_DAYS     = Number(process.env.DISCOVERY_WINDOW_DAYS || 14);
+const SEARCH_PAGES    = Math.max(1, Number(process.env.DISCOVERY_SEARCH_PAGES || 5));
+const SKIP_SEARCH     = process.env.DISCOVERY_SKIP_SEARCH === "1" || process.env.DISCOVERY_SKIP_SEARCH === "true";
+const SEED_REPOS      = process.env.DISCOVERY_SEED_REPOS || "";
+const SEED_FILE       = process.env.DISCOVERY_SEED_FILE || "";
+const DRY_RUN         = process.env.DRY_RUN === "1" || process.env.DRY_RUN === "true";
 
 if (!GITHUB_TOKEN) {
   console.error("GITHUB_TOKEN is required.");
@@ -64,28 +74,138 @@ const since = new Date(Date.now() - WINDOW_DAYS * 24 * 60 * 60 * 1000)
   .toISOString()
   .slice(0, 10);
 
-async function runSearch(label, url) {
-  const res = await fetch(url, { headers: ghHeaders });
-  if (!res.ok) {
-    console.warn(`  Search failed (${res.status}): ${label}`);
-    return [];
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function fetchWithRetry(url, options = {}) {
+  for (let attempt = 1; attempt <= 4; attempt++) {
+    const res = await fetch(url, options);
+    if (res.status !== 403 && res.status !== 429) {
+      return res;
+    }
+
+    const resetSeconds = Number(res.headers.get("x-ratelimit-reset") || 0);
+    const retryAfter = Number(res.headers.get("retry-after") || 0);
+    const resetDelay = resetSeconds
+      ? Math.max(0, resetSeconds * 1000 - Date.now()) + 1000
+      : 0;
+    const fallbackDelay = Math.min(60_000, 5_000 * attempt);
+    const delay = retryAfter ? retryAfter * 1000 : resetDelay || fallbackDelay;
+    console.warn(`  GitHub search rate limited (${res.status}) — waiting ${Math.round(delay / 1000)}s`);
+    await sleep(delay);
   }
-  const data = await res.json();
-  console.log(`  ${label}: ${data.total_count ?? 0} total, got ${data.items?.length ?? 0}`);
-  return data.items ?? [];
+
+  return fetch(url, options);
+}
+
+async function runSearch(label, baseUrl) {
+  const all = [];
+  for (let page = 1; page <= SEARCH_PAGES; page++) {
+    const separator = baseUrl.includes("?") ? "&" : "?";
+    const res = await fetchWithRetry(`${baseUrl}${separator}per_page=100&page=${page}`, { headers: ghHeaders });
+    if (!res.ok) {
+      console.warn(`  Search failed (${res.status}) on page ${page}: ${label}`);
+      break;
+    }
+    const data = await res.json();
+    const items = data.items ?? [];
+    all.push(...items);
+    if (page === 1) {
+      console.log(`  ${label}: ${data.total_count ?? 0} total`);
+    }
+    if (items.length < 100) break;
+    await sleep(1200);
+  }
+  console.log(`    got ${all.length}`);
+  return all;
 }
 
 console.log("\nSearching GitHub...");
-const [codeItems, repoItems] = await Promise.all([
-  runSearch(
-    'SKILL.md containing "skills install"',
-    `https://api.github.com/search/code?q=${encodeURIComponent('filename:SKILL.md "skills install"')}&per_page=100&sort=indexed`
-  ),
-  runSearch(
-    `topic:agent-skills pushed since ${since}`,
-    `https://api.github.com/search/repositories?q=${encodeURIComponent(`topic:agent-skills pushed:>${since}`)}&per_page=100&sort=updated`
-  ),
-]);
+const codeQueries = [
+  ['SKILL.md containing "skills install"', 'filename:SKILL.md "skills install"'],
+  ['SKILL.md containing "skills add"', 'filename:SKILL.md "skills add"'],
+  ["all uppercase SKILL.md files", "filename:SKILL.md"],
+  ["all lowercase skill.md files", "filename:skill.md"],
+];
+const repoQueries = [
+  [`topic:agent-skills pushed since ${since}`, `topic:agent-skills pushed:>${since}`],
+  [`topic:claude-skills pushed since ${since}`, `topic:claude-skills pushed:>${since}`],
+];
+
+const searchResults = SKIP_SEARCH
+  ? Array.from({ length: codeQueries.length + repoQueries.length }, () => [])
+  : [];
+if (!SKIP_SEARCH) {
+  for (const [label, query] of codeQueries) {
+    searchResults.push(
+      await runSearch(label, `https://api.github.com/search/code?q=${encodeURIComponent(query)}&sort=indexed`)
+    );
+  }
+  for (const [label, query] of repoQueries) {
+    searchResults.push(
+      await runSearch(label, `https://api.github.com/search/repositories?q=${encodeURIComponent(query)}&sort=updated`)
+    );
+  }
+}
+if (SKIP_SEARCH) {
+  console.log("  DISCOVERY_SKIP_SEARCH=1 — processing manual seeds only");
+}
+
+const codeItems = searchResults.slice(0, codeQueries.length).flat();
+const repoItems = searchResults.slice(codeQueries.length).flat();
+
+function parseRepoKey(value) {
+  const raw = String(value || "").trim();
+  if (!raw || raw.startsWith("#")) return null;
+  const cleaned = raw
+    .replace(/^https?:\/\/github\.com\//i, "")
+    .replace(/^git@github\.com:/i, "")
+    .replace(/\.git$/i, "")
+    .replace(/\/(tree|blob)\/.*$/i, "")
+    .replace(/[?#].*$/, "")
+    .replace(/^\/+|\/+$/g, "");
+  const parts = cleaned.split("/").filter(Boolean);
+  if (parts.length < 2) return null;
+  return `${parts[0]}/${parts[1]}`;
+}
+
+async function loadSeedRepoKeys() {
+  const values = [
+    ...process.argv.slice(2),
+    ...SEED_REPOS.split(/[\s,]+/),
+  ];
+  if (SEED_FILE) {
+    try {
+      const text = await fs.readFile(SEED_FILE, "utf8");
+      values.push(...text.split(/\r?\n/));
+    } catch (error) {
+      console.warn(`  Seed file unreadable: ${SEED_FILE} (${error.message})`);
+    }
+  }
+  return [...new Set(values.map(parseRepoKey).filter(Boolean))];
+}
+
+async function fetchRepo(repoFullName) {
+  try {
+    const res = await fetch(`https://api.github.com/repos/${repoFullName}`, { headers: ghHeaders });
+    if (!res.ok) return null;
+    return res.json();
+  } catch {
+    return null;
+  }
+}
+
+const seedRepoKeys = await loadSeedRepoKeys();
+const seedRepos = [];
+for (const repoKey of seedRepoKeys) {
+  const repo = await fetchRepo(repoKey);
+  if (repo) seedRepos.push(repo);
+  else console.warn(`  Seed repo not found: ${repoKey}`);
+}
+if (seedRepos.length) {
+  console.log(`  manual seed repos: ${seedRepos.length}`);
+}
 
 const normalizedRepoItems = repoItems.map((repo) => ({
   repository: repo,
@@ -93,39 +213,67 @@ const normalizedRepoItems = repoItems.map((repo) => ({
   html_url: `${repo.html_url}/blob/HEAD/SKILL.md`,
 }));
 
-const allItems = [...codeItems, ...normalizedRepoItems];
+const normalizedSeedItems = seedRepos.map((repo) => ({
+  repository: repo,
+  path: "SKILL.md",
+  html_url: `${repo.html_url}/blob/HEAD/SKILL.md`,
+  source: "manual-seed",
+}));
 
-// ── Collect unique unknown orgs ───────────────────────────────────────────────
+const allItems = [...codeItems, ...normalizedRepoItems, ...normalizedSeedItems];
+
+// ── Collect unique candidate repos ────────────────────────────────────────────
 
 function normalizeLogin(login) {
   return String(login || "").toLowerCase().replace(/[^a-z0-9._/-]+/g, "-").replace(/^-+|-+$/g, "");
 }
 
-const candidates = new Map(); // ownerKey → info
+const candidates = new Map(); // repoKey → info
+const candidateStats = {
+  searchItems: allItems.length,
+  forks: 0,
+  existingRepos: 0,
+  duplicateRepos: 0,
+};
 
 for (const item of allItems) {
   const fullName = item.repository?.full_name;
   if (!fullName) continue;
 
   // Skip forks — a forked repo isn't the org's own skill, it's borrowed
-  if (item.repository?.fork) continue;
+  if (item.repository?.fork) {
+    candidateStats.forks++;
+    continue;
+  }
 
   const [login] = fullName.split("/");
   const ownerKey = normalizeLogin(login);
-  if (knownOwnerKeys.has(ownerKey)) continue; // already tracked
-  if (!candidates.has(ownerKey)) {
-    candidates.set(ownerKey, {
-      login,
-      ownerKey,
-      repoKey: fullName.toLowerCase(),
-      repoFullName: fullName,
-      skillFile: item.path,
-      repoHtmlUrl: item.repository?.html_url,
-    });
+  const repoKey = fullName.toLowerCase();
+  if (knownRepoKeys.has(repoKey)) {
+    candidateStats.existingRepos++;
+    continue;
   }
+  if (candidates.has(repoKey)) {
+    candidateStats.duplicateRepos++;
+    continue;
+  }
+
+  candidates.set(repoKey, {
+    login,
+    ownerKey,
+    repoKey,
+    repoFullName: fullName,
+    skillFile: item.path,
+    repoHtmlUrl: item.repository?.html_url,
+    source: item.source || "github-search",
+  });
 }
 
-console.log(`\n${candidates.size} unknown orgs found in search results`);
+console.log(`\n${candidates.size} new candidate repos found in search results`);
+console.log(
+  `Candidates: ${candidateStats.searchItems} items, ${candidateStats.existingRepos} existing repos, ` +
+  `${candidateStats.forks} forks, ${candidateStats.duplicateRepos} duplicates`
+);
 
 // ── Fetch GitHub org profiles ─────────────────────────────────────────────────
 
@@ -218,20 +366,30 @@ async function fetchRepoStars(repoFullName) {
 // Scans the repo's git tree for SKILL.md or skill.md files.
 // Returns the count so we can skip orgs that have none.
 
-async function countSkillFiles(repoFullName) {
+async function getSkillPaths(repoFullName) {
   try {
     const res = await fetch(
       `https://api.github.com/repos/${repoFullName}/git/trees/HEAD?recursive=1`,
       { headers: ghHeaders }
     );
-    if (!res.ok) return 0;
+    if (!res.ok) return { paths: [], truncated: false };
     const data = await res.json();
     const SKILL_RE = /(?:^|\/)(SKILL\.md|skill\.md)$/;
-    return (data.tree || []).filter(
-      (item) => item.type === "blob" && SKILL_RE.test(item.path)
-    ).length;
+    const paths = [];
+    for (const item of data.tree || []) {
+      if (item.type !== "blob") continue;
+      const match = item.path.match(SKILL_RE);
+      if (!match) continue;
+      const suffix = `/${match[1]}`;
+      paths.push(
+        item.path === match[1]
+          ? normalizeLogin(repoFullName.split("/")[1])
+          : normalizeLogin(item.path.slice(0, -suffix.length))
+      );
+    }
+    return { paths, truncated: Boolean(data.truncated) };
   } catch {
-    return 0;
+    return { paths: [], truncated: false };
   }
 }
 
@@ -241,85 +399,118 @@ console.log(`\nEnriching ${candidates.size} candidates (GitHub profile + Compani
 
 let addedOwners = 0;
 let addedRepos  = 0;
+const rejectionReasons = new Map();
 
-for (const [ownerKey, info] of candidates) {
-  // Re-check — a previous iteration may have added this owner's peer
-  if (knownOwnerKeys.has(ownerKey)) continue;
+function reject(reason, info) {
+  rejectionReasons.set(reason, (rejectionReasons.get(reason) || 0) + 1);
+  if (info?.source === "manual-seed") {
+    console.log(`  ⏭  ${info.repoFullName} — ${reason}`);
+  }
+}
 
-  const profile = await fetchOrgProfile(info.login);
-  if (!profile) continue;
+function mergeList(existing, additions) {
+  return [...new Set([...(existing || []), ...additions].filter(Boolean))];
+}
 
-  // Only accept GitHub Organizations — individual users rarely publish official vendor skills
-  if (profile.type !== "Organization") continue;
-
-  // profile.blog is GitHub's API field name for the org's declared website URL
-  // (shown as the chain-link "Website" field on the org's GitHub page)
-  const website = profile.blog || "";
-  const websiteLive = await checkWebsiteLive(website);
-  if (!websiteLive) continue; // no live website → skip
-
-  const company = await lookupCompany(website);
-  if (!company) continue; // not in company DB → skip
-
-  // Confirm the repo actually contains SKILL.md files — skip orgs with none
-  const skillCount = await countSkillFiles(info.repoFullName);
-  if (skillCount === 0) {
-    console.log(`  ⏭  ${ownerKey} — no SKILL.md found in ${info.repoFullName}`);
+for (const [, info] of candidates) {
+  if (knownRepoKeys.has(info.repoKey)) {
+    reject("existing repo", info);
     continue;
   }
 
-  // Confirmed as a real company with skills — fetch repo stars
+  const profile = await fetchOrgProfile(info.login);
+  if (!profile) {
+    reject("org profile not found", info);
+    continue;
+  }
+
+  // Only accept GitHub Organizations — individual users rarely publish official vendor skills
+  if (profile.type !== "Organization") {
+    reject("not a GitHub Organization", info);
+    continue;
+  }
+
+  const { paths: skillPaths, truncated } = await getSkillPaths(info.repoFullName);
+  if (skillPaths.length === 0) {
+    reject("no SKILL.md or skill.md found", info);
+    continue;
+  }
+
   const stars = await fetchRepoStars(info.repoFullName);
+  const existingOwner = directory.officialOwners.find((owner) => owner.ownerKey === info.ownerKey);
+  let displayName = existingOwner?.displayName || profile.name || info.login;
 
-  const displayName = company.name || profile.name || info.login;
+  if (!existingOwner) {
+    // profile.blog is GitHub's API field name for the org's declared website URL
+    // (shown as the chain-link "Website" field on the org's GitHub page)
+    const website = profile.blog || "";
+    const websiteLive = await checkWebsiteLive(website);
+    if (!websiteLive) {
+      reject("website unavailable", info);
+      continue;
+    }
 
-  console.log(`  ✅ ${ownerKey} → ${displayName}  (${company.industry || "?"})  ⭐${stars}`);
+    const company = await lookupCompany(website);
+    if (!company) {
+      reject("Companies API miss", info);
+      continue;
+    }
 
-  // Add owner
-  const owner = {
-    ownerKey,
-    displayName,
-    normalizedNames: [ownerKey],
-    sourceOwnerKeys: [info.login],
-    websiteHosts: [],
-    website,
-    sources: ["github-discovery"],
-    sourceUrls: [`https://github.com/${info.login}`],
-    skillsCount: 0,
-    reposCount: 1,
-    installsCount: 0,
-    starsCount: stars,
-    confidence: "high",
-    dbConfirmed: true,
-    companyIndustry: company.industry || "",
-    firstSeenAt: now,
-    lastSeenAt: now,
-  };
-  if (profile.twitter_username) owner.twitter = `@${profile.twitter_username}`;
+    displayName = company.name || displayName;
 
-  directory.officialOwners.push(owner);
-  knownOwnerKeys.add(ownerKey);
-  addedOwners++;
+    const owner = {
+      ownerKey: info.ownerKey,
+      displayName,
+      normalizedNames: [info.ownerKey],
+      sourceOwnerKeys: [info.login],
+      websiteHosts: [],
+      website,
+      sources: ["github-discovery"],
+      sourceUrls: [`https://github.com/${info.login}`],
+      skillsCount: 0,
+      reposCount: 0,
+      installsCount: 0,
+      starsCount: stars,
+      confidence: "high",
+      dbConfirmed: true,
+      companyIndustry: company.industry || "",
+      firstSeenAt: now,
+      lastSeenAt: now,
+    };
+    if (profile.twitter_username) owner.twitter = `@${profile.twitter_username}`;
+
+    directory.officialOwners.push(owner);
+    knownOwnerKeys.add(info.ownerKey);
+    addedOwners++;
+  } else {
+    existingOwner.sourceOwnerKeys = mergeList(existingOwner.sourceOwnerKeys, [info.login]);
+    existingOwner.sources = mergeList(existingOwner.sources, ["github-discovery"]);
+    existingOwner.sourceUrls = mergeList(existingOwner.sourceUrls, [`https://github.com/${info.login}`]);
+    existingOwner.lastSeenAt = now;
+    existingOwner.starsCount = Number(existingOwner.starsCount || 0) + stars;
+  }
+
+  console.log(`  ✅ ${info.repoKey} → ${displayName}  skills:${skillPaths.length}  ⭐${stars}`);
 
   // Add repo (if not already tracked)
   const repoKey = info.repoKey;
   if (!knownRepoKeys.has(repoKey)) {
     const repo = {
       repoKey,
-      ownerKey,
+      ownerKey: info.ownerKey,
       sourceOwnerKeys: [info.login],
       repoName: info.repoFullName.split("/")[1],
       displayName: info.repoFullName,
       sources: ["github-discovery"],
       sourceUrls: [`https://github.com/${info.repoFullName}`],
-      skillsCount: 0,
+      skillsCount: skillPaths.length,
       installsCount: 0,
       starsCount: stars,
       confidence: "medium",
       firstSeenAt: now,
       lastSeenAt: now,
-      githubSkillPaths: [],
-      truncated: false,
+      githubSkillPaths: skillPaths,
+      truncated,
     };
     directory.officialRepos.push(repo);
     knownRepoKeys.add(repoKey);
@@ -329,11 +520,41 @@ for (const [ownerKey, info] of candidates) {
 
 // ── Update stats and write ────────────────────────────────────────────────────
 
+directory.officialOwners.sort((a, b) => a.ownerKey.localeCompare(b.ownerKey));
+directory.officialRepos.sort((a, b) => a.repoKey.localeCompare(b.repoKey));
+
+const reposByOwner = new Map();
+const repoSkillsByOwner = new Map();
+const repoStarsByOwner = new Map();
+for (const repo of directory.officialRepos) {
+  reposByOwner.set(repo.ownerKey, (reposByOwner.get(repo.ownerKey) || 0) + 1);
+  repoSkillsByOwner.set(repo.ownerKey, (repoSkillsByOwner.get(repo.ownerKey) || 0) + Number(repo.skillsCount || 0));
+  repoStarsByOwner.set(repo.ownerKey, (repoStarsByOwner.get(repo.ownerKey) || 0) + Number(repo.starsCount || 0));
+}
+for (const owner of directory.officialOwners) {
+  owner.reposCount = reposByOwner.get(owner.ownerKey) || 0;
+  const skillCount = repoSkillsByOwner.get(owner.ownerKey);
+  if (skillCount != null) owner.skillsCount = skillCount;
+  owner.starsCount = repoStarsByOwner.get(owner.ownerKey) || Number(owner.starsCount || 0);
+}
+
 directory.stats.owners = directory.officialOwners.length;
 directory.stats.repos  = directory.officialRepos.length;
 directory.generatedAt  = now;
 
-await fs.writeFile(DATA_PATH, `${JSON.stringify(directory, null, 2)}\n`);
+if (DRY_RUN) {
+  console.log("\nDRY_RUN=1 — no file changes written");
+} else {
+  await fs.writeFile(DATA_PATH, `${JSON.stringify(directory, null, 2)}\n`);
+}
+
+console.log("\nRejection summary:");
+for (const [reason, count] of [...rejectionReasons].sort((a, b) => b[1] - a[1])) {
+  console.log(`  ${reason}: ${count}`);
+}
+if (rejectionReasons.size === 0) {
+  console.log("  none");
+}
 
 console.log(`\n✅ Added ${addedOwners} new owners, ${addedRepos} new repos`);
 console.log(`Directory: ${directory.stats.owners} owners, ${directory.stats.repos} repos`);

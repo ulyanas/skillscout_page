@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "skillscout-page",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4177", "--directory", "/Users/ulyanas/skillscout_page/docs"],
+      "port": 4177
+    }
+  ]
+}
