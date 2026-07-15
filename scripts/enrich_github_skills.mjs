@@ -326,7 +326,24 @@ function findSkillsShRepoUrl(repo) {
     return `${SKILLS_SH_ORIGIN}/${repo.repoKey}`;
   }
 
+  if (repoHasGitHubSource(repo) && repo.repoKey?.includes("/")) {
+    return `${SKILLS_SH_ORIGIN}/${repo.repoKey}`;
+  }
+
   return "";
+}
+
+function repoHasGitHubSource(repo) {
+  if (repo.sources?.some((source) => source === "github" || source === "github-discovery")) {
+    return true;
+  }
+  return (repo.sourceUrls || []).some((url) => {
+    try {
+      return new URL(url).hostname === "github.com";
+    } catch {
+      return false;
+    }
+  });
 }
 
 function repoNeedsSkillsShMapping(directory, repoKey) {
