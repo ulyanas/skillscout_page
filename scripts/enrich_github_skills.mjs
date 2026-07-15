@@ -21,6 +21,7 @@ const CONCURRENCY = Number(process.env.GITHUB_SKILLS_CONCURRENCY || (GITHUB_TOKE
 const SKILLS_SH_INSTALLS_CONCURRENCY = Number(process.env.SKILLS_SH_INSTALLS_CONCURRENCY || 6);
 const SKILLS_SH_INSTALLS_ENABLED = process.env.SKILLS_SH_INSTALLS !== "0";
 const SKILLS_SH_FETCH_TIMEOUT_MS = Number(process.env.SKILLS_SH_FETCH_TIMEOUT_MS || 10000);
+const GITHUB_SKILL_TREES_ENABLED = process.env.GITHUB_SKILL_TREES !== "0";
 const SKILLS_SH_ORIGIN = "https://www.skills.sh";
 
 if (!GITHUB_TOKEN) {
@@ -35,7 +36,11 @@ console.log(
   `Loaded ${directory.officialRepos.length} repos, ${directory.officialSkills.length} skills from ${DATA_PATH}`
 );
 
-await enrichWithGitHubSkillTrees(directory);
+if (GITHUB_SKILL_TREES_ENABLED) {
+  await enrichWithGitHubSkillTrees(directory);
+} else {
+  console.log("GitHub skill tree fetching skipped by GITHUB_SKILL_TREES=0");
+}
 if (SKILLS_SH_INSTALLS_ENABLED) {
   await enrichWithSkillsShInstalls(directory);
 }
@@ -269,22 +274,39 @@ async function enrichWithSkillsShInstalls(directory) {
     const skills = skillsByRepo.get(repo.repoKey) || [];
     const matchedSkillKeys = new Set();
 
-    for (const skill of skills) {
+    resetSkillsShInstallMetadata(repo, skills);
+
+    const skillsForMatching = skills.slice().sort((a, b) => skillSpecificity(b) - skillSpecificity(a));
+    const matchedInstallUrls = new Set();
+    let repoOnlyInstallTotal = 0;
+    const fetchedRepoInstallTotal = sumInstallRecords(skillInstalls);
+
+    for (const skill of skillsForMatching) {
       const installRecord = matchSkillsShInstallRecord(skillInstalls, skill);
       if (!installRecord) continue;
+      if (matchedInstallUrls.has(installRecord.url)) continue;
 
-      addUnique(skill.sources, "skills.sh");
-      addUnique(skill.sourceUrls, installRecord.url);
-      skill.installsCount = Math.max(Number(skill.installsCount || 0), installRecord.installs);
-      if (isGenericSkillName(skill.skillName) && installRecord.name) {
-        skill.displayName = installRecord.name;
-      }
-      skill.confidence = "high";
+      applySkillsShInstallRecord(skill, installRecord);
       matchedSkillKeys.add(skill.skillKey);
+      matchedInstallUrls.add(installRecord.url);
       updatedSkills++;
     }
 
-    const repoTotal = sumMappedInstalls(skills, matchedSkillKeys);
+    if (!matchedSkillKeys.size) {
+      if (skills.length === 1 && skillInstalls.length) {
+        applyAggregateSkillsShInstallRecords(skills[0], skillInstalls);
+        matchedSkillKeys.add(skills[0].skillKey);
+        updatedSkills++;
+      } else if (skillInstalls.length === 1) {
+        repoOnlyInstallTotal = Number(skillInstalls[0].installs || 0);
+      }
+    }
+
+    const repoTotal = Math.max(
+      sumMappedInstalls(skills, matchedSkillKeys),
+      repoOnlyInstallTotal,
+      fetchedRepoInstallTotal
+    );
     if (repoTotal > 0 || matchedSkillKeys.size > 0) {
       addUnique(repo.sources, "skills.sh");
       addUnique(repo.sourceUrls, repoUrl);
@@ -315,6 +337,9 @@ function findSkillsShRepoUrl(repo) {
       const parsed = new URL(url);
       if (parsed.hostname !== "www.skills.sh") continue;
       if (parsed.pathname.replace(/\/$/, "") === expectedPath) {
+        return `${SKILLS_SH_ORIGIN}${expectedPath}`;
+      }
+      if (parsed.pathname.replace(/\/$/, "") === "/official" && parsed.hash === `#${repo.repoKey}`) {
         return `${SKILLS_SH_ORIGIN}${expectedPath}`;
       }
     } catch {
@@ -350,8 +375,7 @@ function repoNeedsSkillsShMapping(directory, repoKey) {
   return (directory.officialSkills || []).some(
     (skill) =>
       skill.repoKey === repoKey &&
-      Number(skill.installsCount || 0) === 0 &&
-      !skill.sources?.includes("skills.sh")
+      (Number(skill.installsCount || 0) === 0 || !skill.sources?.includes("skills.sh"))
   );
 }
 
@@ -359,17 +383,20 @@ async function fetchSkillsShRepoInstalls(repoUrl, repoKey) {
   try {
     const repoHtml = await fetchSkillsShHtml(repoUrl);
     const repoRecords = parseSkillsShRepoInstallRecords(repoHtml, repoKey);
-    if (repoRecords.length) return repoRecords;
+    if (repoRecords.length && repoRecords.every((record) => record.installs > 0)) {
+      return repoRecords;
+    }
 
     const skillUrls = extractSkillsShSkillUrls(repoHtml, repoKey);
-    if (!skillUrls.length) return null;
+    if (!skillUrls.length) return repoRecords.length ? repoRecords : null;
 
-    const records = [];
+    const recordsByUrl = new Map(repoRecords.map((record) => [record.url, record]));
     await mapWithConcurrency(skillUrls, SKILLS_SH_INSTALLS_CONCURRENCY, async (url) => {
       const record = await fetchSkillsShSkillInstall(url);
-      if (record) records.push(record);
+      if (record) recordsByUrl.set(record.url, record);
     });
 
+    const records = [...recordsByUrl.values()];
     return records.length ? records : null;
   } catch {
     return null;
@@ -465,11 +492,9 @@ function matchSkillsShInstallRecord(records, skill) {
     return records[0];
   }
 
-  const candidates = new Set([
-    normalizeKey(skill.skillName),
-    normalizeKey(skill.displayName),
-    normalizeKey(skill.skillKey?.split("/").pop()),
-  ]);
+  const candidates = skillMatchCandidates(skill);
+  let bestMatch = null;
+  let bestScore = 0;
 
   for (const record of records) {
     const name = normalizeKey(record.name);
@@ -477,13 +502,101 @@ function matchSkillsShInstallRecord(records, skill) {
     if (candidates.has(name) || candidates.has(urlSlug)) {
       return record;
     }
+
+    for (const candidate of candidates) {
+      const score = scoreFuzzySkillMatch(candidate, name, urlSlug);
+      if (score > bestScore) {
+        bestScore = score;
+        bestMatch = record;
+      }
+    }
   }
 
-  return null;
+  return bestScore >= 1 ? bestMatch : null;
+}
+
+function skillMatchCandidates(skill) {
+  const parts = String(skill.skillKey || "").split("/").slice(2);
+  const cleanedParts = parts.filter((part) => !["skills", "skill"].includes(normalizeKey(part)));
+  const repoName = normalizeKey(String(skill.repoKey || "").split("/").pop());
+  const ownerName = normalizeKey(skill.ownerKey);
+  const values = [
+    skill.skillName,
+    skill.displayName,
+    skill.skillKey?.split("/").pop(),
+    parts.join("-"),
+    cleanedParts.join("-"),
+    cleanedParts.slice(-2).join("-"),
+    cleanedParts.slice(-3).join("-"),
+  ];
+
+  if (normalizeKey(skill.skillName) === repoName || isGenericSkillName(skill.skillName)) {
+    values.push(ownerName);
+  }
+
+  return new Set(values.map(normalizeKey).filter(Boolean));
+}
+
+function skillSpecificity(skill) {
+  return Math.max(...skillMatchCandidates(skill).values().map((candidate) => candidate.length), 0);
+}
+
+function scoreFuzzySkillMatch(candidate, name, urlSlug) {
+  if (!candidate || isGenericSkillName(candidate) || candidate.length < 5) return 0;
+  const targets = [name, urlSlug].filter(Boolean);
+  let score = 0;
+  for (const target of targets) {
+    if (target.endsWith(`-${candidate}`) || target.includes(`-${candidate}-`)) {
+      score = Math.max(score, 1.2);
+    }
+    if (candidate.length >= 8 && target.includes(candidate)) {
+      score = Math.max(score, 1);
+    }
+    const candidateTokens = candidate.split("-").filter((token) => token.length >= 3);
+    if (candidateTokens.length >= 2) {
+      const targetTokens = new Set(target.split("-").filter(Boolean));
+      const matches = candidateTokens.filter((token) => targetTokens.has(token)).length;
+      if (matches === candidateTokens.length) {
+        score = Math.max(score, 1 + matches / 10);
+      }
+    }
+  }
+  return score;
 }
 
 function isGenericSkillName(value) {
-  return ["skill", "skills"].includes(normalizeKey(value));
+  return ["skill", "skills", "claude", "codex", "setup"].includes(normalizeKey(value));
+}
+
+function applySkillsShInstallRecord(skill, installRecord) {
+  addUnique(skill.sources, "skills.sh");
+  addUnique(skill.sourceUrls, installRecord.url);
+  skill.installsCount = Math.max(Number(skill.installsCount || 0), installRecord.installs);
+  if (isGenericSkillName(skill.skillName) && installRecord.name) {
+    skill.displayName = installRecord.name;
+  }
+  skill.confidence = "high";
+}
+
+function applyAggregateSkillsShInstallRecords(skill, installRecords) {
+  const total = sumInstallRecords(installRecords);
+  const primaryRecord = installRecords
+    .slice()
+    .sort((a, b) => Number(b.installs || 0) - Number(a.installs || 0))[0];
+
+  addUnique(skill.sources, "skills.sh");
+  for (const record of installRecords) {
+    addUnique(skill.sourceUrls, record.url);
+  }
+  skill.installsCount = total;
+  if (isGenericSkillName(skill.skillName) && primaryRecord?.name) {
+    skill.displayName = primaryRecord.name;
+  }
+  skill.confidence = "high";
+}
+
+function sumInstallRecords(installRecords) {
+  return installRecords.reduce((sum, record) => sum + Number(record.installs || 0), 0);
 }
 
 function sumMappedInstalls(skills, matchedSkillKeys) {
@@ -493,6 +606,23 @@ function sumMappedInstalls(skills, matchedSkillKeys) {
     total += Number(skill.installsCount || 0);
   }
   return total;
+}
+
+function resetSkillsShInstallMetadata(repo, skills) {
+  repo.installsCount = 0;
+  repo.sources = removeValue(repo.sources, "skills.sh");
+
+  for (const skill of skills) {
+    skill.installsCount = 0;
+    skill.sources = removeValue(skill.sources, "skills.sh");
+    skill.sourceUrls = (skill.sourceUrls || []).filter((url) => {
+      try {
+        return new URL(url).hostname !== "www.skills.sh";
+      } catch {
+        return true;
+      }
+    });
+  }
 }
 
 function recomputeInstallTotals(directory) {
@@ -525,7 +655,7 @@ function recomputeInstallTotals(directory) {
 
   for (const owner of directory.officialOwners || []) {
     if (!installsByOwner.has(owner.ownerKey)) continue;
-    owner.installsCount = Math.max(Number(owner.installsCount || 0), installsByOwner.get(owner.ownerKey) || 0);
+    owner.installsCount = installsByOwner.get(owner.ownerKey) || 0;
     addUnique(owner.sources, "skills.sh");
     addUnique(owner.sourceUrls, `${SKILLS_SH_ORIGIN}/${owner.ownerKey}`);
   }
@@ -607,6 +737,10 @@ function normalizeKey(value) {
 function addUnique(list, value) {
   if (!Array.isArray(list) || !value) return;
   if (!list.includes(value)) list.push(value);
+}
+
+function removeValue(list, value) {
+  return Array.isArray(list) ? list.filter((item) => item !== value) : [];
 }
 
 function decodeHtmlEntities(value) {
