@@ -4,13 +4,13 @@
  * official skills directory.
  *
  * Run:
- *   GITHUB_TOKEN=... COMPANIES_API_KEY=... node scripts/deep_scan_vendors.mjs
+ *   GITHUB_TOKEN=... node scripts/deep_scan_vendors.mjs
  *
  * Verification funnel:
  *   1. GitHub Organization (not a user account)
  *   2. At least one SKILL.md / skill.md in the discovered repo (not a fork)
  *   3. Declared website is live and not a platform URL
- *   4. Domain recognised in The Companies API
+ *   4. Domain recognised in The Companies API, or GitHub organization is verified
  */
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -26,7 +26,6 @@ const GITHUB_TOKEN  = process.env.GITHUB_TOKEN;
 const COMPANIES_KEY = process.env.COMPANIES_API_KEY;
 
 if (!GITHUB_TOKEN)  { console.error("GITHUB_TOKEN is required."); process.exit(1); }
-if (!COMPANIES_KEY) { console.error("COMPANIES_API_KEY is required."); process.exit(1); }
 
 const ghHeaders = {
   Accept: "application/vnd.github.v3+json",
@@ -53,6 +52,9 @@ function normalize(s) {
   return String(s || "").toLowerCase().replace(/[^a-z0-9._\/-]+/g, "-").replace(/^-+|-+$/g, "");
 }
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+function isTemplateSkillFilePath(filePath) {
+  return /(^|\/)templates?\/skill\/SKILL\.md$/i.test(filePath);
+}
 
 // ── GitHub helpers ────────────────────────────────────────────────────────────
 
@@ -109,6 +111,7 @@ async function getSkillPaths(repoFullName) {
     if (item.type !== "blob") continue;
     const m = item.path.match(SKILL_RE);
     if (!m) continue;
+    if (isTemplateSkillFilePath(item.path)) continue;
     const suffix = "/" + m[1];
     paths.push(
       item.path === m[1]
@@ -131,6 +134,7 @@ async function checkWebsiteLive(url) {
 }
 
 async function lookupCompany(websiteUrl) {
+  if (!COMPANIES_KEY) return null;
   if (!websiteUrl?.startsWith("http")) return null;
   try {
     const hostname = new URL(websiteUrl).hostname.replace(/^www\./, "");
@@ -228,11 +232,12 @@ for (const info of candidates) {
   if (!(await checkWebsiteLive(website))) continue;
 
   const company = await lookupCompany(website);
-  if (!company) continue;
+  const verifiedByGitHub = profile.is_verified === true;
+  if (!company && !verifiedByGitHub) continue;
 
   const stars = await fetchStars(info.repoFullName);
-  const displayName = company.name || profile.name || info.login;
-  console.log(`  ✅ ${info.ownerKey} → ${displayName}  (${company.industry || "?"})  skills:${skillPaths.length}  ⭐${stars}`);
+  const displayName = company?.name || profile.name || info.login;
+  console.log(`  ✅ ${info.ownerKey} → ${displayName}  (${company?.industry || "GitHub verified"})  skills:${skillPaths.length}  ⭐${stars}`);
 
   const repoKey = info.repoFullName.toLowerCase();
 
@@ -250,8 +255,9 @@ for (const info of candidates) {
     installsCount: 0,
     starsCount: stars,
     confidence: "high",
-    dbConfirmed: true,
-    companyIndustry: company.industry || "",
+    dbConfirmed: Boolean(company),
+    githubVerified: verifiedByGitHub,
+    companyIndustry: company?.industry || "",
     firstSeenAt: now,
     lastSeenAt: now,
     ...(profile.twitter_username ? { twitter: `@${profile.twitter_username}` } : {}),

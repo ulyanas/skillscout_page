@@ -113,6 +113,7 @@ async function fetchGitHubRepoSkillPaths(repo) {
       if (item.type !== "blob") continue;
       const match = item.path.match(SKILL_RE);
       if (!match) continue;
+      if (isTemplateSkillFilePath(item.path)) continue;
       if (skillPathPrefixes.length && !skillPathPrefixes.some((prefix) => item.path.startsWith(prefix))) {
         continue;
       }
@@ -732,6 +733,10 @@ function normalizeKey(value) {
     .replace(/&amp;/g, "and")
     .replace(/[^a-z0-9._/-]+/g, "-")
     .replace(/^-+|-+$/g, "");
+}
+
+function isTemplateSkillFilePath(filePath) {
+  return /(^|\/)templates?\/skill\/SKILL\.md$/i.test(filePath);
 }
 
 function addUnique(list, value) {

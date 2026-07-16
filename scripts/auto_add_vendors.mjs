@@ -1,26 +1,27 @@
 /**
  * Discovers new official skill vendors from GitHub and auto-adds them
- * to the official skills directory after verifying with The Companies API.
+ * to the official skills directory after verifying ownership through GitHub
+ * and either The Companies API or GitHub's verified organization status.
  *
  * A candidate org qualifies when:
  *   1. It is a GitHub Organization (not an individual user account)
  *   2. The skill repo is owned by the org directly (not a fork)
  *   3. The org's declared website (profile.blog) is a live, non-platform URL
- *   4. That domain is recognised in The Companies API
+ *   4. The domain is recognised in The Companies API, or the GitHub org is verified
  *
  * Run:
  *   GITHUB_TOKEN=$(gh auth token) \
- *   COMPANIES_API_KEY=<key> \
  *   node scripts/auto_add_vendors.mjs
  *
  * Env vars:
  *   GITHUB_TOKEN          required — GitHub API access
- *   COMPANIES_API_KEY     required — The Companies API (thecompaniesapi.com)
+ *   COMPANIES_API_KEY     optional — The Companies API (thecompaniesapi.com)
  *   OFFICIAL_SKILLS_OUTPUT  optional — path to JSON (default: docs/data/official-skills-universal.json)
- *   DISCOVERY_WINDOW_DAYS   optional — days back to search (default: 14)
+ *   DISCOVERY_WINDOW_DAYS   optional — days back to search (default: 45)
  *   DISCOVERY_SEARCH_PAGES  optional — GitHub pages per search query (default: 5)
  *   DISCOVERY_SKIP_SEARCH   optional — set to 1 to process manual seeds only
  *   DISCOVERY_SEED_REPOS    optional — comma/space/newline separated repo URLs or owner/repo keys
+ *   DISCOVERY_SEED_ORGS     optional — comma/space/newline separated GitHub org URLs or logins
  *   DISCOVERY_SEED_FILE     optional — file containing repo URLs or owner/repo keys
  *   DRY_RUN                 optional — set to 1 to print proposed changes without writing JSON
  */
@@ -36,10 +37,11 @@ const DATA_PATH =
 
 const GITHUB_TOKEN    = process.env.GITHUB_TOKEN;
 const COMPANIES_KEY   = process.env.COMPANIES_API_KEY;
-const WINDOW_DAYS     = Number(process.env.DISCOVERY_WINDOW_DAYS || 14);
+const WINDOW_DAYS     = Number(process.env.DISCOVERY_WINDOW_DAYS || 45);
 const SEARCH_PAGES    = Math.max(1, Number(process.env.DISCOVERY_SEARCH_PAGES || 5));
 const SKIP_SEARCH     = process.env.DISCOVERY_SKIP_SEARCH === "1" || process.env.DISCOVERY_SKIP_SEARCH === "true";
 const SEED_REPOS      = process.env.DISCOVERY_SEED_REPOS || "";
+const SEED_ORGS       = process.env.DISCOVERY_SEED_ORGS || "";
 const SEED_FILE       = process.env.DISCOVERY_SEED_FILE || "";
 const DRY_RUN         = process.env.DRY_RUN === "1" || process.env.DRY_RUN === "true";
 
@@ -47,11 +49,6 @@ if (!GITHUB_TOKEN) {
   console.error("GITHUB_TOKEN is required.");
   process.exit(1);
 }
-if (!COMPANIES_KEY) {
-  console.error("COMPANIES_API_KEY is required.");
-  process.exit(1);
-}
-
 const ghHeaders = {
   Accept: "application/vnd.github.v3+json",
   "User-Agent": "Skillscout vendor discovery",
@@ -65,6 +62,7 @@ const now = new Date().toISOString();
 const directory = JSON.parse(await fs.readFile(DATA_PATH, "utf8"));
 const knownOwnerKeys = new Set(directory.officialOwners.map((o) => o.ownerKey));
 const knownRepoKeys  = new Set(directory.officialRepos.map((r) => r.repoKey));
+const knownSkillKeys = new Set(directory.officialSkills.map((s) => s.skillKey));
 
 console.log(`Loaded ${knownOwnerKeys.size} owners, ${knownRepoKeys.size} repos from ${DATA_PATH}`);
 
@@ -170,6 +168,19 @@ function parseRepoKey(value) {
   return `${parts[0]}/${parts[1]}`;
 }
 
+function parseOrgLogin(value) {
+  const raw = String(value || "").trim();
+  if (!raw || raw.startsWith("#")) return null;
+  const cleaned = raw
+    .replace(/^https?:\/\/github\.com\//i, "")
+    .replace(/^git@github\.com:/i, "")
+    .replace(/[?#].*$/, "")
+    .replace(/^\/+|\/+$/g, "");
+  const parts = cleaned.split("/").filter(Boolean);
+  if (parts.length !== 1) return null;
+  return parts[0];
+}
+
 async function loadSeedRepoKeys() {
   const values = [
     ...process.argv.slice(2),
@@ -186,6 +197,14 @@ async function loadSeedRepoKeys() {
   return [...new Set(values.map(parseRepoKey).filter(Boolean))];
 }
 
+async function loadSeedOrgLogins() {
+  const values = [
+    ...process.argv.slice(2),
+    ...SEED_ORGS.split(/[\s,]+/),
+  ];
+  return [...new Set(values.map(parseOrgLogin).filter(Boolean))];
+}
+
 async function fetchRepo(repoFullName) {
   try {
     const res = await fetch(`https://api.github.com/repos/${repoFullName}`, { headers: ghHeaders });
@@ -194,6 +213,26 @@ async function fetchRepo(repoFullName) {
   } catch {
     return null;
   }
+}
+
+async function fetchOrgRepos(login) {
+  const repos = [];
+  for (let page = 1; page <= 3; page++) {
+    try {
+      const res = await fetch(
+        `https://api.github.com/orgs/${encodeURIComponent(login)}/repos?type=public&sort=pushed&per_page=100&page=${page}`,
+        { headers: ghHeaders }
+      );
+      if (!res.ok) break;
+      const pageRepos = await res.json();
+      repos.push(...pageRepos);
+      if (pageRepos.length < 100) break;
+      await sleep(1200);
+    } catch {
+      break;
+    }
+  }
+  return repos;
 }
 
 const seedRepoKeys = await loadSeedRepoKeys();
@@ -205,6 +244,15 @@ for (const repoKey of seedRepoKeys) {
 }
 if (seedRepos.length) {
   console.log(`  manual seed repos: ${seedRepos.length}`);
+}
+
+const seedOrgLogins = await loadSeedOrgLogins();
+const seedOrgRepos = [];
+for (const login of seedOrgLogins) {
+  const repos = await fetchOrgRepos(login);
+  seedOrgRepos.push(...repos);
+  if (repos.length) console.log(`  manual seed org ${login}: ${repos.length} repos`);
+  else console.warn(`  Seed org has no public repos or was unreadable: ${login}`);
 }
 
 const normalizedRepoItems = repoItems.map((repo) => ({
@@ -220,7 +268,14 @@ const normalizedSeedItems = seedRepos.map((repo) => ({
   source: "manual-seed",
 }));
 
-const allItems = [...codeItems, ...normalizedRepoItems, ...normalizedSeedItems];
+const normalizedSeedOrgItems = seedOrgRepos.map((repo) => ({
+  repository: repo,
+  path: "SKILL.md",
+  html_url: `${repo.html_url}/blob/HEAD/SKILL.md`,
+  source: "manual-org-seed",
+}));
+
+const allItems = [...codeItems, ...normalizedRepoItems, ...normalizedSeedItems, ...normalizedSeedOrgItems];
 
 // ── Collect unique candidate repos ────────────────────────────────────────────
 
@@ -320,6 +375,7 @@ const PLATFORM_NAMES = new Set([
 // ── Companies API lookup ──────────────────────────────────────────────────────
 
 async function lookupCompany(websiteUrl) {
+  if (!COMPANIES_KEY) return null;
   if (!websiteUrl?.startsWith("http")) return null;
   try {
     const hostname = new URL(websiteUrl).hostname.replace(/^www\./, "");
@@ -380,6 +436,7 @@ async function getSkillPaths(repoFullName) {
       if (item.type !== "blob") continue;
       const match = item.path.match(SKILL_RE);
       if (!match) continue;
+      if (isTemplateSkillFilePath(item.path)) continue;
       const suffix = `/${match[1]}`;
       paths.push(
         item.path === match[1]
@@ -395,7 +452,7 @@ async function getSkillPaths(repoFullName) {
 
 // ── Process candidates ────────────────────────────────────────────────────────
 
-console.log(`\nEnriching ${candidates.size} candidates (GitHub profile + Companies API)...`);
+console.log(`\nEnriching ${candidates.size} candidates (GitHub profile + ownership checks)...`);
 
 let addedOwners = 0;
 let addedRepos  = 0;
@@ -410,6 +467,10 @@ function reject(reason, info) {
 
 function mergeList(existing, additions) {
   return [...new Set([...(existing || []), ...additions].filter(Boolean))];
+}
+
+function isTemplateSkillFilePath(filePath) {
+  return /(^|\/)templates?\/skill\/SKILL\.md$/i.test(filePath);
 }
 
 for (const [, info] of candidates) {
@@ -451,12 +512,13 @@ for (const [, info] of candidates) {
     }
 
     const company = await lookupCompany(website);
-    if (!company) {
-      reject("Companies API miss", info);
+    const verifiedByGitHub = profile.is_verified === true;
+    if (!company && !verifiedByGitHub) {
+      reject("not company-confirmed or GitHub verified", info);
       continue;
     }
 
-    displayName = company.name || displayName;
+    displayName = company?.name || displayName;
 
     const owner = {
       ownerKey: info.ownerKey,
@@ -472,8 +534,9 @@ for (const [, info] of candidates) {
       installsCount: 0,
       starsCount: stars,
       confidence: "high",
-      dbConfirmed: true,
-      companyIndustry: company.industry || "",
+      dbConfirmed: Boolean(company),
+      githubVerified: verifiedByGitHub,
+      companyIndustry: company?.industry || "",
       firstSeenAt: now,
       lastSeenAt: now,
     };
@@ -516,6 +579,28 @@ for (const [, info] of candidates) {
     knownRepoKeys.add(repoKey);
     addedRepos++;
   }
+
+  for (const skillPath of skillPaths) {
+    const skillKey = `${repoKey}/${skillPath}`;
+    if (knownSkillKeys.has(skillKey)) continue;
+    const skillName = skillPath.split("/").pop();
+    directory.officialSkills.push({
+      skillKey,
+      ownerKey: info.ownerKey,
+      sourceOwnerKeys: [info.login],
+      repoKey,
+      skillName,
+      displayName: skillName,
+      description: "",
+      sources: ["github"],
+      sourceUrls: [`https://github.com/${info.repoFullName}/tree/HEAD/${skillPath}`],
+      installsCount: 0,
+      confidence: "high",
+      firstSeenAt: now,
+      lastSeenAt: now,
+    });
+    knownSkillKeys.add(skillKey);
+  }
 }
 
 // ── Update stats and write ────────────────────────────────────────────────────
@@ -540,6 +625,7 @@ for (const owner of directory.officialOwners) {
 
 directory.stats.owners = directory.officialOwners.length;
 directory.stats.repos  = directory.officialRepos.length;
+directory.stats.skills = directory.officialSkills.length;
 directory.generatedAt  = now;
 
 if (DRY_RUN) {
@@ -557,4 +643,4 @@ if (rejectionReasons.size === 0) {
 }
 
 console.log(`\n✅ Added ${addedOwners} new owners, ${addedRepos} new repos`);
-console.log(`Directory: ${directory.stats.owners} owners, ${directory.stats.repos} repos`);
+console.log(`Directory: ${directory.stats.owners} owners, ${directory.stats.repos} repos, ${directory.stats.skills} skills`);
