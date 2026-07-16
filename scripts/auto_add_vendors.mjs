@@ -18,6 +18,8 @@
  *   COMPANIES_API_KEY     optional — The Companies API (thecompaniesapi.com)
  *   OFFICIAL_SKILLS_OUTPUT  optional — path to JSON (default: docs/data/official-skills-universal.json)
  *   DISCOVERY_WINDOW_DAYS   optional — days back to search (default: 45)
+ *   DISCOVERY_START_DATE    optional — YYYY-MM-DD lower bound for repo pushed date
+ *   DISCOVERY_END_DATE      optional — YYYY-MM-DD upper bound for repo pushed date
  *   DISCOVERY_SEARCH_PAGES  optional — GitHub pages per search query (default: 5)
  *   DISCOVERY_SKIP_SEARCH   optional — set to 1 to process manual seeds only
  *   DISCOVERY_SEED_REPOS    optional — comma/space/newline separated repo URLs or owner/repo keys
@@ -38,6 +40,8 @@ const DATA_PATH =
 const GITHUB_TOKEN    = process.env.GITHUB_TOKEN;
 const COMPANIES_KEY   = process.env.COMPANIES_API_KEY;
 const WINDOW_DAYS     = Number(process.env.DISCOVERY_WINDOW_DAYS || 45);
+const START_DATE      = process.env.DISCOVERY_START_DATE || "";
+const END_DATE        = process.env.DISCOVERY_END_DATE || "";
 const SEARCH_PAGES    = Math.max(1, Number(process.env.DISCOVERY_SEARCH_PAGES || 5));
 const SKIP_SEARCH     = process.env.DISCOVERY_SKIP_SEARCH === "1" || process.env.DISCOVERY_SKIP_SEARCH === "true";
 const SEED_REPOS      = process.env.DISCOVERY_SEED_REPOS || "";
@@ -71,6 +75,12 @@ console.log(`Loaded ${knownOwnerKeys.size} owners, ${knownRepoKeys.size} repos f
 const since = new Date(Date.now() - WINDOW_DAYS * 24 * 60 * 60 * 1000)
   .toISOString()
   .slice(0, 10);
+const pushedQualifier = START_DATE || END_DATE
+  ? `pushed:${START_DATE || "*"}..${END_DATE || "*"}`
+  : `pushed:>${since}`;
+const pushedLabel = START_DATE || END_DATE
+  ? `pushed ${START_DATE || "*"}..${END_DATE || "*"}`
+  : `pushed since ${since}`;
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -127,8 +137,8 @@ const codeQueries = [
   ["all lowercase skill.md files", "filename:skill.md"],
 ];
 const repoQueries = [
-  [`topic:agent-skills pushed since ${since}`, `topic:agent-skills pushed:>${since}`],
-  [`topic:claude-skills pushed since ${since}`, `topic:claude-skills pushed:>${since}`],
+  [`topic:agent-skills ${pushedLabel}`, `topic:agent-skills ${pushedQualifier}`],
+  [`topic:claude-skills ${pushedLabel}`, `topic:claude-skills ${pushedQualifier}`],
 ];
 
 const searchResults = SKIP_SEARCH
