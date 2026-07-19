@@ -105,7 +105,7 @@ async function getSkillPaths(repoFullName) {
   );
   if (!res?.ok) return { paths: [], truncated: false };
   const data = await res.json();
-  const SKILL_RE = /(?:^|\/)(SKILL\.md|skill\.md)$/;
+  const SKILL_RE = /(?:^|\/)(skill\.md)$/i;
   const paths = [];
   for (const item of data.tree || []) {
     if (item.type !== "blob") continue;

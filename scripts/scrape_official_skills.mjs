@@ -396,7 +396,7 @@ async function fetchGitHubRepoSkillPaths(repoKey) {
     //           cat/skill-name/skill.md   → "cat/skill-name"
     //           SKILL.md (root)           → repo name itself
     const skillPaths = [];
-    const SKILL_RE = /(?:^|\/)(SKILL\.md|skill\.md)$/;
+    const SKILL_RE = /(?:^|\/)(skill\.md)$/i;
     for (const item of data.tree || []) {
       if (item.type !== "blob") continue;
       const match = item.path.match(SKILL_RE);

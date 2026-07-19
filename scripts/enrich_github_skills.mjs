@@ -108,7 +108,7 @@ async function fetchGitHubRepoSkillPaths(repo) {
     const data = await response.json();
 
     const skillPaths = [];
-    const SKILL_RE = /(?:^|\/)(SKILL\.md|skill\.md)$/;
+    const SKILL_RE = /(?:^|\/)(skill\.md)$/i;
     for (const item of data.tree || []) {
       if (item.type !== "blob") continue;
       const match = item.path.match(SKILL_RE);
@@ -150,10 +150,12 @@ function reconcileSkillsWithGitHub(directory) {
     // Preserve install counts from catalog skills for matched names
     const catalogInstalls = new Map();
     const catalogDescriptions = new Map();
+    const catalogBySkillKey = new Map();
     for (const skill of directory.officialSkills) {
       if (skill.repoKey !== repoKey) continue;
       const slug = normalizeKey(skill.skillName || skill.displayName);
       catalogInstalls.set(slug, Math.max(catalogInstalls.get(slug) || 0, skill.installsCount || 0));
+      catalogBySkillKey.set(skill.skillKey, skill);
       if (skill.description) {
         catalogDescriptions.set(slug, skill.description);
       }
@@ -169,22 +171,23 @@ function reconcileSkillsWithGitHub(directory) {
     for (const skillPath of githubPaths) {
       const skillName = skillPath.split("/").pop();
       const skillKey = `${repoKey}/${skillPath}`;
+      const preserved = catalogBySkillKey.get(skillKey);
       const installs = catalogInstalls.get(skillPath) || catalogInstalls.get(skillName) || 0;
       const description = catalogDescriptions.get(skillPath) || catalogDescriptions.get(skillName) || "";
 
       directory.officialSkills.push({
         skillKey,
         ownerKey,
-        sourceOwnerKeys: repo.sourceOwnerKeys?.slice() || [ownerKey],
+        sourceOwnerKeys: mergeList(preserved?.sourceOwnerKeys, repo.sourceOwnerKeys?.slice() || [ownerKey]),
         repoKey,
         skillName,
-        displayName: skillName,
+        displayName: preserved?.displayName || skillName,
         description,
-        sources: ["github"],
-        sourceUrls: [`https://github.com/${repoKey}/tree/HEAD/${skillPath}`],
+        sources: mergeList(preserved?.sources, ["github"]),
+        sourceUrls: mergeList(preserved?.sourceUrls, [`https://github.com/${repoKey}/tree/HEAD/${skillPath}`]),
         installsCount: installs,
         confidence: "high",
-        firstSeenAt: generatedAt,
+        firstSeenAt: earliestDate(preserved?.firstSeenAt, generatedAt),
         lastSeenAt: generatedAt,
       });
     }
@@ -742,6 +745,16 @@ function isTemplateSkillFilePath(filePath) {
 function addUnique(list, value) {
   if (!Array.isArray(list) || !value) return;
   if (!list.includes(value)) list.push(value);
+}
+
+function mergeList(existing, additions) {
+  return [...new Set([...(existing || []), ...(additions || [])].filter(Boolean))];
+}
+
+function earliestDate(a, b) {
+  if (!a) return b;
+  if (!b) return a;
+  return new Date(a) <= new Date(b) ? a : b;
 }
 
 function removeValue(list, value) {
