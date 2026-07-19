@@ -24,7 +24,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMPANIES_API_KEY: ${{ secrets.COMPANIES_API_KEY }}
           OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
-          DISCOVERY_WINDOW_DAYS: '14'
+          DISCOVERY_WINDOW_DAYS: '45'
 
       - name: Enrich skill trees + star counts
         run: node scripts/enrich_github_skills.mjs

@@ -539,7 +539,7 @@ function skillMatchCandidates(skill) {
 }
 
 function skillSpecificity(skill) {
-  return Math.max(...skillMatchCandidates(skill).values().map((candidate) => candidate.length), 0);
+  return Math.max(...Array.from(skillMatchCandidates(skill), (candidate) => candidate.length), 0);
 }
 
 function scoreFuzzySkillMatch(candidate, name, urlSlug) {
