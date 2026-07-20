@@ -55,12 +55,29 @@ body.directory-body {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .directory-header-cta {
+  width: auto;
   min-height: 42px;
+  margin-top: 0;
   padding-inline: 18px;
   border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.directory-header-secondary-cta {
+  border-color: rgba(17, 24, 39, 0.14);
+  background: var(--color-ghost-white);
+  color: var(--color-graphite);
+}
+
+.directory-header-secondary-cta:hover {
+  border-color: rgba(17, 24, 39, 0.32);
+  background: var(--color-ghost-white);
+  color: var(--color-graphite);
 }
 
 .directory-header .title {
