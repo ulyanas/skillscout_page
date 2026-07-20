@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Official AI Agent Skills Statistics | Skillscout</title>
+    <meta
+      name="description"
+      content="A data-backed look at official AI agent skills: companies publishing the most skills, repo stars, install signals, and covered segments."
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://skillscout.sh/guides/official-ai-agent-skills-statistics/" />
+    <meta property="og:title" content="Official AI Agent Skills Statistics | Skillscout" />
+    <meta
+      property="og:description"
+      content="A data-backed look at official AI agent skills: companies publishing the most skills, repo stars, install signals, and covered segments."
+    />
+    <meta property="og:site_name" content="Skillscout" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://skillscout.sh/guides/official-ai-agent-skills-statistics/" />
+    <meta property="og:image" content="https://skillscout.sh/assets/guides/official-skills-word-cloud.svg" />
+    <meta property="og:image:alt" content="Word cloud showing the most common words in Skillscout official AI agent skill names." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Official AI Agent Skills Statistics | Skillscout" />
+    <meta
+      name="twitter:description"
+      content="A data-backed look at official AI agent skills: companies publishing the most skills, repo stars, install signals, and covered segments."
+    />
+    <meta name="twitter:image" content="https://skillscout.sh/assets/guides/official-skills-word-cloud.svg" />
+    <meta name="twitter:image:alt" content="Word cloud showing the most common words in Skillscout official AI agent skill names." />
+    <link rel="icon" href="../../assets/skillscout-mark-48.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://skillscout.sh/guides/official-ai-agent-skills-statistics/#article",
+      "headline": "Official AI Agent Skills Statistics",
+      "description": "A data-backed look at official AI agent skills: companies publishing the most skills, repo stars, install signals, and covered segments.",
+      "author": {
+        "@type": "Organization",
+        "name": "Skillscout"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Skillscout",
+        "url": "https://skillscout.sh/"
+      },
+      "image": "https://skillscout.sh/assets/guides/official-skills-word-cloud.svg",
+      "datePublished": "2026-07-20",
+      "dateModified": "2026-07-21",
+      "mainEntityOfPage": "https://skillscout.sh/guides/official-ai-agent-skills-statistics/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://skillscout.sh/guides/official-ai-agent-skills-statistics/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://skillscout.sh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://skillscout.sh/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Official AI Agent Skills Statistics",
+          "item": "https://skillscout.sh/guides/official-ai-agent-skills-statistics/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+    <style>
+      :root {
+        --bg: #f6f6f3;
+        --panel: #ffffff;
+        --border: #e4e4df;
+        --text: #111111;
+        --text-muted: #5f5f5f;
+        --shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.04);
+        --max: 820px;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      .container {
+        width: min(calc(100% - 40px), var(--max));
+        margin: 0 auto;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 76px;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 800;
+        font-size: 18px;
+      }
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        display: grid;
+        place-items: center;
+        box-shadow: var(--shadow-sm);
+      }
+      .brand-mark img {
+        width: 18px;
+        height: 18px;
+      }
+      .nav-links {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .nav-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .nav-links a:hover { color: var(--text); }
+      article {
+        padding: 28px 0 72px;
+      }
+      .eyebrow {
+        margin: 0 0 14px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(34px, 6vw, 56px);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+      }
+      .lead {
+        margin: 0 0 28px;
+        font-size: 19px;
+        line-height: 1.58;
+        color: var(--text-muted);
+      }
+      .meta {
+        margin: 0 0 32px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+      .hero-figure { margin: 0 0 32px; }
+      .hero-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-sm);
+        background: var(--panel);
+      }
+      figcaption {
+        margin-top: 10px;
+        color: var(--text-muted);
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      h2 {
+        margin: 42px 0 14px;
+        font-size: 25px;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+      }
+      h3 {
+        margin: 28px 0 12px;
+        font-size: 18px;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+      }
+      p, li {
+        font-size: 16px;
+        line-height: 1.68;
+      }
+      p { margin: 0 0 16px; }
+      ul, ol {
+        margin: 0 0 20px;
+        padding-left: 22px;
+      }
+      article a {
+        color: var(--text);
+        font-weight: 500;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.14em;
+      }
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin: 26px 0 28px;
+      }
+      .stat-card {
+        padding: 18px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+      }
+      .stat-card strong {
+        display: block;
+        margin: 0 0 6px;
+        font-size: clamp(30px, 6vw, 46px);
+        line-height: 1;
+        letter-spacing: -0.05em;
+      }
+      .stat-card span {
+        color: var(--text-muted);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .table-wrap {
+        overflow-x: auto;
+        margin: 18px 0 28px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+      }
+      table {
+        width: 100%;
+        min-width: 720px;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--border);
+        text-align: left;
+        vertical-align: top;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+      th {
+        color: var(--text-muted);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: #fbfbf8;
+      }
+      tr:last-child td { border-bottom: 0; }
+      td.num {
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+      }
+      .note {
+        margin: 24px 0;
+        padding: 18px 20px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+      }
+      .note p:last-child { margin-bottom: 0; }
+      @media (max-width: 720px) {
+        .nav {
+          min-height: auto;
+          padding: 16px 0;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .stat-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container nav">
+      <a class="brand" href="https://skillscout.sh/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=official-skills-statistics">
+        <span class="brand-mark"><img src="../../assets/skillscout-mark-48.png" alt="Skillscout logo" /></span>
+        <span>Skillscout</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="https://skillscout.sh/guides/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=official-skills-statistics">Guides</a>
+        <a href="https://skillscout.sh/official/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=official-skills-statistics">Official skills</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <article>
+        <p class="eyebrow">Data</p>
+        <h1>Official AI agent skills statistics</h1>
+        <p class="lead">
+          A market report on official AI agent skills: which companies publish them, what their
+          skills teach agents to do, and which software segments already have real coverage.
+        </p>
+        <p class="meta">Data collected July 19, 2026. Article updated July 21, 2026.</p>
+        <figure class="hero-figure">
+          <img
+            src="../../assets/guides/official-skills-word-cloud.svg"
+            alt="Word cloud showing the most common words in Skillscout official AI agent skill names, including Azure, test, review, create, documents, setup, CLI, API, SDK, code, deploy, security, design, and React."
+            loading="eager"
+          />
+          <figcaption>
+            Word cloud generated from skill names in 14,429 Skillscout official skills. Larger
+            words appear in more skill names.
+          </figcaption>
+        </figure>
+
+        <h2>What skills are</h2>
+        <p>
+          AI agent skills are reusable instruction packages that teach an agent how to complete a
+          specific type of work. A skill can include a trigger, step-by-step workflow, examples,
+          references, scripts, tool rules, and safety checks.
+        </p>
+        <p>
+          In practice, a skill turns product knowledge into agent-ready procedure. It can teach an
+          agent how to call an API, configure auth, review a pull request, deploy an app, create a
+          dashboard, run a security check, or follow a company workflow.
+        </p>
+        <p>
+          The open Agent Skills format was originally developed by
+          <a href="https://www.anthropic.com/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=official-skills-statistics">Anthropic</a>
+          and published as an open standard. The
+          <a href="https://agentskills.io/home?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=official-skills-statistics">Agent Skills overview</a>
+          defines the basic shape: a folder with a required <code>SKILL.md</code> file and optional scripts,
+          references, assets, or other resources. The
+          <a href="https://agentskills.io/specification?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=official-skills-statistics">specification</a>
+          keeps the format small enough for companies and agent tools to adopt, with development
+          continuing in the
+          <a href="https://github.com/agentskills/agentskills?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=official-skills-statistics">open GitHub repo</a>.
+        </p>
+
+        <h2>Official skills are a new SaaS surface</h2>
+        <p>
+          Official skills are published by the company, project, or product team that owns the
+          underlying software. They are becoming a new SaaS surface because they let companies ship
+          product knowledge directly to AI agents.
+        </p>
+        <p>
+          A SaaS company already has docs, SDKs, dashboards, APIs, support articles, and templates.
+          An official skill packages the practical path through those materials: which API to use,
+          which setup steps matter, which defaults are safe, and which checks should happen before
+          production use.
+        </p>
+        <p>
+          This changes how software can be adopted. A user can ask an agent to add analytics,
+          payments, observability, authentication, or deployment support, and the agent can follow
+          vendor-owned instructions instead of guessing from scattered examples.
+        </p>
+
+        <h2>What companies usually turn into skills</h2>
+        <p>
+          The most common official skills teach agents how to work inside software systems with
+          less guesswork. API and SDK usage is a major pattern. Companies also publish skills for
+          code review, deployment, analytics, observability, setup, security, research, documents,
+          and product workflows.
+        </p>
+        <p>
+          The table below groups public skill names and descriptions into recurring themes. A skill
+          can appear in more than one theme, because product work often overlaps. For example, a
+          Supabase RLS skill is both infrastructure and security, while a Stripe Checkout skill is
+          both API work and payments.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Skill theme</th>
+                <th>Skills matched</th>
+                <th>Share of skills</th>
+                <th>What agents learn</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Code generation and code review</td>
+                <td class="num">3,081</td>
+                <td class="num">21.6%</td>
+                <td>Review pull requests, refactor code, create components, write tests, improve frontend and backend implementation.</td>
+              </tr>
+              <tr>
+                <td>API and SDK usage</td>
+                <td class="num">1,786</td>
+                <td class="num">12.5%</td>
+                <td>Call APIs, use SDKs, set up webhooks, work with MCP servers, follow endpoint-specific rules.</td>
+              </tr>
+              <tr>
+                <td>Cloud, deployment, and infrastructure</td>
+                <td class="num">1,738</td>
+                <td class="num">12.2%</td>
+                <td>Deploy apps, configure cloud resources, manage databases, handle storage, run migrations, validate infrastructure.</td>
+              </tr>
+              <tr>
+                <td>Analytics, data, and reporting</td>
+                <td class="num">1,687</td>
+                <td class="num">11.8%</td>
+                <td>Instrument events, build dashboards, query product data, manage feature flags, create reports.</td>
+              </tr>
+              <tr>
+                <td>Research, search, and crawling</td>
+                <td class="num">1,333</td>
+                <td class="num">9.3%</td>
+                <td>Search the web, scrape pages, crawl sites, map URLs, extract structured content, support research workflows.</td>
+              </tr>
+              <tr>
+                <td>Testing, debugging, and observability</td>
+                <td class="num">1,303</td>
+                <td class="num">9.1%</td>
+                <td>Debug errors, inspect logs, validate changes, add telemetry, run browser tests, monitor production behavior.</td>
+              </tr>
+              <tr>
+                <td>Team workflow and product operations</td>
+                <td class="num">1,228</td>
+                <td class="num">8.6%</td>
+                <td>Manage issues, write PRDs, handle releases, triage workflow states, support project planning.</td>
+              </tr>
+              <tr>
+                <td>Setup and installation</td>
+                <td class="num">959</td>
+                <td class="num">6.7%</td>
+                <td>Initialize products, configure tools, onboard projects, scaffold starter files, choose safe defaults.</td>
+              </tr>
+              <tr>
+                <td>Design, content, and documents</td>
+                <td class="num">800</td>
+                <td class="num">5.6%</td>
+                <td>Work with Figma or Canva, create presentations, edit documents, generate video assets, apply brand feedback.</td>
+              </tr>
+              <tr>
+                <td>Security, auth, and compliance</td>
+                <td class="num">779</td>
+                <td class="num">5.5%</td>
+                <td>Set up auth, inspect permissions, review secrets, audit policies, handle compliance-oriented checks.</td>
+              </tr>
+              <tr>
+                <td>Payments, commerce, and finance</td>
+                <td class="num">395</td>
+                <td class="num">2.8%</td>
+                <td>Build checkout flows, manage billing, work with commerce APIs, use wallets, fetch market data.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Code and API work lead because official skills are closest to developer tools today.
+          The next large group is operational: deployment, data, debugging, analytics, and setup.
+          Companies use skills to package repeatable product work with instructions, examples,
+          checks, and product-specific procedures.
+        </p>
+
+        <h2>Which segments are covered</h2>
+        <p>
+          Official skills are strongest in developer infrastructure, AI tooling, cloud deployment,
+          data access, analytics, and product engineering. Business-team coverage is emerging
+          through design, content, productivity, payments, commerce, and customer-facing tools.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Segment</th>
+                <th>Representative companies</th>
+                <th>What the skills teach agents to do</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cloud and infrastructure</td>
+                <td>Microsoft, Vercel, Firebase, Supabase, Cloudflare, AWS, Google</td>
+                <td>Deploy apps, configure cloud services, inspect infrastructure, handle storage, set up auth, validate production readiness.</td>
+              </tr>
+              <tr>
+                <td>AI model providers and agent platforms</td>
+                <td>Anthropic, OpenAI, Google Gemini, Nous Research, NVIDIA, Hugging Face</td>
+                <td>Use agent frameworks, build skills, work with model APIs, run evaluations, manage files, build MCP servers, use local notebooks.</td>
+              </tr>
+              <tr>
+                <td>Developer tools and code quality</td>
+                <td>GitHub, Sentry, CodeRabbit, JetBrains, Expo, Flutter, shadcn/ui</td>
+                <td>Review code, write commits, generate tests, debug errors, refactor, document systems, improve UI implementation.</td>
+              </tr>
+              <tr>
+                <td>Analytics and observability</td>
+                <td>PostHog, Metabase, Mixpanel, Dash0, Databricks, Adobe</td>
+                <td>Instrument events, create dashboards, manage feature flags, query data, check semantic models, add telemetry.</td>
+              </tr>
+              <tr>
+                <td>Search, crawling, and research</td>
+                <td>Firecrawl, Browser Use, Apify-style tooling, AI research repos</td>
+                <td>Search the web, scrape pages, crawl sites, map URLs, interact with browsers, build research workflows.</td>
+              </tr>
+              <tr>
+                <td>Payments, commerce, and finance</td>
+                <td>Stripe, Shopify, Coinbase, 1inch, CoinMarketCap, Bitrefill-style providers</td>
+                <td>Build checkout flows, manage billing, use commerce APIs, fetch market data, work with wallets, call paid endpoints.</td>
+              </tr>
+              <tr>
+                <td>Design, content, and productivity</td>
+                <td>Figma, Canva, Notion, Slack, Google Workspace, Remotion</td>
+                <td>Create design artifacts, translate brand feedback, build presentations, write documents, manage team workflows, generate video assets.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>What the leading companies offer</h2>
+        <p>
+          Companies publish official skill repos or skill libraries so builders can install
+          vendor-owned instructions for agents.
+        </p>
+        <p>
+          Microsoft has the broadest company-owned surface, with many skills for Azure and
+          business platform operations. Anthropic publishes skills around Claude workflows,
+          document formats, frontend implementation, legal and finance workflows, and MCP. OpenAI
+          publishes skills connected to Codex, repo work, security review, browser testing, Figma,
+          Linear, and app-building workflows.
+        </p>
+        <p>
+          GitHub is strong in software delivery workflows through Copilot skills. Vercel connects
+          skills to deployment, web design, the AI SDK, and agent browser work. Firecrawl gives
+          agents a complete search and extraction toolkit. Supabase, Firebase, Cloudflare, and
+          Stripe show the next layer: official skills for infrastructure, auth, storage,
+          observability, and payments.
+        </p>
+        <p>
+          Smaller company skill libraries can still be useful. Metabase has 11 skills focused on
+          embedded analytics and semantic checks. Mixpanel has 26 skills for dashboards, tracking,
+          experiments, feature flags, and lexicon management. Canva has a compact set of design
+          workflow skills for bulk creation, resizing, brand checks, feedback, and presentations.
+        </p>
+
+        <h2>What this says about the market</h2>
+        <p>
+          Official skills are moving fastest where a product has developer adoption, public docs,
+          APIs, SDKs, CLIs, or dashboards. These products already need precise workflows, and
+          agents benefit from vendor-owned instructions.
+        </p>
+        <p>
+          The current official-skills market is centered on developers, engineers, and the agents
+          they use for software work. The strongest categories are code review, API and SDK usage,
+          deployment, analytics instrumentation, debugging, observability, and infrastructure setup.
+        </p>
+        <p>
+          Skills for everyday business users are at an earlier stage. Design, content,
+          productivity, payments, commerce, and customer support have less depth than engineering
+          workflows. The likely next wave is skill libraries that help
+          operators, marketers, analysts, founders, and support teams use complex SaaS tools
+          through agents.
+        </p>
+        <p>
+          Official skills also change product distribution. A company can publish an official
+          skill so agents learn the preferred API path, common setup steps, safe defaults, and
+          troubleshooting flow. That makes official skills part of documentation, support,
+          onboarding, and developer relations.
+        </p>
+
+        <h2>How builders should use this data</h2>
+        <p>
+          Builders should start with official skills when the task involves a vendor product:
+          authentication, payments, cloud setup, analytics, observability, design, or API work.
+          Vendor-owned skills usually encode current product assumptions better than random
+          examples.
+        </p>
+        <p>
+          The useful workflow is simple: search the
+          <a href="https://skillscout.sh/official/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=official-skills-statistics">Skillscout official skills directory</a>,
+          open the source, read the <code>SKILL.md</code>, check scripts and permissions, then
+          install the skill into the agent environment you use.
+        </p>
+
+        <h2>What this report counts</h2>
+        <p>
+          An owner is a company, organization, lab account, or project that publishes official
+          skills. A repo is a public source repository that contains one or more skills. A skill is
+          a reusable agent instruction package centered around a product, workflow, API, tool, or
+          domain task. A catalog or directory helps users discover skills; it is a separate entity
+          from the company repository that publishes them.
+        </p>
+        <p>
+          Skill count measures how much surface area a company exposes to agents. GitHub stars
+          measure repository visibility. Install counts measure demand on directories and
+          marketplaces that report installs. The rankings are separated because each signal answers
+          a different question.
+        </p>
+        <div class="note">
+          <p>
+            Some brands publish skills from more than one organization or lab account. Vercel is
+            the clearest example: Vercel and Vercel Labs together account for 351 skills, 66 repos,
+            5.4 million installs, and 482,665 stars in this analysis.
+          </p>
+        </div>
+
+        <h2>Data caveats</h2>
+        <p>
+          Install counts come from directories and marketplaces that expose them. GitHub stars come
+          from repositories, so a large repo can lift a company even when the skill set is small.
+          Some source directories split brands across lab accounts, product accounts, and main
+          organizations. Future editions can separate strict verified-company rankings from
+          broader official directory rankings.
+        </p>
+        <p>
+          The market direction is clear: official AI agent skills are concentrated around developer
+          tools and infrastructure today, with analytics, design, productivity, payments, and
+          commerce expanding behind them.
+        </p>
+
+        <h2>Statistics</h2>
+        <p>
+          The statistics below come from the Skillscout official skills directory, which tracks
+          official skills across
+          <a href="https://www.skills.sh/official?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=official-skills-statistics">SKILLS.sh</a>,
+          <a href="https://officialskills.sh/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=official-skills-statistics">officialskills.sh</a>,
+          <a href="https://mcpservers.org/agent-skills/official?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=official-skills-statistics">mcpservers.org</a>,
+          Cursor Marketplace, and GitHub. The current totals are:
+        </p>
+
+        <div class="stat-grid" aria-label="Official skills directory totals">
+          <div class="stat-card">
+            <strong>367</strong>
+            <span>Owners</span>
+          </div>
+          <div class="stat-card">
+            <strong>835</strong>
+            <span>Repos</span>
+          </div>
+          <div class="stat-card">
+            <strong>14,429</strong>
+            <span>Skills</span>
+          </div>
+        </div>
+
+        <h2>Official owners publishing the most skills</h2>
+        <p>
+          Microsoft has the largest official-skill footprint, followed by Anthropic and OpenAI.
+          The top rows show two patterns: broad platform companies publish
+          many small skills across products, while AI-native companies publish workflow libraries
+          for agent building, coding, files, research, and MCP.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Skills</th>
+                <th>Repos</th>
+                <th>Installs</th>
+                <th>Stars</th>
+                <th>Main coverage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Microsoft</td>
+                <td class="num">1,521</td>
+                <td class="num">54</td>
+                <td class="num">11,198,145</td>
+                <td class="num">708,677</td>
+                <td>Azure, Foundry, Fabric, Power Platform, VS Code, beginner agent education</td>
+              </tr>
+              <tr>
+                <td>Anthropic</td>
+                <td class="num">750</td>
+                <td class="num">18</td>
+                <td class="num">3,296,425</td>
+                <td class="num">652,759</td>
+                <td>Claude skills, frontend design, files, MCP building, legal, finance, knowledge work</td>
+              </tr>
+              <tr>
+                <td>OpenAI</td>
+                <td class="num">713</td>
+                <td class="num">8</td>
+                <td class="num">139,591</td>
+                <td class="num">290,363</td>
+                <td>Codex, plugins, security review, GitHub workflow, browser testing, Figma, Linear</td>
+              </tr>
+              <tr>
+                <td>PostHog</td>
+                <td class="num">598</td>
+                <td class="num">7</td>
+                <td class="num">33,793</td>
+                <td class="num">38,543</td>
+                <td>Product analytics, feature flags, subscriptions, instrumentation, agent modes</td>
+              </tr>
+              <tr>
+                <td>GitHub</td>
+                <td class="num">459</td>
+                <td class="num">8</td>
+                <td class="num">2,213,917</td>
+                <td class="num">168,059</td>
+                <td>Copilot workflows, commits, PRDs, refactors, Docker, Java, Playwright tests</td>
+              </tr>
+              <tr>
+                <td>Sentry</td>
+                <td class="num">334</td>
+                <td class="num">22</td>
+                <td class="num">150,455</td>
+                <td class="num">66,134</td>
+                <td>Developer operations, error tracking, debugging, code health, product workflows</td>
+              </tr>
+              <tr>
+                <td>Firecrawl</td>
+                <td class="num">327</td>
+                <td class="num">14</td>
+                <td class="num">1,393,555</td>
+                <td class="num">3,740</td>
+                <td>Search, scrape, crawl, map, download, browser interaction, research flows</td>
+              </tr>
+              <tr>
+                <td>NVIDIA</td>
+                <td class="num">300</td>
+                <td class="num">1</td>
+                <td class="num">345,129</td>
+                <td class="num">2,606</td>
+                <td>AI infrastructure, CUDA, RAG, DeepStream, cuOpt, accelerated computing</td>
+              </tr>
+              <tr>
+                <td>CodeRabbit</td>
+                <td class="num">295</td>
+                <td class="num">3</td>
+                <td class="num">13,246</td>
+                <td class="num">188</td>
+                <td>Code review, pull request automation, repository analysis, engineering workflows</td>
+              </tr>
+              <tr>
+                <td>x-cmd</td>
+                <td class="num">267</td>
+                <td class="num">1</td>
+                <td class="num">664</td>
+                <td class="num">24</td>
+                <td>Command-line workflows, shell utilities, developer automation</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Official owners with the strongest install signals</h2>
+        <p>
+          Install counts highlight demand on discovery and marketplace surfaces. Microsoft leads
+          because its Azure skills have very high install counts. Vercel Labs, Anthropic, GitHub,
+          Firecrawl, Firebase, Remotion, Expo, and Supabase also show strong marketplace demand.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Installs</th>
+                <th>Skills</th>
+                <th>Notable signal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Microsoft</td>
+                <td class="num">11,198,145</td>
+                <td class="num">1,521</td>
+                <td>Azure skills dominate the highest-install rows.</td>
+              </tr>
+              <tr>
+                <td>Vercel Labs</td>
+                <td class="num">5,165,053</td>
+                <td class="num">230</td>
+                <td><code>find-skills</code>, <code>agent-browser</code>, and web-design skills carry major demand.</td>
+              </tr>
+              <tr>
+                <td>Anthropic</td>
+                <td class="num">3,296,425</td>
+                <td class="num">750</td>
+                <td>Frontend, skill creation, documents, spreadsheets, PDFs, and MCP skills are heavily used.</td>
+              </tr>
+              <tr>
+                <td>Jesse Vincent</td>
+                <td class="num">2,359,400</td>
+                <td class="num">14</td>
+                <td>High install demand from widely used agent and productivity workflows.</td>
+              </tr>
+              <tr>
+                <td>GitHub</td>
+                <td class="num">2,213,917</td>
+                <td class="num">459</td>
+                <td><code>awesome-copilot</code> is the main distribution engine.</td>
+              </tr>
+              <tr>
+                <td>Firecrawl</td>
+                <td class="num">1,393,555</td>
+                <td class="num">327</td>
+                <td>Search, scrape, crawl, map, and browser-interaction skills form a clear stack.</td>
+              </tr>
+              <tr>
+                <td>Firebase</td>
+                <td class="num">1,307,808</td>
+                <td class="num">33</td>
+                <td>Firebase basics, auth, hosting, security rules, Firestore, and Crashlytics have strong installs.</td>
+              </tr>
+              <tr>
+                <td>Remotion</td>
+                <td class="num">539,837</td>
+                <td class="num">76</td>
+                <td>Video and rendering workflows have strong marketplace usage.</td>
+              </tr>
+              <tr>
+                <td>Expo</td>
+                <td class="num">512,963</td>
+                <td class="num">26</td>
+                <td>Mobile app development workflows show high install demand.</td>
+              </tr>
+              <tr>
+                <td>Supabase</td>
+                <td class="num">480,864</td>
+                <td class="num">19</td>
+                <td>Postgres best practices and the core Supabase skill drive most installs.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Official owners with the strongest GitHub visibility</h2>
+        <p>
+          GitHub stars favor companies with popular open-source repos. Stars are useful for
+          ecosystem visibility and weaker as a direct skill-usage metric. The leading rows show
+          where skills are attached to widely watched developer ecosystems.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Stars</th>
+                <th>Skills</th>
+                <th>Interpretation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Microsoft</td>
+                <td class="num">708,677</td>
+                <td class="num">1,521</td>
+                <td>Broad open-source and cloud footprint.</td>
+              </tr>
+              <tr>
+                <td>Anthropic</td>
+                <td class="num">652,759</td>
+                <td class="num">750</td>
+                <td>Claude Code, skills, plugins, legal, finance, and knowledge-work repos.</td>
+              </tr>
+              <tr>
+                <td>OpenAI</td>
+                <td class="num">290,363</td>
+                <td class="num">713</td>
+                <td>Codex and agent SDK repos create strong developer visibility.</td>
+              </tr>
+              <tr>
+                <td>Meta</td>
+                <td class="num">281,144</td>
+                <td class="num">23</td>
+                <td>High stars from large open-source projects with a smaller skill surface.</td>
+              </tr>
+              <tr>
+                <td>Vercel</td>
+                <td class="num">271,336</td>
+                <td class="num">121</td>
+                <td>Next.js, AI SDK, and Vercel workflows give the company a major developer footprint.</td>
+              </tr>
+              <tr>
+                <td>Hugging Face</td>
+                <td class="num">261,621</td>
+                <td class="num">43</td>
+                <td>Model and ML tooling visibility supports a smaller skill catalog.</td>
+              </tr>
+              <tr>
+                <td>Jesse Vincent</td>
+                <td class="num">257,522</td>
+                <td class="num">14</td>
+                <td>A small skill set attached to widely watched open-source work.</td>
+              </tr>
+              <tr>
+                <td>Vercel Labs</td>
+                <td class="num">211,329</td>
+                <td class="num">230</td>
+                <td>Agent browser, skill discovery, and web-design workflows have strong developer visibility.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

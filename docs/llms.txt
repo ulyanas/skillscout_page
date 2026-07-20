@@ -6,6 +6,7 @@
 
 - [Homepage](https://skillscout.sh/): Product overview, core value proposition, and the main call to install the Chrome extension.
 - [Guides](https://skillscout.sh/guides/): Collection of articles about AI and agentic skills.
+- [Official AI Agent Skills Statistics](https://skillscout.sh/guides/official-ai-agent-skills-statistics/): Analyzes official skills by company, repos, skill themes, install signals, GitHub stars, and covered software segments.
 - [Are AI Agent Skills Here to Stay?](https://skillscout.sh/guides/are-ai-agent-skills-here-to-stay/): Explains why AI agent skills are growing, where the format is going, and how free, official, and paid skills may evolve.
 - [Lovable Skills for AI Builders](https://skillscout.sh/guides/lovable-skills-for-ai-builders/): Explains how to use Lovable skills with official vendor skills for SEO, auth, backend, analytics, payments, and observability.
 - [What Is Hermes Agent?](https://skillscout.sh/guides/what-is-hermes-agent/): Explains Hermes Agent by Nous Research, supported models, official skills, and how Hermes skills work with other skill-aware agents.

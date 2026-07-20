@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Official AI agent skills name frequency word cloud</title>
+  <desc id="desc">Word cloud generated from skill names in 14,429 Skillscout official skills. Larger words appear in more skill names.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbfbf7"/>
+      <stop offset="1" stop-color="#eef5ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="760" rx="46" fill="url(#bg)"/>
+  <rect x="30" y="30" width="1340" height="700" rx="38" fill="#ffffff" opacity="0.82" stroke="#e4e4df"/>
+  <g font-family="Inter, Arial, sans-serif" font-weight="800" text-anchor="middle" dominant-baseline="middle">
+    <text x="700.0" y="384.0" font-size="85.0" fill="#008a7b" opacity="0.98" transform="rotate(0 700.0 384.0)">azure</text>
+    <text x="709.9" y="472.7" font-size="77.3" fill="#2d5fb8" opacity="0.98" transform="rotate(0 709.9 472.7)">test</text>
+    <text x="680.1" y="296.4" font-size="76.7" fill="#0a766f" opacity="0.98" transform="rotate(0 680.1 296.4)">review</text>
+    <text x="692.3" y="216.8" font-size="66.1" fill="#2d5fb8" opacity="0.98" transform="rotate(0 692.3 216.8)">create</text>
+    <text x="697.3" y="551.8" font-size="64.3" fill="#666666" opacity="0.98" transform="rotate(0 697.3 551.8)">documents</text>
+    <text x="525.7" y="479.5" font-size="64.1" fill="#111111" opacity="0.98" transform="rotate(0 525.7 479.5)">setup</text>
+    <text x="858.6" y="467.5" font-size="63.4" fill="#126fde" opacity="0.98" transform="rotate(0 858.6 467.5)">cli</text>
+    <text x="519.7" y="375.0" font-size="61.8" fill="#008a7b" opacity="0.98" transform="rotate(0 519.7 375.0)">api</text>
+    <text x="878.9" y="372.3" font-size="61.2" fill="#111111" opacity="0.98" transform="rotate(0 878.9 372.3)">sdk</text>
+    <text x="882.9" y="297.4" font-size="58.6" fill="#008a7b" opacity="0.98" transform="rotate(0 882.9 297.4)">bmad</text>
+    <text x="478.2" y="300.1" font-size="57.7" fill="#008a7b" opacity="0.98" transform="rotate(0 478.2 300.1)">code</text>
+    <text x="702.4" y="149.0" font-size="53.5" fill="#666666" opacity="0.98" transform="rotate(0 702.4 149.0)">deploy</text>
+    <text x="687.8" y="617.8" font-size="51.8" fill="#0a766f" opacity="0.87" transform="rotate(0 687.8 617.8)">security</text>
+    <text x="897.2" y="224.3" font-size="51.2" fill="#666666" opacity="0.87" transform="rotate(0 897.2 224.3)">design</text>
+    <text x="498.1" y="221.1" font-size="50.2" fill="#0a766f" opacity="0.87" transform="rotate(0 498.1 221.1)">react</text>
+    <text x="702.0" y="677.9" font-size="49.5" fill="#0a766f" opacity="0.87" transform="rotate(0 702.0 677.9)">databricks</text>
+    <text x="923.7" y="539.1" font-size="48.5" fill="#008a7b" opacity="0.87" transform="rotate(0 923.7 539.1)">data</text>
+    <text x="880.1" y="164.1" font-size="47.4" fill="#008a7b" opacity="0.87" transform="rotate(0 880.1 164.1)">issue</text>
+    <text x="446.3" y="559.3" font-size="46.9" fill="#008a7b" opacity="0.87" transform="rotate(-8 446.3 559.3)">sentry</text>
+    <text x="551.5" y="151.7" font-size="45.1" fill="#4e5fd9" opacity="0.87" transform="rotate(0 551.5 151.7)">best</text>
+    <text x="684.7" y="91.3" font-size="45.1" fill="#2d5fb8" opacity="0.87" transform="rotate(0 684.7 91.3)">practice</text>
+    <text x="928.3" y="621.5" font-size="45.1" fill="#0a766f" opacity="0.87" transform="rotate(0 928.3 621.5)">cometchat</text>
+    <text x="986.3" y="447.1" font-size="44.6" fill="#126fde" opacity="0.87" transform="rotate(-8 986.3 447.1)">model</text>
+    <text x="1014.7" y="373.0" font-size="43.1" fill="#2d5fb8" opacity="0.87" transform="rotate(8 1014.7 373.0)">search</text>
+    <text x="396.5" y="363.4" font-size="42.9" fill="#111111" opacity="0.87" transform="rotate(-4 396.5 363.4)">audit</text>
+    <text x="931.3" y="109.3" font-size="40.3" fill="#666666" opacity="0.87" transform="rotate(0 931.3 109.3)">integration</text>
+    <text x="478.0" y="635.9" font-size="40.3" fill="#666666" opacity="0.87" transform="rotate(-8 478.0 635.9)">twilio</text>
+    <text x="412.2" y="418.3" font-size="39.8" fill="#0a766f" opacity="0.87" transform="rotate(0 412.2 418.3)">add</text>
+    <text x="994.4" y="311.7" font-size="39.5" fill="#0a766f" opacity="0.87" transform="rotate(0 994.4 311.7)">web</text>
+    <text x="509.1" y="94.7" font-size="39.2" fill="#008a7b" opacity="0.87" transform="rotate(0 509.1 94.7)">python</text>
+    <text x="399.8" y="161.5" font-size="39.0" fill="#4e5fd9" opacity="0.87" transform="rotate(-4 399.8 161.5)">workflow</text>
+    <text x="388.9" y="477.2" font-size="38.7" fill="#2d5fb8" opacity="0.87" transform="rotate(-8 388.9 477.2)">dev</text>
+    <text x="907.5" y="677.7" font-size="38.4" fill="#008a7b" opacity="0.87" transform="rotate(0 907.5 677.7)">debug</text>
+    <text x="367.8" y="298.0" font-size="38.1" fill="#111111" opacity="0.87" transform="rotate(8 367.8 298.0)">app</text>
+    <text x="1048.6" y="516.2" font-size="35.5" fill="#008a7b" opacity="0.87" transform="rotate(8 1048.6 516.2)">plugin</text>
+    <text x="1052.4" y="256.5" font-size="34.6" fill="#2d5fb8" opacity="0.87" transform="rotate(-8 1052.4 256.5)">vercel</text>
+    <text x="359.6" y="233.1" font-size="34.0" fill="#666666" opacity="0.87" transform="rotate(-8 359.6 233.1)">manage</text>
+    <text x="1015.8" y="170.1" font-size="32.8" fill="#126fde" opacity="0.87" transform="rotate(0 1015.8 170.1)">dotnet</text>
+    <text x="330.3" y="420.9" font-size="32.1" fill="#2d5fb8" opacity="0.87" transform="rotate(8 330.3 420.9)">java</text>
+    <text x="1079.4" y="313.4" font-size="31.8" fill="#2d5fb8" opacity="0.87" transform="rotate(-4 1079.4 313.4)">vtex</text>
+    <text x="1015.1" y="573.4" font-size="30.5" fill="#2d5fb8" opacity="0.87" transform="rotate(4 1015.1 573.4)">aws</text>
+    <text x="466.7" y="688.2" font-size="28.8" fill="#2d5fb8" opacity="0.87" transform="rotate(0 466.7 688.2)">authoring</text>
+    <text x="866.5" y="66.5" font-size="27.4" fill="#666666" opacity="0.87" transform="rotate(0 866.5 66.5)">local</text>
+    <text x="1024.5" y="208.7" font-size="25.2" fill="#4e5fd9" opacity="0.87" transform="rotate(0 1024.5 208.7)">plan</text>
+    <text x="511.8" y="427.1" font-size="22.1" fill="#111111" opacity="0.87" transform="rotate(0 511.8 427.1)">database</text>
+    <text x="1082.1" y="437.5" font-size="21.7" fill="#666666" opacity="0.87" transform="rotate(-8 1082.1 437.5)">tao</text>
+    <text x="324.2" y="465.2" font-size="17.3" fill="#126fde" opacity="0.87" transform="rotate(0 324.2 465.2)">expo</text>
+    <text x="914.7" y="581.4" font-size="16.9" fill="#111111" opacity="0.87" transform="rotate(0 914.7 581.4)">course</text>
+    <text x="948.1" y="494.6" font-size="15.5" fill="#4e5fd9" opacity="0.87" transform="rotate(0 948.1 494.6)">eval</text>
+  </g>
+</svg>
