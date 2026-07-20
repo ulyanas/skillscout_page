@@ -223,47 +223,172 @@
         width: min(calc(100% - 40px), var(--max));
         margin: 0 auto;
       }
-      .nav {
+      .site-nav-wrap {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        backdrop-filter: saturate(140%) blur(14px);
+        -webkit-backdrop-filter: saturate(140%) blur(14px);
+        background: rgba(246, 246, 243, 0.78);
+        border-bottom: 1px solid transparent;
+        transition: border-color 180ms ease, background 180ms ease;
+      }
+      .site-nav-wrap.scrolled {
+        border-bottom-color: var(--border);
+      }
+      .site-nav-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 28px;
+      }
+      .site-nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        height: 64px;
         gap: 16px;
-        min-height: 76px;
       }
-      .brand {
+      .site-brand {
         display: inline-flex;
         align-items: center;
-        gap: 12px;
+        gap: 10px;
         text-decoration: none;
-        font-weight: 800;
-        font-size: 18px;
+        color: var(--text);
       }
-      .brand-mark {
-        width: 34px;
-        height: 34px;
-        border-radius: 12px;
+      .site-brand-mark {
+        width: 28px;
+        height: 28px;
+        border-radius: 8px;
         background: var(--panel);
         border: 1px solid var(--border);
-        display: grid;
-        place-items: center;
-        box-shadow: var(--shadow-sm);
-      }
-      .brand-mark img {
-        width: 18px;
-        height: 18px;
-      }
-      .nav-links {
         display: inline-flex;
         align-items: center;
-        gap: 18px;
-        flex-wrap: wrap;
+        justify-content: center;
+        box-shadow: var(--shadow-sm);
       }
-      .nav-links a {
+      .site-brand-mark img {
+        width: 16px;
+        height: 16px;
+        display: block;
+      }
+      .site-brand-name {
+        font-weight: 700;
+        font-size: 15px;
+      }
+      .site-nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+      .site-nav-links a {
+        font-size: 13px;
+        font-weight: 500;
         color: var(--text-muted);
         text-decoration: none;
-        font-weight: 600;
+        transition: color 120ms ease;
       }
-      .nav-links a:hover { color: var(--text); }
+      .site-nav-links a:hover { color: var(--text); }
+      .site-nav-cta {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .site-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1;
+        padding: 12px 18px;
+        border: 1px solid #111;
+        background: #111;
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+        transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease, border-color 140ms ease;
+        white-space: nowrap;
+      }
+      .site-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 24px -8px rgba(17,17,17,0.35);
+        background: #000;
+      }
+      .site-btn-list {
+        background: #fff;
+        color: var(--text);
+        border-color: rgba(17,17,17,0.14);
+        box-shadow: 0 8px 22px -18px rgba(17,17,17,0.45);
+      }
+      .site-btn-list:hover {
+        background: #fff;
+        border-color: rgba(17,17,17,0.32);
+      }
+      .site-btn-list-short { display: none; }
+      .site-burger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 36px;
+        height: 36px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: #fff;
+        cursor: pointer;
+        padding: 8px 9px;
+        flex-shrink: 0;
+      }
+      .site-burger span {
+        display: block;
+        height: 1.5px;
+        background: var(--text);
+        border-radius: 2px;
+        transition: transform 200ms ease, opacity 200ms ease;
+      }
+      .site-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+      .site-burger.open span:nth-child(2) { opacity: 0; }
+      .site-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+      .site-mobile-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(246,246,243,0.98);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--border);
+        padding: 12px 28px 20px;
+        flex-direction: column;
+        gap: 2px;
+        z-index: 39;
+      }
+      .site-mobile-menu.open { display: flex; }
+      .site-mobile-menu a {
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--text);
+        text-decoration: none;
+        padding: 11px 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .site-mobile-menu a:last-child { border-bottom: none; }
+      @media (max-width: 1120px) {
+        .site-nav-cta .site-btn-list-long { display: none; }
+        .site-nav-cta .site-btn-list-short { display: inline; }
+        .site-nav-cta .site-btn-list { padding-inline: 16px; }
+      }
+      @media (max-width: 720px) {
+        .site-burger { display: flex; }
+        .site-nav-links { display: none; }
+      }
+      @media (max-width: 420px) {
+        .site-nav-cta { display: none; }
+      }
       .hero {
         padding: 48px 0 28px;
       }
@@ -340,12 +465,6 @@
         color: var(--text-muted);
       }
       @media (max-width: 720px) {
-        .nav {
-          min-height: auto;
-          padding: 16px 0;
-          flex-direction: column;
-          align-items: flex-start;
-        }
         .article-card {
           grid-template-columns: 1fr;
           gap: 18px;
@@ -357,16 +476,46 @@
     </style>
   </head>
   <body>
-    <header class="container nav">
-      <a class="brand" href="https://skillscout.sh/">
-        <span class="brand-mark"><img src="../assets/skillscout-mark-48.png" alt="Skillscout logo" /></span>
-        <span>Skillscout</span>
-      </a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="https://skillscout.sh/">Home</a>
-        <a href="https://skillscout.sh/official/">Official skills</a>
+    <div class="site-nav-wrap" id="navWrap">
+      <div class="site-nav-container site-nav">
+        <a class="site-brand" href="/">
+          <span class="site-brand-mark"><img src="../assets/skillscout-mark-48.png" alt="Skillscout logo" /></span>
+          <span class="site-brand-name">Skillscout</span>
+        </a>
+        <nav class="site-nav-links" aria-label="Primary">
+          <a href="/#snapshot">Do I need it</a>
+          <a href="/#use-cases">Use cases</a>
+          <a href="/guides/">Guides</a>
+          <a href="/#testimonials">Reviews</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/official/">Official skills</a>
+        </nav>
+        <div class="site-nav-cta">
+          <a class="site-btn" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=guides_page" target="_blank" rel="noopener noreferrer" data-ga-event="get_extension_click" data-ga-label="guides-nav">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Add to Chrome
+          </a>
+          <a class="site-btn site-btn-list" href="https://forms.gle/iGfD5tDgTfCE4QX66" target="_blank" rel="noopener noreferrer" aria-label="List your skills" data-ga-event="list_skills_click" data-ga-label="guides-nav">
+            <span class="site-btn-list-long">List your skills</span>
+            <span class="site-btn-list-short">List skill</span>
+          </a>
+        </div>
+        <button class="site-burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="site-mobile-menu" id="mobileMenu" aria-label="Mobile">
+        <a href="/#snapshot" class="site-mobile-link">Do I need it</a>
+        <a href="/#use-cases" class="site-mobile-link">Use cases</a>
+        <a href="/guides/" class="site-mobile-link">Guides</a>
+        <a href="/#testimonials" class="site-mobile-link">Reviews</a>
+        <a href="/#faq" class="site-mobile-link">FAQ</a>
+        <a href="/official/" class="site-mobile-link">Official skills</a>
+        <a href="https://forms.gle/iGfD5tDgTfCE4QX66" class="site-mobile-link" target="_blank" rel="noopener noreferrer" data-ga-event="list_skills_click" data-ga-label="guides-mobile-nav">List your skills</a>
       </nav>
-    </header>
+    </div>
 
     <main class="container">
       <section class="hero">
@@ -477,5 +626,29 @@
         </a>
       </section>
     </main>
+    <script>
+      const burgerBtn = document.getElementById('burgerBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (burgerBtn && mobileMenu) {
+        burgerBtn.addEventListener('click', () => {
+          const open = mobileMenu.classList.toggle('open');
+          burgerBtn.classList.toggle('open', open);
+          burgerBtn.setAttribute('aria-expanded', String(open));
+        });
+        document.querySelectorAll('.site-mobile-link').forEach((el) => {
+          el.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            burgerBtn.classList.remove('open');
+            burgerBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+      const navWrap = document.getElementById('navWrap');
+      if (navWrap) {
+        const onScroll = () => navWrap.classList.toggle('scrolled', window.scrollY > 8);
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      }
+    </script>
   </body>
 </html>

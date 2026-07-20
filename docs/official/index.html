@@ -516,37 +516,47 @@
     <link rel="stylesheet" href="../preview/official-directory.css" />
   </head>
   <body class="directory-body">
-    <main class="app-shell directory-shell">
-      <header class="header directory-header">
-        <a class="brand directory-brand-link" href="https://skillscout.sh/" aria-label="Go to Skillscout home">
-          <img
-            class="brand-icon"
-            src="../icons/skillscout-search-32.png"
-            alt=""
-            width="22"
-            height="22"
-          />
-          <p class="title">Skillscout</p>
+    <div class="site-nav-wrap" id="navWrap">
+      <div class="site-nav-container site-nav">
+        <a class="site-brand" href="/">
+          <span class="site-brand-mark"><img src="../assets/skillscout-mark-48.png" alt="Skillscout logo" /></span>
+          <span class="site-brand-name">Skillscout</span>
         </a>
-        <div class="directory-header-actions">
-          <a
-            class="link-button directory-header-cta"
-            href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=official_page"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <nav class="site-nav-links" aria-label="Primary">
+          <a href="/#snapshot">Do I need it</a>
+          <a href="/#use-cases">Use cases</a>
+          <a href="/guides/">Guides</a>
+          <a href="/#testimonials">Reviews</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/official/">Official skills</a>
+        </nav>
+        <div class="site-nav-cta">
+          <a class="site-btn" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=official_page" target="_blank" rel="noopener noreferrer" data-ga-event="get_extension_click" data-ga-label="official-nav">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
             Add to Chrome
           </a>
-          <a
-            class="link-button directory-header-cta directory-header-secondary-cta"
-            href="https://forms.gle/iGfD5tDgTfCE4QX66"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            List your skills
+          <a class="site-btn site-btn-list" href="https://forms.gle/iGfD5tDgTfCE4QX66" target="_blank" rel="noopener noreferrer" aria-label="List your skills" data-ga-event="list_skills_click" data-ga-label="official-nav">
+            <span class="site-btn-list-long">List your skills</span>
+            <span class="site-btn-list-short">List skill</span>
           </a>
         </div>
-      </header>
+        <button class="site-burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="site-mobile-menu" id="mobileMenu" aria-label="Mobile">
+        <a href="/#snapshot" class="site-mobile-link">Do I need it</a>
+        <a href="/#use-cases" class="site-mobile-link">Use cases</a>
+        <a href="/guides/" class="site-mobile-link">Guides</a>
+        <a href="/#testimonials" class="site-mobile-link">Reviews</a>
+        <a href="/#faq" class="site-mobile-link">FAQ</a>
+        <a href="/official/" class="site-mobile-link">Official skills</a>
+        <a href="https://forms.gle/iGfD5tDgTfCE4QX66" class="site-mobile-link" target="_blank" rel="noopener noreferrer" data-ga-event="list_skills_click" data-ga-label="official-mobile-nav">List your skills</a>
+      </nav>
+    </div>
+    <main class="app-shell directory-shell">
       <h1 class="directory-title">Official Skills</h1>
       <p class="directory-subtitle">AI agent skills from the engineering teams at Anthropic, GitHub, Stripe, Figma, and 80+ software companies</p>
 
@@ -660,6 +670,30 @@
         </div>
       </article>
     </template>
+    <script>
+      const burgerBtn = document.getElementById('burgerBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (burgerBtn && mobileMenu) {
+        burgerBtn.addEventListener('click', () => {
+          const open = mobileMenu.classList.toggle('open');
+          burgerBtn.classList.toggle('open', open);
+          burgerBtn.setAttribute('aria-expanded', String(open));
+        });
+        document.querySelectorAll('.site-mobile-link').forEach((el) => {
+          el.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            burgerBtn.classList.remove('open');
+            burgerBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+      const navWrap = document.getElementById('navWrap');
+      if (navWrap) {
+        const onScroll = () => navWrap.classList.toggle('scrolled', window.scrollY > 8);
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      }
+    </script>
     <script type="module" src="../preview/official-directory.js?v=20260601-installs-na"></script>
   </body>
 </html>
