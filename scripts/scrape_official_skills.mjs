@@ -16,6 +16,7 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_STARS_CONCURRENCY = Number(process.env.GITHUB_STARS_CONCURRENCY || (GITHUB_TOKEN ? 10 : 2));
 const OWNER_KEY_ALIASES = new Map([
   ["anthropic", "anthropics"],
+  ["claude", "anthropics"],
   ["sentry", "getsentry"],
   ["notion", "makenotion"],
   ["neon", "neondatabase"],
@@ -49,6 +50,8 @@ aggregateOwnerStars(directory);
 // carries forward vendors that were added by auto_add_vendors.mjs.
 await mergeDiscoveredVendors(directory);
 await preserveExistingFirstSeenDates(directory);
+removeInvalidOwners(directory);
+refreshDirectoryStats(directory);
 
 await fs.mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
 await fs.writeFile(OUTPUT_PATH, `${JSON.stringify(directory, null, 2)}\n`);
@@ -1082,4 +1085,74 @@ function earliestDate(a, b) {
   if (!a) return b || generatedAt;
   if (!b) return a;
   return Date.parse(a) <= Date.parse(b) ? a : b;
+}
+
+function removeInvalidOwners(directory) {
+  const invalidOwnerKeys = new Set(
+    (directory.officialOwners || [])
+      .filter(isInvalidOfficialOwner)
+      .map((owner) => owner.ownerKey)
+  );
+  if (!invalidOwnerKeys.size) return;
+
+  const invalidRepoKeys = new Set(
+    (directory.officialRepos || [])
+      .filter((repo) => invalidOwnerKeys.has(repo.ownerKey))
+      .map((repo) => repo.repoKey)
+  );
+
+  directory.officialOwners = directory.officialOwners.filter((owner) => !invalidOwnerKeys.has(owner.ownerKey));
+  directory.officialRepos = directory.officialRepos.filter((repo) => !invalidOwnerKeys.has(repo.ownerKey));
+  directory.officialSkills = directory.officialSkills.filter(
+    (skill) => !invalidOwnerKeys.has(skill.ownerKey) && !invalidRepoKeys.has(skill.repoKey)
+  );
+}
+
+function isInvalidOfficialOwner(owner) {
+  if (owner.ownerKey === "github") return false;
+  if (owner.orgType === "User") return true;
+  if (hasGithubWebsite(owner)) return true;
+  return owner.githubVerified === false && !hasUsableWebsite(owner);
+}
+
+function hasGithubWebsite(owner) {
+  return hostFromUrl(owner.website) === "github.com" ||
+    (owner.websiteHosts || []).some((host) => normalizeHost(host) === "github.com");
+}
+
+function hasUsableWebsite(owner) {
+  const websiteHost = hostFromUrl(owner.website);
+  if (websiteHost && websiteHost !== "github.com") return true;
+  return (owner.websiteHosts || []).some((host) => {
+    const normalizedHost = normalizeHost(host);
+    return normalizedHost && normalizedHost !== "github.com";
+  });
+}
+
+function refreshDirectoryStats(directory) {
+  directory.officialOwners.sort((a, b) => a.ownerKey.localeCompare(b.ownerKey));
+  directory.officialRepos.sort((a, b) => a.repoKey.localeCompare(b.repoKey));
+  directory.officialSkills.sort((a, b) => a.skillKey.localeCompare(b.skillKey));
+  directory.stats = {
+    owners: directory.officialOwners.length,
+    repos: directory.officialRepos.length,
+    skills: directory.officialSkills.length,
+    sourceOwners: countBySource(directory.officialOwners),
+    sourceRepos: countBySource(directory.officialRepos),
+    sourceSkills: countBySource(directory.officialSkills)
+  };
+}
+
+function hostFromUrl(value) {
+  try {
+    if (!value) return "";
+    const url = String(value).startsWith("http") ? String(value) : `https://${value}`;
+    return normalizeHost(new URL(url).hostname);
+  } catch {
+    return "";
+  }
+}
+
+function normalizeHost(value) {
+  return String(value || "").trim().replace(/^www\./, "").toLowerCase();
 }

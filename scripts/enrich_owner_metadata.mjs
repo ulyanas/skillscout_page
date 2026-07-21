@@ -39,6 +39,12 @@ const stats = {
   owners: directory.officialOwners.length,
   githubProfiles: 0,
   companyMatches: 0,
+  userOwnersRemoved: 0,
+  userReposRemoved: 0,
+  userSkillsRemoved: 0,
+  invalidOwnersRemoved: 0,
+  invalidReposRemoved: 0,
+  invalidSkillsRemoved: 0,
   websitesAdded: 0,
   twitterAdded: 0,
   avatarAdded: 0,
@@ -50,6 +56,8 @@ const stats = {
 };
 
 await mapWithConcurrency(directory.officialOwners, CONCURRENCY, enrichOwner);
+removeInvalidOwners(directory);
+refreshDirectoryStats(directory);
 
 directory.enrichedAt = now;
 await fs.writeFile(DATA_PATH, `${JSON.stringify(directory, null, 2)}\n`);
@@ -71,7 +79,7 @@ Object.assign(stats, {
 console.log(
   `Owner metadata: ${stats.githubProfiles}/${stats.owners} GitHub profiles, ` +
     `${stats.companyMatches} company matches, ${stats.withLogo}/${stats.owners} logos, ` +
-    `${stats.withWebsite}/${stats.owners} websites`
+    `${stats.withWebsite}/${stats.owners} websites, ${stats.invalidOwnersRemoved} invalid owners removed`
 );
 
 async function enrichOwner(owner) {
@@ -322,4 +330,87 @@ async function mapWithConcurrency(items, concurrency, mapper) {
 
 function countOwnersWith(field) {
   return directory.officialOwners.filter((owner) => owner[field]).length;
+}
+
+function removeInvalidOwners(directory) {
+  const invalidOwnerKeys = new Set(
+    (directory.officialOwners || [])
+      .filter(isInvalidOfficialOwner)
+      .map((owner) => owner.ownerKey)
+  );
+  if (!invalidOwnerKeys.size) return;
+
+  const invalidRepoKeys = new Set(
+    (directory.officialRepos || [])
+      .filter((repo) => invalidOwnerKeys.has(repo.ownerKey))
+      .map((repo) => repo.repoKey)
+  );
+
+  const before = {
+    owners: directory.officialOwners.length,
+    repos: directory.officialRepos.length,
+    skills: directory.officialSkills.length
+  };
+
+  directory.officialOwners = directory.officialOwners.filter((owner) => !invalidOwnerKeys.has(owner.ownerKey));
+  directory.officialRepos = directory.officialRepos.filter((repo) => !invalidOwnerKeys.has(repo.ownerKey));
+  directory.officialSkills = directory.officialSkills.filter(
+    (skill) => !invalidOwnerKeys.has(skill.ownerKey) && !invalidRepoKeys.has(skill.repoKey)
+  );
+
+  stats.userOwnersRemoved = before.owners - directory.officialOwners.length;
+  stats.userReposRemoved = before.repos - directory.officialRepos.length;
+  stats.userSkillsRemoved = before.skills - directory.officialSkills.length;
+  stats.invalidOwnersRemoved = stats.userOwnersRemoved;
+  stats.invalidReposRemoved = stats.userReposRemoved;
+  stats.invalidSkillsRemoved = stats.userSkillsRemoved;
+}
+
+function isInvalidOfficialOwner(owner) {
+  if (owner.ownerKey === "github") return false;
+  if (owner.orgType === "User") return true;
+  if (hasGithubWebsite(owner)) return true;
+  return owner.githubVerified === false && !hasUsableWebsite(owner);
+}
+
+function hasGithubWebsite(owner) {
+  return hostFromUrl(owner.website) === "github.com" ||
+    (owner.websiteHosts || []).some((host) => normalizeHost(host) === "github.com");
+}
+
+function hasUsableWebsite(owner) {
+  const websiteHost = hostFromUrl(owner.website);
+  if (websiteHost && websiteHost !== "github.com") return true;
+  return (owner.websiteHosts || []).some((host) => {
+    const normalizedHost = normalizeHost(host);
+    return normalizedHost && normalizedHost !== "github.com";
+  });
+}
+
+function normalizeHost(value) {
+  return String(value || "").trim().replace(/^www\./, "").toLowerCase();
+}
+
+function refreshDirectoryStats(directory) {
+  directory.officialOwners.sort((a, b) => a.ownerKey.localeCompare(b.ownerKey));
+  directory.officialRepos.sort((a, b) => a.repoKey.localeCompare(b.repoKey));
+  directory.officialSkills.sort((a, b) => a.skillKey.localeCompare(b.skillKey));
+  directory.stats = {
+    owners: directory.officialOwners.length,
+    repos: directory.officialRepos.length,
+    skills: directory.officialSkills.length,
+    sourceOwners: countBySource(directory.officialOwners),
+    sourceRepos: countBySource(directory.officialRepos),
+    sourceSkills: countBySource(directory.officialSkills)
+  };
+}
+
+function countBySource(records) {
+  const counts = {};
+  for (const record of records || []) {
+    for (const source of record.sources || []) {
+      counts[source] = (counts[source] || 0) + 1;
+    }
+  }
+  return counts;
 }
