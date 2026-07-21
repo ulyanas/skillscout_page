@@ -1248,7 +1248,7 @@
       }
       .official-teaser {
         display: grid;
-        grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+        grid-template-columns: minmax(0, 1fr) minmax(470px, 1fr);
         gap: 18px;
         align-items: stretch;
       }
@@ -1286,10 +1286,10 @@
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 1px;
+        min-width: 0;
         overflow: hidden;
         padding: 16px;
-        background:
-          linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(250,250,247,0.98) 100%);
+        background: #fff;
         color: inherit;
         text-decoration: none;
         box-shadow: var(--shadow-md);
@@ -1297,7 +1297,8 @@
       .official-stat {
         position: relative;
         background: transparent;
-        padding: 24px 22px 22px;
+        min-width: 0;
+        padding: 24px 16px 22px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1306,20 +1307,14 @@
       .official-stat + .official-stat {
         border-left: 1px solid var(--border);
       }
-      .official-stat::before {
-        content: "";
-        width: 28px;
-        height: 3px;
-        border-radius: 999px;
-        background: linear-gradient(90deg, #14b8a6 0%, #2563eb 100%);
-        margin-bottom: 18px;
-      }
       .official-stat-value {
         margin: 0;
-        font-size: clamp(34px, 4vw, 48px);
+        font-size: clamp(30px, 3vw, 46px);
         font-weight: 800;
         line-height: 1;
         letter-spacing: -0.03em;
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
       }
       .official-stat-label {
         margin: 12px 0 0;
@@ -1332,6 +1327,17 @@
       @media (max-width: 980px) {
         .official-teaser {
           grid-template-columns: 1fr;
+        }
+      }
+      @media (min-width: 981px) and (max-width: 1180px) {
+        .official-teaser-stats {
+          padding: 12px;
+        }
+        .official-stat {
+          padding-inline: 10px;
+        }
+        .official-stat-value {
+          font-size: clamp(28px, 3vw, 36px);
         }
       }
       @media (max-width: 640px) {
@@ -1620,6 +1626,7 @@
             </p>
             <div class="official-teaser-actions">
               <a class="btn btn-lg" href="https://skillscout.sh/official/">Browse official skills</a>
+              <a class="btn btn-lg btn-list-skills" href="https://forms.gle/iGfD5tDgTfCE4QX66" target="_blank" rel="noopener noreferrer" data-ga-event="list_skills_click" data-ga-label="official-teaser">List your skill</a>
             </div>
           </div>
           <a class="official-teaser-stats" href="https://skillscout.sh/official/" aria-label="Open official skills directory">
