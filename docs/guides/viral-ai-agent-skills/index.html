@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Viral AI Agent Skills: Why They Spread | Skillscout</title>
+    <title>Ponytail, Caveman &amp; Grill Me: Agent Skills | Skillscout</title>
     <meta
       name="description"
       content="See why Ponytail, Caveman, Grill Me, Find Skills, and other viral AI agent skills spread, what they do, how to evaluate them, and what is trending."
     />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="canonical" href="https://skillscout.sh/guides/viral-ai-agent-skills/" />
-    <meta property="og:title" content="Viral AI Agent Skills: Why They Spread" />
+    <meta property="og:title" content="Ponytail, Caveman, Grill Me and Other Viral AI Agent Skills" />
     <meta
       property="og:description"
       content="A practical guide to Ponytail, Caveman, Grill Me, Find Skills, Improve Codebase Architecture, and other trending agent skills."
@@ -21,7 +21,7 @@
     <meta property="og:image" content="https://skillscout.sh/assets/guides/viral-agent-skills-hero.jpg" />
     <meta property="og:image:alt" content="Two AI agents connected through a bright network of reusable skills." />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Viral AI Agent Skills: Why They Spread" />
+    <meta name="twitter:title" content="Ponytail, Caveman, Grill Me and Other Viral AI Agent Skills" />
     <meta
       name="twitter:description"
       content="A practical guide to Ponytail, Caveman, Grill Me, Find Skills, Improve Codebase Architecture, and other trending agent skills."
@@ -42,7 +42,7 @@
     {
       "@type": "Article",
       "@id": "https://skillscout.sh/guides/viral-ai-agent-skills/#article",
-      "headline": "Viral AI Agent Skills: Why They Spread",
+      "headline": "Ponytail, Caveman, Grill Me and Other Viral AI Agent Skills",
       "description": "See why Ponytail, Caveman, Grill Me, Find Skills, and other viral AI agent skills spread, what they do, how to evaluate them, and what is trending.",
       "author": { "@type": "Organization", "name": "Skillscout" },
       "publisher": { "@type": "Organization", "name": "Skillscout", "url": "https://skillscout.sh/" },
@@ -147,8 +147,14 @@
       ul, ol { margin: 0 0 20px; padding-left: 22px; }
       article a { color: var(--text); font-weight: 500; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.14em; }
       code { font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.9em; }
-      pre { position: relative; overflow-x: auto; margin: 18px 0 24px; padding: 18px 20px; border: 1px solid var(--border); border-radius: 16px; background: #111; color: #fff; }
+      pre { overflow-x: auto; margin: 0; padding: 18px 112px 18px 20px; border: 1px solid var(--border); border-radius: 16px; background: #111; color: #fff; }
       pre code { white-space: pre-wrap; overflow-wrap: anywhere; }
+      .command-block { position: relative; margin: 18px 0 24px; }
+      .copy-command { position: absolute; top: 10px; right: 10px; display: inline-flex; align-items: center; gap: 7px; min-height: 36px; padding: 8px 11px; border: 1px solid #3d3d3d; border-radius: 10px; background: #242424; color: #fff; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; }
+      .copy-command:hover { background: #333; }
+      .copy-command:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+      .copy-command svg { width: 16px; height: 16px; flex: 0 0 auto; }
+      .copy-command[data-copied="true"] { background: #fff; color: #111; }
       .table-wrap { overflow-x: auto; margin: 18px 0 28px; border: 1px solid var(--border); border-radius: 18px; background: var(--panel); box-shadow: var(--shadow-sm); }
       table { width: 100%; min-width: 700px; border-collapse: collapse; }
       th, td { padding: 14px 16px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; font-size: 14px; line-height: 1.45; }
@@ -157,11 +163,6 @@
       td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
       .note { margin: 24px 0; padding: 18px 20px; border: 1px solid var(--border); border-radius: 18px; background: var(--panel); box-shadow: var(--shadow-sm); }
       .note p:last-child { margin-bottom: 0; }
-      .author-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 20px 0 28px; }
-      .author-card { padding: 20px; border: 1px solid var(--border); border-radius: 18px; background: var(--panel); box-shadow: var(--shadow-sm); }
-      .author-card h3 { margin: 5px 0 10px; }
-      .author-card p { margin: 0; font-size: 15px; }
-      .author-skill { color: var(--text-muted); font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
       details { margin: 12px 0; padding: 18px 20px; border: 1px solid var(--border); border-radius: 16px; background: var(--panel); }
       summary { cursor: pointer; font-weight: 700; }
       details p { margin: 14px 0 0; }
@@ -169,7 +170,7 @@
       @media (max-width: 720px) {
         .nav { min-height: auto; padding: 16px 0; flex-direction: column; align-items: flex-start; }
         h1 { font-size: 40px; }
-        .author-grid { grid-template-columns: 1fr; }
+        pre { padding-right: 102px; }
       }
     </style>
   </head>
@@ -188,7 +189,7 @@
     <main class="container">
       <article>
         <p class="eyebrow">Agent skills</p>
-        <h1>Viral AI agent skills: why they spread</h1>
+        <h1>Ponytail, Caveman, Grill Me and other viral AI agent skills</h1>
         <p class="lead">
           Ponytail, Caveman, Grill Me, and Find Skills each give an agent one recognizable working
           habit. Their names explain the behavior, installation takes one command, and users can see
@@ -241,6 +242,11 @@
           a “lazy senior developer,” which gives users a quick way to remember and request the behavior.
         </p>
         <p>
+          <a href="https://www.xing.com/profile/Dietrich_Gebert?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Dietrich Gebert</a>
+          created Ponytail. He is a Lead GenAI Engineer at Trimble whose work covers LLM agents,
+          multi-agent systems, RAG, evaluation, guardrails, and MCP.
+        </p>
+        <p>
           Ponytail's author reports about 54% less code across 12 feature tasks using Claude Haiku
           4.5, with four runs per task. The repository also explains why an earlier single-shot result
           was replaced: its baseline generated padded output. Treat the 54% result as an author-run
@@ -250,13 +256,24 @@
           The repository had about 86,900 GitHub stars and 4,700 forks on July 21, giving Ponytail
           one of the strongest repository-attention signals among recent behavior skills.
         </p>
-        <pre><code>npx skills add DietrichGebert/ponytail</code></pre>
+        <div class="command-block">
+          <pre><code>npx skills add DietrichGebert/ponytail</code></pre>
+          <button class="copy-command" type="button" aria-label="Copy Ponytail install command">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" /><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3" /></svg>
+            <span aria-live="polite">Copy</span>
+          </button>
+        </div>
 
         <h2>Caveman: compressed agent responses</h2>
         <p>
           <a href="https://github.com/JuliusBrussee/caveman?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Caveman</a>
           tells an agent to communicate with compressed grammar, symbols, fragments, and minimal
           repetition. It is useful for users who want short status updates and dense technical answers.
+        </p>
+        <p>
+          <a href="https://www.juliusbrussee.com/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Julius Brussee</a>
+          created Caveman. He is a software engineer and Data Science and AI student at Leiden
+          University, a founding engineer at Stacklink, and the developer of the Caveman tool family.
         </p>
         <p>
           The author reports an average 65% reduction in output tokens across 10 prompts, with results
@@ -272,7 +289,13 @@
           Ponytail reduces implementation scope. Caveman compresses the explanation around it. Users
           often combine them because the behaviors apply to different parts of the same coding session.
         </p>
-        <pre><code>npx skills add JuliusBrussee/caveman --skill caveman</code></pre>
+        <div class="command-block">
+          <pre><code>npx skills add JuliusBrussee/caveman --skill caveman</code></pre>
+          <button class="copy-command" type="button" aria-label="Copy Caveman install command">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" /><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3" /></svg>
+            <span aria-live="polite">Copy</span>
+          </button>
+        </div>
 
         <h2>Grill Me: structured planning questions</h2>
         <p>
@@ -280,6 +303,11 @@
           starts a focused interview about a plan or design. The underlying grilling workflow asks
           one question at a time, explores the codebase for factual answers, and leaves product or
           architecture decisions with the user. Each question includes a recommended answer.
+        </p>
+        <p>
+          <a href="https://www.mattpocock.com/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Matt Pocock</a>
+          created Grill Me. He is an educator and engineer who teaches AI engineering and is also
+          known for Total TypeScript; he previously worked at Vercel.
         </p>
         <p>
           The skill is useful before implementation when requirements still contain unresolved choices.
@@ -291,7 +319,13 @@
           24 hours on July 21. The Matt Pocock repository contains many skills. Its GitHub stars
           describe the full collection; install telemetry supplies the skill-level metric.
         </p>
-        <pre><code>npx skills add mattpocock/skills --skill grill-me</code></pre>
+        <div class="command-block">
+          <pre><code>npx skills add mattpocock/skills --skill grill-me</code></pre>
+          <button class="copy-command" type="button" aria-label="Copy Grill Me install command">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" /><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3" /></svg>
+            <span aria-live="polite">Copy</span>
+          </button>
+        </div>
 
         <h2>Find Skills: discovery as an agent workflow</h2>
         <p>
@@ -299,6 +333,12 @@
           teaches an agent how to recognize a request that may already have a reusable skill. It
           searches the public directory, checks install activity and source reputation, presents
           suitable options, and offers the install command.
+        </p>
+        <p>
+          <a href="https://www.andrewqu.com/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Andrew Qu</a>
+          created the first Find Skills commit. He is Chief of Software in Vercel's Office of the
+          CTO, previously worked as a software engineer at Meta, and co-founded Nooks. Vercel Labs
+          contributors maintain the skill; Elliot Liu added its leaderboard and source-quality checks.
         </p>
         <p>
           This meta-skill had about 2.6 million cumulative installs and 17,000 installs in the previous
@@ -311,7 +351,13 @@
           finds relevant skills for that context. It is handy for quick search when you already know
           which product or service you are working with.
         </p>
-        <pre><code>npx skills add vercel-labs/skills --skill find-skills</code></pre>
+        <div class="command-block">
+          <pre><code>npx skills add vercel-labs/skills --skill find-skills</code></pre>
+          <button class="copy-command" type="button" aria-label="Copy Find Skills install command">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" /><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3" /></svg>
+            <span aria-live="polite">Copy</span>
+          </button>
+        </div>
 
         <h2>Improve Codebase Architecture: guided refactoring</h2>
         <p>
@@ -323,49 +369,15 @@
         <p>
           The skill had about 506,800 cumulative installs on July 21. It gives coding agents a repeatable
           process for architecture work that would otherwise depend heavily on the wording of each prompt.
+          Matt Pocock created this skill as part of the same public collection as Grill Me.
         </p>
-        <pre><code>npx skills add mattpocock/skills --skill improve-codebase-architecture</code></pre>
-
-        <h2>Who created these skills?</h2>
-        <p>
-          Public repository ownership and commit history identify the creators below. Skills in
-          organization-owned repositories are credited to the publishing team and named contributors.
-        </p>
-        <div class="author-grid">
-          <section class="author-card">
-            <div class="author-skill">Ponytail</div>
-            <h3><a href="https://www.xing.com/profile/Dietrich_Gebert?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Dietrich Gebert</a></h3>
-            <p>Gebert is a Lead GenAI Engineer at Trimble. His public profile covers LLM agent development, multi-agent systems, RAG, evaluation, guardrails, and MCP, following more than a decade in software development.</p>
-          </section>
-          <section class="author-card">
-            <div class="author-skill">Caveman and Caveman Commit</div>
-            <h3><a href="https://www.juliusbrussee.com/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Julius Brussee</a></h3>
-            <p>Brussee is a software engineer and Data Science and AI student at Leiden University. He develops the Caveman tool family, works as a founding engineer at Stacklink, and builds AI study software.</p>
-          </section>
-          <section class="author-card">
-            <div class="author-skill">Grill Me, Improve Codebase Architecture, Resolving Merge Conflicts</div>
-            <h3><a href="https://www.mattpocock.com/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Matt Pocock</a></h3>
-            <p>Pocock is an educator, content creator, and engineer. He previously worked at Vercel and now teaches AI engineering full-time; he is also known for Total TypeScript.</p>
-          </section>
-          <section class="author-card">
-            <div class="author-skill">Find Skills</div>
-            <h3><a href="https://www.andrewqu.com/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Andrew Qu</a></h3>
-            <p>Qu created the first Find Skills commit. He is Chief of Software in Vercel's Office of the CTO, previously worked as a software engineer at Meta, and co-founded Nooks.</p>
-          </section>
-          <section class="author-card">
-            <div class="author-skill">AI Video Generation</div>
-            <h3><a href="https://github.com/okaris?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Ömer Karışman</a></h3>
-            <p>Karışman is a developer at inference.sh. Public commit history credits him with the AI Video Generation skill source distributed through the 101-skills repository.</p>
-          </section>
+        <div class="command-block">
+          <pre><code>npx skills add mattpocock/skills --skill improve-codebase-architecture</code></pre>
+          <button class="copy-command" type="button" aria-label="Copy Improve Codebase Architecture install command">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" /><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3" /></svg>
+            <span aria-live="polite">Copy</span>
+          </button>
         </div>
-
-        <h3>Team-published skills</h3>
-        <ul>
-          <li><strong>Frontend Design:</strong> published in <a href="https://github.com/anthropics/skills/tree/main/skills/frontend-design?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Anthropic's skills repository</a>. Public commits include work by Keith Lazuka and William Qian.</li>
-          <li><strong>Design Guide:</strong> maintained by the <a href="https://github.com/getpaperclipai/paperclip?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Paperclip team</a> inside its open-source agent-management application.</li>
-          <li><strong>Media Use:</strong> maintained in <a href="https://github.com/heygen-com/hyperframes/tree/main/skills/media-use?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">HeyGen's HyperFrames repository</a>, with recent contributions from Miguel Ángel and WaterrrForever.</li>
-          <li><strong>Find Skills:</strong> maintained by <a href="https://github.com/vercel-labs/skills/tree/main/skills/find-skills?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Vercel Labs contributors</a>. Elliot Liu added the leaderboard and source-quality checks used by the current version.</li>
-        </ul>
 
         <h2>Other agent skills trending now</h2>
         <p>
@@ -385,32 +397,32 @@
               <tr>
                 <td><a href="https://www.skills.sh/101-skills/skills/ai-video-generation?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">AI Video Generation</a></td>
                 <td class="num">23,200</td>
-                <td>Plans and generates video through a repeatable agent workflow.</td>
+                <td>Plans and generates video through a repeatable agent workflow. <a href="https://github.com/okaris?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Ömer Karışman</a>, a developer at inference.sh, created the source distributed through 101-skills.</td>
               </tr>
               <tr>
                 <td><a href="https://www.skills.sh/getpaperclipai/paperclip/design-guide?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Design Guide</a></td>
                 <td class="num">15,400</td>
-                <td>Applies interface guidance inside the Paperclip project. Its source and security reports deserve review before use.</td>
+                <td>The <a href="https://github.com/getpaperclipai/paperclip?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Paperclip team</a> publishes this interface guide inside its open-source agent-management project.</td>
               </tr>
               <tr>
                 <td><a href="https://www.skills.sh/mattpocock/skills/resolving-merge-conflicts?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Resolving Merge Conflicts</a></td>
                 <td class="num">7,200</td>
-                <td>Guides an agent through conflict analysis and resolution.</td>
+                <td>Matt Pocock created this workflow for conflict analysis and resolution.</td>
               </tr>
               <tr>
                 <td><a href="https://www.skills.sh/heygen-com/hyperframes/media-use?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Media Use</a></td>
                 <td class="num">5,600</td>
-                <td>Resolves, generates, and manages media through HeyGen's HyperFrames workflow. Its source and security reports deserve review before use.</td>
+                <td>The <a href="https://github.com/heygen-com/hyperframes/tree/main/skills/media-use?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">HeyGen HyperFrames team</a> maintains this workflow for resolving, generating, and managing media.</td>
               </tr>
               <tr>
                 <td><a href="https://www.skills.sh/anthropics/skills/frontend-design?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Frontend Design</a></td>
                 <td class="num">3,800</td>
-                <td>Gives agents concrete visual-design guidance for frontend work.</td>
+                <td><a href="https://github.com/anthropics/skills/tree/main/skills/frontend-design?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Anthropic</a> publishes this visual-design guidance for frontend work. Public commits include work by Keith Lazuka and William Qian.</td>
               </tr>
               <tr>
                 <td><a href="https://www.skills.sh/juliusbrussee/caveman/caveman-commit?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Caveman Commit</a></td>
                 <td class="num">2,600</td>
-                <td>Applies Caveman's compressed style to commit preparation and messages.</td>
+                <td>Julius Brussee created this variation of Caveman for commit preparation and messages.</td>
               </tr>
             </tbody>
           </table>
@@ -461,5 +473,49 @@
         </div>
       </article>
     </main>
+    <script>
+      document.querySelectorAll('.copy-command').forEach((button) => {
+        const originalLabel = button.getAttribute('aria-label');
+
+        button.addEventListener('click', async () => {
+          const command = button.closest('.command-block').querySelector('code').textContent.trim();
+          let copied = false;
+
+          try {
+            if (navigator.clipboard && window.isSecureContext) {
+              await navigator.clipboard.writeText(command);
+              copied = true;
+            }
+          } catch (error) {
+            copied = false;
+          }
+
+          if (!copied) {
+            const textarea = document.createElement('textarea');
+            textarea.value = command;
+            textarea.setAttribute('readonly', '');
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            copied = document.execCommand('copy');
+            textarea.remove();
+          }
+
+          if (!copied) return;
+
+          const text = button.querySelector('span');
+          text.textContent = 'Copied';
+          button.dataset.copied = 'true';
+          button.setAttribute('aria-label', 'Install command copied');
+
+          window.setTimeout(() => {
+            text.textContent = 'Copy';
+            button.dataset.copied = 'false';
+            button.setAttribute('aria-label', originalLabel);
+          }, 1600);
+        });
+      });
+    </script>
   </body>
 </html>
