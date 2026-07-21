@@ -2,6 +2,7 @@ import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { applyOwnerMetadataOverrides } from "./owner_metadata_overrides.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -50,6 +51,7 @@ aggregateOwnerStars(directory);
 // carries forward vendors that were added by auto_add_vendors.mjs.
 await mergeDiscoveredVendors(directory);
 await preserveExistingFirstSeenDates(directory);
+applyOwnerMetadataOverrides(directory);
 removeInvalidOwners(directory);
 refreshDirectoryStats(directory);
 
@@ -1112,7 +1114,11 @@ function isInvalidOfficialOwner(owner) {
   if (owner.ownerKey === "github") return false;
   if (owner.orgType === "User") return true;
   if (hasGithubWebsite(owner)) return true;
-  return owner.githubVerified === false && !hasUsableWebsite(owner);
+  if (!hasUsableWebsite(owner)) {
+    if (owner.githubVerified === false) return true;
+    return owner.orgType !== "Organization" && owner.githubVerified !== true;
+  }
+  return false;
 }
 
 function hasGithubWebsite(owner) {

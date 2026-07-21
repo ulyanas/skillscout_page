@@ -783,7 +783,11 @@ function isInvalidOfficialOwner(owner) {
   if (owner.ownerKey === "github") return false;
   if (owner.orgType === "User") return true;
   if (hasGithubWebsite(owner)) return true;
-  return owner.githubVerified === false && !hasUsableWebsite(owner);
+  if (!hasUsableWebsite(owner)) {
+    if (owner.githubVerified === false) return true;
+    return owner.orgType !== "Organization" && owner.githubVerified !== true;
+  }
+  return false;
 }
 
 function hasGithubWebsite(owner) {

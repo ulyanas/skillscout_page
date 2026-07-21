@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { applyOwnerMetadataOverrides } from "./owner_metadata_overrides.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -56,6 +57,7 @@ const stats = {
 };
 
 await mapWithConcurrency(directory.officialOwners, CONCURRENCY, enrichOwner);
+applyOwnerMetadataOverrides(directory, stats);
 removeInvalidOwners(directory);
 refreshDirectoryStats(directory);
 
@@ -370,7 +372,11 @@ function isInvalidOfficialOwner(owner) {
   if (owner.ownerKey === "github") return false;
   if (owner.orgType === "User") return true;
   if (hasGithubWebsite(owner)) return true;
-  return owner.githubVerified === false && !hasUsableWebsite(owner);
+  if (!hasUsableWebsite(owner)) {
+    if (owner.githubVerified === false) return true;
+    return owner.orgType !== "Organization" && owner.githubVerified !== true;
+  }
+  return false;
 }
 
 function hasGithubWebsite(owner) {
