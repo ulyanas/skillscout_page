@@ -174,9 +174,11 @@ const elements = {
   resultSummary: document.querySelector("#resultSummary"),
   resultsGrid: document.querySelector("#resultsGrid"),
   emptyState: document.querySelector("#emptyState"),
-  showMoreButton: document.querySelector("#showMoreButton"),
+  lazyLoadSentinel: document.querySelector("#lazyLoadSentinel"),
   template: document.querySelector("#ownerCardTemplate")
 };
+
+let lazyLoadScheduled = false;
 
 // ── Custom tooltip ────────────────────────────────────────────────────────────
 
@@ -293,6 +295,7 @@ init();
 
 async function init() {
   bindEvents();
+  setupLazyLoading();
   updateClearButton();
 
   try {
@@ -338,9 +341,47 @@ function bindEvents() {
 
   elements.tileViewButton.addEventListener("click", () => setViewMode("tile"));
   elements.listViewButton.addEventListener("click", () => setViewMode("list"));
+}
 
-  elements.showMoreButton.addEventListener("click", () => {
-    state.visibleLimit += PAGE_SIZE;
+function setupLazyLoading() {
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          scheduleNextPage();
+        }
+      },
+      { rootMargin: "600px 0px" }
+    );
+    observer.observe(elements.lazyLoadSentinel);
+    return;
+  }
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      const sentinelTop = elements.lazyLoadSentinel.getBoundingClientRect().top;
+      if (sentinelTop <= window.innerHeight + 600) {
+        scheduleNextPage();
+      }
+    },
+    { passive: true }
+  );
+}
+
+function scheduleNextPage() {
+  if (lazyLoadScheduled) {
+    return;
+  }
+
+  lazyLoadScheduled = true;
+  window.requestAnimationFrame(() => {
+    lazyLoadScheduled = false;
+    const totalOwners = state.filteredOwners.length;
+    if (!state.data || state.visibleLimit >= totalOwners) {
+      return;
+    }
+    state.visibleLimit = Math.min(state.visibleLimit + PAGE_SIZE, totalOwners);
     renderResults();
   });
 }
@@ -513,10 +554,7 @@ function renderResults() {
     return card;
   }));
   elements.emptyState.classList.toggle("hidden", totalOwners > 0);
-  elements.showMoreButton.classList.toggle("hidden", state.visibleLimit >= totalOwners);
-
-  const remaining = Math.max(0, totalOwners - state.visibleLimit);
-  elements.showMoreButton.textContent = `Show ${formatNumber(Math.min(PAGE_SIZE, remaining))} more owners`;
+  elements.lazyLoadSentinel.classList.toggle("hidden", state.visibleLimit >= totalOwners);
 
   const queryCopy = state.query ? ` for "${state.query}"` : "";
   elements.resultSummary.textContent = `Showing ${formatNumber(visibleOwners.length)} of ${formatNumber(

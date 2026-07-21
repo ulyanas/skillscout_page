@@ -383,7 +383,6 @@ body.directory-body {
 .clear-button:focus-visible,
 .view-button:focus-visible,
 .open-link:focus-visible,
-.show-more-button:focus-visible,
 .owner-card:focus-visible,
 .owner-website:focus-visible,
 .skill-preview-item a:focus-visible {
@@ -393,8 +392,7 @@ body.directory-body {
 
 .clear-button,
 .view-button,
-.open-link,
-.show-more-button {
+.open-link {
   appearance: none;
   display: inline-flex;
   align-items: center;
@@ -910,7 +908,7 @@ body.directory-body {
 }
 
 .empty-state.hidden,
-.show-more-button.hidden {
+.lazy-load-sentinel.hidden {
   display: none;
 }
 
@@ -929,17 +927,10 @@ body.directory-body {
   line-height: 1.6;
 }
 
-.show-more-button {
-  margin: 20px auto 0;
-  border-radius: 6px;
-  background: var(--color-accent-blue);
-  color: var(--color-ghost-white);
-  padding: 10px 16px;
-}
-
-.show-more-button:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-1px);
+.lazy-load-sentinel {
+  width: 100%;
+  height: 1px;
+  margin-top: 20px;
 }
 
 .custom-tooltip {

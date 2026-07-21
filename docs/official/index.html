@@ -513,7 +513,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../popup.css" />
-    <link rel="stylesheet" href="../preview/official-directory.css" />
+    <link rel="stylesheet" href="../preview/official-directory.css?v=20260721-lazy-owners" />
   </head>
   <body class="directory-body">
     <div class="site-nav-wrap" id="navWrap">
@@ -626,7 +626,7 @@
           <p class="empty-copy">Try a shorter term or search by owner, repo, catalog, or description.</p>
         </div>
 
-        <button id="showMoreButton" class="show-more-button hidden" type="button">Show more</button>
+        <div id="lazyLoadSentinel" class="lazy-load-sentinel hidden" aria-hidden="true"></div>
       </section>
     </main>
 
@@ -694,6 +694,6 @@
         window.addEventListener('scroll', onScroll, { passive: true });
       }
     </script>
-    <script type="module" src="../preview/official-directory.js?v=20260601-installs-na"></script>
+    <script type="module" src="../preview/official-directory.js?v=20260721-lazy-owners"></script>
   </body>
 </html>
