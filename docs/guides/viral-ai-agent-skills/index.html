@@ -49,7 +49,18 @@
       "image": "https://skillscout.sh/assets/guides/viral-agent-skills-hero.jpg",
       "datePublished": "2026-07-21",
       "dateModified": "2026-07-21",
-      "mainEntityOfPage": "https://skillscout.sh/guides/viral-ai-agent-skills/"
+      "mainEntityOfPage": "https://skillscout.sh/guides/viral-ai-agent-skills/",
+      "mentions": [
+        { "@type": "Person", "name": "Dietrich Gebert", "url": "https://github.com/DietrichGebert" },
+        { "@type": "Person", "name": "Julius Brussee", "url": "https://www.juliusbrussee.com/" },
+        { "@type": "Person", "name": "Matt Pocock", "url": "https://www.mattpocock.com/" },
+        { "@type": "Person", "name": "Andrew Qu", "url": "https://www.andrewqu.com/" },
+        { "@type": "Person", "name": "Ömer Karışman", "url": "https://github.com/okaris" },
+        { "@type": "Organization", "name": "Anthropic", "url": "https://www.anthropic.com/" },
+        { "@type": "Organization", "name": "Vercel Labs", "url": "https://github.com/vercel-labs" },
+        { "@type": "Organization", "name": "HeyGen", "url": "https://www.heygen.com/" },
+        { "@type": "SoftwareApplication", "name": "Paperclip", "url": "https://github.com/getpaperclipai/paperclip" }
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -146,6 +157,11 @@
       td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
       .note { margin: 24px 0; padding: 18px 20px; border: 1px solid var(--border); border-radius: 18px; background: var(--panel); box-shadow: var(--shadow-sm); }
       .note p:last-child { margin-bottom: 0; }
+      .author-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 20px 0 28px; }
+      .author-card { padding: 20px; border: 1px solid var(--border); border-radius: 18px; background: var(--panel); box-shadow: var(--shadow-sm); }
+      .author-card h3 { margin: 5px 0 10px; }
+      .author-card p { margin: 0; font-size: 15px; }
+      .author-skill { color: var(--text-muted); font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
       details { margin: 12px 0; padding: 18px 20px; border: 1px solid var(--border); border-radius: 16px; background: var(--panel); }
       summary { cursor: pointer; font-weight: 700; }
       details p { margin: 14px 0 0; }
@@ -153,6 +169,7 @@
       @media (max-width: 720px) {
         .nav { min-height: auto; padding: 16px 0; flex-direction: column; align-items: flex-start; }
         h1 { font-size: 40px; }
+        .author-grid { grid-template-columns: 1fr; }
       }
     </style>
   </head>
@@ -308,6 +325,47 @@
           process for architecture work that would otherwise depend heavily on the wording of each prompt.
         </p>
         <pre><code>npx skills add mattpocock/skills --skill improve-codebase-architecture</code></pre>
+
+        <h2>Who created these skills?</h2>
+        <p>
+          Public repository ownership and commit history identify the creators below. Skills in
+          organization-owned repositories are credited to the publishing team and named contributors.
+        </p>
+        <div class="author-grid">
+          <section class="author-card">
+            <div class="author-skill">Ponytail</div>
+            <h3><a href="https://www.xing.com/profile/Dietrich_Gebert?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Dietrich Gebert</a></h3>
+            <p>Gebert is a Lead GenAI Engineer at Trimble. His public profile covers LLM agent development, multi-agent systems, RAG, evaluation, guardrails, and MCP, following more than a decade in software development.</p>
+          </section>
+          <section class="author-card">
+            <div class="author-skill">Caveman and Caveman Commit</div>
+            <h3><a href="https://www.juliusbrussee.com/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Julius Brussee</a></h3>
+            <p>Brussee is a software engineer and Data Science and AI student at Leiden University. He develops the Caveman tool family, works as a founding engineer at Stacklink, and builds AI study software.</p>
+          </section>
+          <section class="author-card">
+            <div class="author-skill">Grill Me, Improve Codebase Architecture, Resolving Merge Conflicts</div>
+            <h3><a href="https://www.mattpocock.com/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Matt Pocock</a></h3>
+            <p>Pocock is an educator, content creator, and engineer. He previously worked at Vercel and now teaches AI engineering full-time; he is also known for Total TypeScript.</p>
+          </section>
+          <section class="author-card">
+            <div class="author-skill">Find Skills</div>
+            <h3><a href="https://www.andrewqu.com/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Andrew Qu</a></h3>
+            <p>Qu created the first Find Skills commit. He is Chief of Software in Vercel's Office of the CTO, previously worked as a software engineer at Meta, and co-founded Nooks.</p>
+          </section>
+          <section class="author-card">
+            <div class="author-skill">AI Video Generation</div>
+            <h3><a href="https://github.com/okaris?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Ömer Karışman</a></h3>
+            <p>Karışman is a developer at inference.sh. Public commit history credits him with the AI Video Generation skill source distributed through the 101-skills repository.</p>
+          </section>
+        </div>
+
+        <h3>Team-published skills</h3>
+        <ul>
+          <li><strong>Frontend Design:</strong> published in <a href="https://github.com/anthropics/skills/tree/main/skills/frontend-design?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Anthropic's skills repository</a>. Public commits include work by Keith Lazuka and William Qian.</li>
+          <li><strong>Design Guide:</strong> maintained by the <a href="https://github.com/getpaperclipai/paperclip?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Paperclip team</a> inside its open-source agent-management application.</li>
+          <li><strong>Media Use:</strong> maintained in <a href="https://github.com/heygen-com/hyperframes/tree/main/skills/media-use?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">HeyGen's HyperFrames repository</a>, with recent contributions from Miguel Ángel and WaterrrForever.</li>
+          <li><strong>Find Skills:</strong> maintained by <a href="https://github.com/vercel-labs/skills/tree/main/skills/find-skills?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=viral-agent-skills">Vercel Labs contributors</a>. Elliot Liu added the leaderboard and source-quality checks used by the current version.</li>
+        </ul>
 
         <h2>Other agent skills trending now</h2>
         <p>
