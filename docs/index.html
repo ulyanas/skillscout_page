@@ -371,6 +371,159 @@
         .nav-cta { display: none; }
       }
 
+      /* Partner banner */
+      .partner-banner {
+        position: relative;
+        background: #111;
+        color: #fff;
+        transition: background 140ms ease;
+      }
+      .partner-banner:hover { background: #181818; }
+      .partner-banner[hidden] { display: none; }
+      .partner-banner-link {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+      }
+      .partner-banner-link:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: -5px;
+      }
+      .partner-banner-inner {
+        position: relative;
+        z-index: 2;
+        min-height: 64px;
+        display: grid;
+        grid-template-columns: minmax(150px, auto) minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 24px;
+        pointer-events: none;
+      }
+      .partner-banner-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
+        color: #fff;
+      }
+      .partner-banner-logo {
+        width: 34px;
+        height: 34px;
+        display: block;
+        border-radius: 9px;
+      }
+      .partner-banner-name {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+      .partner-banner-copy {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.35;
+        text-align: center;
+        text-wrap: balance;
+      }
+      .partner-banner-copy-icon {
+        width: 28px;
+        height: 28px;
+        flex: 0 0 auto;
+        padding: 5px;
+        border-radius: 8px;
+        background: rgba(255,255,255,0.1);
+        color: #fff;
+      }
+      .partner-banner-copy code {
+        color: inherit;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 0.9em;
+        font-weight: 600;
+      }
+      .partner-banner-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .partner-banner-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 36px;
+        padding: 9px 14px;
+        border-radius: 999px;
+        background: #fff;
+        color: #111;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .partner-banner-dismiss {
+        position: relative;
+        z-index: 3;
+        width: 36px;
+        height: 36px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: 0;
+        border-radius: 999px;
+        background: transparent;
+        color: rgba(255,255,255,0.62);
+        cursor: pointer;
+        pointer-events: auto;
+      }
+      .partner-banner-dismiss:hover {
+        background: rgba(255,255,255,0.1);
+        color: #fff;
+      }
+      .partner-banner-dismiss svg {
+        width: 18px;
+        height: 18px;
+      }
+      .partner-banner button:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: 2px;
+      }
+      @media (max-width: 720px) {
+        .partner-banner-inner {
+          min-height: 68px;
+          grid-template-columns: minmax(0, 1fr) auto;
+          gap: 12px;
+          padding-block: 10px;
+        }
+        .partner-banner-brand { display: none; }
+        .partner-banner-copy {
+          font-size: 13px;
+          text-align: left;
+          justify-content: flex-start;
+        }
+        .partner-banner-copy-icon { width: 26px; height: 26px; }
+        .partner-banner-actions { gap: 4px; }
+        .partner-banner-cta {
+          min-height: 34px;
+          padding-inline: 12px;
+          font-size: 12px;
+        }
+        .partner-banner-dismiss {
+          width: 32px;
+          height: 32px;
+        }
+      }
+      @media (max-width: 430px) {
+        .partner-banner-inner { padding-inline: 18px; }
+        .partner-banner-copy { max-width: 22ch; }
+        .partner-banner-copy-suffix { display: none; }
+        .partner-banner-dismiss { display: none; }
+      }
+
       /* Buttons */
       .btn {
         display: inline-flex;
@@ -1575,6 +1728,39 @@
       </nav>
     </div>
 
+    <aside class="partner-banner" id="mdviewerBanner" aria-label="MDViewer promotion">
+      <a
+        class="partner-banner-link"
+        href="https://getmd.ma/?utm_source=skillscout&amp;utm_medium=referral&amp;utm_campaign=mdviewer_banner&amp;utm_content=banner"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="View any SKILL.md instantly with MDViewer"
+        data-telemetry-event="Partner.mdViewerOpened"
+        data-telemetry-placement="homepage-partner-banner"
+      ></a>
+      <div class="container partner-banner-inner">
+        <div class="partner-banner-brand" aria-hidden="true">
+          <img class="partner-banner-logo" src="assets/mdviewer-icon.webp" alt="" width="512" height="512" />
+          <span class="partner-banner-name">MDViewer</span>
+        </div>
+        <p class="partner-banner-copy" aria-hidden="true">
+          <svg class="partner-banner-copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2.5 12s3.5-5.5 9.5-5.5 9.5 5.5 9.5 5.5-3.5 5.5-9.5 5.5S2.5 12 2.5 12Z" />
+            <circle cx="12" cy="12" r="2.5" />
+          </svg>
+          <span>View any <code>SKILL.md</code> instantly <span class="partner-banner-copy-suffix">with MDViewer</span></span>
+        </p>
+        <div class="partner-banner-actions">
+          <span class="partner-banner-cta" aria-hidden="true">Get MDViewer</span>
+          <button class="partner-banner-dismiss" id="dismissMdviewerBanner" type="button" aria-label="Dismiss MDViewer banner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <path d="M6 6l12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
     <!-- HERO -->
     <section class="hero" id="top">
       <div class="container hero-inner">
@@ -2117,6 +2303,12 @@
       const onScroll = () => navWrap.classList.toggle('scrolled', window.scrollY > 8);
       onScroll();
       window.addEventListener('scroll', onScroll, { passive: true });
+
+      const mdviewerBanner = document.getElementById('mdviewerBanner');
+      const dismissMdviewerBanner = document.getElementById('dismissMdviewerBanner');
+      dismissMdviewerBanner?.addEventListener('click', () => {
+        mdviewerBanner.hidden = true;
+      });
 
       // Smooth scroll for in-page anchors
       document.querySelectorAll('a[href^="#"]').forEach(a => {
