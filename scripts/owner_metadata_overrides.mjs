@@ -20,6 +20,7 @@ export const OWNER_METADATA_OVERRIDES = new Map([
   ["projectopensea", { displayName: "OpenSea", website: "https://opensea.io" }],
   ["remotion-dev", { displayName: "Remotion", website: "https://www.remotion.dev" }],
   ["rivet-dev", { displayName: "Rivet", website: "https://rivet.gg" }],
+  ["skillscout", { displayName: "Skillscout", website: "https://skillscout.sh", githubUrl: "https://github.com/ulyanas/skillscout-skills" }],
   ["streamlit", { displayName: "Streamlit", website: "https://streamlit.io" }],
   ["tinybirdco", { displayName: "Tinybird", website: "https://www.tinybird.co" }],
   ["vercel-labs", { displayName: "Vercel Labs", website: "https://vercel.com" }],
