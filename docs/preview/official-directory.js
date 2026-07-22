@@ -179,6 +179,7 @@ const elements = {
 };
 
 let lazyLoadScheduled = false;
+let searchTelemetryTimer = null;
 
 // ── Custom tooltip ────────────────────────────────────────────────────────────
 
@@ -321,9 +322,21 @@ function bindEvents() {
     state.visibleLimit = INITIAL_LIMIT;
     updateClearButton();
     runSearch();
+    window.clearTimeout(searchTelemetryTimer);
+    if (state.query) {
+      searchTelemetryTimer = window.setTimeout(() => {
+        if (!state.data) return;
+        trackOfficialSkillsEvent("OfficialSkills.searchUsed", {
+          "Skillscout.OfficialSkills.query": state.query,
+          "Skillscout.OfficialSkills.resultCount": state.filteredOwners.length,
+          "Skillscout.OfficialSkills.sortBy": state.sortBy
+        });
+      }, 700);
+    }
   });
 
   elements.clearButton.addEventListener("click", () => {
+    window.clearTimeout(searchTelemetryTimer);
     elements.searchInput.value = "";
     state.query = "";
     state.visibleLimit = INITIAL_LIMIT;
@@ -333,10 +346,16 @@ function bindEvents() {
   });
 
   elements.sortSelect.addEventListener("change", () => {
+    const previousSortBy = state.sortBy;
     state.sortBy = elements.sortSelect.value;
     state.visibleLimit = INITIAL_LIMIT;
     state.filteredOwners = applySort(state.filteredOwners);
     renderResults();
+    trackOfficialSkillsEvent("OfficialSkills.sortChanged", {
+      "Skillscout.OfficialSkills.sortBy": state.sortBy,
+      "Skillscout.OfficialSkills.previousSortBy": previousSortBy,
+      "Skillscout.OfficialSkills.query": state.query
+    });
   });
 
   elements.tileViewButton.addEventListener("click", () => setViewMode("tile"));
@@ -383,6 +402,20 @@ function scheduleNextPage() {
     }
     state.visibleLimit = Math.min(state.visibleLimit + PAGE_SIZE, totalOwners);
     renderResults();
+    trackOfficialSkillsEvent("OfficialSkills.resultsScrolled", {
+      "Skillscout.OfficialSkills.visibleCount": state.visibleLimit,
+      "Skillscout.OfficialSkills.totalCount": totalOwners,
+      "Skillscout.OfficialSkills.page": Math.ceil(state.visibleLimit / PAGE_SIZE),
+      "Skillscout.OfficialSkills.query": state.query,
+      "Skillscout.OfficialSkills.sortBy": state.sortBy
+    });
+  });
+}
+
+function trackOfficialSkillsEvent(type, payload) {
+  window.skillscoutTelemetry?.track(type, {
+    "Skillscout.Web.placement": "official-directory",
+    ...payload
   });
 }
 
