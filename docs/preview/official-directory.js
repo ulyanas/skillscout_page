@@ -424,6 +424,7 @@ function buildOwnerGroups(data) {
 
   return (data.officialOwners || []).map((owner) => {
     const skills = (skillsByOwner.get(owner.ownerKey) || []).sort(compareSkills);
+    if (!skills.length) return null;
     const ownerRepos = reposByOwner.get(owner.ownerKey) || [];
     const bestRepo = [...ownerRepos].sort(compareRepos)[0];
     const metadata = getOwnerMetadata(owner);
@@ -459,7 +460,7 @@ function buildOwnerGroups(data) {
 
     ownerObj.rankScore = computeOwnerRankScore(ownerObj);
     return ownerObj;
-  });
+  }).filter(Boolean);
 }
 
 // ── Search ────────────────────────────────────────────────────────────────────

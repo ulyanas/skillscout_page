@@ -335,9 +335,14 @@ function countOwnersWith(field) {
 }
 
 function removeInvalidOwners(directory) {
+  const ownerKeysWithSkills = new Set(
+    (directory.officialSkills || [])
+      .map((skill) => skill.ownerKey)
+      .filter(Boolean)
+  );
   const invalidOwnerKeys = new Set(
     (directory.officialOwners || [])
-      .filter(isInvalidOfficialOwner)
+      .filter((owner) => isInvalidOfficialOwner(owner) || !ownerKeysWithSkills.has(owner.ownerKey))
       .map((owner) => owner.ownerKey)
   );
   if (!invalidOwnerKeys.size) return;
