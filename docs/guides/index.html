@@ -200,7 +200,7 @@
       "@id": "https://skillscout.sh/guides/official-ai-agent-skills-statistics/#article",
       "headline": "Official AI Agent Skills Statistics",
       "url": "https://skillscout.sh/guides/official-ai-agent-skills-statistics/",
-      "image": "https://skillscout.sh/assets/guides/official-skills-word-cloud.svg",
+      "image": "https://skillscout.sh/assets/guides/official-skills-word-cloud.png",
       "description": "A data-backed look at official AI agent skills: companies publishing the most skills, repo stars, install signals, and covered segments."
     },
     {
@@ -489,6 +489,7 @@
         text-decoration: none;
       }
       .article-card-image {
+        aspect-ratio: 16 / 9;
         margin: 0;
         overflow: hidden;
         border-radius: 16px;
@@ -498,8 +499,8 @@
       .article-card-image img {
         display: block;
         width: 100%;
-        height: 148px;
-        object-fit: cover;
+        height: 100%;
+        object-fit: contain;
         object-position: center;
       }
       .article-card-copy {
@@ -526,9 +527,6 @@
         .article-card {
           grid-template-columns: 1fr;
           gap: 18px;
-        }
-        .article-card-image img {
-          height: 180px;
         }
       }
     </style>
@@ -621,7 +619,7 @@
         <a class="article-card" href="/guides/official-ai-agent-skills-statistics/">
           <div class="article-card-image">
             <img
-              src="../assets/guides/official-skills-word-cloud.svg"
+              src="../assets/guides/official-skills-word-cloud.png"
               alt="Word cloud showing the most common words in Skillscout official AI agent skill names."
             />
           </div>
