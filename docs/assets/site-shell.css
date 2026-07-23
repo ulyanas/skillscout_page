@@ -280,10 +280,15 @@
 }
 
 .partner-banner-copy code {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   color: inherit;
   font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
   font-size: 0.9em;
   font-weight: 600;
+  box-shadow: none;
 }
 
 .partner-banner-actions {
