@@ -1,8 +1,8 @@
 (function () {
   "use strict";
 
-  const APP_ID = "DB6096DB-D3D1-4666-A532-9AC83B668AD0";
-  const ENDPOINT = "https://nom.telemetrydeck.com/v2/namespace/com.skillscout/";
+  const APP_ID = "D96EABE1-3B07-40E5-B149-DFA286B7FA5B";
+  const ENDPOINT = "https://tele.iamsimpl.com/v2/namespace/com.skillscout/";
   const SESSION_KEY = "skillscout.telemetry.session";
   const EVENT_MAP = {
     get_extension_click: "Extension.downloadClicked",
