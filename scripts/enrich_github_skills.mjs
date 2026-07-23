@@ -22,6 +22,7 @@ const SKILLS_SH_INSTALLS_CONCURRENCY = Number(process.env.SKILLS_SH_INSTALLS_CON
 const SKILLS_SH_INSTALLS_ENABLED = process.env.SKILLS_SH_INSTALLS !== "0";
 const SKILLS_SH_FETCH_TIMEOUT_MS = Number(process.env.SKILLS_SH_FETCH_TIMEOUT_MS || 10000);
 const GITHUB_SKILL_TREES_ENABLED = process.env.GITHUB_SKILL_TREES !== "0";
+const GITHUB_SKILLS_RECENT_DAYS = Number(process.env.GITHUB_SKILLS_RECENT_DAYS || 14);
 const SKILLS_SH_ORIGIN = "https://www.skills.sh";
 
 if (!GITHUB_TOKEN) {
@@ -57,7 +58,7 @@ console.log(
 // ── GitHub skill tree fetching ─────────────────────────────────────────────
 
 async function enrichWithGitHubSkillTrees(directory) {
-  const repos = directory.officialRepos;
+  const repos = sortReposForGitHubSkillRefresh(directory.officialRepos);
   console.log(`Fetching GitHub skill trees for ${repos.length} repos (concurrency ${CONCURRENCY})...`);
 
   let fetched = 0;
@@ -74,6 +75,7 @@ async function enrichWithGitHubSkillTrees(directory) {
     }
     if (result) {
       repo.githubSkillPaths = result.skillPaths;
+      repo.githubSkillPathsFetchedAt = generatedAt;
       repo.truncated = result.truncated;
       fetched++;
     } else {
@@ -82,9 +84,35 @@ async function enrichWithGitHubSkillTrees(directory) {
   });
 
   console.log(`GitHub skill trees: ${fetched} fetched, ${failed} failed/not-found`);
-  if (rateLimited) return;
+  if (rateLimited) {
+    console.log("GitHub skill tree refresh was partial; reconciling fetched repos with existing cached skill paths");
+  }
 
   reconcileSkillsWithGitHub(directory);
+}
+
+function sortReposForGitHubSkillRefresh(repos) {
+  const recentCutoff = Date.now() - GITHUB_SKILLS_RECENT_DAYS * 24 * 60 * 60 * 1000;
+  return repos
+    .slice()
+    .sort(
+      (left, right) =>
+        scoreRepoForGitHubSkillRefresh(right, recentCutoff) -
+        scoreRepoForGitHubSkillRefresh(left, recentCutoff)
+    );
+}
+
+function scoreRepoForGitHubSkillRefresh(repo, recentCutoff) {
+  let score = 0;
+  const firstSeenAt = Date.parse(repo.firstSeenAt || "");
+  const fetchedAt = Date.parse(repo.githubSkillPathsFetchedAt || "");
+  if (Number.isFinite(firstSeenAt) && firstSeenAt >= recentCutoff) score += 2000;
+  if (!Number.isFinite(fetchedAt)) score += 1000;
+  if (!Array.isArray(repo.githubSkillPaths)) score += 500;
+  if (Number.isFinite(fetchedAt) && fetchedAt < recentCutoff) score += 250;
+  if (Number(repo.skillsCount || 0) === 0) score += 100;
+  if (repo.sources?.includes("github-discovery")) score += 25;
+  return score;
 }
 
 async function fetchGitHubRepoSkillPaths(repo) {
