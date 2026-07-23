@@ -346,9 +346,8 @@
 </tr>
 <tr>
 <td>Remote code execution</td>
-<td>The skill uses `curl</td>
-<td>bash<code>, </code>eval`, dynamic imports, install hooks, or mutable scripts from the web</td>
-<td>A harmless-looking skill can turn into arbitrary execution</td>
+<td>The skill pipes downloaded scripts into a shell, uses <code>eval</code> or dynamic imports, runs install hooks, or fetches mutable code at runtime</td>
+<td>The agent may execute unreviewed code with the user&#x27;s permissions</td>
 </tr>
 <tr>
 <td>Brand impersonation</td>
