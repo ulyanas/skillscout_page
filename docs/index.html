@@ -20,6 +20,8 @@
       data-app-id="DB6096DB-D3D1-4666-A532-9AC83B668AD0"
     ></script>
     <script defer src="assets/telemetrydeck-events.js?v=20260723-1"></script>
+    <link rel="stylesheet" href="/assets/site-shell.css?v=20260723-1" />
+    <script src="/assets/site-shell.js?v=20260723-1"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3BBGC9XQS2"></script>
@@ -2304,12 +2306,6 @@
       const onScroll = () => navWrap.classList.toggle('scrolled', window.scrollY > 8);
       onScroll();
       window.addEventListener('scroll', onScroll, { passive: true });
-
-      const mdviewerBanner = document.getElementById('mdviewerBanner');
-      const dismissMdviewerBanner = document.getElementById('dismissMdviewerBanner');
-      dismissMdviewerBanner?.addEventListener('click', () => {
-        mdviewerBanner.hidden = true;
-      });
 
       // Smooth scroll for in-page anchors
       document.querySelectorAll('a[href^="#"]').forEach(a => {
