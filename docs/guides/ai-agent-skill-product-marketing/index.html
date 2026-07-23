@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How to Use AI Agent Skills for Product Marketing | Skillscout</title>
+    <meta
+      name="description"
+      content="Learn how to design an AI agent skill, add product access, publish it on ClawHub and other directories, and earn discovery through useful workflows."
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://skillscout.sh/guides/ai-agent-skill-product-marketing/" />
+    <script
+      src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js"
+      data-app-id="DB6096DB-D3D1-4666-A532-9AC83B668AD0"
+    ></script>
+    <script defer src="../../assets/telemetrydeck-events.js?v=20260723-1"></script>
+    <link rel="stylesheet" href="/assets/site-shell.css?v=20260723-2" />
+    <script src="/assets/site-shell.js?v=20260723-2"></script>
+    <meta property="og:title" content="An AI Agent Skill Is a Product Marketing Asset Now" />
+    <meta
+      property="og:description"
+      content="How marketers can design a useful product skill, publish it in skill marketplaces, earn visibility, and build an indirect viral loop."
+    />
+    <meta property="og:site_name" content="Skillscout" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://skillscout.sh/guides/ai-agent-skill-product-marketing/" />
+    <meta property="og:image" content="https://skillscout.sh/assets/guides/skills-marketing.png" />
+    <meta
+      property="og:image:alt"
+      content="AI agent presenting a rising product marketing growth chart."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="An AI Agent Skill Is a Product Marketing Asset Now" />
+    <meta
+      name="twitter:description"
+      content="How marketers can design a useful product skill, publish it in skill marketplaces, earn visibility, and build an indirect viral loop."
+    />
+    <meta name="twitter:image" content="https://skillscout.sh/assets/guides/skills-marketing.png" />
+    <meta
+      name="twitter:image:alt"
+      content="AI agent presenting a rising product marketing growth chart."
+    />
+    <link rel="icon" href="../../assets/skillscout-mark-48.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://skillscout.sh/guides/ai-agent-skill-product-marketing/#article",
+      "headline": "An AI Agent Skill Is a Product Marketing Asset Now",
+      "description": "Learn how to design an AI agent skill, add product access, publish it on ClawHub and other directories, and earn discovery through useful workflows.",
+      "author": {
+        "@type": "Organization",
+        "name": "Skillscout"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Skillscout",
+        "url": "https://skillscout.sh/"
+      },
+      "image": "https://skillscout.sh/assets/guides/skills-marketing.png",
+      "datePublished": "2026-07-23",
+      "dateModified": "2026-07-23",
+      "mainEntityOfPage": "https://skillscout.sh/guides/ai-agent-skill-product-marketing/",
+      "mentions": [
+        {
+          "@type": "Organization",
+          "name": "Anthropic",
+          "url": "https://www.anthropic.com/"
+        },
+        {
+          "@type": "Organization",
+          "name": "Vercel",
+          "url": "https://vercel.com/"
+        },
+        {
+          "@type": "WebSite",
+          "name": "ClawHub",
+          "url": "https://clawhub.ai/"
+        },
+        {
+          "@type": "WebSite",
+          "name": "Skills.sh",
+          "url": "https://skills.sh/"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://skillscout.sh/guides/ai-agent-skill-product-marketing/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://skillscout.sh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://skillscout.sh/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Agent Skills for Product Marketing",
+          "item": "https://skillscout.sh/guides/ai-agent-skill-product-marketing/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+    <style>
+      :root {
+        --bg: #f6f6f3;
+        --panel: #ffffff;
+        --border: #e4e4df;
+        --text: #111111;
+        --text-muted: #5f5f5f;
+        --shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.04);
+        --max: 820px;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      .container { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; }
+      article { padding: 28px 0 72px; }
+      .eyebrow {
+        margin: 0 0 14px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(34px, 6vw, 56px);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+      }
+      .lead {
+        margin: 0 0 28px;
+        font-size: 19px;
+        line-height: 1.58;
+        color: var(--text-muted);
+      }
+      .meta {
+        margin: 0 0 32px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+      .hero-figure { margin: 0 0 32px; }
+      .hero-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-sm);
+        background: var(--panel);
+      }
+      h2 {
+        margin: 42px 0 14px;
+        font-size: 25px;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+      }
+      h3 {
+        margin: 28px 0 12px;
+        font-size: 19px;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+      }
+      p, li { font-size: 16px; line-height: 1.68; }
+      p { margin: 0 0 16px; }
+      ul, ol { margin: 0 0 20px; padding-left: 22px; }
+      article a {
+        color: var(--text);
+        font-weight: 500;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.14em;
+      }
+      code {
+        font-family: "SFMono-Regular", Consolas, monospace;
+        font-size: 0.9em;
+      }
+      pre {
+        overflow-x: auto;
+        margin: 18px 0 24px;
+        padding: 18px 20px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: #111;
+        color: #fff;
+      }
+      pre code { white-space: pre-wrap; overflow-wrap: anywhere; }
+      .table-wrap {
+        overflow-x: auto;
+        margin: 18px 0 28px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+      }
+      table {
+        width: 100%;
+        min-width: 680px;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--border);
+        text-align: left;
+        vertical-align: top;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+      th {
+        color: var(--text-muted);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: #fbfbf8;
+      }
+      tr:last-child td { border-bottom: 0; }
+      .note {
+        margin: 24px 0;
+        padding: 18px 20px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+      }
+      .note p:last-child { margin-bottom: 0; }
+      .related {
+        margin-top: 44px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
+      }
+      @media (max-width: 720px) {
+        h1 { font-size: 40px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site-nav-wrap" id="articleNavWrap">
+      <div class="site-nav-container site-nav">
+        <a class="site-brand" href="/">
+          <span class="site-brand-mark"><img src="/assets/skillscout-mark-48.png" alt="Skillscout logo" /></span>
+          <span class="site-brand-name">Skillscout</span>
+        </a>
+        <nav class="site-nav-links" aria-label="Primary">
+          <a href="/#snapshot">Do I need it</a>
+          <a href="/#use-cases">Use cases</a>
+          <a href="/guides/">Guides</a>
+          <a href="/#testimonials">Reviews</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/official/">Official skills</a>
+        </nav>
+        <div class="site-nav-cta">
+          <a class="site-btn" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=guide_article" target="_blank" rel="noopener noreferrer" data-ga-event="get_extension_click" data-ga-label="guide-article-nav">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Add to Chrome
+          </a>
+          <a class="site-btn site-btn-list" href="https://forms.gle/iGfD5tDgTfCE4QX66" target="_blank" rel="noopener noreferrer" data-ga-event="list_skills_click" data-ga-label="guide-article-nav">
+            <span class="site-btn-list-long">List your skills</span>
+            <span class="site-btn-list-short">List skill</span>
+          </a>
+        </div>
+        <button class="site-burger" id="articleBurgerBtn" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="site-mobile-menu" id="articleMobileMenu" aria-label="Mobile">
+        <a href="/#snapshot" class="site-mobile-link">Do I need it</a>
+        <a href="/#use-cases" class="site-mobile-link">Use cases</a>
+        <a href="/guides/" class="site-mobile-link">Guides</a>
+        <a href="/#testimonials" class="site-mobile-link">Reviews</a>
+        <a href="/#faq" class="site-mobile-link">FAQ</a>
+        <a href="/official/" class="site-mobile-link">Official skills</a>
+        <a href="https://forms.gle/iGfD5tDgTfCE4QX66" class="site-mobile-link" target="_blank" rel="noopener noreferrer" data-ga-event="list_skills_click" data-ga-label="guide-article-mobile-nav">List your skills</a>
+      </nav>
+    </div>
+
+    <main class="container">
+      <article>
+        <p class="eyebrow">Product marketing</p>
+        <h1>An AI agent skill is a product marketing asset now</h1>
+        <p class="lead">
+          AI agent skills give marketing teams a distribution channel inside the workflows where
+          users evaluate, implement, and operate products.
+        </p>
+        <p class="meta">Published July 23, 2026 · 13 min read</p>
+        <figure class="hero-figure">
+          <img
+            src="../../assets/guides/skills-marketing.png"
+            alt="AI agent presenting a rising product marketing growth chart."
+            width="1376"
+            height="768"
+            loading="eager"
+          />
+        </figure>
+
+        <p>
+          AI agent skills are reusable instruction packages for agents. They tell Claude, Codex,
+          Cursor, Windsurf, and other agentic tools how to complete a specific workflow: set up an
+          API, write in a brand voice, deploy an app, audit SEO, or use a product correctly.
+        </p>
+        <p>
+          Agents can discover skills through search, skill-search skills, directories, and
+          marketplaces. In supported workflows, an agent can recommend a skill and run the
+          installation after the user approves it. Marketing teams now have another distribution
+          and awareness channel that reaches a buyer while they are working on a relevant task.
+        </p>
+        <p>
+          There are two ways to use this channel. Publish an official product skill that teaches
+          agents how to use your product, including when to request an API key or account
+          connection. Or publish a free, shareable skill that solves an adjacent problem and
+          introduces your product or team through the workflow.
+        </p>
+
+        <aside class="note" aria-label="Article summary">
+          <p>
+            <strong>Quick answer:</strong> Choose one repeatable job your product performs well.
+            Package the recommended workflow as a focused skill, let the user reach a useful result
+            quickly, and request product access when the workflow needs it. Publish from a
+            company-owned GitHub repository and distribute through ClawHub and skill directories.
+          </p>
+        </aside>
+
+        <h2>Why can an AI agent skill become a marketing channel?</h2>
+        <p>
+          An AI agent skill places product knowledge inside the agent's working context. The user
+          encounters the product while asking for an outcome, such as adding billing, deploying an
+          application, generating product images, or auditing analytics.
+        </p>
+        <p>
+          A landing page reaches someone researching a category. A skill can reach someone
+          implementing the category. The skill can explain the product's terminology, apply its
+          recommended setup, generate configuration, call an API, and verify the result in one
+          guided workflow.
+        </p>
+        <p>
+          The skill earns attention by helping complete the task. Product exposure follows that
+          utility.
+        </p>
+
+        <h2>Which product workflow should you turn into a skill?</h2>
+        <p>
+          Start with one narrow job that has clear input, output, and success criteria. A broad
+          "use our platform" skill gives the agent weak triggers and gives the user no obvious
+          first result.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Question</th>
+                <th>Strong candidate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Does the user already ask agents for this job?</td>
+                <td>The prompt appears in support tickets, docs search, sales calls, or community posts.</td>
+              </tr>
+              <tr>
+                <td>Can the agent produce a visible result?</td>
+                <td>A config file, report, deployed URL, dashboard, image, migration, or verified API response.</td>
+              </tr>
+              <tr>
+                <td>Does the product improve the workflow?</td>
+                <td>It adds live data, execution, hosting, collaboration, history, or a higher-quality output.</td>
+              </tr>
+              <tr>
+                <td>Can the first result arrive quickly?</td>
+                <td>The user can see value in one working session.</td>
+              </tr>
+              <tr>
+                <td>Can success be checked?</td>
+                <td>The skill can run a test, inspect output, or show a completion checklist.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          A product analytics company might start with "instrument a signup funnel." An email
+          platform might start with "create and test a transactional email." A video product might
+          start with "turn a product brief into three launch clips." Each job is specific enough to
+          trigger, demonstrate, and share.
+        </p>
+
+        <h2>How should a marketer brief an official product skill?</h2>
+        <p>
+          The brief should connect a market promise to an executable job. Marketing owns the
+          audience, use case, language, and conversion path. Product or DevRel owns current
+          commands, API behavior, permissions, and validation.
+        </p>
+        <pre><code>Skill name:
+Primary user:
+Trigger phrases:
+Job to complete:
+Required inputs:
+First useful output:
+Where the product enters the workflow:
+Credential or account requirement:
+Success check:
+Three example prompts:
+Known limits:
+Product docs URL:
+Repository owner:
+Primary conversion event:</code></pre>
+        <p>
+          Give "first useful output" and "where the product enters" separate answers. A user may
+          receive a local plan or draft before connecting an account. The product can then unlock
+          live data, execution, storage, or collaboration.
+        </p>
+
+        <h2>How do you write a description that agents can discover?</h2>
+        <p>
+          Write the description around the user's job and the words they use in prompts. The
+          description acts as the agent's routing signal and the marketplace summary.
+        </p>
+        <p>
+          Anthropic recommends stating both what the skill does and when to use it. A useful
+          description contains the output, the product or category, three to five task triggers,
+          and relevant tools or situations.
+        </p>
+        <p><strong>Weak:</strong></p>
+        <pre><code>description: Helps users with our analytics product.</code></pre>
+        <p><strong>Useful:</strong></p>
+        <pre><code>description: Instruments signup and checkout funnels with your analytics product,
+  validates event properties, and creates a launch dashboard. Use when adding
+  product analytics, debugging conversion tracking, reviewing funnel events,
+  or preparing launch metrics.</code></pre>
+        <p>
+          The second description connects the product to jobs the user already recognizes. It also
+          gives the agent enough language to select the skill for related prompts.
+        </p>
+
+        <h2>What should the skill contain?</h2>
+        <p>
+          Keep <code>SKILL.md</code> focused on the decision path. Put detailed API references,
+          examples, and scripts in supporting files so the agent loads them when needed.
+        </p>
+        <pre><code>product-funnel-setup/
+├── SKILL.md
+├── references/
+│   ├── event-schema.md
+│   ├── setup-by-framework.md
+│   └── troubleshooting.md
+├── scripts/
+│   └── verify-events.sh
+└── examples/
+    ├── saas-signup.md
+    └── ecommerce-checkout.md</code></pre>
+        <p>The core instructions should tell the agent:</p>
+        <ol>
+          <li>When to activate the skill.</li>
+          <li>Which inputs to collect.</li>
+          <li>How to inspect the user's current setup.</li>
+          <li>Which path to choose.</li>
+          <li>When product access is required.</li>
+          <li>How to run the workflow.</li>
+          <li>How to verify the result.</li>
+          <li>What to do when the workflow fails.</li>
+        </ol>
+        <p>
+          Anthropic's
+          <a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agent-skill-marketing">skill authoring guidance</a>
+          recommends keeping the main file concise, moving detail into referenced files, and
+          testing the skill with every model you intend to support.
+        </p>
+
+        <h2>How should a product skill request an API key?</h2>
+        <p>
+          Request credentials at the first authenticated step and explain what the key enables.
+          Store the key in an environment variable or the product's supported connection flow.
+          Keep credentials out of <code>SKILL.md</code>, example files, prompts, logs, and
+          repository history.
+        </p>
+        <p>For ClawHub, the skill can declare its requirement in frontmatter:</p>
+        <pre><code>---
+name: product-funnel-setup
+description: Instruments signup and checkout funnels with your analytics product,
+  validates event properties, and creates a launch dashboard.
+metadata:
+  openclaw:
+    requires:
+      env:
+        - PRODUCT_API_KEY
+      bins:
+        - curl
+    primaryEnv: PRODUCT_API_KEY
+    envVars:
+      - name: PRODUCT_API_KEY
+        required: true
+        description: API key with permission to manage events and dashboards.
+    homepage: https://your-product.example/docs/agent-skill
+---</code></pre>
+        <p>Give the agent an explicit credential step:</p>
+        <pre><code>If PRODUCT_API_KEY is missing:
+1. Explain that the next step creates the live event schema and dashboard.
+2. Link to the page where the user can create a restricted API key.
+3. Ask the user to set PRODUCT_API_KEY in their environment.
+4. Resume after the environment reports that the variable exists.
+5. Never print, repeat, or store the key.</code></pre>
+        <p>
+          Use the smallest permission scope that completes the job. Add a read-only or preview path
+          when the product supports one.
+        </p>
+
+        <h2>How does the skill turn usage into product growth?</h2>
+        <p>
+          Build one natural product step into the workflow. The skill may generate a local audit for
+          free, then offer to push the findings into the product. It may create a configuration,
+          then use the product API to deploy it. It may analyze public data, then connect an account
+          for private data.
+        </p>
+        <ol>
+          <li><strong>Discovery:</strong> The agent selects or recommends the skill for a task.</li>
+          <li><strong>Proof:</strong> The skill produces a useful preview, plan, or local artifact.</li>
+          <li><strong>Connection:</strong> The user supplies an API key or authorizes an account.</li>
+          <li><strong>Activation:</strong> The product completes a live action and the skill verifies it.</li>
+        </ol>
+        <p>
+          Track installs, documentation visits, API keys created from the skill page, first
+          successful API call, completed workflow, and returning active accounts. Add campaign
+          parameters to documentation links and a dedicated skill onboarding page. Connect install
+          and product telemetry when the user has consented to that measurement.
+        </p>
+
+        <h2>Where should you publish an AI agent skill?</h2>
+        <p>
+          Use a company-owned public GitHub repository as the canonical source. It gives users a
+          maintainer identity, change history, issues, releases, and a URL that directories can
+          index.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Channel</th>
+                <th>How to use it</th>
+                <th>Visibility opportunity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>GitHub</td>
+                <td>Publish under the product's organization with a README, examples, and releases.</td>
+                <td>GitHub search, stars, forks, backlinks, and community PRs.</td>
+              </tr>
+              <tr>
+                <td><a href="https://clawhub.ai/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agent-skill-marketing">ClawHub</a></td>
+                <td>Sign in with GitHub and import the skill repository through the web UI.</td>
+                <td>Featured, Top, Trending, recommended, downloads, and stars surfaces.</td>
+              </tr>
+              <tr>
+                <td><a href="https://skills.sh/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agent-skill-marketing">Skills.sh</a></td>
+                <td>Make the GitHub repository installable through the <code>skills</code> CLI.</td>
+                <td>Search results, install counts, owner pages, and ranked directory pages.</td>
+              </tr>
+              <tr>
+                <td><a href="https://skillscout.sh/official/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agent-skill-marketing">Skillscout Official Skills</a></td>
+                <td>Publish from a clearly owned vendor repository so the skill can be identified as first-party.</td>
+                <td>Vendor discovery, official-skill comparison, installs, repos, and stars.</td>
+              </tr>
+              <tr>
+                <td>Claude Code marketplace</td>
+                <td>Package related skills in a plugin marketplace repository.</td>
+                <td>One marketplace install can distribute a product-specific skill collection.</td>
+              </tr>
+              <tr>
+                <td>Curated directories and awesome lists</td>
+                <td>Submit the canonical repository through the directory's form or pull-request process.</td>
+                <td>Editorial collections, category pages, newsletters, and backlinks.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          For Skills.sh and compatible agents, a public repository with a standard skill location
+          can be installed with:
+        </p>
+        <pre><code>npx skills add your-company/agent-skills</code></pre>
+        <p>
+          The Vercel
+          <a href="https://github.com/vercel-labs/skills?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agent-skill-marketing"><code>skills</code> CLI</a>
+          discovers common locations such as <code>skills/</code>, <code>.agents/skills/</code>,
+          and <code>.claude/skills/</code>. Its
+          <a href="https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agent-skill-marketing">Find Skills instructions</a>
+          use install counts as a recommendation signal.
+        </p>
+
+        <h2>How do you publish a skill on ClawHub?</h2>
+        <p>
+          Use the ClawHub web interface for the first release. It gives a marketer a short
+          publishing path with no local setup:
+        </p>
+        <ol>
+          <li>Publish the skill in a public GitHub repository owned by your personal or company account.</li>
+          <li>Open <a href="https://clawhub.ai/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agent-skill-marketing">ClawHub</a> and sign in with the GitHub account that owns the repository.</li>
+          <li>Open the publish or import flow and select the repository.</li>
+          <li>Choose the folder that contains <code>SKILL.md</code>.</li>
+          <li>Review the skill name, description, source, and owner.</li>
+          <li>Publish the release and wait for the security review to finish.</li>
+        </ol>
+        <p>
+          The
+          <a href="https://docs.openclaw.ai/clawhub/skill-format?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agent-skill-marketing">ClawHub GitHub importer</a>
+          accepts public, original repositories owned by the signed-in GitHub account. Private
+          repositories, forks, archived repositories, and repositories owned by another account
+          are excluded from web import.
+        </p>
+        <p>
+          ClawHub validates metadata, files, source information, and owner permissions, then runs
+          automated security checks. New releases may stay out of normal installation surfaces
+          while review finishes. Teams managing a large skill catalog can add the CLI or ClawHub's
+          reusable GitHub Actions workflow later.
+        </p>
+        <aside class="note" aria-label="ClawHub visibility note">
+          <p>
+            <strong>ClawHub visibility:</strong> The documented Trending sort ranks skills by
+            installs during the previous seven days. ClawHub skills use the MIT-0 license, so
+            attribution is optional and users may modify or redistribute the skill commercially.
+          </p>
+        </aside>
+        <p>
+          Brand exposure therefore benefits from a durable connection through the official
+          repository, product API, account workflow, documentation, updates, and maintainer
+          reputation.
+        </p>
+
+        <h2>How can a skill earn featured placement?</h2>
+        <p>
+          Treat featuring as an editorial pitch backed by a working launch. ClawHub exposes
+          Featured, Top, Trending, recommended, downloads, and stars. Its seven-day Trending rule is
+          documented; Featured placement has no published scoring formula.
+        </p>
+        <p>Prepare a compact feature packet for directory editors and ecosystem teams:</p>
+        <ul>
+          <li>One sentence naming the task and target user.</li>
+          <li>The official repository and company ownership proof.</li>
+          <li>One install command.</li>
+          <li>A 30-to-60-second demo showing input, workflow, and verified output.</li>
+          <li>The security scan or review status.</li>
+          <li>Three real prompts.</li>
+          <li>Initial installs, successful runs, stars, or user examples.</li>
+          <li>A direct contact for maintenance and security reports.</li>
+        </ul>
+        <p>
+          Use a clear icon, a specific description, current screenshots, release notes, and a
+          working free path. Respond to issues during the launch week and publish fixes as
+          versioned releases.
+        </p>
+
+        <h2>How should you promote the skill after publishing?</h2>
+        <p>
+          Concentrate the first campaign around one workflow and one proof artifact. A short
+          demonstration lets the audience judge the result immediately.
+        </p>
+        <ol>
+          <li><strong>Day 1:</strong> Publish the GitHub repository, documentation page, ClawHub release, and canonical install command.</li>
+          <li><strong>Day 2:</strong> Share a short demo built from a real user prompt.</li>
+          <li><strong>Day 3:</strong> Publish a technical walkthrough showing the files the skill created or changed.</li>
+          <li><strong>Day 4:</strong> Invite three customers or community members to run the skill and report friction.</li>
+          <li><strong>Day 5:</strong> Release fixes and share one useful finding from those runs.</li>
+          <li><strong>Day 6:</strong> Submit the repository to relevant directories, awesome lists, newsletters, and community showcases.</li>
+          <li><strong>Day 7:</strong> Send the feature packet with real launch-week evidence.</li>
+        </ol>
+        <p>
+          Continue with workflow-specific content: example prompts, integrations, templates,
+          troubleshooting notes, and customer outputs. Each item gives search engines, agents, and
+          directory editors more context for the jobs the skill handles.
+        </p>
+
+        <h2>How can a shareable skill promote a product indirectly?</h2>
+        <p>
+          A shareable skill solves a broader or more entertaining problem than the product's core
+          onboarding skill. The product appears as the maintainer, an optional accelerator, an
+          output destination, or the system that turns the free result into an ongoing workflow.
+        </p>
+        <ol>
+          <li><strong>Choose an adjacent problem.</strong> A monitoring product can publish a launch mention finder. A design product can publish a landing page visual critic.</li>
+          <li><strong>Deliver value without an account.</strong> Let the skill create a diagnosis, score, draft, preview, or local artifact first.</li>
+          <li><strong>Create a shareable output.</strong> A concise report, before-and-after diff, benchmark, image, or scorecard gives users a reason to show the result.</li>
+          <li><strong>Make the product the natural next action.</strong> Offer to monitor the result, execute the fix, store history, or apply it at scale.</li>
+          <li><strong>Disclose the relationship.</strong> Name the maintainer and product in the repository and skill metadata.</li>
+        </ol>
+        <p>
+          An email deliverability platform could publish a free <code>inbox-risk-audit</code> skill.
+          The skill reviews email copy and DNS records, produces a shareable risk report, and
+          suggests fixes without requiring an account. At the end, it can offer to run live inbox
+          placement tests through the platform using an API key.
+        </p>
+        <p>
+          The free result is the distribution hook. The live test is the product conversion. See
+          <a href="../viral-ai-agent-skills/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agent-skill-marketing">Ponytail, Caveman, Grill Me and other viral AI agent skills</a>
+          for more examples of names, visible behaviors, and sharing loops.
+        </p>
+
+        <h2>A marketer's pre-launch checklist</h2>
+        <ul>
+          <li>The skill completes one named job.</li>
+          <li>The description includes real trigger phrases.</li>
+          <li>The first output arrives before or immediately after account connection.</li>
+          <li>API keys use environment variables and limited scopes.</li>
+          <li>The official repository shows ownership and maintenance contacts.</li>
+          <li>Examples cover at least three realistic prompts.</li>
+          <li>Every workflow ends with a verification step.</li>
+          <li>Documentation links use a dedicated landing page and campaign parameters.</li>
+          <li>The skill has been tested with each supported agent or model.</li>
+          <li>The launch includes a demo, early users, directory submissions, and a feature packet.</li>
+        </ul>
+
+        <h2>Turn one product workflow into a skill</h2>
+        <p>
+          An AI agent skill becomes a product marketing asset when it helps an agent complete a job
+          that naturally leads into the product. Start with one workflow, package the company's
+          recommended path, and make the result easy to verify.
+        </p>
+        <p>
+          Publish from a source users can trust. Distribute through ClawHub, Skills.sh,
+          <a href="https://skillscout.sh/official/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agent-skill-marketing">Skillscout</a>,
+          agent marketplaces, and curated lists. Then promote the output people can create with the
+          skill. That is the part users install, share, and remember.
+        </p>
+
+        <div class="related">
+          <h2>Sources and related guides</h2>
+          <p><a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agent-skill-marketing">Anthropic Agent Skills overview</a></p>
+          <p><a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agent-skill-marketing">Anthropic skill authoring best practices</a></p>
+          <p><a href="https://docs.openclaw.ai/clawhub/publishing?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agent-skill-marketing">ClawHub publishing</a></p>
+          <p><a href="https://docs.openclaw.ai/clawhub/http-api?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agent-skill-marketing">ClawHub HTTP API and sorting</a></p>
+          <p><a href="../official-ai-agent-skills-statistics/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agent-skill-marketing">Official AI agent skills statistics</a></p>
+          <p><a href="../what-are-ai-agent-skills/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agent-skill-marketing">What are AI agent skills?</a></p>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
