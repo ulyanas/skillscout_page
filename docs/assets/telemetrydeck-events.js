@@ -59,6 +59,98 @@
     );
   }
 
+  function getBrowserContext() {
+    const userAgent = navigator.userAgent || "";
+    const isTablet = /iPad|Tablet/i.test(userAgent);
+    const isMobile =
+      !isTablet &&
+      (navigator.userAgentData?.mobile ?? /Android|iPhone|iPod|Mobile/i.test(userAgent));
+    const browserMatch =
+      userAgent.match(/Edg\/([\d.]+)/) ||
+      userAgent.match(/OPR\/([\d.]+)/) ||
+      userAgent.match(/Chrome\/([\d.]+)/) ||
+      userAgent.match(/Version\/([\d.]+).*Safari/) ||
+      userAgent.match(/Firefox\/([\d.]+)/);
+    const browserName = userAgent.includes("Edg/")
+      ? "Edge"
+      : userAgent.includes("OPR/")
+        ? "Opera"
+        : userAgent.includes("Chrome/")
+          ? "Chrome"
+          : userAgent.includes("Safari/")
+            ? "Safari"
+            : userAgent.includes("Firefox/")
+              ? "Firefox"
+              : "Unknown";
+
+    return {
+      platform: navigator.userAgentData?.platform || navigator.platform || "Web",
+      browserName,
+      browserVersion: browserMatch?.[1] || "",
+      device: isTablet ? "Tablet" : isMobile ? "Mobile" : "Desktop",
+      isMobile,
+      isTablet,
+      isDesktop: !isMobile && !isTablet,
+      isTouchCapable: navigator.maxTouchPoints > 0
+    };
+  }
+
+  function getPagePayload() {
+    const url = new URL(window.location.href);
+    const referrer = document.referrer || "";
+    const browser = getBrowserContext();
+    const campaignKeys = [
+      "ref",
+      "source",
+      "src",
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_term",
+      "utm_content",
+      "MSCLKID",
+      "GCLID"
+    ];
+    const campaign = Object.fromEntries(
+      campaignKeys
+        .filter((key) => url.searchParams.has(key))
+        .map((key) => [key, url.searchParams.get(key)])
+    );
+    const combinedSource =
+      url.searchParams.get("ref") ||
+      url.searchParams.get("source") ||
+      url.searchParams.get("utm_source") ||
+      url.searchParams.get("src") ||
+      undefined;
+
+    return {
+      url: url.href,
+      host: url.host,
+      path: url.pathname,
+      scheme: url.protocol.replace(":", ""),
+      referer: referrer,
+      combinedSource,
+      locale: navigator.language,
+      preferredLanguage: navigator.language,
+      telemetryClientVersion: "Skillscout Web 1.0",
+      "TelemetryDeck.Navigation.schemaVersion": "1",
+      "TelemetryDeck.Navigation.sourcePath": referrer,
+      "TelemetryDeck.Navigation.destinationPath": url.pathname,
+      "TelemetryDeck.Navigation.identifier": `${referrer || "(direct)"} -> ${url.href}`,
+      "TelemetryDeck.Device.platform": browser.platform,
+      "TelemetryDeck.Device.screenResolutionHeight": window.screen.height,
+      "TelemetryDeck.Device.screenResolutionWidth": window.screen.width,
+      "TelemetryDeck.Device.screenScaleFactor": window.devicePixelRatio || 1,
+      "TelemetryDeck.Device.timeZone": Intl.DateTimeFormat().resolvedOptions().timeZone,
+      "TelemetryDeck.RunContext.locale": navigator.language,
+      "TelemetryDeck.UserPreference.language": navigator.language,
+      "TelemetryDeck.SDK.name": "Skillscout Web",
+      "TelemetryDeck.SDK.version": "1.0",
+      ...browser,
+      ...campaign
+    };
+  }
+
   async function track(type, payload = {}) {
     if (!type) return;
 
@@ -75,6 +167,7 @@
         type,
         isTestMode: isTestEnvironment(),
         payload: normalizePayload({
+          ...getPagePayload(),
           "Skillscout.Web.pagePath": window.location.pathname,
           ...payload
         })
@@ -94,6 +187,9 @@
   }
 
   window.skillscoutTelemetry = Object.freeze({ track });
+  track("pageView", {
+    "Skillscout.Web.pageTitle": document.title
+  });
 
   document.addEventListener("click", (event) => {
     const trigger = event.target.closest("[data-telemetry-event], [data-ga-event]");
