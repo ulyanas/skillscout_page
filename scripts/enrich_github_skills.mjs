@@ -46,6 +46,7 @@ if (SKILLS_SH_INSTALLS_ENABLED) {
   await enrichWithSkillsShInstalls(directory);
 }
 await enrichStarCounts(directory);
+removeOwnersWithoutSkills(directory);
 refreshStats(directory);
 
 directory.enrichedAt = generatedAt;
@@ -691,6 +692,33 @@ function recomputeInstallTotals(directory) {
     addUnique(owner.sources, "skills.sh");
     addUnique(owner.sourceUrls, `${SKILLS_SH_ORIGIN}/${owner.ownerKey}`);
   }
+}
+
+function removeOwnersWithoutSkills(directory) {
+  const ownerKeysWithSkills = new Set(
+    (directory.officialSkills || [])
+      .map((skill) => skill.ownerKey)
+      .filter(Boolean)
+  );
+  const invalidOwnerKeys = new Set(
+    (directory.officialOwners || [])
+      .filter((owner) => !ownerKeysWithSkills.has(owner.ownerKey))
+      .map((owner) => owner.ownerKey)
+  );
+  if (!invalidOwnerKeys.size) return;
+
+  const invalidRepoKeys = new Set(
+    (directory.officialRepos || [])
+      .filter((repo) => invalidOwnerKeys.has(repo.ownerKey))
+      .map((repo) => repo.repoKey)
+  );
+
+  directory.officialOwners = directory.officialOwners.filter((owner) => !invalidOwnerKeys.has(owner.ownerKey));
+  directory.officialRepos = directory.officialRepos.filter((repo) => !invalidOwnerKeys.has(repo.ownerKey));
+  directory.officialSkills = directory.officialSkills.filter(
+    (skill) => !invalidOwnerKeys.has(skill.ownerKey) && !invalidRepoKeys.has(skill.repoKey)
+  );
+  console.log(`Removed ${invalidOwnerKeys.size} owners without skill records`);
 }
 
 // ── Star count enrichment ─────────────────────────────────────────────────────
