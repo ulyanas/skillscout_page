@@ -1,6 +1,6 @@
 (function () {
   var APP_ID = 'D96EABE1-3B07-40E5-B149-DFA286B7FA5B';
-  var API = 'https://tele.iamsimpl.com/v2/';
+  var API = 'https://tele.iamsimpl.com/v2/namespace/com.skillscout/';
   var SESSION_KEY = 'skillscout.telemetry.session';
   var EVENT_MAP = {
     get_extension_click: 'Extension.downloadClicked',
