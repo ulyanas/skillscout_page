@@ -1,13 +1,20 @@
 (function () {
-  var APP_ID = '3C9562B0-BB40-4DD1-83DF-92702B479D3A';
-  var API = 'https://tele.iamsimpl.com/v2/';
+  var APP_ID = 'D96EABE1-3B07-40E5-B149-DFA286B7FA5B';
+  var API = 'https://tele.iamsimpl.com/v2/namespace/com.skillscout/';
+  var SESSION_KEY = 'skillscout.telemetry.session';
+  var EVENT_MAP = {
+    get_extension_click: 'Extension.downloadClicked',
+    list_skills_click: 'Skills.listSubmissionOpened'
+  };
 
   var loc = window.location;
   var nav = navigator;
   var scr = window.screen;
   var ua = nav.userAgent || '';
 
-  var isTest = /^localhost$|^127(\.\d+){0,2}\.\d+$|^\[::1?]$/.test(loc.hostname) || loc.protocol === 'file:';
+  var isTest = /^localhost$|^127(\.\d+){0,2}\.\d+$|^\[::1?]$/.test(loc.hostname) ||
+    loc.protocol === 'file:' ||
+    /^10\.|^192\.168\.|^172\.(1[6-9]|2\d|3[01])\./.test(loc.hostname);
 
   // --- anonymous user ID (persisted in localStorage) ---
   var storageKey = 'td_user';
@@ -25,10 +32,10 @@
   // --- session ID (persisted per tab session) ---
   var sessionID = '';
   try {
-    sessionID = sessionStorage.getItem('td_session');
+    sessionID = sessionStorage.getItem(SESSION_KEY);
     if (!sessionID) {
       sessionID = crypto.randomUUID();
-      sessionStorage.setItem('td_session', sessionID);
+      sessionStorage.setItem(SESSION_KEY, sessionID);
     }
   } catch (e) {
     sessionID = crypto.randomUUID();
@@ -57,8 +64,8 @@
   }
 
   function deviceType() {
-    if (/Mobi|Android.*Mobile|iPhone/.test(ua)) return 'phone';
-    if (/iPad|Android(?!.*Mobile)|Tablet/.test(ua)) return 'tablet';
+    if (/iPad|Tablet/i.test(ua)) return 'tablet';
+    if (/Mobi|Android.*Mobile|iPhone|iPod/i.test(ua)) return 'phone';
     return 'desktop';
   }
 
@@ -68,83 +75,136 @@
   var majorMinor = os.version.split('.').slice(0, 2).join('.') || '';
   var conn = nav.connection || nav.mozConnection || nav.webkitConnection;
 
-  // --- UTM parameters ---
+  // --- UTM + referral parameters ---
   var params = new URLSearchParams(loc.search);
-  var utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+  var campaignKeys = ['ref', 'source', 'src', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'MSCLKID', 'GCLID'];
+  var combinedSource = params.get('ref') || params.get('source') || params.get('utm_source') || params.get('src') || '';
 
-  // --- build payload (all values must be strings) ---
-  var payload = {
-    'TelemetryDeck.Device.operatingSystem': os.name,
-    'TelemetryDeck.Device.systemVersion': os.version,
-    'TelemetryDeck.Device.systemMajorVersion': majorVersion,
-    'TelemetryDeck.Device.systemMajorMinorVersion': majorMinor,
-    'TelemetryDeck.Device.platform': deviceType(),
-    'TelemetryDeck.Device.modelName': nav.platform || '',
-    'TelemetryDeck.Device.screenResolutionWidth': String(scr.width),
-    'TelemetryDeck.Device.screenResolutionHeight': String(scr.height),
-    'TelemetryDeck.Device.screenScaleFactor': String(window.devicePixelRatio || 1),
-    'TelemetryDeck.Device.timeZone': Intl.DateTimeFormat().resolvedOptions().timeZone || '',
+  // --- build payload ---
+  function buildPayload(extra) {
+    var url = new URL(loc.href);
+    var referrer = document.referrer || '';
+    var payload = {
+      // navigation
+      'TelemetryDeck.Navigation.schemaVersion': '1',
+      'TelemetryDeck.Navigation.url': loc.href,
+      'TelemetryDeck.Navigation.referrer': referrer,
+      'TelemetryDeck.Navigation.sourcePath': referrer,
+      'TelemetryDeck.Navigation.destinationPath': loc.pathname,
+      'TelemetryDeck.Navigation.identifier': (referrer || '(direct)') + ' -> ' + loc.href,
+      'TelemetryDeck.Navigation.path': loc.pathname,
+      'TelemetryDeck.Navigation.host': loc.hostname,
 
-    'TelemetryDeck.UserPreference.colorScheme': window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
-    'TelemetryDeck.UserPreference.language': nav.language || '',
-    'TelemetryDeck.UserPreference.region': Intl.DateTimeFormat().resolvedOptions().locale || '',
+      // device & OS
+      'TelemetryDeck.Device.operatingSystem': os.name,
+      'TelemetryDeck.Device.systemVersion': os.version,
+      'TelemetryDeck.Device.systemMajorVersion': majorVersion,
+      'TelemetryDeck.Device.systemMajorMinorVersion': majorMinor,
+      'TelemetryDeck.Device.platform': deviceType(),
+      'TelemetryDeck.Device.modelName': nav.platform || '',
+      'TelemetryDeck.Device.screenResolutionWidth': String(scr.width),
+      'TelemetryDeck.Device.screenResolutionHeight': String(scr.height),
+      'TelemetryDeck.Device.screenScaleFactor': String(window.devicePixelRatio || 1),
+      'TelemetryDeck.Device.timeZone': Intl.DateTimeFormat().resolvedOptions().timeZone || '',
 
-    'TelemetryDeck.RunContext.locale': nav.language || '',
-    'TelemetryDeck.RunContext.targetEnvironment': 'web',
+      // browser
+      'TelemetryDeck.Browser.name': browser.name,
+      'TelemetryDeck.Browser.version': browser.version,
+      'TelemetryDeck.Browser.userAgent': ua,
+      'TelemetryDeck.Browser.languages': (nav.languages || []).join(','),
+      'TelemetryDeck.Browser.cookiesEnabled': String(nav.cookieEnabled),
+      'TelemetryDeck.Browser.doNotTrack': String(nav.doNotTrack === '1' || window.doNotTrack === '1'),
+      'TelemetryDeck.Browser.touchSupport': String('ontouchstart' in window || nav.maxTouchPoints > 0),
+      'TelemetryDeck.Browser.maxTouchPoints': String(nav.maxTouchPoints || 0),
+      'TelemetryDeck.Browser.colorDepth': String(scr.colorDepth),
 
-    'TelemetryDeck.SDK.name': 'WebSDK-Custom',
-    'TelemetryDeck.SDK.version': '2.0.0',
-    'TelemetryDeck.SDK.nameAndVersion': 'WebSDK-Custom 2.0.0',
+      // viewport & page
+      'TelemetryDeck.Viewport.width': String(window.innerWidth),
+      'TelemetryDeck.Viewport.height': String(window.innerHeight),
+      'TelemetryDeck.Page.title': document.title || '',
 
-    'TelemetryDeck.Navigation.url': loc.href,
-    'TelemetryDeck.Navigation.referrer': document.referrer || '',
-    'TelemetryDeck.Navigation.path': loc.pathname,
-    'TelemetryDeck.Navigation.host': loc.hostname,
+      // user preferences
+      'TelemetryDeck.UserPreference.colorScheme': window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
+      'TelemetryDeck.UserPreference.language': nav.language || '',
+      'TelemetryDeck.UserPreference.region': Intl.DateTimeFormat().resolvedOptions().locale || '',
 
-    'TelemetryDeck.Browser.name': browser.name,
-    'TelemetryDeck.Browser.version': browser.version,
-    'TelemetryDeck.Browser.userAgent': ua,
-    'TelemetryDeck.Browser.languages': (nav.languages || []).join(','),
-    'TelemetryDeck.Browser.cookiesEnabled': String(nav.cookieEnabled),
-    'TelemetryDeck.Browser.doNotTrack': String(nav.doNotTrack === '1' || window.doNotTrack === '1'),
-    'TelemetryDeck.Browser.touchSupport': String('ontouchstart' in window || nav.maxTouchPoints > 0),
-    'TelemetryDeck.Browser.maxTouchPoints': String(nav.maxTouchPoints || 0),
-    'TelemetryDeck.Browser.colorDepth': String(scr.colorDepth),
+      // run context
+      'TelemetryDeck.RunContext.locale': nav.language || '',
+      'TelemetryDeck.RunContext.targetEnvironment': 'web',
 
-    'TelemetryDeck.Viewport.width': String(window.innerWidth),
-    'TelemetryDeck.Viewport.height': String(window.innerHeight),
+      // SDK
+      'TelemetryDeck.SDK.name': 'Skillscout Web',
+      'TelemetryDeck.SDK.version': '2.0',
+      'TelemetryDeck.SDK.nameAndVersion': 'Skillscout Web 2.0',
 
-    'TelemetryDeck.Page.title': document.title || '',
+      // bot detection
+      'TelemetryDeck.Detection.isBot': String(/bot|crawl|spider|slurp|googlebot|bingbot|yandex|baidu|duckduckbot|facebookexternalhit|twitterbot|linkedinbot|applebot/i.test(ua)),
 
-    'TelemetryDeck.Detection.isBot': String(/bot|crawl|spider|slurp|googlebot|bingbot|yandex|baidu|duckduckbot|facebookexternalhit|twitterbot|linkedinbot|applebot/i.test(ua))
-  };
+      // skillscout-specific
+      'Skillscout.Web.pagePath': loc.pathname,
+      'Skillscout.Web.pageTitle': document.title || '',
+      'telemetryClientVersion': 'Skillscout Web 2.0',
+      'locale': nav.language || '',
+      'preferredLanguage': nav.language || '',
+      'combinedSource': combinedSource,
+      'scheme': url.protocol.replace(':', '')
+    };
 
-  if (conn) {
-    if (conn.effectiveType) payload['TelemetryDeck.Network.effectiveType'] = conn.effectiveType;
-    if (conn.downlink) payload['TelemetryDeck.Network.downlink'] = String(conn.downlink);
-    if (conn.saveData !== undefined) payload['TelemetryDeck.Network.saveData'] = String(conn.saveData);
+    if (conn) {
+      if (conn.effectiveType) payload['TelemetryDeck.Network.effectiveType'] = conn.effectiveType;
+      if (conn.downlink) payload['TelemetryDeck.Network.downlink'] = String(conn.downlink);
+      if (conn.saveData !== undefined) payload['TelemetryDeck.Network.saveData'] = String(conn.saveData);
+    }
+
+    campaignKeys.forEach(function (k) {
+      var v = params.get(k);
+      if (v) payload['TelemetryDeck.Campaign.' + k] = v;
+    });
+
+    var merged = Object.assign({}, payload, extra || {});
+    return Object.fromEntries(
+      Object.entries(merged)
+        .filter(function (e) { return e[1] !== undefined && e[1] !== null && e[1] !== ''; })
+        .map(function (e) { return [e[0], String(e[1]).slice(0, 500)]; })
+    );
   }
 
-  utmKeys.forEach(function (k) {
-    var v = params.get(k);
-    if (v) payload['TelemetryDeck.Campaign.' + k] = v;
+  function send(type, extra) {
+    if (!type) return;
+    fetch(API, {
+      method: 'POST',
+      mode: 'cors',
+      credentials: 'omit',
+      keepalive: true,
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
+      body: JSON.stringify([{
+        receivedAt: new Date().toISOString(),
+        appID: APP_ID,
+        clientUser: clientUser,
+        sessionID: sessionID,
+        type: type,
+        payload: buildPayload(extra),
+        isTestMode: isTest ? 'true' : 'false'
+      }])
+    }).catch(function () {});
+  }
+
+  // --- expose for manual tracking ---
+  window.skillscoutTelemetry = Object.freeze({ track: send });
+
+  // --- pageView on load ---
+  send('pageView');
+
+  // --- click tracking for data-telemetry-event and data-ga-event ---
+  document.addEventListener('click', function (event) {
+    var trigger = event.target.closest('[data-telemetry-event], [data-ga-event]');
+    if (!trigger) return;
+    var type = trigger.dataset.telemetryEvent || EVENT_MAP[trigger.dataset.gaEvent];
+    if (!type) return;
+    send(type, {
+      'Skillscout.Web.placement': trigger.dataset.telemetryPlacement || trigger.dataset.gaLabel || 'unknown',
+      'Skillscout.Web.linkURL': trigger.href || '',
+      'Skillscout.Web.linkText': (trigger.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 120)
+    });
   });
-
-  // --- send signal in TelemetryDeck SignalPostBody format ---
-  var signal = {
-    receivedAt: new Date().toISOString(),
-    appID: APP_ID,
-    clientUser: clientUser,
-    sessionID: sessionID,
-    type: 'pageView',
-    payload: payload,
-    isTestMode: isTest ? 'true' : 'false'
-  };
-
-  fetch(API, {
-    method: 'POST',
-    mode: 'cors',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify([signal])
-  }).catch(function () {});
 })();
