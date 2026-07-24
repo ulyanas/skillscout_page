@@ -448,7 +448,7 @@
   padding: 7px 15px;
   border: 2px solid #0d0c22;
   border-radius: 999px;
-  background: #ffdd00;
+  background: #fff9e8;
   box-shadow: 0 6px 0 #0d0c22, 0 16px 34px rgba(13, 12, 34, 0.22);
   color: #0d0c22;
   text-decoration: none;
@@ -457,7 +457,7 @@
 }
 
 .bmc-support-button:hover {
-  background: #ffe538;
+  background: #fff3cc;
   box-shadow: 0 8px 0 #0d0c22, 0 20px 38px rgba(13, 12, 34, 0.25);
   transform: translateY(-2px);
 }
