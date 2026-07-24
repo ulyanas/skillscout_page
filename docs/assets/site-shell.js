@@ -117,8 +117,34 @@
     }
   }
 
+  function ensureCoffeeButton() {
+    if (document.getElementById("buyMeACoffeeButton")) return;
+
+    const button = document.createElement("a");
+    button.className = "bmc-support-button";
+    button.id = "buyMeACoffeeButton";
+    button.href = "https://buymeacoffee.com/ulyanas";
+    button.target = "_blank";
+    button.rel = "noopener noreferrer";
+    button.setAttribute("aria-label", "Buy me a coffee");
+    button.setAttribute("data-telemetry-event", "Support.buyMeACoffeeOpened");
+    button.setAttribute("data-telemetry-placement", "sitewide-floating-button");
+    button.innerHTML = `
+      <img
+        class="bmc-support-logo"
+        src="/assets/bmc-brand-logo.svg"
+        alt=""
+        width="195"
+        height="40"
+        aria-hidden="true"
+      />
+    `;
+    document.body.append(button);
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     ensureMdviewerBanner();
     bindArticleHeader();
+    ensureCoffeeButton();
   });
 })();
