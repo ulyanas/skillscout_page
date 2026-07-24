@@ -2,5 +2,6 @@
 posthog.init("phc_qJfo8niM5a3LSB8DirMaUvPk6izz56FMugYmCt28qXXN",{
   api_host:"https://eu.i.posthog.com",
   defaults:"2026-05-30",
-  person_profiles:"identified_only"
+  person_profiles:"identified_only",
+  capture_pageview:true
 });
