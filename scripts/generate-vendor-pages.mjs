@@ -18,6 +18,27 @@ const OUTPUT_DIR = path.join(SITE_ROOT, "official");
 const VENDOR_DATA_DIR = path.join(SITE_ROOT, "data/vendors");
 const SKILLS_PER_PAGE = 100;
 
+const VENDOR_BIOS = {
+  anthropics: "Anthropic builds Claude and developer tools for working with AI agents, models, and agent skills.",
+  cloudflare: "Cloudflare provides internet infrastructure for deploying, securing, and scaling web applications.",
+  expo: "Expo provides tools and services for building React Native apps across iOS, Android, and web.",
+  firebase: "Firebase is Google's app development platform for building, shipping, and operating web and mobile apps.",
+  figma: "Figma is a collaborative design platform for interface design, prototyping, and product workflows.",
+  firecrawl: "Firecrawl provides web crawling and extraction tools for turning websites into structured data.",
+  flutter: "Flutter is Google's open-source UI toolkit for building apps across mobile, web, and desktop.",
+  github: "GitHub is a developer platform for hosting code, collaborating on repositories, and automating software workflows.",
+  getsentry: "Sentry helps software teams monitor errors, performance issues, and production problems in applications.",
+  makenotion: "Notion is a connected workspace for notes, docs, projects, databases, and team knowledge.",
+  microsoft: "Microsoft builds developer platforms, cloud services, productivity software, and AI tools.",
+  openai: "OpenAI builds AI models, agent tools, APIs, and developer products for building with AI.",
+  prisma: "Prisma builds database tooling for application developers working with typed data access and schema workflows.",
+  shopify: "Shopify is a commerce platform for building online stores, payments, apps, and merchant workflows.",
+  stripe: "Stripe provides payments and financial infrastructure for internet businesses.",
+  supabase: "Supabase is an open-source backend platform with Postgres, auth, storage, realtime, and edge functions.",
+  vercel: "Vercel is a frontend cloud platform for building, previewing, and deploying web applications.",
+  "vercel-labs": "Vercel Labs publishes experimental tools and examples for modern web and AI application development."
+};
+
 const GITHUB_ICON = `
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
     <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.71 0 0 .84-.28 2.75 1.05A9.28 9.28 0 0 1 12 7.02c.85 0 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.4.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.36-.01 2.46-.01 2.79 0 .27.18.59.69.49A10.15 10.15 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"></path>
@@ -142,6 +163,7 @@ function buildVendorModel(owner, popularityPosition, ownerRepos, ownerSkills) {
     websiteHost: safeHostname(website),
     githubUrl,
     logoUrl,
+    vendorBio: createVendorBio(owner, displayName),
     popularityPosition,
     packs,
     repoAliases,
@@ -311,7 +333,7 @@ function renderVendorPage(
     <meta name="twitter:image" content="${escapeAttr(model.logoUrl)}" />
     <script defer src="/assets/telemetrydeck-events.js?v=20260723-3"></script>
     <link rel="stylesheet" href="/assets/site-shell.css?v=20260724-2" />
-    <link rel="stylesheet" href="/official/vendor-page.css?v=20260724-1" />
+    <link rel="stylesheet" href="/official/vendor-page.css?v=20260724-vendor-bios" />
     <script src="/assets/site-shell.js?v=20260724-1"></script>
     <link rel="icon" href="/assets/skillscout-mark-48.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -352,7 +374,8 @@ function renderVendorPage(
               ${isFirstPage ? "" : `<span class="vendor-rank">Page ${pageNumber} of ${pageCount}</span>`}
             </div>
             <h1 class="vendor-title" id="vendorTitle">${escapeHtml(model.displayName)}</h1>
-            <p class="vendor-description">Browse ${formatNumber(skillCount)} official AI agent skills across ${formatNumber(model.reposCount || repoCount)} ${escapeHtml(model.displayName)} repositories, with install commands and source links.</p>
+            <p class="vendor-bio">${escapeHtml(model.vendorBio)}</p>
+            <p class="vendor-description">Browse ${formatNumber(skillCount)} official AI agent ${pluralize(skillCount, "skill", "skills")} across ${formatNumber(model.reposCount || repoCount)} ${escapeHtml(model.displayName)} ${pluralize(model.reposCount || repoCount, "repository", "repositories")}, with install commands and source links.</p>
           </div>
           <div class="vendor-actions">
             <a class="vendor-action" href="${escapeAttr(addUtm(model.website, campaign))}" target="_blank" rel="noopener noreferrer">
@@ -876,6 +899,25 @@ function formatNumber(value) {
 
 function pluralize(value, singular, plural) {
   return Number(value) === 1 ? singular : plural;
+}
+
+function createVendorBio(owner, displayName) {
+  const curated = VENDOR_BIOS[owner.ownerKey];
+  if (curated) return curated;
+
+  const description = cleanVendorDescription(owner.description);
+  if (description) return description;
+
+  return `${displayName} publishes official AI agent skills for its tools, services, and developer workflows.`;
+}
+
+function cleanVendorDescription(value) {
+  const description = String(value || "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!description) return "";
+  const withoutTrailing = description.replace(/[.!?]*$/, "");
+  return `${withoutTrailing}.`;
 }
 
 function groupBy(items, key) {
