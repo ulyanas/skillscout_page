@@ -335,6 +335,7 @@ function renderVendorPage(
     <link rel="stylesheet" href="/assets/site-shell.css?v=20260724-official-sparkle" />
     <link rel="stylesheet" href="/official/vendor-page.css?v=20260724-vendor-mobile-title-fix" />
     <script src="/assets/site-shell.js?v=20260724-1"></script>
+    <script src="/assets/posthog-init.js"></script>
     <link rel="icon" href="/assets/skillscout-mark-48.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
