@@ -667,8 +667,8 @@ function createOwnerCard(owner) {
   rankBadge.addEventListener("mouseleave", hideTooltip);
   rankBadge.appendChild(createSignalSvg(grade));
   const link = card.querySelector(".open-link");
-  link.href = vendorPageUrl;
-  link.setAttribute("aria-label", `Browse official ${owner.displayName} skills`);
+  link.href = addUtm(owner.githubUrl);
+  link.setAttribute("aria-label", `Open ${owner.displayName} on GitHub`);
 
   return card;
 }
