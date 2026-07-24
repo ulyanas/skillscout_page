@@ -8,6 +8,7 @@ const GITHUB_API_BASE =
 const INITIAL_LIMIT = 48;
 const PAGE_SIZE = 48;
 const OWNER_SKILL_PREVIEW_LIMIT = 5;
+const FEATURED_OWNER_KEY = "skillscout";
 const STARS_CACHE_TTL = 3_600_000; // 1 hour
 const STARS_CACHE_PREFIX = "skillscout_stars_v1_";
 const MAX_CONCURRENT_STARS_FETCHES = 3;
@@ -307,7 +308,7 @@ async function init() {
 
     state.data = await response.json();
     state.owners = buildOwnerGroups(state.data);
-    state.filteredOwners = applySort(state.owners);
+    state.filteredOwners = pinFeaturedOwner(applySort(state.owners));
     renderStats();
     renderResults();
   } catch (error) {
@@ -349,7 +350,7 @@ function bindEvents() {
     const previousSortBy = state.sortBy;
     state.sortBy = elements.sortSelect.value;
     state.visibleLimit = INITIAL_LIMIT;
-    state.filteredOwners = applySort(state.filteredOwners);
+    state.filteredOwners = pinFeaturedOwner(applySort(state.filteredOwners));
     renderResults();
     trackOfficialSkillsEvent("OfficialSkills.sortChanged", {
       "Skillscout.OfficialSkills.sortBy": state.sortBy,
@@ -517,7 +518,9 @@ function runSearch() {
         .sort(compareSearchOwners)
     : state.owners.map((owner) => ({ ...owner, matchingSkills: owner.skills }));
 
-  state.filteredOwners = terms.length && state.sortBy === "rank" ? matched : applySort(matched);
+  state.filteredOwners = pinFeaturedOwner(
+    terms.length && state.sortBy === "rank" ? matched : applySort(matched)
+  );
   renderResults();
 }
 
@@ -552,6 +555,15 @@ function applySort(owners) {
         return 0;
     }
   });
+}
+
+function pinFeaturedOwner(owners) {
+  const featuredIndex = owners.findIndex((owner) => owner.ownerKey === FEATURED_OWNER_KEY);
+  if (featuredIndex <= 0) return owners;
+  const result = [...owners];
+  const [featured] = result.splice(featuredIndex, 1);
+  result.unshift(featured);
+  return result;
 }
 
 function compareByName(a, b) {
@@ -618,6 +630,7 @@ function createOwnerCard(owner) {
   const initial = card.querySelector(".owner-initial");
   const vendorPageUrl = `/official/${encodeURIComponent(owner.ownerKey)}/`;
 
+  card.classList.toggle("is-featured", owner.ownerKey === FEATURED_OWNER_KEY);
   card.dataset.href = vendorPageUrl;
   card.dataset.ownerKey = owner.ownerKey;
   card.setAttribute("role", "link");

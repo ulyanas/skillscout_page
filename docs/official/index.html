@@ -11,7 +11,7 @@
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="canonical" href="https://skillscout.sh/official/" />
     <script defer src="../assets/telemetrydeck-events.js?v=20260723-3"></script>
-    <link rel="stylesheet" href="/assets/site-shell.css?v=20260724-2" />
+    <link rel="stylesheet" href="/assets/site-shell.css?v=20260724-official-sparkle" />
     <script src="/assets/site-shell.js?v=20260724-1"></script>
 
     <!-- Google tag (gtag.js) -->
@@ -516,7 +516,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../popup.css" />
-    <link rel="stylesheet" href="../preview/official-directory.css?v=20260721-lazy-owners" />
+    <link rel="stylesheet" href="../preview/official-directory.css?v=20260724-featured-skillscout" />
   </head>
   <body class="directory-body">
     <div class="site-nav-wrap" id="navWrap">
@@ -531,7 +531,7 @@
           <a href="/guides/">Guides</a>
           <a href="/#testimonials">Reviews</a>
           <a href="/#faq">FAQ</a>
-          <a href="/official/">Official skills</a>
+          <a class="official-nav-link" href="/official/"><span>Official skills</span><svg class="official-nav-sparkle" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l1.1 3.8 3.4 1.2-3.4 1.2L8 11.5 6.9 7.7 3.5 6.5l3.4-1.2L8 1.5Z" fill="currentColor"/><path d="M12.5 9.5l.45 1.55 1.55.45-1.55.45-.45 1.55-.45-1.55-1.55-.45 1.55-.45.45-1.55Z" fill="currentColor"/></svg></a>
         </nav>
         <div class="site-nav-cta">
           <a class="site-btn" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=official_page" target="_blank" rel="noopener noreferrer" data-ga-event="get_extension_click" data-ga-label="official-nav">
@@ -555,7 +555,7 @@
         <a href="/guides/" class="site-mobile-link">Guides</a>
         <a href="/#testimonials" class="site-mobile-link">Reviews</a>
         <a href="/#faq" class="site-mobile-link">FAQ</a>
-        <a href="/official/" class="site-mobile-link">Official skills</a>
+        <a href="/official/" class="site-mobile-link official-nav-link"><span>Official skills</span><svg class="official-nav-sparkle" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l1.1 3.8 3.4 1.2-3.4 1.2L8 11.5 6.9 7.7 3.5 6.5l3.4-1.2L8 1.5Z" fill="currentColor"/><path d="M12.5 9.5l.45 1.55 1.55.45-1.55.45-.45 1.55-.45-1.55-1.55-.45 1.55-.45.45-1.55Z" fill="currentColor"/></svg></a>
         <a href="https://forms.gle/iGfD5tDgTfCE4QX66" class="site-mobile-link" target="_blank" rel="noopener noreferrer" data-ga-event="list_skills_click" data-ga-label="official-mobile-nav">List your skills</a>
       </nav>
     </div>
@@ -647,6 +647,12 @@
             </div>
           </div>
           <div class="card-header-end">
+            <span class="featured-badge" aria-label="Featured official skills owner">
+              <svg viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8 1.5l1.1 3.8 3.4 1.2-3.4 1.2L8 11.5 6.9 7.7 3.5 6.5l3.4-1.2L8 1.5Z" fill="currentColor"/>
+              </svg>
+              Featured
+            </span>
             <span class="rank-badge"></span>
             <a class="open-link" href="#" target="_blank" rel="noreferrer" aria-label="Open GitHub repository">
               <svg class="github-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -697,6 +703,6 @@
         window.addEventListener('scroll', onScroll, { passive: true });
       }
     </script>
-    <script type="module" src="../preview/official-directory.js?v=20260724-github-card-link"></script>
+    <script type="module" src="../preview/official-directory.js?v=20260724-featured-skillscout"></script>
   </body>
 </html>

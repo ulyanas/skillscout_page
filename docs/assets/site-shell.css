@@ -78,6 +78,19 @@
   color: #111;
 }
 
+.official-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.official-nav-sparkle {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  color: #111;
+}
+
 .site-nav-cta {
   display: flex;
   align-items: center;

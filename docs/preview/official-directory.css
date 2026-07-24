@@ -123,6 +123,19 @@ body.directory-body {
   color: var(--color-pitch-black);
 }
 
+.official-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.official-nav-sparkle {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  color: var(--color-pitch-black);
+}
+
 .site-nav-cta {
   display: flex;
   align-items: center;
@@ -750,6 +763,31 @@ body.directory-body {
   padding: 5px 10px;
   white-space: nowrap;
   cursor: default;
+}
+
+.featured-badge {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  padding: 6px 9px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.owner-card.is-featured .featured-badge {
+  display: inline-flex;
+}
+
+.featured-badge svg {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 12px;
 }
 
 .signal-bar {
