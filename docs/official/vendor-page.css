@@ -1142,10 +1142,7 @@ a {
   }
 
   .vendor-identity > div:nth-child(2) {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 38px minmax(0, 1fr);
-    gap: 0 12px;
+    display: contents;
   }
 
   .vendor-logo {
@@ -1164,7 +1161,7 @@ a {
 
   .vendor-title {
     grid-column: 2;
-    grid-row: 1;
+    grid-row: 2;
     align-self: start;
     font-size: 38px;
   }

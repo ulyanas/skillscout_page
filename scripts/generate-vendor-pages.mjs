@@ -333,7 +333,7 @@ function renderVendorPage(
     <meta name="twitter:image" content="${escapeAttr(model.logoUrl)}" />
     <script defer src="/assets/telemetrydeck-events.js?v=20260723-3"></script>
     <link rel="stylesheet" href="/assets/site-shell.css?v=20260724-official-sparkle" />
-    <link rel="stylesheet" href="/official/vendor-page.css?v=20260724-vendor-bio-mobile-fix" />
+    <link rel="stylesheet" href="/official/vendor-page.css?v=20260724-vendor-mobile-title-fix" />
     <script src="/assets/site-shell.js?v=20260724-1"></script>
     <link rel="icon" href="/assets/skillscout-mark-48.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
