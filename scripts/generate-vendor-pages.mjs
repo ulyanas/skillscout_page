@@ -331,7 +331,7 @@ function renderVendorPage(
     <meta name="twitter:title" content="${escapeAttr(pageTitle)}" />
     <meta name="twitter:description" content="Official ${escapeAttr(model.displayName)} skills, install commands, and source repositories." />
     <meta name="twitter:image" content="${escapeAttr(model.logoUrl)}" />
-    <script defer src="/assets/telemetrydeck-events.js?v=20260723-3"></script>
+    <script src="/assets/telemetry.js"></script>
     <link rel="stylesheet" href="/assets/site-shell.css?v=20260724-official-sparkle" />
     <link rel="stylesheet" href="/official/vendor-page.css?v=20260724-vendor-mobile-title-fix" />
     <script src="/assets/site-shell.js?v=20260724-1"></script>
