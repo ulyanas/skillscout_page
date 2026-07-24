@@ -891,7 +891,35 @@ function groupBy(items, key) {
 
 async function writeVendorSitemap(urls, generatedAt) {
   const date = String(generatedAt || new Date().toISOString()).slice(0, 10);
-  const vendorSitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  const vendorSitemap = renderSitemap(urls, date);
+  await fs.writeFile(
+    path.join(SITE_ROOT, "sitemap-vendors.xml"),
+    vendorSitemap,
+    "utf8"
+  );
+
+  const sitemapPath = path.join(SITE_ROOT, "sitemap.xml");
+  const coreSitemapPath = path.join(SITE_ROOT, "sitemap-core.xml");
+  let coreSitemap =
+    `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>\n`;
+  try {
+    const currentSitemap = await fs.readFile(sitemapPath, "utf8");
+    if (currentSitemap.includes("<urlset")) {
+      coreSitemap = currentSitemap;
+    }
+  } catch {
+  }
+
+  await fs.writeFile(coreSitemapPath, coreSitemap, "utf8");
+
+  const coreUrls = extractSitemapUrls(coreSitemap);
+  const allUrls = [...new Set([...coreUrls, ...urls])];
+  await fs.writeFile(sitemapPath, renderSitemap(allUrls, date), "utf8");
+}
+
+function renderSitemap(urls, date) {
+  return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
   .map(
@@ -903,40 +931,21 @@ ${urls
   .join("\n")}
 </urlset>
 `;
-  await fs.writeFile(
-    path.join(SITE_ROOT, "sitemap-vendors.xml"),
-    vendorSitemap,
-    "utf8"
+}
+
+function extractSitemapUrls(xml) {
+  return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) =>
+    unescapeXml(match[1].trim())
   );
+}
 
-  const sitemapPath = path.join(SITE_ROOT, "sitemap.xml");
-  const coreSitemapPath = path.join(SITE_ROOT, "sitemap-core.xml");
-  try {
-    const currentSitemap = await fs.readFile(sitemapPath, "utf8");
-    if (currentSitemap.includes("<urlset")) {
-      await fs.writeFile(coreSitemapPath, currentSitemap, "utf8");
-    }
-  } catch {
-    await fs.writeFile(
-      coreSitemapPath,
-      `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>`,
-      "utf8"
-    );
-  }
-
-  const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>https://skillscout.sh/sitemap-core.xml</loc>
-    <lastmod>${date}</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://skillscout.sh/sitemap-vendors.xml</loc>
-    <lastmod>${date}</lastmod>
-  </sitemap>
-</sitemapindex>
-`;
-  await fs.writeFile(sitemapPath, sitemapIndex, "utf8");
+function unescapeXml(value) {
+  return value
+    .replaceAll("&lt;", "<")
+    .replaceAll("&gt;", ">")
+    .replaceAll("&quot;", '"')
+    .replaceAll("&apos;", "'")
+    .replaceAll("&amp;", "&");
 }
 
 function parseArgs(values) {
