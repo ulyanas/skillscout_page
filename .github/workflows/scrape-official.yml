@@ -5,11 +5,20 @@ on:
     - cron: '0 6,18 * * *'   # 6 AM and 6 PM UTC
   workflow_dispatch:           # manual trigger from GitHub UI
 
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     permissions:
       contents: write
+      pages: write
+      id-token: write
 
     steps:
       - uses: actions/checkout@v4
@@ -44,3 +53,18 @@ jobs:
           git add docs/data/official-skills-universal.json
           git diff --staged --quiet || git commit -m "chore: refresh official skills data"
           git push
+
+      - name: Build static site and vendor pages
+        run: npm run build:pages
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .pages-dist
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

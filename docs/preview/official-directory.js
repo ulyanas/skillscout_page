@@ -616,16 +616,17 @@ function createOwnerCard(owner) {
   const card = fragment.querySelector(".owner-card");
   const logo = card.querySelector(".owner-logo");
   const initial = card.querySelector(".owner-initial");
+  const vendorPageUrl = `/official/${encodeURIComponent(owner.ownerKey)}/`;
 
-  card.dataset.href = owner.githubUrl;
+  card.dataset.href = vendorPageUrl;
   card.dataset.ownerKey = owner.ownerKey;
   card.setAttribute("role", "link");
-  card.setAttribute("aria-label", `Open ${owner.displayName} GitHub repository`);
+  card.setAttribute("aria-label", `Browse official ${owner.displayName} skills`);
   card.addEventListener("click", (event) => {
     if (event.target.closest("a, button")) {
       return;
     }
-    window.open(addUtm(owner.githubUrl), "_blank", "noopener,noreferrer");
+    window.location.assign(vendorPageUrl);
   });
   card.addEventListener("keydown", (event) => {
     if (event.target.closest("a, button")) {
@@ -633,7 +634,7 @@ function createOwnerCard(owner) {
     }
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
-      window.open(addUtm(owner.githubUrl), "_blank", "noopener,noreferrer");
+      window.location.assign(vendorPageUrl);
     }
   });
 
@@ -666,8 +667,8 @@ function createOwnerCard(owner) {
   rankBadge.addEventListener("mouseleave", hideTooltip);
   rankBadge.appendChild(createSignalSvg(grade));
   const link = card.querySelector(".open-link");
-  link.href = addUtm(owner.githubUrl);
-  link.setAttribute("aria-label", `Open ${owner.displayName} on GitHub`);
+  link.href = vendorPageUrl;
+  link.setAttribute("aria-label", `Browse official ${owner.displayName} skills`);
 
   return card;
 }

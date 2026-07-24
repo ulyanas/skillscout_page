@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "build:pages": "node scripts/build-pages.mjs",
+    "generate:vendor-pages": "node scripts/generate-vendor-pages.mjs",
     "scrape:official-skills": "node scripts/scrape_official_skills.mjs",
     "import:skillsmp-creators": "node scripts/import_skillsmp_creators.mjs",
     "enrich:github-skills": "node scripts/enrich_github_skills.mjs",
