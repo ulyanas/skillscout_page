@@ -333,7 +333,7 @@ function renderVendorPage(
     <meta name="twitter:image" content="${escapeAttr(model.logoUrl)}" />
     <script defer src="/assets/telemetrydeck-events.js?v=20260723-3"></script>
     <link rel="stylesheet" href="/assets/site-shell.css?v=20260724-2" />
-    <link rel="stylesheet" href="/official/vendor-page.css?v=20260724-vendor-bios" />
+    <link rel="stylesheet" href="/official/vendor-page.css?v=20260724-vendor-bio-mobile-fix" />
     <script src="/assets/site-shell.js?v=20260724-1"></script>
     <link rel="icon" href="/assets/skillscout-mark-48.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -374,7 +374,7 @@ function renderVendorPage(
               ${isFirstPage ? "" : `<span class="vendor-rank">Page ${pageNumber} of ${pageCount}</span>`}
             </div>
             <h1 class="vendor-title" id="vendorTitle">${escapeHtml(model.displayName)}</h1>
-            <p class="vendor-bio">${escapeHtml(model.vendorBio)}</p>
+            <p class="vendor-description">${escapeHtml(model.vendorBio)}</p>
             <p class="vendor-description">Browse ${formatNumber(skillCount)} official AI agent ${pluralize(skillCount, "skill", "skills")} across ${formatNumber(model.reposCount || repoCount)} ${escapeHtml(model.displayName)} ${pluralize(model.reposCount || repoCount, "repository", "repositories")}, with install commands and source links.</p>
           </div>
           <div class="vendor-actions">
