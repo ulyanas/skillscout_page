@@ -21,6 +21,8 @@
  *   DISCOVERY_START_DATE    optional — YYYY-MM-DD lower bound for repo pushed date
  *   DISCOVERY_END_DATE      optional — YYYY-MM-DD upper bound for repo pushed date
  *   DISCOVERY_SEARCH_PAGES  optional — GitHub pages per search query (default: 5)
+ *   DISCOVERY_MAX_CANDIDATES optional — max candidate repos to verify per run (default: 2500)
+ *   DISCOVERY_REJECTION_SAMPLE_LIMIT optional — sample repos to print per rejection reason (default: 5)
  *   DISCOVERY_SKIP_SEARCH   optional — set to 1 to process manual seeds only
  *   DISCOVERY_SEED_REPOS    optional — comma/space/newline separated repo URLs or owner/repo keys
  *   DISCOVERY_SEED_ORGS     optional — comma/space/newline separated GitHub org URLs or logins
@@ -43,6 +45,8 @@ const WINDOW_DAYS     = Number(process.env.DISCOVERY_WINDOW_DAYS || 45);
 const START_DATE      = process.env.DISCOVERY_START_DATE || "";
 const END_DATE        = process.env.DISCOVERY_END_DATE || "";
 const SEARCH_PAGES    = Math.max(1, Number(process.env.DISCOVERY_SEARCH_PAGES || 5));
+const MAX_CANDIDATES  = Math.max(1, Number(process.env.DISCOVERY_MAX_CANDIDATES || 2500));
+const REJECTION_SAMPLE_LIMIT = Math.max(0, Number(process.env.DISCOVERY_REJECTION_SAMPLE_LIMIT || 5));
 const SKIP_SEARCH     = process.env.DISCOVERY_SKIP_SEARCH === "1" || process.env.DISCOVERY_SKIP_SEARCH === "true";
 const SEED_REPOS      = process.env.DISCOVERY_SEED_REPOS || "";
 const SEED_ORGS       = process.env.DISCOVERY_SEED_ORGS || "";
@@ -129,39 +133,61 @@ async function runSearch(label, baseUrl) {
   return all;
 }
 
+function taggedSearchItems(items, label, kind) {
+  return items.map((item) => ({
+    ...item,
+    _skillscoutSearchLabel: label,
+    _skillscoutSearchKind: kind,
+  }));
+}
+
+function codeSearchUrl(query) {
+  return `https://api.github.com/search/code?q=${encodeURIComponent(query)}&sort=indexed&order=desc`;
+}
+
+function repoSearchUrl(query) {
+  return `https://api.github.com/search/repositories?q=${encodeURIComponent(query)}&sort=updated&order=desc`;
+}
+
 console.log("\nSearching GitHub...");
 const codeQueries = [
   ['SKILL.md containing "skills install"', 'filename:SKILL.md "skills install"'],
   ['SKILL.md containing "skills add"', 'filename:SKILL.md "skills add"'],
+  ['SKILL.md containing "allowed-tools"', 'filename:SKILL.md "allowed-tools"'],
+  ['SKILL.md containing "description:"', 'filename:SKILL.md "description:"'],
+  ["SKILL.md under skills path", "filename:SKILL.md path:skills"],
+  ["SKILL.md under .agents path", "filename:SKILL.md path:.agents"],
   ["all uppercase SKILL.md files", "filename:SKILL.md"],
   ["all lowercase skill.md files", "filename:skill.md"],
 ];
 const repoQueries = [
   [`topic:agent-skills ${pushedLabel}`, `topic:agent-skills ${pushedQualifier}`],
   [`topic:claude-skills ${pushedLabel}`, `topic:claude-skills ${pushedQualifier}`],
+  [`topic:codex-skills ${pushedLabel}`, `topic:codex-skills ${pushedQualifier}`],
+  [`"SKILL.md" in README ${pushedLabel}`, `"SKILL.md" in:readme ${pushedQualifier}`],
+  [`"agent skills" in README ${pushedLabel}`, `"agent skills" in:readme ${pushedQualifier}`],
+  [`"claude skills" in README ${pushedLabel}`, `"claude skills" in:readme ${pushedQualifier}`],
+  [`agent-skill repo text ${pushedLabel}`, `agent-skill in:name,description,readme ${pushedQualifier}`],
+  [`claude-skill repo text ${pushedLabel}`, `claude-skill in:name,description,readme ${pushedQualifier}`],
 ];
 
-const searchResults = SKIP_SEARCH
-  ? Array.from({ length: codeQueries.length + repoQueries.length }, () => [])
-  : [];
+const codeItems = [];
+const repoItems = [];
 if (!SKIP_SEARCH) {
   for (const [label, query] of codeQueries) {
-    searchResults.push(
-      await runSearch(label, `https://api.github.com/search/code?q=${encodeURIComponent(query)}&sort=indexed`)
+    codeItems.push(
+      ...taggedSearchItems(await runSearch(label, codeSearchUrl(query)), label, "code")
     );
   }
   for (const [label, query] of repoQueries) {
-    searchResults.push(
-      await runSearch(label, `https://api.github.com/search/repositories?q=${encodeURIComponent(query)}&sort=updated`)
+    repoItems.push(
+      ...taggedSearchItems(await runSearch(label, repoSearchUrl(query)), label, "repo")
     );
   }
 }
 if (SKIP_SEARCH) {
   console.log("  DISCOVERY_SKIP_SEARCH=1 — processing manual seeds only");
 }
-
-const codeItems = searchResults.slice(0, codeQueries.length).flat();
-const repoItems = searchResults.slice(codeQueries.length).flat();
 
 function parseRepoKey(value) {
   const raw = String(value || "").trim();
@@ -269,6 +295,8 @@ const normalizedRepoItems = repoItems.map((repo) => ({
   repository: repo,
   path: "SKILL.md",
   html_url: `${repo.html_url}/blob/HEAD/SKILL.md`,
+  sourceQuery: repo._skillscoutSearchLabel,
+  searchKind: repo._skillscoutSearchKind,
 }));
 
 const normalizedSeedItems = seedRepos.map((repo) => ({
@@ -276,6 +304,8 @@ const normalizedSeedItems = seedRepos.map((repo) => ({
   path: "SKILL.md",
   html_url: `${repo.html_url}/blob/HEAD/SKILL.md`,
   source: "manual-seed",
+  sourceQuery: "manual seed repo",
+  searchKind: "seed",
 }));
 
 const normalizedSeedOrgItems = seedOrgRepos.map((repo) => ({
@@ -283,9 +313,11 @@ const normalizedSeedOrgItems = seedOrgRepos.map((repo) => ({
   path: "SKILL.md",
   html_url: `${repo.html_url}/blob/HEAD/SKILL.md`,
   source: "manual-org-seed",
+  sourceQuery: "manual seed org",
+  searchKind: "seed",
 }));
 
-const allItems = [...codeItems, ...normalizedRepoItems, ...normalizedSeedItems, ...normalizedSeedOrgItems];
+const allItems = [...normalizedSeedItems, ...normalizedSeedOrgItems, ...codeItems, ...normalizedRepoItems];
 
 // ── Collect unique candidate repos ────────────────────────────────────────────
 
@@ -293,21 +325,43 @@ function normalizeLogin(login) {
   return String(login || "").toLowerCase().replace(/[^a-z0-9._/-]+/g, "-").replace(/^-+|-+$/g, "");
 }
 
-const candidates = new Map(); // repoKey → info
+let candidates = new Map(); // repoKey → info
 const candidateStats = {
   searchItems: allItems.length,
   forks: 0,
   existingRepos: 0,
   duplicateRepos: 0,
+  candidateLimitSkipped: 0,
 };
+const candidateSourceStats = new Map();
+
+function candidateSourceLabel(item) {
+  return item.sourceQuery || item._skillscoutSearchLabel || item.source || "unknown";
+}
+
+function bumpCandidateSource(label, field) {
+  const row = candidateSourceStats.get(label) || {
+    items: 0,
+    candidates: 0,
+    selected: 0,
+    existingRepos: 0,
+    forks: 0,
+    duplicateRepos: 0,
+    candidateLimitSkipped: 0,
+  };
+  row[field] = (row[field] || 0) + 1;
+  candidateSourceStats.set(label, row);
+}
 
 for (const item of allItems) {
   const fullName = item.repository?.full_name;
   if (!fullName) continue;
+  const sourceLabel = candidateSourceLabel(item);
+  bumpCandidateSource(sourceLabel, "items");
 
-  // Skip forks — a forked repo isn't the org's own skill, it's borrowed
   if (item.repository?.fork) {
     candidateStats.forks++;
+    bumpCandidateSource(sourceLabel, "forks");
     continue;
   }
 
@@ -316,13 +370,16 @@ for (const item of allItems) {
   const repoKey = fullName.toLowerCase();
   if (knownRepoKeys.has(repoKey)) {
     candidateStats.existingRepos++;
+    bumpCandidateSource(sourceLabel, "existingRepos");
     continue;
   }
   if (candidates.has(repoKey)) {
     candidateStats.duplicateRepos++;
+    bumpCandidateSource(sourceLabel, "duplicateRepos");
+    const candidate = candidates.get(repoKey);
+    candidate.sourceQueries = mergeList(candidate.sourceQueries, [sourceLabel]);
     continue;
   }
-
   candidates.set(repoKey, {
     login,
     ownerKey,
@@ -331,23 +388,109 @@ for (const item of allItems) {
     skillFile: item.path,
     repoHtmlUrl: item.repository?.html_url,
     source: item.source || "github-search",
+    searchKind: item.searchKind || item._skillscoutSearchKind || "unknown",
+    sourceQueries: [sourceLabel],
   });
+  bumpCandidateSource(sourceLabel, "candidates");
 }
 
-console.log(`\n${candidates.size} new candidate repos found in search results`);
+function primaryCandidateSource(candidate) {
+  if (candidate.searchKind === "seed") return "manual seeds";
+  return candidate.sourceQueries?.[0] || "unknown";
+}
+
+function selectCandidatesRoundRobin(candidateMap, limit) {
+  if (candidateMap.size <= limit) return { selected: candidateMap, skipped: [] };
+
+  const buckets = new Map();
+  for (const [repoKey, candidate] of candidateMap) {
+    const source = primaryCandidateSource(candidate);
+    if (!buckets.has(source)) buckets.set(source, []);
+    buckets.get(source).push([repoKey, candidate]);
+  }
+
+  const selected = new Map();
+  const skipped = [];
+  const bucketEntries = [...buckets.entries()];
+  while (selected.size < limit) {
+    let addedThisPass = false;
+    for (const [, bucket] of bucketEntries) {
+      const next = bucket.shift();
+      if (!next) continue;
+      selected.set(next[0], next[1]);
+      addedThisPass = true;
+      if (selected.size >= limit) break;
+    }
+    if (!addedThisPass) break;
+  }
+
+  for (const [, bucket] of bucketEntries) {
+    skipped.push(...bucket);
+  }
+  return { selected, skipped };
+}
+
+const totalUniqueCandidates = candidates.size;
+const selectedCandidateResult = selectCandidatesRoundRobin(candidates, MAX_CANDIDATES);
+candidates = selectedCandidateResult.selected;
+candidateStats.candidateLimitSkipped = selectedCandidateResult.skipped.length;
+for (const [, candidate] of candidates) {
+  bumpCandidateSource(primaryCandidateSource(candidate), "selected");
+}
+for (const [, candidate] of selectedCandidateResult.skipped) {
+  bumpCandidateSource(primaryCandidateSource(candidate), "candidateLimitSkipped");
+}
+
+console.log(`\n${candidates.size} candidate repos selected from ${totalUniqueCandidates} unique new repos`);
 console.log(
   `Candidates: ${candidateStats.searchItems} items, ${candidateStats.existingRepos} existing repos, ` +
-  `${candidateStats.forks} forks, ${candidateStats.duplicateRepos} duplicates`
+  `${candidateStats.forks} forks, ${candidateStats.duplicateRepos} duplicates, ` +
+  `${candidateStats.candidateLimitSkipped} skipped by limit (${MAX_CANDIDATES})`
 );
+console.log("Candidate sources:");
+for (const [label, row] of [...candidateSourceStats].sort((a, b) => (b[1].candidates || 0) - (a[1].candidates || 0))) {
+  console.log(
+    `  ${label}: ${row.selected || 0} selected, ${row.candidates || 0} unique candidates, ` +
+    `${row.items || 0} items, ${row.existingRepos || 0} existing, ` +
+    `${row.duplicateRepos || 0} duplicates, ${row.candidateLimitSkipped || 0} skipped by limit`
+  );
+}
 
 // ── Fetch GitHub org profiles ─────────────────────────────────────────────────
 
 async function fetchOrgProfile(login) {
-  // Only fetch the org endpoint — we reject non-Organization accounts anyway
-  // and the users/ endpoint can return a personal account with the same login.
-  const res = await fetch(`https://api.github.com/orgs/${login}`, { headers: ghHeaders });
-  if (!res.ok) return null;
-  return res.json();
+  try {
+    const res = await fetch(`https://api.github.com/orgs/${login}`, { headers: ghHeaders });
+    if (!res.ok) {
+      let message = "";
+      try {
+        const data = await res.json();
+        message = data?.message || "";
+      } catch {
+        message = "";
+      }
+      return { profile: null, status: res.status, message };
+    }
+    return { profile: await res.json(), status: res.status, message: "" };
+  } catch (error) {
+    return { profile: null, status: 0, message: error.message };
+  }
+}
+
+function normalizeWebsiteUrl(value) {
+  const raw = String(value || "").trim();
+  if (!raw) return "";
+  if (/^https?:\/\//i.test(raw)) return raw;
+  if (/^[a-z0-9.-]+\.[a-z]{2,}(?:\/.*)?$/i.test(raw)) return `https://${raw}`;
+  return raw;
+}
+
+function getWebsiteHost(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "").toLowerCase();
+  } catch {
+    return "";
+  }
 }
 
 async function checkWebsiteLive(url) {
@@ -357,7 +500,16 @@ async function checkWebsiteLive(url) {
     const t = setTimeout(() => ctrl.abort(), 5000);
     const res = await fetch(url, { method: "HEAD", signal: ctrl.signal, redirect: "follow" });
     clearTimeout(t);
-    return res.ok || res.status === 405;
+    if (res.ok || [401, 403, 405].includes(res.status)) return true;
+  } catch {
+    // Try GET below.
+  }
+  try {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 7000);
+    const res = await fetch(url, { method: "GET", signal: ctrl.signal, redirect: "follow" });
+    clearTimeout(t);
+    return res.ok || [401, 403].includes(res.status);
   } catch {
     return false;
   }
@@ -381,6 +533,13 @@ const PLATFORM_NAMES = new Set([
   "linktree", "medium", "blogspot", "wordpress", "notion", "vercel",
   "netlify", "cloudflare", "google", "microsoft", "amazon",
 ]);
+
+function isPlatformWebsite(url) {
+  const hostname = getWebsiteHost(url);
+  if (!hostname) return false;
+  const rootDomain = hostname.split(".").slice(-2).join(".");
+  return PLATFORM_DOMAINS.has(hostname) || PLATFORM_DOMAINS.has(rootDomain);
+}
 
 // ── Companies API lookup ──────────────────────────────────────────────────────
 
@@ -466,12 +625,24 @@ console.log(`\nEnriching ${candidates.size} candidates (GitHub profile + ownersh
 
 let addedOwners = 0;
 let addedRepos  = 0;
+let processedCandidates = 0;
 const rejectionReasons = new Map();
+const rejectionSamples = new Map();
+const acceptedSamples = [];
 
-function reject(reason, info) {
+function reject(reason, info, detail = "") {
   rejectionReasons.set(reason, (rejectionReasons.get(reason) || 0) + 1);
+  if (REJECTION_SAMPLE_LIMIT > 0) {
+    const samples = rejectionSamples.get(reason) || [];
+    if (samples.length < REJECTION_SAMPLE_LIMIT) {
+      const source = info?.sourceQueries?.length ? ` via ${info.sourceQueries.join(" | ")}` : "";
+      const suffix = detail ? ` — ${detail}` : "";
+      samples.push(`${info?.repoFullName || "unknown"}${source}${suffix}`);
+      rejectionSamples.set(reason, samples);
+    }
+  }
   if (info?.source === "manual-seed") {
-    console.log(`  ⏭  ${info.repoFullName} — ${reason}`);
+    console.log(`  ⏭  ${info.repoFullName} — ${reason}${detail ? ` (${detail})` : ""}`);
   }
 }
 
@@ -484,18 +655,27 @@ function isTemplateSkillFilePath(filePath) {
 }
 
 for (const [, info] of candidates) {
+  processedCandidates++;
+  if (processedCandidates % 250 === 0) {
+    console.log(
+      `  Progress: checked ${processedCandidates}/${candidates.size}, ` +
+      `${addedOwners} new owners, ${addedRepos} new repos accepted`
+    );
+  }
   if (knownRepoKeys.has(info.repoKey)) {
     reject("existing repo", info);
     continue;
   }
 
-  const profile = await fetchOrgProfile(info.login);
+  const { profile, status, message } = await fetchOrgProfile(info.login);
   if (!profile) {
-    reject("org profile not found", info);
+    const reason = status === 404
+      ? "org profile not found (likely user account)"
+      : `org profile unavailable (${status || "request failed"})`;
+    reject(reason, info, message);
     continue;
   }
 
-  // Only accept GitHub Organizations — individual users rarely publish official vendor skills
   if (profile.type !== "Organization") {
     reject("not a GitHub Organization", info);
     continue;
@@ -514,17 +694,21 @@ for (const [, info] of candidates) {
   if (!existingOwner) {
     // profile.blog is GitHub's API field name for the org's declared website URL
     // (shown as the chain-link "Website" field on the org's GitHub page)
-    const website = profile.blog || "";
+    const website = normalizeWebsiteUrl(profile.blog || "");
+    if (isPlatformWebsite(website)) {
+      reject("website is platform URL", info, website);
+      continue;
+    }
     const websiteLive = await checkWebsiteLive(website);
     if (!websiteLive) {
-      reject("website unavailable", info);
+      reject("website unavailable", info, website || "empty website");
       continue;
     }
 
     const company = await lookupCompany(website);
     const verifiedByGitHub = profile.is_verified === true;
     if (!company && !verifiedByGitHub) {
-      reject("not company-confirmed or GitHub verified", info);
+      reject("not company-confirmed or GitHub verified", info, website);
       continue;
     }
 
@@ -564,6 +748,7 @@ for (const [, info] of candidates) {
   }
 
   console.log(`  ✅ ${info.repoKey} → ${displayName}  skills:${skillPaths.length}  ⭐${stars}`);
+  acceptedSamples.push(`${info.repoKey} → ${displayName} (${skillPaths.length} skills)`);
 
   // Add repo (if not already tracked)
   const repoKey = info.repoKey;
@@ -647,9 +832,19 @@ if (DRY_RUN) {
 console.log("\nRejection summary:");
 for (const [reason, count] of [...rejectionReasons].sort((a, b) => b[1] - a[1])) {
   console.log(`  ${reason}: ${count}`);
+  const samples = rejectionSamples.get(reason) || [];
+  for (const sample of samples) {
+    console.log(`    sample: ${sample}`);
+  }
 }
 if (rejectionReasons.size === 0) {
   console.log("  none");
+}
+if (acceptedSamples.length) {
+  console.log("\nAccepted samples:");
+  for (const sample of acceptedSamples.slice(0, 20)) {
+    console.log(`  ${sample}`);
+  }
 }
 
 console.log(`\n✅ Added ${addedOwners} new owners, ${addedRepos} new repos`);

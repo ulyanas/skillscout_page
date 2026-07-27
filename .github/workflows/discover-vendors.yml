@@ -25,6 +25,9 @@ jobs:
           COMPANIES_API_KEY: ${{ secrets.COMPANIES_API_KEY }}
           OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
           DISCOVERY_WINDOW_DAYS: '45'
+          DISCOVERY_SEARCH_PAGES: '6'
+          DISCOVERY_MAX_CANDIDATES: '2500'
+          DISCOVERY_REJECTION_SAMPLE_LIMIT: '5'
 
       - name: Enrich skill trees + star counts
         run: node scripts/enrich_github_skills.mjs

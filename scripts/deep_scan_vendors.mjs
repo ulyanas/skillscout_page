@@ -55,6 +55,26 @@ function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 function isTemplateSkillFilePath(filePath) {
   return /(^|\/)templates?\/skill\/SKILL\.md$/i.test(filePath);
 }
+function normalizeWebsiteUrl(value) {
+  const raw = String(value || "").trim();
+  if (!raw) return "";
+  if (/^https?:\/\//i.test(raw)) return raw;
+  if (/^[a-z0-9.-]+\.[a-z]{2,}(?:\/.*)?$/i.test(raw)) return `https://${raw}`;
+  return raw;
+}
+function getWebsiteHost(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "").toLowerCase();
+  } catch {
+    return "";
+  }
+}
+function isPlatformWebsite(url) {
+  const hostname = getWebsiteHost(url);
+  if (!hostname) return false;
+  const root = hostname.split(".").slice(-2).join(".");
+  return PLATFORM_DOMAINS.has(hostname) || PLATFORM_DOMAINS.has(root);
+}
 
 // ── GitHub helpers ────────────────────────────────────────────────────────────
 
@@ -129,8 +149,19 @@ async function checkWebsiteLive(url) {
     const t = setTimeout(() => ctrl.abort(), 5000);
     const res = await fetch(url, { method: "HEAD", signal: ctrl.signal, redirect: "follow" });
     clearTimeout(t);
-    return res.ok || res.status === 405;
-  } catch { return false; }
+    if (res.ok || [401, 403, 405].includes(res.status)) return true;
+  } catch {
+    // Try GET below.
+  }
+  try {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 7000);
+    const res = await fetch(url, { method: "GET", signal: ctrl.signal, redirect: "follow" });
+    clearTimeout(t);
+    return res.ok || [401, 403].includes(res.status);
+  } catch {
+    return false;
+  }
 }
 
 async function lookupCompany(websiteUrl) {
@@ -228,7 +259,8 @@ for (const info of candidates) {
   const { paths: skillPaths, truncated } = await getSkillPaths(info.repoFullName);
   if (skillPaths.length === 0) continue;
 
-  const website = profile.blog || "";
+  const website = normalizeWebsiteUrl(profile.blog || "");
+  if (isPlatformWebsite(website)) continue;
   if (!(await checkWebsiteLive(website))) continue;
 
   const company = await lookupCompany(website);
