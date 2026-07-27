@@ -256,16 +256,15 @@ for (const info of candidates) {
   const profile = await fetchOrgProfile(info.login);
   if (!profile || profile.type !== "Organization") continue;
 
-  const { paths: skillPaths, truncated } = await getSkillPaths(info.repoFullName);
-  if (skillPaths.length === 0) continue;
-
   const website = normalizeWebsiteUrl(profile.blog || "");
   if (isPlatformWebsite(website)) continue;
-  if (!(await checkWebsiteLive(website))) continue;
-
   const company = await lookupCompany(website);
   const verifiedByGitHub = profile.is_verified === true;
   if (!company && !verifiedByGitHub) continue;
+  if (!(await checkWebsiteLive(website))) continue;
+
+  const { paths: skillPaths, truncated } = await getSkillPaths(info.repoFullName);
+  if (skillPaths.length === 0) continue;
 
   const stars = await fetchStars(info.repoFullName);
   const displayName = company?.name || profile.name || info.login;

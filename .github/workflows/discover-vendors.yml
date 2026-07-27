@@ -8,6 +8,7 @@ on:
 jobs:
   discover:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     permissions:
       contents: write
 
@@ -25,8 +26,8 @@ jobs:
           COMPANIES_API_KEY: ${{ secrets.COMPANIES_API_KEY }}
           OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
           DISCOVERY_WINDOW_DAYS: '45'
-          DISCOVERY_SEARCH_PAGES: '3'
-          DISCOVERY_MAX_CANDIDATES: '1200'
+          DISCOVERY_SEARCH_PAGES: '2'
+          DISCOVERY_MAX_CANDIDATES: '600'
           DISCOVERY_REJECTION_SAMPLE_LIMIT: '5'
 
       - name: Enrich skill trees + star counts

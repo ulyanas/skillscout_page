@@ -681,22 +681,22 @@ for (const [, info] of candidates) {
     continue;
   }
 
-  const { paths: skillPaths, truncated } = await getSkillPaths(info.repoFullName);
-  if (skillPaths.length === 0) {
-    reject("no SKILL.md or skill.md found", info);
-    continue;
-  }
-
-  const stars = await fetchRepoStars(info.repoFullName);
   const existingOwner = directory.officialOwners.find((owner) => owner.ownerKey === info.ownerKey);
-  let displayName = existingOwner?.displayName || profile.name || info.login;
+  let website = "";
+  let company = null;
+  const verifiedByGitHub = profile.is_verified === true;
 
   if (!existingOwner) {
     // profile.blog is GitHub's API field name for the org's declared website URL
     // (shown as the chain-link "Website" field on the org's GitHub page)
-    const website = normalizeWebsiteUrl(profile.blog || "");
+    website = normalizeWebsiteUrl(profile.blog || "");
     if (isPlatformWebsite(website)) {
       reject("website is platform URL", info, website);
+      continue;
+    }
+    company = await lookupCompany(website);
+    if (!company && !verifiedByGitHub) {
+      reject("not company-confirmed or GitHub verified", info, website);
       continue;
     }
     const websiteLive = await checkWebsiteLive(website);
@@ -704,14 +704,18 @@ for (const [, info] of candidates) {
       reject("website unavailable", info, website || "empty website");
       continue;
     }
+  }
 
-    const company = await lookupCompany(website);
-    const verifiedByGitHub = profile.is_verified === true;
-    if (!company && !verifiedByGitHub) {
-      reject("not company-confirmed or GitHub verified", info, website);
-      continue;
-    }
+  const { paths: skillPaths, truncated } = await getSkillPaths(info.repoFullName);
+  if (skillPaths.length === 0) {
+    reject("no SKILL.md or skill.md found", info);
+    continue;
+  }
 
+  const stars = await fetchRepoStars(info.repoFullName);
+  let displayName = existingOwner?.displayName || profile.name || info.login;
+
+  if (!existingOwner) {
     displayName = company?.name || displayName;
 
     const owner = {
