@@ -11,10 +11,12 @@
   var nav = navigator;
   var scr = window.screen;
   var ua = nav.userAgent || '';
+  var BOT_PATTERN = /bot|crawl|spider|slurp|googlebot|bingbot|yandex|baidu|duckduckbot|facebookexternalhit|twitterbot|linkedinbot|applebot/i;
 
   var isTest = /^localhost$|^127(\.\d+){0,2}\.\d+$|^\[::1?]$/.test(loc.hostname) ||
     loc.protocol === 'file:' ||
     /^10\.|^192\.168\.|^172\.(1[6-9]|2\d|3[01])\./.test(loc.hostname);
+  var isBot = BOT_PATTERN.test(ua);
 
   // --- anonymous user ID (persisted in localStorage) ---
   var storageKey = 'td_user';
@@ -138,7 +140,7 @@
       'TelemetryDeck.SDK.nameAndVersion': 'Skillscout Web 2.0',
 
       // bot detection
-      'TelemetryDeck.Detection.isBot': String(/bot|crawl|spider|slurp|googlebot|bingbot|yandex|baidu|duckduckbot|facebookexternalhit|twitterbot|linkedinbot|applebot/i.test(ua)),
+      'TelemetryDeck.Detection.isBot': String(isBot),
 
       // skillscout-specific
       'Skillscout.Web.pagePath': loc.pathname,
@@ -171,6 +173,8 @@
 
   function send(type, extra) {
     if (!type) return;
+    if (isTest || isBot) return;
+
     fetch(API, {
       method: 'POST',
       mode: 'cors',

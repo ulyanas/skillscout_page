@@ -4,6 +4,8 @@
   const APP_ID = "D96EABE1-3B07-40E5-B149-DFA286B7FA5B";
   const ENDPOINT = "https://tele.iamsimpl.com/v2/namespace/com.skillscout/";
   const SESSION_KEY = "skillscout.telemetry.session";
+  const BOT_PATTERN =
+    /bot|crawl|spider|slurp|googlebot|bingbot|yandex|baidu|duckduckbot|facebookexternalhit|twitterbot|linkedinbot|applebot/i;
   const EVENT_MAP = {
     get_extension_click: "Extension.downloadClicked",
     list_skills_click: "Skills.listSubmissionOpened"
@@ -49,6 +51,10 @@
       hostname === "[::1]" ||
       /^10\.|^192\.168\.|^172\.(1[6-9]|2\d|3[01])\./.test(hostname)
     );
+  }
+
+  function isBot() {
+    return BOT_PATTERN.test(navigator.userAgent || "");
   }
 
   function normalizePayload(payload) {
@@ -153,6 +159,7 @@
 
   async function track(type, payload = {}) {
     if (!type) return;
+    if (isTestEnvironment() || isBot()) return;
 
     try {
       const sessionSeed = getSessionSeed();

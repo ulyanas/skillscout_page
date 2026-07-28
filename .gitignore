@@ -2,3 +2,5 @@
 .cache/
 .pages-dist/
 .discovery-reports/
+/analytics.md
+/telemetry.js
