@@ -23,6 +23,7 @@
  *   DISCOVERY_SEARCH_PAGES  optional — GitHub pages per search query (default: 5)
  *   DISCOVERY_MAX_CANDIDATES optional — max candidate repos to verify per run (default: 2500)
  *   DISCOVERY_REJECTION_SAMPLE_LIMIT optional — sample repos to print per rejection reason (default: 5)
+ *   DISCOVERY_REPORTS_OUTPUT optional — report directory (default: docs/data/discovery-reports)
  *   DISCOVERY_SKIP_SEARCH   optional — set to 1 to process manual seeds only
  *   DISCOVERY_SEED_REPOS    optional — comma/space/newline separated repo URLs or owner/repo keys
  *   DISCOVERY_SEED_ORGS     optional — comma/space/newline separated GitHub org URLs or logins
@@ -38,6 +39,9 @@ const root = path.resolve(__dirname, "..");
 const DATA_PATH =
   process.env.OFFICIAL_SKILLS_OUTPUT ||
   path.join(root, "docs", "data", "official-skills-universal.json");
+const REPORTS_DIR =
+  process.env.DISCOVERY_REPORTS_OUTPUT ||
+  path.join(root, "docs", "data", "discovery-reports");
 
 const GITHUB_TOKEN    = process.env.GITHUB_TOKEN;
 const COMPANIES_KEY   = process.env.COMPANIES_API_KEY;
@@ -64,6 +68,7 @@ const ghHeaders = {
 };
 
 const now = new Date().toISOString();
+const reportId = now.replace(/[:.]/g, "-");
 
 // ── Load directory ────────────────────────────────────────────────────────────
 
@@ -88,6 +93,14 @@ const pushedLabel = START_DATE || END_DATE
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function asObject(map) {
+  return Object.fromEntries([...map].sort((a, b) => String(a[0]).localeCompare(String(b[0]))));
+}
+
+function markdownEscape(value) {
+  return String(value ?? "").replace(/\|/g, "\\|").replace(/\n/g, " ");
 }
 
 async function fetchWithRetry(url, options = {}) {
@@ -629,9 +642,23 @@ let processedCandidates = 0;
 const rejectionReasons = new Map();
 const rejectionSamples = new Map();
 const acceptedSamples = [];
+const rejectedItems = [];
+const acceptedItems = [];
 
 function reject(reason, info, detail = "") {
   rejectionReasons.set(reason, (rejectionReasons.get(reason) || 0) + 1);
+  rejectedItems.push({
+    reason,
+    detail,
+    repoFullName: info?.repoFullName || "",
+    repoKey: info?.repoKey || "",
+    ownerLogin: info?.login || "",
+    ownerKey: info?.ownerKey || "",
+    source: info?.source || "",
+    sourceQueries: info?.sourceQueries || [],
+    repoUrl: info?.repoFullName ? `https://github.com/${info.repoFullName}` : "",
+    ownerUrl: info?.login ? `https://github.com/${info.login}` : "",
+  });
   if (REJECTION_SAMPLE_LIMIT > 0) {
     const samples = rejectionSamples.get(reason) || [];
     if (samples.length < REJECTION_SAMPLE_LIMIT) {
@@ -753,6 +780,19 @@ for (const [, info] of candidates) {
 
   console.log(`  ✅ ${info.repoKey} → ${displayName}  skills:${skillPaths.length}  ⭐${stars}`);
   acceptedSamples.push(`${info.repoKey} → ${displayName} (${skillPaths.length} skills)`);
+  acceptedItems.push({
+    repoFullName: info.repoFullName,
+    repoKey: info.repoKey,
+    ownerLogin: info.login,
+    ownerKey: info.ownerKey,
+    displayName,
+    skillCount: skillPaths.length,
+    stars,
+    existingOwner: Boolean(existingOwner),
+    sourceQueries: info.sourceQueries || [],
+    repoUrl: `https://github.com/${info.repoFullName}`,
+    ownerUrl: `https://github.com/${info.login}`,
+  });
 
   // Add repo (if not already tracked)
   const repoKey = info.repoKey;
@@ -831,6 +871,145 @@ if (DRY_RUN) {
   console.log("\nDRY_RUN=1 — no file changes written");
 } else {
   await fs.writeFile(DATA_PATH, `${JSON.stringify(directory, null, 2)}\n`);
+}
+
+function buildMarkdownReport(report) {
+  const lines = [
+    `# Skillscout discovery report`,
+    "",
+    `Run: \`${report.run.id}\``,
+    `Generated: \`${report.run.generatedAt}\``,
+    `Window: \`${report.run.pushedLabel}\``,
+    `Dry run: \`${report.run.dryRun}\``,
+    "",
+    "## Summary",
+    "",
+    `- Search items: ${report.candidates.searchItems}`,
+    `- Unique new repos: ${report.candidates.totalUnique}`,
+    `- Selected repos: ${report.candidates.selected}`,
+    `- Existing repos skipped: ${report.candidates.existingRepos}`,
+    `- Duplicate repos skipped: ${report.candidates.duplicateRepos}`,
+    `- Candidate limit skipped: ${report.candidates.candidateLimitSkipped}`,
+    `- Added owners: ${report.results.addedOwners}`,
+    `- Added repos: ${report.results.addedRepos}`,
+    `- Directory: ${report.directory.owners} owners, ${report.directory.repos} repos, ${report.directory.skills} skills`,
+    "",
+    "## Rejection Counts",
+    "",
+  ];
+
+  for (const [reason, count] of Object.entries(report.rejections.counts)) {
+    lines.push(`- ${reason}: ${count}`);
+  }
+
+  lines.push("", "## Candidate Sources", "");
+  lines.push("| Source | Selected | Unique candidates | Items | Existing | Duplicates | Limit skipped |");
+  lines.push("|---|---:|---:|---:|---:|---:|---:|");
+  for (const [source, row] of Object.entries(report.candidates.sources)) {
+    lines.push(
+      `| ${markdownEscape(source)} | ${row.selected || 0} | ${row.candidates || 0} | ` +
+      `${row.items || 0} | ${row.existingRepos || 0} | ${row.duplicateRepos || 0} | ${row.candidateLimitSkipped || 0} |`
+    );
+  }
+
+  lines.push("", "## Unconfirmed Organizations", "");
+  if (report.rejections.unconfirmedOrganizations.length === 0) {
+    lines.push("No unconfirmed organizations in this run.");
+  } else {
+    lines.push("| Owner | Repo | Website | Sources |");
+    lines.push("|---|---|---|---|");
+    for (const item of report.rejections.unconfirmedOrganizations) {
+      lines.push(
+        `| [${markdownEscape(item.ownerLogin)}](${item.ownerUrl}) | ` +
+        `[${markdownEscape(item.repoFullName)}](${item.repoUrl}) | ` +
+        `${markdownEscape(item.detail || "")} | ${markdownEscape(item.sourceQueries.join(", "))} |`
+      );
+    }
+  }
+
+  lines.push("", "## Accepted Repos", "");
+  if (report.results.accepted.length === 0) {
+    lines.push("No repos accepted in this run.");
+  } else {
+    lines.push("| Owner | Repo | Skills | Existing owner | Sources |");
+    lines.push("|---|---|---:|---|---|");
+    for (const item of report.results.accepted) {
+      lines.push(
+        `| [${markdownEscape(item.ownerLogin)}](${item.ownerUrl}) | ` +
+        `[${markdownEscape(item.repoFullName)}](${item.repoUrl}) | ` +
+        `${item.skillCount} | ${item.existingOwner ? "yes" : "no"} | ` +
+        `${markdownEscape(item.sourceQueries.join(", "))} |`
+      );
+    }
+  }
+
+  return `${lines.join("\n")}\n`;
+}
+
+async function writeDiscoveryReport() {
+  const rejectionCounts = asObject(rejectionReasons);
+  const rejectionSamplesObject = asObject(rejectionSamples);
+  const report = {
+    run: {
+      id: reportId,
+      generatedAt: now,
+      dryRun: DRY_RUN,
+      dataPath: path.relative(root, DATA_PATH),
+      reportsDir: path.relative(root, REPORTS_DIR),
+      pushedLabel,
+      config: {
+        windowDays: WINDOW_DAYS,
+        startDate: START_DATE,
+        endDate: END_DATE,
+        searchPages: SEARCH_PAGES,
+        maxCandidates: MAX_CANDIDATES,
+        rejectionSampleLimit: REJECTION_SAMPLE_LIMIT,
+        skipSearch: SKIP_SEARCH,
+      },
+    },
+    candidates: {
+      searchItems: candidateStats.searchItems,
+      totalUnique: totalUniqueCandidates,
+      selected: candidates.size,
+      forks: candidateStats.forks,
+      existingRepos: candidateStats.existingRepos,
+      duplicateRepos: candidateStats.duplicateRepos,
+      candidateLimitSkipped: candidateStats.candidateLimitSkipped,
+      sources: asObject(candidateSourceStats),
+    },
+    rejections: {
+      counts: rejectionCounts,
+      samples: rejectionSamplesObject,
+      all: rejectedItems,
+      unconfirmedOrganizations: rejectedItems.filter((item) =>
+        item.reason === "not company-confirmed or GitHub verified"
+      ),
+    },
+    results: {
+      addedOwners,
+      addedRepos,
+      accepted: acceptedItems,
+    },
+    directory: {
+      owners: directory.stats.owners,
+      repos: directory.stats.repos,
+      skills: directory.stats.skills,
+    },
+  };
+
+  await fs.mkdir(REPORTS_DIR, { recursive: true });
+  const json = `${JSON.stringify(report, null, 2)}\n`;
+  const markdown = buildMarkdownReport(report);
+  await fs.writeFile(path.join(REPORTS_DIR, `${reportId}.json`), json);
+  await fs.writeFile(path.join(REPORTS_DIR, `${reportId}.md`), markdown);
+  await fs.writeFile(path.join(REPORTS_DIR, "latest.json"), json);
+  await fs.writeFile(path.join(REPORTS_DIR, "latest.md"), markdown);
+  console.log(`\nWrote discovery report: ${path.relative(root, path.join(REPORTS_DIR, `${reportId}.json`))}`);
+  console.log(`Wrote latest discovery report: ${path.relative(root, path.join(REPORTS_DIR, "latest.md"))}`);
+}
+
+if (!DRY_RUN) {
+  await writeDiscoveryReport();
 }
 
 console.log("\nRejection summary:");
