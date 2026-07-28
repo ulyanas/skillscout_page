@@ -34,6 +34,7 @@ jobs:
           DISCOVERY_SEARCH_PAGES: '2'
           DISCOVERY_MAX_CANDIDATES: '600'
           DISCOVERY_REJECTION_SAMPLE_LIMIT: '5'
+          DISCOVERY_REPORTS_OUTPUT: .discovery-reports
 
       - name: Enrich skill trees + star counts
         run: node scripts/enrich_github_skills.mjs
@@ -46,13 +47,13 @@ jobs:
         run: |
           git config user.email "github-actions@github.com"
           git config user.name  "GitHub Actions"
-          git add docs/data/official-skills-universal.json docs/data/discovery-reports
+          git add docs/data/official-skills-universal.json
           if git diff --staged --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No discovery output changed"
             exit 0
           fi
-          git commit -m "chore: save skill discovery run $(date -u +%Y-%m-%d)"
+          git commit -m "chore: refresh discovered skill data $(date -u +%Y-%m-%d)"
           git pull --rebase
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"

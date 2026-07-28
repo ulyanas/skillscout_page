@@ -23,7 +23,7 @@
  *   DISCOVERY_SEARCH_PAGES  optional — GitHub pages per search query (default: 5)
  *   DISCOVERY_MAX_CANDIDATES optional — max candidate repos to verify per run (default: 2500)
  *   DISCOVERY_REJECTION_SAMPLE_LIMIT optional — sample repos to print per rejection reason (default: 5)
- *   DISCOVERY_REPORTS_OUTPUT optional — report directory (default: docs/data/discovery-reports)
+ *   DISCOVERY_REPORTS_OUTPUT optional — report directory (default: .discovery-reports)
  *   DISCOVERY_SKIP_SEARCH   optional — set to 1 to process manual seeds only
  *   DISCOVERY_SEED_REPOS    optional — comma/space/newline separated repo URLs or owner/repo keys
  *   DISCOVERY_SEED_ORGS     optional — comma/space/newline separated GitHub org URLs or logins
@@ -41,7 +41,7 @@ const DATA_PATH =
   path.join(root, "docs", "data", "official-skills-universal.json");
 const REPORTS_DIR =
   process.env.DISCOVERY_REPORTS_OUTPUT ||
-  path.join(root, "docs", "data", "discovery-reports");
+  path.join(root, ".discovery-reports");
 
 const GITHUB_TOKEN    = process.env.GITHUB_TOKEN;
 const COMPANIES_KEY   = process.env.COMPANIES_API_KEY;
