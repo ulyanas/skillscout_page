@@ -33,6 +33,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { shouldCatalogSkillFilePath } from "./skill_path_filters.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
@@ -169,7 +170,6 @@ const codeQueries = [
   ['SKILL.md containing "allowed-tools"', 'filename:SKILL.md "allowed-tools"'],
   ['SKILL.md containing "description:"', 'filename:SKILL.md "description:"'],
   ["SKILL.md under skills path", "filename:SKILL.md path:skills"],
-  ["SKILL.md under .agents path", "filename:SKILL.md path:.agents"],
   ["all uppercase SKILL.md files", "filename:SKILL.md"],
   ["all lowercase skill.md files", "filename:skill.md"],
 ];
@@ -618,7 +618,7 @@ async function getSkillPaths(repoFullName) {
       if (item.type !== "blob") continue;
       const match = item.path.match(SKILL_RE);
       if (!match) continue;
-      if (isTemplateSkillFilePath(item.path)) continue;
+      if (!shouldCatalogSkillFilePath(item.path)) continue;
       const suffix = `/${match[1]}`;
       paths.push(
         item.path === match[1]
@@ -675,10 +675,6 @@ function reject(reason, info, detail = "") {
 
 function mergeList(existing, additions) {
   return [...new Set([...(existing || []), ...additions].filter(Boolean))];
-}
-
-function isTemplateSkillFilePath(filePath) {
-  return /(^|\/)templates?\/skill\/SKILL\.md$/i.test(filePath);
 }
 
 for (const [, info] of candidates) {

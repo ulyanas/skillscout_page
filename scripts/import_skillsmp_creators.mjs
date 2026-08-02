@@ -27,6 +27,7 @@ import { execFileSync } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { isAgentRuntimeSkillPath, shouldCatalogSkillFilePath } from "./skill_path_filters.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
@@ -310,7 +311,8 @@ async function processCreator(creator) {
     if (login.toLowerCase() !== creator.profile.login.toLowerCase()) continue;
 
     const repoKey = repoFullName.toLowerCase();
-    const skillRecords = detail.skillRecordsByRepo.get(repoKey) || [];
+    const skillRecords = (detail.skillRecordsByRepo.get(repoKey) || [])
+      .filter((record) => !isAgentRuntimeSkillPath(record.skillPath));
     if (skillRecords.length === 0) continue;
     const detailSkillCount = skillRecords.length;
     const existingRepo = reposByKey.get(repoKey);
@@ -358,6 +360,7 @@ async function fetchCreatorDetail(ownerSlug) {
   while ((match = githubSkillUrlRe.exec(text))) {
     const record = parseGithubSkillUrl(match[0]);
     if (!record) continue;
+    if (isAgentRuntimeSkillPath(record.skillPath)) continue;
     const [login] = record.repoFullName.split("/");
     if (login.toLowerCase() !== ownerSlug.toLowerCase()) continue;
     repoFullNames.add(record.repoFullName);
@@ -618,7 +621,7 @@ async function getSkillPaths(repoFullName, defaultBranch, allowedSkillSlugs = ne
       if (item.type !== "blob") continue;
       const match = item.path.match(/(?:^|\/)(skill\.md)$/i);
       if (!match) continue;
-      if (isTemplateSkillFilePath(item.path)) continue;
+      if (!shouldCatalogSkillFilePath(item.path)) continue;
       const suffix = `/${match[1]}`;
       paths.push(
         item.path === match[1]
@@ -632,10 +635,6 @@ async function getSkillPaths(repoFullName, defaultBranch, allowedSkillSlugs = ne
     return { paths: unique(filteredPaths), truncated: Boolean(data.truncated) };
   }
   return { paths: [], truncated: false };
-}
-
-function isTemplateSkillFilePath(filePath) {
-  return /(^|\/)templates?\/skill\/SKILL\.md$/i.test(filePath);
 }
 
 async function githubGraphql(query, variables) {
@@ -714,6 +713,7 @@ function refreshStats() {
 }
 
 async function persistDirectory(label) {
+  removeAgentRuntimeSkills();
   removeInvalidOwners();
   refreshTouchedOwnerCounts(touchedOwnerKeys);
   sortDirectory();
@@ -727,6 +727,45 @@ function sortDirectory() {
   directory.officialOwners.sort((a, b) => a.ownerKey.localeCompare(b.ownerKey));
   directory.officialRepos.sort((a, b) => a.repoKey.localeCompare(b.repoKey));
   directory.officialSkills.sort((a, b) => a.skillKey.localeCompare(b.skillKey));
+}
+
+function removeAgentRuntimeSkills() {
+  const beforeSkills = directory.officialSkills.length;
+  const beforeRepos = directory.officialRepos.length;
+
+  directory.officialSkills = directory.officialSkills.filter((skill) => {
+    const keep = !isAgentRuntimeSkillPath(skill.skillKey);
+    if (!keep) skillsByKey.delete(skill.skillKey);
+    return keep;
+  });
+
+  const repoKeysWithSkills = new Set(
+    directory.officialSkills
+      .map((skill) => skill.repoKey)
+      .filter(Boolean)
+  );
+
+  const invalidRepoKeys = new Set();
+  for (const repo of directory.officialRepos) {
+    if (Array.isArray(repo.githubSkillPaths)) {
+      repo.githubSkillPaths = repo.githubSkillPaths.filter((skillPath) => !isAgentRuntimeSkillPath(skillPath));
+    }
+    if (!repoKeysWithSkills.has(repo.repoKey)) {
+      invalidRepoKeys.add(repo.repoKey);
+    }
+  }
+
+  directory.officialRepos = directory.officialRepos.filter((repo) => !invalidRepoKeys.has(repo.repoKey));
+  for (const repoKey of invalidRepoKeys) {
+    reposByKey.delete(repoKey);
+    skillCountByRepoKey.delete(repoKey);
+  }
+
+  const removedSkills = beforeSkills - directory.officialSkills.length;
+  const removedRepos = beforeRepos - directory.officialRepos.length;
+  if (removedSkills || removedRepos) {
+    console.log(`  removed ${removedSkills} agent runtime skills and ${removedRepos} empty repos`);
+  }
 }
 
 function removeInvalidOwners() {

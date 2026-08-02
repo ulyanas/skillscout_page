@@ -15,6 +15,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { shouldCatalogSkillFilePath } from "./skill_path_filters.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
@@ -52,9 +53,6 @@ function normalize(s) {
   return String(s || "").toLowerCase().replace(/[^a-z0-9._\/-]+/g, "-").replace(/^-+|-+$/g, "");
 }
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
-function isTemplateSkillFilePath(filePath) {
-  return /(^|\/)templates?\/skill\/SKILL\.md$/i.test(filePath);
-}
 function normalizeWebsiteUrl(value) {
   const raw = String(value || "").trim();
   if (!raw) return "";
@@ -131,7 +129,7 @@ async function getSkillPaths(repoFullName) {
     if (item.type !== "blob") continue;
     const m = item.path.match(SKILL_RE);
     if (!m) continue;
-    if (isTemplateSkillFilePath(item.path)) continue;
+    if (!shouldCatalogSkillFilePath(item.path)) continue;
     const suffix = "/" + m[1];
     paths.push(
       item.path === m[1]

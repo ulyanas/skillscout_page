@@ -9,6 +9,7 @@ import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { isAgentRuntimeSkillPath, shouldCatalogSkillFilePath } from "./skill_path_filters.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -42,6 +43,7 @@ if (GITHUB_SKILL_TREES_ENABLED) {
 } else {
   console.log("GitHub skill tree fetching skipped by GITHUB_SKILL_TREES=0");
 }
+removeAgentRuntimeSkills(directory);
 if (SKILLS_SH_INSTALLS_ENABLED) {
   await enrichWithSkillsShInstalls(directory);
 }
@@ -142,7 +144,7 @@ async function fetchGitHubRepoSkillPaths(repo) {
       if (item.type !== "blob") continue;
       const match = item.path.match(SKILL_RE);
       if (!match) continue;
-      if (isTemplateSkillFilePath(item.path)) continue;
+      if (!shouldCatalogSkillFilePath(item.path)) continue;
       if (skillPathPrefixes.length && !skillPathPrefixes.some((prefix) => item.path.startsWith(prefix))) {
         continue;
       }
@@ -165,7 +167,13 @@ function reconcileSkillsWithGitHub(directory) {
   const githubByRepo = new Map();
   for (const repo of directory.officialRepos) {
     if (repo.githubSkillPaths) {
-      githubByRepo.set(repo.repoKey, new Set(repo.githubSkillPaths));
+      const skillPaths = repo.githubSkillPaths.filter((skillPath) => !isAgentRuntimeSkillPath(skillPath));
+      if (skillPaths.length !== repo.githubSkillPaths.length) {
+        repo.githubSkillPaths = skillPaths;
+      }
+      if (skillPaths.length) {
+        githubByRepo.set(repo.repoKey, new Set(skillPaths));
+      }
     }
   }
   if (!githubByRepo.size) return;
@@ -721,6 +729,33 @@ function removeOwnersWithoutSkills(directory) {
   console.log(`Removed ${invalidOwnerKeys.size} owners without skill records`);
 }
 
+function removeAgentRuntimeSkills(directory) {
+  const beforeSkills = directory.officialSkills.length;
+  const beforeRepos = directory.officialRepos.length;
+
+  directory.officialSkills = directory.officialSkills.filter((skill) => !isAgentRuntimeSkillPath(skill.skillKey));
+
+  const repoKeysWithSkills = new Set(
+    directory.officialSkills
+      .map((skill) => skill.repoKey)
+      .filter(Boolean)
+  );
+
+  for (const repo of directory.officialRepos) {
+    if (Array.isArray(repo.githubSkillPaths)) {
+      repo.githubSkillPaths = repo.githubSkillPaths.filter((skillPath) => !isAgentRuntimeSkillPath(skillPath));
+    }
+  }
+
+  directory.officialRepos = directory.officialRepos.filter((repo) => repoKeysWithSkills.has(repo.repoKey));
+
+  const removedSkills = beforeSkills - directory.officialSkills.length;
+  const removedRepos = beforeRepos - directory.officialRepos.length;
+  if (removedSkills || removedRepos) {
+    console.log(`Removed ${removedSkills} agent runtime skills and ${removedRepos} empty repos`);
+  }
+}
+
 // ── Star count enrichment ─────────────────────────────────────────────────────
 // Fetches real stargazers_count from GitHub for repos with starsCount === 0
 // (typically newly discovered vendors). Aggregates totals up to the owner level.
@@ -792,10 +827,6 @@ function normalizeKey(value) {
     .replace(/&amp;/g, "and")
     .replace(/[^a-z0-9._/-]+/g, "-")
     .replace(/^-+|-+$/g, "");
-}
-
-function isTemplateSkillFilePath(filePath) {
-  return /(^|\/)templates?\/skill\/SKILL\.md$/i.test(filePath);
 }
 
 function addUnique(list, value) {

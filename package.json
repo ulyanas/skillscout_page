@@ -8,6 +8,7 @@
     "scrape:official-skills": "node scripts/scrape_official_skills.mjs",
     "import:skillsmp-creators": "node scripts/import_skillsmp_creators.mjs",
     "enrich:github-skills": "node scripts/enrich_github_skills.mjs",
-    "enrich:owner-metadata": "node scripts/enrich_owner_metadata.mjs"
+    "enrich:owner-metadata": "node scripts/enrich_owner_metadata.mjs",
+    "clean:agent-runtime-skills": "node scripts/remove_agent_runtime_skills.mjs"
   }
 }

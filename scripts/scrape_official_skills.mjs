@@ -3,6 +3,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { applyOwnerMetadataOverrides } from "./owner_metadata_overrides.mjs";
+import { isAgentRuntimeSkillPath, shouldCatalogSkillFilePath } from "./skill_path_filters.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -52,6 +53,7 @@ aggregateOwnerStars(directory);
 await mergeDiscoveredVendors(directory);
 await preserveExistingFirstSeenDates(directory);
 applyOwnerMetadataOverrides(directory);
+removeAgentRuntimeSkills(directory);
 removeInvalidOwners(directory);
 refreshDirectoryStats(directory);
 
@@ -406,6 +408,7 @@ async function fetchGitHubRepoSkillPaths(repoKey) {
       if (item.type !== "blob") continue;
       const match = item.path.match(SKILL_RE);
       if (!match) continue;
+      if (!shouldCatalogSkillFilePath(item.path)) continue;
 
       if (item.path === match[1]) {
         skillPaths.push(normalizeKey(repoKey.split("/")[1]));
@@ -427,7 +430,13 @@ function reconcileSkillsWithGitHub(directory) {
   const githubByRepo = new Map();
   for (const repo of directory.officialRepos) {
     if (repo.githubSkillPaths) {
-      githubByRepo.set(repo.repoKey, new Set(repo.githubSkillPaths));
+      const skillPaths = repo.githubSkillPaths.filter((skillPath) => !isAgentRuntimeSkillPath(skillPath));
+      if (skillPaths.length !== repo.githubSkillPaths.length) {
+        repo.githubSkillPaths = skillPaths;
+      }
+      if (skillPaths.length) {
+        githubByRepo.set(repo.repoKey, new Set(skillPaths));
+      }
     }
   }
   if (!githubByRepo.size) return;
@@ -1113,6 +1122,33 @@ function removeInvalidOwners(directory) {
   directory.officialSkills = directory.officialSkills.filter(
     (skill) => !invalidOwnerKeys.has(skill.ownerKey) && !invalidRepoKeys.has(skill.repoKey)
   );
+}
+
+function removeAgentRuntimeSkills(directory) {
+  const beforeSkills = directory.officialSkills.length;
+  const beforeRepos = directory.officialRepos.length;
+
+  directory.officialSkills = directory.officialSkills.filter((skill) => !isAgentRuntimeSkillPath(skill.skillKey));
+
+  const repoKeysWithSkills = new Set(
+    (directory.officialSkills || [])
+      .map((skill) => skill.repoKey)
+      .filter(Boolean)
+  );
+
+  for (const repo of directory.officialRepos || []) {
+    if (Array.isArray(repo.githubSkillPaths)) {
+      repo.githubSkillPaths = repo.githubSkillPaths.filter((skillPath) => !isAgentRuntimeSkillPath(skillPath));
+    }
+  }
+
+  directory.officialRepos = directory.officialRepos.filter((repo) => repoKeysWithSkills.has(repo.repoKey));
+
+  const removedSkills = beforeSkills - directory.officialSkills.length;
+  const removedRepos = beforeRepos - directory.officialRepos.length;
+  if (removedSkills || removedRepos) {
+    console.log(`Removed ${removedSkills} agent runtime skills and ${removedRepos} empty repos`);
+  }
 }
 
 function isInvalidOfficialOwner(owner) {
