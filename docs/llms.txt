@@ -6,6 +6,7 @@
 
 - [Homepage](https://skillscout.sh/): Product overview, core value proposition, and the main call to install the Chrome extension.
 - [Guides](https://skillscout.sh/guides/): Collection of articles about AI and agentic skills.
+- [Agentic Resource Discovery](https://skillscout.sh/guides/agentic-resource-discovery/): Explains the ARD standard and shows how to find Skills, MCP servers, tools, and agents with Agent Finder, Skillscout, Hugging Face Discover, and gh skill.
 - [AI Agent Skills for Product Marketing](https://skillscout.sh/guides/ai-agent-skill-product-marketing/): Explains how marketers can design a product skill, connect it to product access, publish it in skill marketplaces, earn visibility, and create a useful sharing loop.
 - [Viral AI Agent Skills](https://skillscout.sh/guides/viral-ai-agent-skills/): Explains why Ponytail, Caveman, Grill Me, Find Skills, and other popular agent skills spread, what they do, and how to evaluate them.
 - [Official AI Agent Skills Statistics](https://skillscout.sh/guides/official-ai-agent-skills-statistics/): Analyzes official skills by company, repos, skill themes, install signals, GitHub stars, and covered software segments.
