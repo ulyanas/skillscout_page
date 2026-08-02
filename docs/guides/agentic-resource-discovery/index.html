@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Agentic Resource Discovery for AI Agents | Skillscout</title>
-    <meta name="description" content="Learn how Agentic Resource Discovery works and find Skills, MCP servers, tools, and agents with Agent Finder, Skillscout, and hf-discover in practice." />
+    <meta name="description" content="Learn how Agentic Resource Discovery works and find Skills, MCP servers, tools, and agents with GitHub Agent Finder, hf-discover, and gh skill." />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="canonical" href="https://skillscout.sh/guides/agentic-resource-discovery/" />
     <script src="/assets/telemetry.js"></script>
@@ -12,7 +12,7 @@
     <script src="/assets/site-shell.js?v=20260724-1"></script>
     <script src="/assets/posthog-init.js"></script>
     <meta property="og:title" content="Agentic Resource Discovery: How Agents Find Resources" />
-    <meta property="og:description" content="Find Agent Skills, MCP servers, tools, and agents with GitHub Agent Finder, Skillscout, Hugging Face Discover, and gh skill." />
+    <meta property="og:description" content="Find Agent Skills, MCP servers, tools, and agents with GitHub Agent Finder, Hugging Face Discover, and gh skill." />
     <meta property="og:site_name" content="Skillscout" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://skillscout.sh/guides/agentic-resource-discovery/" />
@@ -20,7 +20,7 @@
     <meta property="og:image:alt" content="AI agent using Agentic Resource Discovery to find a useful tool in a connected resource catalog." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Agentic Resource Discovery: How Agents Find Resources" />
-    <meta name="twitter:description" content="Find Agent Skills, MCP servers, tools, and agents with GitHub Agent Finder, Skillscout, Hugging Face Discover, and gh skill." />
+    <meta name="twitter:description" content="Find Agent Skills, MCP servers, tools, and agents with GitHub Agent Finder, Hugging Face Discover, and gh skill." />
     <meta name="twitter:image" content="https://skillscout.sh/assets/guides/agentic-resource-discovery-hero.jpg" />
     <meta name="twitter:image:alt" content="AI agent using Agentic Resource Discovery to find a useful tool in a connected resource catalog." />
     <link rel="icon" href="../../assets/skillscout-mark-48.png" />
@@ -35,7 +35,7 @@
       "@type": "Article",
       "@id": "https://skillscout.sh/guides/agentic-resource-discovery/#article",
       "headline": "Agentic Resource Discovery: How Agents Find Resources",
-      "description": "Learn how Agentic Resource Discovery works and find Skills, MCP servers, tools, and agents with Agent Finder, Skillscout, and hf-discover in practice.",
+      "description": "Learn how Agentic Resource Discovery works and find Skills, MCP servers, tools, and agents with GitHub Agent Finder, hf-discover, and gh skill.",
       "author": {
         "@type": "Organization",
         "name": "Skillscout"
@@ -422,32 +422,6 @@ find a tool that extracts tables from scanned PDFs</code></pre>
           collection.
         </p>
 
-        <h2>How to find official Agent Skills with Skillscout</h2>
-        <p>
-          The
-          <a href="https://skillscout.sh/official/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agentic-resource-discovery">Skillscout Official Skills directory</a>
-          focuses on Skills published from vendor-owned repositories. Use it when publisher
-          identity matters or when a broad discovery result needs a first-party option.
-        </p>
-        <ol>
-          <li>Open the Official Skills directory.</li>
-          <li>Search by vendor, product, repository, or task keyword.</li>
-          <li>Sort by popularity, recent additions, installs, number of Skills, or GitHub stars.</li>
-          <li>Open a vendor page to see its Skills and source repositories.</li>
-          <li>Copy the install command for a complete package or an individual Skill.</li>
-        </ol>
-        <p>
-          The
-          <a href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agentic-resource-discovery" data-telemetry-event="Extension.downloadClicked" data-telemetry-placement="guide-agentic-resource-discovery-inline">Skillscout Chrome extension</a>
-          adds a page-aware search path. Open it while browsing a product or documentation site.
-          Skillscout detects the current site, searches supported Skill catalogs, and prioritizes
-          relevant official Skills when they are available.
-        </p>
-        <p>
-          Skillscout covers Agent Skills. It works well after a broad search identifies a product
-          or vendor and you want to check for a first-party Skill.
-        </p>
-
         <h2>How to find resources with Hugging Face Discover</h2>
         <p>
           <a href="https://github.com/huggingface/hf-discover?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agentic-resource-discovery">Hugging Face Discover</a>
@@ -550,8 +524,7 @@ gh skill update --dry-run</code></pre>
         </ol>
         <p>
           For GitHub-hosted Skills, <code>gh skill preview</code> provides a convenient inspection
-          step. Skillscout helps confirm publisher ownership, repository sources, and available
-          installation commands for official Skills.
+          step before installation.
         </p>
 
         <h2>Start with the task, then verify the source</h2>
@@ -561,10 +534,8 @@ gh skill update --dry-run</code></pre>
           <code>gh skill</code> handles discovery and installation for Skills stored on GitHub.
         </p>
         <p>
-          Describe the task, search an approved finder, inspect the matches, and verify the source.
-          Use the
-          <a href="https://skillscout.sh/official/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=agentic-resource-discovery">Skillscout Official Skills directory</a>
-          when the result should come from the product's own repository.
+          Describe the task, search an approved finder, inspect the matches, verify the source, and
+          connect only the selected resource.
         </p>
 
         <div class="related">
