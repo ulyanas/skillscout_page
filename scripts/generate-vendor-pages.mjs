@@ -26,6 +26,7 @@ const VENDOR_BIOS = {
   figma: "Figma is a collaborative design platform for interface design, prototyping, and product workflows.",
   firecrawl: "Firecrawl provides web crawling and extraction tools for turning websites into structured data.",
   flutter: "Flutter is Google's open-source UI toolkit for building apps across mobile, web, and desktop.",
+  frappe: "Frappe builds open-source software products and developer tools for Frappe Framework apps, UI components, file storage, and team workflows.",
   github: "GitHub is a developer platform for hosting code, collaborating on repositories, and automating software workflows.",
   getsentry: "Sentry helps software teams monitor errors, performance issues, and production problems in applications.",
   makenotion: "Notion is a connected workspace for notes, docs, projects, databases, and team knowledge.",
@@ -37,6 +38,77 @@ const VENDOR_BIOS = {
   supabase: "Supabase is an open-source backend platform with Postgres, auth, storage, realtime, and edge functions.",
   vercel: "Vercel is a frontend cloud platform for building, previewing, and deploying web applications.",
   "vercel-labs": "Vercel Labs publishes experimental tools and examples for modern web and AI application development."
+};
+
+const README_OVERRIDES = {
+  "frappe/skills": {
+    title: "README from frappe/skills",
+    intro:
+      'A collection of agent skills for building <a href="https://frappeframework.com/?utm_source=skillscout&amp;utm_medium=vendor_page&amp;utm_campaign=official_vendor_frappe" target="_blank" rel="noopener noreferrer">Frappe Framework</a> applications, plus general skills for code style, code review, writing, and UI design.',
+    skills: [
+      [
+        "frappe-app-dev",
+        "Full-stack Frappe: DocTypes, controllers, APIs, database/ORM, hooks, permissions, jobs, realtime, caching, testing, app setup, frontend, and bench CLI."
+      ],
+      [
+        "quality-code-review",
+        "Review checklist for Frappe applications: correctness, security, performance, concurrency, readability, API design, and testing."
+      ],
+      ["code-style", "General code style rules for readable, maintainable implementation."],
+      [
+        "technical-writing",
+        "Documentation, READMEs, commits, pull requests, and release notes in Simplified Technical English."
+      ],
+      [
+        "ui-design",
+        "General UI/UX design principles for layout, hierarchy, spacing, typography, color, and accessibility."
+      ],
+      [
+        "draft-security-advisory",
+        "Write a publication-ready GitHub Security Advisory from a vulnerability report: Impact and Workarounds body, CVSS, CWE, versions, and credits."
+      ]
+    ],
+    installCommands: [
+      ["Install all skills from the repository:", "npx skills add frappe/skills"],
+      ["Install a single skill:", "npx skills add frappe/skills --skill frappe-app-dev"],
+      [
+        "Install several at once:",
+        "npx skills add frappe/skills \\\n  --skill frappe-app-dev --skill code-style --skill ui-design"
+      ]
+    ],
+    usage:
+      "Most skills activate automatically when you ask your agent about a matching task. Examples: create a DocType, build a Vue SPA, run `bench migrate`, review a diff, write a commit message, or lay out a page. Some skills only run when you call them. Run `/draft-security-advisory` to start that skill."
+  }
+};
+
+const PACK_DESCRIPTION_OVERRIDES = {
+  "frappe/skills":
+    "Agent skills for Frappe App development. Covers full-stack Frappe app work, code style, UI design, code review, technical writing, security advisories, and backport conflict resolution.",
+  "frappe/frappe-ui":
+    "Frappe UI package for building consistent Vue 3 interfaces with Frappe components, semantic Tailwind tokens, and canonical UI patterns.",
+  "frappe/drive":
+    "Frappe Drive package with UI guidance for open-source file storage, sharing, and collaboration workflows."
+};
+
+const SKILL_DESCRIPTION_OVERRIDES = {
+  "frappe/skills:frappe-app-dev":
+    "Builds full-stack Frappe Framework applications end-to-end: DocTypes, controllers, APIs, hooks, permissions, jobs, testing, Desk/Vue frontend, and bench workflows.",
+  "frappe/skills:code-style":
+    "Applies readable implementation rules for code structure, file size, comments, helper ordering, and refactoring shape.",
+  "frappe/skills:ui-design":
+    "Gives the agent UI/UX judgment for layout, visual hierarchy, spacing, typography, color, accessibility, and product polish.",
+  "frappe/skills:quality-code-review":
+    "Reviews Frappe application code for correctness, security, performance, concurrency, readability, API design, testing, and observability.",
+  "frappe/skills:draft-security-advisory":
+    "Turns a vulnerability report into a publication-ready GitHub Security Advisory with impact, workarounds, CVSS, CWE, and credits.",
+  "frappe/skills:technical-writing":
+    "Writes documentation, READMEs, commits, pull requests, plans, and release notes in Simplified Technical English.",
+  "frappe/skills:resolve-backport-conflicts":
+    "Resolves merge conflicts in Mergify backport pull requests by comparing the target branch with the original pull request.",
+  "frappe/frappe-ui:frappe-ui":
+    "Builds consistent Frappe-style user interfaces with the frappe-ui Vue 3 component library, semantic Tailwind tokens, and canonical component patterns.",
+  "frappe/drive:frappe-ui":
+    "Builds consistent Frappe-style user interfaces with the frappe-ui Vue 3 component library, semantic Tailwind tokens, and canonical component patterns."
 };
 
 const GITHUB_ICON = `
@@ -102,6 +174,11 @@ for (const [position, owner] of selectedOwners.entries()) {
   await fs.writeFile(
     path.join(VENDOR_DATA_DIR, `${owner.ownerKey}.json`),
     JSON.stringify(renderVendorSearchData(model, entries)),
+    "utf8"
+  );
+  await fs.writeFile(
+    path.join(pageDir, getVendorMarkdownFilename(owner.ownerKey)),
+    renderVendorMarkdown(model),
     "utf8"
   );
 
@@ -290,13 +367,14 @@ function renderVendorPage(
   const campaign = `official_vendor_${model.ownerKey}`;
   const repoCount = model.packs.length;
   const skillCount = model.skillsCount || model.skills.length;
-  const prompt = `Open https://skillscout.sh/official/${model.ownerKey}/ and review the official ${model.displayName} skills. Recommend the relevant skills for my project, then install the packages I approve with the npx commands on the page.`;
   const isFirstPage = pageNumber === 1;
   const pageSuffix = isFirstPage ? "" : ` - Page ${pageNumber}`;
   const pageTitle = createPageTitle(model.displayName, pageSuffix);
   const canonicalUrl = isFirstPage
     ? `https://skillscout.sh/official/${model.ownerKey}/`
     : `https://skillscout.sh/official/${model.ownerKey}/page/${pageNumber}/`;
+  const vendorMarkdownUrl = `https://skillscout.sh/official/${model.ownerKey}/${getVendorMarkdownFilename(model.ownerKey)}`;
+  const prompt = `Read ${vendorMarkdownUrl}. Recommend the relevant ${model.displayName} skills package or packages for my goal, explain which individual skills matter, and wait for my approval. After I approve, install with the npx command. If no project is open, install it as an agent skill I can use later.`;
   const visibleSkillCount = pagePacks.reduce(
     (total, pack) => total + pack.skills.length,
     0
@@ -307,6 +385,7 @@ function renderVendorPage(
       ? `${formatNumber(skillCount)} skills`
       : `${formatNumber(startIndex + 1)}-${formatNumber(visibleEnd)} of ${formatNumber(skillCount)} skills`;
   const structuredData = renderStructuredData(model, canonicalUrl, pageNumber);
+  const metaDescription = createMetaDescription(model, skillCount, repoCount);
 
   return `<!doctype html>
 <html lang="en">
@@ -315,21 +394,22 @@ function renderVendorPage(
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index, follow" />
     <title>${escapeHtml(pageTitle)}</title>
-    <meta name="description" content="Browse official ${escapeAttr(model.displayName)} AI agent skills, repositories, install commands, and source links." />
+    <meta name="description" content="${escapeAttr(metaDescription)}" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="canonical" href="${escapeAttr(canonicalUrl)}" />
+    <link rel="alternate" type="text/markdown" href="${escapeAttr(`https://skillscout.sh/official/${model.ownerKey}/${getVendorMarkdownFilename(model.ownerKey)}`)}" />
     ${pageNumber > 1 ? `<link rel="prev" href="${escapeAttr(getVendorPageUrl(model.ownerKey, pageNumber - 1))}" />` : ""}
     ${pageNumber < pageCount ? `<link rel="next" href="${escapeAttr(getVendorPageUrl(model.ownerKey, pageNumber + 1))}" />` : ""}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Skillscout" />
     <meta property="og:title" content="${escapeAttr(pageTitle)}" />
-    <meta property="og:description" content="Official ${escapeAttr(model.displayName)} skills, install commands, and source repositories." />
+    <meta property="og:description" content="${escapeAttr(metaDescription)}" />
     <meta property="og:url" content="${escapeAttr(canonicalUrl)}" />
     <meta property="og:image" content="${escapeAttr(model.logoUrl)}" />
     <meta property="og:image:alt" content="${escapeAttr(model.displayName)} logo" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="${escapeAttr(pageTitle)}" />
-    <meta name="twitter:description" content="Official ${escapeAttr(model.displayName)} skills, install commands, and source repositories." />
+    <meta name="twitter:description" content="${escapeAttr(metaDescription)}" />
     <meta name="twitter:image" content="${escapeAttr(model.logoUrl)}" />
     <script src="/assets/telemetry.js"></script>
     <link rel="stylesheet" href="/assets/site-shell.css?v=20260724-official-sparkle" />
@@ -383,10 +463,6 @@ function renderVendorPage(
               ${renderWebsiteIcon()}
               ${escapeHtml(model.websiteHost)}
             </a>
-            <a class="vendor-action" href="${escapeAttr(addUtm(model.githubUrl, campaign))}" target="_blank" rel="noopener noreferrer">
-              ${GITHUB_ICON}
-              GitHub
-            </a>
           </div>
         </div>
         <div class="vendor-metrics" aria-label="${escapeAttr(model.displayName)} skills metrics">
@@ -402,7 +478,7 @@ function renderVendorPage(
           <div>
             <p class="vendor-section-kicker">Install</p>
             <h2 class="vendor-section-title" id="installTitle">Add ${escapeHtml(model.displayName)} skills to your agent</h2>
-            <p class="vendor-section-copy">Copy a package command below or give this prompt to an agent that can install skills.</p>
+            <p class="vendor-section-copy">Install a full repository package, then let your agent activate the right skill for the task.</p>
           </div>
         </div>
         <article class="vendor-install-card prompt-card vendor-prompt-wide">
@@ -418,6 +494,7 @@ function renderVendorPage(
               message: "Prompt copied"
             })}
           </div>
+          <p class="agent-readable-link"><a href="/official/${escapeAttr(model.ownerKey)}/${escapeAttr(getVendorMarkdownFilename(model.ownerKey))}">Agent-readable Markdown</a></p>
         </article>
       </section>` : ""}
 
@@ -478,6 +555,7 @@ function renderVendorPage(
 function renderPack(pack, index, campaign) {
   const commandId = `packInstallCommand${index + 1}`;
   const repoUrl = `https://github.com/${pack.installRepo}`;
+  const description = createPackDescription(pack);
   return `<article class="pack-card">
     <div>
       <div class="pack-title-row">
@@ -487,7 +565,7 @@ function renderPack(pack, index, campaign) {
           <a class="pack-link" href="${escapeAttr(addUtm(repoUrl, campaign))}" target="_blank" rel="noopener noreferrer">${escapeHtml(pack.installRepo)}</a>
         </div>
       </div>
-      <p class="pack-description">${formatNumber(pack.skills.length)} cataloged ${pluralize(pack.skills.length, "skill", "skills")} from this repository.</p>
+      <p class="pack-description">${description}</p>
       <div class="pack-meta">
         <span>${formatNumber(pack.skills.length)} ${pluralize(pack.skills.length, "skill", "skills")}</span>
         <span>${formatNumber(pack.installsCount)} installs</span>
@@ -528,7 +606,7 @@ function renderSkillGroup(pack, index, campaign) {
 
 function renderSkill(skill, pack, campaign) {
   const displayName = skill.displayName || skill.skillName;
-  const description = String(skill.description || "").trim();
+  const description = createSkillDescription(skill, pack);
   const sourceUrl = getSkillSourceUrl(skill, pack.installRepo);
   const command = `npx skills add ${pack.installRepo}@${skill.skillName} -y`;
   const searchText = [
@@ -565,12 +643,13 @@ function renderSkill(skill, pack, campaign) {
 function renderReadme(model, campaign) {
   if (!model.readmeRepo) return "";
   const repoKey = model.readmeRepo.installRepo;
+  const readme = README_OVERRIDES[repoKey];
 
   return `<section class="vendor-section" aria-labelledby="readmeTitle">
     <div class="vendor-section-header">
       <div>
         <p class="vendor-section-kicker">Repository documentation</p>
-        <h2 class="vendor-section-title" id="readmeTitle">Package README</h2>
+        <h2 class="vendor-section-title" id="readmeTitle">${escapeHtml(readme?.title || "Package README")}</h2>
       </div>
     </div>
     <article class="readme-shell">
@@ -582,17 +661,90 @@ function renderReadme(model, campaign) {
           </svg>
           ${escapeHtml(repoKey)}/README.md
         </span>
-        <a class="readme-source" href="${escapeAttr(addUtm(`https://github.com/${repoKey}#readme`, campaign))}" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        <a class="readme-source" href="${escapeAttr(addUtm(`https://github.com/${repoKey}`, campaign))}#readme" target="_blank" rel="noopener noreferrer">View on GitHub</a>
       </div>
-      <div class="readme-content readme-link-content">
+      ${readme ? renderReadmeOverride(readme) : renderReadmeLink(repoKey, campaign)}
+    </article>
+  </section>`;
+}
+
+function renderReadmeOverride(readme) {
+  return `<div class="readme-content">
+        <h2>${escapeHtml(readme.title.replace(/^README from\s+/i, ""))}</h2>
+        <p>${readme.intro}</p>
+        <h3>Skills</h3>
+        <div class="readme-skill-table">
+          ${readme.skills
+            .map(
+              ([name, description]) =>
+                `<div class="readme-skill-row"><strong>${escapeHtml(name)}</strong><span>${escapeHtml(description)}</span></div>`
+            )
+            .join("\n")}
+        </div>
+        <h3>Install</h3>
+        ${readme.installCommands
+          .map(
+            ([label, command]) =>
+              `<p>${escapeHtml(label)}</p><pre><code>${escapeHtml(command)}</code></pre>`
+          )
+          .join("\n")}
+        <p>Skills are matched by the <code>name</code> field in each <code>SKILL.md</code> frontmatter, and live under <code>skills/&lt;name&gt;/</code>.</p>
+        <h3>Usage</h3>
+        <p>${renderInlineCode(readme.usage)}</p>
+      </div>`;
+}
+
+function renderReadmeLink(repoKey, campaign) {
+  return `<div class="readme-content readme-link-content">
         <p>Open the repository README for package documentation, setup instructions, and usage examples.</p>
-        <a class="readme-primary-link" href="${escapeAttr(addUtm(`https://github.com/${repoKey}#readme`, campaign))}" target="_blank" rel="noopener noreferrer">
+        <a class="readme-primary-link" href="${escapeAttr(addUtm(`https://github.com/${repoKey}`, campaign))}#readme" target="_blank" rel="noopener noreferrer">
           ${GITHUB_ICON}
           Read ${escapeHtml(repoKey)} README
         </a>
-      </div>
-    </article>
-  </section>`;
+      </div>`;
+}
+
+function createPackDescription(pack) {
+  return escapeHtml(createPackDescriptionText(pack));
+}
+
+function createPackDescriptionText(pack) {
+  const override = PACK_DESCRIPTION_OVERRIDES[pack.installRepo];
+  if (override) return override;
+
+  const repoDescription = cleanVendorDescription(pack.repo.description);
+  const skillNames = pack.skills
+    .map((skill) => skill.displayName || skill.skillName)
+    .filter(Boolean)
+    .slice(0, 6);
+  const skillList = skillNames.join(", ");
+  const countLabel = `${formatNumber(pack.skills.length)} official ${pluralize(pack.skills.length, "skill", "skills")}`;
+  const skillDescriptions = pack.skills
+    .map((skill) => createSkillDescription(skill, pack))
+    .filter(Boolean)
+    .slice(0, 2);
+
+  if (repoDescription && skillList) {
+    return `${repoDescription} Includes ${countLabel}: ${skillList}.`;
+  }
+  if (repoDescription) {
+    return repoDescription;
+  }
+  if (skillDescriptions.length && skillList) {
+    return `Covers ${skillList}. ${skillDescriptions.join(" ")}`;
+  }
+  if (skillList) {
+    return `Includes ${countLabel}: ${skillList}.`;
+  }
+  return `Includes ${countLabel} from this repository.`;
+}
+
+function createSkillDescription(skill, pack) {
+  const overrideKey = `${pack.installRepo}:${skill.skillName}`;
+  const override = SKILL_DESCRIPTION_OVERRIDES[overrideKey];
+  if (override) return override;
+
+  return String(skill.description || "").trim();
 }
 
 function renderPagination(ownerKey, pageNumber, pageCount) {
@@ -736,6 +888,107 @@ function renderVendorSearchData(model, entries) {
   };
 }
 
+function renderVendorMarkdown(model) {
+  const skillCount = Number(model.skillsCount || model.skills.length);
+  const repoCount = Number(model.reposCount || model.packs.length);
+  const pageUrl = `https://skillscout.sh/official/${model.ownerKey}/`;
+  const markdownUrl = `${pageUrl}${getVendorMarkdownFilename(model.ownerKey)}`;
+  const lines = [
+    `# ${model.displayName} AI Agent Skills`,
+    "",
+    model.vendorBio,
+    "",
+    `Browse ${formatNumber(skillCount)} official AI agent ${pluralize(skillCount, "skill", "skills")} across ${formatNumber(repoCount)} ${model.displayName} ${pluralize(repoCount, "repository", "repositories")}, with install commands and source links.`,
+    "",
+    `Official page: ${pageUrl}`,
+    `Markdown page: ${markdownUrl}`,
+    `Vendor website: ${model.website}`,
+    "",
+    "## Prompt for your agent",
+    "",
+    `Read ${markdownUrl}. Recommend the relevant ${model.displayName} skills package or packages for my goal, explain which individual skills matter, and wait for my approval. After I approve, install with the npx command. If no project is open, install it as an agent skill I can use later.`,
+    "",
+    "## Skills packages",
+    ""
+  ];
+
+  for (const pack of model.packs) {
+    lines.push(
+      `### ${pack.installRepo}`,
+      "",
+      createPackDescriptionText(pack),
+      "",
+      "Install:",
+      "",
+      "```bash",
+      `npx skills add ${pack.installRepo} -y`,
+      "```",
+      "",
+      `Source: https://github.com/${pack.installRepo}`,
+      ""
+    );
+  }
+
+  lines.push("## Individual skills", "");
+
+  for (const pack of model.packs) {
+    for (const skill of pack.skills) {
+      const displayName = skill.displayName || skill.skillName;
+      const description = createSkillDescription(skill, pack);
+      lines.push(
+        `### ${displayName}`,
+        "",
+        description || `Official ${model.displayName} skill from ${pack.installRepo}.`,
+        "",
+        "Install:",
+        "",
+        "```bash",
+        `npx skills add ${pack.installRepo}@${skill.skillName} -y`,
+        "```",
+        "",
+        `Package: ${pack.installRepo}`,
+        `Source: ${getSkillSourceUrl(skill, pack.installRepo)}`,
+        ""
+      );
+    }
+  }
+
+  if (model.readmeRepo) {
+    const readme = README_OVERRIDES[model.readmeRepo.installRepo];
+    lines.push(
+      `## README from ${model.readmeRepo.installRepo}`,
+      "",
+      readme
+        ? stripHtml(readme.intro)
+        : "Open the repository README for package documentation, setup instructions, and usage examples.",
+      ""
+    );
+
+    if (readme?.skills?.length) {
+      lines.push("### README skills", "");
+      for (const [name, description] of readme.skills) {
+        lines.push(`- ${name}: ${description}`);
+      }
+      lines.push("");
+    }
+
+    if (readme?.installCommands?.length) {
+      lines.push("### README install commands", "");
+      for (const [label, command] of readme.installCommands) {
+        lines.push(label, "", "```bash", command, "```", "");
+      }
+    }
+
+    if (readme?.usage) {
+      lines.push("### README usage", "", readme.usage.replaceAll("`", ""), "");
+    }
+
+    lines.push(`README source: https://github.com/${model.readmeRepo.installRepo}#readme`, "");
+  }
+
+  return `${lines.join("\n").replace(/\n{3,}/g, "\n\n").trim()}\n`;
+}
+
 function getSkillSourceUrl(skill, installRepo) {
   const candidates = [
     skill.sourceUrls?.find((url) => url.includes("github.com")),
@@ -747,6 +1000,10 @@ function getSkillSourceUrl(skill, installRepo) {
       .map((url) => safeHttpUrl(url, ""))
       .find(Boolean) || `https://github.com/${installRepo}`
   );
+}
+
+function getVendorMarkdownFilename(ownerKey) {
+  return `${String(ownerKey || "vendor").replace(/[^a-z0-9._-]+/gi, "-")}_skills_skillscout.md`;
 }
 
 function renderHeader() {
@@ -871,6 +1128,11 @@ function createPageTitle(displayName, pageSuffix) {
   return `${shortenedName}...${suffix}`;
 }
 
+function createMetaDescription(model, skillCount, repoCount) {
+  const browseSentence = `Browse ${formatNumber(skillCount)} official AI agent ${pluralize(skillCount, "skill", "skills")} across ${formatNumber(model.reposCount || repoCount)} ${model.displayName} ${pluralize(model.reposCount || repoCount, "repository", "repositories")}.`;
+  return truncateAtWord(`${model.vendorBio} ${browseSentence}`, 155).replace(/\.+$/, ".");
+}
+
 function truncateAtWord(value, maxLength) {
   const text = String(value || "").trim();
   if (text.length <= maxLength) return text;
@@ -903,13 +1165,14 @@ function pluralize(value, singular, plural) {
 }
 
 function createVendorBio(owner, displayName) {
+  const base = `${displayName} publishes official AI agent skills for its tools, services, and developer workflows.`;
   const curated = VENDOR_BIOS[owner.ownerKey];
-  if (curated) return curated;
+  if (curated) return mergeBioSentences(base, curated);
 
   const description = cleanVendorDescription(owner.description);
-  if (description) return description;
+  if (description) return mergeBioSentences(base, description);
 
-  return `${displayName} publishes official AI agent skills for its tools, services, and developer workflows.`;
+  return base;
 }
 
 function cleanVendorDescription(value) {
@@ -919,6 +1182,32 @@ function cleanVendorDescription(value) {
   if (!description) return "";
   const withoutTrailing = description.replace(/[.!?]*$/, "");
   return `${withoutTrailing}.`;
+}
+
+function mergeBioSentences(base, extra) {
+  const normalizedBase = cleanVendorDescription(base);
+  const normalizedExtra = cleanVendorDescription(extra);
+  if (!normalizedExtra) return normalizedBase;
+  if (normalizedExtra.toLowerCase() === normalizedBase.toLowerCase()) {
+    return normalizedBase;
+  }
+  return `${normalizedBase} ${normalizedExtra}`;
+}
+
+function renderInlineCode(value) {
+  return escapeHtml(value).replace(/`([^`]+)`/g, "<code>$1</code>");
+}
+
+function stripHtml(value) {
+  return String(value || "")
+    .replace(/<[^>]+>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function groupBy(items, key) {

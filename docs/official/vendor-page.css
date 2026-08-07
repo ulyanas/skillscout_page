@@ -432,6 +432,18 @@ a {
   line-height: 1.55;
 }
 
+.agent-readable-link {
+  margin: 14px 0 0;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.agent-readable-link a {
+  color: var(--vendor-ink);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
 .pack-list {
   display: grid;
   gap: 16px;
@@ -897,6 +909,36 @@ a {
   line-height: 1.65;
 }
 
+.readme-skill-table {
+  display: grid;
+  gap: 0;
+  margin: 18px 0 26px;
+}
+
+.readme-skill-row {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.42fr) minmax(0, 1fr);
+  gap: 18px;
+  padding: 14px 0;
+  border-top: 1px solid var(--vendor-line);
+}
+
+.readme-skill-row:last-child {
+  border-bottom: 1px solid var(--vendor-line);
+}
+
+.readme-skill-row strong {
+  font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.readme-skill-row span {
+  color: #444440;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .readme-content a {
   color: var(--vendor-ink);
   font-weight: 600;
@@ -1245,6 +1287,11 @@ a {
 
   .readme-content {
     padding: 28px 20px 40px;
+  }
+
+  .readme-skill-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 
   .copy-status {
