@@ -78,7 +78,63 @@ const README_OVERRIDES = {
     ],
     usage:
       "Most skills activate automatically when you ask your agent about a matching task. Examples: create a DocType, build a Vue SPA, run `bench migrate`, review a diff, write a commit message, or lay out a page. Some skills only run when you call them. Run `/draft-security-advisory` to start that skill."
+  },
+  "vercel-labs/agent-skills": {
+    title: "README from vercel-labs/agent-skills",
+    intro:
+      'A collection of skills for AI coding agents. Skills are packaged instructions and scripts that extend agent capabilities and follow the <a href="https://agentskills.io/?utm_source=skillscout&amp;utm_medium=vendor_page&amp;utm_campaign=official_vendor_vercel-labs" target="_blank" rel="noopener noreferrer">Agent Skills</a> format.',
+    skills: [
+      [
+        "vercel-optimize",
+        "Audits a Vercel project for cost, performance, reliability, caching, function usage, and billing opportunities."
+      ],
+      [
+        "react-best-practices",
+        "React and Next.js performance optimization guidelines from Vercel Engineering, with rules for data fetching, rendering, bundle size, and server-side performance."
+      ],
+      [
+        "web-design-guidelines",
+        "Reviews UI code against accessibility, performance, UX, forms, typography, images, navigation, theming, and internationalization rules."
+      ],
+      [
+        "writing-guidelines",
+        "Reviews docs and prose against the Vercel writing handbook, including voice, structure, code samples, typography, and AI workflow guidance."
+      ],
+      [
+        "react-native-guidelines",
+        "React Native and Expo best practices for performance, layout, animation, images, state management, architecture, and platform behavior."
+      ],
+      [
+        "react-view-transitions",
+        "Guidance for native-feeling route and component animations with React View Transitions and Next.js integration."
+      ],
+      [
+        "composition-patterns",
+        "React composition patterns for scalable component APIs, compound components, state lifting, and reducing boolean prop proliferation."
+      ],
+      [
+        "deploy-to-vercel",
+        "Deploys applications and websites to Vercel, returning a live preview URL and a claim URL when supported."
+      ]
+    ],
+    installCommands: [
+      ["Install all skills from the repository:", "npx skills add vercel-labs/agent-skills"],
+      [
+        "Install a specific skill:",
+        "npx skills add vercel-labs/agent-skills --skill react-best-practices"
+      ],
+      [
+        "Use a skill without installing:",
+        "npx skills use vercel-labs/agent-skills --skill web-design-guidelines"
+      ]
+    ],
+    usage:
+      "Skills become available once installed. Ask your agent for tasks such as deploying an app, reviewing React performance, auditing UI accessibility, optimizing a Next.js page, or checking documentation against Vercel writing guidance."
   }
+};
+
+const PREFERRED_README_REPOS = {
+  "vercel-labs": ["vercel-labs/agent-skills", "vercel-labs/skills"]
 };
 
 const PACK_DESCRIPTION_OVERRIDES = {
@@ -231,7 +287,7 @@ function buildVendorModel(owner, popularityPosition, ownerRepos, ownerSkills) {
     "https://skillscout.sh/assets/skillscout-mark-48.png"
   );
   const { packs, repoAliases } = buildPacks(ownerRepos, ownerSkills);
-  const readmeRepo = selectReadmeRepo(packs);
+  const readmeRepo = selectReadmeRepo(packs, owner.ownerKey);
 
   return {
     ...owner,
@@ -351,7 +407,15 @@ function dedupeSkills(skills) {
   return [...unique.values()];
 }
 
-function selectReadmeRepo(packs) {
+function selectReadmeRepo(packs, ownerKey) {
+  const preferredRepos = PREFERRED_README_REPOS[ownerKey] || [];
+  for (const preferredRepo of preferredRepos) {
+    const match = packs.find(
+      (pack) => pack.installRepo.toLowerCase() === preferredRepo.toLowerCase()
+    );
+    if (match) return match;
+  }
+
   const namedPacks = packs.filter((pack) =>
     /(skills?|plugins?|awesome-copilot|agent-plugins)/i.test(
       pack.repo.repoName || pack.installRepo
