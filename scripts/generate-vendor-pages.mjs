@@ -713,7 +713,7 @@ function renderReadme(model, campaign) {
     <div class="vendor-section-header">
       <div>
         <p class="vendor-section-kicker">Repository documentation</p>
-        <h2 class="vendor-section-title" id="readmeTitle">${escapeHtml(readme?.title || "Package README")}</h2>
+        <h2 class="vendor-section-title" id="readmeTitle">${escapeHtml(readme?.title || `${repoKey} package overview`)}</h2>
       </div>
     </div>
     <article class="readme-shell">
@@ -727,7 +727,7 @@ function renderReadme(model, campaign) {
         </span>
         <a class="readme-source" href="${escapeAttr(addUtm(`https://github.com/${repoKey}`, campaign))}#readme" target="_blank" rel="noopener noreferrer">View on GitHub</a>
       </div>
-      ${readme ? renderReadmeOverride(readme) : renderReadmeLink(repoKey, campaign)}
+      ${readme ? renderReadmeOverride(readme) : renderReadmeFallback(model.readmeRepo, model, campaign)}
     </article>
   </section>`;
 }
@@ -758,12 +758,37 @@ function renderReadmeOverride(readme) {
       </div>`;
 }
 
-function renderReadmeLink(repoKey, campaign) {
-  return `<div class="readme-content readme-link-content">
-        <p>Open the repository README for package documentation, setup instructions, and usage examples.</p>
+function renderReadmeFallback(pack, model, campaign) {
+  const repoKey = pack.installRepo;
+  const topSkills = pack.skills.slice(0, 8);
+
+  return `<div class="readme-content">
+        <h2>${escapeHtml(repoKey)}</h2>
+        <p>${escapeHtml(createPackDescriptionText(pack))}</p>
+        <h3>Top skills in this package</h3>
+        <div class="readme-skill-table">
+          ${topSkills
+            .map((skill) => {
+              const name = skill.displayName || skill.skillName;
+              const description =
+                createSkillDescription(skill, pack) ||
+                `Official ${model.displayName} skill from ${repoKey}.`;
+              return `<div class="readme-skill-row"><strong>${escapeHtml(name)}</strong><span>${escapeHtml(description)}</span></div>`;
+            })
+            .join("\n")}
+        </div>
+        <h3>Install</h3>
+        <p>Install the full package:</p>
+        <pre><code>npx skills add ${escapeHtml(repoKey)} -y</code></pre>
+        ${
+          topSkills[0]
+            ? `<p>Install a specific skill:</p><pre><code>npx skills add ${escapeHtml(repoKey)}@${escapeHtml(topSkills[0].skillName)} -y</code></pre>`
+            : ""
+        }
+        <p>Use the package when you want your agent to choose the relevant skill from this official ${escapeHtml(model.displayName)} repository.</p>
         <a class="readme-primary-link" href="${escapeAttr(addUtm(`https://github.com/${repoKey}`, campaign))}#readme" target="_blank" rel="noopener noreferrer">
           ${GITHUB_ICON}
-          Read ${escapeHtml(repoKey)} README
+          View ${escapeHtml(repoKey)} on GitHub
         </a>
       </div>`;
 }
@@ -1018,20 +1043,33 @@ function renderVendorMarkdown(model) {
   }
 
   if (model.readmeRepo) {
-    const readme = README_OVERRIDES[model.readmeRepo.installRepo];
-    lines.push(
-      `## README from ${model.readmeRepo.installRepo}`,
-      "",
-      readme
-        ? stripHtml(readme.intro)
-        : "Open the repository README for package documentation, setup instructions, and usage examples.",
-      ""
-    );
+    const pack = model.readmeRepo;
+    const repoKey = pack.installRepo;
+    const readme = README_OVERRIDES[repoKey];
+    const topSkills = pack.skills.slice(0, 8);
+
+    lines.push(`## ${readme ? `README from ${repoKey}` : `${repoKey} package overview`}`, "");
+
+    if (readme) {
+      lines.push(stripHtml(readme.intro), "");
+    } else {
+      lines.push(createPackDescriptionText(pack), "");
+    }
 
     if (readme?.skills?.length) {
       lines.push("### README skills", "");
       for (const [name, description] of readme.skills) {
         lines.push(`- ${name}: ${description}`);
+      }
+      lines.push("");
+    } else if (topSkills.length) {
+      lines.push("### Top skills in this package", "");
+      for (const skill of topSkills) {
+        const displayName = skill.displayName || skill.skillName;
+        const description =
+          createSkillDescription(skill, pack) ||
+          `Official ${model.displayName} skill from ${repoKey}.`;
+        lines.push(`- ${displayName}: ${description}`);
       }
       lines.push("");
     }
@@ -1041,13 +1079,30 @@ function renderVendorMarkdown(model) {
       for (const [label, command] of readme.installCommands) {
         lines.push(label, "", "```bash", command, "```", "");
       }
+    } else {
+      lines.push("### Install", "", "Install the full package:", "", "```bash", `npx skills add ${repoKey} -y`, "```", "");
+      if (topSkills[0]) {
+        lines.push(
+          "Install a specific skill:",
+          "",
+          "```bash",
+          `npx skills add ${repoKey}@${topSkills[0].skillName} -y`,
+          "```",
+          ""
+        );
+      }
     }
 
     if (readme?.usage) {
       lines.push("### README usage", "", readme.usage.replaceAll("`", ""), "");
+    } else {
+      lines.push(
+        "Use the package when you want your agent to choose the relevant skill from this official repository.",
+        ""
+      );
     }
 
-    lines.push(`README source: https://github.com/${model.readmeRepo.installRepo}#readme`, "");
+    lines.push(`Source: https://github.com/${repoKey}#readme`, "");
   }
 
   return `${lines.join("\n").replace(/\n{3,}/g, "\n\n").trim()}\n`;
