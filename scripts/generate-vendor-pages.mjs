@@ -448,7 +448,7 @@ function renderVendorPage(
     ? `https://skillscout.sh/official/${model.ownerKey}/`
     : `https://skillscout.sh/official/${model.ownerKey}/page/${pageNumber}/`;
   const vendorMarkdownUrl = `https://skillscout.sh/official/${model.ownerKey}/${getVendorMarkdownFilename(model.ownerKey)}`;
-  const prompt = `Read ${vendorMarkdownUrl}. Recommend the relevant ${model.displayName} skills package or packages for my goal, explain which individual skills matter, and wait for my approval. After I approve, install with the npx command. If no project is open, install it as an agent skill I can use later.`;
+  const prompt = createAgentPrompt(model, vendorMarkdownUrl);
   const visibleSkillCount = pagePacks.reduce(
     (total, pack) => total + pack.skills.length,
     0
@@ -1111,7 +1111,7 @@ function renderVendorMarkdown(model) {
     "",
     "## Prompt for your agent",
     "",
-    `Read ${markdownUrl}. Recommend the relevant ${model.displayName} skills package or packages for my goal, explain which individual skills matter, and wait for my approval. After I approve, install with the npx command. If no project is open, install it as an agent skill I can use later.`,
+    createAgentPrompt(model, markdownUrl),
     "",
     "## Skills packages",
     ""
@@ -1222,6 +1222,10 @@ function renderVendorMarkdown(model) {
   }
 
   return `${lines.join("\n").replace(/\n{3,}/g, "\n\n").trim()}\n`;
+}
+
+function createAgentPrompt(model, markdownUrl) {
+  return `Fetch this Markdown manifest as plain text: ${markdownUrl}. If your browser cannot display the Markdown directly, use curl or another text fetcher. Recommend the relevant ${model.displayName} skills package or packages for my goal, explain which individual skills matter, and wait for my approval. After I approve, install with the npx command. If no project is open, install it as an agent skill I can use later.`;
 }
 
 function getPackSourceUrl(pack) {
