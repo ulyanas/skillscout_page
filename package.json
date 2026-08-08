@@ -6,6 +6,7 @@
     "build:pages": "node scripts/build-pages.mjs",
     "generate:vendor-pages": "node scripts/generate-vendor-pages.mjs",
     "scrape:official-skills": "node scripts/scrape_official_skills.mjs",
+    "import:clawhub-official": "node scripts/import_clawhub_official.mjs",
     "import:skillsmp-creators": "node scripts/import_skillsmp_creators.mjs",
     "enrich:github-skills": "node scripts/enrich_github_skills.mjs",
     "enrich:owner-metadata": "node scripts/enrich_owner_metadata.mjs",

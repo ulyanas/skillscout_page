@@ -416,20 +416,22 @@ function dedupeSkills(skills) {
 }
 
 function selectReadmeRepo(packs, ownerKey) {
+  const githubPacks = packs.filter((pack) => pack.repo.sourceKind !== "clawhub");
+  if (!githubPacks.length) return null;
   const preferredRepos = PREFERRED_README_REPOS[ownerKey] || [];
   for (const preferredRepo of preferredRepos) {
-    const match = packs.find(
+    const match = githubPacks.find(
       (pack) => pack.installRepo.toLowerCase() === preferredRepo.toLowerCase()
     );
     if (match) return match;
   }
 
-  const namedPacks = packs.filter((pack) =>
+  const namedPacks = githubPacks.filter((pack) =>
     /(skills?|plugins?|awesome-copilot|agent-plugins)/i.test(
       pack.repo.repoName || pack.installRepo
     )
   );
-  return (namedPacks.length ? namedPacks : packs)[0] || null;
+  return (namedPacks.length ? namedPacks : githubPacks)[0] || null;
 }
 
 function renderVendorPage(
@@ -730,7 +732,8 @@ function renderArchivedOfficialPage({ canonicalUrl, originalUrl }) {
 
 function renderPack(pack, index, campaign) {
   const commandId = `packInstallCommand${index + 1}`;
-  const repoUrl = `https://github.com/${pack.installRepo}`;
+  const repoUrl = getPackSourceUrl(pack);
+  const command = getPackInstallCommand(pack);
   const description = createPackDescription(pack);
   return `<article class="pack-card">
     <div>
@@ -750,7 +753,7 @@ function renderPack(pack, index, campaign) {
     </div>
     <div class="pack-command">
       <div class="copy-block">
-        <code id="${commandId}">npx skills add ${escapeHtml(pack.installRepo)} -y</code>
+        <code id="${commandId}">${escapeHtml(command)}</code>
         ${renderCopyButton({
           target: commandId,
           label: `Copy ${pack.installRepo} install command`,
@@ -784,7 +787,7 @@ function renderSkill(skill, pack, campaign) {
   const displayName = skill.displayName || skill.skillName;
   const description = createSkillDescription(skill, pack);
   const sourceUrl = getSkillSourceUrl(skill, pack.installRepo);
-  const command = `npx skills add ${pack.installRepo}@${skill.skillName} -y`;
+  const command = getSkillInstallCommand(skill, pack);
   const searchText = [
     displayName,
     skill.skillName,
@@ -1122,10 +1125,10 @@ function renderVendorMarkdown(model) {
       "Install:",
       "",
       "```bash",
-      `npx skills add ${pack.installRepo} -y`,
+      getPackInstallCommand(pack),
       "```",
       "",
-      `Source: https://github.com/${pack.installRepo}`,
+      `Source: ${getPackSourceUrl(pack)}`,
       ""
     );
   }
@@ -1144,7 +1147,7 @@ function renderVendorMarkdown(model) {
         "Install:",
         "",
         "```bash",
-        `npx skills add ${pack.installRepo}@${skill.skillName} -y`,
+        getSkillInstallCommand(skill, pack),
         "```",
         "",
         `Package: ${pack.installRepo}`,
@@ -1220,9 +1223,40 @@ function renderVendorMarkdown(model) {
   return `${lines.join("\n").replace(/\n{3,}/g, "\n\n").trim()}\n`;
 }
 
+function getPackSourceUrl(pack) {
+  const candidates = [
+    pack.repo.sourceUrls?.find((url) => url.includes("clawhub.ai")),
+    pack.repo.sourceUrls?.find((url) => url.includes("github.com")),
+    ...(pack.repo.sourceUrls || [])
+  ];
+  return (
+    candidates
+      .map((url) => safeHttpUrl(url, ""))
+      .find(Boolean) || `https://github.com/${pack.installRepo}`
+  );
+}
+
+function getPackInstallCommand(pack) {
+  if (pack.repo.sourceKind === "clawhub") {
+    const firstSkill = pack.skills?.[0];
+    if (firstSkill) return getSkillInstallCommand(firstSkill, pack);
+    return `openclaw skills install @${pack.repo.ownerHandle || pack.installRepo.split("/").pop()}`;
+  }
+  return `npx skills add ${pack.installRepo} -y`;
+}
+
+function getSkillInstallCommand(skill, pack) {
+  if (skill.installCommand) return skill.installCommand;
+  if (pack.repo.sourceKind === "clawhub") {
+    return `openclaw skills install @${skill.ownerHandle || pack.repo.ownerHandle || pack.installRepo.split("/").pop()}/${skill.skillName}`;
+  }
+  return `npx skills add ${pack.installRepo}@${skill.skillName} -y`;
+}
+
 function getSkillSourceUrl(skill, installRepo) {
   const candidates = [
     skill.sourceUrls?.find((url) => url.includes("github.com")),
+    skill.sourceUrls?.find((url) => url.includes("clawhub.ai")),
     skill.sourceUrls?.find((url) => url.includes("skills.sh")),
     ...(skill.sourceUrls || [])
   ];
