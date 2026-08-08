@@ -237,6 +237,7 @@ function refreshCounts() {
   const ownerRepos = new Map();
   const repoInstalls = new Map();
   const ownerInstalls = new Map();
+  const ownerStars = new Map();
 
   for (const skill of directory.officialSkills) {
     if (!skill.repoKey || !skill.ownerKey) continue;
@@ -251,12 +252,16 @@ function refreshCounts() {
     repo.skillsCount = repoSkills.get(repo.repoKey) || 0;
     repo.installsCount = Math.max(Number(repo.installsCount || 0), repoInstalls.get(repo.repoKey) || 0);
     ownerInstalls.set(repo.ownerKey, (ownerInstalls.get(repo.ownerKey) || 0) + Number(repo.installsCount || 0));
+    ownerStars.set(repo.ownerKey, (ownerStars.get(repo.ownerKey) || 0) + Number(repo.starsCount || 0));
   }
 
   for (const owner of directory.officialOwners) {
     owner.skillsCount = ownerSkills.get(owner.ownerKey) || 0;
     owner.reposCount = ownerRepos.get(owner.ownerKey) || 0;
     owner.installsCount = Math.max(Number(owner.installsCount || 0), ownerInstalls.get(owner.ownerKey) || 0);
+    if (owner.ownerKey === OWNER_KEY) {
+      owner.starsCount = Math.max(Number(owner.starsCount || 0), ownerStars.get(owner.ownerKey) || 0);
+    }
   }
 
   directory.stats = {
