@@ -7,6 +7,7 @@
     "generate:vendor-pages": "node scripts/generate-vendor-pages.mjs",
     "scrape:official-skills": "node scripts/scrape_official_skills.mjs",
     "import:clawhub-official": "node scripts/import_clawhub_official.mjs",
+    "import:skillscout-clawhub-skill": "node scripts/import_skillscout_clawhub_skill.mjs",
     "import:home-assistant-skills": "node scripts/import_home_assistant_skills.mjs",
     "import:skillsmp-creators": "node scripts/import_skillsmp_creators.mjs",
     "enrich:github-skills": "node scripts/enrich_github_skills.mjs",

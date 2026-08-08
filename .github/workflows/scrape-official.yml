@@ -39,6 +39,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
 
+      - name: Import Skillscout ClawHub stats
+        run: node scripts/import_skillscout_clawhub_skill.mjs
+        env:
+          OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
+
       - name: Enrich owner metadata
         run: node scripts/enrich_owner_metadata.mjs
         env:
