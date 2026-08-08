@@ -44,6 +44,12 @@ jobs:
         env:
           OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
 
+      - name: Import Obsidian official skills
+        run: node scripts/import_obsidian_skills.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
+
       - name: Enrich owner metadata
         run: node scripts/enrich_owner_metadata.mjs
         env:

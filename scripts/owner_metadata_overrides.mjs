@@ -17,6 +17,7 @@ export const OWNER_METADATA_OVERRIDES = new Map([
   ["medusajs", { displayName: "Medusa", website: "https://medusajs.com" }],
   ["n8n-io", { displayName: "n8n", website: "https://n8n.io" }],
   ["nuxt", { displayName: "Nuxt", website: "https://nuxt.com" }],
+  ["obsidian", { displayName: "Obsidian", website: "https://obsidian.md/", githubUrl: "https://github.com/obsidian" }],
   ["projectopensea", { displayName: "OpenSea", website: "https://opensea.io" }],
   ["remotion-dev", { displayName: "Remotion", website: "https://www.remotion.dev" }],
   ["rivet-dev", { displayName: "Rivet", website: "https://rivet.gg" }],
