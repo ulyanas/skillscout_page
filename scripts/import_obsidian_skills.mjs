@@ -34,6 +34,9 @@ const OWNER_LOGO_URL = "https://obsidian.md/images/obsidian-logo-gradient.svg";
 const REPO_FULL_NAME = "kepano/obsidian-skills";
 const REPO_URL = `https://github.com/${REPO_FULL_NAME}`;
 const INSTALL_REPO = `https://github.com/${REPO_FULL_NAME}`;
+const SKILLS_SH_ORIGIN = "https://www.skills.sh";
+const SKILLS_SH_REPO_URL = `${SKILLS_SH_ORIGIN}/${REPO_FULL_NAME}`;
+const SKILLS_SH_FETCH_TIMEOUT_MS = Number(process.env.SKILLS_SH_FETCH_TIMEOUT_MS || 10000);
 const now = new Date().toISOString();
 
 const directory = JSON.parse(await fs.readFile(DATA_PATH, "utf8"));
@@ -51,7 +54,8 @@ const stats = {
   addedRepos: hadRepo ? 0 : 1,
   mergedRepos: hadRepo ? 1 : 0,
   addedSkills: 0,
-  mergedSkills: 0
+  mergedSkills: 0,
+  skillsShInstallsUpdated: 0
 };
 
 for (const skillPath of skillFiles) {
@@ -60,6 +64,7 @@ for (const skillPath of skillFiles) {
   upsertSkill(owner, repoEntry, repo, skillPath, metadata);
 }
 
+await enrichWithSkillsShInstalls(repoEntry);
 refreshCounts();
 upsertSource(repo, skillFiles);
 normalizeEmojiShortcodesInDirectory(directory);
@@ -314,6 +319,140 @@ async function fetchRaw(repoFullName, ref, filePath) {
   return response.text();
 }
 
+async function enrichWithSkillsShInstalls(repoEntry) {
+  try {
+    const repoHtml = await fetchSkillsShHtml(SKILLS_SH_REPO_URL);
+    const installRecords = await fetchSkillsShInstallRecords(repoHtml);
+    if (!installRecords.length) {
+      console.warn(`No skills.sh install records found for ${SKILLS_SH_REPO_URL}`);
+      return;
+    }
+
+    let repoInstalls = 0;
+    for (const record of installRecords) {
+      const skillName = normalizeKey(record.slug || record.name);
+      if (!skillName) continue;
+
+      const skill = findObsidianSkill(skillName);
+      if (!skill) continue;
+
+      skill.installsCount = Math.max(Number(skill.installsCount || 0), Number(record.installs || 0));
+      skill.confidence = "high";
+      addUnique(skill.sources, "skills.sh");
+      addUnique(skill.sourceUrls, record.url);
+      repoInstalls += Number(skill.installsCount || 0);
+      stats.skillsShInstallsUpdated += 1;
+    }
+
+    if (repoInstalls > 0) {
+      repoEntry.installsCount = Math.max(Number(repoEntry.installsCount || 0), repoInstalls);
+      addUnique(repoEntry.sources, "skills.sh");
+      addUnique(repoEntry.sourceUrls, SKILLS_SH_REPO_URL);
+    }
+  } catch (error) {
+    console.warn(`Could not fetch Obsidian skills.sh installs: ${error.message}`);
+  }
+}
+
+async function fetchSkillsShInstallRecords(repoHtml) {
+  const records = parseSkillsShRepoInstallRecords(repoHtml);
+  if (!records.length) return [];
+
+  await Promise.all(
+    records.map(async (record) => {
+      const detailRecord = await fetchSkillsShSkillInstall(record.url);
+      if (detailRecord?.installs) {
+        record.installs = detailRecord.installs;
+        record.name = detailRecord.name || record.name;
+      }
+    })
+  );
+
+  return records.filter((record) => Number(record.installs || 0) > 0);
+}
+
+function parseSkillsShRepoInstallRecords(html) {
+  const records = [];
+  const escapedRepoKey = escapeRegExp(REPO_FULL_NAME);
+  const linkPattern = new RegExp(`<a\\b[^>]*href="/${escapedRepoKey}/([^"#?]+)"[\\s\\S]*?<\\/a>`, "g");
+  for (const match of html.matchAll(linkPattern)) {
+    const block = match[0];
+    const slug = decodeURIComponent(match[1]).replace(/\/$/, "");
+    if (!slug) continue;
+
+    const countMatch = block.match(/<span[^>]*>\s*([0-9][0-9,.]*\s*[KMB]?)\s*<\/span>/i);
+    if (!countMatch) continue;
+
+    const headingMatch = block.match(/<h3[^>]*>([\s\S]*?)<\/h3>/);
+    records.push({
+      slug,
+      name: headingMatch ? stripHtml(headingMatch[1]) : slug,
+      url: `${SKILLS_SH_ORIGIN}/${REPO_FULL_NAME}/${encodeURIComponent(slug)}`,
+      installs: parseInstallCount(countMatch[1])
+    });
+  }
+  return records;
+}
+
+async function fetchSkillsShSkillInstall(url) {
+  try {
+    const html = await fetchSkillsShHtml(url);
+    for (const json of extractJsonLd(html)) {
+      const nodes = Array.isArray(json) ? json : [json];
+      for (const node of nodes) {
+        if (node?.["@type"] !== "SoftwareApplication") continue;
+        const installs = Number(node.interactionStatistic?.userInteractionCount);
+        if (!Number.isFinite(installs)) continue;
+        return {
+          name: String(node.name || "").trim(),
+          installs
+        };
+      }
+    }
+  } catch {
+    return null;
+  }
+  return null;
+}
+
+async function fetchSkillsShHtml(url) {
+  const response = await fetch(url, {
+    headers: {
+      Accept: "text/html,application/xhtml+xml",
+      "User-Agent": "Skillscout Obsidian importer"
+    },
+    signal: AbortSignal.timeout(SKILLS_SH_FETCH_TIMEOUT_MS)
+  });
+  if (!response.ok) {
+    throw new Error(`${url}: ${response.status} ${response.statusText}`);
+  }
+  return response.text();
+}
+
+function extractJsonLd(html) {
+  const records = [];
+  const scriptPattern = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g;
+  for (const match of html.matchAll(scriptPattern)) {
+    try {
+      records.push(JSON.parse(decodeHtmlEntities(match[1])));
+    } catch {
+      // Skip invalid JSON-LD blocks.
+    }
+  }
+  return records;
+}
+
+function findObsidianSkill(skillName) {
+  const normalized = normalizeKey(skillName);
+  for (const skill of directory.officialSkills) {
+    if (skill.ownerKey !== OWNER_KEY || skill.repoKey !== normalizeRepoKey(REPO_FULL_NAME)) continue;
+    if (normalizeKey(skill.skillName) === normalized) return skill;
+    if (normalizeKey(skill.displayName) === normalized) return skill;
+    if (normalizeKey(String(skill.sourcePath || "").split("/").at(-2)) === normalized) return skill;
+  }
+  return null;
+}
+
 function githubHeaders() {
   const headers = {
     accept: "application/vnd.github+json",
@@ -369,6 +508,40 @@ function addUnique(list, value) {
   if (!value) return;
   if (!Array.isArray(list)) return;
   if (!list.includes(value)) list.push(value);
+}
+
+function parseInstallCount(value) {
+  const match = String(value || "")
+    .trim()
+    .replace(/,/g, "")
+    .match(/^([0-9]+(?:\.[0-9]+)?)\s*([KMB])?$/i);
+  if (!match) return 0;
+  const amount = Number(match[1]);
+  const suffix = match[2]?.toUpperCase();
+  const multiplier = suffix === "B" ? 1_000_000_000 : suffix === "M" ? 1_000_000 : suffix === "K" ? 1_000 : 1;
+  return Math.round(amount * multiplier);
+}
+
+function extractHtmlText(value) {
+  return decodeHtmlEntities(String(value || "").replace(/<[^>]+>/g, " "));
+}
+
+function stripHtml(value) {
+  return extractHtmlText(value).replace(/\s+/g, " ").trim();
+}
+
+function decodeHtmlEntities(value) {
+  return String(value || "")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">");
+}
+
+function escapeRegExp(value) {
+  return String(value || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function normalizeRepoKey(value) {
