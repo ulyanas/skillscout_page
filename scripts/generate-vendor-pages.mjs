@@ -11,6 +11,9 @@ const args = parseArgs(process.argv.slice(2));
 const DATA_PATH = path.resolve(
   args.data || path.join(ROOT_DIR, "docs/data/official-skills-universal.json")
 );
+const ARCHIVED_PAGES_PATH = path.resolve(
+  args.archivedPages || path.join(ROOT_DIR, "docs/data/archived-official-pages.json")
+);
 const SITE_ROOT = path.resolve(
   args.siteRoot || process.env.PAGES_OUTPUT_DIR || path.join(ROOT_DIR, ".pages-dist")
 );
@@ -195,6 +198,7 @@ const SIMPLE_COPY_ICON = `
 
 const rawData = await fs.readFile(DATA_PATH, "utf8");
 const data = JSON.parse(rawData);
+const archivedOfficialPages = await readArchivedOfficialPages(ARCHIVED_PAGES_PATH);
 const owners = [...data.officialOwners]
   .filter((owner) => /^[a-z0-9][a-z0-9._-]*$/i.test(owner.ownerKey || ""))
   .map((owner) => ({ ...owner, rankScore: computeOwnerRankScore(owner) }))
@@ -265,10 +269,14 @@ for (const [position, owner] of selectedOwners.entries()) {
   }
 }
 
+const archivedPageCount = await writeArchivedOfficialPages(
+  archivedOfficialPages.pages || [],
+  new Set(sitemapUrls)
+);
 await writeVendorSitemap(sitemapUrls, data.generatedAt);
 
 console.log(
-  `Generated ${selectedOwners.length} vendor pages and ${sitemapUrls.length} crawlable URLs in ${OUTPUT_DIR}`
+  `Generated ${selectedOwners.length} vendor pages, ${sitemapUrls.length} crawlable URLs, and ${archivedPageCount} archived fallbacks in ${OUTPUT_DIR}`
 );
 
 function buildVendorModel(owner, popularityPosition, ownerRepos, ownerSkills) {
@@ -611,6 +619,110 @@ function renderVendorPage(
     </main>
     <div class="copy-status" id="copyStatus" role="status" aria-live="polite">Copied</div>
     <script src="/official/vendor-page.js?v=20260724-1"></script>
+  </body>
+</html>
+`;
+}
+
+async function readArchivedOfficialPages(filePath) {
+  try {
+    return JSON.parse(await fs.readFile(filePath, "utf8"));
+  } catch (error) {
+    if (error.code === "ENOENT") {
+      return { pages: [] };
+    }
+    throw error;
+  }
+}
+
+async function writeArchivedOfficialPages(pages, currentUrls) {
+  let count = 0;
+  for (const page of pages || []) {
+    if (!page?.url || currentUrls.has(page.url)) continue;
+    const pathname = new URL(page.url).pathname;
+    if (!pathname.startsWith("/official/")) continue;
+
+    const relativePath = pathname.replace(/^\/+/, "");
+    const outputPath = path.join(SITE_ROOT, relativePath, "index.html");
+    const canonicalUrl = safeHttpUrl(page.targetUrl, "https://skillscout.sh/official/");
+    await fs.mkdir(path.dirname(outputPath), { recursive: true });
+    await fs.writeFile(
+      outputPath,
+      renderArchivedOfficialPage({
+        canonicalUrl,
+        originalUrl: page.url
+      }),
+      "utf8"
+    );
+    count += 1;
+  }
+  return count;
+}
+
+function renderArchivedOfficialPage({ canonicalUrl, originalUrl }) {
+  const title = "Official skills page moved | Skillscout";
+  const description =
+    "This older Skillscout official skills URL has moved. Browse the current official AI agent skills directory.";
+  const pathLabel = new URL(originalUrl).pathname;
+
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <title>${escapeHtml(title)}</title>
+    <meta name="description" content="${escapeAttr(description)}" />
+    <link rel="canonical" href="${escapeAttr(canonicalUrl)}" />
+    <script src="/assets/telemetry.js"></script>
+    <link rel="stylesheet" href="/assets/site-shell.css?v=20260724-official-sparkle" />
+    <link rel="stylesheet" href="/official/vendor-page.css?v=20260724-vendor-mobile-title-fix" />
+    <script src="/assets/site-shell.js?v=20260724-1"></script>
+    <script src="/assets/posthog-init.js"></script>
+    <link rel="icon" href="/assets/skillscout-mark-48.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    ${renderHeader()}
+    <main class="vendor-page">
+      <nav class="vendor-breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        ${renderChevron()}
+        <a href="/official/">Official skills</a>
+      </nav>
+      <section class="vendor-hero" aria-labelledby="archivedTitle">
+        <div class="vendor-identity">
+          <div class="vendor-logo">
+            <img src="/assets/skillscout-mark-128.png" alt="Skillscout logo" width="128" height="128" />
+          </div>
+          <div>
+            <div class="vendor-eyebrow">
+              <span class="vendor-label">Archived URL</span>
+            </div>
+            <h1 class="vendor-title" id="archivedTitle">Official skills page moved</h1>
+            <p class="vendor-description">This older Skillscout URL is kept active for users and search engines.</p>
+            <p class="vendor-description">Continue to the current official AI agent skills directory to search verified skill publishers, repositories, and install commands.</p>
+          </div>
+          <div class="vendor-actions">
+            <a class="vendor-action" href="${escapeAttr(canonicalUrl)}">
+              ${renderWebsiteIcon()}
+              Browse current page
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="vendor-section" aria-labelledby="archivedDetailsTitle">
+        <div class="vendor-section-header">
+          <div>
+            <p class="vendor-section-kicker">Old path</p>
+            <h2 class="vendor-section-title" id="archivedDetailsTitle">${escapeHtml(pathLabel)}</h2>
+            <p class="vendor-section-copy">The current official skills directory has newer publisher data and updated skill packages.</p>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
 `;

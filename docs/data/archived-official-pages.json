@@ -1,0 +1,5522 @@
+{
+  "generatedAt": "2026-08-08T10:27:06.234Z",
+  "source": "Removed from official vendor sitemap after agent runtime skill cleanup.",
+  "pages": [
+    {
+      "url": "https://skillscout.sh/official/0install/",
+      "ownerKey": "0install",
+      "displayName": "Zero Install",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/2digits-agency/",
+      "ownerKey": "2digits-agency",
+      "displayName": "2DIGITS",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/3tea/",
+      "ownerKey": "3tea",
+      "displayName": "3Tea",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/abcxyz/",
+      "ownerKey": "abcxyz",
+      "displayName": "abcxyz",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/abpframework/",
+      "ownerKey": "abpframework",
+      "displayName": "ABP",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/acronis/",
+      "ownerKey": "acronis",
+      "displayName": "Acronis International GmbH",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/actionhero/",
+      "ownerKey": "actionhero",
+      "displayName": "Actionhero",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/activepieces/",
+      "ownerKey": "activepieces",
+      "displayName": "Activepieces",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/actualbudget/",
+      "ownerKey": "actualbudget",
+      "displayName": "Actual",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/adobe/page/4/",
+      "ownerKey": "adobe",
+      "displayName": "Adobe, Inc.",
+      "pageNumber": 4,
+      "targetUrl": "https://skillscout.sh/official/adobe/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/adonisjs/",
+      "ownerKey": "adonisjs",
+      "displayName": "AdonisJS Framework",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/aerospike/",
+      "ownerKey": "aerospike",
+      "displayName": "Aerospike",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/agence-adeliom/",
+      "ownerKey": "agence-adeliom",
+      "displayName": "Adeliom",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/agentuity/page/2/",
+      "ownerKey": "agentuity",
+      "displayName": "Agentuity",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/agentuity/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/agentuity/page/3/",
+      "ownerKey": "agentuity",
+      "displayName": "Agentuity",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/agentuity/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/agentuity/page/4/",
+      "ownerKey": "agentuity",
+      "displayName": "Agentuity",
+      "pageNumber": 4,
+      "targetUrl": "https://skillscout.sh/official/agentuity/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/agentuity/page/5/",
+      "ownerKey": "agentuity",
+      "displayName": "Agentuity",
+      "pageNumber": 5,
+      "targetUrl": "https://skillscout.sh/official/agentuity/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/agentuity/page/6/",
+      "ownerKey": "agentuity",
+      "displayName": "Agentuity",
+      "pageNumber": 6,
+      "targetUrl": "https://skillscout.sh/official/agentuity/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/agoraio-community/",
+      "ownerKey": "agoraio-community",
+      "displayName": "Agora Community",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/agoric/",
+      "ownerKey": "agoric",
+      "displayName": "Agoric",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ahoybuoy/",
+      "ownerKey": "ahoybuoy",
+      "displayName": "Buoy",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/aicmo/",
+      "ownerKey": "aicmo",
+      "displayName": "AiCMO 🔥",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/akuity/",
+      "ownerKey": "akuity",
+      "displayName": "Akuity",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/alexandrainst/",
+      "ownerKey": "alexandrainst",
+      "displayName": "Alexandra Institute",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/alibaba/page/3/",
+      "ownerKey": "alibaba",
+      "displayName": "Alibaba",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/alibaba/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/aliyuncontainerservice/",
+      "ownerKey": "aliyuncontainerservice",
+      "displayName": "Aliyun (Alibaba Cloud) Container Service",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/alkem-io/",
+      "ownerKey": "alkem-io",
+      "displayName": "Alkemio",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/alleninstitute/",
+      "ownerKey": "alleninstitute",
+      "displayName": "Allen Institute",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/altafino/",
+      "ownerKey": "altafino",
+      "displayName": "Altafino Ltd",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/altive/",
+      "ownerKey": "altive",
+      "displayName": "Altive",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/amityco/",
+      "ownerKey": "amityco",
+      "displayName": "Amity",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/aniftyco/",
+      "ownerKey": "aniftyco",
+      "displayName": "NiftyCo",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/animo/",
+      "ownerKey": "animo",
+      "displayName": "Animo",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/anoma/",
+      "ownerKey": "anoma",
+      "displayName": "Anoma",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ansible-collections/",
+      "ownerKey": "ansible-collections",
+      "displayName": "Ansible Collections",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ansible/",
+      "ownerKey": "ansible",
+      "displayName": "Ansible",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/anyscale/",
+      "ownerKey": "anyscale",
+      "displayName": "Anyscale",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/apache/page/3/",
+      "ownerKey": "apache",
+      "displayName": "The Apache Software Foundation",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/apache/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/aquasecurity/",
+      "ownerKey": "aquasecurity",
+      "displayName": "Aqua Security",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/archboard/",
+      "ownerKey": "archboard",
+      "displayName": "Archboard",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/arizona-framework/",
+      "ownerKey": "arizona-framework",
+      "displayName": "Arizona Framework",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/10/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 10,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/11/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 11,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/12/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 12,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/13/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 13,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/14/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 14,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/15/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 15,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/16/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 16,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/17/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 17,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/18/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 18,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/19/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 19,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/20/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 20,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/3/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/4/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 4,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/5/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 5,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/6/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 6,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/7/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 7,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/8/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 8,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/asymmetric-al/page/9/",
+      "ownerKey": "asymmetric-al",
+      "displayName": "Asymmetric.al",
+      "pageNumber": 9,
+      "targetUrl": "https://skillscout.sh/official/asymmetric-al/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/atomeocean/",
+      "ownerKey": "atomeocean",
+      "displayName": "atomeocean",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/atyantik/",
+      "ownerKey": "atyantik",
+      "displayName": "Atyantik",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/authgear/",
+      "ownerKey": "authgear",
+      "displayName": "Authgear",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/authup/",
+      "ownerKey": "authup",
+      "displayName": "Authup",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/automattic/page/3/",
+      "ownerKey": "automattic",
+      "displayName": "automattic",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/automattic/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ava-labs/",
+      "ownerKey": "ava-labs",
+      "displayName": "Ava Labs",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/avarok-cybersecurity/",
+      "ownerKey": "avarok-cybersecurity",
+      "displayName": "Avarok",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/aws-samples/page/10/",
+      "ownerKey": "aws-samples",
+      "displayName": "AWS Samples",
+      "pageNumber": 10,
+      "targetUrl": "https://skillscout.sh/official/aws-samples/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/aws-samples/page/9/",
+      "ownerKey": "aws-samples",
+      "displayName": "AWS Samples",
+      "pageNumber": 9,
+      "targetUrl": "https://skillscout.sh/official/aws-samples/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/axinom/",
+      "ownerKey": "axinom",
+      "displayName": "Axinom",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/b-editor/",
+      "ownerKey": "b-editor",
+      "displayName": "b-editor",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/bahaisongproject/",
+      "ownerKey": "bahaisongproject",
+      "displayName": "bahá'í song project",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/banshee-data/",
+      "ownerKey": "banshee-data",
+      "displayName": "Banshee",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/battlefield-portal-community/",
+      "ownerKey": "battlefield-portal-community",
+      "displayName": "Battlefield Portal Community",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/bayesimpact/",
+      "ownerKey": "bayesimpact",
+      "displayName": "Bayes Impact",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/beyond-the-cloud-dev/",
+      "ownerKey": "beyond-the-cloud-dev",
+      "displayName": "Beyond The Cloud Dev",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/beyondtrust/",
+      "ownerKey": "beyondtrust",
+      "displayName": "BeyondTrust Corporation",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/biancoroyal/",
+      "ownerKey": "biancoroyal",
+      "displayName": "BIANCO ROYAL",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/biomejs/",
+      "ownerKey": "biomejs",
+      "displayName": "Biome",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/bitanon/",
+      "ownerKey": "bitanon",
+      "displayName": "Bitanon",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/bitovi/page/2/",
+      "ownerKey": "bitovi",
+      "displayName": "Bitovi",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/bitovi/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/bitwarden/page/2/",
+      "ownerKey": "bitwarden",
+      "displayName": "bitwarden",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/bitwarden/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/blackcat-informatics/",
+      "ownerKey": "blackcat-informatics",
+      "displayName": "Blackcat Informatics Inc.",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/blacksky-algorithms/",
+      "ownerKey": "blacksky-algorithms",
+      "displayName": "Blacksky Algorithms",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/blinqas/",
+      "ownerKey": "blinqas",
+      "displayName": "blinQ",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/blokadaorg/",
+      "ownerKey": "blokadaorg",
+      "displayName": "Blokada: DNS Adblocker + VPN",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/bluedotbrigade/",
+      "ownerKey": "bluedotbrigade",
+      "displayName": "Blue Dot Brigade",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/boldgrid/",
+      "ownerKey": "boldgrid",
+      "displayName": "BoldGrid",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/boostsecurityio/",
+      "ownerKey": "boostsecurityio",
+      "displayName": "Boost Security.io",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/boshold/",
+      "ownerKey": "boshold",
+      "displayName": "Boshold Development",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/boundfoxstudios/",
+      "ownerKey": "boundfoxstudios",
+      "displayName": "Boundfox Studios",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/boundlessfi/",
+      "ownerKey": "boundlessfi",
+      "displayName": "Boundless",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/brainfish-ai/",
+      "ownerKey": "brainfish-ai",
+      "displayName": "Brainfish",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/bretzel-app/",
+      "ownerKey": "bretzel-app",
+      "displayName": "Bretzel App",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/brisanet/",
+      "ownerKey": "brisanet",
+      "displayName": "Brisanet Internet",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/browserworks/",
+      "ownerKey": "browserworks",
+      "displayName": "BrowserWorks",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/buddiesofbudgie/",
+      "ownerKey": "buddiesofbudgie",
+      "displayName": "Buddies of Budgie",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/budibase/",
+      "ownerKey": "budibase",
+      "displayName": "Budibase",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/buggregator/",
+      "ownerKey": "buggregator",
+      "displayName": "Buggregator",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/builderio/page/2/",
+      "ownerKey": "builderio",
+      "displayName": "Builder.io",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/builderio/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/builderio/page/3/",
+      "ownerKey": "builderio",
+      "displayName": "Builder.io",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/builderio/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/builderio/page/4/",
+      "ownerKey": "builderio",
+      "displayName": "Builder.io",
+      "pageNumber": 4,
+      "targetUrl": "https://skillscout.sh/official/builderio/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/builderio/page/5/",
+      "ownerKey": "builderio",
+      "displayName": "Builder.io",
+      "pageNumber": 5,
+      "targetUrl": "https://skillscout.sh/official/builderio/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/builderio/page/6/",
+      "ownerKey": "builderio",
+      "displayName": "Builder.io",
+      "pageNumber": 6,
+      "targetUrl": "https://skillscout.sh/official/builderio/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/builderio/page/7/",
+      "ownerKey": "builderio",
+      "displayName": "Builder.io",
+      "pageNumber": 7,
+      "targetUrl": "https://skillscout.sh/official/builderio/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/bytecodealliance/",
+      "ownerKey": "bytecodealliance",
+      "displayName": "Bytecode Alliance",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/cai4cai/",
+      "ownerKey": "cai4cai",
+      "displayName": "CAI4CAI",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/caian-org/",
+      "ownerKey": "caian-org",
+      "displayName": "dotorg",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/callawaycloud/",
+      "ownerKey": "callawaycloud",
+      "displayName": "Callaway Cloud",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/canonical/page/2/",
+      "ownerKey": "canonical",
+      "displayName": "Canonical",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/canonical/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ccxt/",
+      "ownerKey": "ccxt",
+      "displayName": "ccxt",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/centreon/",
+      "ownerKey": "centreon",
+      "displayName": "Centreon",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/chainflip-io/",
+      "ownerKey": "chainflip-io",
+      "displayName": "Chainflip",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/chainguard-sandbox/",
+      "ownerKey": "chainguard-sandbox",
+      "displayName": "Chainguard Sandbox",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/chainloop-dev/",
+      "ownerKey": "chainloop-dev",
+      "displayName": "chainloop.dev",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/checkmarble/",
+      "ownerKey": "checkmarble",
+      "displayName": "Marble",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/chemicallang/",
+      "ownerKey": "chemicallang",
+      "displayName": "Chemical",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/chia-network/",
+      "ownerKey": "chia-network",
+      "displayName": "Chia Network",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/chippr-robotics/",
+      "ownerKey": "chippr-robotics",
+      "displayName": "Chippr Robotics",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/cihai/",
+      "ownerKey": "cihai",
+      "displayName": "cihai",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ckwag/",
+      "ownerKey": "ckwag",
+      "displayName": "CKW AG",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/clevertap/",
+      "ownerKey": "clevertap",
+      "displayName": "CleverTap",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/clickhouse/page/2/",
+      "ownerKey": "clickhouse",
+      "displayName": "clickhouse",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/clickhouse/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/cloudbytes-academy/",
+      "ownerKey": "cloudbytes-academy",
+      "displayName": "CloudBytes Academy",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/cloudposse-examples/",
+      "ownerKey": "cloudposse-examples",
+      "displayName": "Cloud Posse Examples",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/clutchengineering/",
+      "ownerKey": "clutchengineering",
+      "displayName": "Clutch Engineering",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/co-it/",
+      "ownerKey": "co-it",
+      "displayName": "co-IT.eu GmbH",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/code-store-platform/",
+      "ownerKey": "code-store-platform",
+      "displayName": "code.store",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/codeigniter-chinese/",
+      "ownerKey": "codeigniter-chinese",
+      "displayName": "CodeIgniter Chinese",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/codelytv/",
+      "ownerKey": "codelytv",
+      "displayName": "CodelyTV",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/compozy/page/2/",
+      "ownerKey": "compozy",
+      "displayName": "Compozy",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/compozy/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/compozy/page/3/",
+      "ownerKey": "compozy",
+      "displayName": "Compozy",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/compozy/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/compozy/page/4/",
+      "ownerKey": "compozy",
+      "displayName": "Compozy",
+      "pageNumber": 4,
+      "targetUrl": "https://skillscout.sh/official/compozy/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/compsigh/",
+      "ownerKey": "compsigh",
+      "displayName": "compsigh",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/concealnetwork/",
+      "ownerKey": "concealnetwork",
+      "displayName": "Conceal Network",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/couchers-org/",
+      "ownerKey": "couchers-org",
+      "displayName": "Couchers.org",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/covoiturage-gouv-fr/",
+      "ownerKey": "covoiturage-gouv-fr",
+      "displayName": "Registre de preuve de covoiturage",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/cqframework/",
+      "ownerKey": "cqframework",
+      "displayName": "Clinical Quality Framework",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/crc-org/",
+      "ownerKey": "crc-org",
+      "displayName": "CRC Runs Containers",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/cyfinoid/",
+      "ownerKey": "cyfinoid",
+      "displayName": "Cyfinoid Research",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/czbiohub-sf/",
+      "ownerKey": "czbiohub-sf",
+      "displayName": "Chan Zuckerberg Biohub San Francisco",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/dallay/page/2/",
+      "ownerKey": "dallay",
+      "displayName": "D A L L A Y",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/dallay/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/dallay/page/3/",
+      "ownerKey": "dallay",
+      "displayName": "D A L L A Y",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/dallay/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/dashpay/",
+      "ownerKey": "dashpay",
+      "displayName": "Dash",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/databricks/page/3/",
+      "ownerKey": "databricks",
+      "displayName": "Databricks",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/databricks/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/datadog/page/2/",
+      "ownerKey": "datadog",
+      "displayName": "Datadog, Inc.",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/datadog/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/dataroadinc/",
+      "ownerKey": "dataroadinc",
+      "displayName": "DataRoad",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/dathere/",
+      "ownerKey": "dathere",
+      "displayName": "datHere, Inc.",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/deckhouse/",
+      "ownerKey": "deckhouse",
+      "displayName": "deckhouse",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/deepgram/page/2/",
+      "ownerKey": "deepgram",
+      "displayName": "deepgram",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/deepgram/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/deepklarity/",
+      "ownerKey": "deepklarity",
+      "displayName": "DeepKlarity",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/defenseunicorns/",
+      "ownerKey": "defenseunicorns",
+      "displayName": "Defense Unicorns",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/defi-wonderland/",
+      "ownerKey": "defi-wonderland",
+      "displayName": "Wonderland",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/department-of-veterans-affairs/",
+      "ownerKey": "department-of-veterans-affairs",
+      "displayName": "Department of Veterans Affairs",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/deshaw/",
+      "ownerKey": "deshaw",
+      "displayName": "The D. E. Shaw Group",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/developmentontheedge/",
+      "ownerKey": "developmentontheedge",
+      "displayName": "DevelopmentOnTheEdge",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/devrev/",
+      "ownerKey": "devrev",
+      "displayName": "DevRev",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/dinerojs/",
+      "ownerKey": "dinerojs",
+      "displayName": "Dinero.js",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/dmnote-app/",
+      "ownerKey": "dmnote-app",
+      "displayName": "DM Note",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/documenso/",
+      "ownerKey": "documenso",
+      "displayName": "documenso",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/dolibarr/",
+      "ownerKey": "dolibarr",
+      "displayName": "Dolibarr ERP & CRM",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/doocs/",
+      "ownerKey": "doocs",
+      "displayName": "Doocs",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/dotabod/",
+      "ownerKey": "dotabod",
+      "displayName": "Dotabod",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/dotbunny/",
+      "ownerKey": "dotbunny",
+      "displayName": "dotBunny",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/doubleslashde/",
+      "ownerKey": "doubleslashde",
+      "displayName": "doubleSlash",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/dragonflydb/",
+      "ownerKey": "dragonflydb",
+      "displayName": "DragonflyDB",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/dropseed/",
+      "ownerKey": "dropseed",
+      "displayName": "Dropseed",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/duckduckgo/",
+      "ownerKey": "duckduckgo",
+      "displayName": "DuckDuckGo",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/duit-foundation/",
+      "ownerKey": "duit-foundation",
+      "displayName": "Duit Foundation",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/duolingo/",
+      "ownerKey": "duolingo",
+      "displayName": "Duolingo",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/dynamiatools/",
+      "ownerKey": "dynamiatools",
+      "displayName": "DynamiaTools",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ecency/",
+      "ownerKey": "ecency",
+      "displayName": "Ecency",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/edgafner/",
+      "ownerKey": "edgafner",
+      "displayName": "Dorkag",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/edly-io/",
+      "ownerKey": "edly-io",
+      "displayName": "Edly by Arbisoft",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/efdevcon/",
+      "ownerKey": "efdevcon",
+      "displayName": "Devcon",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/effector/",
+      "ownerKey": "effector",
+      "displayName": "effector ☄️",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/elastic/page/3/",
+      "ownerKey": "elastic",
+      "displayName": "Elastic",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/elastic/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/elastic/page/4/",
+      "ownerKey": "elastic",
+      "displayName": "Elastic",
+      "pageNumber": 4,
+      "targetUrl": "https://skillscout.sh/official/elastic/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/electron/",
+      "ownerKey": "electron",
+      "displayName": "Electron",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/electroniccats/",
+      "ownerKey": "electroniccats",
+      "displayName": "ElectronicCats",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/endjin/",
+      "ownerKey": "endjin",
+      "displayName": "endjin",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/epoch8/",
+      "ownerKey": "epoch8",
+      "displayName": "Epoch8",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/erxes/",
+      "ownerKey": "erxes",
+      "displayName": "erxes Inc",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/esphome/",
+      "ownerKey": "esphome",
+      "displayName": "ESPHome",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ethersphere/",
+      "ownerKey": "ethersphere",
+      "displayName": "Ethersphere",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/eventaservo/",
+      "ownerKey": "eventaservo",
+      "displayName": "Eventa Servo",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/evilbit-labs/",
+      "ownerKey": "evilbit-labs",
+      "displayName": "EvilBit Labs LLC",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/exceptionless/",
+      "ownerKey": "exceptionless",
+      "displayName": "Exceptionless",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/exercism/",
+      "ownerKey": "exercism",
+      "displayName": "Exercism",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/expensify/",
+      "ownerKey": "expensify",
+      "displayName": "Expensify, Inc",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/fabricondev/",
+      "ownerKey": "fabricondev",
+      "displayName": "Fabricon Dev",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/facebook/page/2/",
+      "ownerKey": "facebook",
+      "displayName": "Meta",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/facebook/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/facebookexperimental/",
+      "ownerKey": "facebookexperimental",
+      "displayName": "Meta Experimental",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/facioquo/",
+      "ownerKey": "facioquo",
+      "displayName": "FaciōQuō",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/fallout-build/",
+      "ownerKey": "fallout-build",
+      "displayName": "Fallout.build",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/fernleafsystems/",
+      "ownerKey": "fernleafsystems",
+      "displayName": "Fernleaf Systems",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/fetch-rewards/",
+      "ownerKey": "fetch-rewards",
+      "displayName": "Fetch",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ffmemes/",
+      "ownerKey": "ffmemes",
+      "displayName": "Fast Food Memes",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/filamentphp/",
+      "ownerKey": "filamentphp",
+      "displayName": "Filament",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/filenclouddienste/",
+      "ownerKey": "filenclouddienste",
+      "displayName": "Filen Cloud Dienste",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/firecrawl/page/5/",
+      "ownerKey": "firecrawl",
+      "displayName": "firecrawl",
+      "pageNumber": 5,
+      "targetUrl": "https://skillscout.sh/official/firecrawl/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/firecrawl/page/6/",
+      "ownerKey": "firecrawl",
+      "displayName": "firecrawl",
+      "pageNumber": 6,
+      "targetUrl": "https://skillscout.sh/official/firecrawl/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/firecrawl/page/7/",
+      "ownerKey": "firecrawl",
+      "displayName": "firecrawl",
+      "pageNumber": 7,
+      "targetUrl": "https://skillscout.sh/official/firecrawl/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/fiscozen/",
+      "ownerKey": "fiscozen",
+      "displayName": "Fiscozen",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/fission/",
+      "ownerKey": "fission",
+      "displayName": "Fission",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/flutter/page/2/",
+      "ownerKey": "flutter",
+      "displayName": "flutter",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/flutter/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/flutter/page/3/",
+      "ownerKey": "flutter",
+      "displayName": "flutter",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/flutter/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/flybase/",
+      "ownerKey": "flybase",
+      "displayName": "FlyBase",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/flytegg/",
+      "ownerKey": "flytegg",
+      "displayName": "Flyte",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/focus-shift/",
+      "ownerKey": "focus-shift",
+      "displayName": "Focus Shift Software GmbH",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/focusreactive/",
+      "ownerKey": "focusreactive",
+      "displayName": "FocusReactive",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/fogo-sh/",
+      "ownerKey": "fogo-sh",
+      "displayName": "fogo.sh",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/fold-ui/",
+      "ownerKey": "fold-ui",
+      "displayName": "Fold",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/forecast-bio/",
+      "ownerKey": "forecast-bio",
+      "displayName": "Forecast",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/formancehq/",
+      "ownerKey": "formancehq",
+      "displayName": "Formance",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/formingworlds/",
+      "ownerKey": "formingworlds",
+      "displayName": "Forming Worlds Lab",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/fp-matsuri/",
+      "ownerKey": "fp-matsuri",
+      "displayName": "fp-matsuri",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/freelawproject/",
+      "ownerKey": "freelawproject",
+      "displayName": "Free Law Project",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/fromchat-messenger/",
+      "ownerKey": "fromchat-messenger",
+      "displayName": "FromChat",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/frondruntime/",
+      "ownerKey": "frondruntime",
+      "displayName": "frond runtime",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/full-chaos/",
+      "ownerKey": "full-chaos",
+      "displayName": "Full Chaos Studio",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/fullstackhero/",
+      "ownerKey": "fullstackhero",
+      "displayName": "fullstackhero",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/galasa-dev/",
+      "ownerKey": "galasa-dev",
+      "displayName": "galasa",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/geanlabs/",
+      "ownerKey": "geanlabs",
+      "displayName": "Gean Labs",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/gemwalletcom/",
+      "ownerKey": "gemwalletcom",
+      "displayName": "Gem Wallet",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/generaltranslation/",
+      "ownerKey": "generaltranslation",
+      "displayName": "General Translation",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/genocs/",
+      "ownerKey": "genocs",
+      "displayName": "Genocs Services",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/genspectrum/",
+      "ownerKey": "genspectrum",
+      "displayName": "GenSpectrum",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/getdokan/",
+      "ownerKey": "getdokan",
+      "displayName": "Dokan",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/getlago/",
+      "ownerKey": "getlago",
+      "displayName": "Lago",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/getpaykit/",
+      "ownerKey": "getpaykit",
+      "displayName": "PayKit",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/getsentry/page/4/",
+      "ownerKey": "getsentry",
+      "displayName": "Sentry",
+      "pageNumber": 4,
+      "targetUrl": "https://skillscout.sh/official/getsentry/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/getsentry/page/5/",
+      "ownerKey": "getsentry",
+      "displayName": "Sentry",
+      "pageNumber": 5,
+      "targetUrl": "https://skillscout.sh/official/getsentry/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/getsentry/page/6/",
+      "ownerKey": "getsentry",
+      "displayName": "Sentry",
+      "pageNumber": 6,
+      "targetUrl": "https://skillscout.sh/official/getsentry/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/getsentry/page/7/",
+      "ownerKey": "getsentry",
+      "displayName": "Sentry",
+      "pageNumber": 7,
+      "targetUrl": "https://skillscout.sh/official/getsentry/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/gini/",
+      "ownerKey": "gini",
+      "displayName": "Gini GmbH",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/github/page/7/",
+      "ownerKey": "github",
+      "displayName": "github",
+      "pageNumber": 7,
+      "targetUrl": "https://skillscout.sh/official/github/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/github/page/8/",
+      "ownerKey": "github",
+      "displayName": "github",
+      "pageNumber": 8,
+      "targetUrl": "https://skillscout.sh/official/github/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/github/page/9/",
+      "ownerKey": "github",
+      "displayName": "github",
+      "pageNumber": 9,
+      "targetUrl": "https://skillscout.sh/official/github/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/gitkraken/",
+      "ownerKey": "gitkraken",
+      "displayName": "GitKraken",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/gitnotifier-labs/",
+      "ownerKey": "gitnotifier-labs",
+      "displayName": "GitNotifier",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/go-vikunja/",
+      "ownerKey": "go-vikunja",
+      "displayName": "Vikunja",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/godatadriven/",
+      "ownerKey": "godatadriven",
+      "displayName": "Xebia Data",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/gogs/",
+      "ownerKey": "gogs",
+      "displayName": "Gogs",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/goldenm-software/",
+      "ownerKey": "goldenm-software",
+      "displayName": "Golden M",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/goodpatch/",
+      "ownerKey": "goodpatch",
+      "displayName": "Goodpatch Inc.",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/gosh-sh/",
+      "ownerKey": "gosh-sh",
+      "displayName": "GOSH",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/govpf/",
+      "ownerKey": "govpf",
+      "displayName": "Gouvernement de la Polynésie française",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/grafana/page/2/",
+      "ownerKey": "grafana",
+      "displayName": "Grafana Labs",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/grafana/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/graycoreio/",
+      "ownerKey": "graycoreio",
+      "displayName": "Graycore, LLC",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/gredice/",
+      "ownerKey": "gredice",
+      "displayName": "Gredice",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/hackhtu/",
+      "ownerKey": "hackhtu",
+      "displayName": "HackHTU",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/hadenlabs/page/2/",
+      "ownerKey": "hadenlabs",
+      "displayName": "hadenlabs",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/hadenlabs/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/hardwood-hq/",
+      "ownerKey": "hardwood-hq",
+      "displayName": "Hardwood",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/hashgraph/",
+      "ownerKey": "hashgraph",
+      "displayName": "Hedera",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/hashintel/",
+      "ownerKey": "hashintel",
+      "displayName": "HASH",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/heliossoftware/",
+      "ownerKey": "heliossoftware",
+      "displayName": "Helios Software",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/helpfulengineering/",
+      "ownerKey": "helpfulengineering",
+      "displayName": "Helpful Engineering",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/hemilabs/",
+      "ownerKey": "hemilabs",
+      "displayName": "Hemi Labs",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/heyputer/",
+      "ownerKey": "heyputer",
+      "displayName": "Puter",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/hitobito/",
+      "ownerKey": "hitobito",
+      "displayName": "Hitobito",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/home-assistant/",
+      "ownerKey": "home-assistant",
+      "displayName": "Home Assistant",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/home-operations/",
+      "ownerKey": "home-operations",
+      "displayName": "Home Operations",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/homebrew/",
+      "ownerKey": "homebrew",
+      "displayName": "Homebrew",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/hospitaljobsin/",
+      "ownerKey": "hospitaljobsin",
+      "displayName": "Hospital Jobs",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/httpwg/",
+      "ownerKey": "httpwg",
+      "displayName": "IETF HTTP Working Group",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/huggingface/page/2/",
+      "ownerKey": "huggingface",
+      "displayName": "huggingface",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/huggingface/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/humanizr/",
+      "ownerKey": "humanizr",
+      "displayName": "Humanizr",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/idaholab/",
+      "ownerKey": "idaholab",
+      "displayName": "Idaho National Laboratory",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ilert/",
+      "ownerKey": "ilert",
+      "displayName": "ilert GmbH",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/imbue-ai/page/3/",
+      "ownerKey": "imbue-ai",
+      "displayName": "Imbue",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/imbue-ai/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/inbrowserapp/",
+      "ownerKey": "inbrowserapp",
+      "displayName": "InBrowser.App",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/incubateur-ademe/",
+      "ownerKey": "incubateur-ademe",
+      "displayName": "Accélérateur de la Transition Écologique (ADEME)",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/indielayer/",
+      "ownerKey": "indielayer",
+      "displayName": "Indielayer",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/indiesoftby/",
+      "ownerKey": "indiesoftby",
+      "displayName": "Indiesoft LLC",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/influxdata/",
+      "ownerKey": "influxdata",
+      "displayName": "InfluxData",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/inkline/",
+      "ownerKey": "inkline",
+      "displayName": "Inkline",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/inocan-group/",
+      "ownerKey": "inocan-group",
+      "displayName": "Inocan Group",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/instadapp/",
+      "ownerKey": "instadapp",
+      "displayName": "Instadapp",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/instructure/",
+      "ownerKey": "instructure",
+      "displayName": "Instructure, Inc.",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/intentarchitect/page/2/",
+      "ownerKey": "intentarchitect",
+      "displayName": "Intent Architect",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/intentarchitect/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/intentarchitect/page/3/",
+      "ownerKey": "intentarchitect",
+      "displayName": "Intent Architect",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/intentarchitect/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/intentarchitect/page/4/",
+      "ownerKey": "intentarchitect",
+      "displayName": "Intent Architect",
+      "pageNumber": 4,
+      "targetUrl": "https://skillscout.sh/official/intentarchitect/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/intentarchitect/page/5/",
+      "ownerKey": "intentarchitect",
+      "displayName": "Intent Architect",
+      "pageNumber": 5,
+      "targetUrl": "https://skillscout.sh/official/intentarchitect/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/intentee/",
+      "ownerKey": "intentee",
+      "displayName": "Intentee",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/intuitem/",
+      "ownerKey": "intuitem",
+      "displayName": "intuitem",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/invoiceninja/",
+      "ownerKey": "invoiceninja",
+      "displayName": "Invoice Ninja",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/inxton/",
+      "ownerKey": "inxton",
+      "displayName": "Inxton",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/iomete/",
+      "ownerKey": "iomete",
+      "displayName": "IOMETE",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/iotaledger/",
+      "ownerKey": "iotaledger",
+      "displayName": "IOTA",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/isc-projects/",
+      "ownerKey": "isc-projects",
+      "displayName": "Internet Systems Consortium",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/isndev/",
+      "ownerKey": "isndev",
+      "displayName": "ISNDEV",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/itsallcode/",
+      "ownerKey": "itsallcode",
+      "displayName": "It's all code",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/jesse-ai/",
+      "ownerKey": "jesse-ai",
+      "displayName": "Jesse",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/jetify-com/",
+      "ownerKey": "jetify-com",
+      "displayName": "Jetify",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/jetstreamapp/",
+      "ownerKey": "jetstreamapp",
+      "displayName": "Jetstream",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/jhb-software/",
+      "ownerKey": "jhb-software",
+      "displayName": "JHB Software",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/jishono/",
+      "ownerKey": "jishono",
+      "displayName": "jisho.no",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/jkkn-institutions/page/2/",
+      "ownerKey": "jkkn-institutions",
+      "displayName": "JKKN Institutions",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/jkkn-institutions/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/juspay/page/2/",
+      "ownerKey": "juspay",
+      "displayName": "JUSPAY",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/juspay/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/juspay/page/3/",
+      "ownerKey": "juspay",
+      "displayName": "JUSPAY",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/juspay/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/justeattakeaway/",
+      "ownerKey": "justeattakeaway",
+      "displayName": "Just Eat Takeaway.com",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/k-orc/",
+      "ownerKey": "k-orc",
+      "displayName": "k-orc",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/karuhun-developer/page/2/",
+      "ownerKey": "karuhun-developer",
+      "displayName": "Karuhun Developer",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/karuhun-developer/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/kata-containers/",
+      "ownerKey": "kata-containers",
+      "displayName": "Kata Containers",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/kenosinc/",
+      "ownerKey": "kenosinc",
+      "displayName": "Kenos, Inc.",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/keploy/",
+      "ownerKey": "keploy",
+      "displayName": "Keploy Inc",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ketch-com/",
+      "ownerKey": "ketch-com",
+      "displayName": "Ketch",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/kimai/",
+      "ownerKey": "kimai",
+      "displayName": "Kimai - Time Tracking Software",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/kingstinct/",
+      "ownerKey": "kingstinct",
+      "displayName": "Kingstinct",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ko-build/",
+      "ownerKey": "ko-build",
+      "displayName": "ko-build",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/kodular-community/",
+      "ownerKey": "kodular-community",
+      "displayName": "Kodular Community",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ktorio/",
+      "ownerKey": "ktorio",
+      "displayName": "ktor.io",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/kubeflow/",
+      "ownerKey": "kubeflow",
+      "displayName": "Kubeflow",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/kubeply/",
+      "ownerKey": "kubeply",
+      "displayName": "kubeply",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/kubernetes/",
+      "ownerKey": "kubernetes",
+      "displayName": "Kubernetes",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/kyma-project/",
+      "ownerKey": "kyma-project",
+      "displayName": "Kyma",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/kyter-com/",
+      "ownerKey": "kyter-com",
+      "displayName": "Kyter",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/lablup/",
+      "ownerKey": "lablup",
+      "displayName": "Lablup",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/lambda-sh/",
+      "ownerKey": "lambda-sh",
+      "displayName": "Lambda",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/lambdaclass/",
+      "ownerKey": "lambdaclass",
+      "displayName": "Lambdaclass",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/langchain-ai/page/3/",
+      "ownerKey": "langchain-ai",
+      "displayName": "LangChain",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/langchain-ai/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/langgenius/page/2/",
+      "ownerKey": "langgenius",
+      "displayName": "LangGenius",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/langgenius/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/lanl/",
+      "ownerKey": "lanl",
+      "displayName": "Los Alamos National Laboratory",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/launchscout/",
+      "ownerKey": "launchscout",
+      "displayName": "Launch Scout",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/layer5io/",
+      "ownerKey": "layer5io",
+      "displayName": "Layer5",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/layerswap/",
+      "ownerKey": "layerswap",
+      "displayName": "Layerswap",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/leather-io/",
+      "ownerKey": "leather-io",
+      "displayName": "Leather",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/lessify/",
+      "ownerKey": "lessify",
+      "displayName": "Lessify",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/liferay/",
+      "ownerKey": "liferay",
+      "displayName": "Liferay Inc.",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/lightspeedwp/page/10/",
+      "ownerKey": "lightspeedwp",
+      "displayName": "LightSpeed",
+      "pageNumber": 10,
+      "targetUrl": "https://skillscout.sh/official/lightspeedwp/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/lincolnloop/",
+      "ownerKey": "lincolnloop",
+      "displayName": "Lincoln Loop",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/linkedin/",
+      "ownerKey": "linkedin",
+      "displayName": "LinkedIn",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/linuxhq/",
+      "ownerKey": "linuxhq",
+      "displayName": "linuxhq",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/liquid4all/",
+      "ownerKey": "liquid4all",
+      "displayName": "Liquid AI",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/listennotes/",
+      "ownerKey": "listennotes",
+      "displayName": "Listen Notes",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/livekit-examples/",
+      "ownerKey": "livekit-examples",
+      "displayName": " LiveKit Examples",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/livesession/",
+      "ownerKey": "livesession",
+      "displayName": "LiveSession",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/livingdocsio/",
+      "ownerKey": "livingdocsio",
+      "displayName": "Livingdocs",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/loft-lang/",
+      "ownerKey": "loft-lang",
+      "displayName": "loft",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/log2n-io/",
+      "ownerKey": "log2n-io",
+      "displayName": "Log2n",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/logto-io/",
+      "ownerKey": "logto-io",
+      "displayName": "Logto",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/loveholidays/",
+      "ownerKey": "loveholidays",
+      "displayName": "loveholidays",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/lowdefy/",
+      "ownerKey": "lowdefy",
+      "displayName": "Lowdefy",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/maaassistantarknights/",
+      "ownerKey": "maaassistantarknights",
+      "displayName": "MAA",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/macmagazine/",
+      "ownerKey": "macmagazine",
+      "displayName": "MacMagazine",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/madewithlove/",
+      "ownerKey": "madewithlove",
+      "displayName": "madewithlove",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/mage-os/",
+      "ownerKey": "mage-os",
+      "displayName": "Mage-OS",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/mainmatter/",
+      "ownerKey": "mainmatter",
+      "displayName": "Mainmatter",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/makeplane/",
+      "ownerKey": "makeplane",
+      "displayName": "Plane",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/managedcode/page/4/",
+      "ownerKey": "managedcode",
+      "displayName": "Managed Code",
+      "pageNumber": 4,
+      "targetUrl": "https://skillscout.sh/official/managedcode/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/managedcode/page/5/",
+      "ownerKey": "managedcode",
+      "displayName": "Managed Code",
+      "pageNumber": 5,
+      "targetUrl": "https://skillscout.sh/official/managedcode/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/managedcode/page/6/",
+      "ownerKey": "managedcode",
+      "displayName": "Managed Code",
+      "pageNumber": 6,
+      "targetUrl": "https://skillscout.sh/official/managedcode/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/managedcode/page/7/",
+      "ownerKey": "managedcode",
+      "displayName": "Managed Code",
+      "pageNumber": 7,
+      "targetUrl": "https://skillscout.sh/official/managedcode/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/marpledata/",
+      "ownerKey": "marpledata",
+      "displayName": "Marple",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/masscodeio/",
+      "ownerKey": "masscodeio",
+      "displayName": "massCodeIO",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/matrixreligio/",
+      "ownerKey": "matrixreligio",
+      "displayName": "MatrixReligio LLC",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/matter-labs/",
+      "ownerKey": "matter-labs",
+      "displayName": "Matter Labs",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/mcmonkeyprojects/",
+      "ownerKey": "mcmonkeyprojects",
+      "displayName": "mcmonkey's public projects",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/meditohq/",
+      "ownerKey": "meditohq",
+      "displayName": "Medito Foundation",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/meetsmore/",
+      "ownerKey": "meetsmore",
+      "displayName": "ミツモア",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/meteostat/",
+      "ownerKey": "meteostat",
+      "displayName": "Meteostat",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/method-security/",
+      "ownerKey": "method-security",
+      "displayName": "Method Security",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/metr/",
+      "ownerKey": "metr",
+      "displayName": "METR",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/metrics-rs/",
+      "ownerKey": "metrics-rs",
+      "displayName": "Metrics",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/mewssystems/",
+      "ownerKey": "mewssystems",
+      "displayName": "Mews",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/microsoft/page/15/",
+      "ownerKey": "microsoft",
+      "displayName": "microsoft",
+      "pageNumber": 15,
+      "targetUrl": "https://skillscout.sh/official/microsoft/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/microsoft/page/16/",
+      "ownerKey": "microsoft",
+      "displayName": "microsoft",
+      "pageNumber": 16,
+      "targetUrl": "https://skillscout.sh/official/microsoft/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/microsoft/page/17/",
+      "ownerKey": "microsoft",
+      "displayName": "microsoft",
+      "pageNumber": 17,
+      "targetUrl": "https://skillscout.sh/official/microsoft/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/microsoft/page/18/",
+      "ownerKey": "microsoft",
+      "displayName": "microsoft",
+      "pageNumber": 18,
+      "targetUrl": "https://skillscout.sh/official/microsoft/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/microsoft/page/19/",
+      "ownerKey": "microsoft",
+      "displayName": "microsoft",
+      "pageNumber": 19,
+      "targetUrl": "https://skillscout.sh/official/microsoft/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/microsoft/page/20/",
+      "ownerKey": "microsoft",
+      "displayName": "microsoft",
+      "pageNumber": 20,
+      "targetUrl": "https://skillscout.sh/official/microsoft/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/microsoft/page/21/",
+      "ownerKey": "microsoft",
+      "displayName": "microsoft",
+      "pageNumber": 21,
+      "targetUrl": "https://skillscout.sh/official/microsoft/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/microsoft/page/22/",
+      "ownerKey": "microsoft",
+      "displayName": "microsoft",
+      "pageNumber": 22,
+      "targetUrl": "https://skillscout.sh/official/microsoft/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/microsoft/page/23/",
+      "ownerKey": "microsoft",
+      "displayName": "microsoft",
+      "pageNumber": 23,
+      "targetUrl": "https://skillscout.sh/official/microsoft/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/microsoft/page/24/",
+      "ownerKey": "microsoft",
+      "displayName": "microsoft",
+      "pageNumber": 24,
+      "targetUrl": "https://skillscout.sh/official/microsoft/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/middleware-labs/",
+      "ownerKey": "middleware-labs",
+      "displayName": "Middleware",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/mikopbx/",
+      "ownerKey": "mikopbx",
+      "displayName": "MIKO LLC",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/mikotoio/",
+      "ownerKey": "mikotoio",
+      "displayName": "mikoto platforms",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/milaboratory/",
+      "ownerKey": "milaboratory",
+      "displayName": "MiLaboratories",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/milkdown/",
+      "ownerKey": "milkdown",
+      "displayName": "Milkdown",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/mindenit/",
+      "ownerKey": "mindenit",
+      "displayName": "Mindenit",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/minuthq/",
+      "ownerKey": "minuthq",
+      "displayName": "Minut",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/mirumee/",
+      "ownerKey": "mirumee",
+      "displayName": "Mirumee Labs",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/mirurobotics/",
+      "ownerKey": "mirurobotics",
+      "displayName": "Miru",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/mishka-group/",
+      "ownerKey": "mishka-group",
+      "displayName": "Mishka Group",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/mixinnetwork/",
+      "ownerKey": "mixinnetwork",
+      "displayName": "Mixin Network",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/mobileupllc/",
+      "ownerKey": "mobileupllc",
+      "displayName": "MobileUp",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/modernweb-dev/",
+      "ownerKey": "modernweb-dev",
+      "displayName": "Modern Web",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/modrinth/",
+      "ownerKey": "modrinth",
+      "displayName": "Modrinth",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/moengage/",
+      "ownerKey": "moengage",
+      "displayName": "MoEngage",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/morphiaorg/",
+      "ownerKey": "morphiaorg",
+      "displayName": "MorphiaOrg",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/muckrock/",
+      "ownerKey": "muckrock",
+      "displayName": "MuckRock",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/muxinc/",
+      "ownerKey": "muxinc",
+      "displayName": "Mux",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/mysigmail/",
+      "ownerKey": "mysigmail",
+      "displayName": "MySigMail",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/natrontech/",
+      "ownerKey": "natrontech",
+      "displayName": "Natron Tech",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/naturalcycles/",
+      "ownerKey": "naturalcycles",
+      "displayName": "Natural Cycles",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/nekochans/",
+      "ownerKey": "nekochans",
+      "displayName": "nekochans",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/nerionsoft/",
+      "ownerKey": "nerionsoft",
+      "displayName": "NerionSoft",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/netcracker/page/2/",
+      "ownerKey": "netcracker",
+      "displayName": "Netcracker Technology",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/netcracker/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/netwrix/",
+      "ownerKey": "netwrix",
+      "displayName": "Netwrix Corporation",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/neuland-ingolstadt/",
+      "ownerKey": "neuland-ingolstadt",
+      "displayName": "Neuland Ingolstadt e.V.",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/nexoral/",
+      "ownerKey": "nexoral",
+      "displayName": "Nexoral Systems",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/nextdoor/",
+      "ownerKey": "nextdoor",
+      "displayName": "Nextdoor",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/neynarxyz/",
+      "ownerKey": "neynarxyz",
+      "displayName": "Neynar",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/nhcarrigan-spring-2026-cohort/",
+      "ownerKey": "nhcarrigan-spring-2026-cohort",
+      "displayName": "NHCarrigan/freeCodeCamp Spring 2026 Cohort",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/njupt-sast/",
+      "ownerKey": "njupt-sast",
+      "displayName": "NJUPT SAST",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/noahapp/",
+      "ownerKey": "noahapp",
+      "displayName": "Noah",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/nolebase/",
+      "ownerKey": "nolebase",
+      "displayName": "Nólëbase",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/nominal-io/",
+      "ownerKey": "nominal-io",
+      "displayName": "Nominal",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/normation/",
+      "ownerKey": "normation",
+      "displayName": "Rudder",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/npgsql/",
+      "ownerKey": "npgsql",
+      "displayName": "Npgsql",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/nrwl/page/2/",
+      "ownerKey": "nrwl",
+      "displayName": "Nx",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/nrwl/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ntut-npc/",
+      "ownerKey": "ntut-npc",
+      "displayName": "NTUT Programming Club",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/nuclearpasta/",
+      "ownerKey": "nuclearpasta",
+      "displayName": "Nuclear Pasta",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/numberly/",
+      "ownerKey": "numberly",
+      "displayName": "Numberly",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/nvidia/page/6/",
+      "ownerKey": "nvidia",
+      "displayName": "nvidia",
+      "pageNumber": 6,
+      "targetUrl": "https://skillscout.sh/official/nvidia/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/nvidia/page/7/",
+      "ownerKey": "nvidia",
+      "displayName": "nvidia",
+      "pageNumber": 7,
+      "targetUrl": "https://skillscout.sh/official/nvidia/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/nxp-mcuxpresso/",
+      "ownerKey": "nxp-mcuxpresso",
+      "displayName": "NXP MCUXpresso",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/oaknational/page/2/",
+      "ownerKey": "oaknational",
+      "displayName": "Oak National Academy",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/oaknational/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/oasdiff/",
+      "ownerKey": "oasdiff",
+      "displayName": "oasdiff",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ocaml/",
+      "ownerKey": "ocaml",
+      "displayName": "OCaml",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/odoo/",
+      "ownerKey": "odoo",
+      "displayName": "Odoo",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/off-nominal/",
+      "ownerKey": "off-nominal",
+      "displayName": "Off-Nominal",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/oierdb-ng/",
+      "ownerKey": "oierdb-ng",
+      "displayName": "OIerDb",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/oist/",
+      "ownerKey": "oist",
+      "displayName": "Okinawa Institute of Science & Technology",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/okx/page/2/",
+      "ownerKey": "okx",
+      "displayName": "OKX.com",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/okx/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/olympusdao/",
+      "ownerKey": "olympusdao",
+      "displayName": "OlympusDAO",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ondeinference/",
+      "ownerKey": "ondeinference",
+      "displayName": "Onde Inference",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/onlyoffice/",
+      "ownerKey": "onlyoffice",
+      "displayName": "ONLYOFFICE",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/opanel-mc/",
+      "ownerKey": "opanel-mc",
+      "displayName": "OPanel Project",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/open-bias/",
+      "ownerKey": "open-bias",
+      "displayName": "Open Bias",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/open-pix/",
+      "ownerKey": "open-pix",
+      "displayName": "Open Pix",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/openai/page/10/",
+      "ownerKey": "openai",
+      "displayName": "openai",
+      "pageNumber": 10,
+      "targetUrl": "https://skillscout.sh/official/openai/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/openai/page/11/",
+      "ownerKey": "openai",
+      "displayName": "openai",
+      "pageNumber": 11,
+      "targetUrl": "https://skillscout.sh/official/openai/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/openai/page/9/",
+      "ownerKey": "openai",
+      "displayName": "openai",
+      "pageNumber": 9,
+      "targetUrl": "https://skillscout.sh/official/openai/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/opencyphal/",
+      "ownerKey": "opencyphal",
+      "displayName": "OpenCyphal",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/openfrontio/",
+      "ownerKey": "openfrontio",
+      "displayName": "OpenFront",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/openmanet/",
+      "ownerKey": "openmanet",
+      "displayName": "OpenMANET",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/openops-cloud/",
+      "ownerKey": "openops-cloud",
+      "displayName": "OpenOps",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/opensanctions/",
+      "ownerKey": "opensanctions",
+      "displayName": "OpenSanctions",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/openshift/page/2/",
+      "ownerKey": "openshift",
+      "displayName": "openshift",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/openshift/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/opentrons/",
+      "ownerKey": "opentrons",
+      "displayName": "Opentrons",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ossf/",
+      "ownerKey": "ossf",
+      "displayName": "Open Source Security Foundation (OpenSSF)",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ourfuturehealth/",
+      "ownerKey": "ourfuturehealth",
+      "displayName": "Our Future Health",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/outfitter-dev/page/3/",
+      "ownerKey": "outfitter-dev",
+      "displayName": "Outfitter",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/outfitter-dev/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/oxc-project/",
+      "ownerKey": "oxc-project",
+      "displayName": "oxc",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/p3d-legacy/",
+      "ownerKey": "p3d-legacy",
+      "displayName": "Pokémon 3D Legacy",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/palantir/",
+      "ownerKey": "palantir",
+      "displayName": "Palantir Technologies",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/paloaltonetworks/",
+      "ownerKey": "paloaltonetworks",
+      "displayName": "Palo Alto Networks",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/panfactum/",
+      "ownerKey": "panfactum",
+      "displayName": "Panfactum Group, Inc.",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/panther-labs/",
+      "ownerKey": "panther-labs",
+      "displayName": "Panther Labs",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/parabolinc/",
+      "ownerKey": "parabolinc",
+      "displayName": "Parabol",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/paradigmxyz/",
+      "ownerKey": "paradigmxyz",
+      "displayName": "Paradigm",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/paralect/",
+      "ownerKey": "paralect",
+      "displayName": "Paralect",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/patrykandpatrick/",
+      "ownerKey": "patrykandpatrick",
+      "displayName": "Patryk & Patrick",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/patterninc/",
+      "ownerKey": "patterninc",
+      "displayName": "Pattern",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/pdfrest/",
+      "ownerKey": "pdfrest",
+      "displayName": "pdfRest",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/pgdogdev/",
+      "ownerKey": "pgdogdev",
+      "displayName": "PgDog",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/phpstan/",
+      "ownerKey": "phpstan",
+      "displayName": "PHPStan",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/piebald-ai/",
+      "ownerKey": "piebald-ai",
+      "displayName": "Piebald",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/pingdotgg/",
+      "ownerKey": "pingdotgg",
+      "displayName": "Ping.gg",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/pioneershub/",
+      "ownerKey": "pioneershub",
+      "displayName": "Pioneers Hub gemeinnützige GmbH (non-profit)",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/pioreactor/",
+      "ownerKey": "pioreactor",
+      "displayName": "Pioreactor",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/pivotal/",
+      "ownerKey": "pivotal",
+      "displayName": "Pivotal",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/plan4better/",
+      "ownerKey": "plan4better",
+      "displayName": "Plan4Better",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/platform9/",
+      "ownerKey": "platform9",
+      "displayName": "Platform9 Systems Inc",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/playtikaoss/",
+      "ownerKey": "playtikaoss",
+      "displayName": "Playtika",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/pluk-inc/",
+      "ownerKey": "pluk-inc",
+      "displayName": "Pluk",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/pnpm/",
+      "ownerKey": "pnpm",
+      "displayName": "pnpm",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/pokujs/",
+      "ownerKey": "pokujs",
+      "displayName": "Poku",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/posthog/page/7/",
+      "ownerKey": "posthog",
+      "displayName": "posthog",
+      "pageNumber": 7,
+      "targetUrl": "https://skillscout.sh/official/posthog/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/posthog/page/8/",
+      "ownerKey": "posthog",
+      "displayName": "posthog",
+      "pageNumber": 8,
+      "targetUrl": "https://skillscout.sh/official/posthog/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/posthog/page/9/",
+      "ownerKey": "posthog",
+      "displayName": "posthog",
+      "pageNumber": 9,
+      "targetUrl": "https://skillscout.sh/official/posthog/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/potahtml/",
+      "ownerKey": "potahtml",
+      "displayName": "pota",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/prairielearn/",
+      "ownerKey": "prairielearn",
+      "displayName": "PrairieLearn",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/prestodb/",
+      "ownerKey": "prestodb",
+      "displayName": "Presto",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/prisma/page/2/",
+      "ownerKey": "prisma",
+      "displayName": "prisma",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/prisma/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/prodigypxp/",
+      "ownerKey": "prodigypxp",
+      "displayName": "Play Origin",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/programming-in-th/",
+      "ownerKey": "programming-in-th",
+      "displayName": "PROGRAMMING.IN.TH",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/project-navi/",
+      "ownerKey": "project-navi",
+      "displayName": "Project Navi",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/project-trans/",
+      "ownerKey": "project-trans",
+      "displayName": "Project Trans",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/projectcalico/",
+      "ownerKey": "projectcalico",
+      "displayName": "Project Calico",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/projectsveltos/",
+      "ownerKey": "projectsveltos",
+      "displayName": "projectsveltos",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/provenance-emu/",
+      "ownerKey": "provenance-emu",
+      "displayName": "Provenance Emu",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ptarmiganlabs/page/2/",
+      "ownerKey": "ptarmiganlabs",
+      "displayName": "Ptarmigan Labs",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/ptarmiganlabs/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/publishpress/",
+      "ownerKey": "publishpress",
+      "displayName": "PublishPress",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/px4/",
+      "ownerKey": "px4",
+      "displayName": "PX4 Autopilot",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/pypa/",
+      "ownerKey": "pypa",
+      "displayName": "Python Packaging Authority",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/python/",
+      "ownerKey": "python",
+      "displayName": "Python",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/pyvista/",
+      "ownerKey": "pyvista",
+      "displayName": "PyVista",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/qredence/page/2/",
+      "ownerKey": "qredence",
+      "displayName": "qredence",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/qredence/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/quests-org/",
+      "ownerKey": "quests-org",
+      "displayName": "Quests",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/quickwit-oss/",
+      "ownerKey": "quickwit-oss",
+      "displayName": "Quickwit OSS",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/r3bl-org/",
+      "ownerKey": "r3bl-org",
+      "displayName": "R3BL",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/rapidaai/",
+      "ownerKey": "rapidaai",
+      "displayName": "RapidaAI",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/raystack/",
+      "ownerKey": "raystack",
+      "displayName": "Raystack",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/realmjoin/",
+      "ownerKey": "realmjoin",
+      "displayName": "RealmJoin",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/recidiviz/",
+      "ownerKey": "recidiviz",
+      "displayName": "Recidiviz",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/red-hat-ai-innovation-team/",
+      "ownerKey": "red-hat-ai-innovation-team",
+      "displayName": "AI Innovation Team",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/redis/page/2/",
+      "ownerKey": "redis",
+      "displayName": "redis",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/redis/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/redmadrobot/",
+      "ownerKey": "redmadrobot",
+      "displayName": "red_mad_robot",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/redvars/",
+      "ownerKey": "redvars",
+      "displayName": "redvars",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/relicta-team/",
+      "ownerKey": "relicta-team",
+      "displayName": "Relicta-Team",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/remix-run/",
+      "ownerKey": "remix-run",
+      "displayName": "Remix",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/remult/",
+      "ownerKey": "remult",
+      "displayName": "Remult",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/rest-sh/",
+      "ownerKey": "rest-sh",
+      "displayName": "Rest.sh",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ret2shell/",
+      "ownerKey": "ret2shell",
+      "displayName": "Ret 2 Shell (回归终端)",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/riscv/",
+      "ownerKey": "riscv",
+      "displayName": "RISC-V",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/rocky-data/",
+      "ownerKey": "rocky-data",
+      "displayName": "rocky-data",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/rocky-linux/",
+      "ownerKey": "rocky-linux",
+      "displayName": "Rocky Linux",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/rommapp/",
+      "ownerKey": "rommapp",
+      "displayName": "The RomM Project",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/roslynpad/",
+      "ownerKey": "roslynpad",
+      "displayName": "RoslynPad",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/rsdn/",
+      "ownerKey": "rsdn",
+      "displayName": "Russian Software Developer Network",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/rstudio/",
+      "ownerKey": "rstudio",
+      "displayName": "RStudio",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/ruby/",
+      "ownerKey": "ruby",
+      "displayName": "The Ruby Programming Language",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/rubyforgood/",
+      "ownerKey": "rubyforgood",
+      "displayName": "Ruby for Good",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/rubygems/",
+      "ownerKey": "rubygems",
+      "displayName": "RubyGems",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/rust-lang-cn/",
+      "ownerKey": "rust-lang-cn",
+      "displayName": "Rust 中文资源",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/rytass/",
+      "ownerKey": "rytass",
+      "displayName": "Rytass",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/safe-global/",
+      "ownerKey": "safe-global",
+      "displayName": "Safe Labs GmbH",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/sailfinio/",
+      "ownerKey": "sailfinio",
+      "displayName": "Sailfin",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/saladtechnologies/",
+      "ownerKey": "saladtechnologies",
+      "displayName": "Salad Technologies",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/sanity-io/page/2/",
+      "ownerKey": "sanity-io",
+      "displayName": "Sanity",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/sanity-io/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/savoirfairelinux/",
+      "ownerKey": "savoirfairelinux",
+      "displayName": "Savoir-faire Linux",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/scalingo/",
+      "ownerKey": "scalingo",
+      "displayName": "Scalingo",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/schematichq/",
+      "ownerKey": "schematichq",
+      "displayName": "Schematic",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/scikit-build/",
+      "ownerKey": "scikit-build",
+      "displayName": "scikit-build",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/scouterna/",
+      "ownerKey": "scouterna",
+      "displayName": "Scouterna - The Guides and Scouts of Sweden",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/scrumdojo/",
+      "ownerKey": "scrumdojo",
+      "displayName": "ScrumDōjō",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/sctg-development/",
+      "ownerKey": "sctg-development",
+      "displayName": "SCTG Développement",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/scutrobotlab/",
+      "ownerKey": "scutrobotlab",
+      "displayName": "SCUTRobotLab",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/sddevelopment-be/",
+      "ownerKey": "sddevelopment-be",
+      "displayName": "SD Development",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/seed4j/",
+      "ownerKey": "seed4j",
+      "displayName": "Seed4J",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/seedcompany/",
+      "ownerKey": "seedcompany",
+      "displayName": "Seed Company",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/segmentio/",
+      "ownerKey": "segmentio",
+      "displayName": "Segment",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/selleo/",
+      "ownerKey": "selleo",
+      "displayName": "Selleo",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/sema4ai-external/",
+      "ownerKey": "sema4ai-external",
+      "displayName": "Sema4.ai - External collaboration",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/semaphoreui/",
+      "ownerKey": "semaphoreui",
+      "displayName": "Semaphore UI",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/seoklab/",
+      "ownerKey": "seoklab",
+      "displayName": "SNU Compbio Lab",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/sharezoneapp/",
+      "ownerKey": "sharezoneapp",
+      "displayName": "Sharezone",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/shellaquiles/",
+      "ownerKey": "shellaquiles",
+      "displayName": "{{ shellaquiles.org }}",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/shopex/",
+      "ownerKey": "shopex",
+      "displayName": "ShopeX",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/sicuranext/",
+      "ownerKey": "sicuranext",
+      "displayName": "SicuraNext",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/sierrasoftworks/",
+      "ownerKey": "sierrasoftworks",
+      "displayName": "Sierra Softworks",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/significant-gravitas/",
+      "ownerKey": "significant-gravitas",
+      "displayName": "AutoGPT",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/signnow/",
+      "ownerKey": "signnow",
+      "displayName": "SignNow",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/silverlogic/",
+      "ownerKey": "silverlogic",
+      "displayName": "The SilverLogic",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/simplito/",
+      "ownerKey": "simplito",
+      "displayName": "Simplito",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/sitecore/",
+      "ownerKey": "sitecore",
+      "displayName": "Sitecore",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/skyscanner/",
+      "ownerKey": "skyscanner",
+      "displayName": "Skyscanner",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/slackhq/",
+      "ownerKey": "slackhq",
+      "displayName": "Slack",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/slingshot/",
+      "ownerKey": "slingshot",
+      "displayName": "Slingshot",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/slop-o-meter/",
+      "ownerKey": "slop-o-meter",
+      "displayName": "Slop-O-Meter",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/smartsheet/",
+      "ownerKey": "smartsheet",
+      "displayName": "Smartsheet",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/smbcloudxyz/",
+      "ownerKey": "smbcloudxyz",
+      "displayName": "smbCloud",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/smithsonian/",
+      "ownerKey": "smithsonian",
+      "displayName": "Smithsonian Institution (org)",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/socketdev/",
+      "ownerKey": "socketdev",
+      "displayName": "Socket",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/socketdev/page/2/",
+      "ownerKey": "socketdev",
+      "displayName": "Socket",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/socketdev/page/3/",
+      "ownerKey": "socketdev",
+      "displayName": "Socket",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/socketdev/page/4/",
+      "ownerKey": "socketdev",
+      "displayName": "Socket",
+      "pageNumber": 4,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/socketdev/page/5/",
+      "ownerKey": "socketdev",
+      "displayName": "Socket",
+      "pageNumber": 5,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/socketdev/page/6/",
+      "ownerKey": "socketdev",
+      "displayName": "Socket",
+      "pageNumber": 6,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/socketdev/page/7/",
+      "ownerKey": "socketdev",
+      "displayName": "Socket",
+      "pageNumber": 7,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/solacedev/",
+      "ownerKey": "solacedev",
+      "displayName": "Solace Systems Development",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/solid-company/",
+      "ownerKey": "solid-company",
+      "displayName": "SOLID.Jobs",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/solidinvoice/",
+      "ownerKey": "solidinvoice",
+      "displayName": "SolidInvoice",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/solinumasso/",
+      "ownerKey": "solinumasso",
+      "displayName": "Solinum",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/sonar-solutions/",
+      "ownerKey": "sonar-solutions",
+      "displayName": "Sonar Solutions",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/sophgo/",
+      "ownerKey": "sophgo",
+      "displayName": "Sophgo Technologies",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/soundcloud/",
+      "ownerKey": "soundcloud",
+      "displayName": "SoundCloud",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/space-launch-now/",
+      "ownerKey": "space-launch-now",
+      "displayName": "Space Launch Now",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/spacegass/",
+      "ownerKey": "spacegass",
+      "displayName": "SPACE GASS",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/spack/",
+      "ownerKey": "spack",
+      "displayName": "Spack",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/spawndock/",
+      "ownerKey": "spawndock",
+      "displayName": "SpawnDock",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/spdk/",
+      "ownerKey": "spdk",
+      "displayName": "Storage Performance Development Kit",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/specfy/",
+      "ownerKey": "specfy",
+      "displayName": "Specfy",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/speclynx/",
+      "ownerKey": "speclynx",
+      "displayName": "SpecLynx",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/squaregps/",
+      "ownerKey": "squaregps",
+      "displayName": "SquareGPS",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/stackexchange/",
+      "ownerKey": "stackexchange",
+      "displayName": "Stack Overflow Open Source",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/stackguardian/",
+      "ownerKey": "stackguardian",
+      "displayName": "StackGuardian",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/stackrox/",
+      "ownerKey": "stackrox",
+      "displayName": "StackRox",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/statamic/",
+      "ownerKey": "statamic",
+      "displayName": "Statamic",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/static-web-server/",
+      "ownerKey": "static-web-server",
+      "displayName": "Static Web Server (SWS)",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/sthlmio/",
+      "ownerKey": "sthlmio",
+      "displayName": "sthlm.io",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/submuxhq/",
+      "ownerKey": "submuxhq",
+      "displayName": "Submux",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/swagger-api/",
+      "ownerKey": "swagger-api",
+      "displayName": "Swagger",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/sweepai/",
+      "ownerKey": "sweepai",
+      "displayName": "Sweep AI",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/systemorph/",
+      "ownerKey": "systemorph",
+      "displayName": "Systemorph",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/tableproapp/",
+      "ownerKey": "tableproapp",
+      "displayName": "TablePro",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/tabler/",
+      "ownerKey": "tabler",
+      "displayName": "Tabler",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/tabularisdb/",
+      "ownerKey": "tabularisdb",
+      "displayName": "Tabularis",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/talsec/",
+      "ownerKey": "talsec",
+      "displayName": "Talsec",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/tangem/",
+      "ownerKey": "tangem",
+      "displayName": "Tangem",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/tarantool/",
+      "ownerKey": "tarantool",
+      "displayName": "Tarantool",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/tdesktop-x64/",
+      "ownerKey": "tdesktop-x64",
+      "displayName": "64Gram",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/team-return/",
+      "ownerKey": "team-return",
+      "displayName": "Team: return",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/team-vow/",
+      "ownerKey": "team-vow",
+      "displayName": "Voices of Wynn",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/teamfelnull/",
+      "ownerKey": "teamfelnull",
+      "displayName": "TeamFelNull",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/teamzisty/",
+      "ownerKey": "teamzisty",
+      "displayName": "Zisty",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/techdiary-dev/",
+      "ownerKey": "techdiary-dev",
+      "displayName": "Techdiary",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/techpivot/",
+      "ownerKey": "techpivot",
+      "displayName": "TechPivot",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/tegal1337/",
+      "ownerKey": "tegal1337",
+      "displayName": "TEGALSEC",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/telekom-mms/",
+      "ownerKey": "telekom-mms",
+      "displayName": "Deutsche Telekom MMS GmbH",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/tetronio/",
+      "ownerKey": "tetronio",
+      "displayName": "Tetron",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/tf2pickup-org/",
+      "ownerKey": "tf2pickup-org",
+      "displayName": "tf2pickup.org",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/thank-you-linus/",
+      "ownerKey": "thank-you-linus",
+      "displayName": "Thank you Linus",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/the-interdependency/",
+      "ownerKey": "the-interdependency",
+      "displayName": "The Interdependency",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/thegoodparty/",
+      "ownerKey": "thegoodparty",
+      "displayName": "GoodParty.org",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/themanticoreproject/",
+      "ownerKey": "themanticoreproject",
+      "displayName": "The Manticore Project ",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/themefisher/",
+      "ownerKey": "themefisher",
+      "displayName": "Themefisher",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/themesberg/",
+      "ownerKey": "themesberg",
+      "displayName": "Themesberg",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/thepartly/",
+      "ownerKey": "thepartly",
+      "displayName": "Partly",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/thinkmill/",
+      "ownerKey": "thinkmill",
+      "displayName": "Thinkmill",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/thunderbird/",
+      "ownerKey": "thunderbird",
+      "displayName": "Thunderbird",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/tidyverse/",
+      "ownerKey": "tidyverse",
+      "displayName": "tidyverse",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/tiendanube/",
+      "ownerKey": "tiendanube",
+      "displayName": "Tiendanube",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/tinder/",
+      "ownerKey": "tinder",
+      "displayName": "Tinder",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/tmux-python/",
+      "ownerKey": "tmux-python",
+      "displayName": "python utilities for tmux",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/tomtom-international/",
+      "ownerKey": "tomtom-international",
+      "displayName": "TomTom",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/torchbox/",
+      "ownerKey": "torchbox",
+      "displayName": "Torchbox",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/towardsthecloud/",
+      "ownerKey": "towardsthecloud",
+      "displayName": "Towards the Cloud",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/trainprotocol/",
+      "ownerKey": "trainprotocol",
+      "displayName": "TRAIN Protocol",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/transcend-io/",
+      "ownerKey": "transcend-io",
+      "displayName": "Transcend",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/transi-store/",
+      "ownerKey": "transi-store",
+      "displayName": "Transi-store",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/trendyol/",
+      "ownerKey": "trendyol",
+      "displayName": "Trendyol",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/truera/",
+      "ownerKey": "truera",
+      "displayName": "TruEra",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/trufflesecurity/",
+      "ownerKey": "trufflesecurity",
+      "displayName": "Truffle Security",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/trycompai/",
+      "ownerKey": "trycompai",
+      "displayName": "Comp AI",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/trycourier/",
+      "ownerKey": "trycourier",
+      "displayName": "Courier",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/tryghost/",
+      "ownerKey": "tryghost",
+      "displayName": "Ghost",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/trypostit/",
+      "ownerKey": "trypostit",
+      "displayName": "TryPost.it",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/twirapp/",
+      "ownerKey": "twirapp",
+      "displayName": "Twir",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/typelate/",
+      "ownerKey": "typelate",
+      "displayName": "Typelate",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/typescript-eslint/",
+      "ownerKey": "typescript-eslint",
+      "displayName": "typescript-eslint",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/umbraco/page/2/",
+      "ownerKey": "umbraco",
+      "displayName": "Umbraco HQ",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/umbraco/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/una-ui/",
+      "ownerKey": "una-ui",
+      "displayName": "Una UI",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/unamentis/",
+      "ownerKey": "unamentis",
+      "displayName": "UnaMentis",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/unbound-app/",
+      "ownerKey": "unbound-app",
+      "displayName": "Unbound",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/usebondery/",
+      "ownerKey": "usebondery",
+      "displayName": "Bondery",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/usedetail/",
+      "ownerKey": "usedetail",
+      "displayName": "Detail",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/usekaneo/",
+      "ownerKey": "usekaneo",
+      "displayName": "kaneo.app",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/utmapp/",
+      "ownerKey": "utmapp",
+      "displayName": "UTM",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/vapor/",
+      "ownerKey": "vapor",
+      "displayName": "Vapor",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/vardot/",
+      "ownerKey": "vardot",
+      "displayName": "Vardot",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/vercel/page/3/",
+      "ownerKey": "vercel",
+      "displayName": "vercel",
+      "pageNumber": 3,
+      "targetUrl": "https://skillscout.sh/official/vercel/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/vezzadev/",
+      "ownerKey": "vezzadev",
+      "displayName": "Vezza",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/villedemontreal/",
+      "ownerKey": "villedemontreal",
+      "displayName": "Ville de Montréal",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/vimeejs/",
+      "ownerKey": "vimeejs",
+      "displayName": "vimee",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/vitodeploy/",
+      "ownerKey": "vitodeploy",
+      "displayName": "VitoDeploy",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/vkcom/",
+      "ownerKey": "vkcom",
+      "displayName": "VK.com",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/vmware-clarity/",
+      "ownerKey": "vmware-clarity",
+      "displayName": "VMware Clarity",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/voidzero-dev/",
+      "ownerKey": "voidzero-dev",
+      "displayName": "VoidZero",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/voltcyclone/",
+      "ownerKey": "voltcyclone",
+      "displayName": "Volt Cyclone",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/voltiusapp/",
+      "ownerKey": "voltiusapp",
+      "displayName": "Voltius",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/vorsocom/",
+      "ownerKey": "vorsocom",
+      "displayName": "Vorso Computing, Inc.",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/vortex-data/",
+      "ownerKey": "vortex-data",
+      "displayName": "Vortex",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/vulhub/",
+      "ownerKey": "vulhub",
+      "displayName": "The Vulnerabilities Hub",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/wado-lang/",
+      "ownerKey": "wado-lang",
+      "displayName": "Wado",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/wafflestudio/",
+      "ownerKey": "wafflestudio",
+      "displayName": "Wafflestudio",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/wagtail/",
+      "ownerKey": "wagtail",
+      "displayName": "Wagtail",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/walkthru-earth/",
+      "ownerKey": "walkthru-earth",
+      "displayName": "walkthru.earth",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/wandelbotsgmbh/",
+      "ownerKey": "wandelbotsgmbh",
+      "displayName": "Wandelbots GmbH",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/wannabespace/",
+      "ownerKey": "wannabespace",
+      "displayName": "Wannabe Space",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/wave-rf/",
+      "ownerKey": "wave-rf",
+      "displayName": "Wave RF",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/webdriverio/",
+      "ownerKey": "webdriverio",
+      "displayName": "WebdriverIO",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/werf/",
+      "ownerKey": "werf",
+      "displayName": "werf",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/wgtechlabs/",
+      "ownerKey": "wgtechlabs",
+      "displayName": "WG Technology Labs",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/whitzardagent/",
+      "ownerKey": "whitzardagent",
+      "displayName": "WhitzardAgent",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/wikimedia/",
+      "ownerKey": "wikimedia",
+      "displayName": "Wikimedia",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/wix/page/2/",
+      "ownerKey": "wix",
+      "displayName": "wix",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/wix/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/wolfssl/",
+      "ownerKey": "wolfssl",
+      "displayName": "wolfSSL",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/woocommerce/page/2/",
+      "ownerKey": "woocommerce",
+      "displayName": "Woo",
+      "pageNumber": 2,
+      "targetUrl": "https://skillscout.sh/official/woocommerce/",
+      "reason": "pagination_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/worklytics/",
+      "ownerKey": "worklytics",
+      "displayName": "Worklytics",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/workweave/",
+      "ownerKey": "workweave",
+      "displayName": "Weave",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/wpdevelopers/",
+      "ownerKey": "wpdevelopers",
+      "displayName": "WPDeveloper",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/wpmanageninja/",
+      "ownerKey": "wpmanageninja",
+      "displayName": "WPManageNinja",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/xrplevm/",
+      "ownerKey": "xrplevm",
+      "displayName": "XRPL EVM Sidechain",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/xtermjs/",
+      "ownerKey": "xtermjs",
+      "displayName": "xterm.js",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/yelp/",
+      "ownerKey": "yelp",
+      "displayName": "Yelp.com",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/yeti-robotics/",
+      "ownerKey": "yeti-robotics",
+      "displayName": "YETI Robotics",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/yosemitecrew/",
+      "ownerKey": "yosemitecrew",
+      "displayName": "Yosemite Crew",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/yournextstore/",
+      "ownerKey": "yournextstore",
+      "displayName": "Your Next Store",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/yoursshlabs/",
+      "ownerKey": "yoursshlabs",
+      "displayName": "YourSSH Labs",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/yubico/",
+      "ownerKey": "yubico",
+      "displayName": "Yubico",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/zimicjs/",
+      "ownerKey": "zimicjs",
+      "displayName": "Zimic",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/znsio/",
+      "ownerKey": "znsio",
+      "displayName": "Znsio",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/zoonk/",
+      "ownerKey": "zoonk",
+      "displayName": "Zoonk",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/zulip/",
+      "ownerKey": "zulip",
+      "displayName": "Zulip",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    },
+    {
+      "url": "https://skillscout.sh/official/zwave-js/",
+      "ownerKey": "zwave-js",
+      "displayName": "Z-Wave JS",
+      "pageNumber": 1,
+      "targetUrl": "https://skillscout.sh/official/",
+      "reason": "owner_removed"
+    }
+  ],
+  "sources": [
+    "Removed from official vendor sitemap after agent runtime skill cleanup.",
+    "2026-08-08 URL severity report: Page returned 404."
+  ]
+}
