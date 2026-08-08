@@ -231,7 +231,7 @@
     const copy = document.createElement("button");
     copy.className = "skill-copy";
     copy.type = "button";
-    copy.dataset.copyValue = `npx skills add ${skill.installRepo}@${skill.skillName} -y`;
+    copy.dataset.copyValue = skill.installCommand || `npx skills add ${skill.installRepo}@${skill.skillName} -y`;
     copy.dataset.copyMessage = "Skill command copied";
     copy.append(createCopyIcon(), "Copy install");
     actions.append(source, copy);

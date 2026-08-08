@@ -894,10 +894,10 @@ function renderReadmeFallback(pack, model, campaign) {
         </div>
         <h3>Install</h3>
         <p>Install the full package:</p>
-        <pre><code>npx skills add ${escapeHtml(repoKey)} -y</code></pre>
+        <pre><code>${escapeHtml(getPackInstallCommand(pack))}</code></pre>
         ${
           topSkills[0]
-            ? `<p>Install a specific skill:</p><pre><code>npx skills add ${escapeHtml(repoKey)}@${escapeHtml(topSkills[0].skillName)} -y</code></pre>`
+            ? `<p>Install a specific skill:</p><pre><code>${escapeHtml(getSkillInstallCommand(topSkills[0], pack))}</code></pre>`
             : ""
         }
         <p>Use the package when you want your agent to choose the relevant skill from this official ${escapeHtml(model.displayName)} repository.</p>
@@ -1087,6 +1087,7 @@ function renderVendorSearchData(model, entries) {
       description: String(skill.description || "").trim(),
       installsCount: Number(skill.installsCount || 0),
       installRepo: pack.installRepo,
+      installCommand: getSkillInstallCommand(skill, pack),
       sourceUrl: getSkillSourceUrl(skill, pack.installRepo)
     }))
   };
@@ -1195,13 +1196,13 @@ function renderVendorMarkdown(model) {
         lines.push(label, "", "```bash", command, "```", "");
       }
     } else {
-      lines.push("### Install", "", "Install the full package:", "", "```bash", `npx skills add ${repoKey} -y`, "```", "");
+      lines.push("### Install", "", "Install the full package:", "", "```bash", getPackInstallCommand(pack), "```", "");
       if (topSkills[0]) {
         lines.push(
           "Install a specific skill:",
           "",
           "```bash",
-          `npx skills add ${repoKey}@${topSkills[0].skillName} -y`,
+          getSkillInstallCommand(topSkills[0], pack),
           "```",
           ""
         );
@@ -1237,6 +1238,7 @@ function getPackSourceUrl(pack) {
 }
 
 function getPackInstallCommand(pack) {
+  if (pack.repo.installCommand) return pack.repo.installCommand;
   if (pack.repo.sourceKind === "clawhub") {
     const firstSkill = pack.skills?.[0];
     if (firstSkill) return getSkillInstallCommand(firstSkill, pack);
@@ -1247,6 +1249,9 @@ function getPackInstallCommand(pack) {
 
 function getSkillInstallCommand(skill, pack) {
   if (skill.installCommand) return skill.installCommand;
+  if (pack.repo.installCommandTemplate) {
+    return pack.repo.installCommandTemplate.replaceAll("{skillName}", skill.skillName);
+  }
   if (pack.repo.sourceKind === "clawhub") {
     return `openclaw skills install @${skill.ownerHandle || pack.repo.ownerHandle || pack.installRepo.split("/").pop()}/${skill.skillName}`;
   }
