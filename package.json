@@ -11,6 +11,7 @@
     "import:skillsmp-creators": "node scripts/import_skillsmp_creators.mjs",
     "enrich:github-skills": "node scripts/enrich_github_skills.mjs",
     "enrich:owner-metadata": "node scripts/enrich_owner_metadata.mjs",
+    "normalize:emoji-shortcodes": "node scripts/normalize_emoji_shortcodes.mjs",
     "clean:agent-runtime-skills": "node scripts/remove_agent_runtime_skills.mjs"
   }
 }

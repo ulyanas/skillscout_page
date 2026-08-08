@@ -9,6 +9,7 @@ import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { normalizeEmojiShortcodesInDirectory } from "./emoji_shortcodes.mjs";
 import { isAgentRuntimeSkillPath, shouldCatalogSkillFilePath } from "./skill_path_filters.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -49,6 +50,7 @@ if (SKILLS_SH_INSTALLS_ENABLED) {
 }
 await enrichStarCounts(directory);
 removeOwnersWithoutSkills(directory);
+normalizeEmojiShortcodesInDirectory(directory);
 refreshStats(directory);
 
 directory.enrichedAt = generatedAt;

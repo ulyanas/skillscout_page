@@ -3,6 +3,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { applyOwnerMetadataOverrides } from "./owner_metadata_overrides.mjs";
+import { normalizeEmojiShortcodesInDirectory } from "./emoji_shortcodes.mjs";
 import { isAgentRuntimeSkillPath, shouldCatalogSkillFilePath } from "./skill_path_filters.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -55,6 +56,7 @@ await preserveExistingFirstSeenDates(directory);
 applyOwnerMetadataOverrides(directory);
 removeAgentRuntimeSkills(directory);
 removeInvalidOwners(directory);
+normalizeEmojiShortcodesInDirectory(directory);
 refreshDirectoryStats(directory);
 
 await fs.mkdir(path.dirname(OUTPUT_PATH), { recursive: true });

@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { normalizeEmojiShortcodesInDirectory } from "./emoji_shortcodes.mjs";
 import { applyOwnerMetadataOverrides } from "./owner_metadata_overrides.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -59,6 +60,7 @@ const stats = {
 await mapWithConcurrency(directory.officialOwners, CONCURRENCY, enrichOwner);
 applyOwnerMetadataOverrides(directory, stats);
 removeInvalidOwners(directory);
+normalizeEmojiShortcodesInDirectory(directory);
 refreshDirectoryStats(directory);
 
 directory.enrichedAt = now;

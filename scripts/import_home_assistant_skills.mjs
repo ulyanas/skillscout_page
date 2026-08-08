@@ -18,6 +18,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { decodeEmojiShortcodes, normalizeEmojiShortcodesInDirectory } from "./emoji_shortcodes.mjs";
 import { shouldCatalogSkillFilePath } from "./skill_path_filters.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -77,6 +78,7 @@ for (const repo of repos) {
 
 refreshCounts();
 upsertSource();
+normalizeEmojiShortcodesInDirectory(directory);
 directory.generatedAt = now;
 directory.enrichedAt = now;
 directory.officialOwners.sort((a, b) => a.ownerKey.localeCompare(b.ownerKey));
@@ -129,7 +131,7 @@ function upsertOwner(org) {
   };
 
   owner.displayName = OWNER_DISPLAY_NAME;
-  owner.description = org.description || owner.description || "";
+  owner.description = decodeEmojiShortcodes(org.description || owner.description || "");
   owner.website = OWNER_WEBSITE;
   owner.websiteUrl = OWNER_WEBSITE;
   owner.githubLogin = org.login || "home-assistant";
@@ -188,7 +190,7 @@ function upsertRepo(owner, repo, skillFiles) {
 
   entry.ownerKey = owner.ownerKey;
   entry.displayName = repo.full_name;
-  entry.description = repo.description || entry.description || "";
+  entry.description = decodeEmojiShortcodes(repo.description || entry.description || "");
   entry.canonicalRepoKey = repo.full_name;
   entry.githubDefaultBranch = repo.default_branch;
   entry.githubSkillPaths = skillFiles;
@@ -240,7 +242,7 @@ function upsertSkill(owner, repoEntry, repo, skillPath, metadata) {
   skill.repoKey = repoEntry.repoKey;
   skill.skillName = skillName;
   skill.displayName = metadata.name || skill.displayName || prettifyName(skillName);
-  skill.description = metadata.description || skill.description || "";
+  skill.description = decodeEmojiShortcodes(metadata.description || skill.description || "");
   skill.sourcePath = `${skillPath}/SKILL.md`;
   skill.installCommand = `npx skills add ${repo.full_name} --skill ${skillName} --full-depth -y`;
   skill.githubVerified = true;
@@ -337,8 +339,8 @@ function parseSkillMarkdown(markdown, skillPath) {
     frontmatter.match(/^description:\s*(.+)$/m)?.[1]?.trim().replace(/^["']|["']$/g, "") ||
     firstParagraph(markdown);
   return {
-    name,
-    description
+    name: decodeEmojiShortcodes(name),
+    description: decodeEmojiShortcodes(description)
   };
 }
 
