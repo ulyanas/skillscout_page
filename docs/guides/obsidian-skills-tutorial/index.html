@@ -231,6 +231,48 @@
       .related p:last-child {
         margin-bottom: 0;
       }
+      .install-command-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 10px;
+      }
+      .install-command-row code {
+        display: inline-block;
+        min-width: 0;
+        overflow-wrap: anywhere;
+      }
+      .copy-install-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        min-height: 34px;
+        padding: 8px 12px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: #111;
+        color: #fff;
+        font: inherit;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .copy-install-button:hover,
+      .copy-install-button:focus-visible {
+        background: #000;
+      }
+      .copy-install-button svg {
+        width: 15px;
+        height: 15px;
+        flex: 0 0 auto;
+      }
+      .copy-install-button[data-copied="true"] {
+        background: #fff;
+        color: var(--text);
+      }
       .related {
         margin-top: 44px;
         padding-top: 24px;
@@ -238,6 +280,10 @@
       @media (max-width: 720px) {
         article { padding-top: 22px; }
         .container { width: min(calc(100% - 32px), var(--max)); }
+        .install-command-row {
+          align-items: flex-start;
+          flex-direction: column;
+        }
       }
     </style>
   </head>
@@ -302,7 +348,17 @@
         </p>
         <p>Obsidian Skills make that workspace easier for AI agents to use.</p>
         <div class="install-callout">
-          <p><strong>Install Obsidian Skills:</strong> <code>npx skills add kepano/obsidian-skills</code></p>
+          <p><strong>Install Obsidian Skills:</strong></p>
+          <div class="install-command-row">
+            <code id="obsidianInstallCommand">npx skills add kepano/obsidian-skills</code>
+            <button class="copy-install-button" type="button" data-copy-target="obsidianInstallCommand" aria-label="Copy Obsidian Skills install command">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9 9h9v11H9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M6 15H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span aria-live="polite">Copy</span>
+            </button>
+          </div>
         </div>
 
         <h2>What Obsidian is</h2>
@@ -320,7 +376,13 @@
 
         <h2>A short history of Obsidian</h2>
         <p>
-          Obsidian launched in 2020. It was created by Erica Xu and Shida Li, the team behind Dynalist.
+          Obsidian was founded by
+          <a href="https://obsidian.md/about?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=obsidian-skills-tutorial">Shida Li and Erica Xu</a>
+          in March 2020. They had already built Dynalist together.
+          <a href="https://stephango.com/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=obsidian-skills-tutorial">Steph Ango</a>,
+          known online as kepano, later
+          <a href="https://www.theverge.com/decoder-podcast-with-nilay-patel/760522/obsidian-ceo-steph-ango-kepano-productivity-software-notes-app?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=obsidian-skills-tutorial">joined Obsidian as CEO in 2023</a>
+          after being an active community member.
         </p>
         <p>
           The product became popular because it gave people ownership of their notes. Notes stay as local files.
@@ -521,5 +583,43 @@
         </div>
       </article>
     </main>
+    <script>
+      document.querySelectorAll("[data-copy-target]").forEach((button) => {
+        button.addEventListener("click", async () => {
+          const target = document.getElementById(button.dataset.copyTarget);
+          const value = target?.textContent.trim();
+          const label = button.querySelector("span");
+          const original = label?.textContent || "Copy";
+          if (!value) return;
+
+          try {
+            if (navigator.clipboard && window.isSecureContext) {
+              await navigator.clipboard.writeText(value);
+            } else {
+              const textarea = document.createElement("textarea");
+              textarea.value = value;
+              textarea.setAttribute("readonly", "");
+              textarea.style.position = "fixed";
+              textarea.style.opacity = "0";
+              document.body.appendChild(textarea);
+              textarea.select();
+              document.execCommand("copy");
+              document.body.removeChild(textarea);
+            }
+            button.dataset.copied = "true";
+            if (label) label.textContent = "Copied";
+            setTimeout(() => {
+              button.dataset.copied = "false";
+              if (label) label.textContent = original;
+            }, 1600);
+          } catch {
+            if (label) label.textContent = "Copy failed";
+            setTimeout(() => {
+              if (label) label.textContent = original;
+            }, 1600);
+          }
+        });
+      });
+    </script>
   </body>
 </html>
