@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Obsidian Skills Tutorial for AI Agents | Skillscout</title>
+    <meta name="description" content="Learn how Obsidian Skills help AI agents work with Obsidian Markdown, Bases, Canvas, Obsidian CLI, and clean web research." />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://skillscout.sh/guides/obsidian-skills-tutorial/" />
+    <script src="/assets/telemetry.js"></script>
+    <link rel="stylesheet" href="/assets/site-shell.css?v=20260724-official-sparkle" />
+    <script src="/assets/site-shell.js?v=20260724-1"></script>
+    <script src="/assets/posthog-init.js"></script>
+    <meta property="og:title" content="Obsidian Skills Tutorial for AI Agents" />
+    <meta property="og:description" content="A practical tutorial for using Obsidian Skills with AI agents, local Markdown notes, Bases, Canvas, Obsidian CLI, and Defuddle." />
+    <meta property="og:site_name" content="Skillscout" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://skillscout.sh/guides/obsidian-skills-tutorial/" />
+    <meta property="og:image" content="https://skillscout.sh/assets/guides/obsidian-skills-hero.jpg" />
+    <meta property="og:image:alt" content="Colorful Obsidian-inspired landscape with crystals, plants, and glowing mountains." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Obsidian Skills Tutorial for AI Agents" />
+    <meta name="twitter:description" content="Use Obsidian Skills with AI agents, Markdown notes, Bases, Canvas, Obsidian CLI, and Defuddle." />
+    <meta name="twitter:image" content="https://skillscout.sh/assets/guides/obsidian-skills-hero.jpg" />
+    <meta name="twitter:image:alt" content="Colorful Obsidian-inspired landscape with crystals, plants, and glowing mountains." />
+    <link rel="icon" href="../../assets/skillscout-mark-48.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://skillscout.sh/guides/obsidian-skills-tutorial/#article",
+      "headline": "Obsidian Skills Tutorial for AI Agents",
+      "description": "Learn how Obsidian Skills help AI agents work with Obsidian Markdown, Bases, Canvas, Obsidian CLI, and clean web research.",
+      "author": {
+        "@type": "Organization",
+        "name": "Skillscout"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Skillscout",
+        "url": "https://skillscout.sh/"
+      },
+      "image": "https://skillscout.sh/assets/guides/obsidian-skills-hero.jpg",
+      "datePublished": "2026-08-09",
+      "dateModified": "2026-08-09",
+      "mainEntityOfPage": "https://skillscout.sh/guides/obsidian-skills-tutorial/",
+      "mentions": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Obsidian",
+          "url": "https://obsidian.md/"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "Obsidian Skills",
+          "url": "https://github.com/kepano/obsidian-skills"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Obsidian CLI",
+          "url": "https://obsidian.md/help/cli"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://skillscout.sh/guides/obsidian-skills-tutorial/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://skillscout.sh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://skillscout.sh/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Obsidian Skills Tutorial",
+          "item": "https://skillscout.sh/guides/obsidian-skills-tutorial/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://skillscout.sh/guides/obsidian-skills-tutorial/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are Obsidian Skills?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Obsidian Skills are agent skills that teach skills-compatible AI agents how to work with Obsidian Markdown, Bases, JSON Canvas, Obsidian CLI, and Defuddle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do Obsidian Skills work with Codex?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Obsidian Skills can be used by skills-compatible coding agents such as Codex when the skills are installed in the agent environment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need Obsidian CLI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Obsidian CLI is useful when an agent needs to interact with a running Obsidian app from the terminal, especially for vault automation, plugin work, screenshots, and error checks."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+    <style>
+      :root {
+        --bg: #f6f6f3;
+        --panel: #ffffff;
+        --border: #e4e4df;
+        --text: #111111;
+        --text-muted: #5f5f5f;
+        --shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.04);
+        --max: 760px;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      .container {
+        width: min(calc(100% - 40px), var(--max));
+        margin: 0 auto;
+      }
+      article { padding: 28px 0 72px; }
+      .eyebrow {
+        margin: 0 0 14px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(34px, 6vw, 56px);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+      }
+      .lead {
+        margin: 0 0 20px;
+        font-size: 19px;
+        line-height: 1.58;
+        color: var(--text-muted);
+      }
+      .meta {
+        margin: 0 0 32px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+      .hero-figure { margin: 0 0 32px; }
+      .hero-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-sm);
+        background: var(--panel);
+      }
+      h2 {
+        margin: 40px 0 14px;
+        font-size: 24px;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+      }
+      h3 {
+        margin: 28px 0 12px;
+        font-size: 18px;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+      }
+      p, li {
+        font-size: 16px;
+        line-height: 1.68;
+      }
+      p { margin: 0 0 16px; }
+      ul {
+        margin: 0 0 20px;
+        padding-left: 22px;
+      }
+      code {
+        padding: 0.12em 0.38em;
+        border-radius: 8px;
+        background: #eeefec;
+        font-size: 0.9em;
+      }
+      article a {
+        color: var(--text);
+        font-weight: 500;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.14em;
+      }
+      .install-callout,
+      .related {
+        margin: 24px 0;
+        padding: 20px;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+      }
+      .install-callout p:last-child,
+      .related p:last-child {
+        margin-bottom: 0;
+      }
+      .related {
+        margin-top: 44px;
+        padding-top: 24px;
+      }
+      @media (max-width: 720px) {
+        article { padding-top: 22px; }
+        .container { width: min(calc(100% - 32px), var(--max)); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site-nav-wrap" id="articleNavWrap">
+      <div class="site-nav-container site-nav">
+        <a class="site-brand" href="/">
+          <span class="site-brand-mark"><img src="/assets/skillscout-mark-48.png" alt="Skillscout logo" /></span>
+          <span class="site-brand-name">Skillscout</span>
+        </a>
+        <nav class="site-nav-links" aria-label="Primary">
+          <a href="/#snapshot">Do I need it</a>
+          <a href="/#use-cases">Use cases</a>
+          <a href="/guides/">Guides</a>
+          <a href="/#testimonials">Reviews</a>
+          <a href="/#faq">FAQ</a>
+          <a class="official-nav-link" href="/official/"><span>Official skills</span><svg class="official-nav-sparkle" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l1.1 3.8 3.4 1.2-3.4 1.2L8 11.5 6.9 7.7 3.5 6.5l3.4-1.2L8 1.5Z" fill="currentColor"/><path d="M12.5 9.5l.45 1.55 1.55.45-1.55.45-.45 1.55-.45-1.55-1.55-.45 1.55-.45.45-1.55Z" fill="currentColor"/></svg></a>
+        </nav>
+        <div class="site-nav-cta">
+          <a class="site-btn" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=guide_article" target="_blank" rel="noopener noreferrer" data-ga-event="get_extension_click" data-ga-label="guide-article-nav">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Add to Chrome
+          </a>
+          <a class="site-btn site-btn-list" href="https://forms.gle/iGfD5tDgTfCE4QX66" target="_blank" rel="noopener noreferrer" data-ga-event="list_skills_click" data-ga-label="guide-article-nav">
+            <span class="site-btn-list-long">List your skills</span>
+            <span class="site-btn-list-short">List skill</span>
+          </a>
+        </div>
+        <button class="site-burger" id="articleBurgerBtn" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="site-mobile-menu" id="articleMobileMenu" aria-label="Mobile">
+        <a href="/#snapshot" class="site-mobile-link">Do I need it</a>
+        <a href="/#use-cases" class="site-mobile-link">Use cases</a>
+        <a href="/guides/" class="site-mobile-link">Guides</a>
+        <a href="/#testimonials" class="site-mobile-link">Reviews</a>
+        <a href="/#faq" class="site-mobile-link">FAQ</a>
+        <a href="/official/" class="site-mobile-link official-nav-link"><span>Official skills</span><svg class="official-nav-sparkle" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l1.1 3.8 3.4 1.2-3.4 1.2L8 11.5 6.9 7.7 3.5 6.5l3.4-1.2L8 1.5Z" fill="currentColor"/><path d="M12.5 9.5l.45 1.55 1.55.45-1.55.45-.45 1.55-.45-1.55-1.55-.45 1.55-.45.45-1.55Z" fill="currentColor"/></svg></a>
+        <a href="https://forms.gle/iGfD5tDgTfCE4QX66" class="site-mobile-link" target="_blank" rel="noopener noreferrer" data-ga-event="list_skills_click" data-ga-label="guide-article-mobile-nav">List your skills</a>
+      </nav>
+    </div>
+
+    <main class="container">
+      <article>
+        <p class="eyebrow">Guides</p>
+        <h1>Obsidian Skills Tutorial for AI Agents</h1>
+        <p class="lead">A practical guide to using Obsidian Skills with AI agents, local Markdown notes, Bases, Canvas, Obsidian CLI, and clean web research.</p>
+        <p class="meta">Published August 9, 2026</p>
+        <figure class="hero-figure">
+          <img src="../../assets/guides/obsidian-skills-hero.jpg" alt="Colorful Obsidian-inspired landscape with crystals, plants, and glowing mountains." />
+        </figure>
+
+        <p>
+          You have probably heard about Obsidian and may be deciding whether it belongs in your workflow.
+          The practical answer is simple: Obsidian is useful when you want local notes, research, project
+          context, and long-running agent memory to stay in files you control.
+        </p>
+        <p>Obsidian Skills make that workspace easier for AI agents to use.</p>
+        <div class="install-callout">
+          <p><strong>Install Obsidian Skills:</strong> <code>npx skills add kepano/obsidian-skills</code></p>
+        </div>
+
+        <h2>What Obsidian is</h2>
+        <p>
+          <a href="https://obsidian.md/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=obsidian-skills-tutorial">Obsidian</a>
+          is a local-first note-taking app built around Markdown files. A vault is a folder on your device.
+          Each note is a normal <code>.md</code> file inside that folder.
+        </p>
+        <p>
+          This file model is the reason Obsidian works well with AI agents. The agent can read and edit real
+          files. Obsidian helps organize those files with links between notes, note properties, visual boards,
+          and database-style views. With
+          <a href="https://obsidian.md/publish?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=obsidian-skills-tutorial">Obsidian Publish</a>,
+          selected Markdown notes can also become a public website.
+        </p>
+
+        <h2>A short history of Obsidian</h2>
+        <p>
+          Obsidian launched in 2020. It was created by Erica Xu and Shida Li, the team behind Dynalist.
+        </p>
+        <p>
+          The product became popular because it gave people ownership of their notes. Notes stay as local files.
+          The app works offline. The format remains readable outside the app. That combination attracted writers,
+          researchers, students, developers, and people building personal knowledge systems.
+        </p>
+        <p>
+          The work use case has grown too. In 2025, Obsidian made commercial use free and said people in more than
+          10,000 organizations were already using it for work. In 2026, Obsidian launched a new Community site and
+          developer dashboard, pointing to a large plugin and theme ecosystem.
+        </p>
+        <p>
+          Sources:
+          <a href="https://obsidian.md/about?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=obsidian-skills-tutorial">Obsidian about page</a>,
+          <a href="https://obsidian.md/blog/free-for-work/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=obsidian-skills-tutorial">free for work announcement</a>,
+          and
+          <a href="https://obsidian.md/blog/future-of-plugins/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=obsidian-skills-tutorial">Community site and developer dashboard announcement</a>.
+        </p>
+
+        <h2>Why Obsidian fits AI agent workflows</h2>
+        <p>
+          AI agents need context they can inspect and update. Obsidian vaults already contain that kind of context:
+          project notes, meeting notes, research, product ideas, reading lists, tasks, decisions, drafts, and documentation.
+        </p>
+        <p>
+          The best first use case is small. Ask the agent to organize one project folder, clean rough notes, add
+          metadata, create a project dashboard, summarize research into linked notes, or map a topic on Canvas.
+          Obsidian Skills help because they give the agent rules for Obsidian's formats.
+        </p>
+
+        <h2>Is Obsidian used for real development?</h2>
+        <p>
+          Obsidian is used in professional software work as a knowledge and planning layer. It sits beside GitHub,
+          the IDE, CI, issue tracking, and production docs.
+        </p>
+        <p>
+          Common development uses include architecture notes, RFC drafts, debugging logs, API notes, product specs,
+          meeting notes, decision records, research notes, release planning, documentation drafts, and plugin or theme
+          development.
+        </p>
+        <p>
+          This also explains why Obsidian appears in vibe-coding workflows. A person can keep product ideas,
+          constraints, decisions, prompts, screenshots, and implementation notes in one vault. An agent can then use
+          that material as working context. The same pattern works in structured engineering workflows when backups,
+          review, and source control are part of the process.
+        </p>
+
+        <h2>What Obsidian CLI is</h2>
+        <p>
+          <a href="https://obsidian.md/help/cli?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=obsidian-skills-tutorial">Obsidian CLI</a>
+          is the official command-line interface for Obsidian. It lets external tools control a running Obsidian app
+          from the terminal.
+        </p>
+        <p>
+          For AI agents, the CLI matters because terminal access is already part of many agent environments. The CLI can
+          help an agent read notes, create notes, search a vault, update properties, work with tasks, inspect links, and
+          support plugin development. It can also help with screenshots, errors, and developer tools when building or
+          debugging plugins and themes.
+        </p>
+        <p>
+          Obsidian CLI requires the Obsidian 1.12 installer and a running Obsidian app. In practice, the vault should be
+          open before asking the agent to operate on it.
+        </p>
+
+        <h2>What Obsidian Skills are</h2>
+        <p>
+          <a href="https://github.com/kepano/obsidian-skills?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=obsidian-skills-tutorial">Obsidian Skills</a>
+          are a set of agent skills for Obsidian created by Kepano. The package teaches skills-compatible agents how to
+          work with Obsidian Markdown, Bases, JSON Canvas, Obsidian CLI, and Defuddle.
+        </p>
+        <p>This is a focused package. Each skill covers one format or workflow an agent needs to understand.</p>
+
+        <h3>Obsidian Markdown skill</h3>
+        <p>
+          The Obsidian Markdown skill helps an agent write notes that behave correctly inside Obsidian. Markdown is the
+          base format. Obsidian adds vault-specific habits: wikilinks, embeds, properties, callouts, tags, footnotes,
+          highlights, comments, math, and diagrams.
+        </p>
+        <p>
+          Use it when the agent needs to turn rough notes into clean Obsidian notes, add useful properties, create links
+          between related notes, preserve links while rewriting, or prepare notes for use in Bases.
+        </p>
+
+        <h3>Obsidian Bases skill</h3>
+        <p>
+          The Obsidian Bases skill helps an agent create and edit <code>.base</code> files. A
+          <a href="https://obsidian.md/help/bases?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=obsidian-skills-tutorial">Base</a>
+          is a view over notes. It can show selected notes as a table, cards, list, or map. It can filter by folder,
+          tags, properties, dates, and formulas.
+        </p>
+        <p>
+          Use it for project dashboards, content calendars, reading lists, task views, research databases, CRM-style
+          contact lists, and meeting note indexes. The skill matters because Bases are syntax-sensitive. Property names,
+          formulas, filters, and YAML structure need to be correct.
+        </p>
+
+        <h3>JSON Canvas skill</h3>
+        <p>
+          The JSON Canvas skill helps an agent create and edit Obsidian Canvas files. Canvas is for visual thinking.
+          It lets you arrange notes, cards, groups, and connections on a board.
+        </p>
+        <p>
+          Use it for product maps, research clusters, architecture sketches, decision trees, content plans, workflow
+          diagrams, and topic maps. The practical result is a Canvas file that opens in Obsidian with readable layout
+          and connected ideas.
+        </p>
+
+        <h3>Obsidian CLI skill</h3>
+        <p>
+          The Obsidian CLI skill helps an agent use the official CLI safely and consistently. Use it when the agent needs
+          to interact with the running Obsidian app: search the vault, read notes, create notes, update properties,
+          inspect links, reload plugins, capture screenshots, or check errors.
+        </p>
+        <p>For coding agents such as Codex, Claude Code, and OpenCode, this skill is the bridge between terminal workflows and Obsidian.</p>
+
+        <h3>Defuddle skill</h3>
+        <p>
+          The Defuddle skill helps an agent turn web pages into clean Markdown. Research pages often include navigation,
+          ads, cookie banners, sidebars, and unrelated blocks. Defuddle extracts the main readable content so the agent
+          can save, summarize, and format it with less noise.
+        </p>
+        <p>Use it for saving articles into Obsidian, turning documentation pages into notes, building research notes, and keeping source URLs with imported material.</p>
+
+        <h2>A practical first workflow</h2>
+        <p>Start with one folder. Choose a project folder where mistakes are easy to review.</p>
+        <p>
+          Ask the agent to inspect the folder and propose a plan. It should explain which notes it wants to create,
+          which properties it wants to add, and whether it wants to create a Base or Canvas. Let it make one change first.
+          Review that change in Obsidian.
+        </p>
+        <p>
+          A good first task is a small project dashboard: clean several project notes, add properties, link related notes,
+          and create a Base for active items.
+        </p>
+
+        <h2>Where Obsidian Skills are most useful</h2>
+        <p>
+          Obsidian Skills are useful when your vault has repeatable structure. They work well for project dashboards,
+          research libraries, reading notes, meeting notes, product planning, documentation drafts, daily notes, personal
+          CRM, content planning, plugin development, theme development, and agent memory.
+        </p>
+        <p>The value is strongest when the agent needs to preserve structure across many notes.</p>
+
+        <h2>Safety notes</h2>
+        <p>An Obsidian vault is local. An agent with file access can change real files.</p>
+        <p>
+          Use backups. Start with a test folder. Ask the agent to show planned changes before writing. Review bulk edits.
+          Treat skills like software packages: read the repository, check the maintainer, and understand what the skill
+          asks the agent to do.
+        </p>
+        <p>
+          Obsidian has also been investing in ecosystem safety. Its Community site work includes plugin review, developer
+          identity, and clearer review signals for users. The same habit applies to skills: install from sources you trust.
+        </p>
+
+        <h2>Obsidian CLI or MCP?</h2>
+        <p>Obsidian CLI and MCP can both connect agents to Obsidian workflows.</p>
+        <p>
+          Obsidian CLI is direct. The agent uses terminal commands against a running Obsidian app. This fits local workflows,
+          coding agents, plugin development, and vault automation.
+        </p>
+        <p>
+          MCP is useful when your agent setup already standardizes around tool servers. For many local workflows, Obsidian
+          CLI plus Obsidian Skills is enough: the skills teach the formats, and the CLI gives the agent a practical way to operate.
+        </p>
+
+        <h2>Who should use Obsidian Skills?</h2>
+        <p>Use Obsidian Skills if you already use Obsidian and want an AI agent to work with your vault.</p>
+        <p>
+          They are a good fit for Obsidian power users, developers, writers, researchers, Claude Code users, Codex users,
+          OpenCode users, plugin developers, theme developers, and people using Obsidian as project memory.
+        </p>
+        <p>The main benefit is precision. The agent gets rules for Obsidian's formats instead of guessing.</p>
+
+        <h2 id="faq">FAQ</h2>
+        <h3>What are Obsidian Skills?</h3>
+        <p>Obsidian Skills are agent skills that teach AI agents how to work with Obsidian Markdown, Bases, JSON Canvas, Obsidian CLI, and Defuddle.</p>
+        <h3>Do Obsidian Skills work with Codex?</h3>
+        <p>Yes. Obsidian Skills can be used by skills-compatible coding agents such as Codex when the skills are installed in the agent environment.</p>
+        <h3>Do I need Obsidian CLI?</h3>
+        <p>Obsidian CLI is useful when the agent needs to interact with a running Obsidian app from the terminal.</p>
+        <h3>Can an agent edit my Obsidian vault?</h3>
+        <p>Yes. If the agent has file access, it can edit vault files. Use backups and review planned changes before bulk edits.</p>
+        <h3>Is Obsidian used professionally?</h3>
+        <p>Yes. Obsidian is used for professional knowledge work, planning, documentation, research, and software project context.</p>
+        <h3>What is a good first project?</h3>
+        <p>Start with a small project dashboard. Ask the agent to clean several notes, add properties, link related notes, and create a Base for active items.</p>
+
+        <div class="related">
+          <h2>Find Obsidian skills on Skillscout</h2>
+          <p>
+            Skillscout keeps a dedicated page for Obsidian-related official skills and install commands. Use it when you
+            want to compare Obsidian packages, inspect source links, and open the agent-readable manifest.
+          </p>
+          <p>
+            <a href="https://skillscout.sh/official/obsidian/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=obsidian-skills-tutorial">Browse Obsidian official skills on Skillscout</a>
+          </p>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
