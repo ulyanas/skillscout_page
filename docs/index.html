@@ -729,9 +729,9 @@
         aspect-ratio: 16 / 10;
         position: relative;
         background:
-          radial-gradient(circle at 20% 15%, rgba(17,17,17,0.04) 0, transparent 50%),
-          radial-gradient(circle at 80% 80%, rgba(17,17,17,0.03) 0, transparent 50%),
-          linear-gradient(180deg, #fafaf8 0%, #f1f1ec 100%);
+          radial-gradient(circle at 22% 18%, rgba(0, 199, 190, 0.12) 0, transparent 38%),
+          radial-gradient(circle at 82% 22%, rgba(94, 77, 255, 0.1) 0, transparent 36%),
+          linear-gradient(180deg, #ffffff 0%, #f6f6f3 100%);
         overflow: hidden;
       }
       /* mock site content — abstract placeholder, not branded */
@@ -744,8 +744,8 @@
         padding: 0 16px;
       }
       .mock-logo {
-        width: 18px; height: 18px; border-radius: 5px;
-        background: #111;
+        width: 18px; height: 18px; border-radius: 6px;
+        background: linear-gradient(135deg, #ff5b8a 0%, #7a5cff 52%, #18d6c7 100%);
       }
       .mock-nav-item { height: 8px; border-radius: 4px; background: #e6e6e0; }
       .mock-hero {
@@ -759,7 +759,7 @@
       .mock-p.w80 { width: 78%; }
       .mock-p.w60 { width: 58%; }
       .mock-ctarow { display: flex; gap: 10px; margin-top: 22px; }
-      .mock-btn { height: 28px; border-radius: 8px; background: #111; width: 112px; }
+      .mock-btn { height: 28px; border-radius: 999px; background: linear-gradient(90deg, #ff5b8a 0%, #7a5cff 100%); width: 112px; }
       .mock-btn.secondary { background: #fff; border: 1px solid var(--border-soft); width: 96px; }
 
       /* Floating popup — clone of the latest extension UI */
@@ -881,6 +881,26 @@
         flex-direction: column;
         gap: 10px;
       }
+      .popup-result-card.is-vendor-card {
+        border-color: #b9d7ff;
+        background:
+          linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(255, 255, 255, 0) 48%),
+          #fff;
+      }
+      .popup-result-card.is-active {
+        animation: popupCardPulse 6s ease-in-out infinite;
+      }
+      .popup-result-card:nth-child(2) {
+        animation-delay: 1.2s;
+      }
+      .popup-result-card:nth-child(3) {
+        animation-delay: 2.4s;
+      }
+      @keyframes popupCardPulse {
+        0%, 100% { transform: translateY(0); border-color: var(--border); box-shadow: none; }
+        8%, 18% { transform: translateY(-2px); border-color: #111; box-shadow: 0 8px 24px rgba(17, 17, 17, 0.08); }
+        28% { transform: translateY(0); border-color: var(--border); box-shadow: none; }
+      }
       .popup-result-topline {
         display: flex; justify-content: space-between; align-items: flex-start;
         gap: 12px;
@@ -911,6 +931,19 @@
         border-radius: 999px;
         overflow: hidden;
         background: #f3f3f3;
+      }
+      .popup-catalog-icon-vendor {
+        border-color: transparent;
+        border-radius: 0;
+        background: transparent;
+        overflow: visible;
+      }
+      .popup-catalog-icon-vendor::after { display: none; }
+      .popup-vendor-icon {
+        display: block;
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
       }
       .popup-catalog-icon::after {
         content: "";
@@ -966,6 +999,12 @@
         font-weight: 700;
         line-height: 1;
       }
+      .popup-official-icon.is-verified {
+        border-color: #12b76a;
+        background: #12b76a;
+        color: #fff;
+        box-shadow: 0 0 0 3px rgba(18, 183, 106, 0.14);
+      }
       .popup-rank {
         border: 1px solid var(--border-strong);
         border-radius: 999px;
@@ -998,6 +1037,12 @@
       }
       .site-sticker .dot {
         width: 8px; height: 8px; border-radius: 999px; background: #111;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .popup-progress > div,
+        .popup-result-card.is-active {
+          animation: none;
+        }
       }
 
       /* generic section */
@@ -1812,7 +1857,7 @@
           <div class="browser" aria-hidden="true">
             <div class="browser-chrome">
               <span class="traffic"><span></span><span></span><span></span></span>
-              <span class="url-pill"><span class="lock"></span><span id="urlText">github.com/features/actions</span></span>
+              <span class="url-pill"><span class="lock"></span><span id="urlText">lovable.dev/</span></span>
               <span style="width: 40px;"></span>
             </div>
             <div class="browser-body">
@@ -1853,8 +1898,8 @@
               <div class="popup-site-panel-header">
                 <div class="popup-stack">
                   <p class="popup-eyebrow">Current Site</p>
-                  <p class="popup-site" id="popupSite">github.com</p>
-                  <p class="popup-meta">Keyword: <span id="popupKeyword">github</span></p>
+                  <p class="popup-site" id="popupSite">lovable.dev</p>
+                  <p class="popup-meta">Keyword: <span id="popupKeyword">lovable</span></p>
                 </div>
                 <button class="popup-icon-button" type="button" aria-label="Refresh results">
                   <svg class="popup-refresh-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -1864,51 +1909,68 @@
                 </button>
               </div>
               <div class="popup-status-strip">
-                <p class="popup-status">Found <strong id="popupCount">100</strong> matching skills for <span id="popupKeyword2">github</span>.</p>
+                <p class="popup-status">Found <strong id="popupCount">133</strong> matching skills for <span id="popupKeyword2">lovable</span>.</p>
                 <div class="popup-progress"><div></div></div>
               </div>
             </section>
 
             <div class="popup-results-header">
               <p class="popup-eyebrow">Top Results</p>
-              <p class="popup-count">5 of <span id="popupCount2">100</span></p>
+              <p class="popup-count">5 of <span id="popupCount2">133</span></p>
             </div>
 
             <div class="popup-results-list">
-            <article class="popup-result-card">
+            <article class="popup-result-card is-active is-vendor-card">
+              <div class="popup-result-topline">
+                <div class="popup-result-heading">
+                  <div class="popup-result-name-row">
+                    <span class="popup-catalog-icon popup-catalog-icon-vendor" title="Lovable official skills" aria-label="Lovable official skills">
+                      <img class="popup-vendor-icon" src="https://lovable.dev/favicon.ico" alt="" aria-hidden="true" />
+                    </span>
+                    <h4 class="popup-name" id="resName1">Lovable official skills</h4>
+                  </div>
+                </div>
+                <div class="popup-result-actions">
+                  <button class="popup-copy-button" type="button" aria-label="Copy setup prompt" title="Copy setup prompt"><span aria-hidden="true">⧉</span></button>
+                  <span class="popup-official-icon is-verified" title="Verified" aria-label="Verified" role="img">✓</span>
+                </div>
+              </div>
+              <p class="popup-desc">Official vendor skill collection with 4 official skills from lovablelabs/lovable-cursor-plugin.</p>
+              <p class="popup-source mono">lovablelabs/lovable-cursor-plugin · 4 skills · 1 repo</p>
+            </article>
+
+            <article class="popup-result-card is-active">
               <div class="popup-result-topline">
                 <div class="popup-result-heading">
                   <div class="popup-result-name-row">
                     <span class="popup-catalog-icon" style="--catalog-icon-image:url('assets/logo-skills-sh.ico')" title="skills.sh" aria-label="skills.sh"></span>
-                    <h4 class="popup-name" id="resName1">github-issues</h4>
+                    <h4 class="popup-name" id="resName2">lovable</h4>
                   </div>
                 </div>
                 <div class="popup-result-actions">
                   <button class="popup-copy-button" type="button" aria-label="Copy install command" title="Copy install command"><span aria-hidden="true">⧉</span></button>
-                  <span class="popup-official-icon" title="Official skill" aria-label="Official skill" role="img">✓</span>
-                  <span class="popup-rank">Rank 4795</span>
+                  <span class="popup-rank">Rank 5150</span>
                 </div>
               </div>
-              <p class="popup-desc">Create, update, and manage issues with full workflow support including types, labels, assignees, and dependencies.</p>
-              <p class="popup-source mono">awesome-copilot</p>
+              <p class="popup-desc">A skill for lovable.</p>
+              <p class="popup-source mono">10k-digital/lovable-claude-code</p>
             </article>
 
-            <article class="popup-result-card">
+            <article class="popup-result-card is-active">
               <div class="popup-result-topline">
                 <div class="popup-result-heading">
                   <div class="popup-result-name-row">
-                    <span class="popup-catalog-icon" style="--catalog-icon-image:url('assets/logo-clawhub.png')" title="ClawHub" aria-label="ClawHub"></span>
-                    <h4 class="popup-name" id="resName2">github-copilot-starter</h4>
+                    <span class="popup-catalog-icon" style="--catalog-icon-image:url('assets/logo-skills-sh.ico')" title="skills.sh" aria-label="skills.sh"></span>
+                    <h4 class="popup-name" id="resName3">lovable</h4>
                   </div>
                 </div>
                 <div class="popup-result-actions">
                   <button class="popup-copy-button" type="button" aria-label="Copy install command" title="Copy install command"><span aria-hidden="true">⧉</span></button>
-                  <span class="popup-official-icon" title="Official skill" aria-label="Official skill" role="img">✓</span>
-                  <span class="popup-rank">Rank 4793</span>
+                  <span class="popup-rank">Rank 5071</span>
                 </div>
               </div>
-              <p class="popup-desc">Generates production-ready Copilot configuration scaffolding for any repository.</p>
-              <p class="popup-source mono">starter-kits/copilot</p>
+              <p class="popup-desc">A skill for lovable.</p>
+              <p class="popup-source mono">terminalskills/skills</p>
             </article>
             </div>
           </aside>
@@ -2506,13 +2568,13 @@
       window.SKILLSCOUT = {
         setSite(site) {
           const SITES = {
-            'github.com':   { keyword: 'github',   url: 'github.com/features/actions',   count: 100, results: ['github-issues', 'github-copilot-starter'] },
+            'lovable.dev':  { keyword: 'lovable',  url: 'lovable.dev/',                  count: 133, results: ['Lovable official skills', 'lovable', 'lovable'] },
             'vercel.com':   { keyword: 'vercel',   url: 'vercel.com/dashboard',          count: 64,  results: ['vercel-deploy', 'vercel-edge-config'] },
             'firebase.google.com': { keyword: 'firebase', url: 'firebase.google.com/docs', count: 58, results: ['firebase-auth', 'firestore-rules'] },
             'cloudflare.com': { keyword: 'cloudflare', url: 'cloudflare.com/workers', count: 72, results: ['cf-workers-kv', 'cf-pages-fn'] },
             'apify.com':    { keyword: 'apify',    url: 'apify.com/store',               count: 41, results: ['apify-scraper', 'apify-actor-deploy'] },
           };
-          const s = SITES[site] || SITES['github.com'];
+          const s = SITES[site] || SITES['lovable.dev'];
           document.getElementById('urlText').textContent = s.url;
           document.getElementById('popupSite').textContent = site;
           document.getElementById('popupKeyword').textContent = s.keyword;
@@ -2521,9 +2583,13 @@
           document.getElementById('popupCount2').textContent = s.count;
           document.getElementById('resName1').textContent = s.results[0];
           document.getElementById('resName2').textContent = s.results[1];
+          const thirdResult = document.getElementById('resName3');
+          if (thirdResult && s.results[2]) {
+            thirdResult.textContent = s.results[2];
+          }
         }
       };
-      window.SKILLSCOUT.setSite('github.com');
+      window.SKILLSCOUT.setSite('lovable.dev');
     </script>
   </body>
 </html>
