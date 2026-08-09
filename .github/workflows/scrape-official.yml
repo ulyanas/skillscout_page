@@ -33,6 +33,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
 
+      - name: Import Doist official skills
+        run: node scripts/import_doist_skills.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
+
       - name: Enrich with GitHub skill trees
         run: node scripts/enrich_github_skills.mjs
         env:

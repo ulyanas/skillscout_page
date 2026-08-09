@@ -10,6 +10,7 @@
     "import:skillscout-clawhub-skill": "node scripts/import_skillscout_clawhub_skill.mjs",
     "import:home-assistant-skills": "node scripts/import_home_assistant_skills.mjs",
     "import:obsidian-skills": "node scripts/import_obsidian_skills.mjs",
+    "import:doist-skills": "node scripts/import_doist_skills.mjs",
     "import:skillsmp-creators": "node scripts/import_skillsmp_creators.mjs",
     "enrich:github-skills": "node scripts/enrich_github_skills.mjs",
     "enrich:owner-metadata": "node scripts/enrich_owner_metadata.mjs",
