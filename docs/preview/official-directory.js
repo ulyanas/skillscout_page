@@ -426,7 +426,6 @@ function buildOwnerGroups(data) {
   const repos = new Map((data.officialRepos || []).map((repo) => [repo.repoKey, repo]));
   const reposByOwner = new Map();
   const skillsByOwner = new Map();
-  const dateAddedByOwner = buildDateAddedByOwner(data);
 
   for (const repo of data.officialRepos || []) {
     const ownerRepos = reposByOwner.get(repo.ownerKey) || [];
@@ -490,40 +489,12 @@ function buildOwnerGroups(data) {
       bestRepoKey: bestRepo?.repoKey || null,
       installsKnown,
       starsCount: typeof owner.starsCount === "number" ? owner.starsCount : null,
-      dateAddedMs: dateAddedByOwner.get(owner.ownerKey) || parseDateMs(owner.firstSeenAt) || parseDateMs(owner.lastSeenAt)
+      dateAddedMs: parseDateMs(owner.firstSeenAt) || parseDateMs(owner.lastSeenAt)
     };
 
     ownerObj.rankScore = computeOwnerRankScore(ownerObj);
     return ownerObj;
   }).filter(Boolean);
-}
-
-function buildDateAddedByOwner(data) {
-  const dateAddedByOwner = new Map();
-
-  for (const owner of data.officialOwners || []) {
-    updateOwnerDateAdded(dateAddedByOwner, owner.ownerKey, owner.firstSeenAt || owner.lastSeenAt);
-  }
-
-  for (const repo of data.officialRepos || []) {
-    updateOwnerDateAdded(dateAddedByOwner, repo.ownerKey, repo.firstSeenAt || repo.lastSeenAt);
-  }
-
-  for (const skill of data.officialSkills || []) {
-    updateOwnerDateAdded(dateAddedByOwner, skill.ownerKey, skill.firstSeenAt || skill.lastSeenAt);
-  }
-
-  return dateAddedByOwner;
-}
-
-function updateOwnerDateAdded(dateAddedByOwner, ownerKey, value) {
-  if (!ownerKey) {
-    return;
-  }
-  const timestamp = parseDateMs(value);
-  if (timestamp > (dateAddedByOwner.get(ownerKey) || 0)) {
-    dateAddedByOwner.set(ownerKey, timestamp);
-  }
 }
 
 // ── Search ────────────────────────────────────────────────────────────────────
