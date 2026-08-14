@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { gunzipSync } from "node:zlib";
 
 import { OWNER_METADATA } from "../docs/lib/owner-metadata.js";
 import { computePopularityScore } from "../docs/lib/ranking.js";
@@ -13,6 +14,10 @@ const DATA_PATH = path.resolve(
 );
 const ARCHIVED_PAGES_PATH = path.resolve(
   args.archivedPages || path.join(ROOT_DIR, "docs/data/archived-official-pages.json")
+);
+const ARCHIVED_SKILLS_PATH = path.resolve(
+  args.archivedSkills ||
+    path.join(ROOT_DIR, "scripts/data/archived-official-skills.json.gz")
 );
 const SITE_ROOT = path.resolve(
   args.siteRoot || process.env.PAGES_OUTPUT_DIR || path.join(ROOT_DIR, ".pages-dist")
@@ -199,6 +204,7 @@ const SIMPLE_COPY_ICON = `
 const rawData = await fs.readFile(DATA_PATH, "utf8");
 const data = JSON.parse(rawData);
 const archivedOfficialPages = await readArchivedOfficialPages(ARCHIVED_PAGES_PATH);
+const archivedSkillsSnapshot = await readArchivedSkillsSnapshot(ARCHIVED_SKILLS_PATH);
 const owners = [...data.officialOwners]
   .filter((owner) => /^[a-z0-9][a-z0-9._-]*$/i.test(owner.ownerKey || ""))
   .map((owner) => ({ ...owner, rankScore: computeOwnerRankScore(owner) }))
@@ -269,14 +275,17 @@ for (const [position, owner] of selectedOwners.entries()) {
   }
 }
 
-const archivedPageCount = await writeArchivedOfficialPages(
+const archivedPages = await writeArchivedOfficialPages(
   archivedOfficialPages.pages || [],
-  new Set(sitemapUrls)
+  new Set(sitemapUrls),
+  archivedSkillsSnapshot
 );
+const archivedPageCount = archivedPages.urls.length;
+sitemapUrls.push(...archivedPages.urls);
 await writeVendorSitemap(sitemapUrls, data.generatedAt);
 
 console.log(
-  `Generated ${selectedOwners.length} vendor pages, ${sitemapUrls.length} crawlable URLs, and ${archivedPageCount} archived fallbacks in ${OUTPUT_DIR}`
+  `Generated ${selectedOwners.length} vendor pages, ${sitemapUrls.length} crawlable URLs, and ${archivedPageCount} frozen historical pages in ${OUTPUT_DIR}`
 );
 
 function buildVendorModel(owner, popularityPosition, ownerRepos, ownerSkills) {
@@ -637,8 +646,29 @@ async function readArchivedOfficialPages(filePath) {
   }
 }
 
-async function writeArchivedOfficialPages(pages, currentUrls) {
-  let count = 0;
+async function readArchivedSkillsSnapshot(filePath) {
+  try {
+    const compressed = await fs.readFile(filePath);
+    return JSON.parse(gunzipSync(compressed).toString("utf8"));
+  } catch (error) {
+    if (error.code === "ENOENT") {
+      return { officialOwners: [], officialRepos: [], officialSkills: [] };
+    }
+    throw error;
+  }
+}
+
+async function writeArchivedOfficialPages(pages, currentUrls, snapshot) {
+  const owners = new Map(
+    (snapshot.officialOwners || []).map((owner) => [owner.ownerKey, owner])
+  );
+  const reposByOwner = groupBy(snapshot.officialRepos || [], "ownerKey");
+  const skillsByOwner = groupBy(snapshot.officialSkills || [], "ownerKey");
+  const modelByOwner = new Map();
+  const writtenSupportFiles = new Set();
+  const urls = [];
+  let fallbackCount = 0;
+
   for (const page of pages || []) {
     if (!page?.url || currentUrls.has(page.url)) continue;
     const pathname = new URL(page.url).pathname;
@@ -646,19 +676,73 @@ async function writeArchivedOfficialPages(pages, currentUrls) {
 
     const relativePath = pathname.replace(/^\/+/, "");
     const outputPath = path.join(SITE_ROOT, relativePath, "index.html");
-    const canonicalUrl = safeHttpUrl(page.targetUrl, "https://skillscout.sh/official/");
-    await fs.mkdir(path.dirname(outputPath), { recursive: true });
-    await fs.writeFile(
-      outputPath,
-      renderArchivedOfficialPage({
+    const owner = owners.get(page.ownerKey);
+    let html = "";
+
+    if (owner) {
+      let model = modelByOwner.get(owner.ownerKey);
+      if (!model) {
+        model = buildVendorModel(
+          owner,
+          Number(owner.archivedPopularityPosition || 0),
+          reposByOwner.get(owner.ownerKey) || [],
+          skillsByOwner.get(owner.ownerKey) || []
+        );
+        modelByOwner.set(owner.ownerKey, model);
+      }
+
+      const entries = flattenSkills(model.packs);
+      const pageCount = Math.max(1, Math.ceil(entries.length / SKILLS_PER_PAGE));
+      const pageNumber = Number(page.pageNumber || 1);
+      if (model.skills.length && pageNumber <= pageCount) {
+        const start = (pageNumber - 1) * SKILLS_PER_PAGE;
+        html = renderVendorPage(model, {
+          pageNumber,
+          pageCount,
+          pagePacks: groupPageEntries(entries.slice(start, start + SKILLS_PER_PAGE)),
+          startIndex: start
+        });
+
+        const baseUrl = `https://skillscout.sh/official/${owner.ownerKey}/`;
+        if (!currentUrls.has(baseUrl) && !writtenSupportFiles.has(owner.ownerKey)) {
+          await fs.writeFile(
+            path.join(VENDOR_DATA_DIR, `${owner.ownerKey}.json`),
+            JSON.stringify(renderVendorSearchData(model, entries)),
+            "utf8"
+          );
+          const pageDir = path.join(OUTPUT_DIR, owner.ownerKey);
+          await fs.mkdir(pageDir, { recursive: true });
+          await fs.writeFile(
+            path.join(pageDir, getVendorMarkdownFilename(owner.ownerKey)),
+            renderVendorMarkdown(model),
+            "utf8"
+          );
+          writtenSupportFiles.add(owner.ownerKey);
+        }
+      }
+    }
+
+    if (!html) {
+      const canonicalUrl = safeHttpUrl(
+        page.targetUrl,
+        "https://skillscout.sh/official/"
+      );
+      html = renderArchivedOfficialPage({
         canonicalUrl,
         originalUrl: page.url
-      }),
-      "utf8"
-    );
-    count += 1;
+      });
+      fallbackCount += 1;
+    }
+
+    await fs.mkdir(path.dirname(outputPath), { recursive: true });
+    await fs.writeFile(outputPath, html, "utf8");
+    if (owner && html.includes('id="vendorTitle"')) urls.push(page.url);
   }
-  return count;
+
+  if (fallbackCount) {
+    console.warn(`${fallbackCount} archived URLs used the moved-page fallback.`);
+  }
+  return { urls, fallbackCount };
 }
 
 function renderArchivedOfficialPage({ canonicalUrl, originalUrl }) {
