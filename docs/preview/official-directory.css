@@ -780,8 +780,14 @@ body.directory-body {
   white-space: nowrap;
 }
 
-.owner-card.is-featured .featured-badge {
+.owner-card.is-featured .featured-badge,
+.promo-card .featured-badge {
   display: inline-flex;
+}
+
+.promo-card .featured-badge {
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
 .featured-badge svg {
@@ -1036,5 +1042,249 @@ body.directory-body {
   .owner-card-meta {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+/* ── Promoted slot (fixed position 2) ─────────────────────────────────────── */
+
+.promo-card {
+  position: relative;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0;
+  border: 1px dashed rgba(59, 130, 246, 0.45);
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.05), rgba(59, 130, 246, 0.01));
+  box-shadow: var(--shadow-card);
+  padding: 16px;
+  color: var(--color-pitch-black);
+  text-decoration: none;
+  transition:
+    box-shadow 140ms ease,
+    transform 140ms ease,
+    border-color 140ms ease;
+}
+
+.promo-card:hover {
+  border-color: rgba(99, 102, 241, 0.75);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+}
+
+.promo-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.promo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border: 1px solid rgba(99, 102, 241, 0.28);
+  border-radius: 10px;
+  background: linear-gradient(140deg, rgba(59, 130, 246, 0.16), rgba(168, 85, 247, 0.16));
+  color: #4f46e5;
+}
+
+.promo-mark svg {
+  width: 20px;
+  height: 20px;
+}
+
+.promo-titles {
+  display: block;
+  min-width: 0;
+}
+
+.promo-title {
+  display: block;
+  margin: 0;
+  font-family: var(--font-inter-display);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.promo-subtitle {
+  display: block;
+  margin: 2px 0 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--color-light-gray);
+}
+
+.promo-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.08);
+  color: var(--color-accent-blue);
+  padding: 5px 9px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.promo-body {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-slate-blue);
+}
+
+.promo-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.promo-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 8px;
+  background: linear-gradient(140deg, #4f46e5, #3b82f6);
+  color: var(--color-ghost-white);
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.promo-note {
+  font-size: 11px;
+  color: var(--color-light-gray);
+}
+
+.promo-card .promo-title {
+  color: var(--color-graphite);
+}
+
+/* Variant B — inverted */
+.promo-card.promo-dark {
+  border: 1px solid rgba(17, 17, 17, 0.9);
+  background: #111;
+  color: #fff;
+}
+
+.promo-card.promo-dark .promo-mark {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.promo-card.promo-dark .featured-badge {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.promo-card.promo-dark .promo-subtitle,
+.promo-card.promo-dark .promo-body,
+.promo-card.promo-dark .promo-note {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.promo-card.promo-dark .promo-cta {
+  background: #fff;
+  color: #111;
+}
+
+.promo-card.promo-dark .promo-title {
+  color: #fff;
+}
+
+/* Variant C — slim strip spanning the full row */
+.tile-view .promo-card.promo-strip {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+}
+
+.tile-view .promo-card.promo-strip .promo-head {
+  flex: 0 1 auto;
+}
+
+.tile-view .promo-card.promo-strip .featured-badge {
+  margin-left: 0;
+  order: -1;
+}
+
+.tile-view .promo-card.promo-strip .promo-body {
+  display: none;
+}
+
+.tile-view .promo-card.promo-strip .promo-foot {
+  margin: 0 0 0 auto;
+}
+
+.tile-view .promo-card.promo-strip .promo-note {
+  display: none;
+}
+
+/* List view — every variant collapses to one slim row */
+.list-view .promo-card {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+}
+
+.list-view .promo-card .promo-head {
+  flex: 1 1 auto;
+}
+
+.list-view .promo-card .promo-body {
+  display: none;
+}
+
+.list-view .promo-card .featured-badge {
+  margin-left: auto;
+  margin-right: 4px;
+}
+
+.list-view .promo-card .promo-foot {
+  margin: 0;
+}
+
+.list-view .promo-card .promo-note {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .promo-card,
+  .tile-view .promo-card.promo-strip,
+  .list-view .promo-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .promo-card .featured-badge {
+    margin-left: 0;
+  }
+
+  .tile-view .promo-card.promo-strip .promo-body,
+  .list-view .promo-card .promo-body {
+    display: block;
   }
 }

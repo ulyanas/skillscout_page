@@ -1336,3 +1336,133 @@ a {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ── Promoted slot (under the breadcrumbs) ───────────────────────────────── */
+
+.vendor-promo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: -8px 0 22px;
+  padding: 12px 18px;
+  border: 1px dashed rgba(47, 110, 244, 0.4);
+  border-radius: var(--vendor-radius-md);
+  background:
+    radial-gradient(120% 180% at 0% 0%, rgba(47, 110, 244, 0.1), transparent 60%),
+    radial-gradient(120% 180% at 100% 0%, rgba(19, 184, 180, 0.12), transparent 55%),
+    var(--vendor-surface);
+  color: var(--vendor-ink);
+  text-decoration: none;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    transform 140ms ease;
+}
+
+.vendor-promo:hover {
+  border-color: rgba(47, 110, 244, 0.7);
+  box-shadow: 0 10px 30px rgba(17, 17, 17, 0.07);
+  transform: translateY(-1px);
+}
+
+.vendor-promo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: 1px solid rgba(47, 110, 244, 0.24);
+  border-radius: 12px;
+  background: linear-gradient(140deg, rgba(47, 110, 244, 0.16), rgba(19, 184, 180, 0.18));
+  color: #2f6ef4;
+}
+
+.vendor-promo-mark svg {
+  width: 20px;
+  height: 20px;
+}
+
+.vendor-promo-copy {
+  display: block;
+  min-width: 0;
+}
+
+.vendor-promo-title {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.vendor-promo-subtitle {
+  display: block;
+  margin-top: 2px;
+  color: var(--vendor-muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.vendor-promo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: var(--vendor-ink);
+  color: #fff;
+  padding: 7px 11px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.vendor-promo-badge svg {
+  width: 12px;
+  height: 12px;
+}
+
+.vendor-promo-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: linear-gradient(140deg, #2f6ef4, #13b8b4);
+  color: #fff;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .vendor-promo {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .vendor-promo-mark {
+    order: 0;
+  }
+
+  .vendor-promo-badge {
+    order: 1;
+    margin-left: auto;
+  }
+
+  .vendor-promo-copy {
+    order: 2;
+    flex: 1 1 100%;
+  }
+
+  .vendor-promo-cta {
+    order: 3;
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+}

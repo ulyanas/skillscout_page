@@ -4,7 +4,8 @@
   var SESSION_KEY = 'skillscout.telemetry.session';
   var EVENT_MAP = {
     get_extension_click: 'Extension.downloadClicked',
-    list_skills_click: 'Skills.listSubmissionOpened'
+    list_skills_click: 'Skills.listSubmissionOpened',
+    feature_slot_click: 'Skills.featuredSlotClicked'
   };
 
   var loc = window.location;

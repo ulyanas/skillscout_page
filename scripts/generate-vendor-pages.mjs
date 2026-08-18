@@ -496,7 +496,7 @@ function renderVendorPage(
     <meta name="twitter:image" content="${escapeAttr(model.logoUrl)}" />
     <script src="/assets/telemetry.js"></script>
     <link rel="stylesheet" href="/assets/site-shell.css?v=20260724-official-sparkle" />
-    <link rel="stylesheet" href="/official/vendor-page.css?v=20260724-vendor-mobile-title-fix" />
+    <link rel="stylesheet" href="/official/vendor-page.css?v=20260819-promo-slot" />
     <script src="/assets/site-shell.js?v=20260724-1"></script>
     <script src="/assets/posthog-init.js"></script>
     <link rel="icon" href="/assets/skillscout-mark-48.png" />
@@ -516,6 +516,8 @@ function renderVendorPage(
         <span>${escapeHtml(model.displayName)}</span>
         ${isFirstPage ? "" : `${renderChevron()}<span>Page ${pageNumber}</span>`}
       </nav>
+
+      ${renderPromoSlot(model.ownerKey)}
 
       <section class="vendor-hero" aria-labelledby="vendorTitle">
         <div class="vendor-identity">
@@ -629,7 +631,7 @@ function renderVendorPage(
       ${isFirstPage ? renderReadme(model, campaign) : ""}
     </main>
     <div class="copy-status" id="copyStatus" role="status" aria-live="polite">Copied</div>
-    <script src="/official/vendor-page.js?v=20260724-1"></script>
+    <script src="/official/vendor-page.js?v=20260819-promo-slot"></script>
   </body>
 </html>
 `;
@@ -762,7 +764,7 @@ function renderArchivedOfficialPage({ canonicalUrl, originalUrl }) {
     <link rel="canonical" href="${escapeAttr(canonicalUrl)}" />
     <script src="/assets/telemetry.js"></script>
     <link rel="stylesheet" href="/assets/site-shell.css?v=20260724-official-sparkle" />
-    <link rel="stylesheet" href="/official/vendor-page.css?v=20260724-vendor-mobile-title-fix" />
+    <link rel="stylesheet" href="/official/vendor-page.css?v=20260819-promo-slot" />
     <script src="/assets/site-shell.js?v=20260724-1"></script>
     <script src="/assets/posthog-init.js"></script>
     <link rel="icon" href="/assets/skillscout-mark-48.png" />
@@ -1412,6 +1414,36 @@ function renderMetric(value, label) {
 
 function renderCopyButton({ target, label, message }) {
   return `<button class="copy-button" type="button" aria-label="${escapeAttr(label)}" data-copy-target="${escapeAttr(target)}" data-copy-message="${escapeAttr(message)}">${COPY_ICON}</button>`;
+}
+
+function renderPromoSlot(ownerKey) {
+  // forms.gle strips query params on redirect, so link the expanded viewform URL
+  // (short link equivalent: https://forms.gle/iGfD5tDgTfCE4QX66)
+  const params = new URLSearchParams({
+    utm_source: "skillscout.sh",
+    utm_medium: "vendor_page",
+    utm_campaign: "feature_your_skill",
+    utm_content: `vendor_${ownerKey || "unknown"}`
+  });
+  const href = `https://docs.google.com/forms/d/e/1FAIpQLSdjimLAZ1-KCArqwFVrNWEyVXLx6MYXqDsASAw48qTN5mWvOw/viewform?${params}`;
+
+  return `<a class="vendor-promo" href="${escapeAttr(href)}" target="_blank" rel="noopener sponsored" data-ga-event="feature_slot_click" data-ga-label="vendor-page">
+        <span class="vendor-promo-mark" aria-hidden="true">
+          <svg viewBox="0 0 16 16">
+            <path d="M8 1.5l1.1 3.8 3.4 1.2-3.4 1.2L8 11.5 6.9 7.7 3.5 6.5l3.4-1.2L8 1.5Z" fill="currentColor"/>
+            <path d="M12.5 9.5l.45 1.55 1.55.45-1.55.45-.45 1.55-.45-1.55-1.55-.45 1.55-.45.45-1.55Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="vendor-promo-copy">
+          <span class="vendor-promo-title">Feature your skills here</span>
+          <span class="vendor-promo-subtitle">Put your skills in front of AI builders browsing official skills</span>
+        </span>
+        <span class="vendor-promo-badge">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.6l1.15 5.25L14.4 8l-5.25 1.15L8 14.4l-1.15-5.25L1.6 8l5.25-1.15L8 1.6Z" fill="currentColor"/></svg>
+          Featured
+        </span>
+        <span class="vendor-promo-cta">Apply for this spot <span aria-hidden="true">&rarr;</span></span>
+      </a>`;
 }
 
 function renderChevron() {

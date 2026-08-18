@@ -9,6 +9,19 @@ const INITIAL_LIMIT = 48;
 const PAGE_SIZE = 48;
 const OWNER_SKILL_PREVIEW_LIMIT = 5;
 const FEATURED_OWNER_KEY = "skillscout";
+const PROMO_SLOT_INDEX = 1; // fixed position right after the featured Skillscout card
+// forms.gle strips query params on redirect, so link the expanded viewform URL
+// (short link equivalent: https://forms.gle/iGfD5tDgTfCE4QX66)
+const PROMO_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSdjimLAZ1-KCArqwFVrNWEyVXLx6MYXqDsASAw48qTN5mWvOw/viewform";
+const PROMO_UTM = {
+  utm_source: "skillscout.sh",
+  utm_medium: "directory",
+  utm_campaign: "feature_your_skill",
+  utm_content: "promo_slot_2"
+};
+// Local A/B preview only: /official/?promo=outline|dark|strip (default: outline)
+const PROMO_VARIANT = new URLSearchParams(location.search).get("promo") || "outline";
 const STARS_CACHE_TTL = 3_600_000; // 1 hour
 const STARS_CACHE_PREFIX = "skillscout_stars_v1_";
 const MAX_CONCURRENT_STARS_FETCHES = 3;
@@ -162,6 +175,7 @@ const state = {
 
 // Cache card elements by ownerKey so logos aren't recreated on every render
 const cardCache = new Map();
+let promoCard = null;
 
 const elements = {
   searchInput: document.querySelector("#searchInput"),
@@ -591,14 +605,23 @@ function renderResults() {
   const visibleOwners = state.filteredOwners.slice(0, state.visibleLimit);
   const totalMatchingSkills = countMatchingSkills(state.filteredOwners);
 
-  elements.resultsGrid.replaceChildren(...visibleOwners.map((owner, index) => {
+  const cards = visibleOwners.map((owner) => {
     if (!cardCache.has(owner.ownerKey)) {
       cardCache.set(owner.ownerKey, createOwnerCard(owner));
     }
     const card = cardCache.get(owner.ownerKey);
     updateCardSearchContext(card, owner);
     return card;
-  }));
+  });
+
+  if (cards.length) {
+    // The full-width strip variant would leave a hole in the tile grid at slot 2,
+    // so it rides above the first row instead.
+    const slot = PROMO_VARIANT === "strip" ? 0 : Math.min(PROMO_SLOT_INDEX, cards.length);
+    cards.splice(slot, 0, getPromoCard());
+  }
+
+  elements.resultsGrid.replaceChildren(...cards);
   elements.emptyState.classList.toggle("hidden", totalOwners > 0);
   elements.lazyLoadSentinel.classList.toggle("hidden", state.visibleLimit >= totalOwners);
 
@@ -621,6 +644,78 @@ function updateCardSearchContext(card, owner) {
     skillItems.push(createOverflowIndicator(totalSkills - OWNER_SKILL_PREVIEW_LIMIT));
   }
   card.querySelector(".skill-preview").replaceChildren(...skillItems);
+}
+
+function getPromoCard() {
+  if (!promoCard) {
+    promoCard = createPromoCard();
+  }
+  return promoCard;
+}
+
+function createPromoCard() {
+  const card = document.createElement("a");
+  card.className = `promo-card promo-${PROMO_VARIANT}`;
+  card.href = buildPromoUrl();
+  card.target = "_blank";
+  card.rel = "noopener sponsored";
+  card.dataset.gaEvent = "feature_slot_click";
+  card.dataset.gaLabel = "official-directory";
+
+  card.innerHTML = `
+    <div class="promo-head">
+      <span class="promo-mark" aria-hidden="true">
+        <svg viewBox="0 0 16 16">
+          <path d="M8 1.5l1.1 3.8 3.4 1.2-3.4 1.2L8 11.5 6.9 7.7 3.5 6.5l3.4-1.2L8 1.5Z" fill="currentColor"/>
+          <path d="M12.5 9.5l.45 1.55 1.55.45-1.55.45-.45 1.55-.45-1.55-1.55-.45 1.55-.45.45-1.55Z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="promo-titles">
+        <span class="promo-title">Feature your skills here</span>
+        <span class="promo-subtitle">Fixed slot on the Official Skills directory</span>
+      </span>
+      <span class="featured-badge promo-badge" aria-label="Featured placement">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.6l1.15 5.25L14.4 8l-5.25 1.15L8 14.4l-1.15-5.25L1.6 8l5.25-1.15L8 1.6Z" fill="currentColor"/></svg>
+        Featured
+      </span>
+    </div>
+    <p class="promo-body">
+      Put your skills in front of AI builders browsing official skills, right at the top of the list.
+    </p>
+    <div class="promo-foot">
+      <span class="promo-cta">Apply for this spot <span aria-hidden="true">-&gt;</span></span>
+      <span class="promo-note">Takes 2 minutes</span>
+    </div>
+  `;
+
+  card.addEventListener("click", () => {
+    // TelemetryDeck also fires Skills.featuredSlotClicked via the data-ga-event hook
+    trackOfficialSkillsEvent("Skillscout.Web.PromoSlotClicked", {
+      "Skillscout.OfficialSkills.promoVariant": PROMO_VARIANT,
+      "Skillscout.OfficialSkills.query": state.query,
+      "Skillscout.OfficialSkills.sortBy": state.sortBy
+    });
+    window.posthog?.capture("feature_slot_click", {
+      placement: "official-directory",
+      promo_variant: PROMO_VARIANT,
+      query: state.query,
+      sort_by: state.sortBy,
+      result_count: state.filteredOwners.length,
+      href: card.href
+    });
+  });
+
+  return card;
+}
+
+function buildPromoUrl() {
+  try {
+    const url = new URL(PROMO_FORM_URL);
+    Object.entries(PROMO_UTM).forEach(([key, value]) => url.searchParams.set(key, value));
+    return url.toString();
+  } catch {
+    return PROMO_FORM_URL;
+  }
 }
 
 function createOwnerCard(owner) {
