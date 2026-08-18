@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>What Is DeepSeek Harness? Plugins and Agent Skills | Skillscout</title>
+    <meta
+      name="description"
+      content="How DeepSeek Harness works: the Cordis plugin architecture, four runtime modes, and an Agent Skills system that runs existing SKILL.md folders unchanged."
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://skillscout.sh/guides/deepseek-harness-agent-skills/" />
+    <script src="/assets/telemetry.js"></script>
+    <link rel="stylesheet" href="/assets/site-shell.css?v=20260724-official-sparkle" />
+    <script src="/assets/site-shell.js?v=20260724-1"></script>
+    <script src="/assets/posthog-init.js"></script>
+    <meta property="og:title" content="What Is DeepSeek Harness? Plugins and Agent Skills | Skillscout" />
+    <meta
+      property="og:description"
+      content="How DeepSeek Harness works: the Cordis plugin architecture, four runtime modes, and an Agent Skills system that runs existing SKILL.md folders unchanged."
+    />
+    <meta property="og:site_name" content="Skillscout" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://skillscout.sh/guides/deepseek-harness-agent-skills/" />
+    <meta property="og:image" content="https://skillscout.sh/assets/guides/deepseek-harness-hero.jpg" />
+    <meta
+      property="og:image:alt"
+      content="Cover reading DeepSeek Harness with a diagram of plugins mounting into the Cordis kernel."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="What Is DeepSeek Harness? Plugins and Agent Skills | Skillscout" />
+    <meta
+      name="twitter:description"
+      content="How DeepSeek Harness works: the Cordis plugin architecture, four runtime modes, and an Agent Skills system that runs existing SKILL.md folders unchanged."
+    />
+    <meta name="twitter:image" content="https://skillscout.sh/assets/guides/deepseek-harness-hero.jpg" />
+    <meta
+      name="twitter:image:alt"
+      content="Cover reading DeepSeek Harness with a diagram of plugins mounting into the Cordis kernel."
+    />
+    <link rel="icon" href="../../assets/skillscout-mark-48.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://skillscout.sh/guides/deepseek-harness-agent-skills/#article",
+      "headline": "What Is DeepSeek Harness? Plugins and Agent Skills",
+      "description": "How DeepSeek Harness works: the Cordis plugin architecture, four runtime modes, and an Agent Skills system that runs existing SKILL.md folders unchanged.",
+      "author": {
+        "@type": "Organization",
+        "name": "Skillscout"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Skillscout",
+        "url": "https://skillscout.sh/"
+      },
+      "image": "https://skillscout.sh/assets/guides/deepseek-harness-hero.jpg",
+      "datePublished": "2026-08-18",
+      "dateModified": "2026-08-18",
+      "mainEntityOfPage": "https://skillscout.sh/guides/deepseek-harness-agent-skills/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://skillscout.sh/guides/deepseek-harness-agent-skills/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://skillscout.sh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://skillscout.sh/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "What Is DeepSeek Harness?",
+          "item": "https://skillscout.sh/guides/deepseek-harness-agent-skills/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+    <style>
+      :root {
+        --bg: #f6f6f3;
+        --panel: #ffffff;
+        --border: #e4e4df;
+        --text: #111111;
+        --text-muted: #5f5f5f;
+        --shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.04);
+        --max: 760px;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      .container {
+        width: min(calc(100% - 40px), var(--max));
+        margin: 0 auto;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 76px;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 800;
+        font-size: 18px;
+      }
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        display: grid;
+        place-items: center;
+        box-shadow: var(--shadow-sm);
+      }
+      .brand-mark img {
+        width: 18px;
+        height: 18px;
+      }
+      .nav-links {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .nav-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .nav-links a:hover { color: var(--text); }
+      article {
+        padding: 28px 0 72px;
+      }
+      .eyebrow {
+        margin: 0 0 14px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(34px, 6vw, 56px);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+      }
+      .lead {
+        margin: 0 0 28px;
+        font-size: 19px;
+        line-height: 1.58;
+        color: var(--text-muted);
+      }
+      .meta {
+        margin: 0 0 32px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+      .hero-figure { margin: 0 0 32px; }
+      .hero-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-sm);
+        background: var(--panel);
+      }
+      h2 {
+        margin: 40px 0 14px;
+        font-size: 24px;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+      }
+      p, li {
+        font-size: 16px;
+        line-height: 1.68;
+      }
+      article a {
+        color: var(--text);
+        font-weight: 500;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.14em;
+      }
+      p { margin: 0 0 16px; }
+      ul, ol {
+        margin: 0 0 20px;
+        padding-left: 22px;
+      }
+      code {
+        padding: 0.12em 0.38em;
+        border-radius: 8px;
+        background: #eeefec;
+        font-size: 0.9em;
+      }
+      pre {
+        overflow: auto;
+        padding: 16px 18px;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+        margin: 18px 0 24px;
+      }
+      pre code {
+        padding: 0;
+        background: transparent;
+      }
+      .table-wrap {
+        overflow-x: auto;
+        margin: 18px 0 26px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 680px;
+      }
+      th, td {
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--border);
+        text-align: left;
+        vertical-align: top;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      th {
+        background: #f0f0eb;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      tr:last-child td { border-bottom: 0; }
+      @media (max-width: 720px) {
+        .nav {
+          min-height: auto;
+          padding: 16px 0;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  <body>
+    <div class="site-nav-wrap" id="articleNavWrap">
+      <div class="site-nav-container site-nav">
+        <a class="site-brand" href="/">
+          <span class="site-brand-mark"><img src="/assets/skillscout-mark-48.png" alt="Skillscout logo" /></span>
+          <span class="site-brand-name">Skillscout</span>
+        </a>
+        <nav class="site-nav-links" aria-label="Primary">
+          <a href="/#snapshot">Do I need it</a>
+          <a href="/#use-cases">Use cases</a>
+          <a href="/guides/">Guides</a>
+          <a href="/#testimonials">Reviews</a>
+          <a href="/#faq">FAQ</a>
+          <a class="official-nav-link" href="/official/"><span>Official skills</span><svg class="official-nav-sparkle" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l1.1 3.8 3.4 1.2-3.4 1.2L8 11.5 6.9 7.7 3.5 6.5l3.4-1.2L8 1.5Z" fill="currentColor"/><path d="M12.5 9.5l.45 1.55 1.55.45-1.55.45-.45 1.55-.45-1.55-1.55-.45 1.55-.45.45-1.55Z" fill="currentColor"/></svg></a>
+        </nav>
+        <div class="site-nav-cta">
+          <a class="site-btn" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=guide_article" target="_blank" rel="noopener noreferrer" data-ga-event="get_extension_click" data-ga-label="guide-article-nav">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Add to Chrome
+          </a>
+          <a class="site-btn site-btn-list" href="https://forms.gle/iGfD5tDgTfCE4QX66" target="_blank" rel="noopener noreferrer" data-ga-event="list_skills_click" data-ga-label="guide-article-nav">
+            <span class="site-btn-list-long">List your skills</span>
+            <span class="site-btn-list-short">List skill</span>
+          </a>
+        </div>
+        <button class="site-burger" id="articleBurgerBtn" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="site-mobile-menu" id="articleMobileMenu" aria-label="Mobile">
+        <a href="/#snapshot" class="site-mobile-link">Do I need it</a>
+        <a href="/#use-cases" class="site-mobile-link">Use cases</a>
+        <a href="/guides/" class="site-mobile-link">Guides</a>
+        <a href="/#testimonials" class="site-mobile-link">Reviews</a>
+        <a href="/#faq" class="site-mobile-link">FAQ</a>
+        <a href="/official/" class="site-mobile-link official-nav-link"><span>Official skills</span><svg class="official-nav-sparkle" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l1.1 3.8 3.4 1.2-3.4 1.2L8 11.5 6.9 7.7 3.5 6.5l3.4-1.2L8 1.5Z" fill="currentColor"/><path d="M12.5 9.5l.45 1.55 1.55.45-1.55.45-.45 1.55-.45-1.55-1.55-.45 1.55-.45.45-1.55Z" fill="currentColor"/></svg></a>
+        <a href="https://forms.gle/iGfD5tDgTfCE4QX66" class="site-mobile-link" target="_blank" rel="noopener noreferrer" data-ga-event="list_skills_click" data-ga-label="guide-article-mobile-nav">List your skills</a>
+      </nav>
+    </div>
+
+    <main class="container">
+      <article>
+        <p class="eyebrow">Guides</p>
+        <h1>What is DeepSeek Harness?</h1>
+        <p class="lead">
+          DeepSeek published the runtime layer that turns a model into an agent. Here is how its
+          plugin architecture works, how its Agent Skills system relates to the SKILL.md format you
+          may already use, and what state the code is actually in.
+        </p>
+        <p class="meta">Updated August 18, 2026</p>
+        <figure class="hero-figure">
+          <img
+            src="../../assets/guides/deepseek-harness-hero.jpg"
+            alt="Cover reading DeepSeek Harness with a diagram of plugins mounting into the Cordis kernel."
+            loading="eager"
+          />
+        </figure>
+
+        <p>
+          On August 13, 2026, DeepSeek released
+          <a href="https://github.com/deepseek-ai/deepseek-harness?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=deepseek-harness">DeepSeek Harness</a>
+          (<code>dsh</code>) as open source under the MIT license. The project is an agent runtime
+          written in TypeScript. On launch day the repository showed roughly 27,500 stars and 2,000
+          forks; as of this writing it reports approximately 156,100 stars and 16,200 forks.
+        </p>
+        <p>
+          The release matters for anyone who maintains agent skills, because Harness reads the same
+          <code>SKILL.md</code> format that Claude Code uses. Skills you already have work in
+          <code>dsh</code> without edits.
+        </p>
+
+        <h2>The core premise: model plus harness equals agent</h2>
+        <p>
+          DeepSeek frames the release around a single formula: a model becomes an agent through the
+          harness around it. The harness is the runtime layer that wraps the large language model
+          and handles tool calling, context management, task planning, error recovery, and
+          termination logic.
+        </p>
+        <p>
+          Coding agents such as Claude Code and Codex each ship their own harness as closed
+          software. That arrangement makes vendor benchmark claims difficult to attribute, because a
+          published score reflects the combined performance of a model and an undisclosed runtime.
+        </p>
+        <p>
+          DeepSeek published the runtime in full. The methodology footnotes for the V4-Pro
+          benchmarks name Minimal mode from Harness as the harness used, so the configuration behind
+          those numbers is now inspectable code.
+        </p>
+
+        <h2>Architecture: the Cordis kernel</h2>
+        <p>
+          The framework sits on Cordis, a meta-framework that handles plugin mounting, unmounting,
+          and dependency resolution. DeepSeek states the design principle directly: everything is a
+          plugin, and every run is traceable.
+        </p>
+        <p>
+          Every agent capability ships as a plugin: model adapters, tool registries, skill
+          libraries, session management, sandboxes, storage backends, the main agent loop,
+          schedulers, and the user interface. Developers select, swap, or extend any capability in
+          configuration, without modifying Harness source code.
+        </p>
+        <p>
+          A plugin is a TypeScript module that exports an <code>apply</code> function, through which
+          it registers its capabilities. Three forms are supported: function, object, and class. The
+          framework automatically cleans up registered resources such as event listeners, timers,
+          and tools when a plugin unloads, and resolves dependencies through an <code>inject</code>
+          declaration that guarantees required services load first.
+        </p>
+
+        <h3>Four runtime modes</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Mode</th>
+                <th>What it includes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Standard</td>
+                <td>Full toolset: file editing, shell, file and web search, skills, planning, subagents, and workflows.</td>
+              </tr>
+              <tr>
+                <td>Code</td>
+                <td>The model orchestrates multi-step operations through a TypeScript SDK rather than discrete tool calls.</td>
+              </tr>
+              <tr>
+                <td>Minimal</td>
+                <td>Two tools only, bash and a string-replacement editor. This is DeepSeek's own benchmark harness.</td>
+              </tr>
+              <tr>
+                <td>Creator</td>
+                <td>Standard capabilities plus runtime inspection, for building and experimenting with custom modes.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Session logging</h3>
+        <p>
+          Harness records everything the model sees in an append-only session log: prompts,
+          reasoning, tool calls, and context injections. From that same event stream, a session can
+          be resumed, forked, searched, and replayed. For debugging agent behavior, this gives a
+          reproducible record of each run.
+        </p>
+
+        <h2>Agent skills in DeepSeek Harness</h2>
+        <p>
+          Harness implements the <code>SKILL.md</code> skill format that Anthropic defined for
+          Claude Code, down to the directory layout, the frontmatter keys, and a discovery root
+          shared by convention with other skills-aware agents on the same machine. A skill written
+          for Claude Code runs in <code>dsh</code> unchanged. If you are new to the format, start
+          with our guide on
+          <a href="https://skillscout.sh/guides/what-are-ai-agent-skills/">what AI agent skills are</a>.
+        </p>
+
+        <h3>The format</h3>
+        <p>
+          A skill is a folder containing a <code>SKILL.md</code> file with YAML frontmatter and a
+          Markdown body. This example comes from DeepSeek's own repository:
+        </p>
+        <pre><code>---
+name: dsh-code-review
+description: &gt;
+  Use when reviewing a pull request in the deepseek-harness repo — orients
+  the reviewer to this codebase's standards (AGENTS.md conventions,
+  defensive patterns, ADRs, quality gates) and the review-specific checks
+  that code alone can't show
+---</code></pre>
+        <p>
+          The frontmatter requires <code>name</code> and <code>description</code>. Harness also
+          reads <code>whenToUse</code>, plus two keys that control invocation:
+          <code>disable-model-invocation</code> decides whether the model may call the skill on its
+          own, and <code>user-invocable</code> decides whether a person may call it. Both default to
+          enabled when the field is omitted.
+        </p>
+        <p>
+          Two layouts are accepted: a directory bundle written as
+          <code>&lt;name&gt;/SKILL.md</code>, and a flat Markdown file written as
+          <code>&lt;name&gt;.md</code>.
+        </p>
+
+        <h3>Progressive disclosure keeps the context window clear</h3>
+        <p>
+          DeepSeek's own skills follow a size convention: the main file stays at or under roughly
+          300 lines, with supporting detail in a <code>references/</code> directory. The model sees
+          a short description first, loads the full skill body when the skill triggers, and reads
+          reference files only when a task calls for them. Skill content stays out of the context
+          window until it is needed.
+        </p>
+
+        <h3>Where the agent looks for skills</h3>
+        <p>
+          Skills live as ordinary folders on disk. Before an agent can use one, it has to learn the
+          skill exists, and that step is called discovery. At startup, <code>dsh</code> walks a
+          fixed list of directories and collects everything it finds into a single catalog.
+        </p>
+        <p>
+          There are six such directories, and the set is deliberate. Some belong to the current
+          project, some to you as a user, and one ships inside Harness itself. That raises the
+          obvious question: what happens when a skill with the same name sits in two of them? Each
+          directory carries a priority number for exactly that case.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Priority</th>
+                <th>Directory</th>
+                <th>Scope</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>100</td><td><code>&lt;project&gt;/.dsh/skills</code></td><td>Project</td></tr>
+              <tr><td>200</td><td><code>&lt;project&gt;/.agents/skills</code></td><td>Project</td></tr>
+              <tr><td>300</td><td>Directories listed in <code>customSkillDirs</code></td><td>User</td></tr>
+              <tr><td>400</td><td><code>&lt;dshHome&gt;/skills</code></td><td>User</td></tr>
+              <tr><td>500</td><td><code>&lt;agentsHome&gt;/skills</code>, in practice <code>~/.agents/skills</code></td><td>User</td></tr>
+              <tr><td>600</td><td>The directory bundled with Harness</td><td>Built-in</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          The lower number wins. A skill found at 100 overrides a skill of the same name at 200,
+          400, or 600.
+        </p>
+        <p>
+          The order runs from most specific to most general: the project overrides your personal
+          setup, and your setup overrides what ships with the tool. The practical payoff sits in the
+          two project-level entries. A repository can commit a skill that everyone working in it
+          picks up automatically, and that version takes precedence over each contributor's personal
+          one, without anyone changing their own configuration.
+        </p>
+        <p>
+          Two details are worth knowing before you place a file. Discovery goes one level deep, so
+          <code>dsh</code> reads folders and files directly inside a root and a skill buried in a
+          nested subfolder stays invisible. And the catalog refreshes as soon as the files change,
+          so adding or editing a skill needs no restart.
+        </p>
+
+        <h3>Installing a skill</h3>
+        <p>
+          Place a <code>&lt;skill-name&gt;/SKILL.md</code> directory into
+          <code>~/.agents/skills</code>, and the skill appears in the command palette. For advice on
+          keeping one library across several agents, see
+          <a href="https://skillscout.sh/guides/how-to-organize-agent-skills/">how to organize AI agent skills</a>.
+        </p>
+
+        <h2>Official DeepSeek Harness skills</h2>
+        <p>
+          The <code>deepseek-harness</code> repository carries eleven skills in
+          <a href="https://github.com/deepseek-ai/deepseek-harness/tree/master/.agents/skills?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=deepseek-harness"><code>.agents/skills</code></a>.
+          DeepSeek uses them to develop Harness itself, so they cover contributor workflow rather
+          than general-purpose tasks.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Skill</th>
+                <th>What it does</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>dsh-code-review</code></td><td>Reviews pull requests against the repository's standards, including AGENTS.md conventions, ADRs, defensive patterns, and quality gates.</td></tr>
+              <tr><td><code>dsh-pre-push-checks</code></td><td>Selects the minimal set of tests and checks that cover a given change, before push, force-push, or marking a pull request ready.</td></tr>
+              <tr><td><code>dsh-merging-stacked-prs</code></td><td>Handles merging of stacked pull requests.</td></tr>
+              <tr><td><code>dsh-find-simplifications</code></td><td>Identifies simplifications in code.</td></tr>
+              <tr><td><code>dsh-prose-standard</code></td><td>Applies a writing standard to documentation, code comments, prompts, and user-visible strings.</td></tr>
+              <tr><td><code>dsh-doc-standards</code></td><td>Enforces documentation standards.</td></tr>
+              <tr><td><code>dsh-doc-site-sync</code></td><td>Keeps the documentation site in sync with the source.</td></tr>
+              <tr><td><code>dsh-translate-docs</code></td><td>Translates documentation.</td></tr>
+              <tr><td><code>dsh-trim-cot-leakage</code></td><td>Removes chain-of-thought leakage from output.</td></tr>
+              <tr><td><code>dsh-archive-agent-notes</code></td><td>Archives agent notes.</td></tr>
+              <tr><td><code>record-browser-gif</code></td><td>Records interface demos as optimized GIFs and publishes them to an assets branch for attachment to a pull request.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          They sit in the project-level directory at priority 200, so an agent working inside a
+          clone of the repository picks them up automatically. For developers outside the project,
+          their main value is as reference implementations, since they are the highest-quality
+          publicly available examples of the <code>SKILL.md</code> format as DeepSeek applies it.
+        </p>
+        <p>
+          DeepSeek publishes no general-purpose skill catalog or marketplace. The
+          <a href="https://github.com/deepseek-ai/awesome-deepseek-agent?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=deepseek-harness">awesome-deepseek-agent</a>
+          repository lists integration guides for running V4-Pro and V4-Flash inside roughly 25
+          tools, including Cline, GitHub Copilot, OpenCode, and Cherry Studio, and it contains no
+          skills section.
+        </p>
+        <p>
+          Because the format is Anthropic's <code>SKILL.md</code> without modification, the pool of
+          usable skills extends well past DeepSeek's own. Skills published by Anthropic, and any
+          skill a team already maintains for Claude Code, work in <code>dsh</code> once placed in
+          <code>~/.agents/skills</code>. To compare official skills across vendors, browse the
+          <a href="https://skillscout.sh/official/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=deepseek-harness">Skillscout official skills directory</a>.
+        </p>
+
+        <h2>The plugin ecosystem</h2>
+        <p>
+          By August 14, one day after release, GitHub repositories tagged <code>dsh-plugin</code>
+          numbered more than 1,200. Curated lists organize hundreds of entries into categories:
+          profiles and patch layers, harnesses and runtimes, security and permissions, session and
+          memory management, cost tracking, messaging bridges, plugin marketplaces, MCP servers,
+          orchestrators, user interface clients, and skills.
+        </p>
+        <p>Notable skill packs include:</p>
+        <ul>
+          <li>
+            <a href="https://github.com/PerryLink/dsh-skill-pack-security?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=deepseek-harness"><code>dsh-skill-pack-security</code></a>,
+            eight bilingual security-audit skills covering secret scanning, dependency auditing,
+            supply-chain review, prompt-injection review, threat modeling, and incident response,
+            plus <code>plugin_vet</code>, an automated scanner that inspects a plugin before
+            installation.
+          </li>
+          <li>
+            <a href="https://github.com/green-dalii/dsh-plugin-dev-skill?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=deepseek-harness"><code>dsh-plugin-dev-skill</code></a>,
+            <a href="https://github.com/HarcoChen/dsh-plugin-guide?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=deepseek-harness"><code>dsh-plugin-guide</code></a>, and
+            <a href="https://github.com/omdsh-dev/dsh-plugin-skills?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=deepseek-harness"><code>dsh-plugin-skills</code></a>,
+            community packs that teach an agent to build Harness plugins according to the project's
+            official conventions. Between them they cover tools, LLM adapters, service providers and
+            consumers, hooks, configuration, packaging and publishing, navigation of the Cordis
+            architecture, package scaffolding, and test-tier selection. DeepSeek ships no
+            first-party equivalent, so plugin-authoring guidance currently comes from the community.
+          </li>
+          <li>
+            <code>dsh-multimodal-skill</code>, which adds image understanding and document parsing
+            such as OCR, tables, formulas, and PDF to Markdown conversion to text-only models
+            through third-party multimodal APIs.
+          </li>
+        </ul>
+        <p>
+          The arrival of <code>plugin_vet</code> in the first week reflects a practical property of
+          the architecture. Plugins are executable modules with access to the filesystem and shell,
+          so supply-chain review applies to them the same way it applies to any dependency. Our
+          guide on <a href="https://skillscout.sh/guides/ai-agent-skills-security/">AI agent skills security</a>
+          covers what to check before installing.
+        </p>
+
+        <h2>Models, benchmarks, and pricing</h2>
+        <p>
+          Harness is natively optimized for DeepSeek-V4-Pro and V4-Flash. The kernel itself is
+          model-agnostic, and community adapters for OpenAI-compatible endpoints appeared quickly,
+          with one router plugin advertising more than 70 model integrations.
+        </p>
+        <p>
+          On the neutral harness maintained by Vals, V4-Pro-0813 ranks second on SWE-bench Verified
+          at 96.40% with a margin of 0.83, behind Claude Opus 5, at $0.022 per test compared with
+          $1.29 for Opus 5.
+        </p>
+        <p>
+          API pricing changed shortly after launch. Rates of $0.435 per million input tokens and
+          $0.87 per million output tokens moved, as of 16:00 UTC on August 16, 2026, to peak and
+          off-peak billing: $0.66 and $1.98 off-peak, $1.32 and $3.96 at peak.
+        </p>
+
+        <h2>How to install DeepSeek Harness</h2>
+        <p>The published package runs directly:</p>
+        <pre><code>npx @deepseek-ai/dsh web</code></pre>
+        <p>The web interface serves at <code>http://127.0.0.1:3080</code>.</p>
+        <p>
+          Building from source requires an explicit build step, which several community install
+          guides omit:
+        </p>
+        <pre><code>git clone https://github.com/deepseek-ai/deepseek-harness
+pnpm install &amp;&amp; pnpm run build &amp;&amp; pnpm dsh web</code></pre>
+
+        <h2>Current state of the project</h2>
+        <p>
+          Harness is a developer preview. Launch coverage described the release as v0.1, but the
+          published package version is <code>0.1.0-rc.5</code>, and the repository currently carries
+          no GitHub releases or tags. The README states that compatibility-breaking changes are
+          expected, and both the APIs and the plugin contracts may still change before a stable
+          release.
+        </p>
+        <p>
+          The framework also occupies a different position from a ready-to-use coding agent. Claude
+          Code and Codex install and run as finished products. Harness supplies a plugin foundation
+          from which developers assemble an agent by selecting models, tools, and workflows. That
+          difference raises both the setup effort and the degree of control available.
+        </p>
+
+        <h2>Why this matters for agent skills</h2>
+        <p>Three developments follow from the release.</p>
+        <ul>
+          <li>
+            The harness becomes a layer of open competition. With the runtime published,
+            improvements to context management, tool routing, and recovery logic can come from
+            anyone, and benchmark claims can be reproduced against known code.
+          </li>
+          <li>
+            <code>SKILL.md</code> gains a second major implementation. A skill format adopted
+            without modification by a second vendor, down to the directory name, functions as a
+            portable standard. Skills written once carry across the tools that support it.
+          </li>
+          <li>
+            Agent behavior moves into configuration. Plugins, profiles, patch layers, and
+            project-level skills describe how an agent works declaratively, in files that live and
+            version alongside the codebase they serve.
+          </li>
+        </ul>
+        <p>
+          For teams already maintaining skills, the migration cost is effectively zero, because
+          existing <code>SKILL.md</code> directories work as they are. For teams evaluating Harness
+          as infrastructure, the release-candidate status and the documented intent to break
+          compatibility are the main factors to weigh.
+        </p>
+
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="https://deepseek.com/harness/en/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=deepseek-harness">DeepSeek Harness official page</a></li>
+          <li><a href="https://github.com/deepseek-ai/deepseek-harness?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=deepseek-harness">deepseek-ai/deepseek-harness on GitHub</a></li>
+          <li><a href="https://deepseek-harness.github.io/deepseek-harness/develop/basic/?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=deepseek-harness">Official plugin development documentation</a></li>
+          <li><a href="https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/subsystems/skills.md?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=deepseek-harness">Skills subsystem reference</a></li>
+          <li><a href="https://github.com/deepseek-ai/deepseek-harness/blob/master/.agents/skills/dsh-code-review/SKILL.md?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=deepseek-harness">Example skill: dsh-code-review</a></li>
+          <li><a href="https://github.com/Dominic789654/awesome-deepseek-harness?utm_source=skillscout&amp;utm_medium=guide&amp;utm_campaign=deepseek-harness">awesome-deepseek-harness ecosystem list</a></li>
+        </ul>
+      </article>
+    </main>
+  </body>
+</html>
