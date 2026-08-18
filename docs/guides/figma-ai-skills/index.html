@@ -396,7 +396,7 @@
           You can publish and use ready-made AI skills in the Figma Community. They are markdown
           instructions for the Figma agent that run as separate, self-contained workflows.
         </p>
-        <p class="meta">Updated August 18, 2026 · 7 min read</p>
+        <p class="meta">Updated August 18, 2026 · 8 min read</p>
 
         <p>
           Skills are reusable instructions for the Figma agent. Figma describes them as markdown
@@ -552,6 +552,47 @@
           in <a href="/guides/are-ai-agent-skills-here-to-stay/">Are AI agent skills here to stay?</a>
         </p>
 
+        <h2>How to publish your own skill</h2>
+        <p>
+          Publishing runs entirely inside Figma — no repo, no plugin submission. The
+          <a href="https://help.figma.com/hc/en-us/articles/40283639496599-Custom-skills-for-the-Figma-agent-and-Figma-Make?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills">help center article</a> has the full reference; the short version is
+          three steps.
+        </p>
+        <p><strong>1. Create the skill.</strong> In chat, open the prompt box and pick
+          <em>Skills → Add skill</em>. From there you can:</p>
+        <ul>
+          <li>Ask the agent to write one — describe the workflow and let it draft the instructions.</li>
+          <li>Upload an existing <code>.md</code> file that follows the Agent Skills spec.</li>
+          <li>Choose <em>Start from scratch</em> and enter a name, description, and instructions by hand, then click <em>Add</em>.</li>
+        </ul>
+        <p>
+          The name becomes the slash command, so keep it short and verb-like. If you already keep a
+          skill library for Claude or Codex, the same markdown file works here — see
+          <a href="/guides/how-to-organize-agent-skills/">how to organize agent skills</a> for keeping
+          one source of truth across agents.
+        </p>
+        <p><strong>2. Open the publish flow.</strong> Go to
+          <em>Add context → Skills → Manage skills</em>, select your skill, then
+          <em>More actions → Publish</em>.</p>
+        <p><strong>3. Pick where it goes.</strong> Under <em>Publish to</em>:</p>
+        <ul>
+          <li><strong>Private</strong> — publish to a team or organization. The file you publish from has to live in that team.</li>
+          <li><strong>Community</strong> — publish publicly. Figma asks for a thumbnail and up to nine images (1920 × 1080 recommended), a name, tagline, description, and category, plus a support email or website. Additional contributors need their own Community account.</li>
+        </ul>
+        <p>
+          Hit <em>Publish</em> and it appears in the
+          <a href="https://www.figma.com/community/ai-skills?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills">AI skills library</a>. To ship an
+          update later, go back to <em>Manage skills → More actions → Manage skill → Publish changes</em>.
+          <em>Unpublish skill</em> in the same menu pulls it from the Community but keeps it working for
+          you.
+        </p>
+        <p>
+          One thing worth doing after you publish:
+          <a href="https://forms.gle/iGfD5tDgTfCE4QX66?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills" target="_blank" rel="noopener noreferrer" data-ga-event="list_skills_click" data-ga-label="guide-figma-ai-skills-publish">list the skill on Skillscout</a>.
+          It is the kind of thing people should find while they are actually in Figma — not three weeks
+          later.
+        </p>
+
         <h2>Finding skills beyond Figma</h2>
         <p>
           The same format is spreading fast, and skills now live scattered across half a dozen
@@ -559,7 +600,7 @@
           <a href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills" data-telemetry-event="Extension.downloadClicked" data-telemetry-placement="guide-figma-ai-skills-inline">Skillscout Chrome extension</a>
           handles the discovery half. It reads the site you are currently on, derives a keyword from
           the hostname and page context, and surfaces matching agent skills ranked by relevance,
-          popularity, and trust signals — no tab-switching, no searching four catalogs by hand.
+          popularity, and trust signals — no tab-switching, no searching every catalog by hand.
         </p>
         <p>
           It looks for the vendor's own official skills first, then for community skills across
@@ -572,11 +613,6 @@
           from <code>figma/mcp-server-guide</code> and <code>figma/skills</code>, with install counts
           and a one-line install command each.
         </p>
-        <p>
-          If you publish a Figma skill, it is the kind of thing worth listing, so people find it while
-          they are actually in Figma — not three weeks later.
-        </p>
-
       </article>
     </main>
   </body>
