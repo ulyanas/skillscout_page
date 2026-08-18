@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OpenSEO Agent Skills: All Nine Explained | Skillscout</title>
+    <meta name="description" content="OpenSEO published nine agent skills for SEO workflows in Claude Code and Codex. Setup, the MCP data behind them, and what each skill does." />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://skillscout.sh/guides/openseo-agent-skills/" />
+    <script src="/assets/telemetry.js"></script>
+    <link rel="stylesheet" href="/assets/site-shell.css?v=20260724-official-sparkle" />
+    <script src="/assets/site-shell.js?v=20260724-1"></script>
+    <script src="/assets/posthog-init.js"></script>
+    <script src="/assets/promo-slot.js?v=20260819-promo-slot" defer></script>
+    <meta property="og:title" content="OpenSEO Agent Skills: All Nine Explained | Skillscout" />
+    <meta property="og:description" content="OpenSEO published nine agent skills for SEO workflows in Claude Code and Codex. Setup, the MCP data behind them, and what each skill does." />
+    <meta property="og:site_name" content="Skillscout" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://skillscout.sh/guides/openseo-agent-skills/" />
+    <meta property="og:image" content="https://skillscout.sh/assets/guides/openseo-agent-skills-hero.jpg" />
+    <meta property="og:image:alt" content="Silver metallic fir trees in the OpenSEO logo style receding into misty dark forest with light rays overhead." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OpenSEO Agent Skills: All Nine Explained | Skillscout" />
+    <meta name="twitter:description" content="OpenSEO published nine agent skills for SEO workflows in Claude Code and Codex. Setup, the MCP data behind them, and what each skill does." />
+    <meta name="twitter:image" content="https://skillscout.sh/assets/guides/openseo-agent-skills-hero.jpg" />
+    <meta name="twitter:image:alt" content="Silver metallic fir trees in the OpenSEO logo style receding into misty dark forest with light rays overhead." />
+    <link rel="icon" href="../../assets/skillscout-mark-48.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://skillscout.sh/guides/openseo-agent-skills/#article",
+      "headline": "OpenSEO published nine agent skills for SEO workflows",
+      "description": "OpenSEO published nine agent skills for SEO workflows in Claude Code and Codex. Setup, the MCP data behind them, and what each skill does.",
+      "author": {
+        "@type": "Organization",
+        "name": "Skillscout"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Skillscout",
+        "url": "https://skillscout.sh/"
+      },
+      "image": "https://skillscout.sh/assets/guides/openseo-agent-skills-hero.jpg",
+      "datePublished": "2026-08-19",
+      "dateModified": "2026-08-19",
+      "mainEntityOfPage": "https://skillscout.sh/guides/openseo-agent-skills/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://skillscout.sh/guides/openseo-agent-skills/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://skillscout.sh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://skillscout.sh/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "OpenSEO Agent Skills",
+          "item": "https://skillscout.sh/guides/openseo-agent-skills/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+    <style>
+      :root {
+        --bg: #f6f6f3;
+        --panel: #ffffff;
+        --border: #e4e4df;
+        --text: #111111;
+        --text-muted: #5f5f5f;
+        --shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.04);
+        --max: 760px;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      a { color: #0f5bd8; }
+      .container {
+        width: min(calc(100% - 40px), var(--max));
+        margin: 0 auto;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 76px;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 800;
+        font-size: 18px;
+      }
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        display: grid;
+        place-items: center;
+        box-shadow: var(--shadow-sm);
+      }
+      .brand-mark img {
+        width: 18px;
+        height: 18px;
+      }
+      .nav-links {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .nav-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .nav-links a:hover { color: var(--text); }
+      article {
+        padding: 28px 0 72px;
+      }
+      .eyebrow {
+        margin: 0 0 14px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(34px, 6vw, 56px);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+      }
+      .lead {
+        margin: 0 0 28px;
+        font-size: 19px;
+        line-height: 1.58;
+        color: var(--text-muted);
+      }
+      .meta {
+        margin: 0 0 32px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+      .hero-figure {
+        margin: 0 0 32px;
+      }
+      .hero-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-sm);
+        background: var(--panel);
+      }
+      .hero-figure figcaption {
+        margin-top: 10px;
+        font-size: 13px;
+        line-height: 1.5;
+        color: var(--text-muted);
+      }
+      h2 {
+        margin: 40px 0 14px;
+        font-size: 24px;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+      }
+      p, li {
+        font-size: 16px;
+        line-height: 1.68;
+      }
+      article a:not(.github-embed) {
+        color: var(--text);
+        font-weight: 500;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.14em;
+      }
+      article a:not(.github-embed):hover {
+        color: var(--text);
+      }
+      p {
+        margin: 0 0 16px;
+      }
+      ul, ol {
+        margin: 0 0 20px;
+        padding-left: 22px;
+      }
+      code {
+        padding: 0.12em 0.38em;
+        border-radius: 8px;
+        background: #eeefec;
+        font-size: 0.9em;
+      }
+      pre {
+        overflow: auto;
+        padding: 16px 18px;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+        margin: 18px 0 24px;
+      }
+      pre code {
+        padding: 0;
+        background: transparent;
+      }
+      .github-embed-grid {
+        display: grid;
+        gap: 14px;
+        margin: 22px 0 26px;
+      }
+      .github-embed {
+        display: block;
+        padding: 16px 18px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+        color: inherit;
+        text-decoration: none;
+      }
+      .github-embed:hover {
+        border-color: #cfd2cc;
+      }
+      .github-embed-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 8px;
+      }
+      .github-embed-repo {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text);
+      }
+      .github-embed-repo-row {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .github-embed-icon {
+        width: 16px;
+        height: 16px;
+        color: var(--text);
+        flex: 0 0 auto;
+      }
+      .github-embed-badge {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      .github-embed p {
+        margin: 0 0 10px;
+      }
+      .github-embed-meta {
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+      @media (max-width: 720px) {
+        .nav {
+          min-height: auto;
+          padding: 16px 0;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+    <style>
+      .skill-entry {
+        padding: 18px 0 6px;
+        border-top: 1px solid var(--border);
+      }
+      .skill-entry:first-of-type {
+        border-top: none;
+      }
+      .skill-entry h3 {
+        margin: 0 0 6px;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+      }
+      .skill-byline {
+        margin: 0 0 10px;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      .skill-cmd {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 0.16em 0.5em;
+        border-radius: 8px;
+        background: #eeefec;
+        font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+        font-size: 13px;
+      }
+      .state-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0 0 18px;
+        padding: 0;
+        list-style: none;
+      }
+      .state-chips li {
+        font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+        font-size: 13px;
+        color: var(--text-muted);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 2px 12px;
+      }
+    </style>
+  <body>
+    <div class="site-nav-wrap" id="articleNavWrap">
+      <div class="site-nav-container site-nav">
+        <a class="site-brand" href="/">
+          <span class="site-brand-mark"><img src="/assets/skillscout-mark-48.png" alt="Skillscout logo" /></span>
+          <span class="site-brand-name">Skillscout</span>
+        </a>
+        <nav class="site-nav-links" aria-label="Primary">
+          <a href="/#snapshot">Do I need it</a>
+          <a href="/#use-cases">Use cases</a>
+          <a href="/guides/">Guides</a>
+          <a href="/#testimonials">Reviews</a>
+          <a href="/#faq">FAQ</a>
+          <a class="official-nav-link" href="/official/"><span>Official skills</span><svg class="official-nav-sparkle" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l1.1 3.8 3.4 1.2-3.4 1.2L8 11.5 6.9 7.7 3.5 6.5l3.4-1.2L8 1.5Z" fill="currentColor"/><path d="M12.5 9.5l.45 1.55 1.55.45-1.55.45-.45 1.55-.45-1.55-1.55-.45 1.55-.45.45-1.55Z" fill="currentColor"/></svg></a>
+        </nav>
+        <div class="site-nav-cta">
+          <a class="site-btn" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=guide_article" target="_blank" rel="noopener noreferrer" data-ga-event="get_extension_click" data-ga-label="guide-article-nav">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Add to Chrome
+          </a>
+          <a class="site-btn site-btn-list" href="https://forms.gle/iGfD5tDgTfCE4QX66" target="_blank" rel="noopener noreferrer" data-ga-event="list_skills_click" data-ga-label="guide-article-nav">
+            <svg class="btn-sparkle" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l1.1 3.8 3.4 1.2-3.4 1.2L8 11.5 6.9 7.7 3.5 6.5l3.4-1.2L8 1.5Z" fill="currentColor"/><path d="M12.5 9.5l.45 1.55 1.55.45-1.55.45-.45 1.55-.45-1.55-1.55-.45 1.55-.45.45-1.55Z" fill="currentColor"/></svg><span class="site-btn-list-long">Feature your skills</span>
+            <span class="site-btn-list-short">Feature</span>
+          </a>
+        </div>
+        <button class="site-burger" id="articleBurgerBtn" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="site-mobile-menu" id="articleMobileMenu" aria-label="Mobile">
+        <a href="/#snapshot" class="site-mobile-link">Do I need it</a>
+        <a href="/#use-cases" class="site-mobile-link">Use cases</a>
+        <a href="/guides/" class="site-mobile-link">Guides</a>
+        <a href="/#testimonials" class="site-mobile-link">Reviews</a>
+        <a href="/#faq" class="site-mobile-link">FAQ</a>
+        <a href="/official/" class="site-mobile-link official-nav-link"><span>Official skills</span><svg class="official-nav-sparkle" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l1.1 3.8 3.4 1.2-3.4 1.2L8 11.5 6.9 7.7 3.5 6.5l3.4-1.2L8 1.5Z" fill="currentColor"/><path d="M12.5 9.5l.45 1.55 1.55.45-1.55.45-.45 1.55-.45-1.55-1.55-.45 1.55-.45.45-1.55Z" fill="currentColor"/></svg></a>
+        <a href="https://forms.gle/iGfD5tDgTfCE4QX66" class="site-mobile-link" target="_blank" rel="noopener noreferrer" data-ga-event="list_skills_click" data-ga-label="guide-article-mobile-nav">Feature your skills</a>
+      </nav>
+    </div>
+
+    <main class="container">
+      <article>
+        <p class="eyebrow">Guides</p>
+        <h1>OpenSEO published nine agent skills for SEO workflows</h1>
+        <p class="lead">
+          OpenSEO released nine agent skills that run repeatable SEO workflows in Claude Code,
+          Codex, or any agent that reads the SKILL.md format, backed by its MCP server for live
+          keyword, SERP, backlink, local, and Search Console data.
+        </p>
+        <p class="meta">Updated August 19, 2026 · 9 min read</p>
+        <figure class="hero-figure">
+          <img src="../../assets/guides/openseo-agent-skills-hero.jpg" alt="Silver metallic fir trees in the OpenSEO logo style receding into misty dark forest with light rays overhead." />
+        </figure>
+
+        <p>
+          The two parts do different jobs. MCP connects your agent to OpenSEO data. Skills tell your
+          agent which workflow to run with it. You type a slash command, the agent does the research,
+          and you get a recommendation, plan, or shortlist. Strategy stays with you. The full
+          reference lives at <a href="https://openseo.so/docs/skills?utm_source=skillscout&utm_medium=guide&utm_campaign=openseo-agent-skills">openseo.so/docs/skills</a>.
+        </p>
+
+        <h2>Setup</h2>
+        <p>
+          Connect MCP first. The hosted server URL is <code>https://app.openseo.so/mcp</code>. In
+          Claude Code:
+        </p>
+        <pre><code>claude mcp add --transport http --scope user openseo https://app.openseo.so/mcp</code></pre>
+        <p>
+          The first connection sends you through OpenSEO login. Claude Desktop, Cursor, Codex CLI,
+          and Codex Desktop each have their own path in the
+          <a href="https://openseo.so/docs/mcp?utm_source=skillscout&utm_medium=guide&utm_campaign=openseo-agent-skills">MCP setup docs</a>. For headless environments and CI, create an API key
+          under <em>Settings → API keys</em> and pass it as an
+          <code>Authorization: Bearer oseo_YOUR_KEY</code> header instead of using OAuth.
+        </p>
+        <p>
+          If Codex reports a missing issuer during authorization, upgrade to Codex CLI 0.147.0 or
+          later — versions 0.143 through 0.146 drop the issuer from the OAuth callback.
+        </p>
+        <p>Then install the skills. They are separate files from MCP:</p>
+        <pre><code>npx skills add every-app/open-seo</code></pre>
+        <p>
+          That shows the available skills and agents. To install everything, add
+          <code>--skill '*'</code>, and pin it to one agent with <code>--agent claude-code</code> or
+          <code>--agent codex</code>. You can also clone
+          <a href="https://github.com/every-app/open-seo">every-app/open-seo</a> and copy
+          <code>.agents/skills/*</code> into <code>~/.claude/skills/</code> or
+          <code>~/.codex/skills/</code>.
+        </p>
+
+        <h2>What MCP gives the agent</h2>
+        <p>
+          The skills depend on these tools: keyword research with volume, difficulty, and CPC; live
+          Google organic SERPs; keyword, page, rank, and traffic rows for a domain or page; SERP
+          competitor comparison across a keyword set; local business search near a coordinate; Maps
+          and Local Finder SERPs; Google Business Profile audits, reviews, posts, Q&amp;A, and
+          category slugs; Maps rank grids; saved keyword read and write; rank tracker configs and
+          positions; domain organic overview; backlink and referring-domain overview; and Google
+          Search Console performance plus URL inspection, up to 10 URLs per call.
+        </p>
+        <p>
+          Search Console data is first-party. No third-party tool can estimate it, and having it in
+          the same context as SERP and backlink data is what lets these skills reason about your own
+          site rather than a model of it.
+        </p>
+
+        <h2>The nine skills</h2>
+
+        <div class="skill-entry">
+          <p class="skill-byline">Start here</p>
+          <h3>SEO Project Setup</h3>
+          <p><span class="skill-cmd">/seo-project-setup</span></p>
+          <p>
+            Sets up a local workspace for one website or SEO project. The agent saves the domain,
+            goals, audience, positioning, competitors, and target markets, organizes exports and
+            notes, and records how you want it to approach SEO here. You get a folder structure and
+            a short project summary: what site is in scope, which goals matter, what files are
+            available, and what to run next. Run it from the folder where SEO work should live, and
+            add Google Search Console exports if you have them. Later sessions reuse that context.
+          </p>
+        </div>
+
+        <div class="skill-entry">
+          <p class="skill-byline">Start here</p>
+          <h3>SEO Coach</h3>
+          <p><span class="skill-cmd">/seo-coach</span></p>
+          <p>
+            Recommends the next workflow. The agent looks at your goal, experience level, available
+            data, and project context, explains the options in plain language, and keeps the next
+            step small enough to act on. Useful for questions like where to start, whether to
+            research keywords or competitors first, and how to use AI for SEO without getting
+            generic output. If you already know which workflow you want, run that skill directly.
+          </p>
+        </div>
+
+        <div class="skill-entry">
+          <p class="skill-byline">Audit</p>
+          <h3>SEO Audit</h3>
+          <p><span class="skill-cmd">/seo-audit</span></p>
+          <p>
+            Audits a site and writes a one-page HTML report. The agent runs an OpenSEO site audit,
+            pulls backlink and traffic-estimate data, and verifies every finding against the live
+            page HTML before reporting it. The report is built around one action to take this week,
+            with the exact steps or message included, then five to ten small fixes with evidence, a
+            starting focus area of three to five specific keywords, a list of what already works, and
+            a note on how the review was done. Technical terms are explained the first time they
+            appear, so the report works for a client or founder who has never done SEO.
+          </p>
+          <p>
+            Broken sites are handled explicitly. If the domain is down or half-crawled, the agent
+            investigates the cause first — an expired certificate, a dead domain with a live
+            successor, a page-level block — and the recommendation changes to match. The site audit
+            is included on every plan, up to 50 pages on the free plan; backlink, domain, and keyword
+            lookups spend credits, and the skill keeps that spend modest.
+          </p>
+        </div>
+
+        <div class="skill-entry">
+          <p class="skill-byline">Research</p>
+          <h3>Keyword Research</h3>
+          <p><span class="skill-cmd">/keyword-research</span></p>
+          <p>
+            Finds keywords worth targeting. The agent researches ideas from seed topics, products,
+            pages, competitors, or audience problems, evaluates volume, difficulty, CPC, intent, and
+            SERP competitiveness, and filters out irrelevant, duplicate, branded-only, and
+            off-strategy terms. You get a prioritized shortlist, a longer opportunity table, SERP
+            caveats, and a recommended next action, with reasons attached to each keyword. Give it
+            one to five focused seed topics and name the country or language when it matters. It
+            asks before saving keywords back to OpenSEO.
+          </p>
+        </div>
+
+        <div class="skill-entry">
+          <p class="skill-byline">Research</p>
+          <h3>Keyword Clustering</h3>
+          <p><span class="skill-cmd">/keyword-clustering</span></p>
+          <p>
+            Turns a keyword list into a page plan. The agent groups keywords by intent, SERP
+            similarity, and page type, separates terms that look similar but need different pages,
+            maps clusters to existing URLs where they fit, and proposes new pages where nothing
+            matches the intent. You get clusters with primary and secondary keywords, intent, page
+            targets, priorities, and notes on cannibalization or consolidation. Input can be a
+            keyword list, a saved keyword tag, a Search Console export, a seed topic, or a domain.
+            Share your existing pages if you want URL mapping. Tag changes stay user-approved.
+          </p>
+        </div>
+
+        <div class="skill-entry">
+          <p class="skill-byline">Research</p>
+          <h3>Competitive Landscape</h3>
+          <p><span class="skill-cmd">/competitive-landscape</span></p>
+          <p>
+            Maps a market before you choose competitors or pages. The agent builds a representative
+            query set, inspects SERPs for recurring domains, separates direct product competitors
+            from publishers, directories, communities, marketplaces, and resource sites, and compares
+            organic footprints and keyword coverage across the strongest domains. You get market
+            leaders, the most winnable opportunity area, the biggest ranking barrier, the query set
+            used, domain types, winning themes, and recommended next workflows. Ask it to label
+            domain types clearly — in many markets the pages winning search traffic are not your
+            business competitors.
+          </p>
+        </div>
+
+        <div class="skill-entry">
+          <p class="skill-byline">Research</p>
+          <h3>Competitor Analysis</h3>
+          <p><span class="skill-cmd">/competitor-analysis</span></p>
+          <p>
+            Analyzes one competitor in depth. The agent reviews ranking keyword themes, page
+            opportunities, backlink and authority signals, and head-to-head SERPs, keeping evidence
+            separate from inference. You get a competitor snapshot, the biggest lesson, the best
+            opportunity to beat them, content patterns, backlink notes, and priority actions. It
+            recommends stronger angles rather than copies of competitor pages. Use it when a
+            competitor keeps appearing in search results or sales conversations, or before building
+            comparison pages.
+          </p>
+        </div>
+
+        <div class="skill-entry">
+          <p class="skill-byline">Research</p>
+          <h3>Local SEO</h3>
+          <p><span class="skill-cmd">/local-seo</span></p>
+          <p>
+            Works out why a business does or does not show up in Google Maps and the local pack. The
+            agent audits the Google Business Profile — categories, rating, hours, photos, claim
+            status — compares it to the competitors ranking nearby, analyzes the review gap by
+            volume, recency, rating, and owner replies, and runs a rank grid showing where Maps
+            visibility drops off around the location. You get a profile snapshot, a visibility map, a
+            signal-by-signal comparison, and a prioritized fix list starting with this week's. Give
+            it the <code>cid</code> or <code>placeId</code> rather than a business name, and the
+            correct storefront coordinate — a grid centered on the wrong place is worse than no grid.
+            Every grid point is a paid search, so ask for the cost before running anything larger
+            than 3×3.
+          </p>
+        </div>
+
+        <div class="skill-entry">
+          <p class="skill-byline">Promotion</p>
+          <h3>Link Prospecting</h3>
+          <p><span class="skill-cmd">/link-prospecting</span></p>
+          <p>
+            Finds outreach prospects for a page or asset. The agent builds prospecting queries from
+            your asset, topic, audience, or competitors, searches resource pages, listicles,
+            comparisons, directories, publishers, and topical articles, and uses competitor backlink
+            patterns to see where attention comes from. Prospects are qualified by topical relevance
+            and outreach angle. You get the best angle, the highest-priority prospect type, a
+            prospect table, contact-discovery notes, and reusable outreach drafts. It does not invent
+            contacts, and it requires source URLs for any contact details. Use it when you already
+            have something worth linking to: a guide, product page, study, tool, template, or
+            dataset.
+          </p>
+        </div>
+
+        <h2>Where to find these skills</h2>
+        <p>
+          Skillscout is a catalog and
+          <a href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=skillscout&utm_medium=guide&utm_campaign=openseo-agent-skills" data-telemetry-event="Extension.downloadClicked" data-telemetry-placement="guide-openseo-agent-skills-inline">Chrome extension</a>
+          for finding official agent skills. The catalog collects vendor-published skills in one
+          place, and the extension surfaces the ones that match the site you are currently on. The
+          nine OpenSEO skills are listed on
+          <a href="/official/every-app/">the OpenSEO vendor page</a>, each with its install command.
+        </p>
+        <p>
+          Official documentation: <a href="https://openseo.so/docs/skills?utm_source=skillscout&utm_medium=guide&utm_campaign=openseo-agent-skills">openseo.so/docs/skills</a>. Source SKILL.md
+          files: <a href="https://github.com/every-app/open-seo/tree/main/.agents/skills">every-app/open-seo</a>.
+          Skillscout listing: <a href="/official/every-app/">skillscout.sh/official/every-app</a>.
+        </p>
+      </article>
+    </main>
+  </body>
+</html>

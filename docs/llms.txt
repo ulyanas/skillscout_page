@@ -6,6 +6,7 @@
 
 - [Homepage](https://skillscout.sh/): Product overview, core value proposition, and the main call to install the Chrome extension.
 - [Guides](https://skillscout.sh/guides/): Collection of articles about AI and agentic skills.
+- [OpenSEO Agent Skills](https://skillscout.sh/guides/openseo-agent-skills/): Explains OpenSEO's nine agent skills for SEO workflows, the MCP setup behind them, and what each skill returns.
 - [Figma AI Skills](https://skillscout.sh/guides/figma-ai-skills/): Explains Figma's Community catalog of AI skills for the Figma agent, five skills worth trying, and Figma's 35 official agent skills.
 - [Obsidian Skills Tutorial](https://skillscout.sh/guides/obsidian-skills-tutorial/): Explains how Obsidian can work as project memory for AI agents and how Obsidian Skills keep vault edits consistent.
 - [Agentic Resource Discovery](https://skillscout.sh/guides/agentic-resource-discovery/): Explains the ARD standard and shows how to find Skills, MCP servers, tools, and agents with GitHub Agent Finder, Hugging Face Discover, and gh skill.
