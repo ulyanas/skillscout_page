@@ -30,6 +30,7 @@ const VENDOR_BIOS = {
   anthropics: "Anthropic builds Claude and developer tools for working with AI agents, models, and agent skills.",
   cloudflare: "Cloudflare provides internet infrastructure for deploying, securing, and scaling web applications.",
   expo: "Expo provides tools and services for building React Native apps across iOS, Android, and web.",
+  "every-app": "OpenSEO is an open-source SEO toolkit with an MCP server and agent skills for audits, keyword research, competitor analysis, and local SEO.",
   firebase: "Firebase is Google's app development platform for building, shipping, and operating web and mobile apps.",
   figma: "Figma is a collaborative design platform for interface design, prototyping, and product workflows.",
   firecrawl: "Firecrawl provides web crawling and extraction tools for turning websites into structured data.",

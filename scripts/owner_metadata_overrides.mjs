@@ -11,6 +11,7 @@ export const OWNER_METADATA_OVERRIDES = new Map([
   ["convex-dev", { displayName: "Convex", website: "https://www.convex.dev" }],
   ["elevenlabs", { displayName: "ElevenLabs", website: "https://elevenlabs.io" }],
   ["expo", { displayName: "Expo", website: "https://expo.dev" }],
+  ["every-app", { displayName: "OpenSEO", website: "https://openseo.so", githubUrl: "https://github.com/every-app/open-seo" }],
   ["google-labs-code", { displayName: "Google Labs", website: "https://labs.google" }],
   ["hashicorp", { displayName: "HashiCorp", website: "https://www.hashicorp.com" }],
   ["mcp-use", { displayName: "mcp-use", website: "https://mcp-use.com" }],

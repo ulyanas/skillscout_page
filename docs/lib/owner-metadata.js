@@ -44,6 +44,7 @@ export const OWNER_METADATA = {
   encoredev: ["Encore", "https://encore.dev"],
   exploreomni: ["Omni", "https://exploreomni.com"],
   expo: ["Expo", "https://expo.dev"],
+  "every-app": ["OpenSEO", "https://openseo.so", "https://github.com/every-app/open-seo"],
   facebook: ["Meta", "https://about.meta.com"],
   "factory-ai": ["Factory", "https://www.factory.ai"],
   figma: ["Figma", "https://www.figma.com"],
