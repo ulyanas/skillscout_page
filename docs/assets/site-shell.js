@@ -3,21 +3,64 @@
 
   const DISMISS_KEY = "skillscout.mdviewerBannerDismissed";
   const DISMISSED_CLASS = "mdviewer-banner-dismissed";
+  // Pageviews a returning visitor gets banner-free before the promo comes back.
+  const PAGEVIEWS_BEFORE_RESET = 10;
 
-  function isBannerDismissed() {
+  function readDismissal() {
+    let raw;
     try {
-      return localStorage.getItem(DISMISS_KEY) === "1";
+      raw = localStorage.getItem(DISMISS_KEY);
     } catch {
-      return false;
+      return null;
+    }
+    if (!raw) return null;
+    // Legacy value: dismissal was permanent, so start its pageview count now.
+    if (raw === "1") return { views: 0 };
+    try {
+      const parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === "object") {
+        return { views: Number(parsed.views) || 0 };
+      }
+    } catch {
+      // Unreadable value behaves like no dismissal at all.
+    }
+    return null;
+  }
+
+  function writeDismissal(views) {
+    try {
+      localStorage.setItem(DISMISS_KEY, JSON.stringify({ views }));
+    } catch {
+      // The banner still closes for this page when storage is unavailable.
+    }
+  }
+
+  function clearDismissal() {
+    try {
+      localStorage.removeItem(DISMISS_KEY);
+    } catch {
+      // Nothing to clean up when storage is unavailable.
     }
   }
 
   function saveBannerDismissal() {
-    try {
-      localStorage.setItem(DISMISS_KEY, "1");
-    } catch {
-      // The banner still closes for this page when storage is unavailable.
+    writeDismissal(0);
+  }
+
+  // Counts this pageview against the dismissal and reports whether the banner
+  // stays hidden. Runs once per page load, before the banner is rendered.
+  function isBannerDismissed() {
+    const dismissal = readDismissal();
+    if (!dismissal) return false;
+
+    const views = dismissal.views + 1;
+    if (views >= PAGEVIEWS_BEFORE_RESET) {
+      clearDismissal();
+      return false;
     }
+
+    writeDismissal(views);
+    return true;
   }
 
   if (isBannerDismissed()) {
