@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Figma AI Skills: the Community Catalog Explained | Skillscout</title>
+    <meta name="description" content="Figma now has a Community catalog of AI skills for the Figma agent. What a skill is, five worth trying, and the 35 official Figma agent skills." />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://skillscout.sh/guides/figma-ai-skills/" />
+    <script src="/assets/telemetry.js"></script>
+    <link rel="stylesheet" href="/assets/site-shell.css?v=20260724-official-sparkle" />
+    <script src="/assets/site-shell.js?v=20260724-1"></script>
+    <script src="/assets/posthog-init.js"></script>
+    <meta property="og:title" content="Figma AI Skills: the Community Catalog Explained | Skillscout" />
+    <meta property="og:description" content="Figma now has a Community catalog of AI skills for the Figma agent. What a skill is, five worth trying, and the 35 official Figma agent skills." />
+    <meta property="og:site_name" content="Skillscout" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://skillscout.sh/guides/figma-ai-skills/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Figma AI Skills: the Community Catalog Explained | Skillscout" />
+    <meta name="twitter:description" content="Figma now has a Community catalog of AI skills for the Figma agent. What a skill is, five worth trying, and the 35 official Figma agent skills." />
+    <link rel="icon" href="../../assets/skillscout-mark-48.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://skillscout.sh/guides/figma-ai-skills/#article",
+      "headline": "Figma AI Skills: the Community catalog explained",
+      "description": "Figma now has a Community catalog of AI skills for the Figma agent. What a skill is, five worth trying, and the 35 official Figma agent skills.",
+      "author": {
+        "@type": "Organization",
+        "name": "Skillscout"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Skillscout",
+        "url": "https://skillscout.sh/"
+      },
+      "datePublished": "2026-08-18",
+      "dateModified": "2026-08-18",
+      "mainEntityOfPage": "https://skillscout.sh/guides/figma-ai-skills/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://skillscout.sh/guides/figma-ai-skills/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://skillscout.sh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://skillscout.sh/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Figma AI Skills",
+          "item": "https://skillscout.sh/guides/figma-ai-skills/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+    <style>
+      :root {
+        --bg: #f6f6f3;
+        --panel: #ffffff;
+        --border: #e4e4df;
+        --text: #111111;
+        --text-muted: #5f5f5f;
+        --shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.04);
+        --max: 760px;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      a { color: #0f5bd8; }
+      .container {
+        width: min(calc(100% - 40px), var(--max));
+        margin: 0 auto;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 76px;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 800;
+        font-size: 18px;
+      }
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        display: grid;
+        place-items: center;
+        box-shadow: var(--shadow-sm);
+      }
+      .brand-mark img {
+        width: 18px;
+        height: 18px;
+      }
+      .nav-links {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .nav-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .nav-links a:hover { color: var(--text); }
+      article {
+        padding: 28px 0 72px;
+      }
+      .eyebrow {
+        margin: 0 0 14px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(34px, 6vw, 56px);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+      }
+      .lead {
+        margin: 0 0 28px;
+        font-size: 19px;
+        line-height: 1.58;
+        color: var(--text-muted);
+      }
+      .meta {
+        margin: 0 0 32px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+      .hero-figure {
+        margin: 0 0 32px;
+      }
+      .hero-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-sm);
+        background: var(--panel);
+      }
+      .hero-figure figcaption {
+        margin-top: 10px;
+        font-size: 13px;
+        line-height: 1.5;
+        color: var(--text-muted);
+      }
+      h2 {
+        margin: 40px 0 14px;
+        font-size: 24px;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+      }
+      p, li {
+        font-size: 16px;
+        line-height: 1.68;
+      }
+      article a:not(.github-embed) {
+        color: var(--text);
+        font-weight: 500;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.14em;
+      }
+      article a:not(.github-embed):hover {
+        color: var(--text);
+      }
+      p {
+        margin: 0 0 16px;
+      }
+      ul, ol {
+        margin: 0 0 20px;
+        padding-left: 22px;
+      }
+      code {
+        padding: 0.12em 0.38em;
+        border-radius: 8px;
+        background: #eeefec;
+        font-size: 0.9em;
+      }
+      pre {
+        overflow: auto;
+        padding: 16px 18px;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+        margin: 18px 0 24px;
+      }
+      pre code {
+        padding: 0;
+        background: transparent;
+      }
+      .github-embed-grid {
+        display: grid;
+        gap: 14px;
+        margin: 22px 0 26px;
+      }
+      .github-embed {
+        display: block;
+        padding: 16px 18px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+        color: inherit;
+        text-decoration: none;
+      }
+      .github-embed:hover {
+        border-color: #cfd2cc;
+      }
+      .github-embed-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 8px;
+      }
+      .github-embed-repo {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text);
+      }
+      .github-embed-repo-row {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .github-embed-icon {
+        width: 16px;
+        height: 16px;
+        color: var(--text);
+        flex: 0 0 auto;
+      }
+      .github-embed-badge {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      .github-embed p {
+        margin: 0 0 10px;
+      }
+      .github-embed-meta {
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+      @media (max-width: 720px) {
+        .nav {
+          min-height: auto;
+          padding: 16px 0;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+    <style>
+      .skill-entry {
+        padding: 18px 0 6px;
+        border-top: 1px solid var(--border);
+      }
+      .skill-entry:first-of-type {
+        border-top: none;
+      }
+      .skill-entry h3 {
+        margin: 0 0 6px;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+      }
+      .skill-byline {
+        margin: 0 0 10px;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      .skill-cmd {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 0.16em 0.5em;
+        border-radius: 8px;
+        background: #eeefec;
+        font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+        font-size: 13px;
+      }
+      .state-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0 0 18px;
+        padding: 0;
+        list-style: none;
+      }
+      .state-chips li {
+        font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+        font-size: 13px;
+        color: var(--text-muted);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 2px 12px;
+      }
+    </style>
+  <body>
+    <div class="site-nav-wrap" id="articleNavWrap">
+      <div class="site-nav-container site-nav">
+        <a class="site-brand" href="/">
+          <span class="site-brand-mark"><img src="/assets/skillscout-mark-48.png" alt="Skillscout logo" /></span>
+          <span class="site-brand-name">Skillscout</span>
+        </a>
+        <nav class="site-nav-links" aria-label="Primary">
+          <a href="/#snapshot">Do I need it</a>
+          <a href="/#use-cases">Use cases</a>
+          <a href="/guides/">Guides</a>
+          <a href="/#testimonials">Reviews</a>
+          <a href="/#faq">FAQ</a>
+          <a class="official-nav-link" href="/official/"><span>Official skills</span><svg class="official-nav-sparkle" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l1.1 3.8 3.4 1.2-3.4 1.2L8 11.5 6.9 7.7 3.5 6.5l3.4-1.2L8 1.5Z" fill="currentColor"/><path d="M12.5 9.5l.45 1.55 1.55.45-1.55.45-.45 1.55-.45-1.55-1.55-.45 1.55-.45.45-1.55Z" fill="currentColor"/></svg></a>
+        </nav>
+        <div class="site-nav-cta">
+          <a class="site-btn" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=guide_article" target="_blank" rel="noopener noreferrer" data-ga-event="get_extension_click" data-ga-label="guide-article-nav">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Add to Chrome
+          </a>
+          <a class="site-btn site-btn-list" href="https://forms.gle/iGfD5tDgTfCE4QX66" target="_blank" rel="noopener noreferrer" data-ga-event="list_skills_click" data-ga-label="guide-article-nav">
+            <span class="site-btn-list-long">List your skills</span>
+            <span class="site-btn-list-short">List skill</span>
+          </a>
+        </div>
+        <button class="site-burger" id="articleBurgerBtn" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="site-mobile-menu" id="articleMobileMenu" aria-label="Mobile">
+        <a href="/#snapshot" class="site-mobile-link">Do I need it</a>
+        <a href="/#use-cases" class="site-mobile-link">Use cases</a>
+        <a href="/guides/" class="site-mobile-link">Guides</a>
+        <a href="/#testimonials" class="site-mobile-link">Reviews</a>
+        <a href="/#faq" class="site-mobile-link">FAQ</a>
+        <a href="/official/" class="site-mobile-link official-nav-link"><span>Official skills</span><svg class="official-nav-sparkle" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l1.1 3.8 3.4 1.2-3.4 1.2L8 11.5 6.9 7.7 3.5 6.5l3.4-1.2L8 1.5Z" fill="currentColor"/><path d="M12.5 9.5l.45 1.55 1.55.45-1.55.45-.45 1.55-.45-1.55-1.55-.45 1.55-.45.45-1.55Z" fill="currentColor"/></svg></a>
+        <a href="https://forms.gle/iGfD5tDgTfCE4QX66" class="site-mobile-link" target="_blank" rel="noopener noreferrer" data-ga-event="list_skills_click" data-ga-label="guide-article-mobile-nav">List your skills</a>
+      </nav>
+    </div>
+
+    <main class="container">
+      <article>
+        <p class="eyebrow">Guides</p>
+        <h1>Figma now has its own catalog of AI skills</h1>
+        <p class="lead">
+          You can publish and use ready-made AI skills in the Figma Community. They are markdown
+          instructions for the Figma agent that run as separate, self-contained workflows.
+        </p>
+        <p class="meta">Updated August 18, 2026 · 7 min read</p>
+
+        <p>
+          Skills are reusable instructions for the Figma agent. Figma describes them as markdown
+          files that capture a specific process, a set of rules, or a designer's personal approach.
+          The full catalog lives at
+          <a href="https://www.figma.com/community/ai-skills?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills">figma.com/community/ai-skills</a>.
+        </p>
+
+        <h2>What a Figma skill actually is</h2>
+        <p>
+          A skill is a single markdown file written against the
+          <a href="https://help.figma.com/hc/en-us/articles/40283639496599-Custom-skills-for-the-Figma-agent-and-Figma-Make?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills">Agent Skills specification</a>
+          — the same open format Claude, Codex, and other agents read. It has a name, a description,
+          and a body of instructions. The name becomes the slash command you type in chat, so a skill
+          called Better Interface runs as <code>/better-interface</code>.
+        </p>
+        <p>A few practical details from Figma's help center:</p>
+        <ul>
+          <li>You can create a skill three ways: ask the agent to write one, upload an existing <code>.md</code> file, or write it by hand.</li>
+          <li>It has to be a <strong>single</strong> markdown file. The optional <code>scripts/</code>, <code>references/</code>, and <code>assets/</code> directories from the broader spec are not supported.</li>
+          <li>Skills work with the Figma agent in both Figma Design and Figma Make files.</li>
+          <li>You can publish privately to a team or organization, or publicly to the Community — then edit, version, export, disable, unpublish, or delete.</li>
+          <li>The design agent is in open beta, available to Full seat users on Professional, Organization, and Enterprise plans, and free during the beta.</li>
+        </ul>
+        <p>
+          Figma marked the launch with a post,
+          <a href="https://www.figma.com/blog/try-these-10-skills-and-show-off-your-own/?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills">Try These 10 Skills — And Show Off Your Own</a>,
+          on August 13, 2026. There is also a community-maintained repo at
+          <a href="https://github.com/figma/community-resources/tree/main/agent_skills?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills">figma/community-resources</a>
+          covering accessibility audits, token export, FigJam generation, and localization. Those are
+          not endorsed by Figma, so review them before running — the same care any third-party skill
+          deserves, as covered in our guide on
+          <a href="/guides/ai-agent-skills-security/">AI agent skills security</a>.
+        </p>
+
+        <h2>Five Figma skills worth trying</h2>
+
+        <div class="skill-entry">
+          <h3><a href="https://www.figma.com/community/skill/61238/better-interface?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills">Better Interface</a></h3>
+          <p class="skill-byline">Jakub Krehel · Interfere</p>
+          <span class="skill-cmd">/better-interface</span>
+          <p>
+            Reviews an interface across a whole set of dimensions: typography, layout, accessibility,
+            motion, and copy. A good option when a screen already looks fine but you want to catch the
+            small problems that quietly drag the whole thing down.
+          </p>
+        </div>
+
+        <div class="skill-entry">
+          <h3><a href="https://www.figma.com/community/skill/68151?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills">Find Animation Opportunities</a></h3>
+          <p class="skill-byline">Emil Kowalski · Linear</p>
+          <span class="skill-cmd">/find-animation-opportunities</span>
+          <p>
+            Finds the places where an interface is genuinely missing movement. It suggests what to
+            animate, exactly where, and with what values. You can also run it in reverse: ask it to
+            find the animations that should not be there.
+          </p>
+        </div>
+
+        <div class="skill-entry">
+          <h3><a href="https://www.figma.com/community/skill/60839/ui-state-expander?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills">UI State Expander</a></h3>
+          <p class="skill-byline">Linda Ojo · Paystack</p>
+          <span class="skill-cmd">/ui-state-expander</span>
+          <p>
+            Extremely useful for screens that only exist in their happy path. It takes a screen,
+            component, or flow and helps you think through the rest of the states, then fills in the
+            copy, transitions, and implementation notes.
+          </p>
+          <ul class="state-chips">
+            <li>loading</li><li>empty</li><li>error</li><li>disabled</li><li>partial data</li><li>edge cases</li>
+          </ul>
+        </div>
+
+        <div class="skill-entry">
+          <h3><a href="https://www.figma.com/community/skill/65434/crit?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills">Superfuture Design Review</a></h3>
+          <p class="skill-byline">Joey Primiani · Superfuture</p>
+          <span class="skill-cmd">/superfuture-design-review</span>
+          <p>
+            Effectively a second design reviewer. It checks UX, accessibility, visual hierarchy,
+            interactions, and product logic, then sorts the findings on a traffic-light system:
+            critical problems, recommended changes, and what already works well.
+          </p>
+        </div>
+
+        <div class="skill-entry">
+          <h3><a href="https://www.figma.com/community/skill/67998/component-handoff?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills">Component Handoff</a></h3>
+          <p class="skill-byline">Mauro Berteri · Itti Digital</p>
+          <span class="skill-cmd">/component-handoff</span>
+          <p>
+            Takes a component or a set of components and assembles the documentation for handoff:
+            description, preview, variants, states, component anatomy, and do/don't usage examples —
+            packaged so you can adapt the structure to your own design system.
+          </p>
+        </div>
+
+        <p>
+          Also worth a look from the launch list:
+          <a href="https://www.figma.com/community/skill/71317/create-color?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills">Create Color</a>
+          by Ian Guisard (Uber), which maps fills, strokes, and shadows to design tokens and flags
+          hard-coded values;
+          <a href="https://www.figma.com/community/skill/61009/analyze-components?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills">Analyze Components</a>
+          by Amy Ha (Walmart); and
+          <a href="https://www.figma.com/community/skill/71690/usability-test-guide?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills">Usability Test Guide</a>
+          by Neha Kodi (Figma).
+        </p>
+
+        <h2>The other half: Figma's own official skills</h2>
+        <p>
+          The Community catalog is designer-facing — skills you run inside a Figma file. Separately,
+          Figma publishes its own official skills aimed at the code side of the workflow: teaching a
+          coding agent to drive Figma through the MCP server, generate designs from an existing
+          codebase, or wire components to their implementations.
+        </p>
+        <p>
+          There are <strong>35 official Figma skills across two repositories</strong> —
+          <code>figma/mcp-server-guide</code> (28 skills) and <code>figma/skills</code> (7) — with
+          roughly 43,900 installs and 3,800 GitHub stars between them. The full list, with install
+          counts and install commands, is in the
+          <a href="/official/figma/">Figma official skills directory on Skillscout</a>.
+        </p>
+        <ul>
+          <li><strong>figma-use</strong> — a prerequisite skill loaded before any <code>use_figma</code> tool call. Effectively the entry point for everything else.</li>
+          <li><strong>figma-generate-design</strong> — translates pages of an existing application into Figma screens using your design system components.</li>
+          <li><strong>figma-generate-library</strong> — builds or updates a design system through a structured sequence.</li>
+          <li><strong>figma-code-connect</strong> — connects design components to their code implementations.</li>
+          <li><strong>figma-create-new-file</strong> and <strong>figma-generate-diagram</strong> — blank Figma and FigJam files, and diagram generation.</li>
+        </ul>
+        <p>
+          The rest cover FigJam, Slides, SwiftUI, motion implementation, and design-to-code. Install a
+          whole package with one command:
+        </p>
+        <pre><code>npx skills add figma/mcp-server-guide -y</code></pre>
+        <p>
+          So there are two layers worth knowing about. Community skills encode a designer's process;
+          Figma's official skills encode how agents talk to Figma. Most teams end up wanting both.
+        </p>
+
+        <h2>Why this matters</h2>
+        <p>
+          Figma Community used to be a place to save other people's templates, UI kits, components,
+          and plugins. Now you can save someone else's process.
+        </p>
+        <p>
+          A designer can take their own interface review checklist, their approach to motion, the way
+          they handle states, or their design review rubric — write it up as a skill and publish it
+          for everyone else. And because skills are just markdown, with no plugin code required, the
+          barrier to authoring one is roughly "can you write down how you work." You can create and
+          edit your own skill directly inside the Figma agent.
+        </p>
+        <p>
+          It is also one more sign of where the format is heading. Design tools, coding tools, and
+          chat products are converging on the same markdown standard, which is the argument we made
+          in <a href="/guides/are-ai-agent-skills-here-to-stay/">Are AI agent skills here to stay?</a>
+        </p>
+
+        <h2>Finding skills beyond Figma</h2>
+        <p>
+          The same format is spreading fast, and skills now live scattered across half a dozen
+          directories. The
+          <a href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills" data-telemetry-event="Extension.downloadClicked" data-telemetry-placement="guide-figma-ai-skills-inline">Skillscout Chrome extension</a>
+          handles the discovery half. It reads the site you are currently on, derives a keyword from
+          the hostname and page context, and surfaces matching agent skills ranked by relevance,
+          popularity, and trust signals — no tab-switching, no searching four catalogs by hand.
+        </p>
+        <p>
+          It searches
+          <a href="https://skills.sh/?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills">skills.sh</a>, ClawHub, Skill.fish, and
+          <a href="https://mcpmarket.com/?utm_source=skillscout&utm_medium=guide&utm_campaign=figma-ai-skills">MCPMarket</a>, and maintains a curated
+          <a href="/official/">directory of official skills</a> from Anthropic, GitHub, Vercel,
+          Stripe, and Figma — including the
+          <a href="/official/figma/">full Figma page</a> with install counts, star counts, and
+          one-line install commands for all 35.
+        </p>
+        <p>
+          If you publish a Figma skill, it is the kind of thing worth listing, so people find it while
+          they are actually in Figma — not three weeks later.
+        </p>
+
+      </article>
+    </main>
+  </body>
+</html>
