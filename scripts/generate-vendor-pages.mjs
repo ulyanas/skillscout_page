@@ -1385,8 +1385,8 @@ function renderHeader() {
         <div class="site-nav-cta">
           <a class="site-btn" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=site" target="_blank" rel="noopener noreferrer" data-ga-event="extension_click" data-ga-label="vendor-page-nav">Add to Chrome</a>
           <a class="site-btn site-btn-list" href="https://forms.gle/iGfD5tDgTfCE4QX66" target="_blank" rel="noopener noreferrer" data-ga-event="list_skills_click" data-ga-label="vendor-page-nav">
-            <span class="site-btn-list-long">List your skills</span>
-            <span class="site-btn-list-short">List skill</span>
+            <svg class="btn-sparkle" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l1.1 3.8 3.4 1.2-3.4 1.2L8 11.5 6.9 7.7 3.5 6.5l3.4-1.2L8 1.5Z" fill="currentColor"/><path d="M12.5 9.5l.45 1.55 1.55.45-1.55.45-.45 1.55-.45-1.55-1.55-.45 1.55-.45.45-1.55Z" fill="currentColor"/></svg><span class="site-btn-list-long">Feature your skills</span>
+            <span class="site-btn-list-short">Feature</span>
           </a>
         </div>
         <button class="site-burger" id="articleBurgerBtn" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="articleMobileMenu">
