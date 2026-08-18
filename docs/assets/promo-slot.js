@@ -41,6 +41,7 @@
     ".promo-slot-cta{display:inline-flex;align-items:center;gap:6px;flex-shrink:0;border-radius:999px;",
     "background:linear-gradient(140deg,#0f5bd8,#13b8b4);color:#fff;padding:10px 16px;font-size:13px;",
     "font-weight:700;line-height:1;white-space:nowrap}",
+    ".promo-slot--top{margin:22px 0 26px}",
     "@media (max-width:640px){.promo-slot{flex-wrap:wrap;gap:10px}",
     ".promo-slot-mark{order:0}.promo-slot-badge{order:1;margin-left:auto}",
     ".promo-slot-copy{order:2;flex:1 1 100%}",
@@ -63,13 +64,29 @@
     style.textContent = STYLES;
     document.head.append(style);
 
+    // Listing page: one banner above the cards.
+    // Article: one under the H1, one after the last paragraph.
+    var listSection = document.querySelector("main .list");
+    if (listSection) {
+      listSection.before(createBanner(slug, "top"));
+      return;
+    }
+
+    var heading = host.querySelector("h1");
+    if (heading) {
+      heading.after(createBanner(slug, "top"));
+    }
+    host.append(createBanner(slug, "end"));
+  });
+
+  function createBanner(slug, position) {
     var banner = document.createElement("a");
-    banner.className = "promo-slot";
-    banner.href = buildUrl(slug);
+    banner.className = "promo-slot promo-slot--" + position;
+    banner.href = buildUrl(slug, position);
     banner.target = "_blank";
     banner.rel = "noopener sponsored";
     banner.dataset.gaEvent = "feature_slot_click";
-    banner.dataset.gaLabel = "guide-" + slug;
+    banner.dataset.gaLabel = "guide-" + slug + "-" + position;
     banner.innerHTML =
       '<span class="promo-slot-mark" aria-hidden="true"><svg viewBox="0 0 16 16">' +
       '<path d="' + SPARKLE_BIG + '" fill="currentColor"/>' +
@@ -82,32 +99,27 @@
       '<path d="' + SPARKLE_CENTERED + '" fill="currentColor"/></svg>Featured</span>' +
       '<span class="promo-slot-cta">Apply for this spot <span aria-hidden="true">&rarr;</span></span>';
 
-    // Listing page: above the cards. Article: after the last paragraph.
-    var listSection = document.querySelector("main .list");
-    if (listSection) {
-      listSection.before(banner);
-    } else {
-      host.append(banner);
-    }
-
     // TelemetryDeck picks the click up through the shared data-ga-event hook
     banner.addEventListener("click", function () {
       if (window.posthog && window.posthog.capture) {
         window.posthog.capture("feature_slot_click", {
           placement: "guide",
           guide_slug: slug,
+          slot_position: position,
           href: banner.href
         });
       }
     });
-  });
 
-  function buildUrl(slug) {
+    return banner;
+  }
+
+  function buildUrl(slug, position) {
     var params = [
       "utm_source=skillscout.sh",
       "utm_medium=guide",
       "utm_campaign=feature_your_skill",
-      "utm_content=guide_" + encodeURIComponent(slug)
+      "utm_content=guide_" + encodeURIComponent(slug) + "_" + position
     ];
     return FORM_URL + "?" + params.join("&");
   }
