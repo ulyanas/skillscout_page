@@ -346,6 +346,12 @@ function bindEvents() {
           "Skillscout.OfficialSkills.resultCount": state.filteredOwners.length,
           "Skillscout.OfficialSkills.sortBy": state.sortBy
         });
+        window.posthog?.capture("official_skills_search", {
+          placement: "official-directory",
+          search_term: state.query.slice(0, 200),
+          result_count: state.filteredOwners.length,
+          sort_by: state.sortBy
+        });
       }, 700);
     }
   });
