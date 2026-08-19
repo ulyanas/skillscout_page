@@ -39,6 +39,18 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
 
+      - name: Import OpenSEO official skills
+        run: node scripts/import_openseo_skills.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
+
+      - name: Import Goldman Sachs official skills
+        run: node scripts/import_goldman_sachs_skills.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
+
       - name: Enrich with GitHub skill trees
         run: node scripts/enrich_github_skills.mjs
         env:

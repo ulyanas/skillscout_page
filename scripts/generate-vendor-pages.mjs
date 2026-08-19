@@ -36,6 +36,7 @@ const VENDOR_BIOS = {
   firecrawl: "Firecrawl provides web crawling and extraction tools for turning websites into structured data.",
   flutter: "Flutter is Google's open-source UI toolkit for building apps across mobile, web, and desktop.",
   frappe: "Frappe builds open-source software products and developer tools for Frappe Framework apps, UI components, file storage, and team workflows.",
+  goldmansachs: "Goldman Sachs publishes open-source developer tools, including the gs-quant library for quantitative finance, pricing, and risk analytics.",
   github: "GitHub is a developer platform for hosting code, collaborating on repositories, and automating software workflows.",
   getsentry: "Sentry helps software teams monitor errors, performance issues, and production problems in applications.",
   makenotion: "Notion is a connected workspace for notes, docs, projects, databases, and team knowledge.",

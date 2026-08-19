@@ -52,6 +52,7 @@ export const OWNER_METADATA = {
   firecrawl: ["Firecrawl", "https://www.firecrawl.dev"],
   flutter: ["Flutter", "https://flutter.dev"],
   getsentry: ["Sentry", "https://sentry.io"],
+  goldmansachs: ["Goldman Sachs", "https://www.goldmansachs.com", "https://github.com/goldmansachs"],
   github: ["GitHub", "https://github.com"],
   google: ["Google Workspace", "https://workspace.google.com", "https://github.com/googleworkspace"],
   "google-gemini": ["Google Gemini", "https://gemini.google.com"],
