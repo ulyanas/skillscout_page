@@ -16,21 +16,6 @@
   });
 
   setupVendorSearch();
-  setupPromoTracking();
-
-  function setupPromoTracking() {
-    // TelemetryDeck picks the click up through the shared data-ga-event hook
-    document.addEventListener("click", (event) => {
-      const promo = event.target.closest(".vendor-promo");
-      if (!promo) return;
-
-      window.posthog?.capture("feature_slot_click", {
-        placement: "vendor-page",
-        owner_key: document.body.dataset.ownerKey || location.pathname.split("/").filter(Boolean)[1] || "",
-        href: promo.href
-      });
-    });
-  }
 
   async function copyText(value, button, message) {
     if (!value) return;
