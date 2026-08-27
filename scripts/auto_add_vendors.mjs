@@ -34,6 +34,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { shouldCatalogSkillFilePath } from "./skill_path_filters.mjs";
+import { isDeniedOwnerKey, isDeniedRepoKey } from "./catalog_denylist.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
@@ -701,6 +702,11 @@ for (const [, info] of candidates) {
 
   if (profile.type !== "Organization") {
     reject("not a GitHub Organization", info);
+    continue;
+  }
+
+  if (isDeniedOwnerKey(info.ownerKey) || isDeniedRepoKey(info.repoKey)) {
+    reject("denylisted owner or repo", info);
     continue;
   }
 

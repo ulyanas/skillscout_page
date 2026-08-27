@@ -75,6 +75,11 @@ jobs:
           COMPANIES_API_KEY: ${{ secrets.COMPANIES_API_KEY }}
           OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
 
+      - name: Purge denylisted entries
+        run: node scripts/purge_denylisted_skills.mjs
+        env:
+          OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
+
       - name: Commit and push
         run: |
           git config user.email "github-actions@github.com"

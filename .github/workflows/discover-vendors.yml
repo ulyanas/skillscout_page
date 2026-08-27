@@ -42,6 +42,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
 
+      - name: Purge denylisted entries
+        run: node scripts/purge_denylisted_skills.mjs
+        env:
+          OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
+
       - name: Commit and push if vendors were added
         id: commit-data
         run: |

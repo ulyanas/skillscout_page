@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import { applyOwnerMetadataOverrides } from "./owner_metadata_overrides.mjs";
 import { normalizeEmojiShortcodesInDirectory } from "./emoji_shortcodes.mjs";
 import { isAgentRuntimeSkillPath, shouldCatalogSkillFilePath } from "./skill_path_filters.mjs";
+import { isDeniedRecord } from "./catalog_denylist.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -567,6 +568,9 @@ function buildUniversalDirectory(records) {
   const skills = new Map();
 
   for (const record of records) {
+    // Denylisted owners/repos/skills never enter the directory, so a scheduled
+    // re-scrape cannot resurrect records removed at a vendor's request.
+    if (isDeniedRecord(record)) continue;
     if (record.type === "owner") {
       mergeOwner(owners, record);
     } else if (record.type === "repo") {

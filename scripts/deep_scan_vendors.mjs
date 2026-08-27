@@ -16,6 +16,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { shouldCatalogSkillFilePath } from "./skill_path_filters.mjs";
+import { isDeniedOwnerKey, isDeniedRepoKey } from "./catalog_denylist.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
@@ -231,6 +232,7 @@ for (const item of [
   const login = full.split("/")[0];
   const ownerKey = normalize(login);
   if (seen.has(ownerKey) || knownKeys.has(ownerKey)) continue;
+  if (isDeniedOwnerKey(ownerKey) || isDeniedRepoKey(full)) continue;
   seen.add(ownerKey);
   candidates.push({ login, ownerKey, repoFullName: full });
 }
