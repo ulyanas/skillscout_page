@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "test:preserved-vendors": "node --test tests/persistent_vendor_sources.test.mjs",
     "build:pages": "node scripts/build-pages.mjs",
     "generate:vendor-pages": "node scripts/generate-vendor-pages.mjs",
     "scrape:official-skills": "node scripts/scrape_official_skills.mjs",

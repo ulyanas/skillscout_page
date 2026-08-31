@@ -6,6 +6,7 @@ import { applyOwnerMetadataOverrides } from "./owner_metadata_overrides.mjs";
 import { normalizeEmojiShortcodesInDirectory } from "./emoji_shortcodes.mjs";
 import { isAgentRuntimeSkillPath, shouldCatalogSkillFilePath } from "./skill_path_filters.mjs";
 import { isDeniedRecord } from "./catalog_denylist.mjs";
+import { hasPersistentVendorSource } from "./persistent_vendor_sources.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -50,9 +51,9 @@ const directory = buildUniversalDirectory(sourceRecords);
 await enrichWithGitHubStars(directory);
 aggregateOwnerStars(directory);
 
-// Preserve github-discovery entries from the existing file so the scrape
-// carries forward vendors that were added by auto_add_vendors.mjs.
-await mergeDiscoveredVendors(directory);
+// Preserve records maintained outside the scraped catalogs so scheduled runs
+// keep their original metadata and first-seen dates.
+await mergePersistentVendors(directory);
 await preserveExistingFirstSeenDates(directory);
 applyOwnerMetadataOverrides(directory);
 removeAgentRuntimeSkills(directory);
@@ -933,11 +934,11 @@ async function preserveExistingFirstSeenDates(directory) {
   }
 }
 
-// ── Preserve github-discovery vendors ────────────────────────────────────────
-// Reads the existing JSON (if present) and carries forward discovered
-// owners/repos/skills across scheduled scrapes.
+// ── Preserve persistent vendors ──────────────────────────────────────────────
+// Reads the existing JSON (if present) and carries forward records maintained
+// by discovery or dedicated importers across scheduled scrapes.
 
-async function mergeDiscoveredVendors(directory) {
+async function mergePersistentVendors(directory) {
   let existing;
   try {
     existing = JSON.parse(await fs.readFile(OUTPUT_PATH, "utf8"));
@@ -960,7 +961,7 @@ async function mergeDiscoveredVendors(directory) {
   let mergedSkills = 0;
 
   for (const owner of existing.officialOwners || []) {
-    if (!owner.sources?.includes("github-discovery")) continue;
+    if (!hasPersistentVendorSource(owner)) continue;
     const current = ownersByKey.get(owner.ownerKey);
     if (current) {
       mergePreservedOwner(current, owner);
@@ -974,7 +975,7 @@ async function mergeDiscoveredVendors(directory) {
   }
 
   for (const repo of existing.officialRepos || []) {
-    if (!repo.sources?.includes("github-discovery")) continue;
+    if (!hasPersistentVendorSource(repo)) continue;
     const current = reposByKey.get(repo.repoKey);
     if (current) {
       mergePreservedRepo(current, repo);
@@ -990,9 +991,9 @@ async function mergeDiscoveredVendors(directory) {
 
   for (const skill of existing.officialSkills || []) {
     const existingOwner = existingOwnersByKey.get(skill.ownerKey);
-    const fromDiscoveredOwner = existingOwner?.sources?.includes("github-discovery");
-    const fromDiscoveredRepo = skill.repoKey && preservedRepoKeys.has(skill.repoKey);
-    if (!fromDiscoveredOwner && !fromDiscoveredRepo) continue;
+    const fromPersistentOwner = hasPersistentVendorSource(existingOwner);
+    const fromPersistentRepo = skill.repoKey && preservedRepoKeys.has(skill.repoKey);
+    if (!fromPersistentOwner && !fromPersistentRepo) continue;
 
     const current = skillsByKey.get(skill.skillKey);
     if (current) {
@@ -1020,7 +1021,7 @@ async function mergeDiscoveredVendors(directory) {
       sourceSkills: countBySource(directory.officialSkills)
     };
     console.log(
-      `Preserved from github-discovery: ${addedOwners} owners added, ${mergedOwners} merged; ` +
+      `Preserved persistent vendors: ${addedOwners} owners added, ${mergedOwners} merged; ` +
         `${addedRepos} repos added, ${mergedRepos} merged; ${addedSkills} skills added, ${mergedSkills} merged`
     );
   }
