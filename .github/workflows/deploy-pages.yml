@@ -9,6 +9,7 @@ on:
       - "scripts/build-pages.mjs"
       - "scripts/generate-vendor-pages.mjs"
       - "package.json"
+      - "tests/**"
       - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
@@ -34,6 +35,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+
+      - name: Verify vendor data and descriptions
+        run: node --test tests/*.test.mjs
 
       - name: Build static site and vendor pages
         run: npm run build:pages

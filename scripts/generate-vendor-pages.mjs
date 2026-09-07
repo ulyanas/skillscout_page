@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { gunzipSync } from "node:zlib";
 
 import { OWNER_METADATA } from "../docs/lib/owner-metadata.js";
+import { VENDOR_SUMMARIES } from "../docs/lib/vendor-summaries.js";
 import { computePopularityScore } from "../docs/lib/ranking.js";
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
@@ -1526,7 +1527,7 @@ function pluralize(value, singular, plural) {
 
 function createVendorBio(owner, displayName) {
   const base = `${displayName} publishes official AI agent skills for its tools, services, and developer workflows.`;
-  const curated = VENDOR_BIOS[owner.ownerKey];
+  const curated = VENDOR_SUMMARIES[owner.ownerKey]?.summary || VENDOR_BIOS[owner.ownerKey];
   if (curated) return mergeBioSentences(base, curated);
 
   const description = cleanVendorDescription(owner.description);
