@@ -7,6 +7,7 @@ on:
     paths:
       - "docs/**"
       - "scripts/build-pages.mjs"
+      - "scripts/homepage-stats.mjs"
       - "scripts/generate-vendor-pages.mjs"
       - "package.json"
       - "tests/**"
@@ -36,7 +37,7 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Verify vendor data and descriptions
+      - name: Verify site generation and vendor data
         run: node --test tests/*.test.mjs
 
       - name: Build static site and vendor pages

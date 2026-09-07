@@ -15,10 +15,10 @@
     />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="canonical" href="https://skillscout.sh/" />
-    <script src="/assets/telemetry.js"></script>
+    <script defer src="/assets/telemetry.js"></script>
     <link rel="stylesheet" href="/assets/site-shell.css?v=20260724-official-sparkle" />
     <script src="/assets/site-shell.js?v=20260724-1"></script>
-    <script src="/assets/posthog-init.js"></script>
+    <script defer src="/assets/posthog-init.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3BBGC9XQS2"></script>
@@ -51,12 +51,8 @@
     <meta name="twitter:image" content="https://skillscout.sh/og/skillscout.png" />
     <meta name="twitter:image:alt" content="Skillscout social preview showing AI agent skill discovery on the page" />
     <link rel="icon" href="assets/skillscout-mark-48.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/assets/vendor-fonts.css?v=20260908-1" />
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1830,15 +1826,15 @@
     <section class="hero" id="top">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <h1 class="h-display" data-reveal>
+          <h1 class="h-display">
             Find the <span class="hero-gradient">right skills for your AI agents</span> directly on the page
           </h1>
-          <p class="lead" data-reveal style="font-weight: 600">
+          <p class="lead" style="font-weight: 600">
             Skillscout is a Chrome extension that looks at the website you are on,
             searches relevant skill catalogs, and surfaces the best-matching agent
             skills in seconds
           </p>
-          <div class="cta-row" data-reveal>
+          <div class="cta-row">
             <a class="btn btn-lg hero-primary-cta" href="https://chromewebstore.google.com/detail/nihcililjolbokbbbmdfhmhbemfefddo?utm_source=site" target="_blank" rel="noopener noreferrer" data-ga-event="get_extension_click" data-ga-label="hero">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1849,7 +1845,7 @@
               <svg class="btn-sparkle" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l1.1 3.8 3.4 1.2-3.4 1.2L8 11.5 6.9 7.7 3.5 6.5l3.4-1.2L8 1.5Z" fill="currentColor"/><path d="M12.5 9.5l.45 1.55 1.55.45-1.55.45-.45 1.55-.45-1.55-1.55-.45 1.55-.45.45-1.55Z" fill="currentColor"/></svg> Feature your skills
             </a>
           </div>
-          <ul class="hero-support" data-reveal>
+          <ul class="hero-support">
             <li>Detects the current site automatically</li>
             <li>Prioritizes relevant official skills</li>
             <li>Ranks skills by reputation and relevancy</li>
@@ -1857,7 +1853,7 @@
         </div>
 
         <!-- Hero visual -->
-        <div class="hero-visual" data-reveal>
+        <div class="hero-visual">
           <div class="browser" aria-hidden="true">
             <div class="browser-chrome">
               <span class="traffic"><span></span><span></span><span></span></span>
@@ -1990,7 +1986,7 @@
           <div class="catalogs-track">
             <a class="catalog-item" href="https://skills.sh?utm_source=skillscout&utm_medium=landing&utm_campaign=catalogs" target="_blank" rel="noreferrer"><img src="assets/logo-skills-sh.png" alt="SKILLS.sh logo" class="catalog-logo" />SKILLS.sh</a>
             <span class="catalog-divider"></span>
-            <a class="catalog-item" href="https://clawhub.ai/skills?utm_source=skillscout&utm_medium=landing&utm_campaign=catalogs" target="_blank" rel="noreferrer"><img src="assets/logo-clawhub.png" alt="ClawdHub logo" class="catalog-logo" />ClawdHub</a>
+            <a class="catalog-item" href="https://clawhub.ai/skills?utm_source=skillscout&utm_medium=landing&utm_campaign=catalogs" target="_blank" rel="noreferrer"><img src="assets/logo-clawhub.webp" alt="ClawdHub logo" class="catalog-logo" />ClawdHub</a>
             <span class="catalog-divider"></span>
             <a class="catalog-item" href="https://skill.fish?utm_source=skillscout&utm_medium=landing&utm_campaign=catalogs" target="_blank" rel="noreferrer"><img src="assets/logo-skilldotfish.png" alt="Skill.fish logo" class="catalog-logo" />Skill.fish</a>
             <span class="catalog-divider"></span>
@@ -2017,15 +2013,15 @@
           </div>
           <a class="official-teaser-stats" href="https://skillscout.sh/official/" aria-label="Open official skills directory">
             <article class="official-stat">
-              <p class="official-stat-value" id="landingOfficialOwners">-</p>
+              <p class="official-stat-value" id="landingOfficialOwners">1,681</p>
               <p class="official-stat-label">Owners verified</p>
             </article>
             <article class="official-stat">
-              <p class="official-stat-value" id="landingOfficialRepos">-</p>
+              <p class="official-stat-value" id="landingOfficialRepos">3,597</p>
               <p class="official-stat-label">Repos</p>
             </article>
             <article class="official-stat">
-              <p class="official-stat-value" id="landingOfficialSkills">-</p>
+              <p class="official-stat-value" id="landingOfficialSkills">51,299</p>
               <p class="official-stat-label">Skills</p>
             </article>
           </a>
@@ -2456,35 +2452,6 @@
           }, 1600);
         });
       }
-
-      // Official skills teaser counters
-      const formatWholeNumber = (value) => {
-        const number = Number(value);
-        return Number.isFinite(number) ? number.toLocaleString('en-US') : '-';
-      };
-
-      fetch('data/official-skills-universal.json', { cache: 'no-store' })
-        .then((response) => {
-          if (!response.ok) throw new Error('Official skills stats request failed');
-          return response.json();
-        })
-        .then((data) => {
-          const stats = data && data.stats ? data.stats : {};
-          const ownersEl = document.getElementById('landingOfficialOwners');
-          const reposEl = document.getElementById('landingOfficialRepos');
-          const skillsEl = document.getElementById('landingOfficialSkills');
-          if (ownersEl) ownersEl.textContent = formatWholeNumber(stats.owners);
-          if (reposEl) reposEl.textContent = formatWholeNumber(stats.repos);
-          if (skillsEl) skillsEl.textContent = formatWholeNumber(stats.skills);
-        })
-        .catch(() => {
-          const ownersEl = document.getElementById('landingOfficialOwners');
-          const reposEl = document.getElementById('landingOfficialRepos');
-          const skillsEl = document.getElementById('landingOfficialSkills');
-          if (ownersEl) ownersEl.textContent = '—';
-          if (reposEl) reposEl.textContent = '—';
-          if (skillsEl) skillsEl.textContent = '—';
-        });
 
       // Testimonials carousel
       const testimonialTrack = document.querySelector('[data-testimonials-track]');

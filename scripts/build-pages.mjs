@@ -2,6 +2,7 @@ import { spawn } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { renderHomepageStats } from "./homepage-stats.mjs";
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = path.resolve(SCRIPT_DIR, "..");
@@ -31,6 +32,10 @@ await fs.cp(DOCS_DIR, SITE_DIR, {
 });
 
 await fs.writeFile(path.join(SITE_DIR, ".nojekyll"), "", "utf8");
+const homepagePath = path.join(SITE_DIR, "index.html");
+const catalog = JSON.parse(await fs.readFile(path.join(SITE_DIR, "data", "official-skills-universal.json"), "utf8"));
+const homepage = await fs.readFile(homepagePath, "utf8");
+await fs.writeFile(homepagePath, renderHomepageStats(homepage, catalog.stats), "utf8");
 await runNode([
   path.join(SCRIPT_DIR, "generate-vendor-pages.mjs"),
   "--site-root",
