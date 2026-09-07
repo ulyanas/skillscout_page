@@ -1,5 +1,12 @@
 // Reviewed vendor descriptions live outside scraped catalog records so imports preserve them.
 export const VENDOR_SUMMARIES = {
+  "lovablelabs": {
+    "summary": "Lovable is an AI app builder that turns natural-language descriptions into web applications with editable code, databases, authentication, and hosting.",
+    "sources": [
+      "https://docs.lovable.dev/introduction/welcome"
+    ],
+    "reviewedAt": "2026-09-08"
+  },
   "frappe": {
     "summary": "Frappe builds ERPNext, a business management suite, and the Frappe Framework for creating database-driven web applications.",
     "sources": [
