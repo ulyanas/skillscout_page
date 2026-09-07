@@ -25,6 +25,9 @@ const SITE_ROOT = path.resolve(
 const OUTPUT_DIR = path.join(SITE_ROOT, "official");
 const VENDOR_DATA_DIR = path.join(SITE_ROOT, "data/vendors");
 const SKILLS_PER_PAGE = 100;
+const LOCAL_VENDOR_LOGOS = {
+  makeplane: "https://skillscout.sh/assets/vendor-logos/makeplane.png"
+};
 
 const VENDOR_BIOS = {
   anthropics: "Anthropic builds Claude and developer tools for working with AI agents, models, and agent skills.",
@@ -300,7 +303,8 @@ function buildVendorModel(owner, popularityPosition, ownerRepos, ownerSkills) {
   const website = safeHttpUrl(websiteCandidate, fallbackGithubUrl);
   const githubUrl = safeHttpUrl(owner.githubUrl, fallbackGithubUrl);
   const logoUrl = safeHttpUrl(
-    owner.logoUrl ||
+    LOCAL_VENDOR_LOGOS[owner.ownerKey] ||
+      owner.logoUrl ||
       owner.avatarUrl ||
       `https://github.com/${encodeURIComponent(owner.githubLogin || owner.ownerKey)}.png?size=160`,
     "https://skillscout.sh/assets/skillscout-mark-48.png"
@@ -502,9 +506,7 @@ function renderVendorPage(
     <script src="/assets/site-shell.js?v=20260724-1"></script>
     <script src="/assets/posthog-init.js"></script>
     <link rel="icon" href="/assets/skillscout-mark-48.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/vendor-fonts.css?v=20260908-1" />
     <script type="application/ld+json">${structuredData}</script>
   </head>
   <body>
@@ -768,9 +770,7 @@ function renderArchivedOfficialPage({ canonicalUrl, originalUrl }) {
     <script src="/assets/site-shell.js?v=20260724-1"></script>
     <script src="/assets/posthog-init.js"></script>
     <link rel="icon" href="/assets/skillscout-mark-48.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/vendor-fonts.css?v=20260908-1" />
   </head>
   <body>
     ${renderHeader()}
