@@ -284,7 +284,7 @@ const archivedPages = await writeArchivedOfficialPages(
 );
 const archivedPageCount = archivedPages.urls.length;
 sitemapUrls.push(...archivedPages.urls);
-await writeVendorSitemap(sitemapUrls, data.generatedAt);
+await writeVendorSitemap(sitemapUrls);
 
 console.log(
   `Generated ${selectedOwners.length} vendor pages, ${sitemapUrls.length} crawlable URLs, and ${archivedPageCount} frozen historical pages in ${OUTPUT_DIR}`
@@ -1581,9 +1581,9 @@ function groupBy(items, key) {
   return groups;
 }
 
-async function writeVendorSitemap(urls, generatedAt) {
-  const date = String(generatedAt || new Date().toISOString()).slice(0, 10);
-  const vendorSitemap = renderSitemap(urls, date);
+async function writeVendorSitemap(urls) {
+  const vendorEntries = urls.map((url) => ({ url }));
+  const vendorSitemap = renderSitemap(vendorEntries);
   await fs.writeFile(
     path.join(SITE_ROOT, "sitemap-vendors.xml"),
     vendorSitemap,
@@ -1605,19 +1605,21 @@ async function writeVendorSitemap(urls, generatedAt) {
 
   await fs.writeFile(coreSitemapPath, coreSitemap, "utf8");
 
-  const coreUrls = extractSitemapUrls(coreSitemap);
-  const allUrls = [...new Set([...coreUrls, ...urls])];
-  await fs.writeFile(sitemapPath, renderSitemap(allUrls, date), "utf8");
+  const entriesByUrl = new Map(vendorEntries.map((entry) => [entry.url, entry]));
+  for (const entry of extractSitemapEntries(coreSitemap)) {
+    entriesByUrl.set(entry.url, entry);
+  }
+  await fs.writeFile(sitemapPath, renderSitemap([...entriesByUrl.values()]), "utf8");
 }
 
-function renderSitemap(urls, date) {
+function renderSitemap(entries) {
+  // Preserve editorial lastmod dates; omit dates for pages with unknown modification times.
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls
+${entries
   .map(
-    (url) => `  <url>
-    <loc>${escapeXml(url)}</loc>
-    <lastmod>${date}</lastmod>
+    ({ url, lastmod }) => `  <url>
+    <loc>${escapeXml(url)}</loc>${lastmod ? `\n    <lastmod>${escapeXml(lastmod)}</lastmod>` : ""}
   </url>`
   )
   .join("\n")}
@@ -1625,10 +1627,16 @@ ${urls
 `;
 }
 
-function extractSitemapUrls(xml) {
-  return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) =>
-    unescapeXml(match[1].trim())
-  );
+function extractSitemapEntries(xml) {
+  return [...xml.matchAll(/<url>\s*([\s\S]*?)<\/url>/g)].flatMap((match) => {
+    const loc = match[1].match(/<loc>([^<]+)<\/loc>/);
+    if (!loc) return [];
+    const lastmod = match[1].match(/<lastmod>([^<]+)<\/lastmod>/);
+    return [{
+      url: unescapeXml(loc[1].trim()),
+      ...(lastmod ? { lastmod: unescapeXml(lastmod[1].trim()) } : {})
+    }];
+  });
 }
 
 function unescapeXml(value) {
