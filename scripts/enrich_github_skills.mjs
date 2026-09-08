@@ -146,7 +146,7 @@ async function fetchGitHubRepoSkillPaths(repo) {
       if (item.type !== "blob") continue;
       const match = item.path.match(SKILL_RE);
       if (!match) continue;
-      if (!shouldCatalogSkillFilePath(item.path)) continue;
+      if (!shouldCatalogSkillFilePath(`${repoKey}/${item.path}`)) continue;
       if (skillPathPrefixes.length && !skillPathPrefixes.some((prefix) => item.path.startsWith(prefix))) {
         continue;
       }
@@ -169,7 +169,7 @@ function reconcileSkillsWithGitHub(directory) {
   const githubByRepo = new Map();
   for (const repo of directory.officialRepos) {
     if (repo.githubSkillPaths) {
-      const skillPaths = repo.githubSkillPaths.filter((skillPath) => !isAgentRuntimeSkillPath(skillPath));
+      const skillPaths = repo.githubSkillPaths.filter((skillPath) => !isAgentRuntimeSkillPath(`${repo.repoKey}/${skillPath}`));
       if (skillPaths.length !== repo.githubSkillPaths.length) {
         repo.githubSkillPaths = skillPaths;
       }
@@ -745,7 +745,7 @@ function removeAgentRuntimeSkills(directory) {
 
   for (const repo of directory.officialRepos) {
     if (Array.isArray(repo.githubSkillPaths)) {
-      repo.githubSkillPaths = repo.githubSkillPaths.filter((skillPath) => !isAgentRuntimeSkillPath(skillPath));
+      repo.githubSkillPaths = repo.githubSkillPaths.filter((skillPath) => !isAgentRuntimeSkillPath(`${repo.repoKey}/${skillPath}`));
     }
   }
 

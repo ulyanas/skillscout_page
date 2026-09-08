@@ -1,6 +1,8 @@
 const AGENT_RUNTIME_SKILL_DIR_RE = /(?:^|\/)\.(?:claude|agents|codex|cursor|windsurf)\/skills(?:\/|$)/i;
 const TEMPLATE_SKILL_FILE_RE = /(^|\/)templates?\/skill\/SKILL\.md$/i;
 const AGENT_RUNTIME_SKILL_PATH_EXCEPTIONS = [
+  // GoDaddy documents gddy as its public CLI skill.
+  /^godaddy\/cli\/\.agents\/skills\/gddy(?:\/|$)/i,
   /^home-assistant\/(?:android|core|frontend|home-assistant\.io|ios)\/\.(?:agents|claude)\/skills\//i,
   // OpenSEO ships its documented product skills under .agents/skills; the repo's
   // internal maintenance skills stay excluded.

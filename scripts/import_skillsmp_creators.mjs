@@ -748,7 +748,7 @@ function removeAgentRuntimeSkills() {
   const invalidRepoKeys = new Set();
   for (const repo of directory.officialRepos) {
     if (Array.isArray(repo.githubSkillPaths)) {
-      repo.githubSkillPaths = repo.githubSkillPaths.filter((skillPath) => !isAgentRuntimeSkillPath(skillPath));
+      repo.githubSkillPaths = repo.githubSkillPaths.filter((skillPath) => !isAgentRuntimeSkillPath(`${repo.repoKey}/${skillPath}`));
     }
     if (!repoKeysWithSkills.has(repo.repoKey)) {
       invalidRepoKeys.add(repo.repoKey);
