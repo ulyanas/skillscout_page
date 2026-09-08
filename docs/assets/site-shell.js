@@ -5,6 +5,9 @@
   const DISMISSED_CLASS = "mdviewer-banner-dismissed";
   // Pageviews a returning visitor gets banner-free before the promo comes back.
   const PAGEVIEWS_BEFORE_RESET = 10;
+  const scriptUrl = document.currentScript?.src;
+  const assetBaseUrl = scriptUrl ? new URL(".", scriptUrl) : new URL("/assets/", window.location.href);
+  const assetUrl = (fileName) => new URL(fileName, assetBaseUrl).href;
 
   function readDismissal() {
     let raw;
@@ -84,7 +87,7 @@
       ></a>
       <div class="partner-banner-inner">
         <div class="partner-banner-brand" aria-hidden="true">
-          <img class="partner-banner-logo" src="/assets/mdviewer-icon.webp" alt="" width="512" height="512" />
+          <img class="partner-banner-logo" src="${assetUrl("mdviewer-icon.webp")}" alt="" width="512" height="512" />
           <span class="partner-banner-name">MDViewer</span>
         </div>
         <p class="partner-banner-copy" aria-hidden="true">
@@ -175,7 +178,7 @@
     button.innerHTML = `
       <img
         class="bmc-support-logo"
-        src="/assets/bmc-brand-logo.svg"
+        src="${assetUrl("bmc-brand-logo.svg")}"
         alt=""
         width="195"
         height="40"
@@ -183,6 +186,27 @@
       />
     `;
     document.body.append(button);
+
+    const footer = document.querySelector("body > footer");
+    if (!footer) return;
+
+    let updateScheduled = false;
+    const updateFooterOffset = () => {
+      updateScheduled = false;
+      const footerRect = footer.getBoundingClientRect();
+      const visibleFooterHeight = Math.max(0, window.innerHeight - footerRect.top);
+      const footerOffset = Math.min(visibleFooterHeight, footerRect.height);
+      button.style.setProperty("--bmc-footer-offset", `${Math.ceil(footerOffset)}px`);
+    };
+    const scheduleFooterOffsetUpdate = () => {
+      if (updateScheduled) return;
+      updateScheduled = true;
+      window.requestAnimationFrame(updateFooterOffset);
+    };
+
+    updateFooterOffset();
+    window.addEventListener("scroll", scheduleFooterOffsetUpdate, { passive: true });
+    window.addEventListener("resize", scheduleFooterOffsetUpdate);
   }
 
   document.addEventListener("DOMContentLoaded", () => {
