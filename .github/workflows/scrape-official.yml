@@ -75,6 +75,9 @@ jobs:
           COMPANIES_API_KEY: ${{ secrets.COMPANIES_API_KEY }}
           OFFICIAL_SKILLS_OUTPUT: docs/data/official-skills-universal.json
 
+      - name: Import Google official skill index
+        run: node scripts/import_google_skills.mjs
+
       - name: Purge denylisted entries
         run: node scripts/purge_denylisted_skills.mjs
         env:

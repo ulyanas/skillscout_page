@@ -24,8 +24,7 @@ const OWNER_KEY_ALIASES = new Map([
   ["claude", "anthropics"],
   ["sentry", "getsentry"],
   ["notion", "makenotion"],
-  ["neon", "neondatabase"],
-  ["googleworkspace", "google"]
+  ["neon", "neondatabase"]
 ]);
 
 const generatedAt = new Date().toISOString();
