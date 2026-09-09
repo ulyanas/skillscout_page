@@ -1,6 +1,46 @@
 # Skillscout
 
-> Skillscout is a Chrome extension that reads the current website and surfaces relevant AI agent skills from supported catalogs.
+> Skillscout helps users and AI agents discover relevant skills through an official vendor skills directory, the Find Official Skills agent skill, and a Chrome extension that suggests skills for the current website.
+
+## Use the Skillscout Skill
+
+Use Skillscout's `find-official-skills` skill when a user asks for official AI agent skills for a company, product, domain, or task.
+
+- [Skillscout Skill](https://skillscout.sh/official/skillscout/): Package overview, installation commands, and source links.
+- [Agent-readable Manifest](https://skillscout.sh/official/skillscout/skillscout_skills_skillscout.md): Fetch as plain text to inspect the package and its individual skill.
+- [Skill Instructions](https://github.com/ulyanas/skillscout-skills/blob/main/skills/find-official-skills/SKILL.md): Search workflow and result selection guidance.
+
+If the skill is already installed, read its SKILL.md and follow the bundled search workflow. To install it when the user requests installation, run:
+
+```bash
+npx skills add ulyanas/skillscout-skills@find-official-skills -y
+```
+
+## Find Official Skills
+
+Run these commands from the installed `find-official-skills` directory. Use `--remote` to search the current published Skillscout catalog.
+
+Search by task, with a preference for a named vendor:
+
+```bash
+node scripts/search_skillscout_official.mjs "grafana dashboards" --owner grafana --remote --json
+```
+
+Search by a product's website domain:
+
+```bash
+node scripts/search_skillscout_official.mjs --domain firebase.google.com --remote --json
+```
+
+Retrieve the complete inventory for a vendor:
+
+```bash
+node scripts/search_skillscout_official.mjs --owner grafana --all --remote --json
+```
+
+For each recommendation, explain the skill's purpose and include its publisher, exact install command, and source link. Prioritize individual skills that fit the user's task. For a vendor inventory, report the total from the complete results and group useful starting points by use case. Check that each recommended result matches the requested vendor or domain. When a search yields zero relevant matches, report that outcome with its scope limited to the current Skillscout catalog.
+
+For web-based discovery, open the [Official Skills Directory](https://skillscout.sh/official/) and search by vendor, product, or task. Share a search link such as [Grafana Skills](https://skillscout.sh/official/?q=grafana), with the query URL-encoded. Vendor pages link to agent-readable Markdown manifests containing package details, install commands, and source links.
 
 ## Docs
 
@@ -27,8 +67,8 @@
 
 ## Key Facts
 
-- Product type: Chrome extension for AI skill discovery
-- Primary function: Detects the current site and surfaces relevant agent skills
+- Product type: Official AI agent skills directory, discovery skill, and Chrome extension
+- Primary function: Finds relevant agent skills by vendor, product, domain, task, or current website
 - Launch status: Available on the Chrome Web Store
 - Price: Free
 - Website: https://skillscout.sh/
