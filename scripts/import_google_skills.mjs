@@ -47,7 +47,7 @@ export function importGoogleSkills(directory, index, now = new Date().toISOStrin
   }
   Object.assign(repo, {
     ownerKey: "google", sourceOwnerKeys: ["google"], repoName: "skills", displayName: REPO_KEY,
-    description: "Agent skills for Google products and technologies, including Google Cloud.",
+    description: "Deploy services to Cloud Run and GKE, build Gemini applications, query BigQuery, configure cloud IAM and monitoring, and integrate Google Ads and Analytics APIs.",
     canonicalRepoKey: REPO_KEY, githubDefaultBranch: "main", confidence: "high",
     githubSkillPaths: [...paths].sort(), githubSkillPathsFetchedAt: now, truncated: false,
     skillPathPrefixes: ["skills/"], installCommand: "npx skills add google/skills",

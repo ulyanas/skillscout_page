@@ -1,5 +1,12 @@
 // Reviewed vendor descriptions live outside scraped catalog records so imports preserve them.
 export const VENDOR_SUMMARIES = {
+  "google": {
+    "summary": "Google develops Gemini AI models and cloud services such as BigQuery, Cloud Run, and GKE for building AI applications, analyzing data, and deploying workloads.",
+    "sources": [
+      "https://github.com/google/skills"
+    ],
+    "reviewedAt": "2026-09-09"
+  },
   "lovablelabs": {
     "summary": "Lovable is an AI app builder that turns natural-language descriptions into web applications with editable code, databases, authentication, and hosting.",
     "sources": [
