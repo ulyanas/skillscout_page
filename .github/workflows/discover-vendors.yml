@@ -5,6 +5,10 @@ on:
     - cron: '0 4 * * *'   # 04:00 UTC daily — runs before the 06:00 scrape
   workflow_dispatch:        # manual trigger from GitHub UI
 
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   discover:
     runs-on: ubuntu-latest
@@ -70,6 +74,19 @@ jobs:
         if: steps.commit-data.outputs.changed == 'true'
         run: npm run build:pages
 
+      - name: Prepare changed URLs for IndexNow
+        if: steps.commit-data.outputs.changed == 'true'
+        run: node scripts/indexnow.mjs prepare
+
+      - name: Save IndexNow submission list
+        if: steps.commit-data.outputs.changed == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: indexnow-urls
+          path: .indexnow-urls.json
+          include-hidden-files: true
+          retention-days: 30
+
       - name: Configure GitHub Pages
         if: steps.commit-data.outputs.changed == 'true'
         uses: actions/configure-pages@v5
@@ -84,3 +101,7 @@ jobs:
         if: steps.commit-data.outputs.changed == 'true'
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Notify Bing IndexNow
+        if: steps.commit-data.outputs.changed == 'true'
+        run: node scripts/indexnow.mjs submit

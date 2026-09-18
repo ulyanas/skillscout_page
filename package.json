@@ -19,6 +19,7 @@
     "enrich:owner-metadata": "node scripts/enrich_owner_metadata.mjs",
     "normalize:emoji-shortcodes": "node scripts/normalize_emoji_shortcodes.mjs",
     "clean:agent-runtime-skills": "node scripts/remove_agent_runtime_skills.mjs",
-    "import:google-skills": "node scripts/import_google_skills.mjs"
+    "import:google-skills": "node scripts/import_google_skills.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
   }
 }

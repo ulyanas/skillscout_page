@@ -7,6 +7,7 @@ on:
     paths:
       - "docs/**"
       - "scripts/build-pages.mjs"
+      - "scripts/indexnow.mjs"
       - "scripts/homepage-stats.mjs"
       - "scripts/generate-vendor-pages.mjs"
       - "package.json"
@@ -21,7 +22,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -43,6 +44,17 @@ jobs:
       - name: Build static site and vendor pages
         run: npm run build:pages
 
+      - name: Prepare changed URLs for IndexNow
+        run: node scripts/indexnow.mjs prepare
+
+      - name: Save IndexNow submission list
+        uses: actions/upload-artifact@v4
+        with:
+          name: indexnow-urls
+          path: .indexnow-urls.json
+          include-hidden-files: true
+          retention-days: 30
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
@@ -54,3 +66,6 @@ jobs:
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Notify Bing IndexNow
+        run: node scripts/indexnow.mjs submit
