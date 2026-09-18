@@ -9,6 +9,8 @@ on:
       - "scripts/build-pages.mjs"
       - "scripts/indexnow.mjs"
       - "scripts/homepage-stats.mjs"
+      - "scripts/vendor-indexing.mjs"
+      - "scripts/data/vendor-index-policy.json"
       - "scripts/generate-vendor-pages.mjs"
       - "package.json"
       - "tests/**"

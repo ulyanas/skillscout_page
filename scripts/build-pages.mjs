@@ -3,6 +3,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { renderHomepageStats } from "./homepage-stats.mjs";
+import { applyVendorIndexPolicy } from "./vendor-indexing.mjs";
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = path.resolve(SCRIPT_DIR, "..");
@@ -41,6 +42,12 @@ await runNode([
   "--site-root",
   SITE_DIR
 ]);
+
+const indexing = await applyVendorIndexPolicy(
+  SITE_DIR,
+  path.join(SCRIPT_DIR, "data/vendor-index-policy.json")
+);
+if (indexing) console.log(`Vendor indexing: ${indexing.indexed} index, ${indexing.noindex} noindex`);
 
 const stats = await getDirectoryStats(SITE_DIR);
 console.log(

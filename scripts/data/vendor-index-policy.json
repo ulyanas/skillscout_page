@@ -1,0 +1,2219 @@
+{
+  "version": 1,
+  "source": "search-console-api",
+  "site": "sc-domain:skillscout.sh",
+  "searchType": "web",
+  "dataState": "final",
+  "startDate": "2026-06-19",
+  "endDate": "2026-09-16",
+  "days": 90,
+  "fetchedAt": "2026-09-18T22:57:47.057888+00:00",
+  "ranking": [
+    "clicks descending",
+    "impressions descending",
+    "url ascending"
+  ],
+  "unit": "individual canonical vendor URL, including pagination",
+  "pages": [
+    {
+      "url": "https://skillscout.sh/official/frappe/",
+      "clicks": 22,
+      "impressions": 707,
+      "sourceUrls": [
+        "https://skillscout.sh/official/frappe/"
+      ],
+      "rank": 1,
+      "ctr": 0.031117397454031116,
+      "position": 6.861386138613861
+    },
+    {
+      "url": "https://skillscout.sh/official/dramaclaw/",
+      "clicks": 8,
+      "impressions": 585,
+      "sourceUrls": [
+        "https://skillscout.sh/official/dramaclaw/"
+      ],
+      "rank": 2,
+      "ctr": 0.013675213675213675,
+      "position": 5.842735042735042
+    },
+    {
+      "url": "https://skillscout.sh/official/electron/",
+      "clicks": 8,
+      "impressions": 106,
+      "sourceUrls": [
+        "https://skillscout.sh/official/electron/"
+      ],
+      "rank": 3,
+      "ctr": 0.07547169811320754,
+      "position": 9.19811320754717
+    },
+    {
+      "url": "https://skillscout.sh/official/biomejs/",
+      "clicks": 6,
+      "impressions": 117,
+      "sourceUrls": [
+        "https://skillscout.sh/official/biomejs/"
+      ],
+      "rank": 4,
+      "ctr": 0.05128205128205128,
+      "position": 7.6581196581196584
+    },
+    {
+      "url": "https://skillscout.sh/official/swagger-api/",
+      "clicks": 6,
+      "impressions": 66,
+      "sourceUrls": [
+        "https://skillscout.sh/official/swagger-api/"
+      ],
+      "rank": 5,
+      "ctr": 0.09090909090909091,
+      "position": 9.530303030303031
+    },
+    {
+      "url": "https://skillscout.sh/official/alibaba/",
+      "clicks": 5,
+      "impressions": 239,
+      "sourceUrls": [
+        "https://skillscout.sh/official/alibaba/"
+      ],
+      "rank": 6,
+      "ctr": 0.02092050209205021,
+      "position": 6.523012552301255
+    },
+    {
+      "url": "https://skillscout.sh/official/docker/",
+      "clicks": 5,
+      "impressions": 57,
+      "sourceUrls": [
+        "https://skillscout.sh/official/docker/"
+      ],
+      "rank": 7,
+      "ctr": 0.08771929824561403,
+      "position": 6.807017543859649
+    },
+    {
+      "url": "https://skillscout.sh/official/codeigniter4/",
+      "clicks": 5,
+      "impressions": 37,
+      "sourceUrls": [
+        "https://skillscout.sh/official/codeigniter4/"
+      ],
+      "rank": 8,
+      "ctr": 0.13513513513513514,
+      "position": 8.891891891891891
+    },
+    {
+      "url": "https://skillscout.sh/official/ketch-com/",
+      "clicks": 5,
+      "impressions": 33,
+      "sourceUrls": [
+        "https://skillscout.sh/official/ketch-com/"
+      ],
+      "rank": 9,
+      "ctr": 0.15151515151515152,
+      "position": 7.909090909090909
+    },
+    {
+      "url": "https://skillscout.sh/official/makeplane/",
+      "clicks": 5,
+      "impressions": 33,
+      "sourceUrls": [
+        "https://skillscout.sh/official/makeplane/"
+      ],
+      "rank": 10,
+      "ctr": 0.15151515151515152,
+      "position": 5.606060606060606
+    },
+    {
+      "url": "https://skillscout.sh/official/thunderbird/",
+      "clicks": 5,
+      "impressions": 31,
+      "sourceUrls": [
+        "https://skillscout.sh/official/thunderbird/"
+      ],
+      "rank": 11,
+      "ctr": 0.16129032258064516,
+      "position": 8.29032258064516
+    },
+    {
+      "url": "https://skillscout.sh/official/razorpay/",
+      "clicks": 5,
+      "impressions": 29,
+      "sourceUrls": [
+        "https://skillscout.sh/official/razorpay/"
+      ],
+      "rank": 12,
+      "ctr": 0.1724137931034483,
+      "position": 7.241379310344827
+    },
+    {
+      "url": "https://skillscout.sh/official/symfony/",
+      "clicks": 4,
+      "impressions": 45,
+      "sourceUrls": [
+        "https://skillscout.sh/official/symfony/"
+      ],
+      "rank": 13,
+      "ctr": 0.08888888888888889,
+      "position": 8.355555555555554
+    },
+    {
+      "url": "https://skillscout.sh/official/vuetifyjs/",
+      "clicks": 4,
+      "impressions": 37,
+      "sourceUrls": [
+        "https://skillscout.sh/official/vuetifyjs/"
+      ],
+      "rank": 14,
+      "ctr": 0.10810810810810811,
+      "position": 4.837837837837838
+    },
+    {
+      "url": "https://skillscout.sh/official/mckinsey/",
+      "clicks": 4,
+      "impressions": 28,
+      "sourceUrls": [
+        "https://skillscout.sh/official/mckinsey/"
+      ],
+      "rank": 15,
+      "ctr": 0.14285714285714285,
+      "position": 6.285714285714286
+    },
+    {
+      "url": "https://skillscout.sh/official/esphome/",
+      "clicks": 4,
+      "impressions": 19,
+      "sourceUrls": [
+        "https://skillscout.sh/official/esphome/"
+      ],
+      "rank": 16,
+      "ctr": 0.21052631578947367,
+      "position": 4.421052631578947
+    },
+    {
+      "url": "https://skillscout.sh/official/xilinx/",
+      "clicks": 4,
+      "impressions": 14,
+      "sourceUrls": [
+        "https://skillscout.sh/official/xilinx/"
+      ],
+      "rank": 17,
+      "ctr": 0.2857142857142857,
+      "position": 5.571428571428571
+    },
+    {
+      "url": "https://skillscout.sh/official/cursor/",
+      "clicks": 3,
+      "impressions": 1792,
+      "sourceUrls": [
+        "https://skillscout.sh/official/cursor/"
+      ],
+      "rank": 18,
+      "ctr": 0.0016741071428571428,
+      "position": 6.833705357142857
+    },
+    {
+      "url": "https://skillscout.sh/official/semantica-agi/",
+      "clicks": 3,
+      "impressions": 337,
+      "sourceUrls": [
+        "https://skillscout.sh/official/semantica-agi/"
+      ],
+      "rank": 19,
+      "ctr": 0.008902077151335312,
+      "position": 5.350148367952523
+    },
+    {
+      "url": "https://skillscout.sh/official/repowise-dev/",
+      "clicks": 3,
+      "impressions": 57,
+      "sourceUrls": [
+        "https://skillscout.sh/official/repowise-dev/"
+      ],
+      "rank": 20,
+      "ctr": 0.05263157894736842,
+      "position": 4.631578947368421
+    },
+    {
+      "url": "https://skillscout.sh/official/sonar-solutions/",
+      "clicks": 3,
+      "impressions": 40,
+      "sourceUrls": [
+        "https://skillscout.sh/official/sonar-solutions/"
+      ],
+      "rank": 21,
+      "ctr": 0.075,
+      "position": 7.7
+    },
+    {
+      "url": "https://skillscout.sh/official/prefecthq/",
+      "clicks": 3,
+      "impressions": 38,
+      "sourceUrls": [
+        "https://skillscout.sh/official/prefecthq/"
+      ],
+      "rank": 22,
+      "ctr": 0.07894736842105263,
+      "position": 5.552631578947368
+    },
+    {
+      "url": "https://skillscout.sh/official/atlassian/",
+      "clicks": 3,
+      "impressions": 37,
+      "sourceUrls": [
+        "https://skillscout.sh/official/atlassian/"
+      ],
+      "rank": 23,
+      "ctr": 0.08108108108108109,
+      "position": 6.1891891891891895
+    },
+    {
+      "url": "https://skillscout.sh/official/danbooru/",
+      "clicks": 3,
+      "impressions": 23,
+      "sourceUrls": [
+        "https://skillscout.sh/official/danbooru/"
+      ],
+      "rank": 24,
+      "ctr": 0.13043478260869565,
+      "position": 5.173913043478261
+    },
+    {
+      "url": "https://skillscout.sh/official/dolibarr/",
+      "clicks": 3,
+      "impressions": 22,
+      "sourceUrls": [
+        "https://skillscout.sh/official/dolibarr/"
+      ],
+      "rank": 25,
+      "ctr": 0.13636363636363635,
+      "position": 7.590909090909091
+    },
+    {
+      "url": "https://skillscout.sh/official/vaadin/",
+      "clicks": 3,
+      "impressions": 17,
+      "sourceUrls": [
+        "https://skillscout.sh/official/vaadin/"
+      ],
+      "rank": 26,
+      "ctr": 0.17647058823529413,
+      "position": 6.9411764705882355
+    },
+    {
+      "url": "https://skillscout.sh/official/onlyoffice/",
+      "clicks": 3,
+      "impressions": 16,
+      "sourceUrls": [
+        "https://skillscout.sh/official/onlyoffice/"
+      ],
+      "rank": 27,
+      "ctr": 0.1875,
+      "position": 5.375
+    },
+    {
+      "url": "https://skillscout.sh/official/pingdotgg/",
+      "clicks": 3,
+      "impressions": 15,
+      "sourceUrls": [
+        "https://skillscout.sh/official/pingdotgg/"
+      ],
+      "rank": 28,
+      "ctr": 0.2,
+      "position": 4.466666666666667
+    },
+    {
+      "url": "https://skillscout.sh/official/schematichq/",
+      "clicks": 3,
+      "impressions": 9,
+      "sourceUrls": [
+        "https://skillscout.sh/official/schematichq/"
+      ],
+      "rank": 29,
+      "ctr": 0.3333333333333333,
+      "position": 5.111111111111111
+    },
+    {
+      "url": "https://skillscout.sh/official/tencent/",
+      "clicks": 2,
+      "impressions": 667,
+      "sourceUrls": [
+        "https://skillscout.sh/official/tencent/"
+      ],
+      "rank": 30,
+      "ctr": 0.0029985007496251873,
+      "position": 6.217391304347826
+    },
+    {
+      "url": "https://skillscout.sh/official/clickhouse/",
+      "clicks": 2,
+      "impressions": 488,
+      "sourceUrls": [
+        "https://skillscout.sh/official/clickhouse/"
+      ],
+      "rank": 31,
+      "ctr": 0.004098360655737705,
+      "position": 13.487704918032787
+    },
+    {
+      "url": "https://skillscout.sh/official/8090-inc/",
+      "clicks": 2,
+      "impressions": 132,
+      "sourceUrls": [
+        "https://skillscout.sh/official/8090-inc/"
+      ],
+      "rank": 32,
+      "ctr": 0.015151515151515152,
+      "position": 6.856060606060606
+    },
+    {
+      "url": "https://skillscout.sh/official/usekaneo/",
+      "clicks": 2,
+      "impressions": 122,
+      "sourceUrls": [
+        "https://skillscout.sh/official/usekaneo/"
+      ],
+      "rank": 33,
+      "ctr": 0.01639344262295082,
+      "position": 6.475409836065574
+    },
+    {
+      "url": "https://skillscout.sh/official/codelytv/",
+      "clicks": 2,
+      "impressions": 87,
+      "sourceUrls": [
+        "https://skillscout.sh/official/codelytv/"
+      ],
+      "rank": 34,
+      "ctr": 0.022988505747126436,
+      "position": 4.827586206896552
+    },
+    {
+      "url": "https://skillscout.sh/official/kirodotdev/",
+      "clicks": 2,
+      "impressions": 84,
+      "sourceUrls": [
+        "https://skillscout.sh/official/kirodotdev/"
+      ],
+      "rank": 35,
+      "ctr": 0.023809523809523808,
+      "position": 8.654761904761905
+    },
+    {
+      "url": "https://skillscout.sh/official/matlab/page/2/",
+      "clicks": 2,
+      "impressions": 75,
+      "sourceUrls": [
+        "https://skillscout.sh/official/matlab/page/2/"
+      ],
+      "rank": 36,
+      "ctr": 0.02666666666666667,
+      "position": 8.6
+    },
+    {
+      "url": "https://skillscout.sh/official/backstage/",
+      "clicks": 2,
+      "impressions": 74,
+      "sourceUrls": [
+        "https://skillscout.sh/official/backstage/"
+      ],
+      "rank": 37,
+      "ctr": 0.02702702702702703,
+      "position": 7.175675675675675
+    },
+    {
+      "url": "https://skillscout.sh/official/tencentcloud/",
+      "clicks": 2,
+      "impressions": 58,
+      "sourceUrls": [
+        "https://skillscout.sh/official/tencentcloud/"
+      ],
+      "rank": 38,
+      "ctr": 0.034482758620689655,
+      "position": 5.9655172413793105
+    },
+    {
+      "url": "https://skillscout.sh/official/astral-sh/",
+      "clicks": 2,
+      "impressions": 57,
+      "sourceUrls": [
+        "https://skillscout.sh/official/astral-sh/"
+      ],
+      "rank": 39,
+      "ctr": 0.03508771929824561,
+      "position": 7.2631578947368425
+    },
+    {
+      "url": "https://skillscout.sh/official/redis/",
+      "clicks": 2,
+      "impressions": 55,
+      "sourceUrls": [
+        "https://skillscout.sh/official/redis/"
+      ],
+      "rank": 40,
+      "ctr": 0.03636363636363636,
+      "position": 6.8545454545454545
+    },
+    {
+      "url": "https://skillscout.sh/official/tldraw/",
+      "clicks": 2,
+      "impressions": 44,
+      "sourceUrls": [
+        "https://skillscout.sh/official/tldraw/"
+      ],
+      "rank": 41,
+      "ctr": 0.045454545454545456,
+      "position": 7.454545454545454
+    },
+    {
+      "url": "https://skillscout.sh/official/octobercms/",
+      "clicks": 2,
+      "impressions": 39,
+      "sourceUrls": [
+        "https://skillscout.sh/official/octobercms/"
+      ],
+      "rank": 42,
+      "ctr": 0.05128205128205128,
+      "position": 10.102564102564102
+    },
+    {
+      "url": "https://skillscout.sh/official/tsuga-dev/",
+      "clicks": 2,
+      "impressions": 38,
+      "sourceUrls": [
+        "https://skillscout.sh/official/tsuga-dev/"
+      ],
+      "rank": 43,
+      "ctr": 0.05263157894736842,
+      "position": 5.368421052631579
+    },
+    {
+      "url": "https://skillscout.sh/official/pnpm/",
+      "clicks": 2,
+      "impressions": 34,
+      "sourceUrls": [
+        "https://skillscout.sh/official/pnpm/"
+      ],
+      "rank": 44,
+      "ctr": 0.058823529411764705,
+      "position": 8.147058823529413
+    },
+    {
+      "url": "https://skillscout.sh/official/cogfoundry-labs/",
+      "clicks": 2,
+      "impressions": 33,
+      "sourceUrls": [
+        "https://skillscout.sh/official/cogfoundry-labs/"
+      ],
+      "rank": 45,
+      "ctr": 0.06060606060606061,
+      "position": 5.515151515151516
+    },
+    {
+      "url": "https://skillscout.sh/official/nxp-mcuxpresso/",
+      "clicks": 2,
+      "impressions": 33,
+      "sourceUrls": [
+        "https://skillscout.sh/official/nxp-mcuxpresso/"
+      ],
+      "rank": 46,
+      "ctr": 0.06060606060606061,
+      "position": 5.787878787878788
+    },
+    {
+      "url": "https://skillscout.sh/official/snowflake-labs/",
+      "clicks": 2,
+      "impressions": 31,
+      "sourceUrls": [
+        "https://skillscout.sh/official/snowflake-labs/"
+      ],
+      "rank": 47,
+      "ctr": 0.06451612903225806,
+      "position": 8.806451612903226
+    },
+    {
+      "url": "https://skillscout.sh/official/getprobo/",
+      "clicks": 2,
+      "impressions": 29,
+      "sourceUrls": [
+        "https://skillscout.sh/official/getprobo/"
+      ],
+      "rank": 48,
+      "ctr": 0.06896551724137931,
+      "position": 6.241379310344827
+    },
+    {
+      "url": "https://skillscout.sh/official/zotoio/",
+      "clicks": 2,
+      "impressions": 28,
+      "sourceUrls": [
+        "https://skillscout.sh/official/zotoio/"
+      ],
+      "rank": 49,
+      "ctr": 0.07142857142857142,
+      "position": 4.964285714285714
+    },
+    {
+      "url": "https://skillscout.sh/official/augmentcode/",
+      "clicks": 2,
+      "impressions": 27,
+      "sourceUrls": [
+        "https://skillscout.sh/official/augmentcode/"
+      ],
+      "rank": 50,
+      "ctr": 0.07407407407407407,
+      "position": 9.88888888888889
+    },
+    {
+      "url": "https://skillscout.sh/official/khoj-ai/",
+      "clicks": 2,
+      "impressions": 27,
+      "sourceUrls": [
+        "https://skillscout.sh/official/khoj-ai/"
+      ],
+      "rank": 51,
+      "ctr": 0.07407407407407407,
+      "position": 13.222222222222221
+    },
+    {
+      "url": "https://skillscout.sh/official/vitejs/",
+      "clicks": 2,
+      "impressions": 26,
+      "sourceUrls": [
+        "https://skillscout.sh/official/vitejs/"
+      ],
+      "rank": 52,
+      "ctr": 0.07692307692307693,
+      "position": 7.730769230769231
+    },
+    {
+      "url": "https://skillscout.sh/official/drawthingsai/",
+      "clicks": 2,
+      "impressions": 24,
+      "sourceUrls": [
+        "https://skillscout.sh/official/drawthingsai/"
+      ],
+      "rank": 53,
+      "ctr": 0.08333333333333333,
+      "position": 6.458333333333333
+    },
+    {
+      "url": "https://skillscout.sh/official/netcracker/page/2/",
+      "clicks": 2,
+      "impressions": 23,
+      "sourceUrls": [
+        "https://skillscout.sh/official/netcracker/page/2/"
+      ],
+      "rank": 54,
+      "ctr": 0.08695652173913043,
+      "position": 8.217391304347826
+    },
+    {
+      "url": "https://skillscout.sh/official/shiguredo/",
+      "clicks": 2,
+      "impressions": 23,
+      "sourceUrls": [
+        "https://skillscout.sh/official/shiguredo/"
+      ],
+      "rank": 55,
+      "ctr": 0.08695652173913043,
+      "position": 5.434782608695652
+    },
+    {
+      "url": "https://skillscout.sh/official/espressif/",
+      "clicks": 2,
+      "impressions": 22,
+      "sourceUrls": [
+        "https://skillscout.sh/official/espressif/"
+      ],
+      "rank": 56,
+      "ctr": 0.09090909090909091,
+      "position": 4.272727272727273
+    },
+    {
+      "url": "https://skillscout.sh/official/itsallcode/",
+      "clicks": 2,
+      "impressions": 21,
+      "sourceUrls": [
+        "https://skillscout.sh/official/itsallcode/"
+      ],
+      "rank": 57,
+      "ctr": 0.09523809523809523,
+      "position": 5.333333333333333
+    },
+    {
+      "url": "https://skillscout.sh/official/evilmartians/",
+      "clicks": 2,
+      "impressions": 20,
+      "sourceUrls": [
+        "https://skillscout.sh/official/evilmartians/"
+      ],
+      "rank": 58,
+      "ctr": 0.1,
+      "position": 6.05
+    },
+    {
+      "url": "https://skillscout.sh/official/octopusdeploy/",
+      "clicks": 2,
+      "impressions": 19,
+      "sourceUrls": [
+        "https://skillscout.sh/official/octopusdeploy/"
+      ],
+      "rank": 59,
+      "ctr": 0.10526315789473684,
+      "position": 6.578947368421052
+    },
+    {
+      "url": "https://skillscout.sh/official/palantir/",
+      "clicks": 2,
+      "impressions": 18,
+      "sourceUrls": [
+        "https://skillscout.sh/official/palantir/"
+      ],
+      "rank": 60,
+      "ctr": 0.1111111111111111,
+      "position": 8.055555555555555
+    },
+    {
+      "url": "https://skillscout.sh/official/spack/",
+      "clicks": 2,
+      "impressions": 18,
+      "sourceUrls": [
+        "https://skillscout.sh/official/spack/"
+      ],
+      "rank": 61,
+      "ctr": 0.1111111111111111,
+      "position": 15.777777777777779
+    },
+    {
+      "url": "https://skillscout.sh/official/whopio/",
+      "clicks": 2,
+      "impressions": 18,
+      "sourceUrls": [
+        "https://skillscout.sh/official/whopio/"
+      ],
+      "rank": 62,
+      "ctr": 0.1111111111111111,
+      "position": 7.111111111111111
+    },
+    {
+      "url": "https://skillscout.sh/official/heyputer/",
+      "clicks": 2,
+      "impressions": 17,
+      "sourceUrls": [
+        "https://skillscout.sh/official/heyputer/"
+      ],
+      "rank": 63,
+      "ctr": 0.11764705882352941,
+      "position": 5.588235294117647
+    },
+    {
+      "url": "https://skillscout.sh/official/hyperdbg/",
+      "clicks": 2,
+      "impressions": 17,
+      "sourceUrls": [
+        "https://skillscout.sh/official/hyperdbg/"
+      ],
+      "rank": 64,
+      "ctr": 0.11764705882352941,
+      "position": 6.529411764705882
+    },
+    {
+      "url": "https://skillscout.sh/official/go-vikunja/",
+      "clicks": 2,
+      "impressions": 16,
+      "sourceUrls": [
+        "https://skillscout.sh/official/go-vikunja/"
+      ],
+      "rank": 65,
+      "ctr": 0.125,
+      "position": 4.625
+    },
+    {
+      "url": "https://skillscout.sh/official/centreon/",
+      "clicks": 2,
+      "impressions": 15,
+      "sourceUrls": [
+        "https://skillscout.sh/official/centreon/"
+      ],
+      "rank": 66,
+      "ctr": 0.13333333333333333,
+      "position": 7.733333333333333
+    },
+    {
+      "url": "https://skillscout.sh/official/project-navi/",
+      "clicks": 2,
+      "impressions": 15,
+      "sourceUrls": [
+        "https://skillscout.sh/official/project-navi/"
+      ],
+      "rank": 67,
+      "ctr": 0.13333333333333333,
+      "position": 5.866666666666666
+    },
+    {
+      "url": "https://skillscout.sh/official/aerospike/",
+      "clicks": 2,
+      "impressions": 14,
+      "sourceUrls": [
+        "https://skillscout.sh/official/aerospike/"
+      ],
+      "rank": 68,
+      "ctr": 0.14285714285714285,
+      "position": 16.0
+    },
+    {
+      "url": "https://skillscout.sh/official/oxc-project/",
+      "clicks": 2,
+      "impressions": 13,
+      "sourceUrls": [
+        "https://skillscout.sh/official/oxc-project/"
+      ],
+      "rank": 69,
+      "ctr": 0.15384615384615385,
+      "position": 4.769230769230769
+    },
+    {
+      "url": "https://skillscout.sh/official/cyclonedx/",
+      "clicks": 2,
+      "impressions": 12,
+      "sourceUrls": [
+        "https://skillscout.sh/official/cyclonedx/"
+      ],
+      "rank": 70,
+      "ctr": 0.16666666666666666,
+      "position": 6.583333333333333
+    },
+    {
+      "url": "https://skillscout.sh/official/nativephp/",
+      "clicks": 2,
+      "impressions": 11,
+      "sourceUrls": [
+        "https://skillscout.sh/official/nativephp/"
+      ],
+      "rank": 71,
+      "ctr": 0.18181818181818182,
+      "position": 5.363636363636363
+    },
+    {
+      "url": "https://skillscout.sh/official/shelby/",
+      "clicks": 2,
+      "impressions": 11,
+      "sourceUrls": [
+        "https://skillscout.sh/official/shelby/"
+      ],
+      "rank": 72,
+      "ctr": 0.18181818181818182,
+      "position": 5.818181818181818
+    },
+    {
+      "url": "https://skillscout.sh/official/vendurehq/",
+      "clicks": 2,
+      "impressions": 10,
+      "sourceUrls": [
+        "https://skillscout.sh/official/vendurehq/"
+      ],
+      "rank": 73,
+      "ctr": 0.2,
+      "position": 4.8
+    },
+    {
+      "url": "https://skillscout.sh/official/kununu/",
+      "clicks": 2,
+      "impressions": 9,
+      "sourceUrls": [
+        "https://skillscout.sh/official/kununu/"
+      ],
+      "rank": 74,
+      "ctr": 0.2222222222222222,
+      "position": 2.888888888888889
+    },
+    {
+      "url": "https://skillscout.sh/official/ploi/",
+      "clicks": 2,
+      "impressions": 9,
+      "sourceUrls": [
+        "https://skillscout.sh/official/ploi/"
+      ],
+      "rank": 75,
+      "ctr": 0.2222222222222222,
+      "position": 6.111111111111111
+    },
+    {
+      "url": "https://skillscout.sh/official/python/",
+      "clicks": 2,
+      "impressions": 9,
+      "sourceUrls": [
+        "https://skillscout.sh/official/python/"
+      ],
+      "rank": 76,
+      "ctr": 0.2222222222222222,
+      "position": 5.222222222222222
+    },
+    {
+      "url": "https://skillscout.sh/official/skyscanner/",
+      "clicks": 2,
+      "impressions": 9,
+      "sourceUrls": [
+        "https://skillscout.sh/official/skyscanner/"
+      ],
+      "rank": 77,
+      "ctr": 0.2222222222222222,
+      "position": 12.444444444444445
+    },
+    {
+      "url": "https://skillscout.sh/official/ardupilot/",
+      "clicks": 2,
+      "impressions": 8,
+      "sourceUrls": [
+        "https://skillscout.sh/official/ardupilot/"
+      ],
+      "rank": 78,
+      "ctr": 0.25,
+      "position": 4.875
+    },
+    {
+      "url": "https://skillscout.sh/official/discourse/",
+      "clicks": 2,
+      "impressions": 8,
+      "sourceUrls": [
+        "https://skillscout.sh/official/discourse/"
+      ],
+      "rank": 79,
+      "ctr": 0.25,
+      "position": 6.75
+    },
+    {
+      "url": "https://skillscout.sh/official/joinmassive/",
+      "clicks": 2,
+      "impressions": 8,
+      "sourceUrls": [
+        "https://skillscout.sh/official/joinmassive/"
+      ],
+      "rank": 80,
+      "ctr": 0.25,
+      "position": 4.625
+    },
+    {
+      "url": "https://skillscout.sh/official/liferay/",
+      "clicks": 2,
+      "impressions": 8,
+      "sourceUrls": [
+        "https://skillscout.sh/official/liferay/"
+      ],
+      "rank": 81,
+      "ctr": 0.25,
+      "position": 6.0
+    },
+    {
+      "url": "https://skillscout.sh/official/ansible-collections/",
+      "clicks": 2,
+      "impressions": 7,
+      "sourceUrls": [
+        "https://skillscout.sh/official/ansible-collections/"
+      ],
+      "rank": 82,
+      "ctr": 0.2857142857142857,
+      "position": 5.714285714285714
+    },
+    {
+      "url": "https://skillscout.sh/official/cognigy/",
+      "clicks": 2,
+      "impressions": 7,
+      "sourceUrls": [
+        "https://skillscout.sh/official/cognigy/"
+      ],
+      "rank": 83,
+      "ctr": 0.2857142857142857,
+      "position": 7.0
+    },
+    {
+      "url": "https://skillscout.sh/official/narrative-io/",
+      "clicks": 2,
+      "impressions": 7,
+      "sourceUrls": [
+        "https://skillscout.sh/official/narrative-io/"
+      ],
+      "rank": 84,
+      "ctr": 0.2857142857142857,
+      "position": 17.285714285714285
+    },
+    {
+      "url": "https://skillscout.sh/official/nextflow-io/",
+      "clicks": 2,
+      "impressions": 7,
+      "sourceUrls": [
+        "https://skillscout.sh/official/nextflow-io/"
+      ],
+      "rank": 85,
+      "ctr": 0.2857142857142857,
+      "position": 4.285714285714286
+    },
+    {
+      "url": "https://skillscout.sh/official/casdoor/",
+      "clicks": 2,
+      "impressions": 6,
+      "sourceUrls": [
+        "https://skillscout.sh/official/casdoor/"
+      ],
+      "rank": 86,
+      "ctr": 0.3333333333333333,
+      "position": 3.0
+    },
+    {
+      "url": "https://skillscout.sh/official/trendyol/",
+      "clicks": 2,
+      "impressions": 6,
+      "sourceUrls": [
+        "https://skillscout.sh/official/trendyol/"
+      ],
+      "rank": 87,
+      "ctr": 0.3333333333333333,
+      "position": 4.166666666666666
+    },
+    {
+      "url": "https://skillscout.sh/official/uxcel-lab/",
+      "clicks": 2,
+      "impressions": 5,
+      "sourceUrls": [
+        "https://skillscout.sh/official/uxcel-lab/"
+      ],
+      "rank": 88,
+      "ctr": 0.4,
+      "position": 3.2
+    },
+    {
+      "url": "https://skillscout.sh/official/hyperf/",
+      "clicks": 2,
+      "impressions": 3,
+      "sourceUrls": [
+        "https://skillscout.sh/official/hyperf/"
+      ],
+      "rank": 89,
+      "ctr": 0.6666666666666666,
+      "position": 3.3333333333333335
+    },
+    {
+      "url": "https://skillscout.sh/official/obsidian/",
+      "clicks": 1,
+      "impressions": 242,
+      "sourceUrls": [
+        "https://skillscout.sh/official/obsidian/"
+      ],
+      "rank": 90,
+      "ctr": 0.004132231404958678,
+      "position": 30.84297520661157
+    },
+    {
+      "url": "https://skillscout.sh/official/aliyun/",
+      "clicks": 1,
+      "impressions": 233,
+      "sourceUrls": [
+        "https://skillscout.sh/official/aliyun/"
+      ],
+      "rank": 91,
+      "ctr": 0.004291845493562232,
+      "position": 7.257510729613734
+    },
+    {
+      "url": "https://skillscout.sh/official/grafana/",
+      "clicks": 1,
+      "impressions": 140,
+      "sourceUrls": [
+        "https://skillscout.sh/official/grafana/"
+      ],
+      "rank": 92,
+      "ctr": 0.007142857142857143,
+      "position": 9.05
+    },
+    {
+      "url": "https://skillscout.sh/official/axonivy-market/",
+      "clicks": 1,
+      "impressions": 109,
+      "sourceUrls": [
+        "https://skillscout.sh/official/axonivy-market/"
+      ],
+      "rank": 93,
+      "ctr": 0.009174311926605505,
+      "position": 6.761467889908257
+    },
+    {
+      "url": "https://skillscout.sh/official/mml-io/",
+      "clicks": 1,
+      "impressions": 108,
+      "sourceUrls": [
+        "https://skillscout.sh/official/mml-io/"
+      ],
+      "rank": 94,
+      "ctr": 0.009259259259259259,
+      "position": 7.666666666666667
+    },
+    {
+      "url": "https://skillscout.sh/official/betagouv/",
+      "clicks": 1,
+      "impressions": 105,
+      "sourceUrls": [
+        "https://skillscout.sh/official/betagouv/"
+      ],
+      "rank": 95,
+      "ctr": 0.009523809523809525,
+      "position": 9.81904761904762
+    },
+    {
+      "url": "https://skillscout.sh/official/stablyai/",
+      "clicks": 1,
+      "impressions": 95,
+      "sourceUrls": [
+        "https://skillscout.sh/official/stablyai/"
+      ],
+      "rank": 96,
+      "ctr": 0.010526315789473684,
+      "position": 6.926315789473684
+    },
+    {
+      "url": "https://skillscout.sh/official/compozy/",
+      "clicks": 1,
+      "impressions": 84,
+      "sourceUrls": [
+        "https://skillscout.sh/official/compozy/"
+      ],
+      "rank": 97,
+      "ctr": 0.011904761904761904,
+      "position": 6.440476190476191
+    },
+    {
+      "url": "https://skillscout.sh/official/anthropics/",
+      "clicks": 1,
+      "impressions": 82,
+      "sourceUrls": [
+        "https://skillscout.sh/official/anthropics/"
+      ],
+      "rank": 98,
+      "ctr": 0.012195121951219513,
+      "position": 5.182926829268292
+    },
+    {
+      "url": "https://skillscout.sh/official/nightscout/",
+      "clicks": 1,
+      "impressions": 82,
+      "sourceUrls": [
+        "https://skillscout.sh/official/nightscout/"
+      ],
+      "rank": 99,
+      "ctr": 0.012195121951219513,
+      "position": 13.060975609756097
+    },
+    {
+      "url": "https://skillscout.sh/official/sweepai/",
+      "clicks": 1,
+      "impressions": 72,
+      "sourceUrls": [
+        "https://skillscout.sh/official/sweepai/"
+      ],
+      "rank": 100,
+      "ctr": 0.013888888888888888,
+      "position": 11.88888888888889
+    },
+    {
+      "url": "https://skillscout.sh/official/exa-labs/",
+      "clicks": 1,
+      "impressions": 63,
+      "sourceUrls": [
+        "https://skillscout.sh/official/exa-labs/"
+      ],
+      "rank": 101,
+      "ctr": 0.015873015873015872,
+      "position": 6.380952380952381
+    },
+    {
+      "url": "https://skillscout.sh/official/getkimchi/",
+      "clicks": 1,
+      "impressions": 61,
+      "sourceUrls": [
+        "https://skillscout.sh/official/getkimchi/"
+      ],
+      "rank": 102,
+      "ctr": 0.01639344262295082,
+      "position": 8.049180327868854
+    },
+    {
+      "url": "https://skillscout.sh/official/every-app/",
+      "clicks": 1,
+      "impressions": 59,
+      "sourceUrls": [
+        "https://skillscout.sh/official/every-app/"
+      ],
+      "rank": 103,
+      "ctr": 0.01694915254237288,
+      "position": 18.033898305084747
+    },
+    {
+      "url": "https://skillscout.sh/official/oierdb-ng/",
+      "clicks": 1,
+      "impressions": 59,
+      "sourceUrls": [
+        "https://skillscout.sh/official/oierdb-ng/"
+      ],
+      "rank": 104,
+      "ctr": 0.01694915254237288,
+      "position": 4.915254237288135
+    },
+    {
+      "url": "https://skillscout.sh/official/google-gemini/",
+      "clicks": 1,
+      "impressions": 57,
+      "sourceUrls": [
+        "https://skillscout.sh/official/google-gemini/"
+      ],
+      "rank": 105,
+      "ctr": 0.017543859649122806,
+      "position": 33.24561403508772
+    },
+    {
+      "url": "https://skillscout.sh/official/paralect/",
+      "clicks": 1,
+      "impressions": 57,
+      "sourceUrls": [
+        "https://skillscout.sh/official/paralect/"
+      ],
+      "rank": 106,
+      "ctr": 0.017543859649122806,
+      "position": 4.491228070175438
+    },
+    {
+      "url": "https://skillscout.sh/official/ton-org/",
+      "clicks": 1,
+      "impressions": 54,
+      "sourceUrls": [
+        "https://skillscout.sh/official/ton-org/"
+      ],
+      "rank": 107,
+      "ctr": 0.018518518518518517,
+      "position": 10.518518518518519
+    },
+    {
+      "url": "https://skillscout.sh/official/aliyun/page/5/",
+      "clicks": 1,
+      "impressions": 52,
+      "sourceUrls": [
+        "https://skillscout.sh/official/aliyun/page/5/"
+      ],
+      "rank": 108,
+      "ctr": 0.019230769230769232,
+      "position": 9.884615384615385
+    },
+    {
+      "url": "https://skillscout.sh/official/netcracker/",
+      "clicks": 1,
+      "impressions": 48,
+      "sourceUrls": [
+        "https://skillscout.sh/official/netcracker/"
+      ],
+      "rank": 109,
+      "ctr": 0.020833333333333332,
+      "position": 5.979166666666667
+    },
+    {
+      "url": "https://skillscout.sh/official/streamlit/",
+      "clicks": 1,
+      "impressions": 47,
+      "sourceUrls": [
+        "https://skillscout.sh/official/streamlit/"
+      ],
+      "rank": 110,
+      "ctr": 0.02127659574468085,
+      "position": 9.617021276595745
+    },
+    {
+      "url": "https://skillscout.sh/official/amplitude/",
+      "clicks": 1,
+      "impressions": 46,
+      "sourceUrls": [
+        "https://skillscout.sh/official/amplitude/"
+      ],
+      "rank": 111,
+      "ctr": 0.021739130434782608,
+      "position": 5.739130434782608
+    },
+    {
+      "url": "https://skillscout.sh/official/denoland/",
+      "clicks": 1,
+      "impressions": 44,
+      "sourceUrls": [
+        "https://skillscout.sh/official/denoland/"
+      ],
+      "rank": 112,
+      "ctr": 0.022727272727272728,
+      "position": 7.2272727272727275
+    },
+    {
+      "url": "https://skillscout.sh/official/sap/",
+      "clicks": 1,
+      "impressions": 40,
+      "sourceUrls": [
+        "https://skillscout.sh/official/sap/"
+      ],
+      "rank": 113,
+      "ctr": 0.025,
+      "position": 13.25
+    },
+    {
+      "url": "https://skillscout.sh/official/pluggyai/",
+      "clicks": 1,
+      "impressions": 39,
+      "sourceUrls": [
+        "https://skillscout.sh/official/pluggyai/"
+      ],
+      "rank": 114,
+      "ctr": 0.02564102564102564,
+      "position": 6.410256410256411
+    },
+    {
+      "url": "https://skillscout.sh/official/upstageai/",
+      "clicks": 1,
+      "impressions": 39,
+      "sourceUrls": [
+        "https://skillscout.sh/official/upstageai/"
+      ],
+      "rank": 115,
+      "ctr": 0.02564102564102564,
+      "position": 7.205128205128205
+    },
+    {
+      "url": "https://skillscout.sh/official/firstsun-dev/",
+      "clicks": 1,
+      "impressions": 38,
+      "sourceUrls": [
+        "https://skillscout.sh/official/firstsun-dev/"
+      ],
+      "rank": 116,
+      "ctr": 0.02631578947368421,
+      "position": 3.5789473684210527
+    },
+    {
+      "url": "https://skillscout.sh/official/software-mansion/",
+      "clicks": 1,
+      "impressions": 38,
+      "sourceUrls": [
+        "https://skillscout.sh/official/software-mansion/"
+      ],
+      "rank": 117,
+      "ctr": 0.02631578947368421,
+      "position": 5.7631578947368425
+    },
+    {
+      "url": "https://skillscout.sh/official/inference-sh/",
+      "clicks": 1,
+      "impressions": 37,
+      "sourceUrls": [
+        "https://skillscout.sh/official/inference-sh/"
+      ],
+      "rank": 118,
+      "ctr": 0.02702702702702703,
+      "position": 4.0
+    },
+    {
+      "url": "https://skillscout.sh/official/matlab/",
+      "clicks": 1,
+      "impressions": 37,
+      "sourceUrls": [
+        "https://skillscout.sh/official/matlab/"
+      ],
+      "rank": 119,
+      "ctr": 0.02702702702702703,
+      "position": 8.08108108108108
+    },
+    {
+      "url": "https://skillscout.sh/official/polarsource/",
+      "clicks": 1,
+      "impressions": 36,
+      "sourceUrls": [
+        "https://skillscout.sh/official/polarsource/"
+      ],
+      "rank": 120,
+      "ctr": 0.027777777777777776,
+      "position": 6.222222222222222
+    },
+    {
+      "url": "https://skillscout.sh/official/mistralai/",
+      "clicks": 1,
+      "impressions": 34,
+      "sourceUrls": [
+        "https://skillscout.sh/official/mistralai/"
+      ],
+      "rank": 121,
+      "ctr": 0.029411764705882353,
+      "position": 10.205882352941176
+    },
+    {
+      "url": "https://skillscout.sh/official/openshift/",
+      "clicks": 1,
+      "impressions": 34,
+      "sourceUrls": [
+        "https://skillscout.sh/official/openshift/"
+      ],
+      "rank": 122,
+      "ctr": 0.029411764705882353,
+      "position": 7.088235294117647
+    },
+    {
+      "url": "https://skillscout.sh/official/snyk/",
+      "clicks": 1,
+      "impressions": 33,
+      "sourceUrls": [
+        "https://skillscout.sh/official/snyk/"
+      ],
+      "rank": 123,
+      "ctr": 0.030303030303030304,
+      "position": 7.9393939393939394
+    },
+    {
+      "url": "https://skillscout.sh/official/awslabs/",
+      "clicks": 1,
+      "impressions": 32,
+      "sourceUrls": [
+        "https://skillscout.sh/official/awslabs/"
+      ],
+      "rank": 124,
+      "ctr": 0.03125,
+      "position": 6.625
+    },
+    {
+      "url": "https://skillscout.sh/official/salesforce/",
+      "clicks": 1,
+      "impressions": 32,
+      "sourceUrls": [
+        "https://skillscout.sh/official/salesforce/"
+      ],
+      "rank": 125,
+      "ctr": 0.03125,
+      "position": 7.1875
+    },
+    {
+      "url": "https://skillscout.sh/official/trycompai/",
+      "clicks": 1,
+      "impressions": 32,
+      "sourceUrls": [
+        "https://skillscout.sh/official/trycompai/"
+      ],
+      "rank": 126,
+      "ctr": 0.03125,
+      "position": 6.71875
+    },
+    {
+      "url": "https://skillscout.sh/official/mattermost/",
+      "clicks": 1,
+      "impressions": 30,
+      "sourceUrls": [
+        "https://skillscout.sh/official/mattermost/"
+      ],
+      "rank": 127,
+      "ctr": 0.03333333333333333,
+      "position": 8.866666666666667
+    },
+    {
+      "url": "https://skillscout.sh/official/commercetools/",
+      "clicks": 1,
+      "impressions": 28,
+      "sourceUrls": [
+        "https://skillscout.sh/official/commercetools/"
+      ],
+      "rank": 128,
+      "ctr": 0.03571428571428571,
+      "position": 15.107142857142858
+    },
+    {
+      "url": "https://skillscout.sh/official/litestar-org/",
+      "clicks": 1,
+      "impressions": 28,
+      "sourceUrls": [
+        "https://skillscout.sh/official/litestar-org/"
+      ],
+      "rank": 129,
+      "ctr": 0.03571428571428571,
+      "position": 6.607142857142857
+    },
+    {
+      "url": "https://skillscout.sh/official/preactjs/",
+      "clicks": 1,
+      "impressions": 28,
+      "sourceUrls": [
+        "https://skillscout.sh/official/preactjs/"
+      ],
+      "rank": 130,
+      "ctr": 0.03571428571428571,
+      "position": 42.714285714285715
+    },
+    {
+      "url": "https://skillscout.sh/official/langgenius/",
+      "clicks": 1,
+      "impressions": 27,
+      "sourceUrls": [
+        "https://skillscout.sh/official/langgenius/"
+      ],
+      "rank": 131,
+      "ctr": 0.037037037037037035,
+      "position": 5.481481481481482
+    },
+    {
+      "url": "https://skillscout.sh/official/laravel/",
+      "clicks": 1,
+      "impressions": 27,
+      "sourceUrls": [
+        "https://skillscout.sh/official/laravel/"
+      ],
+      "rank": 132,
+      "ctr": 0.037037037037037035,
+      "position": 13.333333333333334
+    },
+    {
+      "url": "https://skillscout.sh/official/ledgerhq/",
+      "clicks": 1,
+      "impressions": 27,
+      "sourceUrls": [
+        "https://skillscout.sh/official/ledgerhq/"
+      ],
+      "rank": 133,
+      "ctr": 0.037037037037037035,
+      "position": 8.148148148148149
+    },
+    {
+      "url": "https://skillscout.sh/official/ansible/",
+      "clicks": 1,
+      "impressions": 26,
+      "sourceUrls": [
+        "https://skillscout.sh/official/ansible/"
+      ],
+      "rank": 134,
+      "ctr": 0.038461538461538464,
+      "position": 8.192307692307693
+    },
+    {
+      "url": "https://skillscout.sh/official/eleven-labs/",
+      "clicks": 1,
+      "impressions": 26,
+      "sourceUrls": [
+        "https://skillscout.sh/official/eleven-labs/"
+      ],
+      "rank": 135,
+      "ctr": 0.038461538461538464,
+      "position": 11.307692307692308
+    },
+    {
+      "url": "https://skillscout.sh/official/playform/",
+      "clicks": 1,
+      "impressions": 26,
+      "sourceUrls": [
+        "https://skillscout.sh/official/playform/"
+      ],
+      "rank": 136,
+      "ctr": 0.038461538461538464,
+      "position": 12.76923076923077
+    },
+    {
+      "url": "https://skillscout.sh/official/toss/",
+      "clicks": 1,
+      "impressions": 26,
+      "sourceUrls": [
+        "https://skillscout.sh/official/toss/"
+      ],
+      "rank": 137,
+      "ctr": 0.038461538461538464,
+      "position": 8.461538461538462
+    },
+    {
+      "url": "https://skillscout.sh/official/owid/",
+      "clicks": 1,
+      "impressions": 25,
+      "sourceUrls": [
+        "https://skillscout.sh/official/owid/"
+      ],
+      "rank": 138,
+      "ctr": 0.04,
+      "position": 5.56
+    },
+    {
+      "url": "https://skillscout.sh/official/taosdata/",
+      "clicks": 1,
+      "impressions": 25,
+      "sourceUrls": [
+        "https://skillscout.sh/official/taosdata/"
+      ],
+      "rank": 139,
+      "ctr": 0.04,
+      "position": 5.04
+    },
+    {
+      "url": "https://skillscout.sh/official/duolingo/",
+      "clicks": 1,
+      "impressions": 24,
+      "sourceUrls": [
+        "https://skillscout.sh/official/duolingo/"
+      ],
+      "rank": 140,
+      "ctr": 0.041666666666666664,
+      "position": 6.958333333333333
+    },
+    {
+      "url": "https://skillscout.sh/official/epam/",
+      "clicks": 1,
+      "impressions": 24,
+      "sourceUrls": [
+        "https://skillscout.sh/official/epam/"
+      ],
+      "rank": 141,
+      "ctr": 0.041666666666666664,
+      "position": 7.166666666666667
+    },
+    {
+      "url": "https://skillscout.sh/official/nulab/",
+      "clicks": 1,
+      "impressions": 24,
+      "sourceUrls": [
+        "https://skillscout.sh/official/nulab/"
+      ],
+      "rank": 142,
+      "ctr": 0.041666666666666664,
+      "position": 7.416666666666667
+    },
+    {
+      "url": "https://skillscout.sh/official/adonisjs/",
+      "clicks": 1,
+      "impressions": 23,
+      "sourceUrls": [
+        "https://skillscout.sh/official/adonisjs/"
+      ],
+      "rank": 143,
+      "ctr": 0.043478260869565216,
+      "position": 7.6521739130434785
+    },
+    {
+      "url": "https://skillscout.sh/official/commandcodeai/",
+      "clicks": 1,
+      "impressions": 23,
+      "sourceUrls": [
+        "https://skillscout.sh/official/commandcodeai/"
+      ],
+      "rank": 144,
+      "ctr": 0.043478260869565216,
+      "position": 7.782608695652174
+    },
+    {
+      "url": "https://skillscout.sh/official/igoor-noprofit/",
+      "clicks": 1,
+      "impressions": 23,
+      "sourceUrls": [
+        "https://skillscout.sh/official/igoor-noprofit/"
+      ],
+      "rank": 145,
+      "ctr": 0.043478260869565216,
+      "position": 8.26086956521739
+    },
+    {
+      "url": "https://skillscout.sh/official/navidrome/",
+      "clicks": 1,
+      "impressions": 23,
+      "sourceUrls": [
+        "https://skillscout.sh/official/navidrome/"
+      ],
+      "rank": 146,
+      "ctr": 0.043478260869565216,
+      "position": 13.91304347826087
+    },
+    {
+      "url": "https://skillscout.sh/official/nxtg-ai/",
+      "clicks": 1,
+      "impressions": 23,
+      "sourceUrls": [
+        "https://skillscout.sh/official/nxtg-ai/"
+      ],
+      "rank": 147,
+      "ctr": 0.043478260869565216,
+      "position": 8.608695652173914
+    },
+    {
+      "url": "https://skillscout.sh/official/phpstan/",
+      "clicks": 1,
+      "impressions": 23,
+      "sourceUrls": [
+        "https://skillscout.sh/official/phpstan/"
+      ],
+      "rank": 148,
+      "ctr": 0.043478260869565216,
+      "position": 18.26086956521739
+    },
+    {
+      "url": "https://skillscout.sh/official/yugabyte/",
+      "clicks": 1,
+      "impressions": 23,
+      "sourceUrls": [
+        "https://skillscout.sh/official/yugabyte/"
+      ],
+      "rank": 149,
+      "ctr": 0.043478260869565216,
+      "position": 8.08695652173913
+    },
+    {
+      "url": "https://skillscout.sh/official/hex-inc/",
+      "clicks": 1,
+      "impressions": 22,
+      "sourceUrls": [
+        "https://skillscout.sh/official/hex-inc/"
+      ],
+      "rank": 150,
+      "ctr": 0.045454545454545456,
+      "position": 6.7272727272727275
+    },
+    {
+      "url": "https://skillscout.sh/official/socketdev/",
+      "clicks": 1,
+      "impressions": 22,
+      "sourceUrls": [
+        "https://skillscout.sh/official/socketdev/"
+      ],
+      "rank": 151,
+      "ctr": 0.045454545454545456,
+      "position": 6.590909090909091
+    },
+    {
+      "url": "https://skillscout.sh/official/wagtail/",
+      "clicks": 1,
+      "impressions": 22,
+      "sourceUrls": [
+        "https://skillscout.sh/official/wagtail/"
+      ],
+      "rank": 152,
+      "ctr": 0.045454545454545456,
+      "position": 11.090909090909092
+    },
+    {
+      "url": "https://skillscout.sh/official/questdb/",
+      "clicks": 1,
+      "impressions": 21,
+      "sourceUrls": [
+        "https://skillscout.sh/official/questdb/"
+      ],
+      "rank": 153,
+      "ctr": 0.047619047619047616,
+      "position": 7.190476190476191
+    },
+    {
+      "url": "https://skillscout.sh/official/scalekit-inc/",
+      "clicks": 1,
+      "impressions": 20,
+      "sourceUrls": [
+        "https://skillscout.sh/official/scalekit-inc/"
+      ],
+      "rank": 154,
+      "ctr": 0.05,
+      "position": 8.25
+    },
+    {
+      "url": "https://skillscout.sh/official/wundergraph/",
+      "clicks": 1,
+      "impressions": 19,
+      "sourceUrls": [
+        "https://skillscout.sh/official/wundergraph/"
+      ],
+      "rank": 155,
+      "ctr": 0.05263157894736842,
+      "position": 17.0
+    },
+    {
+      "url": "https://skillscout.sh/official/youdotcom-oss/",
+      "clicks": 1,
+      "impressions": 19,
+      "sourceUrls": [
+        "https://skillscout.sh/official/youdotcom-oss/"
+      ],
+      "rank": 156,
+      "ctr": 0.05263157894736842,
+      "position": 5.894736842105263
+    },
+    {
+      "url": "https://skillscout.sh/official/blockscout/",
+      "clicks": 1,
+      "impressions": 18,
+      "sourceUrls": [
+        "https://skillscout.sh/official/blockscout/"
+      ],
+      "rank": 157,
+      "ctr": 0.05555555555555555,
+      "position": 4.333333333333334
+    },
+    {
+      "url": "https://skillscout.sh/official/devolutions/",
+      "clicks": 1,
+      "impressions": 18,
+      "sourceUrls": [
+        "https://skillscout.sh/official/devolutions/"
+      ],
+      "rank": 158,
+      "ctr": 0.05555555555555555,
+      "position": 7.666666666666667
+    },
+    {
+      "url": "https://skillscout.sh/official/motion-creative/",
+      "clicks": 1,
+      "impressions": 18,
+      "sourceUrls": [
+        "https://skillscout.sh/official/motion-creative/"
+      ],
+      "rank": 159,
+      "ctr": 0.05555555555555555,
+      "position": 9.11111111111111
+    },
+    {
+      "url": "https://skillscout.sh/official/orderful/",
+      "clicks": 1,
+      "impressions": 18,
+      "sourceUrls": [
+        "https://skillscout.sh/official/orderful/"
+      ],
+      "rank": 160,
+      "ctr": 0.05555555555555555,
+      "position": 4.777777777777778
+    },
+    {
+      "url": "https://skillscout.sh/official/vechain/",
+      "clicks": 1,
+      "impressions": 18,
+      "sourceUrls": [
+        "https://skillscout.sh/official/vechain/"
+      ],
+      "rank": 161,
+      "ctr": 0.05555555555555555,
+      "position": 5.444444444444445
+    },
+    {
+      "url": "https://skillscout.sh/official/wirenboard/",
+      "clicks": 1,
+      "impressions": 18,
+      "sourceUrls": [
+        "https://skillscout.sh/official/wirenboard/"
+      ],
+      "rank": 162,
+      "ctr": 0.05555555555555555,
+      "position": 5.888888888888889
+    },
+    {
+      "url": "https://skillscout.sh/official/workweave/",
+      "clicks": 1,
+      "impressions": 18,
+      "sourceUrls": [
+        "https://skillscout.sh/official/workweave/"
+      ],
+      "rank": 163,
+      "ctr": 0.05555555555555555,
+      "position": 5.444444444444445
+    },
+    {
+      "url": "https://skillscout.sh/official/wso2/",
+      "clicks": 1,
+      "impressions": 18,
+      "sourceUrls": [
+        "https://skillscout.sh/official/wso2/"
+      ],
+      "rank": 164,
+      "ctr": 0.05555555555555555,
+      "position": 6.666666666666667
+    },
+    {
+      "url": "https://skillscout.sh/official/xquik-dev/",
+      "clicks": 1,
+      "impressions": 18,
+      "sourceUrls": [
+        "https://skillscout.sh/official/xquik-dev/"
+      ],
+      "rank": 165,
+      "ctr": 0.05555555555555555,
+      "position": 10.555555555555555
+    },
+    {
+      "url": "https://skillscout.sh/official/dagster-io/",
+      "clicks": 1,
+      "impressions": 17,
+      "sourceUrls": [
+        "https://skillscout.sh/official/dagster-io/"
+      ],
+      "rank": 166,
+      "ctr": 0.058823529411764705,
+      "position": 10.352941176470589
+    },
+    {
+      "url": "https://skillscout.sh/official/glossmod/",
+      "clicks": 1,
+      "impressions": 17,
+      "sourceUrls": [
+        "https://skillscout.sh/official/glossmod/"
+      ],
+      "rank": 167,
+      "ctr": 0.058823529411764705,
+      "position": 6.352941176470588
+    },
+    {
+      "url": "https://skillscout.sh/official/krakenfx/",
+      "clicks": 1,
+      "impressions": 17,
+      "sourceUrls": [
+        "https://skillscout.sh/official/krakenfx/"
+      ],
+      "rank": 168,
+      "ctr": 0.058823529411764705,
+      "position": 5.117647058823529
+    },
+    {
+      "url": "https://skillscout.sh/official/shopex/",
+      "clicks": 1,
+      "impressions": 17,
+      "sourceUrls": [
+        "https://skillscout.sh/official/shopex/"
+      ],
+      "rank": 169,
+      "ctr": 0.058823529411764705,
+      "position": 7.294117647058823
+    },
+    {
+      "url": "https://skillscout.sh/official/2389-research/",
+      "clicks": 1,
+      "impressions": 16,
+      "sourceUrls": [
+        "https://skillscout.sh/official/2389-research/"
+      ],
+      "rank": 170,
+      "ctr": 0.0625,
+      "position": 7.0
+    },
+    {
+      "url": "https://skillscout.sh/official/handsontable/",
+      "clicks": 1,
+      "impressions": 16,
+      "sourceUrls": [
+        "https://skillscout.sh/official/handsontable/"
+      ],
+      "rank": 171,
+      "ctr": 0.0625,
+      "position": 5.75
+    },
+    {
+      "url": "https://skillscout.sh/official/maplibre/",
+      "clicks": 1,
+      "impressions": 16,
+      "sourceUrls": [
+        "https://skillscout.sh/official/maplibre/"
+      ],
+      "rank": 172,
+      "ctr": 0.0625,
+      "position": 4.875
+    },
+    {
+      "url": "https://skillscout.sh/official/scouterna/",
+      "clicks": 1,
+      "impressions": 16,
+      "sourceUrls": [
+        "https://skillscout.sh/official/scouterna/"
+      ],
+      "rank": 173,
+      "ctr": 0.0625,
+      "position": 5.4375
+    },
+    {
+      "url": "https://skillscout.sh/official/sveltejs/",
+      "clicks": 1,
+      "impressions": 16,
+      "sourceUrls": [
+        "https://skillscout.sh/official/sveltejs/"
+      ],
+      "rank": 174,
+      "ctr": 0.0625,
+      "position": 6.0625
+    },
+    {
+      "url": "https://skillscout.sh/official/apolloio/",
+      "clicks": 1,
+      "impressions": 15,
+      "sourceUrls": [
+        "https://skillscout.sh/official/apolloio/"
+      ],
+      "rank": 175,
+      "ctr": 0.06666666666666667,
+      "position": 5.466666666666667
+    },
+    {
+      "url": "https://skillscout.sh/official/basetenlabs/",
+      "clicks": 1,
+      "impressions": 15,
+      "sourceUrls": [
+        "https://skillscout.sh/official/basetenlabs/"
+      ],
+      "rank": 176,
+      "ctr": 0.06666666666666667,
+      "position": 6.533333333333333
+    },
+    {
+      "url": "https://skillscout.sh/official/magicpatterns/",
+      "clicks": 1,
+      "impressions": 15,
+      "sourceUrls": [
+        "https://skillscout.sh/official/magicpatterns/"
+      ],
+      "rank": 177,
+      "ctr": 0.06666666666666667,
+      "position": 8.133333333333333
+    },
+    {
+      "url": "https://skillscout.sh/official/njupt-sast/",
+      "clicks": 1,
+      "impressions": 15,
+      "sourceUrls": [
+        "https://skillscout.sh/official/njupt-sast/"
+      ],
+      "rank": 178,
+      "ctr": 0.06666666666666667,
+      "position": 9.2
+    },
+    {
+      "url": "https://skillscout.sh/official/rasahq/",
+      "clicks": 1,
+      "impressions": 15,
+      "sourceUrls": [
+        "https://skillscout.sh/official/rasahq/"
+      ],
+      "rank": 179,
+      "ctr": 0.06666666666666667,
+      "position": 6.066666666666666
+    },
+    {
+      "url": "https://skillscout.sh/official/trustwallet/",
+      "clicks": 1,
+      "impressions": 15,
+      "sourceUrls": [
+        "https://skillscout.sh/official/trustwallet/"
+      ],
+      "rank": 180,
+      "ctr": 0.06666666666666667,
+      "position": 7.066666666666666
+    },
+    {
+      "url": "https://skillscout.sh/official/veritrans/",
+      "clicks": 1,
+      "impressions": 15,
+      "sourceUrls": [
+        "https://skillscout.sh/official/veritrans/"
+      ],
+      "rank": 181,
+      "ctr": 0.06666666666666667,
+      "position": 3.7333333333333334
+    },
+    {
+      "url": "https://skillscout.sh/official/awslabs/page/2/",
+      "clicks": 1,
+      "impressions": 14,
+      "sourceUrls": [
+        "https://skillscout.sh/official/awslabs/page/2/"
+      ],
+      "rank": 182,
+      "ctr": 0.07142857142857142,
+      "position": 5.142857142857143
+    },
+    {
+      "url": "https://skillscout.sh/official/axafrance/",
+      "clicks": 1,
+      "impressions": 14,
+      "sourceUrls": [
+        "https://skillscout.sh/official/axafrance/"
+      ],
+      "rank": 183,
+      "ctr": 0.07142857142857142,
+      "position": 10.285714285714286
+    },
+    {
+      "url": "https://skillscout.sh/official/crowdstrike/",
+      "clicks": 1,
+      "impressions": 14,
+      "sourceUrls": [
+        "https://skillscout.sh/official/crowdstrike/"
+      ],
+      "rank": 184,
+      "ctr": 0.07142857142857142,
+      "position": 7.071428571428571
+    },
+    {
+      "url": "https://skillscout.sh/official/graycoreio/",
+      "clicks": 1,
+      "impressions": 14,
+      "sourceUrls": [
+        "https://skillscout.sh/official/graycoreio/"
+      ],
+      "rank": 185,
+      "ctr": 0.07142857142857142,
+      "position": 6.0
+    },
+    {
+      "url": "https://skillscout.sh/official/intercom/",
+      "clicks": 1,
+      "impressions": 14,
+      "sourceUrls": [
+        "https://skillscout.sh/official/intercom/"
+      ],
+      "rank": 186,
+      "ctr": 0.07142857142857142,
+      "position": 6.0
+    },
+    {
+      "url": "https://skillscout.sh/official/nuxt/",
+      "clicks": 1,
+      "impressions": 14,
+      "sourceUrls": [
+        "https://skillscout.sh/official/nuxt/"
+      ],
+      "rank": 187,
+      "ctr": 0.07142857142857142,
+      "position": 6.714285714285714
+    },
+    {
+      "url": "https://skillscout.sh/official/pinax-network/",
+      "clicks": 1,
+      "impressions": 14,
+      "sourceUrls": [
+        "https://skillscout.sh/official/pinax-network/"
+      ],
+      "rank": 188,
+      "ctr": 0.07142857142857142,
+      "position": 8.285714285714285
+    },
+    {
+      "url": "https://skillscout.sh/official/runbear-io/",
+      "clicks": 1,
+      "impressions": 14,
+      "sourceUrls": [
+        "https://skillscout.sh/official/runbear-io/"
+      ],
+      "rank": 189,
+      "ctr": 0.07142857142857142,
+      "position": 8.714285714285715
+    },
+    {
+      "url": "https://skillscout.sh/official/tibcosoftware/",
+      "clicks": 1,
+      "impressions": 14,
+      "sourceUrls": [
+        "https://skillscout.sh/official/tibcosoftware/"
+      ],
+      "rank": 190,
+      "ctr": 0.07142857142857142,
+      "position": 6.571428571428571
+    },
+    {
+      "url": "https://skillscout.sh/official/trunk-io/",
+      "clicks": 1,
+      "impressions": 14,
+      "sourceUrls": [
+        "https://skillscout.sh/official/trunk-io/"
+      ],
+      "rank": 191,
+      "ctr": 0.07142857142857142,
+      "position": 7.142857142857143
+    },
+    {
+      "url": "https://skillscout.sh/official/vortex-data/",
+      "clicks": 1,
+      "impressions": 14,
+      "sourceUrls": [
+        "https://skillscout.sh/official/vortex-data/"
+      ],
+      "rank": 192,
+      "ctr": 0.07142857142857142,
+      "position": 9.857142857142858
+    },
+    {
+      "url": "https://skillscout.sh/official/autonomous-ai/",
+      "clicks": 1,
+      "impressions": 13,
+      "sourceUrls": [
+        "https://skillscout.sh/official/autonomous-ai/"
+      ],
+      "rank": 193,
+      "ctr": 0.07692307692307693,
+      "position": 7.461538461538462
+    },
+    {
+      "url": "https://skillscout.sh/official/getlago/",
+      "clicks": 1,
+      "impressions": 13,
+      "sourceUrls": [
+        "https://skillscout.sh/official/getlago/"
+      ],
+      "rank": 194,
+      "ctr": 0.07692307692307693,
+      "position": 6.461538461538462
+    },
+    {
+      "url": "https://skillscout.sh/official/gitkraken/",
+      "clicks": 1,
+      "impressions": 13,
+      "sourceUrls": [
+        "https://skillscout.sh/official/gitkraken/"
+      ],
+      "rank": 195,
+      "ctr": 0.07692307692307693,
+      "position": 4.538461538461538
+    },
+    {
+      "url": "https://skillscout.sh/official/lit-protocol/",
+      "clicks": 1,
+      "impressions": 13,
+      "sourceUrls": [
+        "https://skillscout.sh/official/lit-protocol/"
+      ],
+      "rank": 196,
+      "ctr": 0.07692307692307693,
+      "position": 8.384615384615385
+    },
+    {
+      "url": "https://skillscout.sh/official/openfga/",
+      "clicks": 1,
+      "impressions": 13,
+      "sourceUrls": [
+        "https://skillscout.sh/official/openfga/"
+      ],
+      "rank": 197,
+      "ctr": 0.07692307692307693,
+      "position": 5.461538461538462
+    },
+    {
+      "url": "https://skillscout.sh/official/prodigypxp/",
+      "clicks": 1,
+      "impressions": 13,
+      "sourceUrls": [
+        "https://skillscout.sh/official/prodigypxp/"
+      ],
+      "rank": 198,
+      "ctr": 0.07692307692307693,
+      "position": 7.769230769230769
+    },
+    {
+      "url": "https://skillscout.sh/official/tmux-python/",
+      "clicks": 1,
+      "impressions": 13,
+      "sourceUrls": [
+        "https://skillscout.sh/official/tmux-python/"
+      ],
+      "rank": 199,
+      "ctr": 0.07692307692307693,
+      "position": 20.76923076923077
+    },
+    {
+      "url": "https://skillscout.sh/official/adyen/",
+      "clicks": 1,
+      "impressions": 12,
+      "sourceUrls": [
+        "https://skillscout.sh/official/adyen/"
+      ],
+      "rank": 200,
+      "ctr": 0.08333333333333333,
+      "position": 3.8333333333333335
+    }
+  ]
+}
